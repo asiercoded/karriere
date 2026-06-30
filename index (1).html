@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karriere — The unfiltered career file</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --paper: #f7f4ee;
+  --paper-dim: #efeae0;
+  --ink: #1a1a1a;
+  --ink-soft: rgba(26,26,26,0.6);
+  --ink-faint: rgba(26,26,26,0.35);
+  --rule: rgba(26,26,26,0.12);
+  --amber: #c2410c;
+  --sage: #5b7a6b;
+  --dustred: #9b4444;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 28px 100px;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.01em;
+}
+
+.masthead-meta {
+  font-size: 12px;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dateline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 10px 0 40px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 48px;
+}
+
+/* ── HERO ── */
+.hero {
+  margin-bottom: 56px;
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  max-width: 680px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 560px;
+  line-height: 1.65;
+}
+
+/* ── FILTER ROW ── */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.filter-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background: none;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  padding: 7px 14px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.filter-btn.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* ── CAREER LIST (editorial index, not cards) ── */
+.career-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.career-entry {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: baseline;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.career-entry:hover {
+  background: var(--paper-dim);
+}
+
+.career-entry:hover .entry-name {
+  color: var(--amber);
+}
+
+.entry-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-faint);
+  font-weight: 600;
+}
+
+.entry-main {
+  min-width: 0;
+}
+
+.entry-name {
+  font-family: 'Source Serif 4', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  transition: color 0.15s;
+}
+
+.entry-tagline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+.entry-arrow {
+  font-size: 20px;
+  color: var(--ink-faint);
+  align-self: center;
+}
+
+@media (max-width: 640px) {
+  .career-entry { grid-template-columns: 1fr auto; }
+  .entry-tag { display: none; }
+}
+
+/* ── FOOTER ── */
+footer {
+  margin-top: 60px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px;
+  color: var(--ink-faint);
+  display: flex;
+  justify-content: space-between;
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="masthead">
+    <div class="wordmark">Karriere</div>
+    <div class="masthead-meta">Vol. 1 — India Edition</div>
+  </div>
+  <div class="dateline">
+    <span id="todayDate"></span>
+    <span>The unfiltered career file</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Before you choose</div>
+    <h1>What career counsellors won't tell a 17-year-old.</h1>
+    <p>Real salaries, real timelines, real regrets — pulled from people who actually lived each path. No sugar-coating, no sales pitch.</p>
+  </div>
+
+  <div class="filter-row" id="filterRow">
+    <button class="filter-btn active" data-cat="all">All</button>
+  </div>
+
+  <div class="career-list" id="careerList"></div>
+
+  <footer>
+    <span>Karriere — built for students who deserve the truth.</span>
+    <span id="careerCount"></span>
+  </footer>
+</div>
+
+<script>
+const CATEGORY_LABELS = {
+  medical: 'Medical',
+  engineering: 'Engineering',
+  commerce: 'Commerce',
+  law: 'Law',
+  design: 'Design',
+  management: 'Management',
+  paramedical: 'Paramedical'
+};
+
+let careers = [];
+let activeCategory = 'all';
+
+async function loadCareers() {
+  const res = await fetch('careers.json');
+  careers = await res.json();
+  buildFilters();
+  renderList();
+  document.getElementById('careerCount').textContent = `${careers.length} careers profiled`;
+}
+
+function buildFilters() {
+  const cats = [...new Set(careers.map(c => c.category))];
+  const row = document.getElementById('filterRow');
+  cats.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.cat = cat;
+    btn.textContent = CATEGORY_LABELS[cat] || cat;
+    btn.onclick = () => setActive(cat);
+    row.appendChild(btn);
+  });
+  document.querySelector('[data-cat="all"]').onclick = () => setActive('all');
+}
+
+function setActive(cat) {
+  activeCategory = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === cat);
+  });
+  renderList();
+}
+
+function renderList() {
+  const list = document.getElementById('careerList');
+  const filtered = activeCategory === 'all'
+    ? careers
+    : careers.filter(c => c.category === activeCategory);
+
+  list.innerHTML = filtered.map(c => `
+    <a class="career-entry" href="career.html?id=${c.id}">
+      <div class="entry-tag">${CATEGORY_LABELS[c.category] || c.category}</div>
+      <div class="entry-main">
+        <div class="entry-name">${c.name}</div>
+        <div class="entry-tagline">${c.tagline}</div>
+      </div>
+      <div class="entry-arrow">→</div>
+    </a>
+  `).join('');
+}
+
+document.getElementById('todayDate').textContent = new Date().toLocaleDateString('en-IN', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
+
+loadCareers();
+</script>
+</body>
+</html>

@@ -1,0 +1,676 @@
+[
+  {
+    "id": "mbbs",
+    "name": "MBBS",
+    "category": "medical",
+    "tagline": "The most respected degree in India. Also the most punishing.",
+    "overview": "MBBS is a 5.5 year undergraduate medical degree followed by a 1-year mandatory internship. Getting in requires cracking NEET with a top percentile. The journey is long, expensive, and emotionally exhausting — but it leads to one of the most stable and respected careers in India.",
+    "what_nobody_tells_you": [
+      "MBBS is just the beginning. To actually earn well, you need an MD/MS — that's 3 more years after MBBS, and NEET-PG is as brutal as NEET-UG.",
+      "A general MBBS doctor in a government setup earns ₹50,000-₹80,000/month in early years. The 'doctor earns lakhs' image applies to specialists after 10+ years.",
+      "Private medical college fees can go up to ₹1 crore for the full course. Most families take massive loans.",
+      "Mental health among medical students is in crisis. Depression, burnout, and suicide rates are significantly higher than the general student population.",
+      "You will not have a social life for most of your 20s. Exams, postings, internships — it is relentless.",
+      "Rural postings are mandatory in many states after internship. Urban practice requires years of building reputation or joining a corporate hospital at low pay."
+    ],
+    "day_in_the_life": {
+      "student": "6 AM wake up, hospital rounds by 8 AM, lectures until 2 PM, lab practicals, self-study until midnight. Repeat. During clinical years, add overnight duties every few days.",
+      "professional": "For a junior resident: 36-hour shifts, minimal sleep, high patient load, low pay (₹30,000-₹60,000/month stipend). For an established specialist: scheduled OPDs, surgeries, better income but high responsibility and stress."
+    },
+    "salary": {
+      "entry": "₹40,000 - ₹80,000/month (government job or junior resident)",
+      "mid": "₹1 - ₹2 lakh/month (after MD/MS, 5 years experience)",
+      "senior": "₹3 - ₹15 lakh/month (established specialist, varies massively by specialty and city)"
+    },
+    "scope": {
+      "india": "Strong. Doctor shortage in India means job security is high. Government jobs via UPSC/state PSC are stable. Private practice takes time to build but is lucrative.",
+      "abroad": "Very viable in UK (PLAB), USA (USMLE), Australia, Canada — but requires clearing tough licensing exams, often redoing residency, and years of additional training. Many Indian doctors do make it."
+    },
+    "who_thrives": [
+      "People with genuine interest in human biology and patient interaction",
+      "Those with high stress tolerance and emotional resilience",
+      "People from families that can financially support 10+ years of education",
+      "Those willing to delay financial independence until their early 30s"
+    ],
+    "who_regrets_it": [
+      "People who chose it for status or parental pressure",
+      "Those who need work-life balance in their 20s",
+      "Students who struggle with rote memorization (early MBBS is heavily memory-based)",
+      "Those who can't handle emotional weight of patient deaths and suffering"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/indianmedschool",
+        "quote": "I'm in my 3rd year and I genuinely don't remember the last time I had a full weekend off. The workload is insane but I keep going because I actually like medicine.",
+        "url": "https://reddit.com/r/indianmedschool"
+      },
+      {
+        "source": "Reddit r/india",
+        "quote": "Finished MBBS, cleared NEET-PG, now doing MD. Total investment so far: 8 years, ₹80 lakhs in fees. I don't regret it but nobody told me it would take this long to actually start earning.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "The worst part isn't the studies. It's watching your engineering friends earn 6 figures at 22 while you're still a student at 26 with no income.",
+        "url": "https://quora.com"
+      }
+    ],
+    "related_careers": [
+      "bds",
+      "paramedical_physiotherapy",
+      "paramedical_nursing"
+    ]
+  },
+  {
+    "id": "cs_engineering",
+    "name": "Computer Science Engineering",
+    "category": "engineering",
+    "tagline": "Highest paying entry-level jobs in India. Also the most oversaturated field.",
+    "overview": "B.Tech in Computer Science is a 4-year degree pursued after JEE or state entrance exams. It leads to software development, data science, product management, and more. The top tier (IITs, NITs, BITS) offers exceptional placements. The bottom tier offers very little. The gap between colleges is massive.",
+    "what_nobody_tells_you": [
+      "The college you attend matters more than the degree itself. A tier-3 CS graduate and an IIT CS graduate are treated as completely different candidates by companies.",
+      "60-70% of CS graduates in India do not get a core software job. Many end up in IT services (TCS, Infosys, Wipro) doing manual testing or support work at ₹3-4 LPA.",
+      "The actual skills companies want — DSA, system design, frameworks — are not taught in most colleges. You have to self-learn everything that matters.",
+      "Layoffs in tech are real. The 2022-2024 global tech layoff wave hit Indian IT hard. Job security is not as guaranteed as it was 5 years ago.",
+      "Burnout is extremely common. Aggressive deadlines, always-on culture, and the pressure to constantly upskill make it exhausting.",
+      "If you're not from a top college, cracking product companies requires 2-3 years of grinding LeetCode, building projects, and getting lucky with referrals."
+    ],
+    "day_in_the_life": {
+      "student": "Classes in the morning, most learning happens independently — online courses, personal projects, competitive programming. Internship season starts in 3rd year. Final year is placement prep.",
+      "professional": "Stand-up meetings, coding, code reviews, debugging, documentation. At a startup: fast-paced, wear many hats. At a service company: structured, slower, more process. At a product company: high ownership, high pressure."
+    },
+    "salary": {
+      "entry": "₹3.5 - ₹50 LPA (massive range — TCS starts at ₹3.5L, top product companies offer ₹40-50L to IIT grads)",
+      "mid": "₹15 - ₹40 LPA (5 years, depends heavily on company and skills)",
+      "senior": "₹40 LPA - ₹1 crore+ (senior roles at FAANG, startups with ESOPs)"
+    },
+    "scope": {
+      "india": "Massive demand but also massive supply. Standing out requires strong skills and the right college or portfolio. Startup ecosystem is growing fast.",
+      "abroad": "Very strong. Indian CS engineers are in high demand globally — USA, Canada, Germany, UK, Australia. H1B visa route is common but has a lottery system."
+    },
+    "who_thrives": [
+      "People who genuinely enjoy problem-solving and building things",
+      "Self-learners who don't rely on college curriculum",
+      "Those comfortable with constant change and learning new technologies",
+      "People who can handle ambiguity and work independently"
+    ],
+    "who_regrets_it": [
+      "People who chose CS only for the salary",
+      "Those who hate sitting at a computer for 8+ hours a day",
+      "Students who expected college to teach them everything they need",
+      "Those from tier-3 colleges who didn't self-learn and expected placements to come automatically"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/developersIndia",
+        "quote": "3 years at TCS doing nothing meaningful. Finally switched to a product company after grinding LeetCode for 6 months. Salary went from ₹4.2L to ₹24L. The system is broken but it is what it is.",
+        "url": "https://reddit.com/r/developersIndia"
+      },
+      {
+        "source": "Reddit r/india",
+        "quote": "Everyone told me CS is the safest bet. Nobody told me I'd be applying to 200 companies after graduation and getting 3 interviews.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "Got placed at ₹45 LPA from IIT. My friend from a private college with the same skills got ₹4.5 LPA. Same degree, different worlds. The college filter is real and it's brutal.",
+        "url": "https://linkedin.com"
+      }
+    ],
+    "related_careers": [
+      "data_science",
+      "product_management",
+      "mba"
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "Chartered Accountancy (CA)",
+    "category": "commerce",
+    "tagline": "One of India's hardest exams. One of its most recession-proof careers.",
+    "overview": "CA is a professional qualification by ICAI, typically pursued after Class 12 (Commerce). It has three levels: Foundation, Intermediate, and Final — plus 3 years of mandatory articleship (internship). The pass rates are notoriously low. Those who clear it have strong job security and good earning potential.",
+    "what_nobody_tells_you": [
+      "The pass rate for CA Final is around 10-15%. Most students take 2-4 attempts per group. The average time to complete CA is 5-7 years, not 3.",
+      "Articleship (3 years of mandatory training under a CA firm) pays ₹2,000 - ₹15,000/month. You are essentially working full-time for almost nothing while studying for the hardest exams of your life.",
+      "Big 4 firms (Deloitte, EY, KPMG, PwC) are the dream but they hire a small fraction of CAs. Most CAs end up in mid-size firms or industry roles.",
+      "Work-life balance in CA practice, especially early on, is poor. Tax season means 16-hour days for months.",
+      "The CA qualification is India-specific. If you want to work abroad, you need additional qualifications like ACCA, CPA, or CMA.",
+      "Industry CAs (working in companies rather than practice) generally have better work-life balance but lower growth ceilings early on."
+    ],
+    "day_in_the_life": {
+      "student": "Articleship from 9-6, studying from 8 PM to midnight, weekends for revision. It is genuinely one of the hardest student lives in India.",
+      "professional": "At a Big 4: audit engagements, client meetings, long hours during busy season, decent structured growth. In industry: financial reporting, compliance, MIS, budgeting — more predictable hours."
+    },
+    "salary": {
+      "entry": "₹6 - ₹10 LPA (fresher CA, Big 4 or mid-size firm)",
+      "mid": "₹15 - ₹25 LPA (5 years experience, industry or Big 4 manager)",
+      "senior": "₹30 - ₹80 LPA (CFO track, Big 4 partner, or own practice — own practice ceiling is unlimited)"
+    },
+    "scope": {
+      "india": "Extremely strong. Every company needs finance and compliance. CA is one of the most recession-proof qualifications in India — demand never dries up.",
+      "abroad": "Limited directly — CA India is not recognized abroad. Need ACCA (UK), CPA (USA), or CMA for international roles. Many CAs do this conversion successfully."
+    },
+    "who_thrives": [
+      "People with high persistence and tolerance for delayed gratification",
+      "Those with genuine interest in finance, taxation, and business",
+      "Detail-oriented, disciplined individuals",
+      "People who want a stable, respected career with a clear path"
+    ],
+    "who_regrets_it": [
+      "Those who chose it because 'commerce students do CA'",
+      "People who underestimated the difficulty and time commitment",
+      "Those who need early financial independence — articleship pays almost nothing",
+      "People who want creative or dynamic work environments"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/CAstudents",
+        "quote": "Failed CA Final twice. Cleared on third attempt. Total time: 6.5 years. First salary: ₹8.5 LPA. Was it worth it? Ask me in 10 years. Right now I'm just relieved.",
+        "url": "https://reddit.com/r/CAstudents"
+      },
+      {
+        "source": "Reddit r/india",
+        "quote": "Articleship is modern slavery dressed up as training. ₹5000/month, 10 hour days, exam pressure on top. Nobody talks about this part.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "I cleared CA in my first attempts for all groups. Got placed at a Big 4 at ₹9 LPA. My engineering friends laughed at my salary. Two years later I'm at ₹18 LPA and they're still at ₹6L. Patience is the game.",
+        "url": "https://quora.com"
+      }
+    ],
+    "related_careers": [
+      "mba",
+      "cs_engineering",
+      "law"
+    ]
+  },
+  {
+    "id": "bds",
+    "name": "BDS (Dental Surgery)",
+    "category": "medical",
+    "tagline": "The 'backup' to MBBS for most. A genuine career for a few. A regret for many.",
+    "overview": "BDS is a 4-year undergraduate dental degree plus 1 year mandatory internship, pursued via NEET. It is frequently chosen by students who didn't get a high enough NEET rank for MBBS, which creates a large population of dentists who never actually wanted dentistry. For those genuinely interested, it can be a stable, flexible, and profitable career.",
+    "what_nobody_tells_you": [
+      "A large percentage of BDS students didn't choose it — they ended up there after missing MBBS cutoffs. This creates widespread disengagement and regret in dental colleges.",
+      "Government dental jobs are extremely limited. Most BDS graduates either do MDS (postgraduate, equally competitive as NEET-PG) or open private practice.",
+      "Starting a private practice requires significant capital — equipment, clinic space, staff. Many young dentists work as associates at someone else's clinic first, often underpaid.",
+      "Without an MDS, career ceiling is lower. General dentists earn far less than specialists (orthodontists, oral surgeons, etc.).",
+      "The actual day-to-day — extractions, root canals, dealing with anxious patients — is very different from the 'glamorous doctor' image people have before joining.",
+      "Many BDS graduates eventually pivot entirely — into MBA, content creation, or other fields — after realizing dentistry wasn't their calling."
+    ],
+    "day_in_the_life": {
+      "student": "Lectures in the morning, clinical postings in the afternoon (working on real patients under supervision), practical exams are frequent and stressful. Less brutal than MBBS but still demanding.",
+      "professional": "Clinic hours, patient consultations, procedures. Private practice means also handling business side — staff, marketing, finances. Less emergency/on-call pressure than MBBS doctors generally."
+    },
+    "salary": {
+      "entry": "₹20,000 - ₹40,000/month (associate dentist or junior government role)",
+      "mid": "₹50,000 - ₹1.5 lakh/month (own clinic establishing, or MDS specialist starting out)",
+      "senior": "₹2 - ₹10 lakh/month (established private practice or specialist, highly location-dependent)"
+    },
+    "scope": {
+      "india": "Moderate. Oversupply of dentists in urban areas. Rural and semi-urban areas have less competition. Specialization (MDS) significantly improves prospects.",
+      "abroad": "Difficult. Most countries require redoing licensing exams and sometimes years of additional study (e.g., NDEB in Canada, ADC in Australia). Not a smooth transition like MBBS to USMLE."
+    },
+    "who_thrives": [
+      "People with genuine interest in dentistry, not those who landed there by default",
+      "Those who enjoy precise, hands-on, detail-focused work",
+      "Entrepreneurially minded people willing to build and run their own practice",
+      "Those comfortable with a slower financial ramp-up before practice stabilizes"
+    ],
+    "who_regrets_it": [
+      "Students who chose it only because they missed MBBS cutoffs",
+      "Those expecting MBBS-level prestige or pay without MBBS-level specialization",
+      "People uncomfortable with repetitive, hands-on clinical work",
+      "Those who don't want to deal with the business side of running a clinic"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Did BDS because I missed MBBS by 2 marks. Four years later I still don't enjoy dentistry but I'm too deep in to switch. This is more common than people think.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "BDS without MDS is a tough life financially in the first few years. I worked as an associate for ₹25k/month for 2 years before I could afford my own setup.",
+        "url": "https://quora.com"
+      },
+      {
+        "source": "Reddit r/india",
+        "quote": "If you actually like dentistry, BDS + MDS in orthodontics or oral surgery can be very lucrative. The problem is most people in dental college don't actually want to be there.",
+        "url": "https://reddit.com/r/india"
+      }
+    ],
+    "related_careers": [
+      "mbbs",
+      "paramedical_physiotherapy"
+    ]
+  },
+  {
+    "id": "law",
+    "name": "Law (LLB / 5-Year Integrated)",
+    "category": "law",
+    "tagline": "Glamorous on TV. Grinding for the first decade in reality.",
+    "overview": "Law in India is pursued either via a 5-year integrated course (BA LLB) after Class 12 through CLAT, or a 3-year LLB after graduation. National Law Universities (NLUs) offer the best outcomes, similar to the IIT effect in engineering. Career paths include litigation, corporate law, judiciary, and policy.",
+    "what_nobody_tells_you": [
+      "Litigation (court practice) pays very little for the first 5-10 years. Junior lawyers often earn ₹15,000-₹30,000/month while working under a senior advocate.",
+      "Corporate law (working at law firms) is the lucrative path but is heavily dominated by NLU graduates. Non-NLU students face a steep uphill climb to break in.",
+      "The NLU vs non-NLU gap is as real and brutal as the IIT vs non-IIT gap in engineering.",
+      "Judiciary exams (to become a judge) are extremely competitive and require years of dedicated preparation after law school.",
+      "Many law graduates end up doing work unrelated to law — content writing, compliance roles, generic corporate jobs — due to lack of opportunities matching their specialization.",
+      "Building a litigation practice from scratch, without family connections in law, can take 8-10 years before becoming financially stable."
+    ],
+    "day_in_the_life": {
+      "student": "Heavy reading load, moot courts, internships every vacation (mandatory for good placements), debate and research-heavy coursework.",
+      "professional": "Litigation: court appearances, client meetings, drafting, often unpredictable hours. Corporate law: long hours at law firms, deal work, due diligence, document review — much like investment banking hours."
+    },
+    "salary": {
+      "entry": "₹15,000 - ₹20 LPA (litigation junior vs corporate law firm — massive range based on path and college)",
+      "mid": "₹8 - ₹40 LPA (5 years — corporate lawyers at top firms or specialized litigators)",
+      "senior": "₹30 LPA - several crores (senior advocates, partners at top firms, or judiciary salary + pension track)"
+    },
+    "scope": {
+      "india": "Strong overall demand but highly bifurcated. NLU graduates have excellent corporate law prospects. Non-NLU graduates need to specialize or build a litigation practice over time.",
+      "abroad": "Indian law degrees are not directly transferable. Requires additional qualifications (LLM, bar exams) to practice in other countries. Some scope in international arbitration and policy roles."
+    },
+    "who_thrives": [
+      "People who genuinely enjoy reading, arguing, and research",
+      "Those with patience for a long, slow-building career, especially in litigation",
+      "Strong communicators who can think on their feet",
+      "Those who get into NLUs or build strong specialization in a niche (IP law, tax law, etc.)"
+    ],
+    "who_regrets_it": [
+      "Those who chose law because of TV shows or family pressure without understanding the actual work",
+      "People who need financial stability early in their career",
+      "Non-NLU graduates who expected corporate law placements without building extra skills",
+      "Those uncomfortable with confrontation or high-pressure verbal environments"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/LawStudentsIndia",
+        "quote": "First 3 years of litigation, I made less than my school friend who didn't even go to college. It gets better but you need to survive the early grind, financially and mentally.",
+        "url": "https://reddit.com/r/LawStudentsIndia"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "NLU placement season got me a ₹18 LPA offer at a top law firm. My friend from a private law college with the same marks struggled to get ₹4 LPA. The college matters enormously in law, just like engineering.",
+        "url": "https://linkedin.com"
+      },
+      {
+        "source": "Quora",
+        "quote": "Nobody tells 12th graders that litigation income for the first decade is brutal unless you have family connections or join a top firm straight out of an NLU.",
+        "url": "https://quora.com"
+      }
+    ],
+    "related_careers": [
+      "ca",
+      "mba"
+    ]
+  },
+  {
+    "id": "design",
+    "name": "Design (NID / NIFT path)",
+    "category": "design",
+    "tagline": "Creative freedom with real income potential — if you get past the brutal entrance exams.",
+    "overview": "Design education in India centers around NID (National Institute of Design) and NIFT (National Institute of Fashion Technology), both with extremely competitive entrance exams (NID DAT, NIFT entrance). Fields include product design, UX/UI design, fashion design, communication design, and more. A growing and increasingly lucrative field, especially in tech.",
+    "what_nobody_tells_you": [
+      "NID and NIFT admission rates are below 1%. Most design aspirants end up at private design colleges, which vary hugely in quality and placement outcomes.",
+      "UX/UI design within tech is currently the most lucrative design path, often paying more than traditional fashion or product design roles.",
+      "Fashion design, despite the glamorous image, often involves long hours, low initial pay, and a highly saturated job market unless you start your own label or join a top house.",
+      "A strong portfolio matters more than the college name for many design jobs, especially in UX. Self-taught designers with great portfolios can outcompete formally trained ones.",
+      "Freelancing is common and viable in design, but inconsistent income in the early years is a real challenge.",
+      "Design education in India, outside NID/NIFT, often lags behind global industry standards — many serious designers end up self-learning through online resources anyway."
+    ],
+    "day_in_the_life": {
+      "student": "Studio-based learning, constant critiques of your work, project-based assignments, sketching, prototyping, software training (Figma, Adobe Suite, CAD depending on specialization).",
+      "professional": "UX designer: user research, wireframing, prototyping, stakeholder meetings. Fashion designer: sketching, fabric sourcing, production coordination, fittings. Both require constant client/team feedback cycles."
+    },
+    "salary": {
+      "entry": "₹4 - ₹12 LPA (UX/UI in tech pays more than traditional fashion/product design at entry level)",
+      "mid": "₹12 - ₹30 LPA (5 years, especially in UX/product design at tech companies)",
+      "senior": "₹30 LPA - ₹1 crore+ (senior design leads, design directors at major tech companies, or successful independent fashion/product labels)"
+    },
+    "scope": {
+      "india": "Growing rapidly, especially UX/UI as Indian tech and startups mature. Fashion and product design scope is more limited and concentrated in metro cities.",
+      "abroad": "Strong for UX/UI designers — globally portable skill. Fashion design abroad requires building reputation from scratch and is highly competitive (Paris, Milan, NY fashion scenes are extremely hard to break into)."
+    },
+    "who_thrives": [
+      "People with genuine creative instinct and visual/spatial thinking",
+      "Those willing to constantly build and update a portfolio",
+      "Self-driven learners comfortable with ambiguity and subjective feedback",
+      "People who can handle their work being critiqued constantly"
+    ],
+    "who_regrets_it": [
+      "Those who expected design to be 'easy' or purely fun without realizing the technical and business skill required",
+      "People who need very stable, predictable career paths",
+      "Those who chase fashion design for glamour without understanding the production/business grind",
+      "People uncomfortable with subjective evaluation of their work"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Switched from a non-design degree to UX design through self-taught Figma and a strong portfolio. Landed a ₹9 LPA job without ever attending NID. Portfolio > pedigree in this field, mostly.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "Fashion design is brutal if you don't have capital to start your own label. Most graduates end up as assistant designers earning ₹15-20k for years before any real growth.",
+        "url": "https://quora.com"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "5 years into UX design, no design degree, just consistent portfolio work and internships. Now leading a small design team at a Series B startup. This field rewards proof of work over credentials.",
+        "url": "https://linkedin.com"
+      }
+    ],
+    "related_careers": [
+      "cs_engineering",
+      "mba"
+    ]
+  },
+  {
+    "id": "mba",
+    "name": "MBA",
+    "category": "management",
+    "tagline": "A career accelerator if you already have something to accelerate. Not a fix for an unclear path.",
+    "overview": "MBA is a 2-year postgraduate management degree, typically pursued after 2-5 years of work experience (though many in India do it straight after undergrad). IIMs and top B-schools (via CAT, XAT) offer exceptional placements. Without a strong undergrad base or work experience, an MBA's value is significantly diluted.",
+    "what_nobody_tells_you": [
+      "An MBA amplifies what you already have. If you had no clear direction or skills before, an MBA alone often doesn't fix that — it just adds a credential.",
+      "The IIM vs non-IIM gap is enormous, similar to IIT vs non-IIT. Tier-3 MBA colleges have placement records that don't justify the fees many charge.",
+      "CAT (the main MBA entrance exam) has a sub-0.5% selection rate for top IIM seats. It is genuinely one of the hardest entrance exams in India by competition ratio.",
+      "Doing an MBA straight after undergrad (without work experience) is increasingly seen as less valuable by recruiters compared to those who worked first and then did an MBA with clearer goals.",
+      "MBA fees at top private institutes (ISB, top private B-schools) can be ₹20-30 lakhs for 1-2 years. The ROI calculation only works out if placements are strong.",
+      "Many MBA graduates from average colleges end up in roles barely different from what they could have gotten without the degree, just with debt attached."
+    ],
+    "day_in_the_life": {
+      "student": "Case studies, group projects, presentations, networking events, recruitment prep — an intensely social and competitive 2 years.",
+      "professional": "Highly varies by role — consulting (travel-heavy, high pressure, structured problem solving), product management (cross-functional coordination), general management (operations and strategy oversight)."
+    },
+    "salary": {
+      "entry": "₹8 - ₹35 LPA (massive range — non-IIM vs IIM placements differ drastically)",
+      "mid": "₹20 - ₹70 lakh (consulting partners, product leads, business heads after 5-8 years)",
+      "senior": "₹50 LPA - several crores (CXO roles, partner-level consulting, business unit leadership)"
+    },
+    "scope": {
+      "india": "Strong for top-tier MBA graduates. Average for mid-tier. Weak for bottom-tier colleges relative to the cost invested.",
+      "abroad": "Indian MBAs (especially IIM, ISB) are respected. Many pursue further MBA abroad (INSEAD, top US schools) for global mobility, though this requires even higher GMAT scores and work experience."
+    },
+    "who_thrives": [
+      "Those with 2-5 years of solid work experience and a clear reason for doing an MBA",
+      "People who get into top-tier institutes (IIMs, ISB, top private schools)",
+      "Strong networkers and communicators",
+      "Those using MBA strategically to pivot industries or move into management"
+    ],
+    "who_regrets_it": [
+      "Those doing MBA right after undergrad with no work experience or clear goal, 'just because everyone does it'",
+      "People who take large loans for tier-3 colleges with poor placement records",
+      "Those expecting the degree alone to compensate for lack of skills or direction",
+      "People who dislike networking-heavy, presentation-heavy environments"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Did MBA right after engineering with zero work experience because I didn't know what else to do. Biggest mistake. Should have worked for 2-3 years first to know what I actually wanted from the degree.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "IIM placement got me into consulting at ₹28 LPA. My cousin did an MBA from a tier-3 college, paid ₹12 lakhs in fees, got placed at ₹4.5 LPA — same as his pre-MBA salary. The ROI gap is real and brutal.",
+        "url": "https://linkedin.com"
+      },
+      {
+        "source": "Quora",
+        "quote": "MBA is a force multiplier, not a fix. If you're unclear about your career before, an average MBA won't clarify it for you. It'll just be an expensive 2-year pause.",
+        "url": "https://quora.com"
+      }
+    ],
+    "related_careers": [
+      "ca",
+      "law",
+      "cs_engineering"
+    ]
+  },
+  {
+    "id": "paramedical_physiotherapy",
+    "name": "Physiotherapy (BPT)",
+    "category": "paramedical",
+    "tagline": "Steady, hands-on, growing field — often overlooked because it's not MBBS.",
+    "overview": "BPT (Bachelor of Physiotherapy) is a 4.5-year degree (4 years + 6 month internship) focused on rehabilitation, injury recovery, and movement therapy. Growing demand due to aging population, sports medicine growth, and increased awareness of physical wellness. Often underrated compared to MBBS/BDS but offers a genuinely good career for the right person.",
+    "what_nobody_tells_you": [
+      "Entry-level pay is low — often ₹15,000-₹25,000/month working under a senior physiotherapist or at a hospital, especially in the first 2-3 years.",
+      "Building a private practice or clinic takes time, similar to dentistry. The first few years are about building reputation and referral networks.",
+      "Specializations (sports physiotherapy, neuro-rehab, pediatric physiotherapy) significantly increase earning potential but require additional certification/masters.",
+      "Government job openings for physiotherapists are limited and highly competitive, similar to other paramedical fields.",
+      "Sports physiotherapy attached to teams or athletes is a glamorous niche but extremely hard to break into without strong connections or starting with smaller local sports academies.",
+      "The work is physically demanding — you're on your feet, manually treating patients, for most of the day."
+    ],
+    "day_in_the_life": {
+      "student": "Classroom learning combined with hospital postings, hands-on practice with patients under supervision, anatomy and biomechanics heavy coursework.",
+      "professional": "Patient assessments, hands-on treatment sessions (each typically 30-45 minutes), documentation, treatment planning. Hospital-based roles have more structure; private practice involves building your own client base."
+    },
+    "salary": {
+      "entry": "₹15,000 - ₹30,000/month",
+      "mid": "₹40,000 - ₹80,000/month (5 years, own practice building or hospital senior role)",
+      "senior": "₹1 - ₹4 lakh/month (established private practice, sports team physiotherapist, or specialized clinic owner)"
+    },
+    "scope": {
+      "india": "Growing steadily — increased awareness of physiotherapy for chronic pain, sports injuries, post-surgical recovery, and elderly care. Still underutilized compared to its potential.",
+      "abroad": "Good scope in UK, Australia, Canada, Gulf countries — requires additional licensing/certification exams but is a well-recognized profession internationally."
+    },
+    "who_thrives": [
+      "People who enjoy hands-on, physical work and direct patient interaction",
+      "Those interested in human movement, biomechanics, and rehabilitation",
+      "Patient individuals comfortable with gradual, incremental patient progress",
+      "Those willing to build a practice slowly over several years"
+    ],
+    "who_regrets_it": [
+      "Those who chose it purely as a 'medical degree' fallback without genuine interest",
+      "People uncomfortable with physically demanding, hands-on daily work",
+      "Those expecting MBBS-level prestige or pay without MBBS-level path",
+      "People who need fast financial returns early in their career"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "BPT gets overlooked but if you specialize in sports physio and build connections with local sports academies, the income potential is genuinely good after 5-6 years.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "First 2 years were rough financially, working under a senior at ₹18k/month. Now I have my own small clinic and make significantly more, but it took patience.",
+        "url": "https://quora.com"
+      }
+    ],
+    "related_careers": [
+      "bds",
+      "mbbs",
+      "paramedical_nursing"
+    ]
+  },
+  {
+    "id": "paramedical_nursing",
+    "name": "Nursing (B.Sc Nursing)",
+    "category": "paramedical",
+    "tagline": "Globally in-demand, India-underpaid. The international route changes everything.",
+    "overview": "B.Sc Nursing is a 4-year degree leading to one of the most globally portable healthcare careers. Indian nurses are in massive demand abroad (UK, USA, Gulf, Australia, Canada), often earning multiples of what they would in India. Domestically, pay is comparatively low relative to the workload and responsibility.",
+    "what_nobody_tells_you": [
+      "Domestic nursing salaries in India are disproportionately low compared to the workload, especially in private hospitals — often ₹15,000-₹25,000/month for years.",
+      "The real financial opportunity for many Indian nurses is moving abroad. Countries like UK, Germany, and Gulf nations have structured pathways (OET/IELTS plus licensing) for Indian nurses.",
+      "Government hospital nursing jobs are far better paid and more stable than private hospital roles, but extremely competitive to get.",
+      "Nursing is physically and emotionally demanding — long shifts, night duties, handling critical patients, exposure to suffering and death regularly.",
+      "Career growth within nursing (head nurse, nursing superintendent) takes many years and additional qualifications.",
+      "There's often a perception gap — nursing is seen as 'lower status' than being a doctor in India, despite the skill and responsibility involved, which affects how nurses are treated in some settings."
+    ],
+    "day_in_the_life": {
+      "student": "Classroom learning plus extensive hospital clinical postings, learning patient care, medication administration, and emergency response.",
+      "professional": "12-hour shifts (often rotating including nights), direct patient care, medication administration, coordination with doctors, patient family communication. Physically and emotionally intensive."
+    },
+    "salary": {
+      "entry": "₹15,000 - ₹25,000/month (India, private hospital) vs ₹1.5 - ₹3 lakh/month (Gulf countries, entry level)",
+      "mid": "₹30,000 - ₹60,000/month (India, government or senior private) vs ₹2.5 - ₹5 lakh/month (UK, Gulf, after a few years)",
+      "senior": "₹50,000 - ₹1.5 lakh/month (India, senior nursing roles) vs ₹5 - ₹10 lakh/month equivalent (USA, UK, after specialization and years abroad)"
+    },
+    "scope": {
+      "india": "Stable demand but underpaid relative to skill required, especially in private sector. Government roles are better but limited in number.",
+      "abroad": "Extremely strong. Indian nurses are actively recruited by UK NHS, Gulf hospitals, Australian and Canadian healthcare systems. This is one of the clearest 'study in India, earn abroad' career paths available."
+    },
+    "who_thrives": [
+      "People with genuine empathy and patience for patient care",
+      "Those willing to pursue licensing exams (OET, NCLEX) to work abroad",
+      "People comfortable with physically and emotionally demanding shift work",
+      "Those who see nursing as a long-term, globally mobile career, not just a local job"
+    ],
+    "who_regrets_it": [
+      "Those expecting good pay in India without planning to go abroad",
+      "People uncomfortable with shift work, especially night duties",
+      "Those who underestimate the emotional toll of patient care and hospital environments",
+      "People who feel discouraged by the status perception gap in India"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Nursing in India pays poorly for the responsibility involved. The moment I got my UK NHS job through OET, my salary went up almost 8x. India trains some of the best nurses and then underpays them massively.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "If you're doing B.Sc Nursing in India, plan for OET or IELTS from day one if you want financial stability. The domestic nursing job market does not pay what the work deserves.",
+        "url": "https://quora.com"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "5 years as a nurse in a Gulf hospital after starting in India at ₹18k/month. Now earning the equivalent of ₹4 lakh/month tax-free. This career rewards those willing to go abroad.",
+        "url": "https://linkedin.com"
+      }
+    ],
+    "related_careers": [
+      "paramedical_physiotherapy",
+      "mbbs",
+      "bds"
+    ]
+  },
+  {
+    "id": "pharmacy",
+    "name": "Pharmacy (B.Pharm)",
+    "category": "paramedical",
+    "tagline": "Not just a chemist shop job — but most graduates end up there anyway.",
+    "overview": "B.Pharm is a 4-year degree covering drug chemistry, pharmacology, and pharmaceutical sciences. It opens paths into community pharmacy, hospital pharmacy, pharmaceutical companies (manufacturing, quality control, regulatory affairs), and research. The perception gap is large — most people think 'pharmacist' means running a medical shop, but the actual industry is much bigger.",
+    "what_nobody_tells_you": [
+      "Most B.Pharm graduates default into community pharmacy (running or working at a medical store) because that's the most visible and accessible path, even though it's the lowest-paying option.",
+      "The real money in pharmacy is in the pharmaceutical industry — quality assurance, regulatory affairs, drug safety (pharmacovigilance), and manufacturing roles at companies like Sun Pharma, Cipla, Dr. Reddy's. These require networking and often an M.Pharm to access.",
+      "An M.Pharm (postgraduate) significantly widens options and pay, especially for industry and research roles. Without it, growth plateaus faster.",
+      "Government pharmacist jobs (hospitals, drug inspector roles) are stable but require clearing competitive state-level exams.",
+      "India is one of the largest pharmaceutical manufacturing hubs globally ('pharmacy of the world'), so industry demand is genuinely strong — but students often don't know how to access these roles beyond the retail path.",
+      "Retail pharmacy income is often disappointing relative to the degree — many community pharmacists earn similar to non-graduate retail roles unless they own their own pharmacy."
+    ],
+    "day_in_the_life": {
+      "student": "Heavy chemistry and pharmacology coursework, lab work synthesizing and analyzing compounds, industrial visits, internships at pharmacies or pharma companies in later years.",
+      "professional": "Community pharmacist: dispensing medication, patient counseling, inventory management, retail operations. Industry role: quality testing, regulatory documentation, formulation development, or compliance — much more lab/office based than retail."
+    },
+    "salary": {
+      "entry": "₹15,000 - ₹25,000/month (retail) vs ₹25,000 - ₹40,000/month (industry, QA/QC roles)",
+      "mid": "₹35,000 - ₹70,000/month (own pharmacy or mid-level industry role, 5 years)",
+      "senior": "₹80,000 - ₹2.5 lakh/month (senior industry roles like regulatory affairs manager, or a well-established pharmacy chain owner)"
+    },
+    "scope": {
+      "india": "Strong industry scope given India's massive pharma manufacturing base. Retail scope is stable but financially limited unless you own multiple outlets.",
+      "abroad": "Decent for industry-focused roles, especially regulatory affairs and pharmacovigilance with multinational pharma companies. Becoming a licensed pharmacist abroad (e.g., USA) requires additional exams (FPGEE) and is a long process."
+    },
+    "who_thrives": [
+      "People interested in chemistry, drug formulation, and how medicines actually work",
+      "Those willing to pursue M.Pharm or specialize to access industry roles",
+      "Detail-oriented people comfortable with regulatory and compliance work",
+      "Entrepreneurially minded people who want to eventually own a pharmacy or distribution business"
+    ],
+    "who_regrets_it": [
+      "Those who expected pharmacy to be primarily clinical, like working alongside doctors directly",
+      "People who default into retail without exploring industry options and feel stuck",
+      "Those who need a postgraduate degree to access good roles but can't pursue M.Pharm",
+      "People expecting fast financial returns without years of network-building for industry roles"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Did B.Pharm thinking I'd end up like a doctor's assistant. Reality: most of my batch ended up running medical stores. The pharma industry jobs exist but nobody in college tells you how to actually get them.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "M.Pharm plus 2 years experience got me into regulatory affairs at a mid-size pharma company. Salary jumped from ₹18k in retail to ₹45k. The industry side of pharmacy is real money, retail is not.",
+        "url": "https://linkedin.com"
+      },
+      {
+        "source": "Quora",
+        "quote": "Pharmacy in India is 'the pharmacy of the world' for manufacturing but a lot of graduates don't realize this and end up underselling themselves in retail roles their whole career.",
+        "url": "https://quora.com"
+      }
+    ],
+    "related_careers": [
+      "mbbs",
+      "bds",
+      "paramedical_nursing"
+    ]
+  },
+  {
+    "id": "radiology_tech",
+    "name": "Radiology / Medical Imaging (B.Sc)",
+    "category": "paramedical",
+    "tagline": "High-tech, high-demand, and quietly one of the best-paying paramedical fields.",
+    "overview": "B.Sc in Radiology / Medical Imaging Technology is a 3-4 year degree training students to operate X-ray, CT, MRI, and ultrasound equipment, and assist radiologists in diagnostic imaging. It's less commonly chosen than nursing or physiotherapy but tends to have better pay and strong demand due to the growing reliance on diagnostic imaging in healthcare.",
+    "what_nobody_tells_you": [
+      "Radiology technologists are in high demand because diagnostic imaging (CT, MRI, ultrasound) has grown massively, but the number of trained technologists hasn't kept pace.",
+      "Private diagnostic centers and hospitals often pay better than government roles for this specific field, which is unusual compared to most paramedical careers.",
+      "Specializing further (e.g., in MRI or CT specifically, or becoming a sonographer) significantly increases both pay and job security.",
+      "The job involves real radiation exposure risk if safety protocols aren't followed properly — proper training and protective equipment use is critical and not always strictly enforced at smaller centers.",
+      "Career growth into roles like chief radiology technologist or imaging center manager is possible with experience, but requires staying updated with rapidly evolving imaging technology.",
+      "This field is less saturated than nursing or physiotherapy in terms of graduate numbers, which works in favor of job seekers."
+    ],
+    "day_in_the_life": {
+      "student": "Physics-heavy coursework (understanding imaging technology), anatomy, hands-on training operating imaging equipment under supervision at hospitals.",
+      "professional": "Operating CT/MRI/X-ray/ultrasound machines, positioning patients correctly, ensuring image quality, working closely with radiologists who interpret the images. Shift-based work, sometimes including emergency/on-call imaging."
+    },
+    "salary": {
+      "entry": "₹20,000 - ₹35,000/month",
+      "mid": "₹40,000 - ₹80,000/month (5 years, especially with MRI/CT specialization)",
+      "senior": "₹90,000 - ₹2.5 lakh/month (senior technologist, imaging center manager, or specialized sonographer roles)"
+    },
+    "scope": {
+      "india": "Strong and growing — increased diagnostic imaging usage across hospitals and standalone diagnostic centers in both urban and semi-urban areas.",
+      "abroad": "Good scope in Gulf countries, UK, Australia — radiology technologists/radiographers are recognized and in-demand roles, though licensing requirements vary by country."
+    },
+    "who_thrives": [
+      "People interested in medical technology and imaging science",
+      "Those comfortable with precise, technical, equipment-based work",
+      "People who want a paramedical career with comparatively good pay without an extremely long education path",
+      "Those willing to specialize further (MRI, CT, sonography) for better growth"
+    ],
+    "who_regrets_it": [
+      "Those uncomfortable with radiation exposure risk, even with safety measures",
+      "People expecting purely diagnostic/interpretive work (that's the radiologist's role, a separate path requiring MBBS plus MD)",
+      "Those who dislike shift-based or on-call work schedules",
+      "People who chose it without realizing how much it relies on staying current with evolving imaging technology"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Underrated field. Did B.Sc Radiology, specialized in MRI after a diploma, now earning more than most of my BDS friends with less education time invested.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "Diagnostic centers are growing everywhere, even in tier-2 cities. Good radiology technologists are genuinely hard to find, which works in our favor for negotiating pay.",
+        "url": "https://quora.com"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "Moved from a government hospital role to a private diagnostic chain. Pay nearly doubled. This field rewards specialization heavily — get certified in MRI or CT specifically if you want better offers.",
+        "url": "https://linkedin.com"
+      }
+    ],
+    "related_careers": [
+      "mbbs",
+      "paramedical_nursing",
+      "paramedical_physiotherapy"
+    ]
+  }
+]
