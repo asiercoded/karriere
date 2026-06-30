@@ -62,6 +62,67 @@
     ]
   },
   {
+    "id": "bds",
+    "name": "BDS (Dental Surgery)",
+    "category": "medical",
+    "tagline": "The 'backup' to MBBS for most. A genuine career for a few. A regret for many.",
+    "overview": "BDS is a 4-year undergraduate dental degree plus 1 year mandatory internship, pursued via NEET. It is frequently chosen by students who didn't get a high enough NEET rank for MBBS, which creates a large population of dentists who never actually wanted dentistry. For those genuinely interested, it can be a stable, flexible, and profitable career.",
+    "what_nobody_tells_you": [
+      "A large percentage of BDS students didn't choose it — they ended up there after missing MBBS cutoffs. This creates widespread disengagement and regret in dental colleges.",
+      "Government dental jobs are extremely limited. Most BDS graduates either do MDS (postgraduate, equally competitive as NEET-PG) or open private practice.",
+      "Starting a private practice requires significant capital — equipment, clinic space, staff. Many young dentists work as associates at someone else's clinic first, often underpaid.",
+      "Without an MDS, career ceiling is lower. General dentists earn far less than specialists (orthodontists, oral surgeons, etc.).",
+      "The actual day-to-day — extractions, root canals, dealing with anxious patients — is very different from the 'glamorous doctor' image people have before joining.",
+      "Many BDS graduates eventually pivot entirely — into MBA, content creation, or other fields — after realizing dentistry wasn't their calling."
+    ],
+    "day_in_the_life": {
+      "student": "Lectures in the morning, clinical postings in the afternoon (working on real patients under supervision), practical exams are frequent and stressful. Less brutal than MBBS but still demanding.",
+      "professional": "Clinic hours, patient consultations, procedures. Private practice means also handling business side — staff, marketing, finances. Less emergency/on-call pressure than MBBS doctors generally."
+    },
+    "salary": {
+      "entry": "₹20,000 - ₹40,000/month (associate dentist or junior government role)",
+      "mid": "₹50,000 - ₹1.5 lakh/month (own clinic establishing, or MDS specialist starting out)",
+      "senior": "₹2 - ₹10 lakh/month (established private practice or specialist, highly location-dependent)"
+    },
+    "scope": {
+      "india": "Moderate. Oversupply of dentists in urban areas. Rural and semi-urban areas have less competition. Specialization (MDS) significantly improves prospects.",
+      "abroad": "Difficult. Most countries require redoing licensing exams and sometimes years of additional study (e.g., NDEB in Canada, ADC in Australia). Not a smooth transition like MBBS to USMLE."
+    },
+    "who_thrives": [
+      "People with genuine interest in dentistry, not those who landed there by default",
+      "Those who enjoy precise, hands-on, detail-focused work",
+      "Entrepreneurially minded people willing to build and run their own practice",
+      "Those comfortable with a slower financial ramp-up before practice stabilizes"
+    ],
+    "who_regrets_it": [
+      "Students who chose it only because they missed MBBS cutoffs",
+      "Those expecting MBBS-level prestige or pay without MBBS-level specialization",
+      "People uncomfortable with repetitive, hands-on clinical work",
+      "Those who don't want to deal with the business side of running a clinic"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Did BDS because I missed MBBS by 2 marks. Four years later I still don't enjoy dentistry but I'm too deep in to switch. This is more common than people think.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "Quora",
+        "quote": "BDS without MDS is a tough life financially in the first few years. I worked as an associate for ₹25k/month for 2 years before I could afford my own setup.",
+        "url": "https://quora.com"
+      },
+      {
+        "source": "Reddit r/india",
+        "quote": "If you actually like dentistry, BDS + MDS in orthodontics or oral surgery can be very lucrative. The problem is most people in dental college don't actually want to be there.",
+        "url": "https://reddit.com/r/india"
+      }
+    ],
+    "related_careers": [
+      "mbbs",
+      "paramedical_physiotherapy"
+    ]
+  },
+  {
     "id": "cs_engineering",
     "name": "Computer Science Engineering",
     "category": "engineering",
@@ -183,67 +244,6 @@
       "mba",
       "cs_engineering",
       "law"
-    ]
-  },
-  {
-    "id": "bds",
-    "name": "BDS (Dental Surgery)",
-    "category": "medical",
-    "tagline": "The 'backup' to MBBS for most. A genuine career for a few. A regret for many.",
-    "overview": "BDS is a 4-year undergraduate dental degree plus 1 year mandatory internship, pursued via NEET. It is frequently chosen by students who didn't get a high enough NEET rank for MBBS, which creates a large population of dentists who never actually wanted dentistry. For those genuinely interested, it can be a stable, flexible, and profitable career.",
-    "what_nobody_tells_you": [
-      "A large percentage of BDS students didn't choose it — they ended up there after missing MBBS cutoffs. This creates widespread disengagement and regret in dental colleges.",
-      "Government dental jobs are extremely limited. Most BDS graduates either do MDS (postgraduate, equally competitive as NEET-PG) or open private practice.",
-      "Starting a private practice requires significant capital — equipment, clinic space, staff. Many young dentists work as associates at someone else's clinic first, often underpaid.",
-      "Without an MDS, career ceiling is lower. General dentists earn far less than specialists (orthodontists, oral surgeons, etc.).",
-      "The actual day-to-day — extractions, root canals, dealing with anxious patients — is very different from the 'glamorous doctor' image people have before joining.",
-      "Many BDS graduates eventually pivot entirely — into MBA, content creation, or other fields — after realizing dentistry wasn't their calling."
-    ],
-    "day_in_the_life": {
-      "student": "Lectures in the morning, clinical postings in the afternoon (working on real patients under supervision), practical exams are frequent and stressful. Less brutal than MBBS but still demanding.",
-      "professional": "Clinic hours, patient consultations, procedures. Private practice means also handling business side — staff, marketing, finances. Less emergency/on-call pressure than MBBS doctors generally."
-    },
-    "salary": {
-      "entry": "₹20,000 - ₹40,000/month (associate dentist or junior government role)",
-      "mid": "₹50,000 - ₹1.5 lakh/month (own clinic establishing, or MDS specialist starting out)",
-      "senior": "₹2 - ₹10 lakh/month (established private practice or specialist, highly location-dependent)"
-    },
-    "scope": {
-      "india": "Moderate. Oversupply of dentists in urban areas. Rural and semi-urban areas have less competition. Specialization (MDS) significantly improves prospects.",
-      "abroad": "Difficult. Most countries require redoing licensing exams and sometimes years of additional study (e.g., NDEB in Canada, ADC in Australia). Not a smooth transition like MBBS to USMLE."
-    },
-    "who_thrives": [
-      "People with genuine interest in dentistry, not those who landed there by default",
-      "Those who enjoy precise, hands-on, detail-focused work",
-      "Entrepreneurially minded people willing to build and run their own practice",
-      "Those comfortable with a slower financial ramp-up before practice stabilizes"
-    ],
-    "who_regrets_it": [
-      "Students who chose it only because they missed MBBS cutoffs",
-      "Those expecting MBBS-level prestige or pay without MBBS-level specialization",
-      "People uncomfortable with repetitive, hands-on clinical work",
-      "Those who don't want to deal with the business side of running a clinic"
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "Did BDS because I missed MBBS by 2 marks. Four years later I still don't enjoy dentistry but I'm too deep in to switch. This is more common than people think.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "Quora",
-        "quote": "BDS without MDS is a tough life financially in the first few years. I worked as an associate for ₹25k/month for 2 years before I could afford my own setup.",
-        "url": "https://quora.com"
-      },
-      {
-        "source": "Reddit r/india",
-        "quote": "If you actually like dentistry, BDS + MDS in orthodontics or oral surgery can be very lucrative. The problem is most people in dental college don't actually want to be there.",
-        "url": "https://reddit.com/r/india"
-      }
-    ],
-    "related_careers": [
-      "mbbs",
-      "paramedical_physiotherapy"
     ]
   },
   {
@@ -431,6 +431,68 @@
     ]
   },
   {
+    "id": "pharmacy",
+    "name": "Pharmacy (B.Pharm)",
+    "category": "paramedical",
+    "tagline": "Not just a chemist shop job — but most graduates end up there anyway.",
+    "overview": "B.Pharm is a 4-year degree covering drug chemistry, pharmacology, and pharmaceutical sciences. It opens paths into community pharmacy, hospital pharmacy, pharmaceutical companies (manufacturing, quality control, regulatory affairs), and research. The perception gap is large — most people think 'pharmacist' means running a medical shop, but the actual industry is much bigger.",
+    "what_nobody_tells_you": [
+      "Most B.Pharm graduates default into community pharmacy (running or working at a medical store) because that's the most visible and accessible path, even though it's the lowest-paying option.",
+      "The real money in pharmacy is in the pharmaceutical industry — quality assurance, regulatory affairs, drug safety (pharmacovigilance), and manufacturing roles at companies like Sun Pharma, Cipla, Dr. Reddy's. These require networking and often an M.Pharm to access.",
+      "An M.Pharm (postgraduate) significantly widens options and pay, especially for industry and research roles. Without it, growth plateaus faster.",
+      "Government pharmacist jobs (hospitals, drug inspector roles) are stable but require clearing competitive state-level exams.",
+      "India is one of the largest pharmaceutical manufacturing hubs globally ('pharmacy of the world'), so industry demand is genuinely strong — but students often don't know how to access these roles beyond the retail path.",
+      "Retail pharmacy income is often disappointing relative to the degree — many community pharmacists earn similar to non-graduate retail roles unless they own their own pharmacy."
+    ],
+    "day_in_the_life": {
+      "student": "Heavy chemistry and pharmacology coursework, lab work synthesizing and analyzing compounds, industrial visits, internships at pharmacies or pharma companies in later years.",
+      "professional": "Community pharmacist: dispensing medication, patient counseling, inventory management, retail operations. Industry role: quality testing, regulatory documentation, formulation development, or compliance — much more lab/office based than retail."
+    },
+    "salary": {
+      "entry": "₹15,000 - ₹25,000/month (retail) vs ₹25,000 - ₹40,000/month (industry, QA/QC roles)",
+      "mid": "₹35,000 - ₹70,000/month (own pharmacy or mid-level industry role, 5 years)",
+      "senior": "₹80,000 - ₹2.5 lakh/month (senior industry roles like regulatory affairs manager, or a well-established pharmacy chain owner)"
+    },
+    "scope": {
+      "india": "Strong industry scope given India's massive pharma manufacturing base. Retail scope is stable but financially limited unless you own multiple outlets.",
+      "abroad": "Decent for industry-focused roles, especially regulatory affairs and pharmacovigilance with multinational pharma companies. Becoming a licensed pharmacist abroad (e.g., USA) requires additional exams (FPGEE) and is a long process."
+    },
+    "who_thrives": [
+      "People interested in chemistry, drug formulation, and how medicines actually work",
+      "Those willing to pursue M.Pharm or specialize to access industry roles",
+      "Detail-oriented people comfortable with regulatory and compliance work",
+      "Entrepreneurially minded people who want to eventually own a pharmacy or distribution business"
+    ],
+    "who_regrets_it": [
+      "Those who expected pharmacy to be primarily clinical, like working alongside doctors directly",
+      "People who default into retail without exploring industry options and feel stuck",
+      "Those who need a postgraduate degree to access good roles but can't pursue M.Pharm",
+      "People expecting fast financial returns without years of network-building for industry roles"
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/india",
+        "quote": "Did B.Pharm thinking I'd end up like a doctor's assistant. Reality: most of my batch ended up running medical stores. The pharma industry jobs exist but nobody in college tells you how to actually get them.",
+        "url": "https://reddit.com/r/india"
+      },
+      {
+        "source": "LinkedIn",
+        "quote": "M.Pharm plus 2 years experience got me into regulatory affairs at a mid-size pharma company. Salary jumped from ₹18k in retail to ₹45k. The industry side of pharmacy is real money, retail is not.",
+        "url": "https://linkedin.com"
+      },
+      {
+        "source": "Quora",
+        "quote": "Pharmacy in India is 'the pharmacy of the world' for manufacturing but a lot of graduates don't realize this and end up underselling themselves in retail roles their whole career.",
+        "url": "https://quora.com"
+      }
+    ],
+    "related_careers": [
+      "mbbs",
+      "bds",
+      "paramedical_nursing"
+    ]
+  },
+  {
     "id": "paramedical_physiotherapy",
     "name": "Physiotherapy (BPT)",
     "category": "paramedical",
@@ -547,68 +609,6 @@
       "paramedical_physiotherapy",
       "mbbs",
       "bds"
-    ]
-  },
-  {
-    "id": "pharmacy",
-    "name": "Pharmacy (B.Pharm)",
-    "category": "paramedical",
-    "tagline": "Not just a chemist shop job — but most graduates end up there anyway.",
-    "overview": "B.Pharm is a 4-year degree covering drug chemistry, pharmacology, and pharmaceutical sciences. It opens paths into community pharmacy, hospital pharmacy, pharmaceutical companies (manufacturing, quality control, regulatory affairs), and research. The perception gap is large — most people think 'pharmacist' means running a medical shop, but the actual industry is much bigger.",
-    "what_nobody_tells_you": [
-      "Most B.Pharm graduates default into community pharmacy (running or working at a medical store) because that's the most visible and accessible path, even though it's the lowest-paying option.",
-      "The real money in pharmacy is in the pharmaceutical industry — quality assurance, regulatory affairs, drug safety (pharmacovigilance), and manufacturing roles at companies like Sun Pharma, Cipla, Dr. Reddy's. These require networking and often an M.Pharm to access.",
-      "An M.Pharm (postgraduate) significantly widens options and pay, especially for industry and research roles. Without it, growth plateaus faster.",
-      "Government pharmacist jobs (hospitals, drug inspector roles) are stable but require clearing competitive state-level exams.",
-      "India is one of the largest pharmaceutical manufacturing hubs globally ('pharmacy of the world'), so industry demand is genuinely strong — but students often don't know how to access these roles beyond the retail path.",
-      "Retail pharmacy income is often disappointing relative to the degree — many community pharmacists earn similar to non-graduate retail roles unless they own their own pharmacy."
-    ],
-    "day_in_the_life": {
-      "student": "Heavy chemistry and pharmacology coursework, lab work synthesizing and analyzing compounds, industrial visits, internships at pharmacies or pharma companies in later years.",
-      "professional": "Community pharmacist: dispensing medication, patient counseling, inventory management, retail operations. Industry role: quality testing, regulatory documentation, formulation development, or compliance — much more lab/office based than retail."
-    },
-    "salary": {
-      "entry": "₹15,000 - ₹25,000/month (retail) vs ₹25,000 - ₹40,000/month (industry, QA/QC roles)",
-      "mid": "₹35,000 - ₹70,000/month (own pharmacy or mid-level industry role, 5 years)",
-      "senior": "₹80,000 - ₹2.5 lakh/month (senior industry roles like regulatory affairs manager, or a well-established pharmacy chain owner)"
-    },
-    "scope": {
-      "india": "Strong industry scope given India's massive pharma manufacturing base. Retail scope is stable but financially limited unless you own multiple outlets.",
-      "abroad": "Decent for industry-focused roles, especially regulatory affairs and pharmacovigilance with multinational pharma companies. Becoming a licensed pharmacist abroad (e.g., USA) requires additional exams (FPGEE) and is a long process."
-    },
-    "who_thrives": [
-      "People interested in chemistry, drug formulation, and how medicines actually work",
-      "Those willing to pursue M.Pharm or specialize to access industry roles",
-      "Detail-oriented people comfortable with regulatory and compliance work",
-      "Entrepreneurially minded people who want to eventually own a pharmacy or distribution business"
-    ],
-    "who_regrets_it": [
-      "Those who expected pharmacy to be primarily clinical, like working alongside doctors directly",
-      "People who default into retail without exploring industry options and feel stuck",
-      "Those who need a postgraduate degree to access good roles but can't pursue M.Pharm",
-      "People expecting fast financial returns without years of network-building for industry roles"
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "Did B.Pharm thinking I'd end up like a doctor's assistant. Reality: most of my batch ended up running medical stores. The pharma industry jobs exist but nobody in college tells you how to actually get them.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "LinkedIn",
-        "quote": "M.Pharm plus 2 years experience got me into regulatory affairs at a mid-size pharma company. Salary jumped from ₹18k in retail to ₹45k. The industry side of pharmacy is real money, retail is not.",
-        "url": "https://linkedin.com"
-      },
-      {
-        "source": "Quora",
-        "quote": "Pharmacy in India is 'the pharmacy of the world' for manufacturing but a lot of graduates don't realize this and end up underselling themselves in retail roles their whole career.",
-        "url": "https://quora.com"
-      }
-    ],
-    "related_careers": [
-      "mbbs",
-      "bds",
-      "paramedical_nursing"
     ]
   },
   {

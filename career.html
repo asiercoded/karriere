@@ -290,6 +290,12 @@ body {
   color: var(--ink-faint);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.quote-source:hover {
+  color: var(--amber);
 }
 
 /* ── RELATED ── */
@@ -450,7 +456,7 @@ async function load() {
       ${career.real_experiences.map(q => `
         <div class="quote-block">
           <div class="quote-text">"${q.quote}"</div>
-          <div class="quote-source">${q.source}</div>
+          <a class="quote-source" href="${q.url}" target="_blank" rel="noopener noreferrer">${q.source} ↗</a>
         </div>
       `).join('')}
     </div>
