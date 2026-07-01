@@ -364,6 +364,7 @@ const cm = CARD_METRICS[career.id] || {};
       </div>
 </div>
       </div>
+        ${chooseSection}
 
         <div class="section-label">What nobody tells you</div>
         <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
