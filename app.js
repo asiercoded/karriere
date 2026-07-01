@@ -8,8 +8,13 @@ const CATEGORY_LABELS = {
 };
 
 const CATEGORY_ICONS = {
-  medical: '🩺', engineering: '⚙️', commerce: '📊',
-  law: '⚖️', design: '🎨', management: '📈', paramedical: '⛑️'
+  medical: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>',
+  engineering: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg>',
+  commerce: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>',
+  law: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 3h8M4 7h6M14 7h6"></path><path d="M2 7l3 7a3.5 3.5 0 0 0 7 0L9 7"></path><path d="M15 7l3 7a3.5 3.5 0 0 0 7 0L22 7"></path></svg>',
+  design: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10c0-1-.5-2-2-2h-3a2 2 0 0 1-2-2c0-.8.3-1.3 1-2a2 2 0 0 0-1-3.7A9.9 9.9 0 0 0 12 2z"></path><circle cx="7.5" cy="10.5" r="1"></circle><circle cx="7" cy="15" r="1"></circle><circle cx="11" cy="17.5" r="1"></circle></svg>',
+  management: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>',
+  paramedical: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>'
 };
 
 // Duration = years of formal training to first practice. Stress/competition are
@@ -252,9 +257,9 @@ const cm = CARD_METRICS[career.id] || {};
     return rc ? `<button class="related-pill" data-nav="${rc.id}">${rc.name}</button>` : '';
   }).join('');
 
-  const loveSection = career.why_people_love_it ? `
+  const chooseSection = career.why_people_love_it ? `
     <div class="section">
-      <div class="section-label">Why people love it</div>
+      <div class="section-label">Why people choose this</div>
       <ul class="love-list">${career.why_people_love_it.map(p => `<li>${p}</li>`).join('')}</ul>
     </div>
   ` : '';
@@ -306,6 +311,24 @@ const cm = CARD_METRICS[career.id] || {};
         </div>
       </div>
 
+      <div class="section">
+        <div class="section-label">Salary progression</div>
+        <div class="salary-track">
+          <div class="salary-row">
+            <div class="salary-stage">Entry</div>
+            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="40"><span class="salary-value">${career.salary.entry}</span></div></div>
+          </div>
+          <div class="salary-row">
+            <div class="salary-stage">Mid</div>
+            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="68"><span class="salary-value">${career.salary.mid}</span></div></div>
+          </div>
+          <div class="salary-row">
+            <div class="salary-stage">Senior</div>
+            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="95"><span class="salary-value">${career.salary.senior}</span></div></div>
+          </div>
+        </div>
+      </div>
+
       <div class="section timeline-section">
         <div class="section-label">Timeline</div>
         <div class="timeline-track">
@@ -317,20 +340,6 @@ const cm = CARD_METRICS[career.id] || {};
             </div>
             ${i < timelineStages.length - 1 ? '<div class="timeline-line"></div>' : ''}
           `).join('')}
-        </div>
-      </div>
-
-      <div class="section proscons-section">
-        <div class="section-label">Pros vs cons</div>
-        <div class="proscons-grid">
-          <div class="proscons-col pros">
-            <div class="proscons-heading">Pros</div>
-            <ul>${(career.why_people_love_it || []).map(p => `<li>${p}</li>`).join('')}</ul>
-          </div>
-          <div class="proscons-col cons">
-            <div class="proscons-heading">Cons</div>
-            <ul>${(career.what_nobody_tells_you || []).map(p => `<li>${p}</li>`).join('')}</ul>
-          </div>
         </div>
       </div>
 
@@ -346,8 +355,13 @@ const cm = CARD_METRICS[career.id] || {};
 </div>
       </div>
 
-      ${loveSection}
+      ${chooseSection}
 </div><div class="tldr-divider"><span class="tldr-divider-label">The full story</span></div>
+      <div class="section">
+        <div class="section-label">What nobody tells you</div>
+        <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
+      </div>
+
       <div class="section">
         <div class="section-label">Who thrives here</div>
         <div class="fit-grid">
@@ -377,24 +391,6 @@ const cm = CARD_METRICS[career.id] || {};
       </div>
 
       <div class="section">
-        <div class="section-label">Salary progression</div>
-        <div class="salary-track">
-          <div class="salary-row">
-            <div class="salary-stage">Entry</div>
-            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="40"><span class="salary-value">${career.salary.entry}</span></div></div>
-          </div>
-          <div class="salary-row">
-            <div class="salary-stage">Mid</div>
-            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="68"><span class="salary-value">${career.salary.mid}</span></div></div>
-          </div>
-          <div class="salary-row">
-            <div class="salary-stage">Senior</div>
-            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="95"><span class="salary-value">${career.salary.senior}</span></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
         <div class="section-label">Scope</div>
         <div class="scope-grid">
           <div class="scope-card">
@@ -406,11 +402,6 @@ const cm = CARD_METRICS[career.id] || {};
             <div class="scope-text">${career.scope.abroad}</div>
           </div>
         </div>
-      </div>
-
-      <div class="section">
-        <div class="section-label">What nobody tells you</div>
-        <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
       </div>
 
       <div class="section">

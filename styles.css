@@ -399,7 +399,8 @@ button, input { font-family: inherit; }
   gap: 6px;
 }
 
-.entry-icon { font-size: 16px; }
+.entry-icon { display: inline-flex; align-items: center; }
+.cat-icon { flex-shrink: 0; vertical-align: -2px; }
 
 .entry-main { min-width: 0; }
 
@@ -513,6 +514,9 @@ footer {
 }
 
 .career-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 11px;
   font-weight: 700;
   color: var(--amber);
@@ -798,15 +802,6 @@ footer {
   .timeline-line { display: none; }
 }
 
-/* ── PROS VS CONS ── */
-.proscons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-@media (max-width: 600px) { .proscons-grid { grid-template-columns: 1fr; } }
-.proscons-col { border-left: 3px solid var(--sage); padding-left: 18px; }
-.proscons-col.cons { border-left-color: var(--dustred); }
-.proscons-heading { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 12px; color: var(--sage); }
-.proscons-col.cons .proscons-heading { color: var(--dustred); }
-.proscons-col ul { list-style: none; }
-.proscons-col li { font-size: 14px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 10px; }
 
 /* ── PROGRESSION ── */
 .progression-track { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
