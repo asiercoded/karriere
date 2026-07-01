@@ -16,6 +16,16 @@ const CATEGORY_ICONS = {
   management: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>',
   paramedical: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>'
 };
+const SNAPSHOT_ICONS = {
+  salary: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg>',
+  stress: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 7 12 9 6 13 18 16 12 22 12"></polyline></svg>',
+  worklife: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"></line><line x1="4" y1="7" x2="20" y2="7"></line><circle cx="5.5" cy="12" r="3.5"></circle><circle cx="18.5" cy="12" r="3.5"></circle></svg>',
+  study: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5c2-1.3 5-2 8-1v14c-3-1-6-.3-8 1V5z"></path><path d="M22 5c-2-1.3-5-2-8-1v14c3-1 6-.3 8 1V5z"></path></svg>',
+  competition: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"></path><path d="M7 5H4a1 1 0 0 0-1 1c0 2.5 1.8 4.5 4 4.8"></path><path d="M17 5h3a1 1 0 0 1 1 1c0 2.5-1.8 4.5-4 4.8"></path><path d="M12 14v3"></path><path d="M9 21h6"></path><path d="M9.5 17h5l.5 4h-6l.5-4z"></path></svg>',
+  abroad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>'
+};
+const LOGOMARK = '<svg class="logomark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"></line><line x1="5.07" y1="8" x2="18.93" y2="16"></line><line x1="18.93" y1="8" x2="5.07" y2="16"></line></svg>';
 
 // Duration = years of formal training to first practice. Stress/competition are
 // 1-5 scale, derived from each career's overview, salary spread, and testimonies.
@@ -175,7 +185,7 @@ function renderListView() {
         <div class="entry-tagline">${c.tagline}</div>
         <div class="entry-metrics">
           ${c.salary && c.salary.entry ? `<span class="metric-chip metric-salary">${formatEntrySalary(c.salary.entry)}</span>` : ''}
-          ${m.duration ? `<span class="metric-chip metric-duration">⏱ ${m.duration}</span>` : ''}
+          ${m.duration ? `<span class="metric-chip metric-duration">${SNAPSHOT_ICONS.clock} ${m.duration}</span>` : ''}
           ${m.stress ? renderMeter(m.stress, 'stress') : ''}
           ${m.competition ? renderMeter(m.competition, 'competition') : ''}
         </div>
@@ -188,7 +198,7 @@ function renderListView() {
   return `
     <div class="wrap">
       <div class="masthead">
-        <button class="wordmark">Karriere</button>
+        <button class="wordmark">${LOGOMARK}<span>Karriere</span></button>
         <div class="masthead-meta">Vol. 1 — India Edition</div>
       </div>
       <div class="dateline">
@@ -267,7 +277,7 @@ const cm = CARD_METRICS[career.id] || {};
   return `
     <div class="wrap detail-wrap">
       <button class="back-link" data-nav="">← Back to all careers</button>
-      <button class="masthead-small">Karriere</button>
+      <button class="masthead-small">${LOGOMARK}<span>Karriere</span></button>
 
       <div class="career-header">
         <div class="career-tag">${CATEGORY_ICONS[career.category] || ''} ${CATEGORY_LABELS[career.category] || career.category}</div>
@@ -296,12 +306,12 @@ const cm = CARD_METRICS[career.id] || {};
       <div class="section snapshot-section">
         <div class="section-label">Reality snapshot</div>
         <div class="snapshot-card">
-          <div class="snapshot-row"><span class="snapshot-icon">💰</span><span class="snapshot-name">Salary potential</span>${renderStars(dm.salary_potential)}</div>
-          <div class="snapshot-row"><span class="snapshot-icon">😰</span><span class="snapshot-name">Stress</span>${renderStars(cm.stress)}</div>
-          <div class="snapshot-row"><span class="snapshot-icon">⚖️</span><span class="snapshot-name">Work-life balance</span>${renderStars(dm.work_life_balance)}</div>
-          <div class="snapshot-row"><span class="snapshot-icon">📚</span><span class="snapshot-name">Study difficulty</span>${renderStars(dm.study_difficulty)}</div>
-          <div class="snapshot-row"><span class="snapshot-icon">🏆</span><span class="snapshot-name">Competition</span>${renderStars(cm.competition)}</div>
-          <div class="snapshot-row"><span class="snapshot-icon">🌍</span><span class="snapshot-name">Abroad opportunities</span>${renderStars(dm.abroad_prospects)}</div>
+          <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.salary}</span><span class="snapshot-name">Salary potential</span>${renderStars(dm.salary_potential)}</div>
+<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.stress}</span><span class="snapshot-name">Stress</span>${renderStars(cm.stress)}</div>
+<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.worklife}</span><span class="snapshot-name">Work-life balance</span>${renderStars(dm.work_life_balance)}</div>
+<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.study}</span><span class="snapshot-name">Study difficulty</span>${renderStars(dm.study_difficulty)}</div>
+<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.competition}</span><span class="snapshot-name">Competition</span>${renderStars(cm.competition)}</div>
+<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.abroad}</span><span class="snapshot-name">Abroad opportunities</span>${renderStars(dm.abroad_prospects)}</div>
           <div class="snapshot-duration">Average training time: <strong>${cm.duration || '—'}</strong></div>
           <div class="snapshot-quotes">
             <div class="snapshot-quote"><span class="snapshot-quote-label">Biggest misconception</span><span class="snapshot-quote-text">"${dm.misconception || ''}"</span></div>

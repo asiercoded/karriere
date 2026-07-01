@@ -100,6 +100,12 @@ button, input { font-family: inherit; }
   display: block;
 }
 
+.wordmark, .masthead-small { display: flex; align-items: center; gap: 9px; transition: transform 0.2s ease; }
+.logomark { color: var(--dustred); flex-shrink: 0; transition: transform 0.3s ease; }
+.wordmark .logomark { width: 26px; height: 26px; }
+.masthead-small .logomark { width: 18px; height: 18px; }
+.wordmark:hover .logomark, .masthead-small:hover .logomark { transform: rotate(90deg); }
+
 .dateline {
   display: flex;
   justify-content: space-between;
@@ -342,7 +348,7 @@ button, input { font-family: inherit; }
   padding: 8px 18px;
   border-radius: 100px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .filter-btn:hover { border-color: var(--violet); color: var(--violet); background: var(--violet-dim); }
@@ -742,7 +748,7 @@ footer {
   padding: 8px 18px;
   border-radius: 100px;
   color: var(--ink);
-  transition: all 0.15s;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
   background: var(--surface);
   cursor: pointer;
   font-family: 'Manrope', sans-serif;
@@ -779,7 +785,9 @@ footer {
 .snapshot-card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 24px 28px; }
 .snapshot-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
 .snapshot-row:last-of-type { border-bottom: none; }
-.snapshot-icon { font-size: 15px; width: 20px; text-align: center; }
+.snapshot-icon { width: 20px; height: 20px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; color: var(--ink-faint); }
+.snapshot-icon svg { width: 15px; height: 15px; }
+.metric-chip.metric-duration svg { width: 11px; height: 11px; vertical-align: -1.5px; margin-right: 1px; }
 .snapshot-name { flex: 1; font-weight: 600; color: var(--ink); }
 .snapshot-stars { color: var(--amber); letter-spacing: 2px; font-size: 15px; }
 .snapshot-duration { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-soft); }
