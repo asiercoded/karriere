@@ -47,9 +47,9 @@ const DETAIL_METRICS = {
   mbbs: { salary_potential: 4, study_difficulty: 5, work_life_balance: 1, job_availability: 5, abroad_prospects: 4,
     ideal_personality: 'Emotionally resilient, high stress tolerance, genuinely curious about biology',
     internship: '1 yr compulsory rotating internship (within MBBS)',
-    progression: ['House Surgeon / Intern', 'Junior Resident (MD/MS)', 'Senior Resident', 'Consultant / Specialist'],
-    misconception: 'Doctors become rich quickly.', regret: 'I underestimated how long it takes to actually start earning well.',
-    praise: 'The work feels meaningful — you see the direct impact of what you do.' },
+    progression: ['Intern', 'Junior Resident (MD/MS)', 'Senior Resident', 'Consultant / Specialist'],
+    misconception: 'Once you finish MBBS, you\'re financially set.', regret: 'I underestimated how long it takes to actually start earning well.',
+    praise: 'Helping even one patient makes the difficult days feel worthwhile.' },
   bds: { salary_potential: 3, study_difficulty: 4, work_life_balance: 3, job_availability: 2, abroad_prospects: 2,
     ideal_personality: 'Detail-oriented, hands-on, comfortable running a small business',
     internship: '1 yr compulsory internship',
@@ -365,9 +365,6 @@ const cm = CARD_METRICS[career.id] || {};
 </div>
       </div>
 
-      ${chooseSection}
-</div><div class="tldr-divider"><span class="tldr-divider-label">The full story</span></div>
-      <div class="section">
         <div class="section-label">What nobody tells you</div>
         <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
       </div>

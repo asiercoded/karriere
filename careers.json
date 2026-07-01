@@ -4,16 +4,20 @@
     "name": "MBBS",
     "category": "medical",
     "tagline": "The most respected degree in India. Also the most punishing.",
-    "overview": "MBBS is a 5.5 year undergraduate medical degree — this includes a 1-year mandatory internship within that duration, not separately. Getting in requires cracking NEET with a top percentile.",
+    "overview": "MBBS is the first step to becoming a doctor—not the finish line. It takes 5.5 years to complete, but for most doctors, the journey continues with postgraduate specialization. Medicine offers unmatched respect, job security, and meaningful work, but demands years of study, high pressure, and delayed financial rewards.",
     "what_nobody_tells_you": [
       "MBBS is just the beginning. To actually earn well, you need an MD/MS — that's 3 more years after MBBS, and NEET-PG is as brutal as NEET-UG.",
       "A general MBBS doctor in a government setup earns ₹50,000-₹80,000/month in early years. The 'doctor earns lakhs' image applies to specialists after 10+ years.",
       "Private medical college fees can go up to ₹1 crore for the full course. Most families take massive loans."
     ],
-    "day_in_the_life": {
-      "student": "6 AM wake up, hospital rounds by 8 AM, lectures until 2 PM, lab practicals, self-study until midnight. Repeat. During clinical years, add overnight duties every few days.",
-      "professional": "For a junior resident: 36-hour shifts, minimal sleep, high patient load, low pay (₹30,000-₹60,000/month stipend). For an established specialist: scheduled OPDs, surgeries, better income but high responsibility and stress."
-    },
+    "before_you_commit": [
+  "Would you still choose medicine if it took 10+ years to reach your desired income?",
+  "Can you handle seeing patients suffer or die?",
+  "Are you comfortable sacrificing much of your 20s to studying and training?",
+  "Do you genuinely enjoy biology beyond scoring marks?",
+  "If doctors weren't highly respected, would you still choose this career?"
+]
+    ,
     "salary": {
       "entry": "₹40,000 - ₹80,000/month (government job or junior resident)",
       "mid": "₹1 - ₹2 lakh/month (after MD/MS, 5 years experience)",
@@ -24,14 +28,25 @@
       "abroad": "Very viable in UK (PLAB), USA (USMLE), Australia, Canada — but requires clearing tough licensing exams, often redoing residency, and years of additional training. Many Indian doctors do make it."
     },
     "who_thrives": [
-      "People with genuine interest in human biology and patient interaction",
-      "Those with high stress tolerance and emotional resilience",
-      "People from families that can financially support 10+ years of education"
+      "People genuinely interested in biology and patient care.",
+      "People from families that can financially support 10+ years of education",
+      "Those who stay calm under pressure.",
+      "Those who find purpose in helping others."
+    ],
+     "why_people_love_it": [
+      "You directly improve people's lives every day.",
+      "One of the most respected professions in India — the social recognition and trust patients place in doctors is genuinely meaningful",
+      "Excellent long-term job security.",
+      "Intellectually rich — medicine constantly evolves, and the learning never stops, which suits people who are naturally curious",
+      "Extremely diverse career paths — research, surgery, public health, academia, global health organizations, private practice — all from one degree"
     ],
     "who_regrets_it": [
-      "People who chose it for status or parental pressure",
-      "Those who need work-life balance in their 20s",
-      "Students who struggle with rote memorization (early MBBS is heavily memory-based)"
+      "MBBS is only the beginning. Most doctors need an MD/MS or other specialization for better career growth.",
+      "You'll likely spend much of your 20s studying while friends in other fields start earning.",
+      "Medicine involves paperwork, communication, and administration—not just diagnosing patients.",
+      "Night shifts, weekends, and festival duties are common during training.",
+      "The emotional pressure can be harder than the academics."
+      "People who chose it for status or parental pressure often regret it when they realize the personal cost and delayed financial rewards.",
     ],
     "real_experiences": [
       {
@@ -49,12 +64,6 @@
       "bds",
       "paramedical_physiotherapy",
       "paramedical_nursing"
-    ],
-    "why_people_love_it": [
-      "One of the most respected professions in India — the social recognition and trust patients place in doctors is genuinely meaningful",
-      "Intellectually rich — medicine constantly evolves, and the learning never stops, which suits people who are naturally curious",
-      "Direct human impact every single day — you see the results of your work in ways most careers never offer",
-      "Extremely diverse career paths — research, surgery, public health, academia, global health organizations, private practice — all from one degree"
     ]
   },
   {
