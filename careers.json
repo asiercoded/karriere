@@ -4,7 +4,7 @@
     "name": "MBBS",
     "category": "medical",
     "tagline": "The most respected degree in India. Also the most punishing.",
-    "overview": "MBBS is a 5.5 year undergraduate medical degree followed by a 1-year mandatory internship. Getting in requires cracking NEET with a top percentile. The journey is long, expensive, and emotionally exhausting — but it leads to one of the most stable and respected careers in India.",
+    "overview": "MBBS is a 5.5 year undergraduate medical degree — this includes a 1-year mandatory internship within that duration, not separately. Getting in requires cracking NEET with a top percentile. The journey is long, expensive, and emotionally exhausting — but it leads to one of the most stable and respected careers in India.",
     "what_nobody_tells_you": [
       "MBBS is just the beginning. To actually earn well, you need an MD/MS — that's 3 more years after MBBS, and NEET-PG is as brutal as NEET-UG.",
       "A general MBBS doctor in a government setup earns ₹50,000-₹80,000/month in early years. The 'doctor earns lakhs' image applies to specialists after 10+ years.",
@@ -59,6 +59,13 @@
       "bds",
       "paramedical_physiotherapy",
       "paramedical_nursing"
+    ],
+    "why_people_love_it": [
+      "One of the most respected professions in India — the social recognition and trust patients place in doctors is genuinely meaningful",
+      "Intellectually rich — medicine constantly evolves, and the learning never stops, which suits people who are naturally curious",
+      "Direct human impact every single day — you see the results of your work in ways most careers never offer",
+      "Extremely diverse career paths — research, surgery, public health, academia, global health organizations, private practice — all from one degree",
+      "Job security is among the highest of any profession — doctor shortage in India means demand never dries up"
     ]
   },
   {
@@ -120,6 +127,13 @@
     "related_careers": [
       "mbbs",
       "paramedical_physiotherapy"
+    ],
+    "why_people_love_it": [
+      "High degree of autonomy — once established, you run your own practice on your own terms, no boss, no corporate ladder",
+      "Visible, immediate results — a patient walks in with pain or confidence issues and leaves transformed, often in one visit",
+      "Work-life balance is significantly better than MBBS once you have your own practice — no 36-hour shifts, no emergency on-call duties",
+      "Entrepreneurial ceiling is real — dentists who build multiple clinics or specialize well can earn substantially with relatively predictable hours",
+      "Hands-on, craft-based work — if you enjoy precision and working with your hands, dentistry is genuinely satisfying in a way desk jobs are not"
     ]
   },
   {
@@ -182,6 +196,13 @@
       "data_science",
       "product_management",
       "mba"
+    ],
+    "why_people_love_it": [
+      "Highest entry-level salaries of any undergraduate degree in India, especially from top colleges",
+      "Globally portable — a strong software engineer can work from anywhere in the world, remote or relocate",
+      "Fast feedback loops — you build something, ship it, and see real people use it, often within days",
+      "Entrepreneurship is more accessible in tech than almost any other field — you can build a product with zero capital",
+      "The field rewards skill over credentials more than most — a strong portfolio can outweigh a tier-3 college background"
     ]
   },
   {
@@ -490,6 +511,13 @@
       "mbbs",
       "bds",
       "paramedical_nursing"
+    ],
+    "why_people_love_it": [
+      "India is the pharmacy of the world — being trained here puts you at the center of a globally significant industry",
+      "Diverse career options beyond retail — pharmaceutical companies, regulatory affairs, drug safety, research, and hospital pharmacy all offer very different work environments",
+      "Relatively stable, recession-proof field — medicines are needed regardless of economic conditions",
+      "Entrepreneurial opportunity — owning a pharmacy or distribution business has a high, uncapped income ceiling",
+      "Growing international demand for pharmacovigilance and regulatory affairs professionals, especially from Indian pharma graduates"
     ]
   },
   {
@@ -497,7 +525,7 @@
     "name": "Physiotherapy (BPT)",
     "category": "paramedical",
     "tagline": "Steady, hands-on, growing field — often overlooked because it's not MBBS.",
-    "overview": "BPT (Bachelor of Physiotherapy) is a 4.5-year degree (4 years + 6 month internship) focused on rehabilitation, injury recovery, and movement therapy. Growing demand due to aging population, sports medicine growth, and increased awareness of physical wellness. Often underrated compared to MBBS/BDS but offers a genuinely good career for the right person.",
+    "overview": "BPT (Bachelor of Physiotherapy) is a 5-year degree (4 years + 1 year internship) focused on rehabilitation, injury recovery, and movement therapy. Growing demand due to aging population, sports medicine growth, and increased awareness of physical wellness. Often underrated compared to MBBS/BDS but offers a genuinely good career for the right person.",
     "what_nobody_tells_you": [
       "Entry-level pay is low — often ₹15,000-₹25,000/month working under a senior physiotherapist or at a hospital, especially in the first 2-3 years.",
       "Building a private practice or clinic takes time, similar to dentistry. The first few years are about building reputation and referral networks.",
@@ -547,6 +575,13 @@
       "bds",
       "mbbs",
       "paramedical_nursing"
+    ],
+    "why_people_love_it": [
+      "Deeply personal, rewarding work — helping someone regain movement after an injury or surgery is one of the most tangible impacts a healthcare professional can have",
+      "Growing field with genuine demand — sports medicine, elderly care, and post-surgical rehab are all expanding rapidly in India",
+      "Good work-life balance compared to MBBS/BDS — mostly scheduled appointments, rarely emergency on-call",
+      "Private practice is viable and financially rewarding once established, with relatively low setup costs compared to dentistry",
+      "Internationally recognized profession with clear pathways to work abroad in countries with high demand for physiotherapists"
     ]
   },
   {
@@ -609,6 +644,13 @@
       "paramedical_physiotherapy",
       "mbbs",
       "bds"
+    ],
+    "why_people_love_it": [
+      "One of the clearest international career pathways from India — Indian nurses are actively recruited by UK, Gulf, Australia, and Canada",
+      "Genuine job security — nursing shortage is a global problem, demand will not dry up in your lifetime",
+      "Direct, meaningful patient care — nurses often have more sustained contact with patients than doctors do",
+      "Multiple specialization paths — ICU, pediatrics, oncology, operation theatre — keeping the career from going stale",
+      "Income abroad can be transformative — nurses who move to the Gulf or UK often support entire families back home"
     ]
   },
   {
@@ -671,6 +713,13 @@
       "mbbs",
       "paramedical_nursing",
       "paramedical_physiotherapy"
+    ],
+    "why_people_love_it": [
+      "High-tech work environment — you operate some of the most advanced medical equipment in existence, MRI and CT machines are genuinely impressive technology",
+      "Less patient-emotional-load than nursing or physiotherapy — the work is precise and technical rather than emotionally intensive",
+      "Strong and growing demand as diagnostic imaging becomes standard across even tier-2 Indian cities",
+      "Comparatively good pay for the education investment, especially with MRI/CT specialization",
+      "Clear international pathway, particularly to Gulf countries where Indian radiology technologists are in active demand"
     ]
   }
 ]
