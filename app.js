@@ -383,19 +383,28 @@ const cm = CARD_METRICS[career.id] || {};
         </div>
       </div>
 
-      <div class="section">
-        <div class="section-label">A day in the life</div>
-        <div class="dayinlife-grid">
-          <div class="dayinlife-card">
-            <div class="dayinlife-role">As a student</div>
-            <div class="dayinlife-text">${career.day_in_the_life.student}</div>
-          </div>
-          <div class="dayinlife-card">
-            <div class="dayinlife-role">As a professional</div>
-            <div class="dayinlife-text">${career.day_in_the_life.professional}</div>
-          </div>
-        </div>
-      </div>
+      ${career.before_you_commit ? `
+<div class="section">
+  <div class="section-label">Before you commit</div>
+  <ul class="love-list">
+    ${career.before_you_commit.map(item => `<li>${item}</li>`).join('')}
+  </ul>
+</div>
+` : `
+<div class="section">
+  <div class="section-label">A day in the life</div>
+  <div class="dayinlife-grid">
+    <div class="dayinlife-card">
+      <div class="dayinlife-role">As a student</div>
+      <div class="dayinlife-text">${career.day_in_the_life.student}</div>
+    </div>
+    <div class="dayinlife-card">
+      <div class="dayinlife-role">As a professional</div>
+      <div class="dayinlife-text">${career.day_in_the_life.professional}</div>
+    </div>
+  </div>
+</div>
+`}
 
       <div class="section">
         <div class="section-label">Scope</div>
