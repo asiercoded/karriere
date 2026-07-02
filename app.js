@@ -1,3 +1,5 @@
+(function(){var r=sessionStorage.redirect;if(r){delete sessionStorage.redirect;history.replaceState(null,'',r);}})();
+
 let careers = [];
 let activeCategory = 'all';
 let searchQuery = '';
@@ -164,30 +166,35 @@ function formatEntrySalary(entry) {
   return `From ${numMatch[0]}${unitText}`;
 }
 
-function navigate(hash) { window.location.hash = hash; }
+const BASE = '/karriere';
+
+function navigate(path) {
+  const url = path ? `${BASE}/${path}` : BASE + '/';
+  history.pushState(null, '', url);
+  render(true);
+}
+
 
 function getFilteredCareers() {
   let list = activeCategory === 'all' ? careers : careers.filter(c => c.category === activeCategory);
   if (searchQuery.trim()) {
     const q = searchQuery.trim().toLowerCase();
     list = list.filter(c =>
-      c.name.toLowerCase().includes(q) ||
-      c.tagline.toLowerCase().includes(q) ||
-      c.overview.toLowerCase().includes(q) ||
-      (c.what_nobody_tells_you || []).some(p => p.toLowerCase().includes(q)) ||
-      (c.salary.entry || '').toLowerCase().includes(q)
+      c.name?.toLowerCase().includes(q) ||
+      c.tagline?.toLowerCase().includes(q) ||
+      c.overview?.toLowerCase().includes(q) ||
+      (c.what_nobody_tells_you || []).some(p => p?.toLowerCase().includes(q)) ||
+      c.salary?.entry?.toLowerCase().includes(q)
     );
   }
   return list;
 }
 
+
 function renderListView() {
   const cats = [...new Set(careers.map(c => c.category))];
   const filtered = getFilteredCareers();
   const totalVoices = careers.reduce((sum, c) => sum + (c.real_experiences ? c.real_experiences.length : 0), 0);
-  const spotlight = careers.length ? careers.reduce((a, b) =>
-    ((b.real_experiences ? b.real_experiences.length : 0) > (a.real_experiences ? a.real_experiences.length : 0) ? b : a)
-  ) : null;
 
   const filterButtons = `<button class="filter-btn ${activeCategory === 'all' ? 'active' : ''}" data-cat="all">All</button>` +
     cats.map(cat => `<button class="filter-btn ${activeCategory === cat ? 'active' : ''}" data-cat="${cat}">${CATEGORY_LABELS[cat] || cat}</button>`).join('');
@@ -239,21 +246,10 @@ function renderListView() {
                 <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 <input type="text" class="hero-search" id="hero-search" placeholder="Search a career — try 'law', 'design', or 'stress-free'" value="${searchQuery}">
               </div>
-              <button class="hero-cta" data-nav-scroll="list-section">Explore all</button>
             </div>
             <div class="hero-hint">Or browse by stream — <button data-nav-scroll="list-section">jump to the full list ↓</button></div>
           </div>
         </div>
-        ${spotlight ? `
-        <button class="hero-spotlight" data-nav="${spotlight.id}">
-          <div class="hero-spotlight-eyebrow">Most discussed career</div>
-          <div class="hero-spotlight-body">
-            <div class="hero-spotlight-tag">${CATEGORY_ICONS[spotlight.category] || ''} ${CATEGORY_LABELS[spotlight.category] || spotlight.category}</div>
-            <div class="hero-spotlight-name">${spotlight.name}</div>
-            <div class="hero-spotlight-tagline">${spotlight.tagline}</div>
-            <div class="hero-spotlight-link">Read the full profile <span>→</span></div>
-          </div>
-        </button>` : ''}
       </div>
       <div class="filter-row" id="list-section">${filterButtons}</div>
       <div class="results-count">Showing ${filtered.length} of ${careers.length} careers</div>
@@ -395,10 +391,10 @@ const cm = CARD_METRICS[career.id] || {};
       </div>
 
       <div class="section">
-        <div class="section-label">Who thrives here</div>
+        <div class="section-label">Who thrives here vs Who struggles</div>
         <div class="fit-grid">
           <div class="fit-card">
-            <div class="fit-label">Thrives here</div>
+            <div class="fit-label">Who thrives here</div>
             <ul>${career.who_thrives.map(t => `<li>${t}</li>`).join('')}</ul>
           </div>
           <div class="fit-card struggle">
@@ -491,10 +487,14 @@ searchInput.addEventListener('input', () => {
   });
 }
 
+let savedScrollY = 0;
+
 async function render(animate = true) {
   await loadCareers();
   const view = document.getElementById('view');
-  const id = window.location.hash.replace('#', '');
+  const path = window.location.pathname;
+  const id = path.startsWith(BASE + '/') ? path.slice(BASE.length + 1).replace(/\/$/, '') : '';
+
   if (animate) {
     view.classList.add('leaving');
     await new Promise(r => setTimeout(r, 150));
@@ -505,10 +505,26 @@ async function render(animate = true) {
   }
   view.innerHTML = id ? renderDetailView(id) : renderListView();
   view.classList.remove('leaving');
+    view.classList.remove('leaving');
+
   if (animate) {
     if (id) {
-      window.prevScrollY = window.scrollY;
+      // Going TO detail — save scroll, scroll to top
+      savedScrollY = window.scrollY;
       window.scrollTo({ top: 0, behavior: 'instant' });
+    } else if (savedScrollY > 0) {
+      // Coming BACK to list — restore scroll after DOM settles
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: savedScrollY, behavior: 'instant' });
+          savedScrollY = 0;
+        });
+      });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }
+
     } else if (window.prevScrollY !== undefined) {
       requestAnimationFrame(() => window.scrollTo({ top: window.prevScrollY, behavior: 'instant' }));
       window.prevScrollY = undefined;
@@ -523,7 +539,7 @@ async function render(animate = true) {
   }
 }
 
-window.addEventListener('hashchange', () => render(true));
+window.addEventListener('popstate', () => render(true));
 render(true);
 // Update OG meta tags on navigation
 function updateMetaTags(careerName, careerTagline) {
