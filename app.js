@@ -531,27 +531,15 @@ async function render(animate = true) {
   view.classList.remove('leaving');
     view.classList.remove('leaving');
 
-  if (animate) {
+    if (animate) {
     if (id) {
-      // Going TO detail — save scroll, scroll to top
-      savedScrollY = window.scrollY;
+      window.prevScrollY = window.scrollY;
       window.scrollTo({ top: 0, behavior: 'instant' });
-    } else if (savedScrollY > 0) {
-      // Coming BACK to list — restore scroll after DOM settles
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          window.scrollTo({ top: savedScrollY, behavior: 'instant' });
-          savedScrollY = 0;
-        });
-      });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }
-  }
-
     } else if (window.prevScrollY !== undefined) {
-      requestAnimationFrame(() => window.scrollTo({ top: window.prevScrollY, behavior: 'instant' }));
-      window.prevScrollY = undefined;
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: window.prevScrollY, behavior: 'instant' });
+        window.prevScrollY = undefined;
+      });
     } else {
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
