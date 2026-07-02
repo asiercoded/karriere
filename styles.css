@@ -640,7 +640,7 @@ footer {
 
 .salary-bar-shell {
   position: relative;
-  height: 36px;
+  min-height: 36px;
   background: var(--surface);
   border-radius: 8px;
   overflow: hidden;
@@ -648,7 +648,9 @@ footer {
 }
 
 .salary-bar-fill {
-  height: 100%;
+  min-height: 36px;
+  padding: 6px 0;
+  box-sizing: border-box;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -665,7 +667,9 @@ footer {
   font-weight: 700;
   color: #fff;
   padding-left: 14px;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.4;
 }
 
 .salary-row:nth-child(1) .salary-value { color: var(--ink); padding-left: 0; margin-left: 14px; }
@@ -859,4 +863,54 @@ footer {
   letter-spacing: 0.12em;
   color: var(--ink-faint);
   white-space: nowrap;
+}
+@media (max-width: 600px) {
+
+  .trust-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-link {
+    padding: 15px 0;
+    margin: -15px 0 21px;
+  }
+
+  .masthead-small {
+    padding: 12px 0;
+    margin: -12px 0 -8px;
+  }
+
+  .quote-source {
+    display: inline-block;
+    padding: 15px 0;
+    margin: -15px 0;
+  }
+
+  .hero-hint button {
+    padding: 15px 0;
+    margin: -15px 0;
+  }
+
+  .wordmark {
+    padding: 6px 0;
+    margin: -6px 0;
+  }
+
+  .filter-btn,
+  .related-pill {
+    padding: 14px 18px;
+  }
+
+  .metric-meter-label {
+    display: inline;
+    font-size: 10px;
+  }
+
+  .progression-track {
+    gap: 10px;
+  }
+
+  /* Optional - I'd leave arrows for now */
+  /* .progression-arrow { display: none; } */
 }
