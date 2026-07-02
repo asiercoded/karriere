@@ -232,243 +232,286 @@
     }
   },
   {
-    "id": "ca",
-    "name": "Chartered Accountancy (CA)",
-    "category": "commerce",
-    "tagline": "One of India's hardest exams. One of its most recession-proof careers.",
-    "overview": "CA is a professional qualification by ICAI, typically pursued after Class 12 (Commerce). It has three levels: Foundation, Intermediate, and Final — plus 3 years of mandatory articleship (internship). The pass rates are notoriously low.",
-    "what_nobody_tells_you": [
-      "The pass rate for CA Final is around 10-15%. Most students take 2-4 attempts per group. The average time to complete CA is 5-7 years, not 3.",
-      "Articleship (3 years of mandatory training under a CA firm) pays ₹2,000 - ₹15,000/month. You are essentially working full-time for almost nothing while studying for the hardest exams of your life.",
-      "Big 4 firms (Deloitte, EY, KPMG, PwC) are the dream but they hire a small fraction of CAs. Most CAs end up in mid-size firms or industry roles."
-    ],
-    "day_in_the_life": {
-      "student": "Articleship from 9-6, studying from 8 PM to midnight, weekends for revision. It is genuinely one of the hardest student lives in India.",
-      "professional": "At a Big 4: audit engagements, client meetings, long hours during busy season, decent structured growth. In industry: financial reporting, compliance, MIS, budgeting — more predictable hours."
-    },
-    "salary": {
-      "entry": "₹6 - ₹10 LPA (fresher CA, Big 4 or mid-size firm)",
-      "mid": "₹15 - ₹25 LPA (5 years experience, industry or Big 4 manager)",
-      "senior": "₹30 - ₹80 LPA (CFO track, Big 4 partner, or own practice — own practice ceiling is unlimited)"
-    },
-    "scope": {
-      "india": "Extremely strong. Every company needs finance and compliance.",
-      "abroad": "Limited directly — CA India is not recognized abroad. Need ACCA (UK), CPA (USA), or CMA for international roles."
-    },
-    "who_thrives": [
-      "People with high persistence and tolerance for delayed gratification",
-      "Those with genuine interest in finance, taxation, and business",
-      "Detail-oriented, disciplined individuals"
-    ],
-    "who_regrets_it": [
-      "Students who assumed it would take 3 years — most take 5 to 7, and many more.",
-      "Anyone who needs early financial independence — articleship pays almost nothing for 3 years of full-time work.",
-      "People who dislike repetitive, rule-heavy work in audit, compliance, or taxation.",
-      "Those who chose it as a default commerce path without genuine interest in finance or accounting.",
-      "Anyone who underestimated the emotional toll of repeated exam failures and the delayed return on effort."
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/CAstudents",
-        "quote": "Failed CA Final twice.",
-        "url": "https://reddit.com/r/CAstudents"
-      },
-      {
-        "source": "Reddit r/india",
-        "quote": "Articleship is modern slavery dressed up as training. ₹5000/month, 10 hour days, exam pressure on top.",
-        "url": "https://reddit.com/r/india"
-      }
-    ],
-    "related_careers": [
-      "mba",
-      "cs_engineering",
-      "law"
-    ],
-    "why_people_love_it": [
-      "Recession-proof — every company needs finance and compliance, so demand never really dries up",
-      "Clear path to real seniority — CFO track, Big 4 partner, or your own practice",
-      "One of the most respected qualifications in Indian finance",
-      "Skills transfer directly into business strategy, not just number-crunching"
-    ]
+  "id": "ca",
+  "name": "Chartered Accountancy (CA)",
+  "category": "commerce",
+  "tagline": "Brutal to clear. Hard to make irrelevant once you do.",
+  "overview": "CA is ICAI's professional qualification — three exam levels (Foundation, Inter, Final) wrapped around 3 years of mandatory articleship. On paper it's a 3-year path after Class 12. In practice, most people take 5-7 years to actually finish and start earning properly, because the pass rates are brutal at every stage.",
+  "career_outlook": {
+    "india": "Extremely strong — every company needs finance and compliance, and CA is one of India's most recession-proof qualifications. Big 4 access depends heavily on which city and college network you're coming from.",
+    "abroad": "Doesn't transfer on its own — CA India isn't recognized internationally. ACCA (UK), CPA (USA), or CMA conversion is the real path if you want to work abroad."
   },
+  "salary": {
+    "entry": "₹6-10 LPA (Big 4 or mid-size firm fresher — smaller firms and non-metro roles often start lower, around ₹4-6 LPA)",
+    "mid": "₹15-25 LPA (5 years, industry role or Big 4 manager)",
+    "senior": "₹30-80 LPA+ (CFO track, Big 4 partner, or your own practice — practice income has no real ceiling, but depends entirely on the client base you build)"
+  },
+  "why_people_love_it": [
+    "Recession-proof — every company needs finance and compliance, so demand never really dries up",
+    "Real ceiling once you're in — CFO track, Big 4 partner, or your own unlimited-upside practice",
+    "One of the most respected, portable qualifications in Indian finance — opens doors beyond just accounting",
+    "Skills transfer into real business decision-making, not just bookkeeping"
+  ],
+  "what_nobody_tells_you": [
+    "The '3 years' you hear about is a myth. Low pass rates mean most people take 5-7 years, some longer, to actually finish.",
+    "Articleship pays ₹2,000-₹15,000/month for 3 years of full-time work — you're essentially unpaid labor while studying for the hardest exams of your life.",
+    "Big 4 is the dream everyone chases, but they hire a small fraction of qualified CAs each year. Most end up at mid-size firms or in industry.",
+    "Clearing CA doesn't mean instant money — most freshers start at ₹6-10 LPA, not the 'CA = rich' number people assume.",
+    "The real long-term ceiling isn't in being an employee auditor forever — it's in industry leadership roles or building your own practice."
+  ],
+  "who_thrives": [
+    "High tolerance for delayed gratification and repeated failure without quitting",
+    "Genuine interest in finance, tax, and business — not just chasing the prestige",
+    "Detail-oriented and comfortable with rules, compliance, and repetitive precision",
+    "Has some financial cushion (savings or family support) to survive 3 years of near-zero articleship pay"
+  ],
+  "who_regrets_it": [
+    "Chose it as the 'default' commerce path without real interest in numbers",
+    "Needs early financial independence — can't survive articleship's near-zero pay",
+    "Hates repetitive, rule-heavy work in audit, tax, or compliance",
+    "Underestimated the emotional toll of repeated exam failures and a slow payoff"
+  ],
+  "before_you_commit": [
+    "Talk to someone currently in articleship, not just qualified CAs — the day-to-day reality lives there",
+    "Shadow a normal audit or tax-filing day if you can, before assuming the job matches the exam's prestige",
+    "Check actual Big 4 hiring numbers against total CA graduates in your target city — the odds matter",
+    "Calculate the real cost: coaching fees, 3 years at ₹2-15k/month articleship pay, and the opportunity cost of delayed full salary",
+    "Read threads from people 3-5 years qualified, not just toppers' success stories"
+  ],
+  "real_experiences": [
+    {
+      "source": "Reddit r/CAstudents",
+      "quote": "Cleared all groups first attempt somehow. Landed Big 4 at ₹9 LPA. Two years in, I'm at ₹18 LPA while my engineering friends who mocked my starting salary are still around ₹6-7L. Patience really is the whole game here.",
+      "url": "https://reddit.com/r/CAstudents"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "6.5 years, two Final attempts, now at a mid-size firm doing statutory audits. Not the Big 4 dream I had in college, but stable pay and I'm home by 7 most days outside tax season. No regrets, just recalibrated expectations.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "3 years into articleship at ₹8,000/month, failed Inter twice, seriously considering dropping it for an MBA instead. Nobody told 17-year-old me how long 'become a CA' actually takes.",
+      "url": "https://quora.com"
+    }
+  ],
+  "related_careers": [
+    "mba",
+    "cs_engineering",
+    "law"
+  ]
+},
   {
-    "id": "law",
-    "name": "Law (LLB / 5-Year Integrated)",
-    "category": "law",
-    "tagline": "Glamorous on TV. Grinding for the first decade in reality.",
-    "overview": "Law in India is pursued either via a 5-year integrated course (BA LLB) after Class 12 through CLAT, or a 3-year LLB after graduation. National Law Universities (NLUs) offer the best outcomes, similar to the IIT effect in engineering.",
-    "what_nobody_tells_you": [
-      "Litigation (court practice) pays very little for the first 5-10 years. Junior lawyers often earn ₹15,000-₹30,000/month while working under a senior advocate.",
-      "Corporate law (working at law firms) is the lucrative path but is heavily dominated by NLU graduates. Non-NLU students face a steep uphill climb to break in.",
-      "The NLU vs non-NLU gap is as real and brutal as the IIT vs non-IIT gap in engineering."
-    ],
-    "day_in_the_life": {
-      "student": "Heavy reading load, moot courts, internships every vacation (mandatory for good placements), debate and research-heavy coursework.",
-      "professional": "Litigation: court appearances, client meetings, drafting, often unpredictable hours. Corporate law: long hours at law firms, deal work, due diligence, document review — much like investment banking hours."
-    },
-    "salary": {
-      "entry": "₹15,000/month (litigation junior) — up to ₹20 LPA at a corporate law firm",
-      "mid": "₹8 - ₹40 LPA (5 years — corporate lawyers at top firms or specialized litigators)",
-      "senior": "₹30 LPA - several crores (senior advocates, partners at top firms, or judiciary salary + pension track)"
-    },
-    "scope": {
-      "india": "Strong overall demand but highly bifurcated. NLU graduates have excellent corporate law prospects.",
-      "abroad": "Indian law degrees are not directly transferable. Requires additional qualifications (LLM, bar exams) to practice in other countries."
-    },
-    "who_thrives": [
-      "People who genuinely enjoy reading, arguing, and research",
-      "Those with patience for a long, slow-building career, especially in litigation",
-      "Strong communicators who can think on their feet"
-    ],
-    "who_regrets_it": [
-      "Non-NLU graduates who expected corporate law placements without building additional specialized skills.",
-      "Those who romanticized courtroom drama without understanding that most legal work is research, drafting, and documentation.",
-      "Anyone who needs financial stability early — litigation income in the first 5-10 years is genuinely poor.",
-      "People without family connections in law who underestimated how much reputation-building takes in litigation.",
-      "Those who find sustained reading, ambiguity, and verbal confrontation draining rather than energizing."
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/LawStudentsIndia",
-        "quote": "First 3 years of litigation, I made less than my school friend who didn't even go to college.",
-        "url": "https://reddit.com/r/LawStudentsIndia"
-      },
-      {
-        "source": "LinkedIn",
-        "quote": "NLU placement season got me a ₹18 LPA offer at a top law firm.",
-        "url": "https://linkedin.com"
-      }
-    ],
-    "related_careers": [
-      "ca",
-      "mba"
-    ],
-    "why_people_love_it": [
-      "Deeply intellectual work that rewards sharp thinking, research, and persuasion",
-      "Enormous range of paths — litigation, corporate law, policy, arbitration — from one degree",
-      "NLU graduates and strong specialists can hit real financial upside fast",
-      "Genuine ability to shape outcomes for people and institutions"
-    ]
+  "id": "law",
+  "name": "Law (LLB / 5-Year Integrated)",
+  "category": "law",
+  "tagline": "TV lawyers argue in court. Most real ones spend their day reading, drafting, and waiting.",
+  "overview": "Law is a 5-year integrated degree (BA LLB) via CLAT after Class 12, or a 3-year LLB after graduation. National Law Universities dominate placements — the IIT effect, but for law. 'Lawyer' isn't one job though: litigation, corporate law, in-house counsel, judiciary, government legal services, and academia are genuinely different careers that just happen to share a degree.",
+  "career_outlook": {
+    "india": "Strong overall demand but sharply bifurcated — NLU graduates get excellent corporate law and policy access, while non-NLU graduates need to specialize (IP, tax, arbitration) or build a litigation practice slowly to compete.",
+    "abroad": "Indian law degrees don't transfer directly — an LLM plus bar exams are needed to practice abroad. Growing scope in international arbitration, legal consulting, and policy roles that don't require re-qualifying as a lawyer in that country."
   },
+  "salary": {
+    "entry": "₹15,000/month (litigation junior under a senior advocate) to ₹20 LPA (NLU grad at a top corporate firm) — same degree, wildly different starting points depending on path and college",
+    "mid": "₹8-40 LPA (5 years — corporate lawyers at top firms or established specialist litigators)",
+    "senior": "₹30 LPA to several crores (senior advocates, law firm partners, or judiciary salary plus pension track)"
+  },
+  "why_people_love_it": [
+    "Deeply intellectual work that rewards sharp thinking, research, and persuasion",
+    "Genuinely wide range of paths from one degree — litigation, corporate, policy, judiciary, in-house, academia",
+    "Litigators who build a real reputation over a decade have an earning ceiling almost no other Indian profession can match",
+    "You get to actually shape outcomes for people and institutions, not just advise from the sidelines"
+  ],
+  "what_nobody_tells_you": [
+    "Litigation pays almost nothing for the first 5-10 years — junior lawyers under a senior advocate often earn ₹15,000-₹30,000/month, sometimes less.",
+    "Corporate law pays far better but is dominated by NLU graduates — non-NLU students face a genuinely steep climb into top firms.",
+    "The NLU vs non-NLU gap decides your starting salary before you've done a day of real work — as real as the IIT vs non-IIT split in engineering.",
+    "Litigation and corporate law aren't two versions of the same job. One is courtroom advocacy built on reputation over years; the other is desk-based contract and deal work built on billable hours.",
+    "Legal tech and AI are already automating document review and basic drafting — the grunt work juniors used to learn the ropes on is shrinking fast."
+  ],
+  "who_thrives": [
+    "Genuinely enjoys reading, arguing, and research — not just watching courtroom dramas",
+    "Has patience for a slow-building career, especially in litigation, where reputation compounds over a decade",
+    "Strong communicator who can think on their feet under pressure",
+    "Comfortable with ambiguity — most legal problems don't have one clean right answer"
+  ],
+  "who_regrets_it": [
+    "Expected every lawyer to argue dramatic cases in court — most work is reading, drafting, and waiting",
+    "Needs financial stability in their 20s — litigation's slow payoff doesn't suit that",
+    "Assumed corporate law and litigation were interchangeable, then got stuck on a track they didn't actually want",
+    "Finds sustained reading and verbal confrontation draining, not energizing",
+    "Has no family legal network and expected internships alone to open every door instantly"
+  ],
+  "before_you_commit": [
+    "Attend a court proceeding for a day — see what litigation actually looks like before romanticizing it",
+    "Talk to both a litigator and a corporate lawyer — they'll describe two different jobs, not two flavors of one",
+    "Read a few real judgments, not just case summaries — see how lawyers actually reason, not how TV writes it",
+    "Check the internship track record of the colleges you're targeting — internships matter more than the syllabus for where you end up",
+    "Understand judiciary, in-house counsel, and government legal services as real options — not just fallbacks if corporate or litigation doesn't work out"
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "NLU placement season got me an ₹18 LPA offer at a top law firm. Three years in, I'm leading due diligence on deals worth more than my entire family's net worth. Intense, but genuinely interesting.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/LawStudentsIndia",
+      "quote": "Non-NLU, did litigation for 4 years under a senior advocate, barely broke even most months. Switched to in-house counsel at a mid-size company last year — steadier pay, saner hours, less prestige. Don't regret the litigation years, they taught me how to actually think like a lawyer.",
+      "url": "https://reddit.com/r/LawStudentsIndia"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "First 3 years of litigation, I made less than my school friend who didn't even go to college. Nobody told me it takes a decade to build a name, and I didn't have the financial runway to wait that long. Moved to a compliance role instead.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+  "related_careers": [
+    "ca",
+    "mba"
+  ]
+},
   {
-    "id": "design",
-    "name": "Design (NID / NIFT path)",
-    "category": "design",
-    "tagline": "Creative freedom with real income potential — if you get past the brutal entrance exams.",
-    "overview": "Design education in India centers around NID (National Institute of Design) and NIFT (National Institute of Fashion Technology), both with extremely competitive entrance exams (NID DAT, NIFT entrance). Fields include product design, UX/UI design, fashion design, communication design, and more.",
-    "what_nobody_tells_you": [
-      "NID and NIFT admission rates are below 1%. Most design aspirants end up at private design colleges, which vary hugely in quality and placement outcomes.",
-      "UX/UI design within tech is currently the most lucrative design path, often paying more than traditional fashion or product design roles.",
-      "Fashion design, despite the glamorous image, often involves long hours, low initial pay, and a highly saturated job market unless you start your own label or join a top house."
-    ],
-    "day_in_the_life": {
-      "student": "Studio-based learning, constant critiques of your work, project-based assignments, sketching, prototyping, software training (Figma, Adobe Suite, CAD depending on specialization).",
-      "professional": "UX designer: user research, wireframing, prototyping, stakeholder meetings. Fashion designer: sketching, fabric sourcing, production coordination, fittings. Both require constant client/team feedback cycles."
-    },
-    "salary": {
-      "entry": "₹4 - ₹12 LPA (UX/UI in tech pays more than traditional fashion/product design at entry level)",
-      "mid": "₹12 - ₹30 LPA (5 years, especially in UX/product design at tech companies)",
-      "senior": "₹30 LPA - ₹1 crore+ (senior design leads, design directors at major tech companies, or successful independent fashion/product labels)"
-    },
-    "scope": {
-      "india": "Growing rapidly, especially UX/UI as Indian tech and startups mature. Fashion and product design scope is more limited and concentrated in metro cities.",
-      "abroad": "Strong for UX/UI designers — globally portable skill. Fashion design abroad requires building reputation from scratch and is highly competitive (Paris, Milan, NY fashion scenes are extremely hard to break into)."
-    },
-    "who_thrives": [
-      "People with genuine creative instinct and visual/spatial thinking",
-      "Those willing to constantly build and update a portfolio",
-      "Self-driven learners comfortable with ambiguity and subjective feedback"
-    ],
-    "who_regrets_it": [
-      "Students who chose fashion design for the glamour without understanding the production and manufacturing grind behind it.",
-      "Those who expected creative freedom from day one — most early design work is executing someone else's brief.",
-      "Anyone uncomfortable with constant subjective critique of their work — feedback in design is relentless.",
-      "People who relied solely on college training without building an independent portfolio.",
-      "Those from non-NID/NIFT colleges who assumed the degree alone would open doors in competitive design firms."
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "Switched from a non-design degree to UX design through self-taught Figma and a strong portfolio.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "Quora",
-        "quote": "Fashion design is brutal if you don't have capital to start your own label.",
-        "url": "https://quora.com"
-      }
-    ],
-    "related_careers": [
-      "cs_engineering",
-      "mba"
-    ],
-    "why_people_love_it": [
-      "Genuinely creative, varied work — no two projects look the same",
-      "Portfolio matters more than pedigree, so self-taught designers can compete with NID grads",
-      "UX/UI pays well and is globally portable, especially in tech",
-      "High entrepreneurial ceiling — freelance, agency, or your own label are all realistic"
-    ]
+  "id": "design",
+  "name": "Design (NID / NIFT path)",
+  "category": "design",
+  "tagline": "Design isn't about drawing well. It's about solving problems people didn't know they had.",
+  "overview": "Design in India isn't one path — UI/UX, product design, graphic design, motion graphics, brand design, industrial design, and game design are genuinely different jobs sharing one umbrella term. Entry is through NID/NIFT (brutally competitive), IIT's design programs (UCEED), private colleges, or increasingly, a self-taught portfolio. The actual job is less about making things look nice and more about solving a problem for a user, client, or business.",
+  "career_outlook": {
+    "india": "Growing fast, especially UX/UI as Indian tech and startups mature. Fashion and product design scope is more limited, concentrated in metro cities, and depends heavily on your portfolio and network.",
+    "abroad": "Strong for UX/UI designers — a globally portable skill. Fashion design abroad means rebuilding your reputation from scratch in fiercely competitive scenes like Paris, Milan, or New York."
   },
+  "salary": {
+    "entry": "₹4-12 LPA (UX/UI in tech pays more than traditional fashion or graphic design at entry level)",
+    "mid": "₹12-30 LPA (5 years, especially in UX/product design at tech companies)",
+    "senior": "₹30 LPA-₹1 crore+ (senior design leads, design directors at major tech companies, or successful independent labels)"
+  },
+  "why_people_love_it": [
+    "Genuinely varied work — no two briefs or projects look the same",
+    "Portfolio matters more than pedigree, so self-taught designers can compete with NID grads",
+    "UX/UI pays well and is globally portable, especially in tech",
+    "High entrepreneurial ceiling — freelance, agency, or your own label are all realistic paths"
+  ],
+  "what_nobody_tells_you": [
+    "NID and NIFT admit under 1% of applicants — most design students end up at private colleges of wildly uneven quality, and college name matters less here than almost any other field.",
+    "UX/UI in tech currently pays the best of any design specialization, often more than traditional fashion or graphic design roles.",
+    "Fashion design's glamorous image hides long hours, low starting pay, and a saturated market — unless you start your own label or land a top house.",
+    "AI tools are already changing entry-level work — they're replacing repetitive execution, not designers who can actually think through a problem. That distinction matters a lot if you're only good at the former.",
+    "Portfolio beats degree for almost every design job — a self-taught designer with 5 strong projects can beat an NID graduate with a weak one."
+  ],
+  "who_thrives": [
+    "Genuinely enjoys solving problems, not just making things look good",
+    "Willing to constantly build, update, and defend a portfolio",
+    "Comfortable with ambiguity and relentless subjective feedback",
+    "Handles both the creative and technical sides — tools, deadlines, and client constraints, not just ideas"
+  ],
+  "who_regrets_it": [
+    "Chose fashion design for the glamour, not the manufacturing and business grind behind it",
+    "Expected total creative freedom from day one — most early work is executing someone else's brief",
+    "Can't handle constant subjective critique — feedback in design never really stops",
+    "Relied only on college training without building an independent portfolio",
+    "Assumed a non-NID/NIFT design degree alone would open doors at competitive firms"
+  ],
+  "before_you_commit": [
+    "Recreate a popular app's interface from scratch — see if the process excites you or drains you",
+    "Complete a couple of real design challenges (Daily UI, a client brief) before assuming you'll like the job",
+    "Learn basic Figma — a free weekend is enough to know if the tool-heavy side appeals to you",
+    "Build a small portfolio of 3-5 projects and get it critiqued by a working designer, not just friends or family",
+    "Check the actual placement record of the specific college you're considering, not just its reputation"
+  ],
+  "real_experiences": [
+    {
+      "source": "Reddit r/india",
+      "quote": "Self-taught UX designer, no NID degree, just Figma tutorials and a portfolio I rebuilt three times. Landed a ₹9 LPA product design role at a startup. Portfolio really did matter more than pedigree.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "NIFT fashion design, five years in. Started as an assistant designer at ₹18k/month doing production coordination, not creative work. Two years ago I set up a small label with a former classmate — barely breaking even, but it's mine and I'm learning the business side nobody taught us in college.",
+      "url": "https://quora.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did graphic design because I liked drawing in school. Turns out the job is 80% client feedback loops and brand guidelines, 20% actual creative work. Still doing it, but wish someone had told me design is a service industry before I chose it.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+  "related_careers": [
+    "cs_engineering",
+    "mba"
+  ]
+},
   {
-    "id": "mba",
-    "name": "MBA",
-    "category": "management",
-    "tagline": "A career accelerator if you already have something to accelerate. Not a fix for an unclear path.",
-    "overview": "MBA is a 2-year postgraduate management degree, typically pursued after 2-5 years of work experience (though many in India do it straight after undergrad). IIMs and top B-schools (via CAT, XAT) offer exceptional placements.",
-    "what_nobody_tells_you": [
-      "An MBA amplifies what you already have. If you had no clear direction or skills before, an MBA alone often doesn't fix that — it just adds a credential.",
-      "The IIM vs non-IIM gap is enormous, similar to IIT vs non-IIT. Tier-3 MBA colleges have placement records that don't justify the fees many charge.",
-      "CAT (the main MBA entrance exam) has a sub-0.5% selection rate for top IIM seats. It is genuinely one of the hardest entrance exams in India by competition ratio."
-    ],
-    "day_in_the_life": {
-      "student": "Case studies, group projects, presentations, networking events, recruitment prep — an intensely social and competitive 2 years.",
-      "professional": "Highly varies by role — consulting (travel-heavy, high pressure, structured problem solving), product management (cross-functional coordination), general management (operations and strategy oversight)."
-    },
-    "salary": {
-      "entry": "₹8 - ₹35 LPA (massive range — non-IIM vs IIM placements differ drastically)",
-      "mid": "₹20 - ₹70 lakh (consulting partners, product leads, business heads after 5-8 years)",
-      "senior": "₹50 LPA - several crores (CXO roles, partner-level consulting, business unit leadership)"
-    },
-    "scope": {
-      "india": "Strong for top-tier MBA graduates. Average for mid-tier.",
-      "abroad": "Indian MBAs (especially IIM, ISB) are respected. Many pursue further MBA abroad (INSEAD, top US schools) for global mobility, though this requires even higher GMAT scores and work experience."
-    },
-    "who_thrives": [
-      "Those with 2-5 years of solid work experience and a clear reason for doing an MBA",
-      "People who get into top-tier institutes (IIMs, ISB, top private schools)",
-      "Strong networkers and communicators"
-    ],
-    "who_regrets_it": [
-      "Students who did it immediately after undergrad with no work experience or clear goal — it rarely fixes that.",
-      "Anyone who took large loans for a tier-3 college with weak placement records.",
-      "People who expected the degree alone to compensate for a lack of skills or direction.",
-      "Those who dislike intense networking, group dynamics, and presentation-heavy environments.",
-      "Anyone who confused an MBA with a shortcut — it amplifies existing direction but doesn't create it."
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "Did MBA right after engineering with zero work experience because I didn't know what else to do.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "LinkedIn",
-        "quote": "IIM placement got me into consulting at ₹28 LPA.",
-        "url": "https://linkedin.com"
-      }
-    ],
-    "related_careers": [
-      "ca",
-      "law",
-      "cs_engineering"
-    ],
-    "why_people_love_it": [
-      "Genuinely accelerates people who already have direction and experience",
-      "Strong networking and cohort effects can open doors for decades afterward",
-      "IIM/ISB-tier placements offer some of the highest starting salaries in India",
-      "Flexible — applies across consulting, product, operations, or founding your own company"
-    ]
+  "id": "mba",
+  "name": "MBA",
+  "category": "management",
+  "tagline": "An MBA doesn't create direction. It accelerates whatever direction you already have.",
+  "overview": "MBA is a 2-year postgraduate degree via CAT/XAT/GMAT, ideally pursued after 2-5 years of work experience — though many in India do it straight after undergrad. It's not commerce-only: engineers, doctors, and humanities grads make up a large share of every batch. Consulting, product, marketing, finance, operations, HR, analytics, and general management are all real specializations under one degree, and which one you pick matters almost as much as which college you get into.",
+  "career_outlook": {
+    "india": "Strong for top-tier graduates, average for mid-tier, and often not worth the fees for bottom-tier colleges given the debt involved.",
+    "abroad": "Indian MBAs (especially IIM, ISB) are respected. Many pursue a further MBA abroad (INSEAD, top US schools) for global mobility, though that needs even higher GMAT scores and work experience."
   },
+  "salary": {
+    "entry": "₹8-35 LPA (massive range — non-IIM vs IIM placements differ drastically; most graduates land toward the lower half)",
+    "mid": "₹20-70 lakh (consulting partners, product leads, business heads after 5-8 years)",
+    "senior": "₹50 LPA - several crores (CXO roles, partner-level consulting, business unit leadership)"
+  },
+  "why_people_love_it": [
+    "Genuinely accelerates people who already have direction and experience",
+    "Cohort and alumni networks can open doors for decades afterward",
+    "IIM/ISB-tier placements offer some of India's highest starting salaries",
+    "Flexible across consulting, product, marketing, finance, operations, or founding your own company"
+  ],
+  "what_nobody_tells_you": [
+    "An MBA amplifies what you already have — with no clear direction going in, it just adds a credential, not a fix.",
+    "The IIM vs non-IIM gap is enormous, like IIT vs non-IIT. Tier-3 colleges often don't justify their fees.",
+    "Cracking CAT is only half the battle. At the top IIMs, even an excellent CAT percentile doesn't guarantee admission—academics, interviews, work experience, and profile all matter.",
+    "The '₹20-30 LPA average' number you see everywhere is usually the highest package in a placement report, not the median — most graduates, even from decent colleges, earn less.",
+    "You don't need an MBA to start a business — plenty of founders never did one. It helps with structure and networks, not the idea itself."
+  ],
+  "who_thrives": [
+    "Has 2-5 years of work experience and a clear reason for the MBA, not just 'better options later'",
+    "Gets into a top-tier institute (IIM, ISB, or equivalent) — the ROI math changes completely below that tier",
+    "Strong networker and communicator, since cohort relationships matter as much as coursework",
+    "Knows which specialization they want going in, instead of picking based on salary alone"
+  ],
+  "who_regrets_it": [
+    "Did it right after undergrad with no work experience or clear goal",
+    "Took a large loan for a tier-3 college with weak placement records",
+    "Expected the degree alone to compensate for a lack of skills or direction",
+    "Dislikes intense networking, group work, and presentation-heavy environments",
+    "Picked a specialization based on salary data alone, then hated the actual work"
+  ],
+  "before_you_commit": [
+    "Talk to alumni from the specific colleges you're considering, not just their brochures",
+    "Compare actual placement reports — median and lower quartile, not just the highest package",
+    "Calculate real ROI after fees, loan interest, and 2 years of lost income — not just the projected salary",
+    "Get 2-3 years of work experience first if you can — it changes both your application and what you get out of the program",
+    "Pick a specialization you're curious about before applying, instead of deciding after you're already in"
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "IIM placement got me into consulting at ₹28 LPA. Three years in, the alumni network alone has opened doors my resume never could. Was it expensive? Yes. Worth it? Also yes — but only because I already knew I wanted consulting.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did an MBA from a decent tier-2 college after 3 years in marketing. Salary jump wasn't dramatic — ₹9 LPA to ₹14 LPA — but I moved from an execution role to actually owning strategy. That shift mattered more to me than the number.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did MBA right after engineering with zero work experience because I didn't know what else to do. Same ₹6 LPA offer I could've gotten with just the engineering degree, minus 2 years and ₹18 lakhs in fees. The MBA didn't fix not knowing what I wanted — it just delayed finding out.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+  "related_careers": [
+    "ca",
+    "law",
+    "cs_engineering"
+  ]
+},
   {
     "id": "pharmacy",
     "name": "Pharmacy (B.Pharm)",
