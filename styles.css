@@ -914,3 +914,25 @@ footer {
   /* Optional - I'd leave arrows for now */
   /* .progression-arrow { display: none; } */
 }
+
+/* ── DARK MODE ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1817;
+    --surface: #262220;
+    --ink: #E8E2DA;
+    --ink-soft: rgba(232,226,218,0.78);
+    --ink-faint: rgba(232,226,218,0.55);
+    --rule: rgba(232,226,218,0.12);
+    --rule-strong: rgba(232,226,218,0.22);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-md: 0 8px 22px rgba(0,0,0,0.4);
+  }
+
+  .hero-spotlight-eyebrow { background: var(--violet); }
+  .glance-zone { background: rgba(255,255,255,0.03); }
+  .qf-seg { background: rgba(232,226,218,0.12); }
+  .salary-row:nth-child(1) .salary-bar-fill { background: rgba(232,226,218,0.2); }
+  .salary-row:nth-child(1) .salary-value { color: var(--ink-soft); }
+  #loading-skeleton > div { background: rgba(232,226,218,0.08) !important; }
+}

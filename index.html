@@ -4,13 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Karriere — The unfiltered career file</title>
+<meta name="description" content="Honest career guidance for Indian students. Real salaries, real timelines, real regrets — from people who lived each path. No brochures, no fluff.">
+<meta property="og:title" content="Karriere — The unfiltered career file">
+<meta property="og:description" content="Honest career guidance for Indian students. Real salaries, real timelines, real regrets — from people who lived each path.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://asiercoded.github.io/karriere/">
+<meta property="og:image" content="https://asiercoded.github.io/karriere/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="careers.json" as="fetch" crossorigin>
 </head>
 <body>
 
-<div id="view"></div>
+<div id="view">
+  <div id="loading-skeleton" style="max-width:980px;margin:80px auto;padding:0 28px;">
+    <div style="height:36px;width:200px;background:rgba(43,36,32,0.1);border-radius:6px;margin-bottom:40px;"></div>
+    <div style="height:20px;width:360px;background:rgba(43,36,32,0.08);border-radius:4px;margin-bottom:12px;"></div>
+    <div style="height:20px;width:280px;background:rgba(43,36,32,0.08);border-radius:4px;margin-bottom:50px;"></div>
+    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;margin-bottom:12px;"></div>
+    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;margin-bottom:12px;"></div>
+    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;margin-bottom:12px;"></div>
+    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;"></div>
+  </div>
+</div>
+
+<noscript>
+  <div style="max-width:600px;margin:80px auto;padding:40px;text-align:center;font-family:sans-serif;">
+    <h2>Karriere needs JavaScript enabled</h2>
+    <p style="color:#666;">Please enable JavaScript in your browser to view career profiles.</p>
+  </div>
+</noscript>
 
 <script src="app.js"></script>
 </body>

@@ -135,8 +135,19 @@ function renderMeter(value, type) {
 
 async function loadCareers() {
   if (careers.length) return;
-  const res = await fetch('careers.json');
-  careers = await res.json();
+  try {
+    const res = await fetch('careers.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    careers = await res.json();
+  } catch (err) {
+    document.getElementById('view').innerHTML = `
+      <div class="wrap" style="text-align:center;padding-top:80px;">
+        <h2>Couldn't load career data</h2>
+        <p style="color:var(--ink-soft);margin-top:12px;">${err.message}. Please check your connection and refresh.</p>
+        <button onclick="location.reload()" style="margin-top:20px;padding:10px 24px;background:var(--amber);color:#fff;border:none;border-radius:8px;cursor:pointer;">Try again</button>
+      </div>`;
+    throw err;
+  }
 }
 
 function formatEntrySalary(entry) {
@@ -159,7 +170,13 @@ function getFilteredCareers() {
   let list = activeCategory === 'all' ? careers : careers.filter(c => c.category === activeCategory);
   if (searchQuery.trim()) {
     const q = searchQuery.trim().toLowerCase();
-    list = list.filter(c => c.name.toLowerCase().includes(q) || c.tagline.toLowerCase().includes(q));
+    list = list.filter(c =>
+      c.name.toLowerCase().includes(q) ||
+      c.tagline.toLowerCase().includes(q) ||
+      c.overview.toLowerCase().includes(q) ||
+      (c.what_nobody_tells_you || []).some(p => p.toLowerCase().includes(q)) ||
+      (c.salary.entry || '').toLowerCase().includes(q)
+    );
   }
   return list;
 }
@@ -451,16 +468,21 @@ function attachListeners() {
   });
   const searchInput = document.getElementById('hero-search');
   if (searchInput) {
-    searchInput.addEventListener('input', async () => {
-      searchQuery = searchInput.value;
-      const cursorPos = searchInput.selectionStart;
-      await render(false);
-      const newInput = document.getElementById('hero-search');
-      if (newInput) {
-        newInput.focus();
-        newInput.setSelectionRange(cursorPos, cursorPos);
-      }
-    });
+    let searchTimeout;
+searchInput.addEventListener('input', () => {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(async () => {
+    searchQuery = searchInput.value;
+    const cursorPos = searchInput.selectionStart;
+    await render(false);
+    const newInput = document.getElementById('hero-search');
+    if (newInput) {
+      newInput.focus();
+      newInput.setSelectionRange(cursorPos, cursorPos);
+    }
+  }, 250);
+});
+
   }
   document.querySelectorAll('[data-nav-scroll]').forEach(scrollBtn => {
     scrollBtn.addEventListener('click', () => {
@@ -477,9 +499,23 @@ async function render(animate = true) {
     view.classList.add('leaving');
     await new Promise(r => setTimeout(r, 150));
   }
+    // Save scroll position before navigating to detail
+  if (!id && window.prevScrollY) {
+    // Restoring from detail back to list
+  }
   view.innerHTML = id ? renderDetailView(id) : renderListView();
   view.classList.remove('leaving');
-  if (animate) window.scrollTo({ top: 0, behavior: 'instant' });
+  if (animate) {
+    if (id) {
+      window.prevScrollY = window.scrollY;
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } else if (window.prevScrollY !== undefined) {
+      requestAnimationFrame(() => window.scrollTo({ top: window.prevScrollY, behavior: 'instant' }));
+      window.prevScrollY = undefined;
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }
   attachListeners();
   const searchInput = document.getElementById('hero-search');
   if (searchInput && document.activeElement !== searchInput && searchQuery) {
@@ -489,3 +525,23 @@ async function render(animate = true) {
 
 window.addEventListener('hashchange', () => render(true));
 render(true);
+// Update OG meta tags on navigation
+function updateMetaTags(careerName, careerTagline) {
+  const title = careerName
+    ? `${careerName} — Karriere`
+    : 'Karriere — The unfiltered career file';
+  const desc = careerTagline || 'Honest career guidance for Indian students. Real salaries, real timelines, real regrets.';
+  document.title = title;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', desc);
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc);
+}
+
+// Patch render to update meta tags
+const originalRender = render;
+render = async function(animate) {
+  await originalRender(animate);
+  const id = window.location.hash.replace('#', '');
+  const career = careers.find(c => c.id === id);
+  updateMetaTags(career?.name, career?.tagline);
+};
