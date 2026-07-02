@@ -82,10 +82,6 @@
       "Your income grows with your patient base, not with years of experience alone. Marketing, word-of-mouth, and patient trust matter as much as clinical skill.",
       "Abroad is not easy. Most countries (UK, Canada, Australia, USA) require you to clear their own licensing exams — sometimes multi-year processes — before you can practice. It is possible but not straightforward."
     ],
-    "day_in_the_life": {
-      "student": "Morning lectures and theory, afternoon clinical postings treating real patients under faculty supervision. You'll do extractions, fillings, root canals, and prosthetics hands-on from 3rd year. Practical exams are frequent. Less brutal than MBBS schedules, but clinical work demands precision and patience.",
-      "professional": "A typical day as a practicing dentist: patient appointments every 30-60 minutes, ranging from routine cleanings to complex procedures. If you own your clinic, add staff management, supplies, billing, and patient follow-ups to your day. No night shifts or emergency on-call pressure — most dental emergencies are scheduled within 24 hours, not at 2am."
-    },
     "salary": {
       "entry": "₹20,000 - ₹35,000/month (associate dentist at someone else's clinic, first 2-3 years)",
       "mid": "₹60,000 - ₹1.5 lakh/month (own clinic with steady patient base, or MDS specialist at 5 years)",
@@ -150,65 +146,90 @@
       "abroad": "Difficult. Most countries require multi-year licensing processes. Middle East is the most accessible international option."
     }
   },
-  {
+    {
     "id": "cs_engineering",
     "name": "Computer Science Engineering",
     "category": "engineering",
-    "tagline": "Highest paying entry-level jobs in India. Also the most oversaturated field.",
-    "overview": "B.Tech in Computer Science is a 4-year degree pursued after JEE or state entrance exams. It leads to software development, data science, product management, and more. The top tier (IITs, NITs, BITS) offers exceptional placements. The bottom tier offers very little.",
+    "tagline": "The highest ceiling in Indian engineering. Also the most brutal filter.",
+    "overview": "B.Tech in Computer Science is a 4-year degree entered through JEE, state exams, or direct admission. It opens paths into software development, data science, product management, DevOps, and more. The honest reality: your college tier determines your starting point far more than your degree does. An IIT or NIT graduate and a tier-3 college graduate hold the same degree on paper — but face completely different hiring realities. If you're in or likely to get into a top college, CSE is one of the best decisions you can make. If you're looking at a mid or lower-tier college, the degree alone won't get you far — your portfolio, skills, and self-learning discipline will. This is not a career where the institution does the work for you.",
     "what_nobody_tells_you": [
-      "The college you attend matters more than the degree itself. A tier-3 CS graduate and an IIT CS graduate are treated as completely different candidates by companies.",
-      "60-70% of CS graduates in India do not get a core software job. Many end up in IT services (TCS, Infosys, Wipro) doing manual testing or support work at ₹3-4 LPA.",
-      "The actual skills companies want — DSA, system design, frameworks — are not taught in most colleges. You have to self-learn everything that matters."
+      "Most CS graduates don't land software jobs. Roughly 60-70% of B.Tech CS graduates end up in IT service companies doing support, testing, or non-coding work at ₹3.5-5 LPA — or outside tech entirely. Core engineering roles go to a smaller group with strong DSA, internships, and portfolios.",
+      "College tier is a hard filter. Most product companies — Google, Microsoft, Atlassian, Zepto, PhonePe — screen by college before reading your resume. If you're not from a recognized institution, you need referrals or exceptional open-source/project work to bypass that filter.",
+      "The curriculum is almost irrelevant. What matters in interviews and on the job — Data Structures & Algorithms, system design, real frameworks — is not taught properly in 90% of colleges. You will learn it on your own or not at all.",
+      "AI is not replacing software engineers yet, but it is raising the bar. Junior tasks like writing boilerplate code and fixing simple bugs are increasingly automated. What's valued now: problem-solving, architecture, and judgment — skills that take years to build.",
+      "The LeetCode grind is real and ongoing. To get into good product companies, you need to solve hundreds of DSA problems. Even experienced engineers practice this to switch jobs. If you hate algorithmic problem-solving, job hunting in this field will be miserable.",
+      "Burnout is common and underreported. Fast-paced startups and FAANG-adjacent companies often demand 10-12 hour days. Many developers quietly burn out by their late 20s. Work-life balance varies enormously by company — some are excellent, many are not.",
+      "Layoffs are real. The 2022-2024 global tech downturn laid off hundreds of thousands of engineers worldwide, including many in Indian IT. Tech is not the recession-proof guarantee it was once marketed as.",
+      "Freelancing is possible but not passive. Indian developers do earn well freelancing internationally, but building a reliable client base takes 1-2 years of active effort and a strong portfolio. It is not a quick fallback."
     ],
     "day_in_the_life": {
-      "student": "Classes in the morning, most learning happens independently — online courses, personal projects, competitive programming. Internship season starts in 3rd year. Final year is placement prep.",
-      "professional": "Stand-up meetings, coding, code reviews, debugging, documentation. At a startup: fast-paced, wear many hats. At a service company: structured, slower, more process. At a product company: high ownership, high pressure."
+      "student": "Most useful learning happens outside the classroom — Leetcode, personal projects, online courses, open-source contributions. Internship hunting starts aggressively in 2nd year for top colleges, 3rd year elsewhere. 4th year is dominated by placement prep: mock interviews, DSA revision, competitive programming. The gap between students who self-learn and those who don't becomes very visible by 3rd year.",
+      "professional": "Daily standups, writing and reviewing code, debugging, reading documentation, and a surprising amount of communication. At a service company: structured, slower, process-heavy — most work is maintaining existing systems. At a startup: faster decisions, more ownership, higher risk. At a product company: deep specialization, clear career ladders, and high expectations on output quality. Remote work is common across all three."
     },
     "salary": {
-      "entry": "₹3.5 - ₹50 LPA (massive range — TCS starts at ₹3.5L, top product companies offer ₹40-50L to IIT grads)",
-      "mid": "₹15 - ₹40 LPA (5 years, depends heavily on company and skills)",
-      "senior": "₹40 LPA - ₹1 crore+ (senior roles at FAANG, startups with ESOPs)"
+      "entry": "₹3.5 - ₹12 LPA (realistic for most graduates from tier-2 and tier-3 colleges); ₹20-50 LPA for IIT/NIT top placements",
+      "mid": "₹12 - ₹30 LPA (5 years, strong skills, mid-level role at product or mid-size company)",
+      "senior": "₹35 - ₹80 LPA (8-12 years, senior/staff engineer or engineering manager at a strong company)"
     },
-    "scope": {
-      "india": "Massive demand but also massive supply. Standing out requires strong skills and the right college or portfolio.",
-      "abroad": "Very strong. Indian CS engineers are in high demand globally — USA, Canada, Germany, UK, Australia."
+    "career_outlook": {
+      "india": "Demand is high but so is supply — India produces over 1.5 million engineering graduates annually, with a large portion in CS. Standing out requires either a strong college brand, exceptional skills demonstrated through projects and internships, or both. Startup hiring has slowed since 2022 but is recovering. Long-term demand for software talent in India remains strong, driven by SaaS, fintech, and global delivery.",
+      "abroad": "Excellent for strong engineers. Indian CS graduates are among the most sought-after internationally — USA (H1B), Canada (Express Entry), Germany (Job Seeker Visa), UK (Skilled Worker Visa), and Australia all have clear pathways. The challenge is the H1B lottery system for the US, which is unpredictable. Canada and Germany have become more popular alternatives. Remote work for foreign companies while based in India is increasingly common and pays in foreign currency."
     },
     "who_thrives": [
-      "People who genuinely enjoy problem-solving and building things",
-      "Self-learners who don't rely on college curriculum",
-      "Those comfortable with constant change and learning new technologies"
+      "People who genuinely enjoy building things — not just the idea of building, but sitting down and actually writing code for hours.",
+      "Disciplined self-learners who don't wait for college to teach them what they need to know.",
+      "Those who can handle ambiguity — requirements change, systems break, and the 'right' solution often doesn't exist.",
+      "People who view learning as permanent, not something that ends after graduation.",
+      "Those who can communicate clearly — underrated skill that separates average from senior engineers."
     ],
     "who_regrets_it": [
-      "Students from tier-3 colleges who assumed placement would happen automatically without building skills independently.",
-      "Those who chose CS purely for the salary and don't enjoy building or problem-solving.",
-      "People who dislike sitting at a screen for 8+ hours — the job is sedentary by nature.",
-      "Anyone who expected college curriculum to be enough — most of what matters in the job must be self-taught.",
-      "Those uncomfortable with constant technological change requiring ongoing self-learning throughout your career."
+      "Students who chose CS for the salary without genuinely enjoying coding — they find the daily work tedious and job hunting demoralising.",
+      "Graduates from tier-3 colleges who assumed a CS degree would do the work for them and didn't build skills or a portfolio independently.",
+      "People who dislike sedentary, screen-heavy work — this is not a physically active or highly social job by default.",
+      "Those who expected stable, predictable careers — tech has cycles of hiring booms and layoff waves, and that won't change.",
+      "Anyone who gets into the field chasing FAANG salaries without the patience for years of competitive grinding to reach that level."
+    ],
+    "why_people_love_it": [
+      "You can build something from nothing — a product used by thousands, with just a laptop and internet connection.",
+      "Highest salary ceiling of any undergraduate engineering degree in India, especially if you reach senior levels at product companies.",
+      "Genuinely global career — skills transfer across countries, remote work is normalized, and you can work for international companies from India.",
+      "Fast feedback: you write code, ship it, and see real users interact with it — the iteration cycle is unlike most other professions.",
+      "The field rewards merit more than credentials over time — a strong GitHub profile and project history can outweigh college pedigree after 2-3 years of experience."
+    ],
+    "before_you_commit": [
+      "Write code for 30 days straight — not tutorials, actual projects. If you find yourself dreading it after two weeks, that's important information.",
+      "Build 2-3 real projects and put them on GitHub before choosing this career. The process will tell you more than any college counsellor can.",
+      "Talk to developers 3-5 years into their careers — not freshers, not placement success stories. Ask them what their daily work actually looks like.",
+      "Research placement data for the specific college you're likely to attend, not the college's marketing brochure. Ask for company names and actual salary figures.",
+      "Understand the difference between service companies (TCS, Infosys, Wipro) and product companies (Google, Zepto, Razorpay) — they are very different working environments and salary bands.",
+      "If you're not getting into a tier-1 or tier-2 college, think carefully about whether a CS degree from a weak institution plus 4 years of self-learning beats an alternative path."
     ],
     "real_experiences": [
       {
         "source": "Reddit r/developersIndia",
-        "quote": "3 years at TCS doing nothing meaningful.",
+        "quote": "3 years at TCS, ₹4.2 LPA, doing the same support ticket work every day. Spent 6 months grinding Leetcode on nights and weekends, cracked an interview at a mid-size product company. Now at ₹18 LPA. The system is broken but you can navigate it — you just have to be willing to do the work nobody told you about.",
         "url": "https://reddit.com/r/developersIndia"
       },
       {
+        "source": "LinkedIn (senior engineer, 8 years experience)",
+        "quote": "CS from an NIT opened every door for me. Internships from 2nd year, placed at ₹28 LPA, now at ₹55 LPA at 30. But I watch my friends from tier-3 colleges struggle even with good skills because they can't get past the resume filter. The college gap is real and it compounds.",
+        "url": "https://linkedin.com"
+      },
+      {
         "source": "Reddit r/india",
-        "quote": "Everyone told me CS is the safest bet.",
+        "quote": "I chose CS because everyone said it was safe. I hate coding. Four years of pretending to enjoy it, a mediocre placement, and now I'm doing a job I don't care about. I should have explored what I actually liked before defaulting to the 'obvious' choice.",
         "url": "https://reddit.com/r/india"
       }
     ],
     "related_careers": [
-      "data_science",
-      "product_management",
-      "mba"
+      "mba",
+      "ca",
+      "design"
     ],
-    "why_people_love_it": [
-      "Highest entry-level salaries of any undergraduate degree in India, especially from top colleges",
-      "Globally portable — a strong software engineer can work from anywhere in the world, remote or relocate",
-      "Fast feedback loops — you build something, ship it, and see real people use it, often within days",
-      "Entrepreneurship is more accessible in tech than almost any other field — you can build a product with zero capital"
-    ]
+    "scope": {
+      "india": "High demand, high supply. Strong skills and college brand or portfolio required to stand out.",
+      "abroad": "Excellent pathways — USA, Canada, Germany, UK. Remote work for foreign companies increasingly viable."
+    }
   },
   {
     "id": "ca",
