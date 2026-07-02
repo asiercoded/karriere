@@ -300,6 +300,13 @@ const cm = CARD_METRICS[career.id] || {};
           <div class="quickfacts-item"><div class="quickfacts-label">Job availability</div>${renderQFMeter(dm.job_availability, 'neutral')}</div>
           <div class="quickfacts-item"><div class="quickfacts-label">Abroad prospects</div>${renderQFMeter(dm.abroad_prospects, 'neutral')}</div>
           <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Ideal personality</div><div class="quickfacts-value quickfacts-text">${dm.ideal_personality || '—'}</div></div>
+          ${career.career_outlook ? `
+          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (India)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.india}</div></div>
+          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (Abroad)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.abroad}</div></div>
+          ` : `
+          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (India)</div><div class="quickfacts-value quickfacts-text">${career.scope?.india || '—'}</div></div>
+          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (Abroad)</div><div class="quickfacts-value quickfacts-text">${career.scope?.abroad || '—'}</div></div>
+          `}
         </div>
       </div>
 
@@ -406,20 +413,6 @@ const cm = CARD_METRICS[career.id] || {};
   </div>
 </div>
 `}
-
-      <div class="section">
-        <div class="section-label">Scope</div>
-        <div class="scope-grid">
-          <div class="scope-card">
-            <div class="section-label">In India</div>
-            <div class="scope-text">${career.scope.india}</div>
-          </div>
-          <div class="scope-card">
-            <div class="section-label">Abroad</div>
-            <div class="scope-text">${career.scope.abroad}</div>
-          </div>
-        </div>
-      </div>
 
       <div class="section">
         <div class="section-label">Testimonies</div>

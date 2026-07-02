@@ -71,60 +71,84 @@
     "id": "bds",
     "name": "BDS (Dental Surgery)",
     "category": "medical",
-    "tagline": "The 'backup' to MBBS for most. A genuine career for a few. A regret for many.",
-    "overview": "BDS is a 4-year undergraduate dental degree plus 1 year mandatory internship, pursued via NEET. It is frequently chosen by students who didn't get a high enough NEET rank for MBBS, which creates a large population of dentists who never actually wanted dentistry.",
+    "tagline": "A real profession with a real future — if you actually want it.",
+    "overview": "BDS is a 5-year undergraduate dental degree (4 years + 1 year mandatory internship), entered through NEET. It trains you to diagnose and treat oral diseases, perform surgeries, and manage dental health across all age groups. Most BDS graduates build private practices over time — this is a business-heavy career as much as a clinical one. Those who genuinely want dentistry and are willing to invest in building their practice tend to do well. Those who landed here after missing MBBS often struggle to stay motivated.",
     "what_nobody_tells_you": [
-      "A large percentage of BDS students didn't choose it — they ended up there after missing MBBS cutoffs. This creates widespread disengagement and regret in dental colleges.",
-      "Government dental jobs are extremely limited. Most BDS graduates either do MDS (postgraduate, equally competitive as NEET-PG) or open private practice.",
-      "Starting a private practice requires significant capital — equipment, clinic space, staff. Many young dentists work as associates at someone else's clinic first, often underpaid."
+      "BDS is a slow-burn career. The first 3-5 years after graduation are financially difficult for most — associate pay is low and building your own practice takes capital and time.",
+      "Government dental jobs barely exist. PSC and central government vacancies are rare and highly competitive. Most BDS graduates end up in private practice or teaching.",
+      "Urban markets are oversaturated. In metro cities, there is a dentist on every corner. Semi-urban and rural areas have far less competition and often more loyal patient bases.",
+      "MDS (postgraduate specialization) changes everything — income, reputation, and referral potential all improve significantly. But NEET-MDS is as competitive as NEET-PG for MBBS graduates.",
+      "Setting up a clinic is expensive. A basic setup costs ₹10-20 lakhs minimum. Most new graduates work as associates earning ₹20,000-₹35,000/month before they can afford their own space.",
+      "Your income grows with your patient base, not with years of experience alone. Marketing, word-of-mouth, and patient trust matter as much as clinical skill.",
+      "Abroad is not easy. Most countries (UK, Canada, Australia, USA) require you to clear their own licensing exams — sometimes multi-year processes — before you can practice. It is possible but not straightforward."
     ],
     "day_in_the_life": {
-      "student": "Lectures in the morning, clinical postings in the afternoon (working on real patients under supervision), practical exams are frequent and stressful. Less brutal than MBBS but still demanding.",
-      "professional": "Clinic hours, patient consultations, procedures. Private practice means also handling business side — staff, marketing, finances. Less emergency/on-call pressure than MBBS doctors generally."
+      "student": "Morning lectures and theory, afternoon clinical postings treating real patients under faculty supervision. You'll do extractions, fillings, root canals, and prosthetics hands-on from 3rd year. Practical exams are frequent. Less brutal than MBBS schedules, but clinical work demands precision and patience.",
+      "professional": "A typical day as a practicing dentist: patient appointments every 30-60 minutes, ranging from routine cleanings to complex procedures. If you own your clinic, add staff management, supplies, billing, and patient follow-ups to your day. No night shifts or emergency on-call pressure — most dental emergencies are scheduled within 24 hours, not at 2am."
     },
     "salary": {
-      "entry": "₹20,000 - ₹40,000/month (associate dentist or junior government role)",
-      "mid": "₹50,000 - ₹1.5 lakh/month (own clinic establishing, or MDS specialist starting out)",
-      "senior": "₹2 - ₹10 lakh/month (established private practice or specialist, highly location-dependent)"
+      "entry": "₹20,000 - ₹35,000/month (associate dentist at someone else's clinic, first 2-3 years)",
+      "mid": "₹60,000 - ₹1.5 lakh/month (own clinic with steady patient base, or MDS specialist at 5 years)",
+      "senior": "₹2 - ₹15 lakh/month (established multi-chair clinic, MDS specialist with referrals, or multi-location practice)"
     },
-    "scope": {
-      "india": "Moderate. Oversupply of dentists in urban areas. Rural and semi-urban areas have less competition.",
-      "abroad": "Difficult. Most countries require redoing licensing exams and sometimes years of additional study (e.g., NDEB in Canada, ADC in Australia)."
+    "career_outlook": {
+      "india": "Demand for dental care in India is growing as awareness and affordability improve — but urban markets are crowded. The best opportunities are in tier-2 and tier-3 cities where competition is lower and patient loyalty is higher. MDS significantly improves both income and scope. Teaching and academics is a stable parallel path.",
+      "abroad": "Difficult but achievable with planning. UK requires the ORE (Overseas Registration Exam). Canada requires NDEB — a multi-year process. Australia requires ADC exams. USA is even harder. Middle East (especially UAE, Saudi) is more accessible and many Indian dentists practice there successfully. Start preparing for overseas licensing during your BDS years if abroad is your goal."
     },
     "who_thrives": [
-      "People with genuine interest in dentistry, not those who landed there by default",
-      "Those who enjoy precise, hands-on, detail-focused work",
-      "Entrepreneurially minded people willing to build and run their own practice"
+      "People who genuinely find oral anatomy, dental procedures, and patient interaction interesting — not just those who missed MBBS.",
+      "Those who enjoy precise, hands-on work and see clinical skill as something to constantly improve.",
+      "Entrepreneurially minded people willing to build a practice, manage staff, and treat it like a business.",
+      "Those comfortable with a slow financial start in exchange for long-term independence and high earning potential.",
+      "People who value predictable working hours and no emergency on-call duties — dentistry offers this better than most medical fields."
     ],
     "who_regrets_it": [
-      "Students who chose BDS only after missing the MBBS cutoff — without genuine interest in dentistry.",
-      "Those expecting MBBS-equivalent income or social recognition from a dental degree.",
-      "People uncomfortable with repetitive, hands-on clinical work day after day.",
-      "Anyone unwilling to invest in setting up their own practice or manage the business side of running a clinic.",
-      "Those who need fast financial returns — associate dentist pay in the first 2-3 years is often discouraging."
+      "Students who chose BDS only after missing the MBBS cutoff and never developed genuine interest in dentistry.",
+      "Those expecting MBBS-equivalent income or social status — dentistry has its own ceiling, not medicine's.",
+      "People uncomfortable with repetitive clinical procedures day after day — extractions, fillings, and root canals are the core of general practice.",
+      "Anyone unwilling to handle the business side — staff, marketing, patient retention, and finances are unavoidable in private practice.",
+      "Those who need financial stability within the first 2-3 years — associate pay is often demoralising before you establish your own setup."
+    ],
+    "why_people_love_it": [
+      "You own your practice and your time — no corporate hierarchy, no boss, no performance reviews.",
+      "Visible, immediate results: a patient walks in anxious or in pain and leaves relieved. Few careers offer that kind of daily feedback.",
+      "No night shifts, no emergency on-call, no 36-hour duties — work-life balance is genuinely better than MBBS.",
+      "The income ceiling is high for those willing to build it — multiple clinics, specialization, or a strong patient base can generate substantial returns.",
+      "Dentistry in India is still under-penetrated outside metros — there is real room to grow, especially in smaller cities."
+    ],
+    "before_you_commit": [
+      "Shadow a practicing dentist for at least a week — watch actual procedures, not just the clinic exterior.",
+      "Talk to BDS graduates 5 years out, not current students — ask about income, regrets, and what they wish they had known.",
+      "Be honest about whether you enjoy hands-on, precise work or find it tedious — there's no avoiding it in this career.",
+      "Research MDS — if you're serious about dentistry, your specialization choice matters more than your college.",
+      "If your only reason to choose BDS is that you narrowly missed MBBS, take a gap year and reappear. A half-hearted dentist is not good for you or your patients."
     ],
     "real_experiences": [
       {
+        "source": "Practicing dentist, Ahmedabad (personal interview)",
+        "quote": "I chose BDS because I didn't get an MBBS seat. Now I run 8 clinics and I'm more than grateful. Once you have the skills and the drive, there is no ceiling. But it took 20 years of consistent work to get here.",
+        "url": ""
+      },
+      {
         "source": "Reddit r/india",
-        "quote": "Did BDS because I missed MBBS by 2 marks.",
+        "quote": "Four years into BDS and I still don't enjoy the work. I stayed because I was already too deep in. The people I see thriving are the ones who actually wanted to be here.",
         "url": "https://reddit.com/r/india"
       },
       {
         "source": "Quora",
-        "quote": "BDS without MDS is a tough life financially in the first few years.",
+        "quote": "I worked as an associate for ₹25,000 a month for two years before I could afford my own setup. Those years were demoralising. But three years into my own clinic, I'm making ₹1.2 lakh a month and building steadily.",
         "url": "https://quora.com"
       }
     ],
     "related_careers": [
       "mbbs",
+      "pharmacy",
       "paramedical_physiotherapy"
     ],
-    "why_people_love_it": [
-      "High degree of autonomy — once established, you run your own practice on your own terms, no boss, no corporate ladder",
-      "Visible, immediate results — a patient walks in with pain or confidence issues and leaves transformed, often in one visit",
-      "Work-life balance is significantly better than MBBS once you have your own practice — no 36-hour shifts, no emergency on-call duties",
-      "Entrepreneurial ceiling is real — dentists who build multiple clinics or specialize well can earn substantially with relatively predictable hours"
-    ]
+    "scope": {
+      "india": "Moderate. Oversupply in metros, better opportunity in tier-2 and tier-3 cities. MDS improves scope significantly.",
+      "abroad": "Difficult. Most countries require multi-year licensing processes. Middle East is the most accessible international option."
+    }
   },
   {
     "id": "cs_engineering",
