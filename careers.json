@@ -513,65 +513,76 @@
   ]
 },
   {
-    "id": "pharmacy",
-    "name": "Pharmacy (B.Pharm)",
-    "category": "paramedical",
-    "tagline": "Not just a chemist shop job — but most graduates end up there anyway.",
-    "overview": "B.Pharm is a 4-year degree covering drug chemistry, pharmacology, and pharmaceutical sciences. It opens paths into community pharmacy, hospital pharmacy, pharmaceutical companies (manufacturing, quality control, regulatory affairs), and research.",
-    "what_nobody_tells_you": [
-      "Most B.Pharm graduates default into community pharmacy (running or working at a medical store) because that's the most visible and accessible path, even though it's the lowest-paying option.",
-      "The real money in pharmacy is in the pharmaceutical industry — quality assurance, regulatory affairs, drug safety (pharmacovigilance), and manufacturing roles at companies like Sun Pharma, Cipla, Dr. Reddy's. These require networking and often an M.Pharm to access.",
-      "An M.Pharm (postgraduate) significantly widens options and pay, especially for industry and research roles. Without it, growth plateaus faster."
-    ],
-    "day_in_the_life": {
-      "student": "Heavy chemistry and pharmacology coursework, lab work synthesizing and analyzing compounds, industrial visits, internships at pharmacies or pharma companies in later years.",
-      "professional": "Community pharmacist: dispensing medication, patient counseling, inventory management, retail operations. Industry role: quality testing, regulatory documentation, formulation development, or compliance — much more lab/office based than retail."
-    },
-    "salary": {
-      "entry": "₹15,000 - ₹25,000/month (retail) vs ₹25,000 - ₹40,000/month (industry, QA/QC roles)",
-      "mid": "₹35,000 - ₹70,000/month (own pharmacy or mid-level industry role, 5 years)",
-      "senior": "₹80,000 - ₹2.5 lakh/month (senior industry roles like regulatory affairs manager, or a well-established pharmacy chain owner)"
-    },
-    "scope": {
-      "india": "Strong industry scope given India's massive pharma manufacturing base. Retail scope is stable but financially limited unless you own multiple outlets.",
-      "abroad": "Decent for industry-focused roles, especially regulatory affairs and pharmacovigilance with multinational pharma companies. Becoming a licensed pharmacist abroad (e.g., USA) requires additional exams (FPGEE) and is a long process."
-    },
-    "who_thrives": [
-      "People interested in chemistry, drug formulation, and how medicines actually work",
-      "Those willing to pursue M.Pharm or specialize to access industry roles",
-      "Detail-oriented people comfortable with regulatory and compliance work"
-    ],
-    "who_regrets_it": [
-      "Students who defaulted into retail pharmacy without exploring better-paying industry options — and stayed stuck.",
-      "Those expecting clinical, patient-facing work similar to a doctor or nurse.",
-      "Anyone who needed a postgraduate degree (M.Pharm) to access good industry roles but couldn't pursue one.",
-      "People who chose it expecting the income of a practicing doctor from a medical-sounding degree.",
-      "Those who underestimated how much of the industry pathway depends on self-initiated networking and internships."
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "Did B.Pharm thinking I'd end up like a doctor's assistant.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "LinkedIn",
-        "quote": "M.Pharm plus 2 years experience got me into regulatory affairs at a mid-size pharma company.",
-        "url": "https://linkedin.com"
-      }
-    ],
-    "related_careers": [
-      "mbbs",
-      "bds",
-      "paramedical_nursing"
-    ],
-    "why_people_love_it": [
-      "India is the pharmacy of the world — being trained here puts you at the center of a globally significant industry",
-      "Diverse career options beyond retail — pharmaceutical companies, regulatory affairs, drug safety, research, and hospital pharmacy all offer very different work environments",
-      "Relatively stable, recession-proof field — medicines are needed regardless of economic conditions",
-      "Entrepreneurial opportunity — owning a pharmacy or distribution business has a high, uncapped income ceiling"
-    ]
+  "id": "pharmacy",
+  "name": "Pharmacy (B.Pharm)",
+  "category": "paramedical",
+  "tagline": "Not just a chemist shop job — but most graduates end up there anyway.",
+  "overview": "B.Pharm is a 4-year degree in drug chemistry, pharmacology, and pharmaceutical sciences. It's not just retail — hospital pharmacy, manufacturing and QC, R&D, regulatory affairs, clinical research, pharmacovigilance, and medical writing are all real, different jobs under this one degree. Most students only ever hear about the retail path, which is exactly why most end up there by default.",
+  "career_outlook": {
+    "india": "Strong industry scope given India's massive pharma manufacturing base — the 'pharmacy of the world.' Retail is stable but financially limited unless you own multiple outlets.",
+    "abroad": "Decent for industry roles, especially regulatory affairs and pharmacovigilance with multinational companies. Becoming a licensed pharmacist abroad (e.g., FPGEE for the USA) is a long, separate process."
   },
+  "salary": {
+    "entry": "₹15,000-₹25,000/month (retail) vs ₹25,000-₹40,000/month (industry, QA/QC roles)",
+    "mid": "₹35,000-₹70,000/month (own pharmacy or mid-level industry role, 5 years)",
+    "senior": "₹80,000-₹2.5 lakh/month (senior industry roles like regulatory affairs manager, or an established pharmacy chain owner)"
+  },
+  "why_people_love_it": [
+    "India is the pharmacy of the world — training here puts you at the center of a globally significant industry",
+    "Diverse paths beyond retail — pharma companies, regulatory affairs, drug safety, research, hospital pharmacy",
+    "Relatively recession-proof — medicines are needed regardless of the economy",
+    "Entrepreneurial upside — owning a pharmacy or distribution business has a high income ceiling"
+  ],
+  "what_nobody_tells_you": [
+    "Most graduates default into community pharmacy — not because it pays best, but because it's the only path anyone shows them.",
+    "The real money is in the pharma industry — QA, regulatory affairs, pharmacovigilance, manufacturing — but these need networking and often an M.Pharm.",
+    "An M.Pharm significantly widens your options and pay ceiling; without it, industry growth plateaus faster.",
+    "High salaries don't happen right after graduation on any path — most freshers start at ₹15,000-₹40,000/month, and the real jump comes 3-5 years in with specialization.",
+    "Automation is reshaping manufacturing and basic dispensing, but it's increasing demand for regulatory, quality, and pharmacovigilance roles — not eliminating the field."
+  ],
+  "who_thrives": [
+    "Interested in chemistry, drug formulation, and how medicines actually work",
+    "Willing to pursue M.Pharm or specialize to access industry roles",
+    "Detail-oriented, comfortable with regulatory and compliance work",
+    "Fine with shift work in manufacturing or hospital settings, not just 9-to-5 retail hours"
+  ],
+  "who_regrets_it": [
+    "Defaulted into retail without exploring better-paying industry options, and stayed stuck",
+    "Expected clinical, patient-facing work similar to a doctor or nurse",
+    "Needed an M.Pharm to access good industry roles but couldn't pursue one",
+    "Chose it expecting doctor-level income from a medical-sounding degree",
+    "Underestimated how much the industry path depends on self-initiated networking and internships"
+  ],
+  "before_you_commit": [
+    "Visit both a retail pharmacy and a hospital pharmacy — see how different the actual work is",
+    "Talk to pharmacists in industry roles, not just patient-facing ones",
+    "Research the placement records of the colleges you're considering",
+    "Understand the real difference between B.Pharm, Pharm.D, and M.Pharm before deciding",
+    "Check whether you actually enjoy chemistry, biology, and precision-focused lab work — the coursework is heavy on all three"
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "M.Pharm plus 2 years experience got me into regulatory affairs at a mid-size pharma company. Salary jumped from ₹18k in retail to ₹45k, and the work is genuinely interesting — reading drug approval data all day beats standing behind a counter.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "B.Pharm only, no M.Pharm. Started at a hospital pharmacy at ₹20k/month, moved to a QC role at a mid-size manufacturer after 3 years. Not rich, but stable, 9-to-6, and I like knowing my work actually matters for drug safety.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did B.Pharm thinking I'd end up like a doctor's assistant. Reality: ran a medical store for 4 years at barely above minimum wage. Nobody in my college ever mentioned regulatory affairs or pharmacovigilance existed until I found out on Reddit.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+  "related_careers": [
+    "mbbs",
+    "bds",
+    "paramedical_nursing"
+  ]
+},
   {
     "id": "paramedical_physiotherapy",
     "name": "Physiotherapy (BPT)",
@@ -581,20 +592,17 @@
     "what_nobody_tells_you": [
       "Entry-level pay is low — often ₹15,000-₹25,000/month working under a senior physiotherapist or at a hospital, especially in the first 2-3 years.",
       "Building a private practice or clinic takes time, similar to dentistry. The first few years are about building reputation and referral networks.",
-      "Specializations (sports physiotherapy, neuro-rehab, pediatric physiotherapy) significantly increase earning potential but require additional certification/masters."
+      "Specializations (sports physiotherapy, neuro-rehab, pediatric physiotherapy) significantly increase earning potential but require additional certification/masters.",
+      "Government jobs in physiotherapy are limited. AIIMS, government hospitals, and defense services do hire physiotherapists, but vacancies are scarce and competition is high. Don't plan your career around a government job."
     ],
-    "day_in_the_life": {
-      "student": "Classroom learning combined with hospital postings, hands-on practice with patients under supervision, anatomy and biomechanics heavy coursework.",
-      "professional": "Patient assessments, hands-on treatment sessions (each typically 30-45 minutes), documentation, treatment planning. Hospital-based roles have more structure; private practice involves building your own client base."
-    },
     "salary": {
-      "entry": "₹15,000 - ₹30,000/month",
-      "mid": "₹40,000 - ₹80,000/month (5 years, own practice building or hospital senior role)",
-      "senior": "₹1 - ₹4 lakh/month (established private practice, sports team physiotherapist, or specialized clinic owner)"
+      "entry": "₹15,000 - ₹25,000/month",
+      "mid": "₹35,000 - ₹80,000/month (5 years, own practice building or MPT specialist in hospital)",
+      "senior": "₹1 - ₹4 lakh/month (established private practice, sports team physiotherapist, or specialized rehab clinic owner)"
     },
-    "scope": {
-      "india": "Growing steadily — increased awareness of physiotherapy for chronic pain, sports injuries, post-surgical recovery, and elderly care. Still underutilized compared to its potential.",
-      "abroad": "Good scope in UK, Australia, Canada, Gulf countries — requires additional licensing/certification exams but is a well-recognized profession internationally."
+    "career_outlook": {
+    "india": "Growing steadily. Demand is expanding across orthopedic care, sports medicine, elderly rehabilitation, post-COVID recovery, and neurological rehab. India's aging population and rising sports participation are both long-term demand drivers. Still underserved in tier-2 and tier-3 cities — which is both a challenge and an opportunity for those willing to set up there.",
+    "abroad": "Strong international scope, especially in UK, Australia, Canada, and Gulf countries. Each country requires its own licensing process — HCPC registration in the UK, AHPRA in Australia, regulatory body exams in Canada. The process takes time but is achievable with planning. Indian physiotherapists are actively hired abroad, particularly in geriatric care and rehabilitation."
     },
     "who_thrives": [
       "People who enjoy hands-on, physical work and direct patient interaction",
@@ -602,35 +610,43 @@
       "Patient individuals comfortable with gradual, incremental patient progress"
     ],
     "who_regrets_it": [
-      "Students who chose it as a lower-stakes medical degree without genuine interest in rehabilitation or human movement.",
+      "Students who chose BPT as a fallback after not qualifying for MBBS, without genuine interest in rehabilitation or movement science.",
       "Those expecting MBBS-level income or social status from a physiotherapy degree.",
       "Anyone who underestimated the physical demands — you are on your feet performing manual treatment for most of the day.",
       "People who need fast financial returns — private practice income builds slowly over several years.",
-      "Those who didn't specialize further and found growth options limited compared to peers who pursued sports physio or neuro-rehab."
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "BPT gets overlooked but if you specialize in sports physio and build connections with local sports academies, the income potential is genuinely good after 5-6 years.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "Quora",
-        "quote": "First 2 years were rough financially, working under a senior at ₹18k/month.",
-        "url": "https://quora.com"
-      }
-    ],
-    "related_careers": [
-      "bds",
-      "mbbs",
-      "paramedical_nursing"
+      "Those who stayed generalist and didn't specialize — BPT without MPT or additional certification limits both income and career options significantly."
     ],
     "why_people_love_it": [
       "Deeply personal, rewarding work — helping someone regain movement after an injury or surgery is one of the most tangible impacts a healthcare professional can have",
       "Growing field with genuine demand — sports medicine, elderly care, and post-surgical rehab are all expanding rapidly in India",
       "Good work-life balance compared to MBBS/BDS — mostly scheduled appointments, rarely emergency on-call",
       "Private practice is viable and financially rewarding once established, with relatively low setup costs compared to dentistry"
-    ]
+    ],
+    "before_you_commit": [
+    "Shadow a physiotherapist in both a hospital department and a private clinic on separate days — the two environments are very different and you should know which suits you.",
+    "Observe at least one neurological rehabilitation session and one orthopedic session. The clinical complexity will tell you more than any brochure.",
+    "Talk to physiotherapists who are 5-10 years into their career, not fresh graduates. Ask specifically about income growth, specialization decisions, and whether they'd choose it again.",
+    "Research the difference between BPT, MPT, and sports physiotherapy certifications before deciding — your long-term options depend heavily on which path you take after graduation.",
+    "Be honest with yourself about physical stamina. Visit a busy physiotherapy clinic and watch a full morning of sessions. If the pace and physicality feel right, that's a good sign."
+  ],
+    "real_experiences": [
+    {
+      "source": "Practicing physiotherapist, sports specialty (LinkedIn)",
+      "quote": "Started at ₹18,000 a month in a hospital. Spent 3 years building skills and contacts, did a sports physio certification, started working with a local cricket academy. Now I have my own clinic and consult with two sports teams. Income is ₹1.2 lakh a month. It took 7 years to get here, but I genuinely love the work.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "BPT is a solid career if you know what you're getting into. The first 3 years are financially rough and physically tiring. I'm 5 years in, running a small clinic, making decent money. Not glamorous, but stable and genuinely satisfying. Specialization was the turning point — general BPT alone wasn't enough.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "I chose BPT because I didn't clear NEET. Four years later, I'm qualified but unmotivated. I don't dislike the work, but I don't feel connected to it either. The patients are wonderful, but I spend my evenings wondering if I'd have been more fulfilled elsewhere. I wish I'd been more honest with myself before choosing.",
+      "url": "https://quora.com"
+    }
+  ],
+  "related_careers": ["mbbs", "bds", "paramedical_nursing"]
   },
   {
     "id": "paramedical_nursing",
