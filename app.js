@@ -114,6 +114,23 @@ const DETAIL_METRICS = {
     praise: 'High demand and comparatively good pay for a paramedical path, without an extremely long education.' }
 };
 
+function getThemeIcon() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('karriere-theme', theme);
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.innerHTML = getThemeIcon();
+}
+
+function initTheme() {
+  const saved = localStorage.getItem('karriere-theme');
+  setTheme(saved || 'light');
+}
+
+
 function renderStars(value) {
   if (!value) return '<span class="snapshot-stars">—</span>';
   let s = '';
@@ -221,9 +238,12 @@ function renderListView() {
 
   return `
     <div class="wrap">
-      <div class="masthead">
+            <div class="masthead" style="display:flex;align-items:center;justify-content:space-between;">
         <button class="wordmark">${LOGOMARK}<span>Karriere</span></button>
-        <div class="masthead-meta">Vol. 1 — India Edition</div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
+          <div class="masthead-meta">Vol. 1 — India Edition</div>
+        </div>
       </div>
       <div class="dateline">
         <span>${new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
@@ -290,7 +310,10 @@ const cm = CARD_METRICS[career.id] || {};
   return `
     <div class="wrap detail-wrap">
       <button class="back-link" data-nav="">← Back to all careers</button>
-      <button class="masthead-small">${LOGOMARK}<span>Karriere</span></button>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+        <button class="masthead-small">${LOGOMARK}<span>Karriere</span></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
+      </div>
 
       <div class="career-header">
         <div class="career-tag">${CATEGORY_ICONS[career.category] || ''} ${CATEGORY_LABELS[career.category] || career.category}</div>
@@ -450,11 +473,11 @@ function attachListeners() {
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => { activeCategory = btn.dataset.cat; render(false); });
   });
-  document.querySelectorAll('.career-entry').forEach(btn => {
-    btn.addEventListener('click', () => navigate('#' + btn.dataset.id));
+    document.querySelectorAll('.career-entry').forEach(btn => {
+    btn.addEventListener('click', () => navigate(btn.dataset.id));
   });
-  document.querySelectorAll('[data-nav]').forEach(btn => {
-    btn.addEventListener('click', () => navigate(btn.dataset.nav ? '#' + btn.dataset.nav : ''));
+    document.querySelectorAll('[data-nav]').forEach(btn => {
+    btn.addEventListener('click', () => navigate(btn.dataset.nav));
   });
   document.querySelectorAll('.wordmark, .masthead-small').forEach(el => {
     el.addEventListener('click', () => navigate(''));
@@ -462,6 +485,14 @@ function attachListeners() {
   document.querySelectorAll('.salary-bar-fill').forEach(el => {
     requestAnimationFrame(() => setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 80));
   });
+    const themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+
   const searchInput = document.getElementById('hero-search');
   if (searchInput) {
     let searchTimeout;
@@ -538,7 +569,7 @@ async function render(animate = true) {
     // preserve focus/caret only when re-rendering from typing; no-op on hash nav
   }
 }
-
+initTheme();
 window.addEventListener('popstate', () => render(true));
 render(true);
 // Update OG meta tags on navigation
