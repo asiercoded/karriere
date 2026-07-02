@@ -31,7 +31,7 @@ const LOGOMARK = '<svg class="logomark" viewBox="0 0 24 24" fill="none" stroke="
 // 1-5 scale, derived from each career's overview, salary spread, and testimonies.
 const CARD_METRICS = {
   mbbs: { duration: '5.5 yrs', stress: 5, competition: 5 },
-  bds: { duration: '5 yrs', stress: 3, competition: 3 },
+  bds: { duration: '5 yrs', stress: 3, competition: 5 },
   cs_engineering: { duration: '4 yrs', stress: 3, competition: 4 },
   ca: { duration: '~5 yrs', stress: 5, competition: 5 },
   law: { duration: '5 yrs', stress: 4, competition: 4 },
@@ -378,7 +378,7 @@ const cm = CARD_METRICS[career.id] || {};
             <ul>${career.who_thrives.map(t => `<li>${t}</li>`).join('')}</ul>
           </div>
           <div class="fit-card struggle">
-            <div class="fit-label">Who might struggle</div>
+            <div class="fit-label">Who might struggle or regret this</div>
             <ul>${career.who_regrets_it.map(t => `<li>${t}</li>`).join('')}</ul>
           </div>
         </div>

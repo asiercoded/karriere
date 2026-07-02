@@ -8,16 +8,18 @@
     "what_nobody_tells_you": [
       "MBBS is just the beginning. To actually earn well, you need an MD/MS — that's 3 more years after MBBS, and NEET-PG is as brutal as NEET-UG.",
       "A general MBBS doctor in a government setup earns ₹50,000-₹80,000/month in early years. The 'doctor earns lakhs' image applies to specialists after 10+ years.",
-      "Private medical college fees can go up to ₹1 crore for the full course. Most families take massive loans."
+      "You'll likely spend much of your 20s studying while friends in other fields start earning.",
+      "Private medical college fees can go up to ₹1 crore for the full course. Most families take massive loans.",
+      "The emotional pressure can be harder than the academics.",
+      "People who chose it for status or parental pressure often regret it when they realize the personal cost and delayed financial rewards."
     ],
     "before_you_commit": [
-  "Would you still choose medicine if it took 10+ years to reach your desired income?",
-  "Can you handle seeing patients suffer or die?",
-  "Are you comfortable sacrificing much of your 20s to studying and training?",
-  "Do you genuinely enjoy biology beyond scoring marks?",
-  "If doctors weren't highly respected, would you still choose this career?"
-]
-    ,
+      "Would you still choose medicine if it took 10+ years to reach your desired income?",
+      "Can you handle seeing patients suffer or die?",
+      "Are you comfortable sacrificing much of your 20s to studying and training?",
+      "Do you genuinely enjoy biology beyond scoring marks?",
+      "If doctors weren't highly respected, would you still choose this career?"
+    ],
     "salary": {
       "entry": "₹40,000 - ₹80,000/month (government job or junior resident)",
       "mid": "₹1 - ₹2 lakh/month (after MD/MS, 5 years experience)",
@@ -34,12 +36,11 @@
       "Those who find purpose in helping others."
     ],
     "who_regrets_it": [
-      "MBBS is only the beginning. Most doctors need an MD/MS or other specialization for better career growth.",
-      "You'll likely spend much of your 20s studying while friends in other fields start earning.",
-      "Medicine involves paperwork, communication, and administration—not just diagnosing patients.",
-      "Night shifts, weekends, and festival duties are common during training.",
-      "The emotional pressure can be harder than the academics.",
-      "People who chose it for status or parental pressure often regret it when they realize the personal cost and delayed financial rewards."
+      "Students who chose it for status or parental pressure without genuine interest in medicine.",
+      "Those expecting high income soon after graduation — financial stability typically comes in your early 30s at best.",
+      "People who need work-life balance in their 20s — the training years are relentless.",
+      "Anyone unwilling to spend years clearing competitive postgraduate exams (NEET-PG) after MBBS.",
+      "Those who underestimate the emotional weight of patient deaths, chronic suffering, and high-stakes decisions."
     ],
     "real_experiences": [
       {
@@ -96,9 +97,11 @@
       "Entrepreneurially minded people willing to build and run their own practice"
     ],
     "who_regrets_it": [
-      "Students who chose it only because they missed MBBS cutoffs",
-      "Those expecting MBBS-level prestige or pay without MBBS-level specialization",
-      "People uncomfortable with repetitive, hands-on clinical work"
+      "Students who chose BDS only after missing the MBBS cutoff — without genuine interest in dentistry.",
+      "Those expecting MBBS-equivalent income or social recognition from a dental degree.",
+      "People uncomfortable with repetitive, hands-on clinical work day after day.",
+      "Anyone unwilling to invest in setting up their own practice or manage the business side of running a clinic.",
+      "Those who need fast financial returns — associate dentist pay in the first 2-3 years is often discouraging."
     ],
     "real_experiences": [
       {
@@ -153,9 +156,11 @@
       "Those comfortable with constant change and learning new technologies"
     ],
     "who_regrets_it": [
-      "People who chose CS only for the salary",
-      "Those who hate sitting at a computer for 8+ hours a day",
-      "Students who expected college to teach them everything they need"
+      "Students from tier-3 colleges who assumed placement would happen automatically without building skills independently.",
+      "Those who chose CS purely for the salary and don't enjoy building or problem-solving.",
+      "People who dislike sitting at a screen for 8+ hours — the job is sedentary by nature.",
+      "Anyone who expected college curriculum to be enough — most of what matters in the job must be self-taught.",
+      "Those uncomfortable with constant technological change requiring ongoing self-learning throughout your career."
     ],
     "real_experiences": [
       {
@@ -211,9 +216,11 @@
       "Detail-oriented, disciplined individuals"
     ],
     "who_regrets_it": [
-      "Those who chose it because 'commerce students do CA'",
-      "People who underestimated the difficulty and time commitment",
-      "Those who need early financial independence — articleship pays almost nothing"
+      "Students who assumed it would take 3 years — most take 5 to 7, and many more.",
+      "Anyone who needs early financial independence — articleship pays almost nothing for 3 years of full-time work.",
+      "People who dislike repetitive, rule-heavy work in audit, compliance, or taxation.",
+      "Those who chose it as a default commerce path without genuine interest in finance or accounting.",
+      "Anyone who underestimated the emotional toll of repeated exam failures and the delayed return on effort."
     ],
     "real_experiences": [
       {
@@ -269,9 +276,11 @@
       "Strong communicators who can think on their feet"
     ],
     "who_regrets_it": [
-      "Those who chose law because of TV shows or family pressure without understanding the actual work",
-      "People who need financial stability early in their career",
-      "Non-NLU graduates who expected corporate law placements without building extra skills"
+      "Non-NLU graduates who expected corporate law placements without building additional specialized skills.",
+      "Those who romanticized courtroom drama without understanding that most legal work is research, drafting, and documentation.",
+      "Anyone who needs financial stability early — litigation income in the first 5-10 years is genuinely poor.",
+      "People without family connections in law who underestimated how much reputation-building takes in litigation.",
+      "Those who find sustained reading, ambiguity, and verbal confrontation draining rather than energizing."
     ],
     "real_experiences": [
       {
@@ -326,9 +335,11 @@
       "Self-driven learners comfortable with ambiguity and subjective feedback"
     ],
     "who_regrets_it": [
-      "Those who expected design to be 'easy' or purely fun without realizing the technical and business skill required",
-      "People who need very stable, predictable career paths",
-      "Those who chase fashion design for glamour without understanding the production/business grind"
+      "Students who chose fashion design for the glamour without understanding the production and manufacturing grind behind it.",
+      "Those who expected creative freedom from day one — most early design work is executing someone else's brief.",
+      "Anyone uncomfortable with constant subjective critique of their work — feedback in design is relentless.",
+      "People who relied solely on college training without building an independent portfolio.",
+      "Those from non-NID/NIFT colleges who assumed the degree alone would open doors in competitive design firms."
     ],
     "real_experiences": [
       {
@@ -383,9 +394,11 @@
       "Strong networkers and communicators"
     ],
     "who_regrets_it": [
-      "Those doing MBA right after undergrad with no work experience or clear goal, 'just because everyone does it'",
-      "People who take large loans for tier-3 colleges with poor placement records",
-      "Those expecting the degree alone to compensate for lack of skills or direction"
+      "Students who did it immediately after undergrad with no work experience or clear goal — it rarely fixes that.",
+      "Anyone who took large loans for a tier-3 college with weak placement records.",
+      "People who expected the degree alone to compensate for a lack of skills or direction.",
+      "Those who dislike intense networking, group dynamics, and presentation-heavy environments.",
+      "Anyone who confused an MBA with a shortcut — it amplifies existing direction but doesn't create it."
     ],
     "real_experiences": [
       {
@@ -441,9 +454,11 @@
       "Detail-oriented people comfortable with regulatory and compliance work"
     ],
     "who_regrets_it": [
-      "Those who expected pharmacy to be primarily clinical, like working alongside doctors directly",
-      "People who default into retail without exploring industry options and feel stuck",
-      "Those who need a postgraduate degree to access good roles but can't pursue M.Pharm"
+      "Students who defaulted into retail pharmacy without exploring better-paying industry options — and stayed stuck.",
+      "Those expecting clinical, patient-facing work similar to a doctor or nurse.",
+      "Anyone who needed a postgraduate degree (M.Pharm) to access good industry roles but couldn't pursue one.",
+      "People who chose it expecting the income of a practicing doctor from a medical-sounding degree.",
+      "Those who underestimated how much of the industry pathway depends on self-initiated networking and internships."
     ],
     "real_experiences": [
       {
@@ -499,9 +514,11 @@
       "Patient individuals comfortable with gradual, incremental patient progress"
     ],
     "who_regrets_it": [
-      "Those who chose it purely as a 'medical degree' fallback without genuine interest",
-      "People uncomfortable with physically demanding, hands-on daily work",
-      "Those expecting MBBS-level prestige or pay without MBBS-level path"
+      "Students who chose it as a lower-stakes medical degree without genuine interest in rehabilitation or human movement.",
+      "Those expecting MBBS-level income or social status from a physiotherapy degree.",
+      "Anyone who underestimated the physical demands — you are on your feet performing manual treatment for most of the day.",
+      "People who need fast financial returns — private practice income builds slowly over several years.",
+      "Those who didn't specialize further and found growth options limited compared to peers who pursued sports physio or neuro-rehab."
     ],
     "real_experiences": [
       {
@@ -557,9 +574,11 @@
       "People comfortable with physically and emotionally demanding shift work"
     ],
     "who_regrets_it": [
-      "Those expecting good pay in India without planning to go abroad",
-      "People uncomfortable with shift work, especially night duties",
-      "Those who underestimate the emotional toll of patient care and hospital environments"
+      "Students expecting decent pay in India without planning to go abroad — domestic nursing salaries don't match the workload.",
+      "Anyone uncomfortable with shift work, night duties, and the emotional strain of intensive patient care.",
+      "Those who didn't begin preparing for OET or NCLEX early enough, delaying their international transition by years.",
+      "People who chose it expecting stable 9-to-5 work — nursing runs on rotation schedules and on-call demands.",
+      "Anyone who underestimated the physical and emotional toll of working in high-acuity wards or critical care."
     ],
     "real_experiences": [
       {
@@ -615,9 +634,11 @@
       "People who want a paramedical career with comparatively good pay without an extremely long education path"
     ],
     "who_regrets_it": [
-      "Those uncomfortable with radiation exposure risk, even with safety measures",
-      "People expecting purely diagnostic/interpretive work (that's the radiologist's role, a separate path requiring MBBS plus MD)",
-      "Those who dislike shift-based or on-call work schedules"
+      "Students who chose it expecting to read and diagnose scans — that is the radiologist's role, not the technologist's.",
+      "Those who didn't specialize in MRI, CT, or sonography and found their earning potential plateau early.",
+      "Anyone uncomfortable with shift-based schedules, including nights and weekends — imaging services run 24/7.",
+      "People who underestimated the long-term radiation exposure risk if safety protocols aren't consistently followed.",
+      "Those who expected the job to be more clinically dynamic — much of the work is technical and procedural rather than diagnostic."
     ],
     "real_experiences": [
       {
