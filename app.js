@@ -1,3 +1,5 @@
+(function(){var r=sessionStorage.redirect;if(r){delete sessionStorage.redirect;window.location.hash=r.replace('/karriere/','');}})();
+
 let careers = [];
 let activeCategory = 'all';
 let searchQuery = '';
@@ -153,7 +155,7 @@ function renderMeter(value, type) {
 async function loadCareers() {
   if (careers.length) return;
   try {
-    const res = await fetch('careers.json');
+    const res = await fetch('/karriere/careers.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     careers = await res.json();
   } catch (err) {
@@ -184,6 +186,8 @@ const BASE = '/karriere';
 
 function navigate(path) {
   window.location.hash = path;
+  const url = path ? `/karriere/${path}` : `/karriere/`;
+  history.replaceState(null, '', url);
 }
 
 function getFilteredCareers() {
