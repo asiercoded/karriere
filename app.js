@@ -155,7 +155,7 @@ function renderMeter(value, type) {
 async function loadCareers() {
   if (careers.length) return;
   try {
-    const res = await fetch('careers.json');
+    const res = await fetch('/karriere/careers.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     careers = await res.json();
   } catch (err) {
@@ -165,7 +165,6 @@ async function loadCareers() {
         <p style="color:var(--ink-soft);margin-top:12px;">${err.message}. Please check your connection and refresh.</p>
         <button onclick="location.reload()" style="margin-top:20px;padding:10px 24px;background:var(--amber);color:#fff;border:none;border-radius:8px;cursor:pointer;">Try again</button>
       </div>`;
-    throw err;
   }
 }
 
