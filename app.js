@@ -1,5 +1,3 @@
-(function(){var r=sessionStorage.redirect;if(r){delete sessionStorage.redirect;history.replaceState(null,'',r);}})();
-
 let careers = [];
 let activeCategory = 'all';
 let searchQuery = '';
@@ -155,7 +153,7 @@ function renderMeter(value, type) {
 async function loadCareers() {
   if (careers.length) return;
   try {
-    const res = await fetch('/karriere/careers.json');
+    const res = await fetch('careers.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     careers = await res.json();
   } catch (err) {
@@ -185,11 +183,8 @@ function formatEntrySalary(entry) {
 const BASE = '/karriere';
 
 function navigate(path) {
-  const url = path ? `${BASE}/${path}` : BASE + '/';
-  history.pushState(null, '', url);
-  render(true);
+  window.location.hash = path;
 }
-
 
 function getFilteredCareers() {
   let list = activeCategory === 'all' ? careers : careers.filter(c => c.category === activeCategory);
@@ -522,8 +517,7 @@ let savedScrollY = 0;
 async function render(animate = true) {
   await loadCareers();
   const view = document.getElementById('view');
-  const path = window.location.pathname;
-  const id = path.startsWith(BASE + '/') ? path.slice(BASE.length + 1).replace(/\/$/, '') : '';
+  const id = window.location.hash.replace('#', '');
 
   if (animate) {
     view.classList.add('leaving');
@@ -569,7 +563,7 @@ async function render(animate = true) {
   }
 }
 initTheme();
-window.addEventListener('popstate', () => render(true));
+window.addEventListener('hashchange', () => render(true));
 render(true);
 // Update OG meta tags on navigation
 function updateMetaTags(careerName, careerTagline) {
