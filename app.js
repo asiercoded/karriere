@@ -4,7 +4,7 @@ let searchQuery = '';
 
 const CATEGORY_LABELS = {
   medical: 'Medical', engineering: 'Engineering', commerce: 'Commerce',
-  law: 'Law', design: 'Design', management: 'Management', paramedical: 'Paramedical'
+  law: 'Law', design: 'Design', management: 'Management', paramedical: 'Paramedical',   life_sciences: 'Life Sciences',
 };
 
 const CATEGORY_ICONS = {
@@ -14,7 +14,9 @@ const CATEGORY_ICONS = {
   law: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 3h8M4 7h6M14 7h6"></path><path d="M2 7l3 7a3.5 3.5 0 0 0 7 0L9 7"></path><path d="M15 7l3 7a3.5 3.5 0 0 0 7 0L22 7"></path></svg>',
   design: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10c0-1-.5-2-2-2h-3a2 2 0 0 1-2-2c0-.8.3-1.3 1-2a2 2 0 0 0-1-3.7A9.9 9.9 0 0 0 12 2z"></path><circle cx="7.5" cy="10.5" r="1"></circle><circle cx="7" cy="15" r="1"></circle><circle cx="11" cy="17.5" r="1"></circle></svg>',
   management: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>',
-  paramedical: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>'
+  paramedical: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>',
+  life_sciences: '<svg class="cat-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-9 4 18 4-18 2 9h4"></path></svg>',
+
 };
 const SNAPSHOT_ICONS = {
   salary: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg>',
@@ -44,7 +46,9 @@ const CARD_METRICS = {
   bca_mca: { duration: '3+2 yrs', stress: 3, competition: 4 },
   bba: { duration: '3 yrs', stress: 2, competition: 3 },
   bcom: { duration: '3 yrs', stress: 2, competition: 3 },
-};
+  zoology: { duration: '3 yrs', stress: 2, competition: 3 },
+  botany: { duration: '3 yrs', stress: 2, competition: 3 },
+  };
 
 const DETAIL_METRICS = {
   mbbs: { salary_potential: 4, study_difficulty: 5, work_life_balance: 1, job_availability: 5, abroad_prospects: 4,
@@ -134,6 +138,20 @@ const DETAIL_METRICS = {
     misconception: 'B.Com is only useful if you plan to become a CA — otherwise it\'s a dead-end degree with no real career value.',
     regret: 'I assumed the degree alone would lead to a corporate career, but without certifications or skills I\'ve been stuck in the same clerical role for years while watching CA-qualified peers advance.',
     praise: 'A B.Com combined with the right certification gives you a career foundation as strong as any professional degree — at a fraction of the cost and time.' },
+  zoology: { salary_potential: 2, study_difficulty: 3, work_life_balance: 4, job_availability: 2, abroad_prospects: 3,
+    ideal_personality: 'Genuinely curious about biology, comfortable with hands-on lab work, willing to commit to additional qualifications after the degree',
+    internship: 'Not typically structured into the curriculum — self-sourced internships at research institutes, wildlife organizations, or labs are essential for building a competitive M.Sc. application',
+    progression: ['Lab Technician / Field Assistant', 'M.Sc. Graduate / Junior Research Fellow', 'PhD Scholar / Research Associate', 'Professor / Senior Scientist'],
+    misconception: 'B.Sc. Zoology is a backup degree — you can coast through it easily while you figure out what to do with your life.',
+    regret: 'I chose Zoology as a default after NEET without any real plan, drifted through three years, and graduated with no applications, no direction, and no job prospects.',
+    praise: 'B.Sc. Zoology with a clear plan for what comes next is one of the most genuinely interesting undergraduate degrees you can choose — the subject is endlessly fascinating if you actually care about it.' },
+  botany: { salary_potential: 2, study_difficulty: 3, work_life_balance: 4, job_availability: 2, abroad_prospects: 3,
+    ideal_personality: 'Genuinely curious about plants and ecosystems, comfortable with fieldwork and outdoor conditions, patient with a slow-building career',
+    internship: 'Not typically structured — self-sourced internships at agricultural research stations, botanical gardens, herbal pharma companies, or environmental consulting firms are essential',
+    progression: ['Lab Technician / Nursery Assistant', 'M.Sc. Graduate / Agricultural Officer', 'PhD Scholar / Research Scientist', 'Professor / Forestry Officer / Senior Researcher'],
+    misconception: 'Botany is just "studying plants" — a narrow, outdated science with limited career scope in the modern economy.',
+    regret: 'I chose Botany because of the promise of government jobs, but the competition was far higher than I expected and I ended up stuck with no backup plan.',
+    praise: 'A B.Sc. in Botany combined with a targeted M.Sc. in plant biotechnology, forestry, or agriculture opens doors to careers that genuinely matter — feeding a growing population and protecting ecosystems.' },
   };
 
 function getThemeIcon() {

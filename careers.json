@@ -1005,6 +1005,148 @@
     "bba",
     "mba"
   ]
+},
+    {
+  "id": "zoology",
+  "name": "B.Sc. Zoology",
+  "category": "life_sciences",
+  "tagline": "Fascinating subject, limited finish line — what you build on top of it matters most.",
+  "overview": "B.Sc. Zoology is a 3-year undergraduate degree studying animal biology — from cell structure to ecosystems. Most students enter it after not clearing NEET, and society often treats it as a consolation prize. The honest reality: a plain B.Sc. alone opens limited doors — lab tech or field assistant roles at ₹1.8–3 LPA. Almost every viable career path requires further qualifications: M.Sc. + PhD for research, B.Ed. for teaching, competitive exams for government jobs, or an MBA for corporate. The degree is worth doing if you're genuinely interested in biology AND have a plan for what comes next. It's not worth doing as a time-pass while you figure things out.",
+  "career_outlook": {
+    "india": "Demand for pure life science graduates in India is limited without postgraduate qualifications. Research positions (through UGC-NET/CSIR-NET fellowships) are competitive and offer modest stipends during PhD years. School teaching (with B.Ed.) and government exams (UPSC, State PSC, SSC CGL) offer stable employment but require separate preparation. Biotechnology and pharmaceutical companies hire life science graduates but typically prefer M.Sc. or specialized degree holders. The 'failed NEET' stigma follows the degree socially but doesn't directly affect employability — what matters is what you add to it.",
+    "abroad": "A B.Sc. alone has limited value abroad. M.Sc. or PhD from a good university opens opportunities in research, conservation, and academia internationally. Countries like Canada, Australia, Germany, and the UK have active research programs that recruit international graduates. Bioinformatics and data science skills combined with biology knowledge increase global employability significantly."
+  },
+  "salary": {
+    "entry": "₹1.8 - ₹3 LPA (lab technician, field assistant, or school teaching with B.Ed.)",
+    "mid": "₹3 - ₹6 LPA (M.Sc. graduate, government role, or teaching with experience)",
+    "senior": "₹6 - ₹15 LPA (PhD holder, professor, senior scientist, or government officer) / ₹12 - ₹25 LPA (with MBA pivot into corporate)"
+  },
+  "why_people_love_it": [
+    "The subject matter is genuinely fascinating — you study how animals work, how ecosystems function, how evolution shaped life, and how genes express themselves. If you're curious about the natural world, Zoology is endlessly interesting.",
+    "The practical work (field surveys, specimen collection, microscopy, dissections) keeps the degree engaging in a way that purely theoretical subjects don't — you're actually doing science, not just reading about it.",
+    "A Zoology background combined with the right additional qualifications opens doors to genuinely meaningful careers — wildlife conservation, environmental research, public health, and science communication all benefit from the perspective this degree provides.",
+    "The degree keeps your options unusually open for a life science path — you can pivot into research, teaching, government service, corporate roles (through MBA), or even science writing and policy, depending on what you add to it."
+  ],
+  "what_nobody_tells_you": [
+    "The 'failed NEET' stigma is real and exhausting — relatives, peers, and even some professors will treat your degree as a consolation prize rather than a deliberate academic choice. You'll need to develop a thick skin and your own sense of purpose to avoid internalizing this perception.",
+    "The curriculum is significantly deeper than Class 11–12 biology. You'll study animal taxonomy, physiology, genetics, ecology, evolution, embryology, and biochemistry at a level that demands genuine effort. It is not an 'easy' degree just because it's a B.Sc.",
+    "Direct job options for a plain B.Sc. Zoology graduate are narrow and low-paying — lab technician, field assistant, or science communication roles at ₹1.8–3 LPA. Most of these don't require a specialized Zoology degree; any life science graduate can fill them.",
+    "Every stable, well-paying career path from Zoology requires additional qualifications — M.Sc. + PhD (5-7 more years) for research, B.Ed. (2 more years) for school teaching, competitive exam prep (1-3 years) for government jobs, or an MBA (2 years) for corporate roles. The degree alone is not a finish line.",
+    "The research track (M.Sc. → PhD → postdoc → professor) is rewarding if you love the work, but the timeline is brutal — 8-12 years of additional study and low-paid fellowship positions before reaching a stable income, with no guarantee of a permanent academic position at the end."
+  ],
+  "who_thrives": [
+    "Students who chose Zoology because they genuinely enjoy biology — not as a fallback from NEET. Genuine interest makes the demanding curriculum feel meaningful rather than tedious.",
+    "People who are comfortable with long timelines and delayed financial stability — the research path takes years before it pays well, and even teaching and government paths require additional qualifications.",
+    "Those who enjoy hands-on lab work, fieldwork, and patient observation — dissections, microscopy, specimen collection, and ecological surveys are core to the degree, and liking this work makes all the difference.",
+    "Students who plan early — deciding in their first year whether to pursue research, teaching, government exams, or an MBA, and using their three years to build toward that specific goal rather than drifting."
+  ],
+  "who_regrets_it": [
+    "Students who chose Zoology solely because they couldn't get into MBBS and never developed genuine interest in the subject — three years of studying something you don't care about, with no clear alternative plan, is a painful waste of time.",
+    "Those who expected a B.Sc. degree alone to lead to a stable, well-paying job immediately after graduation — the job market for plain B.Sc. graduates is competitive, low-paying, and unrewarding without additional qualifications.",
+    "People who need clear, structured career paths with predictable timelines — Zoology offers many possible directions, but none of them are straightforward, and the ambiguity can be stressful for those who prefer certainty.",
+    "Students who drifted through three years without making a plan — no M.Sc. applications submitted, no competitive exam preparation, no alternative direction. The gap between graduating and figuring out what's next can stretch into years of underemployment.",
+    "Those who dislike lab work, fieldwork, and detailed practical observation — Zoology at the undergraduate level involves significant hands-on work, and if that feels like a chore rather than discovery, the degree will be a long three years."
+  ],
+  "before_you_commit": [
+    "Before you join, research the different paths that exist after Zoology — research (M.Sc. → PhD), teaching (B.Ed.), government exams (UPSC/State PSC), or corporate (MBA).",
+    "Spend a day in a university zoology lab — attend a dissection session or a microscopy practical. If the hands-on work with specimens and detailed observation feels tedious rather than fascinating, reconsider whether a life science degree matches how you learn best.",
+    "Talk to a B.Sc. Zoology graduate who is 3-4 years out without further studies — ask about their role and salary. Then talk to someone who completed M.Sc. and PhD. The contrast between these two trajectories is the most useful information you can gather before committing.",
+    "Research the M.Sc. admission process for universities you might target (CUET PG, IIT JAM, or university-specific entrance exams). Check if your chosen B.Sc. college's curriculum aligns with these exam syllabi — because M.Sc. from a good university is often the real differentiator.",
+    "Read 2-3 research papers in areas that interest you (wildlife conservation, genetics, marine biology). If reading scientific literature feels inaccessible or uninteresting, a research career path may not suit you — and you'll need to plan for one of the other directions instead."
+  ],
+  "real_experiences": [
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "Did B.Sc. Zoology because I genuinely loved biology, despite everyone assuming I was a failed NEET dropper. Went on to M.Sc. and then PhD in wildlife ecology. Now working as a research scientist at a conservation organization. The road is long and the pay during PhD years is modest, but I wake up excited about my work every day. Wouldn't trade it for a medical degree.",
+      "url": "https://reddit.com/r/Indian_Academia"
+    },
+    {
+      "source": "LinkedIn",
+      "quote": "B.Sc. Zoology from a decent college. Realized by my second year that research wasn't for me. Prepared for CAT alongside my degree, got into a good MBA program. Now working in brand management at an FMCG company at ₹12 LPA. The Zoology degree itself has nothing to do with my job, but it kept my options open and the three years were genuinely interesting. Just wish I'd known earlier that I'd need an MBA to get where I wanted.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Chose Zoology because I missed the NEET cutoff and didn't know what else to do. Three years went by without any clear plan. Graduated with no M.Sc. applications submitted, no competitive exam preparation, no job offers. Spent a year after graduation working at a call center before finally figuring out a direction. Should have either committed to a path from year one or taken a drop year to reattempt NEET instead of drifting through a degree I wasn't invested in.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+  "related_careers": [
+    "mbbs",
+    "pharmacy",
+    "bds"
+  ]
+  }
+  {
+  "id": "botany",
+  "name": "B.Sc. Botany",
+  "category": "life_sciences",
+  "tagline": "The science of everything that keeps us alive — careers here take patience to cultivate.",
+  "overview": "B.Sc. Botany is a 3-year undergraduate degree studying plant biology — from cellular structure and genetics to ecology, taxonomy, and physiology. It covers agriculture, forestry, pharmacology, and environmental science. The honest truth: India needs plant scientists, but most roles in agriculture, forestry, environmental consulting, and herbal pharma require M.Sc. or PhD. A plain B.Sc. alone leads to lab technician, nursery assistant, or field survey roles at ₹2–3.5 LPA. The subject is genuinely interesting if you care about plants and ecosystems, but you need a clear plan for further study or specialization to build a stable career.",
+  "career_outlook": {
+    "india": "Demand for specialized botanists exists in agriculture (crop research, seed technology), forestry (Indian Forest Service), environmental consulting (biodiversity assessment, ecological restoration), and the growing herbal/nutraceutical industry. However, these roles typically require M.Sc. or PhD. Government exams (IFoS, state agriculture officer, UPSC) are a common aspiration but have extreme competition and low success rates. The pharmaceutical and biotechnology industries hire botanists for quality control, extraction, and research, but these jobs are concentrated in specific regions (Maharashtra, Gujarat, Karnataka).",
+    "abroad": "A B.Sc. alone has limited international value. M.Sc. or PhD in plant sciences, botany, or forestry opens opportunities in agricultural research, environmental consulting, and conservation organizations globally. Countries like Canada, Australia, the Netherlands, and Germany have strong agricultural and environmental research sectors that recruit internationally."
+  },
+  "salary": {
+    "entry": "₹2 - ₹3.5 LPA (lab technician, nursery assistant, field survey roles with B.Sc. alone)",
+    "mid": "₹4 - ₹8 LPA (M.Sc. graduate, agricultural officer, research associate)",
+    "senior": "₹8 - ₹15 LPA (PhD holder, senior scientist, forestry officer, professor)"
+  },
+  "why_people_love_it": [
+    "The subject connects you to the most essential systems on Earth — agriculture, ecosystems, forestry, and the plants that form the basis of medicine, food, and climate regulation. The work feels meaningful in a way that many corporate jobs don't.",
+    "Fieldwork takes you outside — plant collection, ecological surveys, agricultural extension work. If you prefer being in nature over sitting in a cubicle, Botany offers a career that keeps you outdoors.",
+    "The range of specializations is surprisingly broad — you can work in agriculture, forestry, pharmaceuticals, environmental consulting, biotechnology, or academia, all from the same foundational degree.",
+    "India's growing focus on climate resilience, sustainable agriculture, and herbal medicine means demand for skilled plant scientists is likely to increase — the field has genuine long-term relevance."
+  ],
+  "what_nobody_tells_you": [
+    "Botany is one of the more employable life sciences in India IF you specialize — agriculture, forestry, environmental consulting, and herbal pharma all need plant scientists. But the B.Sc. alone doesn't qualify you for most of these; you need M.Sc. or specialized certifications to be competitive.",
+    "The Indian Forest Service (IFoS) is a common aspirational goal for Botany graduates, but the success rate is below 1%. Many students treat it as a long shot and end up with no backup plan when they don't clear it — have a Plan B from day one.",
+    "Fieldwork is a significant and non-negotiable part of the degree — plant collection, identification, ecological surveys, soil sampling, and agricultural extension work. If you prefer lab-based or desk work, the outdoor component will surprise you.",
+    "The herbal, nutraceutical, and plant-based pharmaceutical industry in India is growing steadily, creating demand for botanists in quality control, extraction, and R&D — but these jobs are concentrated in specific regions (Maharashtra, Gujarat, Karnataka) and often require relocation.",
+    "Compared to Zoology, Botany faces less of the 'failed NEET' stigma but more of the 'what will you do with that?' confusion from family and peers. The career paths are less visible to the average person, which creates its own kind of pressure to constantly justify your choice."
+  ],
+  "who_thrives": [
+    "Students who are genuinely curious about plants and ecosystems — the kind of person who learns plant names for fun, enjoys identifying species on a walk, and finds satisfaction in understanding how the natural world works at a fundamental level.",
+    "People comfortable with a slow-building career — the research track (M.Sc. → PhD) takes years, and even government paths require competitive exams. Patience and long-term thinking are essential.",
+    "Those who enjoy fieldwork and being outdoors — plant collection, ecological surveys, and agricultural extension work are core activities. If being outside in varied weather conditions sounds good rather than uncomfortable, this is a strong fit.",
+    "Students who plan early and specialize deliberately — using the B.Sc. years to build toward a specific goal (agriculture, forestry, pharma, environmental consulting) rather than completing a general degree and then figuring out what to do."
+  ],
+  "who_regrets_it": [
+    "Students who chose Botany assuming it would easily lead to a government job (forestry, agriculture officer) without understanding the extreme competition and years of exam preparation required — and had no backup plan for when that didn't work out.",
+    "Those who dislike fieldwork, outdoor conditions, and physical work — plant collection, soil sampling, and ecological surveys are core to the degree, avoiding them limits both your learning and your career options.",
+    "People who expected a clear corporate or industry career path immediately after graduation — Botany's most direct routes (agriculture, forestry, environmental) grow slowly and almost always require postgraduate qualifications.",
+    "Students who drifted into Botany because 'biology was my favorite subject in school' without researching what professional botanists actually do day-to-day — the gap between school biology and professional plant science is enormous.",
+    "Anyone who chose this path for the wrong reasons (parental pressure, avoiding 'harder' degrees, as a time-pass) without developing genuine interest — the degree requires patience, observation, and curiosity, and without those, three years feels very long."
+  ],
+  "before_you_commit": [
+    "Research the UPSC IFoS (Indian Forest Service) syllabus and previous years' cutoffs. If forestry is your goal, understand the competition level and have a concrete backup plan — don't stake everything on a single exam.",
+    "Spend a day doing fieldwork — plant identification, soil sampling, or an ecological survey. If the outdoor, hands-on nature of plant science feels uncomfortable rather than interesting, the degree will be a mismatch.",
+    "Talk to a B.Sc. Botany graduate who is 3-4 years out without M.Sc. — ask about their role, salary, and whether they'd choose the same path. Then talk to someone with M.Sc. and PhD. The contrast is the most useful information you'll get.",
+    "Research the different specializations available at the M.Sc. level (plant biotechnology, forestry, agriculture, environmental science, herbal pharma) and see which ones genuinely interest you. Your B.Sc. college choice affects your M.Sc. options.",
+    "Visit a herbarium, a plant research lab, or an agricultural research station before enrolling. See what professional botanists actually do day-to-day, not what you imagine they do."
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "Did B.Sc. Botany because I've always been fascinated by plants and ecosystems. Went on to M.Sc. in Plant Biotechnology, now working as a research associate at an agri-tech startup working on crop resilience. The pay isn't spectacular at ₹5.8 LPA, but the work feels meaningful — helping develop drought-resistant varieties for small farmers. Wouldn't have gotten here without the M.Sc., but the B.Sc. foundation was essential.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "B.Sc. Botany from a regular college. Loved the subject but realized by third year that research pays poorly and academia is a long grind. Did an MBA in operations, now working in supply chain at an FMCG company at ₹11 LPA. The Botany degree itself is irrelevant to my job, but I don't regret it — three years studying something I genuinely enjoyed was worth it. Just wish someone had told me earlier that I'd need an MBA to earn well.",
+      "url": "https://reddit.com/r/Indian_Academia"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Chose Botany because my uncle said there are 'lots of government jobs' in forestry and agriculture. Graduated, applied for IFoS, didn't clear it. Applied for state agriculture officer exams, didn't clear those either. Three years after graduation, I'm working at a nursery for ₹2.2 LPA with no clear path forward. Should have either committed seriously to UPSC prep from day one or picked a degree with more direct industry connections.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+  "related_careers": [
+    "zoology",
+    "pharmacy"
+  ]
 }
+
 
 ]
