@@ -41,7 +41,9 @@ const CARD_METRICS = {
   paramedical_physiotherapy: { duration: '5 yrs', stress: 3, competition: 2 },
   paramedical_nursing: { duration: '4 yrs', stress: 4, competition: 2 },
   radiology_tech: { duration: '3-4 yrs', stress: 2, competition: 2 },
-  bca_mca: { duration: '3+2 yrs', stress: 3, competition: 4 }
+  bca_mca: { duration: '3+2 yrs', stress: 3, competition: 4 },
+  bba: { duration: '3 yrs', stress: 2, competition: 3 },
+  bcom: { duration: '3 yrs', stress: 2, competition: 3 },
 };
 
 const DETAIL_METRICS = {
@@ -118,7 +120,21 @@ const DETAIL_METRICS = {
     misconception: 'BCA has less math than B.Tech, which makes it a more practical, coding-focused alternative to engineering.',
     regret: 'I thought I could make BCA alone work, spent years stuck in low-growth roles that B.Tech graduates weren\'t even considered for, and lost time I can\'t get back.',
     praise: 'The MCA completely reset my career trajectory — the same companies that wouldn\'t look at my BCA resume started calling me for interviews.' },
-};
+  bba: { salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 2, abroad_prospects: 2,
+    ideal_personality: 'Networker who enjoys business concepts, comfortable with sales/operations as entry point, and sees BBA as MBA preparation',
+    internship: 'Critical for employability — graduates with multiple internships land significantly better roles than those without any',
+    progression: ['Management Trainee / Sales Associate', 'Assistant Manager / Team Lead', 'Manager / Department Head', 'Senior Manager / Director (with MBA)'],
+    misconception: 'BBA is a "management degree" while B.Com is "just accounting" — so BBA is the better, more prestigious choice for a corporate career.',
+    regret: 'I paid premium fees at a private college for a degree that didn\'t open any doors my B.Com classmates didn\'t already have — I should have saved the money and gone for professional certifications instead.',
+    praise: 'A BBA from a good program with solid internships set me up for an MBA far better than any other undergraduate degree could have.' },
+  bcom: { salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 3, abroad_prospects: 2,
+    ideal_personality: 'Detail-oriented and patient with numbers, comfortable with process-driven work, sees the degree as a foundation for further certification',
+    internship: 'Varies by college — top programs have structured internships; most tier-3 colleges offer none, making self-sourced internships critical',
+    progression: ['Accounts Assistant / Audit Trainee', 'Accountant / Financial Analyst', 'Senior Accountant / Team Lead', 'Manager / CA-CFA-qualified Specialist'],
+    misconception: 'B.Com is only useful if you plan to become a CA — otherwise it\'s a dead-end degree with no real career value.',
+    regret: 'I assumed the degree alone would lead to a corporate career, but without certifications or skills I\'ve been stuck in the same clerical role for years while watching CA-qualified peers advance.',
+    praise: 'A B.Com combined with the right certification gives you a career foundation as strong as any professional degree — at a fraction of the cost and time.' },
+  };
 
 function getThemeIcon() {
   return document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
