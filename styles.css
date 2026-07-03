@@ -1,8 +1,8 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #EDE8DD;
-  --surface: #FCF9F5;
+  --bg: #E8E2D6;
+  --surface: #FAF7F2;
   --ink: #2B2420;
   --ink-soft: rgba(43,36,32,0.75);
   --ink-faint: rgba(43,36,32,0.52);
