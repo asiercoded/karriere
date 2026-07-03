@@ -40,7 +40,8 @@ const CARD_METRICS = {
   pharmacy: { duration: '4 yrs', stress: 2, competition: 2 },
   paramedical_physiotherapy: { duration: '5 yrs', stress: 3, competition: 2 },
   paramedical_nursing: { duration: '4 yrs', stress: 4, competition: 2 },
-  radiology_tech: { duration: '3-4 yrs', stress: 2, competition: 2 }
+  radiology_tech: { duration: '3-4 yrs', stress: 2, competition: 2 },
+  bca_mca: { duration: '3+2 yrs', stress: 3, competition: 4 }
 };
 
 const DETAIL_METRICS = {
@@ -109,7 +110,14 @@ const DETAIL_METRICS = {
     internship: 'Hospital-based practical training throughout the degree',
     progression: ['Trainee Technologist', 'Radiology Technologist', 'Specialized Technologist (MRI/CT/Sonography)', 'Imaging Center Manager'],
     misconception: 'Radiology technologists read and diagnose scans.', regret: "I didn't realize I'd be treated as a machine operator, not a medical professional. The degree is called 'Radiology' but you're a technician to everyone around you.",
-    praise: 'High demand and comparatively good pay for a paramedical path, without an extremely long education.' }
+    praise: 'High demand and comparatively good pay for a paramedical path, without an extremely long education.' },
+  bca_mca: { salary_potential: 4, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 3,
+    ideal_personality: 'Self-learner who treats BCA as a stepping stone and builds coding skills independently',
+    internship: 'Varies by college — top programs have industry internships; many tier-3 colleges have none at all',
+    progression: ['Junior Developer', 'Software Engineer', 'Senior Engineer / Tech Lead', 'Engineering Manager / Architect'],
+    misconception: 'BCA has less math than B.Tech, which makes it a more practical, coding-focused alternative to engineering.',
+    regret: 'I thought I could make BCA alone work, spent years stuck in low-growth roles that B.Tech graduates weren\'t even considered for, and lost time I can\'t get back.',
+    praise: 'The MCA completely reset my career trajectory — the same companies that wouldn\'t look at my BCA resume started calling me for interviews.' },
 };
 
 function getThemeIcon() {
