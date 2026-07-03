@@ -102,13 +102,13 @@ const DETAIL_METRICS = {
     ideal_personality: 'Empathetic, resilient, comfortable with shift work',
     internship: 'Extensive clinical postings throughout the degree',
     progression: ['Staff Nurse (India or abroad)', 'Senior / Charge Nurse', 'Nurse Specialist / Ward Manager', 'Nurse Practitioner / Matron (esp. abroad)'],
-    misconception: 'Nursing pays poorly no matter what.', regret: "I didn't plan for licensing exams abroad early enough — it delayed my income by years.",
+    misconception: 'There\'s little room for career growth in nursing.', regret: "I didn't plan for licensing exams abroad early enough — it delayed my income by years.",
     praise: 'One of the most globally portable healthcare careers there is.' },
   radiology_tech: { salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 4, abroad_prospects: 3,
     ideal_personality: 'Technically minded, precise, comfortable with equipment and shift schedules',
     internship: 'Hospital-based practical training throughout the degree',
     progression: ['Trainee Technologist', 'Radiology Technologist', 'Specialized Technologist (MRI/CT/Sonography)', 'Imaging Center Manager'],
-    misconception: 'Radiology technologists read and diagnose scans.', regret: "I didn't realize interpreting scans is the radiologist's job, not mine.",
+    misconception: 'Radiology technologists read and diagnose scans.', regret: "I didn't realize I'd be treated as a machine operator, not a medical professional. The degree is called 'Radiology' but you're a technician to everyone around you.",
     praise: 'High demand and comparatively good pay for a paramedical path, without an extremely long education.' }
 };
 

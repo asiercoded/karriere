@@ -653,119 +653,143 @@
     "name": "Nursing (B.Sc Nursing)",
     "category": "paramedical",
     "tagline": "Globally in-demand, India-underpaid. The international route changes everything.",
-    "overview": "B.Sc Nursing is a 4-year degree leading to one of the most globally portable healthcare careers. Indian nurses are in massive demand abroad (UK, USA, Gulf, Australia, Canada), often earning multiples of what they would in India.",
+    "overview": "B.Sc Nursing is a 4-year degree in patient care, pharmacology, and clinical practice, leading to genuinely different specializations — ICU and critical care, OT, pediatrics, oncology, psychiatric nursing, community health, military nursing, and teaching, not just general ward duty. Nurses make independent clinical judgments constantly; 'just following doctors' orders' badly undersells the job. Indian nurses are also in massive global demand across the UK, USA, Gulf, Australia, and Canada, often earning multiples of Indian pay.",
+    "career_outlook": {
+    "india": "Stable demand but underpaid relative to skill required, especially in the private sector. Government roles pay better but are limited and competitive.",
+    "abroad": "Extremely strong — Indian nurses are actively recruited by UK NHS, Gulf hospitals, Australian and Canadian healthcare systems, usually after clearing OET/IELTS or NCLEX plus local licensing."
+  },
+  "salary": {
+    "entry": "₹15,000-₹25,000/month (India, private hospital) vs ₹1.5-₹3 lakh/month (Gulf countries, entry level)",
+    "mid": "₹30,000-₹60,000/month (India, government or senior private) vs ₹2.5-₹5 lakh/month (UK, Gulf, after a few years)",
+    "senior": "₹50,000-₹1.5 lakh/month (India, senior nursing roles) vs ₹5-₹10 lakh/month equivalent (USA, UK, after specialization and years abroad)"
+  },
+  "why_people_love_it": [
+    "One of the clearest international career pathways from India — actively recruited by UK, Gulf, Australia, and Canada",
+    "Genuine job security — the global nursing shortage isn't disappearing anytime soon",
+    "Direct, meaningful patient care — often more sustained contact with patients than doctors have",
+    "Multiple specialization paths — ICU, pediatrics, oncology, OT — keeping the career from going stale"
+  ],  
+
     "what_nobody_tells_you": [
-      "Domestic nursing salaries in India are disproportionately low compared to the workload, especially in private hospitals — often ₹15,000-₹25,000/month for years.",
-      "The real financial opportunity for many Indian nurses is moving abroad. Countries like UK, Germany, and Gulf nations have structured pathways (OET/IELTS plus licensing) for Indian nurses.",
-      "Government hospital nursing jobs are far better paid and more stable than private hospital roles, but extremely competitive to get."
-    ],
-    "day_in_the_life": {
-      "student": "Classroom learning plus extensive hospital clinical postings, learning patient care, medication administration, and emergency response.",
-      "professional": "12-hour shifts (often rotating including nights), direct patient care, medication administration, coordination with doctors, patient family communication. Physically and emotionally intensive."
-    },
-    "salary": {
-      "entry": "₹15,000 - ₹25,000/month (India, private hospital) vs ₹1.5 - ₹3 lakh/month (Gulf countries, entry level)",
-      "mid": "₹30,000 - ₹60,000/month (India, government or senior private) vs ₹2.5 - ₹5 lakh/month (UK, Gulf, after a few years)",
-      "senior": "₹50,000 - ₹1.5 lakh/month (India, senior nursing roles) vs ₹5 - ₹10 lakh/month equivalent (USA, UK, after specialization and years abroad)"
-    },
-    "scope": {
-      "india": "Stable demand but underpaid relative to skill required, especially in private sector. Government roles are better but limited in number.",
-      "abroad": "Extremely strong. Indian nurses are actively recruited by UK NHS, Gulf hospitals, Australian and Canadian healthcare systems."
-    },
+    "Domestic salaries are disproportionately low for the responsibility involved — often ₹15,000-₹25,000/month for years, especially in private hospitals.",
+    "The real financial opportunity for most Indian nurses is moving abroad — UK, Germany, and Gulf nations have structured pathways (OET/IELTS plus licensing) built specifically for Indian-trained nurses.",
+    "Government hospital jobs pay far better and are more stable than private roles, but are extremely competitive to land.",
+    "Growth exists, but it's not automatic — moving from staff nurse to specialist, ward manager, or nurse practitioner usually needs an M.Sc Nursing or equivalent higher study.",
+    "It's not a 'women's profession' by any real requirement — male nurses are common internationally and increasingly in India, especially in ICU, OT, and psychiatric nursing."
+  ],
+    
     "who_thrives": [
       "People with genuine empathy and patience for patient care",
       "Those willing to pursue licensing exams (OET, NCLEX) to work abroad",
-      "People comfortable with physically and emotionally demanding shift work"
+      "People comfortable with physically and emotionally demanding shift work",
+      "Interested in a specific specialization (ICU, OT, pediatrics) rather than general ward work only"
     ],
     "who_regrets_it": [
-      "Students expecting decent pay in India without planning to go abroad — domestic nursing salaries don't match the workload.",
+      "Students expecting decent pay in India without planning to go abroad",
       "Anyone uncomfortable with shift work, night duties, and the emotional strain of intensive patient care.",
-      "Those who didn't begin preparing for OET or NCLEX early enough, delaying their international transition by years.",
-      "People who chose it expecting stable 9-to-5 work — nursing runs on rotation schedules and on-call demands.",
+      "Those who didn't begin preparing for OET or NCLEX early enough, delaying their international move by years.",
+      "People who wanted 9-to-5 work — nursing runs on rotation schedules and on-call demands.",
       "Anyone who underestimated the physical and emotional toll of working in high-acuity wards or critical care."
     ],
+    "before_you_commit": [
+    "Shadow a nurse during a hospital shift if you can — see the actual pace and pressure firsthand",
+    "Speak to nurses in both government and private hospitals — the day-to-day and pay differ a lot",
+    "Research night shifts and rotating schedules honestly — this isn't optional, it's the job",
+    "Look into international licensing requirements early if working abroad interests you — OET/NCLEX prep takes time",
+    "Be honest with yourself about direct patient care, emergencies, and emotionally difficult situations — this is the core of the job, not an occasional part of it"
+  ],
     "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "Nursing in India pays poorly for the responsibility involved.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "Quora",
-        "quote": "If you're doing B.Sc Nursing in India, plan for OET or IELTS from day one if you want financial stability.",
-        "url": "https://quora.com"
-      }
-    ],
+    {
+      "source": "Reddit r/india",
+      "quote": "Moved to a Gulf hospital after 2 years in India, cleared OET on my second attempt. Now earning close to ₹4 lakh/month tax-free, specialized in ICU. The prep was brutal but the switch changed my entire financial trajectory.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "Government hospital nurse in India, 6 years in. Pay isn't Gulf-level but it's stable, I have real job security, and my hours are more predictable than my private-hospital friends'. Didn't go abroad — chose to stay near family instead.",
+      "url": "https://quora.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Private hospital nurse for 4 years, still at ₹22k/month. Kept meaning to start OET prep 'next year' and never did. The pay gap between me and my batchmates who left is now enormous, and starting the licensing process feels harder the longer I wait.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
     "related_careers": [
       "paramedical_physiotherapy",
       "mbbs",
       "bds"
-    ],
-    "why_people_love_it": [
-      "One of the clearest international career pathways from India — Indian nurses are actively recruited by UK, Gulf, Australia, and Canada",
-      "Genuine job security — nursing shortage is a global problem, demand will not dry up in your lifetime",
-      "Direct, meaningful patient care — nurses often have more sustained contact with patients than doctors do",
-      "Multiple specialization paths — ICU, pediatrics, oncology, operation theatre — keeping the career from going stale"
     ]
   },
   {
     "id": "radiology_tech",
     "name": "Radiology / Medical Imaging (B.Sc)",
     "category": "paramedical",
-    "tagline": "High-tech, high-demand, and quietly one of the best-paying paramedical fields.",
-    "overview": "B.Sc in Radiology / Medical Imaging Technology is a 3-4 year degree training students to operate X-ray, CT, MRI, and ultrasound equipment, and assist radiologists in diagnostic imaging. It's less commonly chosen than nursing or physiotherapy but tends to have better pay and strong demand due to the growing reliance on diagnostic imaging in healthcare.",
-    "what_nobody_tells_you": [
-      "Radiology technologists are in high demand because diagnostic imaging (CT, MRI, ultrasound) has grown massively, but the number of trained technologists hasn't kept pace.",
-      "Private diagnostic centers and hospitals often pay better than government roles for this specific field, which is unusual compared to most paramedical careers.",
-      "Specializing further (e.g., in MRI or CT specifically, or becoming a sonographer) significantly increases both pay and job security."
-    ],
-    "day_in_the_life": {
-      "student": "Physics-heavy coursework (understanding imaging technology), anatomy, hands-on training operating imaging equipment under supervision at hospitals.",
-      "professional": "Operating CT/MRI/X-ray/ultrasound machines, positioning patients correctly, ensuring image quality, working closely with radiologists who interpret the images. Shift-based work, sometimes including emergency/on-call imaging."
-    },
-    "salary": {
-      "entry": "₹20,000 - ₹35,000/month",
-      "mid": "₹40,000 - ₹80,000/month (5 years, especially with MRI/CT specialization)",
-      "senior": "₹90,000 - ₹2.5 lakh/month (senior technologist, imaging center manager, or specialized sonographer roles)"
-    },
-    "scope": {
-      "india": "Strong and growing — increased diagnostic imaging usage across hospitals and standalone diagnostic centers in both urban and semi-urban areas.",
-      "abroad": "Good scope in Gulf countries, UK, Australia — radiology technologists/radiographers are recognized and in-demand roles, though licensing requirements vary by country."
-    },
-    "who_thrives": [
-      "People interested in medical technology and imaging science",
-      "Those comfortable with precise, technical, equipment-based work",
-      "People who want a paramedical career with comparatively good pay without an extremely long education path"
+    "tagline": "You operate the imaging. The radiologist interprets it. Two essential roles—often confused.",
+    "overview": "B.Sc Radiology / Medical Imaging Technology is a 3-4 year degree training you to operate X-ray, CT, MRI, ultrasound, mammography, and nuclear medicine equipment — not to diagnose. That's the radiologist's job, a separate path requiring MBBS plus an MD. Technologists work across government and private hospitals, standalone diagnostic centers, cath labs, and trauma/emergency units, combining healthcare with hands-on technical skill.",
+    "career_outlook": {
+    "india": "Strong and growing — diagnostic imaging use is rising across hospitals and standalone centers, both urban and semi-urban.",
+    "abroad": "Good scope in Gulf countries, UK, and Australia — radiographers are recognized, in-demand roles, though licensing requirements vary by country."
+  },
+  "salary": {
+    "entry": "₹20,000-₹35,000/month",
+    "mid": "₹40,000-₹80,000/month (5 years, especially with MRI/CT specialization)",
+    "senior": "₹90,000-₹2.5 lakh/month (senior technologist, imaging center manager, or specialized sonographer roles)"
+  },
+  "why_people_love_it": [
+    "High-tech environment — you operate some of the most advanced medical equipment there is",
+    "Comparatively good pay for the education investment, especially with MRI/CT specialization",
+    "Strong and growing demand as imaging becomes standard even in tier-2 cities",
+    "Clear international pathway, particularly to Gulf countries, UK, and Australia"
+  ], 
+  "what_nobody_tells_you": [
+    "The job isn't 'pressing buttons' — positioning patients correctly, adjusting settings, and catching image quality issues take real skill. A bad scan means a repeat scan, or a missed diagnosis.",
+    "Demand is high because diagnostic imaging has grown fast, but trained technologist numbers haven't kept pace.",
+    "Private diagnostic centers and hospitals often pay better than government roles here — unusual for a paramedical field.",
+    "Radiation exposure is real but tightly controlled through lead shielding, dosimeters, and strict protocol — technologists who follow procedure aren't at meaningfully higher risk than other hospital staff.",
+    "You'll spend more time with patients than you probably expect—positioning them correctly, explaining scans, and helping anxious patients stay calm before the procedure."
+  ],
+   "who_thrives": [
+    "People interested in medical technology and imaging science, not diagnosis itself",
+    "Those comfortable with precise, technical, equipment-based work",
+    "People who want a good paramedical pay without an extremely long education path",
+    "Fine with shift-based, sometimes 24/7 schedules, including trauma and emergency imaging"
     ],
     "who_regrets_it": [
-      "Students who chose it expecting to read and diagnose scans — that is the radiologist's role, not the technologist's.",
-      "Those who didn't specialize in MRI, CT, or sonography and found their earning potential plateau early.",
+      "Students who chose it expecting to read and diagnose scans — that's the radiologist's job, a separate path requiring MBBS plus MD",
+      "Those who didn't specialize in MRI, CT, or sonography and find their earning potential plateau early.",
       "Anyone uncomfortable with shift-based schedules, including nights and weekends — imaging services run 24/7.",
-      "People who underestimated the long-term radiation exposure risk if safety protocols aren't consistently followed.",
+      "People who are anxious about radiation exposure despite understanding the safety protocols — the discomfort doesn't go away just because the risk is controlled",
       "Those who expected the job to be more clinically dynamic — much of the work is technical and procedural rather than diagnostic."
     ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/india",
-        "quote": "Underrated field.",
-        "url": "https://reddit.com/r/india"
-      },
-      {
-        "source": "Quora",
-        "quote": "Diagnostic centers are growing everywhere, even in tier-2 cities.",
-        "url": "https://quora.com"
-      }
-    ],
-    "related_careers": [
-      "mbbs",
-      "paramedical_nursing",
-      "paramedical_physiotherapy"
-    ],
-    "why_people_love_it": [
-      "High-tech work environment — you operate some of the most advanced medical equipment in existence, MRI and CT machines are genuinely impressive technology",
-      "Less patient-emotional-load than nursing or physiotherapy — the work is precise and technical rather than emotionally intensive",
-      "Strong and growing demand as diagnostic imaging becomes standard across even tier-2 Indian cities",
-      "Comparatively good pay for the education investment, especially with MRI/CT specialization"
-    ]
-  }
+     "before_you_commit": [
+    "Visit a diagnostic imaging center and observe the actual workflow, not just the equipment",
+    "Talk to a working technologist about shift duties and daily responsibilities",
+    "Learn the real difference between X-ray, CT, MRI, ultrasound, and nuclear medicine before deciding",
+    "Research the placement records of the colleges you're considering",
+    "Be honest about whether you enjoy technology, medical equipment, and following precise protocols — that's the actual daily work"
+  ],
+  "real_experiences": [
+    {
+      "source": "Reddit r/india",
+      "quote": "Did B.Sc Radiology, got certified in MRI after a diploma. Now at a private diagnostic chain earning more than most of my BDS friends, with far less education time invested. Genuinely didn't expect that going in.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "Government hospital technologist, general X-ray and CT, no specialization yet. Pay is decent, not exciting, but the job security and pension track are real. Thinking about an MRI certification to boost income, just haven't made time for it.",
+      "url": "https://quora.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Took this thinking I'd be reading scans like on medical shows. Realized in year one that's the radiologist's job — I just produce the images. Still a stable career, but wish someone had explained the actual role before I picked it.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+  "related_careers": [
+    "mbbs",
+    "paramedical_nursing",
+    "paramedical_physiotherapy"
+  ]
+}
 ]
