@@ -211,8 +211,12 @@ const ALIASES = {
 };
 
 function getThemeIcon() {
-  return document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  return isDark
+    ? '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+    : '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 }
+
 
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
@@ -293,7 +297,8 @@ function getFilteredCareers() {
       c.tagline?.toLowerCase().includes(q) ||
       c.overview?.toLowerCase().includes(q) ||
       (c.what_nobody_tells_you || []).some(p => p?.toLowerCase().includes(q)) ||
-      c.salary?.entry?.toLowerCase().includes(q)
+      c.salary?.entry?.toLowerCase().includes(q) ||
+      (ALIASES[c.id] || []).some(a => a.toLowerCase().includes(q))
     );
   }
   return list;
@@ -305,8 +310,8 @@ function renderListView() {
   const filtered = getFilteredCareers();
   const totalVoices = careers.reduce((sum, c) => sum + (c.real_experiences ? c.real_experiences.length : 0), 0);
 
-  const filterButtons = `<button class="filter-btn ${activeCategory === 'all' ? 'active' : ''}" data-cat="all">All</button>` +
-    cats.map(cat => `<button class="filter-btn ${activeCategory === cat ? 'active' : ''}" data-cat="${cat}">${CATEGORY_LABELS[cat] || cat}</button>`).join('');
+  const filterButtons = `<button class="filter-btn ${activeCategory === 'all' ? 'active' : ''}" data-cat="all" aria-pressed="${activeCategory === 'all'}">All</button>` +
+    cats.map(cat => `<button class="filter-btn ${activeCategory === cat ? 'active' : ''}" data-cat="${cat}" aria-pressed="${activeCategory === cat}">${CATEGORY_LABELS[cat] || cat}</button>`).join('');
 
   const listHtml = filtered.length ? filtered.map(c => {
     const m = CARD_METRICS[c.id] || {};
@@ -356,7 +361,7 @@ function renderListView() {
             <div class="hero-search-row">
               <div class="hero-search-field">
                 <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" class="hero-search" id="hero-search" placeholder="Search a career — try 'law', 'design', or 'stress-free'" value="${searchQuery}">
+                <input type="text" class="hero-search" id="hero-search" placeholder="Search a career — try 'law', 'design', or 'stress-free'" value="${searchQuery}"aria-label="Search careers">
               </div>
             </div>
             <div class="hero-hint">Or browse by stream — <button data-nav-scroll="list-section">jump to the full list ↓</button></div>

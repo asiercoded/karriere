@@ -1139,3 +1139,6 @@ footer {
 .compare-slot-empty { font-size: 14px; color: var(--ink-faint); }
 .compare-slot-remove { background: none; border: none; color: var(--violet); cursor: pointer; font-size: 14px; padding: 0; line-height: 1; }
 .compare-option-selected { opacity: 0.4; pointer-events: none; }
+
+/* ── LOADING SKELETON (theme-aware) ── */
+.skeleton-block { background: var(--rule); border-radius: 6px; }
