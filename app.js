@@ -3,8 +3,14 @@ let activeCategory = 'all';
 let searchQuery = '';
 
 const CATEGORY_LABELS = {
-  medical: 'Medical', engineering: 'Engineering', commerce: 'Commerce',
-  law: 'Law', design: 'Design', management: 'Management', paramedical: 'Paramedical',   life_sciences: 'Life Sciences',
+  medical: 'Medical',
+  paramedical: 'Paramedical',
+  life_sciences: 'Life Sciences',
+  engineering: 'Engineering',
+  commerce: 'Commerce',
+  law: 'Law',
+  design: 'Design',
+  management: 'Management'
 };
 
 const CATEGORY_ICONS = {
@@ -153,6 +159,24 @@ const DETAIL_METRICS = {
     regret: 'I chose Botany because of the promise of government jobs, but the competition was far higher than I expected and I ended up stuck with no backup plan.',
     praise: 'A B.Sc. in Botany combined with a targeted M.Sc. in plant biotechnology, forestry, or agriculture opens doors to careers that genuinely matter — feeding a growing population and protecting ecosystems.' },
   };
+const ALIASES = {
+  mbbs: ['doctor', 'medicine', 'medical'],
+  bds: ['dentist', 'dental', 'dentistry'],
+  pharmacy: ['pharmacist', 'bpharm', 'pharma'],
+  paramedical_nursing: ['nurse', 'nursing'],
+  paramedical_physiotherapy: ['physio', 'physiotherapist', 'bpt', 'physical therapy'],
+  radiology_tech: ['xray', 'x-ray', 'imaging', 'radiographer'],
+  zoology: ['animal biology', 'wildlife'],
+  botany: ['plant biology', 'plant science'],
+  cs_engineering: ['cs', 'cse', 'computer science', 'software engineering', 'btech cs'],
+  bca_mca: ['bca', 'mca', 'computer applications'],
+  ca: ['chartered accountant', 'accounting'],
+  bcom: ['commerce', 'bachelor of commerce'],
+  bba: ['business administration', 'management'],
+  law: ['lawyer', 'legal', 'llb'],
+  design: ['ui ux', 'graphic design', 'nid', 'nift', 'fashion'],
+  mba: ['master of business administration', 'management']
+};
 
 function getThemeIcon() {
   return document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
@@ -308,6 +332,8 @@ function renderListView() {
         </div>
       </div>
       <div class="filter-row" id="list-section">${filterButtons}</div>
+          <button class="compare-cta" data-nav="compare=,">Compare Careers</button>
+
       <div class="results-count">Showing ${filtered.length} of ${careers.length} careers</div>
       <div class="career-list">${listHtml}</div>
       <footer>
@@ -501,6 +527,18 @@ const cm = CARD_METRICS[career.id] || {};
         <div class="section-label">Related paths</div>
         <div class="related-row">${relatedHtml}</div>
       </div>` : ''}
+            <div class="section">
+        <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
+      </div>
+      ${career.related_careers && career.related_careers.length ? `
+      <div class="section">
+        <div class="section-label">Students often compare</div>
+        <div class="related-row">${career.related_careers.map(rid => {
+          const rc = careers.find(c => c.id === rid);
+          return rc ? `<button class="related-pill" data-nav="compare=${career.id},${rc.id}">${rc.name}</button>` : '';
+        }).join('')}</div>
+      </div>` : ''}
+
     </div>
   `;
 }
@@ -527,6 +565,35 @@ function attachListeners() {
       const current = document.documentElement.getAttribute('data-theme');
       setTheme(current === 'dark' ? 'light' : 'dark');
     });
+      // Compare search filtering
+  const compareSearch = document.getElementById('compareSearch');
+  if (compareSearch) {
+    compareSearch.addEventListener('input', () => {
+      const q = compareSearch.value.trim().toLowerCase();
+      document.querySelectorAll('.compare-option').forEach(opt => {
+        const name = opt.querySelector('.compare-option-name')?.textContent.toLowerCase() || '';
+        const tagline = opt.querySelector('.compare-option-tagline')?.textContent.toLowerCase() || '';
+        const id = opt.dataset.compareId || '';
+        const aliases = ALIASES[id] || [];
+        const match = name.includes(q) || tagline.includes(q) || aliases.some(a => a.includes(q));
+        opt.style.display = match ? '' : 'none';
+      });
+    });
+  }
+
+  // Compare option click
+  document.querySelectorAll('.compare-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      const selectedId = opt.dataset.compareId;
+      const preselected = document.getElementById('compareA')?.value;
+      if (preselected) {
+        navigate(`compare=${preselected},${selectedId}`);
+      } else {
+        navigate(`compare=${selectedId},`);
+      }
+    });
+  });
+
   }
 
   const searchInput = document.getElementById('hero-search');
@@ -559,7 +626,10 @@ let savedScrollY = 0;
 async function render(animate = true) {
   await loadCareers();
   const view = document.getElementById('view');
-  const id = window.location.hash.replace('#', '');
+  const hash = window.location.hash.replace('#', '');
+const isCompare = hash.startsWith('compare=');
+const id = isCompare ? '' : hash;
+
 
   if (animate) {
     view.classList.add('leaving');
@@ -569,7 +639,19 @@ async function render(animate = true) {
   if (!id && window.prevScrollY) {
     // Restoring from detail back to list
   }
+  if (isCompare) {
+  const ids = hash.replace('compare=', '').split(',');
+  if (ids.length === 2 && ids[0] && ids[1]) {
+    view.innerHTML = renderCompareView(ids[0], ids[1]);
+  } else if (ids.length >= 1 && ids[0]) {
+    view.innerHTML = renderComparePicker(ids[0]);
+  } else {
+    view.innerHTML = renderComparePicker(null);
+  }
+} else {
   view.innerHTML = id ? renderDetailView(id) : renderListView();
+}
+
   view.classList.remove('leaving');
     view.classList.remove('leaving');
 
@@ -592,6 +674,142 @@ async function render(animate = true) {
     // preserve focus/caret only when re-rendering from typing; no-op on hash nav
   }
 }
+function renderComparePicker(preselectedId) {
+  const selected = preselectedId && careers.find(c => c.id === preselectedId);
+  const list = careers.map(c => `
+    <button class="compare-option" data-compare-id="${c.id}">
+      <span class="compare-option-cat">${CATEGORY_LABELS[c.category] || c.category}</span>
+      <span class="compare-option-name">${c.name}</span>
+      <span class="compare-option-tagline">${c.tagline}</span>
+    </button>
+  `).join('');
+
+  return `
+    <div class="wrap compare-picker-wrap">
+      <button class="back-link" data-nav="">← Back</button>
+      <h1 class="compare-picker-title">${selected ? `Compare ${selected.name} with...` : 'Compare Careers'}</h1>
+      <div class="compare-search-field">
+        <input type="text" class="compare-search" id="compareSearch" placeholder="Search a career..." autofocus>
+      </div>
+      ${selected ? `<input type="hidden" id="compareA" value="${selected.id}">` : `
+      <div class="compare-two">
+        <div class="compare-col">
+          <div class="compare-col-label">Career 1</div>
+          <input type="text" class="compare-search compare-search-half" id="compareSearchA" placeholder="Search..." autofocus>
+          <div class="compare-options" id="compareOptionsA"></div>
+        </div>
+        <div class="compare-vs">vs</div>
+        <div class="compare-col">
+          <div class="compare-col-label">Career 2</div>
+          <input type="text" class="compare-search compare-search-half" id="compareSearchB" placeholder="Search...">
+          <div class="compare-options" id="compareOptionsB"></div>
+        </div>
+      </div>`}
+      <div class="compare-options" id="compareOptions">${list}</div>
+    </div>
+  `;
+}
+
+function renderCompareView(id1, id2) {
+  const a = careers.find(c => c.id === id1);
+  const b = careers.find(c => c.id === id2);
+  if (!a || !b) return `<div class="wrap"><button class="back-link" data-nav="">← Back</button><div class="not-found">One or both careers not found.</div></div>`;
+
+  const cmA = CARD_METRICS[a.id] || {};
+  const cmB = CARD_METRICS[b.id] || {};
+  const dmA = DETAIL_METRICS[a.id] || {};
+  const dmB = DETAIL_METRICS[b.id] || {};
+
+  function row(label, valA, valB) {
+    return `<div class="comp-row"><div class="comp-label">${label}</div><div class="comp-val comp-a">${valA || '—'}</div><div class="comp-val comp-b">${valB || '—'}</div></div>`;
+  }
+
+  function section(title, itemsA, itemsB) {
+    const max = Math.max(itemsA ? itemsA.length : 0, itemsB ? itemsB.length : 0);
+    let rows = '';
+    for (let i = 0; i < max; i++) {
+      rows += row('', itemsA?.[i] || '', itemsB?.[i] || '');
+    }
+    return `
+      <div class="comp-section">
+        <div class="section-label">${title}</div>
+        <div class="comp-table">
+          <div class="comp-header"><div class="comp-label"></div><div class="comp-val comp-a">${a.name}</div><div class="comp-val comp-b">${b.name}</div></div>
+          ${rows}
+        </div>
+      </div>`;
+  }
+
+  // Decision guide
+  const chooseA = (a.choose_if || []).map(c => `<li>${c}</li>`).join('');
+  const chooseB = (b.choose_if || []).map(c => `<li>${c}</li>`).join('');
+  const avoidA = (a.avoid_if || []).map(c => `<li>${c}</li>`).join('');
+  const avoidB = (b.avoid_if || []).map(c => `<li>${c}</li>`).join('');
+
+  return `
+    <div class="wrap compare-results-wrap">
+      <button class="back-link" data-nav="compare=,">← Back to compare</button>
+
+      <div class="comp-header-banner">
+        <h1>${a.name} vs ${b.name}</h1>
+      </div>
+
+      <div class="comp-section">
+        <div class="section-label">At a Glance</div>
+        <div class="comp-table">
+          <div class="comp-header"><div class="comp-label"></div><div class="comp-val comp-a">${a.name}</div><div class="comp-val comp-b">${b.name}</div></div>
+          ${row('Duration', cmA.duration, cmB.duration)}
+          ${row('Entry salary', a.salary?.entry, b.salary?.entry)}
+          ${row('Stress level', cmA.stress + '/5', cmB.stress + '/5')}
+          ${row('Competition', cmA.competition + '/5', cmB.competition + '/5')}
+        </div>
+      </div>
+
+      <div class="comp-section">
+        <div class="section-label">Reality Snapshot</div>
+        <div class="comp-table">
+          <div class="comp-header"><div class="comp-label"></div><div class="comp-val comp-a">${a.name}</div><div class="comp-val comp-b">${b.name}</div></div>
+          ${row('Salary potential', dmA.salary_potential + '/5', dmB.salary_potential + '/5')}
+          ${row('Study difficulty', dmA.study_difficulty + '/5', dmB.study_difficulty + '/5')}
+          ${row('Work-life balance', dmA.work_life_balance + '/5', dmB.work_life_balance + '/5')}
+          ${row('Job availability', dmA.job_availability + '/5', dmB.job_availability + '/5')}
+          ${row('Abroad prospects', dmA.abroad_prospects + '/5', dmB.abroad_prospects + '/5')}
+        </div>
+      </div>
+
+      ${section('Salary Progression', [a.salary?.entry, a.salary?.mid, a.salary?.senior], [b.salary?.entry, b.salary?.mid, b.salary?.senior])}
+
+      ${section('What Nobody Tells You', a.what_nobody_tells_you?.slice(0, 3), b.what_nobody_tells_you?.slice(0, 3))}
+
+      ${section('Who Thrives Here', a.who_thrives, b.who_thrives)}
+
+      ${section('Who Might Struggle', a.who_regrets_it?.slice(0, 3), b.who_regrets_it?.slice(0, 3))}
+
+      <div class="comp-section comp-decision">
+        <div class="section-label">Decision Guide</div>
+        <div class="comp-decision-grid">
+          <div class="comp-decision-card">
+            <div class="comp-decision-name">Choose ${a.name} if...</div>
+            <ul class="love-list">${chooseA}</ul>
+            <div class="comp-decision-avoid" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--rule);">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--dustred);margin-bottom:8px;">Avoid if...</div>
+              <ul class="love-list" style="list-style:none;">${avoidA}</ul>
+            </div>
+          </div>
+          <div class="comp-decision-card">
+            <div class="comp-decision-name">Choose ${b.name} if...</div>
+            <ul class="love-list">${chooseB}</ul>
+            <div class="comp-decision-avoid" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--rule);">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--dustred);margin-bottom:8px;">Avoid if...</div>
+              <ul class="love-list" style="list-style:none;">${avoidB}</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 initTheme();
 window.addEventListener('hashchange', () => render(true));
 render(true);

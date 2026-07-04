@@ -955,4 +955,182 @@ footer {
   border-color: var(--amber);
   color: var(--amber);
 }
+/* ── COMPARE PICKER ── */
+.compare-picker-wrap { padding-top: 40px; }
 
+.compare-picker-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 36px);
+  line-height: 1.15;
+  margin: 8px 0 28px;
+  color: var(--ink);
+}
+
+.compare-search-field { margin-bottom: 16px; }
+
+.compare-search {
+  width: 100%;
+  font-size: 15px;
+  padding: 14px 18px;
+  border: 1.5px solid var(--rule-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-search::placeholder { color: var(--ink-faint); }
+.compare-search:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px var(--amber-dim); }
+
+.compare-options { display: flex; flex-direction: column; gap: 6px; }
+
+.compare-option {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 18px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--surface);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.compare-option:hover { border-color: var(--violet); }
+
+.compare-option-cat {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+}
+
+.compare-option-name { font-size: 16px; font-weight: 700; color: var(--ink); display: block; }
+.compare-option-tagline { font-size: 12px; color: var(--ink-soft); display: block; margin-top: 2px; }
+
+.compare-cta {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--violet);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 24px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.compare-cta:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+.compare-from-detail { margin-top: 0; }
+
+.compare-two { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: start; margin-bottom: 24px; }
+.compare-vs { font-size: 18px; font-weight: 800; color: var(--ink-faint); padding-top: 40px; }
+.compare-col-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-soft); margin-bottom: 10px; }
+
+@media (max-width: 640px) {
+  .compare-two { grid-template-columns: 1fr; gap: 12px; }
+  .compare-vs { text-align: center; padding-top: 0; }
+}
+
+/* ── COMPARE RESULTS ── */
+.compare-results-wrap { padding-top: 32px; }
+
+.comp-header-banner {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+
+.comp-header-banner h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.comp-section { margin-bottom: 36px; }
+
+.comp-table {
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.comp-header {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  background: var(--surface);
+  border-bottom: 2px solid var(--rule-strong);
+}
+
+.comp-header .comp-val {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 16px;
+  color: var(--ink);
+}
+
+.comp-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+
+.comp-row:last-child { border-bottom: none; }
+
+.comp-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.comp-val {
+  font-size: 13px;
+  padding: 12px 16px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.comp-a { background: rgba(122,59,46,0.04); }
+.comp-b { background: rgba(184,114,46,0.04); }
+
+.comp-decision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.comp-decision-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.comp-decision-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--violet);
+  margin-bottom: 14px;
+}
+
+@media (max-width: 640px) {
+  .comp-header, .comp-row { grid-template-columns: 1fr 1fr; }
+  .comp-label { display: none; }
+  .comp-decision-grid { grid-template-columns: 1fr; }
+}

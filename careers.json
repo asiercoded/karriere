@@ -65,6 +65,18 @@
       "Excellent long-term job security.",
       "Intellectually rich — medicine constantly evolves, and the learning never stops, which suits people who are naturally curious",
       "Extremely diverse career paths — research, surgery, public health, academia, global health organizations, private practice — all from one degree"
+    ],
+    "choose_if": [
+      "You're comfortable with a 10+ year timeline before reaching your desired income.",
+      "You find genuine meaning in patient care and can handle emotional intensity.",
+      "You're prepared for relentless exams and competition throughout your 20s.",
+      "You want a career with unmatched respect and long-term job security."
+    ],
+    "avoid_if": [
+      "You need financial independence soon after graduation.",
+      "You value work-life balance in your 20s.",
+      "You're choosing medicine for status or parental pressure rather than genuine interest.",
+      "You're uncomfortable with high-stakes decisions and patient suffering."
     ]
   },
   {
@@ -136,383 +148,25 @@
         "url": "https://quora.com"
       }
     ],
+"choose_if": [
+  "You enjoy precise, hands-on clinical work with visible, immediate results.",
+  "You're entrepreneurial and willing to build a practice over time.",
+  "You value predictable hours and no emergency on-call duties.",
+  "You're comfortable with a slow financial start in exchange for long-term independence."
+],
+"avoid_if": [
+  "You chose BDS only because you missed the MBBS cutoff.",
+  "You expect MBBS-equivalent income or social status.",
+  "You dislike repetitive procedures and patient interaction all day.",
+  "You're unwilling to handle the business side of running a practice."
+],
     "related_careers": [
       "mbbs",
       "pharmacy",
       "paramedical_physiotherapy"
-    ],
-    "scope": {
-      "india": "Moderate. Oversupply in metros, better opportunity in tier-2 and tier-3 cities. MDS improves scope significantly.",
-      "abroad": "Difficult. Most countries require multi-year licensing processes. Middle East is the most accessible international option."
-    }
+    ]
   },
-    {
-    "id": "cs_engineering",
-    "name": "Computer Science Engineering",
-    "category": "engineering",
-    "tagline": "The highest ceiling in Indian engineering. Also the most brutal filter.",
-    "overview": "B.Tech in Computer Science is a 4-year degree entered through JEE, state exams, or direct admission. It opens paths into software development, data science, product management, DevOps, and more. The honest reality: your college tier determines your starting point far more than your degree does. An IIT or NIT graduate and a tier-3 college graduate hold the same degree on paper — but face completely different hiring realities. If you're in or likely to get into a top college, CSE is one of the best decisions you can make. If you're looking at a mid or lower-tier college, the degree alone won't get you far — your portfolio, skills, and self-learning discipline will. This is not a career where the institution does the work for you.",
-    "what_nobody_tells_you": [
-      "Most CS graduates don't land software jobs. Roughly 60-70% of B.Tech CS graduates end up in IT service companies doing support, testing, or non-coding work at ₹3.5-5 LPA — or outside tech entirely. Core engineering roles go to a smaller group with strong DSA, internships, and portfolios.",
-      "College tier is a hard filter. Most product companies — Google, Microsoft, Atlassian, Zepto, PhonePe — screen by college before reading your resume. If you're not from a recognized institution, you need referrals or exceptional open-source/project work to bypass that filter.",
-      "The curriculum is almost irrelevant. What matters in interviews and on the job — Data Structures & Algorithms, system design, real frameworks — is not taught properly in 90% of colleges. You will learn it on your own or not at all.",
-      "AI is not replacing software engineers yet, but it is raising the bar. Junior tasks like writing boilerplate code and fixing simple bugs are increasingly automated. What's valued now: problem-solving, architecture, and judgment — skills that take years to build.",
-      "The LeetCode grind is real and ongoing. To get into good product companies, you need to solve hundreds of DSA problems. Even experienced engineers practice this to switch jobs. If you hate algorithmic problem-solving, job hunting in this field will be miserable.",
-      "Burnout is common and underreported. Fast-paced startups and FAANG-adjacent companies often demand 10-12 hour days. Many developers quietly burn out by their late 20s. Work-life balance varies enormously by company — some are excellent, many are not.",
-      "Layoffs are real. The 2022-2024 global tech downturn laid off hundreds of thousands of engineers worldwide, including many in Indian IT. Tech is not the recession-proof guarantee it was once marketed as.",
-      "Freelancing is possible but not passive. Indian developers do earn well freelancing internationally, but building a reliable client base takes 1-2 years of active effort and a strong portfolio. It is not a quick fallback."
-    ],
-    "day_in_the_life": {
-      "student": "Most useful learning happens outside the classroom — Leetcode, personal projects, online courses, open-source contributions. Internship hunting starts aggressively in 2nd year for top colleges, 3rd year elsewhere. 4th year is dominated by placement prep: mock interviews, DSA revision, competitive programming. The gap between students who self-learn and those who don't becomes very visible by 3rd year.",
-      "professional": "Daily standups, writing and reviewing code, debugging, reading documentation, and a surprising amount of communication. At a service company: structured, slower, process-heavy — most work is maintaining existing systems. At a startup: faster decisions, more ownership, higher risk. At a product company: deep specialization, clear career ladders, and high expectations on output quality. Remote work is common across all three."
-    },
-    "salary": {
-      "entry": "₹3.5 - ₹12 LPA (realistic for most graduates from tier-2 and tier-3 colleges); ₹20-50 LPA for IIT/NIT top placements",
-      "mid": "₹12 - ₹30 LPA (5 years, strong skills, mid-level role at product or mid-size company)",
-      "senior": "₹35 - ₹80 LPA (8-12 years, senior/staff engineer or engineering manager at a strong company)"
-    },
-    "career_outlook": {
-      "india": "Demand is high but so is supply — India produces over 1.5 million engineering graduates annually, with a large portion in CS. Standing out requires either a strong college brand, exceptional skills demonstrated through projects and internships, or both. Startup hiring has slowed since 2022 but is recovering. Long-term demand for software talent in India remains strong, driven by SaaS, fintech, and global delivery.",
-      "abroad": "Excellent for strong engineers. Indian CS graduates are among the most sought-after internationally — USA (H1B), Canada (Express Entry), Germany (Job Seeker Visa), UK (Skilled Worker Visa), and Australia all have clear pathways. The challenge is the H1B lottery system for the US, which is unpredictable. Canada and Germany have become more popular alternatives. Remote work for foreign companies while based in India is increasingly common and pays in foreign currency."
-    },
-    "who_thrives": [
-      "People who genuinely enjoy building things — not just the idea of building, but sitting down and actually writing code for hours.",
-      "Disciplined self-learners who don't wait for college to teach them what they need to know.",
-      "Those who can handle ambiguity — requirements change, systems break, and the 'right' solution often doesn't exist.",
-      "People who view learning as permanent, not something that ends after graduation.",
-      "Those who can communicate clearly — underrated skill that separates average from senior engineers."
-    ],
-    "who_regrets_it": [
-      "Students who chose CS for the salary without genuinely enjoying coding — they find the daily work tedious and job hunting demoralising.",
-      "Graduates from tier-3 colleges who assumed a CS degree would do the work for them and didn't build skills or a portfolio independently.",
-      "People who dislike sedentary, screen-heavy work — this is not a physically active or highly social job by default.",
-      "Those who expected stable, predictable careers — tech has cycles of hiring booms and layoff waves, and that won't change.",
-      "Anyone who gets into the field chasing FAANG salaries without the patience for years of competitive grinding to reach that level."
-    ],
-    "why_people_love_it": [
-      "You can build something from nothing — a product used by thousands, with just a laptop and internet connection.",
-      "Highest salary ceiling of any undergraduate engineering degree in India, especially if you reach senior levels at product companies.",
-      "Genuinely global career — skills transfer across countries, remote work is normalized, and you can work for international companies from India.",
-      "Fast feedback: you write code, ship it, and see real users interact with it — the iteration cycle is unlike most other professions.",
-      "The field rewards merit more than credentials over time — a strong GitHub profile and project history can outweigh college pedigree after 2-3 years of experience."
-    ],
-    "before_you_commit": [
-      "Write code for 30 days straight — not tutorials, actual projects. If you find yourself dreading it after two weeks, that's important information.",
-      "Build 2-3 real projects and put them on GitHub before choosing this career. The process will tell you more than any college counsellor can.",
-      "Talk to developers 3-5 years into their careers — not freshers, not placement success stories. Ask them what their daily work actually looks like.",
-      "Research placement data for the specific college you're likely to attend, not the college's marketing brochure. Ask for company names and actual salary figures.",
-      "Understand the difference between service companies (TCS, Infosys, Wipro) and product companies (Google, Zepto, Razorpay) — they are very different working environments and salary bands.",
-      "If you're not getting into a tier-1 or tier-2 college, think carefully about whether a CS degree from a weak institution plus 4 years of self-learning beats an alternative path."
-    ],
-    "real_experiences": [
-      {
-        "source": "Reddit r/developersIndia",
-        "quote": "3 years at TCS, ₹4.2 LPA, doing the same support ticket work every day. Spent 6 months grinding Leetcode on nights and weekends, cracked an interview at a mid-size product company. Now at ₹18 LPA. The system is broken but you can navigate it — you just have to be willing to do the work nobody told you about.",
-        "url": "https://reddit.com/r/developersIndia"
-      },
-      {
-        "source": "LinkedIn (senior engineer, 8 years experience)",
-        "quote": "CS from an NIT opened every door for me. Internships from 2nd year, placed at ₹28 LPA, now at ₹55 LPA at 30. But I watch my friends from tier-3 colleges struggle even with good skills because they can't get past the resume filter. The college gap is real and it compounds.",
-        "url": "https://linkedin.com"
-      },
-      {
-        "source": "Reddit r/india",
-        "quote": "I chose CS because everyone said it was safe. I hate coding. Four years of pretending to enjoy it, a mediocre placement, and now I'm doing a job I don't care about. I should have explored what I actually liked before defaulting to the 'obvious' choice.",
-        "url": "https://reddit.com/r/india"
-      }
-    ],
-    "related_careers": [
-      "mba",
-      "ca",
-      "design"
-    ],
-    "scope": {
-      "india": "High demand, high supply. Strong skills and college brand or portfolio required to stand out.",
-      "abroad": "Excellent pathways — USA, Canada, Germany, UK. Remote work for foreign companies increasingly viable."
-    }
-  },
-  {
-  "id": "ca",
-  "name": "Chartered Accountancy (CA)",
-  "category": "commerce",
-  "tagline": "Brutal to clear. Hard to make irrelevant once you do.",
-  "overview": "CA is ICAI's professional qualification — three exam levels (Foundation, Inter, Final) wrapped around 3 years of mandatory articleship. On paper it's a 3-year path after Class 12. In practice, most people take 5-7 years to actually finish and start earning properly, because the pass rates are brutal at every stage.",
-  "career_outlook": {
-    "india": "Extremely strong — every company needs finance and compliance, and CA is one of India's most recession-proof qualifications. Big 4 access depends heavily on which city and college network you're coming from.",
-    "abroad": "Doesn't transfer on its own — CA India isn't recognized internationally. ACCA (UK), CPA (USA), or CMA conversion is the real path if you want to work abroad."
-  },
-  "salary": {
-    "entry": "₹6-10 LPA (Big 4 or mid-size firm fresher — smaller firms and non-metro roles often start lower, around ₹4-6 LPA)",
-    "mid": "₹15-25 LPA (5 years, industry role or Big 4 manager)",
-    "senior": "₹30-80 LPA+ (CFO track, Big 4 partner, or your own practice — practice income has no real ceiling, but depends entirely on the client base you build)"
-  },
-  "why_people_love_it": [
-    "Recession-proof — every company needs finance and compliance, so demand never really dries up",
-    "Real ceiling once you're in — CFO track, Big 4 partner, or your own unlimited-upside practice",
-    "One of the most respected, portable qualifications in Indian finance — opens doors beyond just accounting",
-    "Skills transfer into real business decision-making, not just bookkeeping"
-  ],
-  "what_nobody_tells_you": [
-    "The '3 years' you hear about is a myth. Low pass rates mean most people take 5-7 years, some longer, to actually finish.",
-    "Articleship pays ₹2,000-₹15,000/month for 3 years of full-time work — you're essentially unpaid labor while studying for the hardest exams of your life.",
-    "Big 4 is the dream everyone chases, but they hire a small fraction of qualified CAs each year. Most end up at mid-size firms or in industry.",
-    "Clearing CA doesn't mean instant money — most freshers start at ₹6-10 LPA, not the 'CA = rich' number people assume.",
-    "The real long-term ceiling isn't in being an employee auditor forever — it's in industry leadership roles or building your own practice."
-  ],
-  "who_thrives": [
-    "High tolerance for delayed gratification and repeated failure without quitting",
-    "Genuine interest in finance, tax, and business — not just chasing the prestige",
-    "Detail-oriented and comfortable with rules, compliance, and repetitive precision",
-    "Has some financial cushion (savings or family support) to survive 3 years of near-zero articleship pay"
-  ],
-  "who_regrets_it": [
-    "Chose it as the 'default' commerce path without real interest in numbers",
-    "Needs early financial independence — can't survive articleship's near-zero pay",
-    "Hates repetitive, rule-heavy work in audit, tax, or compliance",
-    "Underestimated the emotional toll of repeated exam failures and a slow payoff"
-  ],
-  "before_you_commit": [
-    "Talk to someone currently in articleship, not just qualified CAs — the day-to-day reality lives there",
-    "Shadow a normal audit or tax-filing day if you can, before assuming the job matches the exam's prestige",
-    "Check actual Big 4 hiring numbers against total CA graduates in your target city — the odds matter",
-    "Calculate the real cost: coaching fees, 3 years at ₹2-15k/month articleship pay, and the opportunity cost of delayed full salary",
-    "Read threads from people 3-5 years qualified, not just toppers' success stories"
-  ],
-  "real_experiences": [
-    {
-      "source": "Reddit r/CAstudents",
-      "quote": "Cleared all groups first attempt somehow. Landed Big 4 at ₹9 LPA. Two years in, I'm at ₹18 LPA while my engineering friends who mocked my starting salary are still around ₹6-7L. Patience really is the whole game here.",
-      "url": "https://reddit.com/r/CAstudents"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "6.5 years, two Final attempts, now at a mid-size firm doing statutory audits. Not the Big 4 dream I had in college, but stable pay and I'm home by 7 most days outside tax season. No regrets, just recalibrated expectations.",
-      "url": "https://reddit.com/r/india"
-    },
-    {
-      "source": "Quora",
-      "quote": "3 years into articleship at ₹8,000/month, failed Inter twice, seriously considering dropping it for an MBA instead. Nobody told 17-year-old me how long 'become a CA' actually takes.",
-      "url": "https://quora.com"
-    }
-  ],
-  "related_careers": [
-    "mba",
-    "cs_engineering",
-    "law"
-  ]
-},
-  {
-  "id": "law",
-  "name": "Law (LLB / 5-Year Integrated)",
-  "category": "law",
-  "tagline": "TV lawyers argue in court. Most real ones spend their day reading, drafting, and waiting.",
-  "overview": "Law is a 5-year integrated degree (BA LLB) via CLAT after Class 12, or a 3-year LLB after graduation. National Law Universities dominate placements — the IIT effect, but for law. 'Lawyer' isn't one job though: litigation, corporate law, in-house counsel, judiciary, government legal services, and academia are genuinely different careers that just happen to share a degree.",
-  "career_outlook": {
-    "india": "Strong overall demand but sharply bifurcated — NLU graduates get excellent corporate law and policy access, while non-NLU graduates need to specialize (IP, tax, arbitration) or build a litigation practice slowly to compete.",
-    "abroad": "Indian law degrees don't transfer directly — an LLM plus bar exams are needed to practice abroad. Growing scope in international arbitration, legal consulting, and policy roles that don't require re-qualifying as a lawyer in that country."
-  },
-  "salary": {
-    "entry": "₹15,000/month (litigation junior under a senior advocate) to ₹20 LPA (NLU grad at a top corporate firm) — same degree, wildly different starting points depending on path and college",
-    "mid": "₹8-40 LPA (5 years — corporate lawyers at top firms or established specialist litigators)",
-    "senior": "₹30 LPA to several crores (senior advocates, law firm partners, or judiciary salary plus pension track)"
-  },
-  "why_people_love_it": [
-    "Deeply intellectual work that rewards sharp thinking, research, and persuasion",
-    "Genuinely wide range of paths from one degree — litigation, corporate, policy, judiciary, in-house, academia",
-    "Litigators who build a real reputation over a decade have an earning ceiling almost no other Indian profession can match",
-    "You get to actually shape outcomes for people and institutions, not just advise from the sidelines"
-  ],
-  "what_nobody_tells_you": [
-    "Litigation pays almost nothing for the first 5-10 years — junior lawyers under a senior advocate often earn ₹15,000-₹30,000/month, sometimes less.",
-    "Corporate law pays far better but is dominated by NLU graduates — non-NLU students face a genuinely steep climb into top firms.",
-    "The NLU vs non-NLU gap decides your starting salary before you've done a day of real work — as real as the IIT vs non-IIT split in engineering.",
-    "Litigation and corporate law aren't two versions of the same job. One is courtroom advocacy built on reputation over years; the other is desk-based contract and deal work built on billable hours.",
-    "Legal tech and AI are already automating document review and basic drafting — the grunt work juniors used to learn the ropes on is shrinking fast."
-  ],
-  "who_thrives": [
-    "Genuinely enjoys reading, arguing, and research — not just watching courtroom dramas",
-    "Has patience for a slow-building career, especially in litigation, where reputation compounds over a decade",
-    "Strong communicator who can think on their feet under pressure",
-    "Comfortable with ambiguity — most legal problems don't have one clean right answer"
-  ],
-  "who_regrets_it": [
-    "Expected every lawyer to argue dramatic cases in court — most work is reading, drafting, and waiting",
-    "Needs financial stability in their 20s — litigation's slow payoff doesn't suit that",
-    "Assumed corporate law and litigation were interchangeable, then got stuck on a track they didn't actually want",
-    "Finds sustained reading and verbal confrontation draining, not energizing",
-    "Has no family legal network and expected internships alone to open every door instantly"
-  ],
-  "before_you_commit": [
-    "Attend a court proceeding for a day — see what litigation actually looks like before romanticizing it",
-    "Talk to both a litigator and a corporate lawyer — they'll describe two different jobs, not two flavors of one",
-    "Read a few real judgments, not just case summaries — see how lawyers actually reason, not how TV writes it",
-    "Check the internship track record of the colleges you're targeting — internships matter more than the syllabus for where you end up",
-    "Understand judiciary, in-house counsel, and government legal services as real options — not just fallbacks if corporate or litigation doesn't work out"
-  ],
-  "real_experiences": [
-    {
-      "source": "LinkedIn",
-      "quote": "NLU placement season got me an ₹18 LPA offer at a top law firm. Three years in, I'm leading due diligence on deals worth more than my entire family's net worth. Intense, but genuinely interesting.",
-      "url": "https://linkedin.com"
-    },
-    {
-      "source": "Reddit r/LawStudentsIndia",
-      "quote": "Non-NLU, did litigation for 4 years under a senior advocate, barely broke even most months. Switched to in-house counsel at a mid-size company last year — steadier pay, saner hours, less prestige. Don't regret the litigation years, they taught me how to actually think like a lawyer.",
-      "url": "https://reddit.com/r/LawStudentsIndia"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "First 3 years of litigation, I made less than my school friend who didn't even go to college. Nobody told me it takes a decade to build a name, and I didn't have the financial runway to wait that long. Moved to a compliance role instead.",
-      "url": "https://reddit.com/r/india"
-    }
-  ],
-  "related_careers": [
-    "ca",
-    "mba"
-  ]
-},
-  {
-  "id": "design",
-  "name": "Design (NID / NIFT path)",
-  "category": "design",
-  "tagline": "Design isn't about drawing well. It's about solving problems people didn't know they had.",
-  "overview": "Design in India isn't one path — UI/UX, product design, graphic design, motion graphics, brand design, industrial design, and game design are genuinely different jobs sharing one umbrella term. Entry is through NID/NIFT (brutally competitive), IIT's design programs (UCEED), private colleges, or increasingly, a self-taught portfolio. The actual job is less about making things look nice and more about solving a problem for a user, client, or business.",
-  "career_outlook": {
-    "india": "Growing fast, especially UX/UI as Indian tech and startups mature. Fashion and product design scope is more limited, concentrated in metro cities, and depends heavily on your portfolio and network.",
-    "abroad": "Strong for UX/UI designers — a globally portable skill. Fashion design abroad means rebuilding your reputation from scratch in fiercely competitive scenes like Paris, Milan, or New York."
-  },
-  "salary": {
-    "entry": "₹4-12 LPA (UX/UI in tech pays more than traditional fashion or graphic design at entry level)",
-    "mid": "₹12-30 LPA (5 years, especially in UX/product design at tech companies)",
-    "senior": "₹30 LPA-₹1 crore+ (senior design leads, design directors at major tech companies, or successful independent labels)"
-  },
-  "why_people_love_it": [
-    "Genuinely varied work — no two briefs or projects look the same",
-    "Portfolio matters more than pedigree, so self-taught designers can compete with NID grads",
-    "UX/UI pays well and is globally portable, especially in tech",
-    "High entrepreneurial ceiling — freelance, agency, or your own label are all realistic paths"
-  ],
-  "what_nobody_tells_you": [
-    "NID and NIFT admit under 1% of applicants — most design students end up at private colleges of wildly uneven quality, and college name matters less here than almost any other field.",
-    "UX/UI in tech currently pays the best of any design specialization, often more than traditional fashion or graphic design roles.",
-    "Fashion design's glamorous image hides long hours, low starting pay, and a saturated market — unless you start your own label or land a top house.",
-    "AI tools are already changing entry-level work — they're replacing repetitive execution, not designers who can actually think through a problem. That distinction matters a lot if you're only good at the former.",
-    "Portfolio beats degree for almost every design job — a self-taught designer with 5 strong projects can beat an NID graduate with a weak one."
-  ],
-  "who_thrives": [
-    "Genuinely enjoys solving problems, not just making things look good",
-    "Willing to constantly build, update, and defend a portfolio",
-    "Comfortable with ambiguity and relentless subjective feedback",
-    "Handles both the creative and technical sides — tools, deadlines, and client constraints, not just ideas"
-  ],
-  "who_regrets_it": [
-    "Chose fashion design for the glamour, not the manufacturing and business grind behind it",
-    "Expected total creative freedom from day one — most early work is executing someone else's brief",
-    "Can't handle constant subjective critique — feedback in design never really stops",
-    "Relied only on college training without building an independent portfolio",
-    "Assumed a non-NID/NIFT design degree alone would open doors at competitive firms"
-  ],
-  "before_you_commit": [
-    "Recreate a popular app's interface from scratch — see if the process excites you or drains you",
-    "Complete a couple of real design challenges (Daily UI, a client brief) before assuming you'll like the job",
-    "Learn basic Figma — a free weekend is enough to know if the tool-heavy side appeals to you",
-    "Build a small portfolio of 3-5 projects and get it critiqued by a working designer, not just friends or family",
-    "Check the actual placement record of the specific college you're considering, not just its reputation"
-  ],
-  "real_experiences": [
-    {
-      "source": "Reddit r/india",
-      "quote": "Self-taught UX designer, no NID degree, just Figma tutorials and a portfolio I rebuilt three times. Landed a ₹9 LPA product design role at a startup. Portfolio really did matter more than pedigree.",
-      "url": "https://reddit.com/r/india"
-    },
-    {
-      "source": "Quora",
-      "quote": "NIFT fashion design, five years in. Started as an assistant designer at ₹18k/month doing production coordination, not creative work. Two years ago I set up a small label with a former classmate — barely breaking even, but it's mine and I'm learning the business side nobody taught us in college.",
-      "url": "https://quora.com"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "Did graphic design because I liked drawing in school. Turns out the job is 80% client feedback loops and brand guidelines, 20% actual creative work. Still doing it, but wish someone had told me design is a service industry before I chose it.",
-      "url": "https://reddit.com/r/india"
-    }
-  ],
-  "related_careers": [
-    "cs_engineering",
-    "mba"
-  ]
-},
-  {
-  "id": "mba",
-  "name": "MBA",
-  "category": "management",
-  "tagline": "An MBA doesn't create direction. It accelerates whatever direction you already have.",
-  "overview": "MBA is a 2-year postgraduate degree via CAT/XAT/GMAT, ideally pursued after 2-5 years of work experience — though many in India do it straight after undergrad. It's not commerce-only: engineers, doctors, and humanities grads make up a large share of every batch. Consulting, product, marketing, finance, operations, HR, analytics, and general management are all real specializations under one degree, and which one you pick matters almost as much as which college you get into.",
-  "career_outlook": {
-    "india": "Strong for top-tier graduates, average for mid-tier, and often not worth the fees for bottom-tier colleges given the debt involved.",
-    "abroad": "Indian MBAs (especially IIM, ISB) are respected. Many pursue a further MBA abroad (INSEAD, top US schools) for global mobility, though that needs even higher GMAT scores and work experience."
-  },
-  "salary": {
-    "entry": "₹8-35 LPA (massive range — non-IIM vs IIM placements differ drastically; most graduates land toward the lower half)",
-    "mid": "₹20-70 lakh (consulting partners, product leads, business heads after 5-8 years)",
-    "senior": "₹50 LPA - several crores (CXO roles, partner-level consulting, business unit leadership)"
-  },
-  "why_people_love_it": [
-    "Genuinely accelerates people who already have direction and experience",
-    "Cohort and alumni networks can open doors for decades afterward",
-    "IIM/ISB-tier placements offer some of India's highest starting salaries",
-    "Flexible across consulting, product, marketing, finance, operations, or founding your own company"
-  ],
-  "what_nobody_tells_you": [
-    "An MBA amplifies what you already have — with no clear direction going in, it just adds a credential, not a fix.",
-    "The IIM vs non-IIM gap is enormous, like IIT vs non-IIT. Tier-3 colleges often don't justify their fees.",
-    "Cracking CAT is only half the battle. At the top IIMs, even an excellent CAT percentile doesn't guarantee admission—academics, interviews, work experience, and profile all matter.",
-    "The '₹20-30 LPA average' number you see everywhere is usually the highest package in a placement report, not the median — most graduates, even from decent colleges, earn less.",
-    "You don't need an MBA to start a business — plenty of founders never did one. It helps with structure and networks, not the idea itself."
-  ],
-  "who_thrives": [
-    "Has 2-5 years of work experience and a clear reason for the MBA, not just 'better options later'",
-    "Gets into a top-tier institute (IIM, ISB, or equivalent) — the ROI math changes completely below that tier",
-    "Strong networker and communicator, since cohort relationships matter as much as coursework",
-    "Knows which specialization they want going in, instead of picking based on salary alone"
-  ],
-  "who_regrets_it": [
-    "Did it right after undergrad with no work experience or clear goal",
-    "Took a large loan for a tier-3 college with weak placement records",
-    "Expected the degree alone to compensate for a lack of skills or direction",
-    "Dislikes intense networking, group work, and presentation-heavy environments",
-    "Picked a specialization based on salary data alone, then hated the actual work"
-  ],
-  "before_you_commit": [
-    "Talk to alumni from the specific colleges you're considering, not just their brochures",
-    "Compare actual placement reports — median and lower quartile, not just the highest package",
-    "Calculate real ROI after fees, loan interest, and 2 years of lost income — not just the projected salary",
-    "Get 2-3 years of work experience first if you can — it changes both your application and what you get out of the program",
-    "Pick a specialization you're curious about before applying, instead of deciding after you're already in"
-  ],
-  "real_experiences": [
-    {
-      "source": "LinkedIn",
-      "quote": "IIM placement got me into consulting at ₹28 LPA. Three years in, the alumni network alone has opened doors my resume never could. Was it expensive? Yes. Worth it? Also yes — but only because I already knew I wanted consulting.",
-      "url": "https://linkedin.com"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "Did an MBA from a decent tier-2 college after 3 years in marketing. Salary jump wasn't dramatic — ₹9 LPA to ₹14 LPA — but I moved from an execution role to actually owning strategy. That shift mattered more to me than the number.",
-      "url": "https://reddit.com/r/india"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "Did MBA right after engineering with zero work experience because I didn't know what else to do. Same ₹6 LPA offer I could've gotten with just the engineering degree, minus 2 years and ₹18 lakhs in fees. The MBA didn't fix not knowing what I wanted — it just delayed finding out.",
-      "url": "https://reddit.com/r/india"
-    }
-  ],
-  "related_careers": [
-    "ca",
-    "law",
-    "cs_engineering"
-  ]
-},
-  {
+     {
   "id": "pharmacy",
   "name": "Pharmacy (B.Pharm)",
   "category": "paramedical",
@@ -577,78 +231,25 @@
       "url": "https://reddit.com/r/india"
     }
   ],
-  "related_careers": [
+    "choose_if": [
+  "You're interested in chemistry and how medicines work.",
+  "You're willing to pursue M.Pharm or specialize to access better industry roles.",
+  "You're detail-oriented and comfortable with regulatory and compliance work.",
+  "You see opportunity in India's massive pharma manufacturing industry."
+],
+    "avoid_if": [
+  "You expect clinical, patient-facing work like a doctor or nurse.",
+  "You're not willing to pursue higher studies beyond B.Pharm.",
+  "You defaulted into pharmacy without exploring industry options.",
+  "You want fast financial returns immediately after graduation."
+],
+    "related_careers": [
     "mbbs",
     "bds",
     "paramedical_nursing"
   ]
 },
-  {
-    "id": "paramedical_physiotherapy",
-    "name": "Physiotherapy (BPT)",
-    "category": "paramedical",
-    "tagline": "Steady, hands-on, growing field — often overlooked because it's not MBBS.",
-    "overview": "BPT (Bachelor of Physiotherapy) is a 5-year degree (4 years + 1 year internship) focused on rehabilitation, injury recovery, and movement therapy. Growing demand due to aging population, sports medicine growth, and increased awareness of physical wellness.",
-    "what_nobody_tells_you": [
-      "Entry-level pay is low — often ₹15,000-₹25,000/month working under a senior physiotherapist or at a hospital, especially in the first 2-3 years.",
-      "Building a private practice or clinic takes time, similar to dentistry. The first few years are about building reputation and referral networks.",
-      "Specializations (sports physiotherapy, neuro-rehab, pediatric physiotherapy) significantly increase earning potential but require additional certification/masters.",
-      "Government jobs in physiotherapy are limited. AIIMS, government hospitals, and defense services do hire physiotherapists, but vacancies are scarce and competition is high. Don't plan your career around a government job."
-    ],
-    "salary": {
-      "entry": "₹15,000 - ₹25,000/month",
-      "mid": "₹35,000 - ₹80,000/month (5 years, own practice building or MPT specialist in hospital)",
-      "senior": "₹1 - ₹4 lakh/month (established private practice, sports team physiotherapist, or specialized rehab clinic owner)"
-    },
-    "career_outlook": {
-    "india": "Growing steadily. Demand is expanding across orthopedic care, sports medicine, elderly rehabilitation, post-COVID recovery, and neurological rehab. India's aging population and rising sports participation are both long-term demand drivers. Still underserved in tier-2 and tier-3 cities — which is both a challenge and an opportunity for those willing to set up there.",
-    "abroad": "Strong international scope, especially in UK, Australia, Canada, and Gulf countries. Each country requires its own licensing process — HCPC registration in the UK, AHPRA in Australia, regulatory body exams in Canada. The process takes time but is achievable with planning. Indian physiotherapists are actively hired abroad, particularly in geriatric care and rehabilitation."
-    },
-    "who_thrives": [
-      "People who enjoy hands-on, physical work and direct patient interaction",
-      "Those interested in human movement, biomechanics, and rehabilitation",
-      "Patient individuals comfortable with gradual, incremental patient progress"
-    ],
-    "who_regrets_it": [
-      "Students who chose BPT as a fallback after not qualifying for MBBS, without genuine interest in rehabilitation or movement science.",
-      "Those expecting MBBS-level income or social status from a physiotherapy degree.",
-      "Anyone who underestimated the physical demands — you are on your feet performing manual treatment for most of the day.",
-      "People who need fast financial returns — private practice income builds slowly over several years.",
-      "Those who stayed generalist and didn't specialize — BPT without MPT or additional certification limits both income and career options significantly."
-    ],
-    "why_people_love_it": [
-      "Deeply personal, rewarding work — helping someone regain movement after an injury or surgery is one of the most tangible impacts a healthcare professional can have",
-      "Growing field with genuine demand — sports medicine, elderly care, and post-surgical rehab are all expanding rapidly in India",
-      "Good work-life balance compared to MBBS/BDS — mostly scheduled appointments, rarely emergency on-call",
-      "Private practice is viable and financially rewarding once established, with relatively low setup costs compared to dentistry"
-    ],
-    "before_you_commit": [
-    "Shadow a physiotherapist in both a hospital department and a private clinic on separate days — the two environments are very different and you should know which suits you.",
-    "Observe at least one neurological rehabilitation session and one orthopedic session. The clinical complexity will tell you more than any brochure.",
-    "Talk to physiotherapists who are 5-10 years into their career, not fresh graduates. Ask specifically about income growth, specialization decisions, and whether they'd choose it again.",
-    "Research the difference between BPT, MPT, and sports physiotherapy certifications before deciding — your long-term options depend heavily on which path you take after graduation.",
-    "Be honest with yourself about physical stamina. Visit a busy physiotherapy clinic and watch a full morning of sessions. If the pace and physicality feel right, that's a good sign."
-  ],
-    "real_experiences": [
     {
-      "source": "Practicing physiotherapist, sports specialty (LinkedIn)",
-      "quote": "Started at ₹18,000 a month in a hospital. Spent 3 years building skills and contacts, did a sports physio certification, started working with a local cricket academy. Now I have my own clinic and consult with two sports teams. Income is ₹1.2 lakh a month. It took 7 years to get here, but I genuinely love the work.",
-      "url": "https://linkedin.com"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "BPT is a solid career if you know what you're getting into. The first 3 years are financially rough and physically tiring. I'm 5 years in, running a small clinic, making decent money. Not glamorous, but stable and genuinely satisfying. Specialization was the turning point — general BPT alone wasn't enough.",
-      "url": "https://reddit.com/r/india"
-    },
-    {
-      "source": "Quora",
-      "quote": "I chose BPT because I didn't clear NEET. Four years later, I'm qualified but unmotivated. I don't dislike the work, but I don't feel connected to it either. The patients are wonderful, but I spend my evenings wondering if I'd have been more fulfilled elsewhere. I wish I'd been more honest with myself before choosing.",
-      "url": "https://quora.com"
-    }
-  ],
-  "related_careers": ["mbbs", "bds", "paramedical_nursing"]
-  },
-  {
     "id": "paramedical_nursing",
     "name": "Nursing (B.Sc Nursing)",
     "category": "paramedical",
@@ -715,13 +316,104 @@
       "url": "https://reddit.com/r/india"
     }
   ],
+"choose_if": [
+  "You have genuine empathy and patience for direct patient care.",
+  "You're willing to pursue international licensing (OET, NCLEX) for far better pay abroad.",
+  "You're comfortable with shift work and emotionally demanding situations.",
+  "You want one of the most globally portable healthcare careers."
+],
+"avoid_if": [
+  "You expect decent pay in India without planning to go abroad.",
+  "You need a 9-to-5 schedule with no night shifts.",
+  "You're uncomfortable with the physical and emotional intensity of patient care.",
+  "You're not willing to specialize (ICU, OT, pediatrics) for career growth."
+],
+
     "related_careers": [
       "paramedical_physiotherapy",
       "mbbs",
       "bds"
     ]
   },
-  {
+    {
+    "id": "paramedical_physiotherapy",
+    "name": "Physiotherapy (BPT)",
+    "category": "paramedical",
+    "tagline": "Steady, hands-on, growing field — often overlooked because it's not MBBS.",
+    "overview": "BPT (Bachelor of Physiotherapy) is a 5-year degree (4 years + 1 year internship) focused on rehabilitation, injury recovery, and movement therapy. Growing demand due to aging population, sports medicine growth, and increased awareness of physical wellness.",
+    "what_nobody_tells_you": [
+      "Entry-level pay is low — often ₹15,000-₹25,000/month working under a senior physiotherapist or at a hospital, especially in the first 2-3 years.",
+      "Building a private practice or clinic takes time, similar to dentistry. The first few years are about building reputation and referral networks.",
+      "Specializations (sports physiotherapy, neuro-rehab, pediatric physiotherapy) significantly increase earning potential but require additional certification/masters.",
+      "Government jobs in physiotherapy are limited. AIIMS, government hospitals, and defense services do hire physiotherapists, but vacancies are scarce and competition is high. Don't plan your career around a government job."
+    ],
+    "salary": {
+      "entry": "₹15,000 - ₹25,000/month",
+      "mid": "₹35,000 - ₹80,000/month (5 years, own practice building or MPT specialist in hospital)",
+      "senior": "₹1 - ₹4 lakh/month (established private practice, sports team physiotherapist, or specialized rehab clinic owner)"
+    },
+    "career_outlook": {
+    "india": "Growing steadily. Demand is expanding across orthopedic care, sports medicine, elderly rehabilitation, post-COVID recovery, and neurological rehab. India's aging population and rising sports participation are both long-term demand drivers. Still underserved in tier-2 and tier-3 cities — which is both a challenge and an opportunity for those willing to set up there.",
+    "abroad": "Strong international scope, especially in UK, Australia, Canada, and Gulf countries. Each country requires its own licensing process — HCPC registration in the UK, AHPRA in Australia, regulatory body exams in Canada. The process takes time but is achievable with planning. Indian physiotherapists are actively hired abroad, particularly in geriatric care and rehabilitation."
+    },
+    "who_thrives": [
+      "People who enjoy hands-on, physical work and direct patient interaction",
+      "Those interested in human movement, biomechanics, and rehabilitation",
+      "Patient individuals comfortable with gradual, incremental patient progress"
+    ],
+    "who_regrets_it": [
+      "Students who chose BPT as a fallback after not qualifying for MBBS, without genuine interest in rehabilitation or movement science.",
+      "Those expecting MBBS-level income or social status from a physiotherapy degree.",
+      "Anyone who underestimated the physical demands — you are on your feet performing manual treatment for most of the day.",
+      "People who need fast financial returns — private practice income builds slowly over several years.",
+      "Those who stayed generalist and didn't specialize — BPT without MPT or additional certification limits both income and career options significantly."
+    ],
+    "why_people_love_it": [
+      "Deeply personal, rewarding work — helping someone regain movement after an injury or surgery is one of the most tangible impacts a healthcare professional can have",
+      "Growing field with genuine demand — sports medicine, elderly care, and post-surgical rehab are all expanding rapidly in India",
+      "Good work-life balance compared to MBBS/BDS — mostly scheduled appointments, rarely emergency on-call",
+      "Private practice is viable and financially rewarding once established, with relatively low setup costs compared to dentistry"
+    ],
+    "before_you_commit": [
+    "Shadow a physiotherapist in both a hospital department and a private clinic on separate days — the two environments are very different and you should know which suits you.",
+    "Observe at least one neurological rehabilitation session and one orthopedic session. The clinical complexity will tell you more than any brochure.",
+    "Talk to physiotherapists who are 5-10 years into their career, not fresh graduates. Ask specifically about income growth, specialization decisions, and whether they'd choose it again.",
+    "Research the difference between BPT, MPT, and sports physiotherapy certifications before deciding — your long-term options depend heavily on which path you take after graduation.",
+    "Be honest with yourself about physical stamina. Visit a busy physiotherapy clinic and watch a full morning of sessions. If the pace and physicality feel right, that's a good sign."
+  ],
+    "real_experiences": [
+    {
+      "source": "Practicing physiotherapist, sports specialty (LinkedIn)",
+      "quote": "Started at ₹18,000 a month in a hospital. Spent 3 years building skills and contacts, did a sports physio certification, started working with a local cricket academy. Now I have my own clinic and consult with two sports teams. Income is ₹1.2 lakh a month. It took 7 years to get here, but I genuinely love the work.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "BPT is a solid career if you know what you're getting into. The first 3 years are financially rough and physically tiring. I'm 5 years in, running a small clinic, making decent money. Not glamorous, but stable and genuinely satisfying. Specialization was the turning point — general BPT alone wasn't enough.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "I chose BPT because I didn't clear NEET. Four years later, I'm qualified but unmotivated. I don't dislike the work, but I don't feel connected to it either. The patients are wonderful, but I spend my evenings wondering if I'd have been more fulfilled elsewhere. I wish I'd been more honest with myself before choosing.",
+      "url": "https://quora.com"
+    }
+  ],
+"choose_if": [
+  "You enjoy hands-on, physical work and direct patient interaction.",
+  "You're interested in human movement, rehabilitation, and sports medicine.",
+  "You're patient and comfortable with gradual, incremental patient progress.",
+  "You want good work-life balance compared to other healthcare careers."
+],
+"avoid_if": [
+  "You chose it as a fallback after not qualifying for MBBS.",
+  "You expect MBBS-level income or social status.",
+  "You underestimate the physical demands of being on your feet all day.",
+  "You need fast financial returns — private practice income builds slowly."
+],
+  "related_careers": ["mbbs", "bds", "paramedical_nursing"]
+  },
+
+     {
     "id": "radiology_tech",
     "name": "Radiology / Medical Imaging (B.Sc)",
     "category": "paramedical",
@@ -786,227 +478,26 @@
       "url": "https://reddit.com/r/india"
     }
   ],
+"choose_if": [
+  "You're interested in medical technology and imaging equipment.",
+  "You enjoy precise, technical, equipment-based work.",
+  "You want a good paramedical salary without an extremely long education.",
+  "You're fine with shift-based schedules including trauma and emergency imaging."
+],
+"avoid_if": [
+  "You expect to read and diagnose scans — that's the radiologist's job.",
+  "You're uncomfortable with shift work and 24/7 scheduling.",
+  "You're anxious about radiation exposure despite safety protocols.",
+  "You want a clinically dynamic role — much of this work is technical and procedural."
+],
   "related_careers": [
     "mbbs",
     "paramedical_nursing",
     "paramedical_physiotherapy"
   ]
 },
-{
-  "id": "bca_mca",
-  "name": "BCA → MCA",
-  "category": "engineering",
-  "tagline": "The longer road to the same destination — if you're willing to walk it.",
-  "overview": "BCA (Bachelor of Computer Applications) is a 3-year undergraduate degree focused on programming and software. MCA (Master of Computer Applications) is a 2-year postgraduate degree that deepens technical knowledge and, more importantly, changes how employers see you. Here's the hard truth: BCA alone is treated differently from B.Tech by most hiring systems. Product companies and good engineering teams often filter out BCA-only graduates before looking at their skills. An MCA is the bridge that fixes this — with both degrees, you're competing on roughly equal footing with B.Tech graduates for the same software roles. This isn't a shortcut. It's 5 years (3+2) to reach the same starting line that a B.Tech student reaches in 4. But if B.Tech wasn't an option after Class 12, BCA + MCA is a legitimate second path into the same industry.",
-  "career_outlook": {
-    "india": "The IT services industry (TCS, Infosys, Wipro, Cognizant) continues to hire BCA graduates at scale, but at the lower end of the pay spectrum. Product companies remain difficult to enter without an MCA or a standout portfolio. AI is raising the bar for junior roles — boilerplate coding is increasingly automated, and companies expect stronger problem-solving skills than they did 5 years ago. BCA-only graduates will find this market increasingly tough. BCA+MCA graduates from strong institutions (NITs through NIMCET, top state universities) continue to have solid opportunities.",
-    "abroad": "Viable for experienced MCA graduates. Canada (Express Entry) and Germany (Job Seeker Visa) have clear pathways. The MCA satisfies the 16-year education requirement for US master's programs and H1B eligibility — BCA alone does not. Remote work for foreign companies while based in India is a growing option for strong developers regardless of degree."
-  },
-  "salary": {
-    "entry": "₹2.5 - ₹4.5 LPA (BCA only, service company) / ₹4 - ₹8 LPA (BCA+MCA, varies heavily by MCA college tier)",
-    "mid": "₹8 - ₹18 LPA (5 years, strong skills, product or mid-size company)",
-    "senior": "₹18 - ₹40 LPA (8-12 years, senior engineer or tech lead at a strong company)"
-  },
-  "why_people_love_it": [
-    "It's a genuine second chance — if B.Tech wasn't reachable after Class 12, BCA + MCA is a proven alternative that can take you to the same roles.",
-    "The work itself is creative — building software, solving real problems, seeing something you built used by actual people. That satisfaction doesn't depend on your degree name.",
-    "Skill eventually outweighs pedigree. After 3-4 years of experience, what you can build matters more than where you studied. A strong GitHub profile can open doors your degree alone couldn't.",
-    "MCA from a top NIT or university resets your career trajectory. Many NIT MCA graduates land roles comparable to B.Tech graduates from good engineering colleges."
-  ],
-  "what_nobody_tells_you": [
-    "BCA programs at many colleges teach outdated curricula. The frameworks and languages in your syllabus may already be irrelevant by graduation. Self-learning isn't optional — it's the only way to stay employable.",
-    "The MCA entrance itself is a competitive filter. NIMCET (for NITs) has acceptance rates below 5% in some years. A 'backup MCA college' may not open the doors you're hoping for — the college tier matters for MCA even more than it did for BCA.",
-    "The 5-year path has a real financial cost beyond just fees. You start earning a year later than a B.Tech graduate. That's one year of lost salary plus an extra year of expenses — the gap compounds.",
-    "Service company placements for BCA graduates often come with bonds (1-2 years). Leaving before the bond ends means paying ₹1-2 lakhs as penalty. Read the fine print before accepting an offer.",
-    "Your first promotion at a service company depends more on certification completion and tenure than on coding ability. Strong developers often stay longer than they should because switching requires clearing the degree filter all over again at the next company."
-  ],
-  "who_thrives": [
-    "Self-learners who don't wait for college to teach them what they need — the students who succeed in this path are the ones building projects, contributing to open source, and learning modern frameworks on their own from year one.",
-    "People who view BCA as a deliberate stepping stone, not a compromise. Those who plan for MCA from day one and use their BCA years to build the foundations that will make MCA count.",
-    "Students comfortable with a delayed payoff — the 5-year path means entering the job market later, but the long-term ceiling is similar to B.Tech graduates if you play it right.",
-    "Those who measure themselves by their portfolio and coding ability, not their degree name. This path rewards skill over credential eventually — but it takes longer to get there."
-  ],
-  "who_regrets_it": [
-    "Students who assumed BCA alone would open the same doors as B.Tech and never pursued MCA — they often discover the gap too late, after years of being filtered out of roles they could do.",
-    "Those who coasted through college without building projects or a portfolio, expecting the degree to do the work. BCA without tangible coding output leaves you with very little in a competitive market.",
-    "People who dislike programming but chose BCA because 'tech pays well.' The daily work is reading documentation, fixing bugs, and writing code. If that doesn't interest you, no degree will fix the mismatch.",
-    "Students who chose BCA specifically to avoid mathematics, then discovered that AI, data science, and the most interesting engineering roles all require the math they tried to escape.",
-    "Anyone who saw BCA as the 'easier' alternative to engineering without actually wanting to build software — the work itself isn't easier, just the admission process."
-  ],
-  "before_you_commit": [
-    "Check the actual placement record of the specific BCA college you're considering — median package, company names, and the percentage of students who actually got placed. Don't rely on the brochure.",
-    "Open a GitHub account and try building something — a calculator app, a to-do list, anything functional. If the process of debugging and fixing broken code frustrates you more than it interests you, that's important information.",
-    "Look up NIMCET cutoffs for the NITs. If your math isn't strong enough to consider NIT MCA, research state-level MCA entrance exams and their placement outcomes. Your MCA options depend on your BCA choices.",
-    "Talk to a BCA graduate who is 3-4 years into their career without an MCA — ask about their current role, salary growth, and how often their degree has come up in interviews.",
-    "Compare the total cost of 3 years BCA + 2 years MCA against 4 years B.Tech at a mid-tier college. Include tuition, living expenses, and one year of lost early salary. The numbers may surprise you."
-  ],
-  "real_experiences": [
-    {
-      "source": "Reddit r/developersIndia",
-      "quote": "Did BCA from a decent college, then MCA from an NIT through NIMCET. Currently working as a software engineer at a product company at ₹16 LPA. The MCA got my resume past filters that had been blocking me for years. But the actual coding skills came from building projects on my own — not from either degree. The degree opened the door, my portfolio got me through it.",
-      "url": "https://reddit.com/r/developersIndia"
-    },
-    {
-      "source": "Reddit r/Indian_Academia",
-      "quote": "BCA from a tier-3 college, MCA from a state university. Took me 5 years instead of 4, and my first job after MCA was still a service company at ₹4.5 LPA. Switched to a mid-size product company after 2 years of grinding LeetCode and building side projects. Currently at ₹9 LPA. It worked out, but I'd be lying if I said the extra year and the degree filter struggle weren't real. If B.Tech was an option, take it. If it wasn't, this path works — just know what you're signing up for.",
-      "url": "https://reddit.com/r/Indian_Academia"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "Did BCA from a local college, didn't pursue MCA. Spent 4 years at a service company doing maintenance and support work at ₹3.2 LPA. Kept applying to product companies but my resume wouldn't get past the first screening. Finally enrolled in an MCA as a working professional. Should have done it right after BCA instead of trying to make the 3-year degree work on its own. Thought I could outperform the filter — I couldn't.",
-      "url": "https://reddit.com/r/india"
-    }
-  ],
-  "related_careers": [
-    "cs_engineering",
-    "design",
-    "mba"
-  ]
-},
 
-    {
-  "id": "bba",
-  "name": "BBA",
-  "category": "commerce",
-  "tagline": "A degree that works best as a foundation — not a finish line.",
-  "overview": "BBA (Bachelor of Business Administration) is a 3-year undergraduate degree covering marketing, finance, HR, and operations. It's designed as a broad introduction to how businesses run. The honest reality: BBA alone doesn't open many doors. Without an MBA, most graduates start in sales, support, or generic operations roles at ₹2.5–4 LPA. College tier determines outcomes more than any other factor — an IIM IPM graduate and a tier-3 private college graduate hold the same degree name but face completely different placement realities. The BBA's real value is as preparation for an MBA. If that's not your plan, you need to think carefully about whether this degree justifies its cost.",
-  "career_outlook": {
-    "india": "The BBA market is sharply bifurcated. Top-tier programs (IIM IPM, NMIMS, Symbiosis, Shaheed Sukhdev) place graduates at ₹8–25 LPA in consulting, finance, and general management roles. The remaining majority — from tier-2 and tier-3 colleges — face a crowded market where the degree alone carries little weight. Most entry-level opportunities are in sales, business development, and customer operations. AI and automation are reducing entry-level analytical roles, making it harder to move from execution to strategy without an MBA.",
-    "abroad": "A BBA alone has limited value abroad. Most international master's programs in management expect a BBA as a base qualification, but the degree itself rarely qualifies you for skilled work visas. The typical path is BBA → MBA abroad or BBA → work experience in India → MBA abroad."
-  },
-  "salary": {
-    "entry": "₹2.5 - ₹4 LPA (most graduates from tier-2/3 colleges) / ₹8 - ₹25 LPA (top-tier programs like IIM IPM)",
-    "mid": "₹5 - ₹12 LPA (5 years, without MBA) / ₹15 - ₹30 LPA (5 years, with top MBA)",
-    "senior": "₹12 - ₹25 LPA (8-12 years, without MBA, capped by lack of postgraduate degree) / ₹30 LPA+ (with MBA)"
-  },
-  "why_people_love_it": [
-    "It gives you structured exposure to business concepts you wouldn't otherwise encounter until years into a career — marketing, finance, strategy, operations — all in one place.",
-    "The degree provides a clear, accepted pathway into an MBA. Top B-schools treat BBA graduates as natural applicants, and the curriculum aligns well with CAT/XAT/GMAT preparation.",
-    "The flexibility is real — BBA graduates have entered consulting, banking, marketing, operations, HR, and entrepreneurship. It doesn't lock you into one track the way engineering or CA does.",
-    "Top-tier BBA programs offer campus placements that rival good engineering colleges, with access to companies and roles that wouldn't be available through any other undergraduate degree."
-  ],
-  "what_nobody_tells_you": [
-    "BBA is a generalist degree that doesn't make you job-ready in any specific function. Companies hire for skills, not for knowing what a BCG matrix or Porter's Five Forces is. Excel, SQL, CRM tools, and data analysis — the skills that actually get you hired — are rarely taught in the curriculum.",
-    "Your college tier determines your starting point more than your grades, your internships, or your interview performance. A top-tier BBA graduate and a tier-3 BBA graduate have the same degree on paper and completely different career trajectories from day one.",
-    "Most entry-level roles open to BBA graduates from non-top colleges are in sales and business development — high pressure, variable pay tied to targets, and high attrition. Companies frame these as 'management trainee' roles, but the day-to-day reality is selling.",
-    "An MBA is effectively required to reach mid-to-senior management roles. If you can't pursue one — due to finances, academics, or family circumstances — the BBA's long-term value drops significantly, and you'll need to differentiate yourself through certifications and experience instead.",
-    "Career progression without an MBA is slower and hits a ceiling earlier. In many companies, senior roles require a postgraduate degree as a qualification, not just a preference. You'll watch MBA hires overtake you within 2-3 years of joining, even if you started at the same level."
-  ],
-  "who_thrives": [
-    "Students who see BBA as deliberate preparation for an MBA — using the three years to build a strong profile, prepare for CAT/XAT, and gain clarity on which business function they want to pursue.",
-    "Natural networkers who enjoy working with people and are comfortable in client-facing, sales, or relationship management roles — these are the most common entry points, and liking the work makes a big difference.",
-    "Self-starters who pursue internships, certifications, and real-world projects alongside the degree rather than waiting for the curriculum to make them employable.",
-    "Students at top-tier BBA programs who have access to campus placements that justify the fees — for them, the degree opens doors that few other undergraduate programs can."
-  ],
-  "who_regrets_it": [
-    "Students who paid premium fees at a tier-3 private college assuming the BBA brand alone would lead to a management job, then found themselves competing for sales roles at ₹2.5 LPA with B.Com and BA graduates.",
-    "Those who chose BBA over B.Com thinking it was more 'prestigious,' without understanding that B.Com plus a professional certification (CA, CFA, ACCA) often leads to better career outcomes than a standalone BBA.",
-    "People who pursued BBA because they didn't know what else to do — a generalist degree without a clear direction is a weak position in the job market, and BBA doesn't fix uncertainty, it just postpones it.",
-    "Students who assumed a BBA would automatically make them eligible for top MBA programs, not realizing that CAT scores, work experience, and a strong profile matter far more than what you studied in undergrad.",
-    "Anyone who expected a 'management' degree to lead to a 'manager' role at age 21, without understanding that management is something you earn after years of execution experience — no degree skips that."
-  ],
-  "before_you_commit": [
-    "Compare the total fee of the BBA college you're considering against its median placement package — not the highest package, the median. If the numbers don't add up, they never will.",
-    "Talk to a BBA graduate who is 3-4 years out and did NOT pursue an MBA. Ask about their current role, salary, and whether they'd choose the same path again.",
-    "Spend a week learning basic Excel and try building a simple profit-loss statement for a hypothetical business. If the process feels tedious, a business degree may not match what you actually enjoy doing.",
-    "Research the entrance exams and cutoffs for the MBA programs you might target later (CAT, XAT, GMAT). Check if the BBA curriculum at your chosen college actually aligns with the quantitative and verbal sections of these exams.",
-    "If you're choosing between BBA and B.Com, look up placement reports for both at the colleges you're considering. Don't assume BBA is 'better' — look at the actual outcomes for graduates from each program."
-  ],
-  "real_experiences": [
-    {
-      "source": "LinkedIn",
-      "quote": "Did BBA from a top college, used the three years to prepare for CAT, got into an IIM. Currently working in consulting at ₹25 LPA. The BBA itself didn't get me here — but it gave me the foundation and the time to figure out what I wanted, which was worth more than any course content.",
-      "url": "https://linkedin.com"
-    },
-    {
-      "source": "Reddit r/Indian_Academia",
-      "quote": "BBA from a mid-tier college. Did a few solid internships during the degree. Landed a role in operations at a mid-size company at ₹3.8 LPA. Three years in, I'm at ₹5.5 LPA. It's fine, not great. My B.Com friends who did CA inter are earning similar or more with less fee paid. If I could do it again, I'd pick B.Com plus certifications instead of BBA.",
-      "url": "https://reddit.com/r/Indian_Academia"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "Did BBA from a private college that promised 'strong placements.' Paid ₹3+ lakhs per year in fees. When placement season came, the only offers were sales roles at ₹2.4 LPA. I spent two years in a job I could have gotten with any degree, paying off a loan for a credential that didn't open doors my B.Com classmates didn't already have. Now doing an MBA from a tier-2 institute, hoping it resets things.",
-      "url": "https://reddit.com/r/india"
-    }
-  ],
-  "related_careers": [
-    "ca",
-    "mba",
-    "law"
-  ]
-},
-      {
-  "id": "bcom",
-  "name": "B.Com",
-  "category": "commerce",
-  "tagline": "A degree that opens doors — but only if you bring the key.",
-  "overview": "B.Com (Bachelor of Commerce) is a 3-year undergraduate degree covering accounting, finance, taxation, and economics. It's the most common commerce path after Class 12, and for good reason — it's affordable, widely available, and keeps your options open. The honest truth: a plain B.Com alone positions you for entry-level roles at ₹2–4 LPA. Its real value is as a foundation — combined with professional certifications (CA, CFA, ACCA, CMA) or an MBA, it becomes a genuinely strong credential. College brand matters less than what you add to the degree, which makes B.Com more forgiving than BBA in this regard. But if you graduate with just the degree and nothing extra, you'll be competing with lakhs of identical applicants for the same roles.",
-  "career_outlook": {
-    "india": "Steady demand for commerce graduates in accounting, audit, banking, and finance — but supply far exceeds demand at the entry level. The market heavily rewards specialization: a CA-qualified professional and a plain B.Com graduate exist in completely different salary brackets despite sharing the same undergraduate degree. Automation is reducing entry-level bookkeeping and data entry roles, making it harder to build a career on routine accounting work alone. Government jobs (bank PO, SSC CGL) remain a major employer of B.Com graduates, but these require separate exam preparation.",
-    "abroad": "A B.Com alone has limited international value. Combined with certifications like ACCA (UK), CPA (US), or CFA, it becomes globally portable. Canada, Australia, and the UK have clear pathways for accountants and auditors. The US H1B path is more competitive and typically requires an MBA or CPA."
-  },
-  "salary": {
-    "entry": "₹2 - ₹4 LPA (plain B.Com, tier-2/3 college) / ₹4 - ₹8 LPA (top DU colleges or with CA inter/CFA Level 1)",
-    "mid": "₹5 - ₹10 LPA (5 years, without professional certification) / ₹10 - ₹20 LPA (5 years, with CA/CFA/ACCA)",
-    "senior": "₹10 - ₹18 LPA (8-12 years, without certification, capped) / ₹20 - ₹50 LPA+ (with CA or CFA charter)"
-  },
-  "why_people_love_it": [
-    "It's a low-risk, affordable degree that keeps every door open — you can pivot to CA, CFA, ACCA, MBA, banking, or government jobs without having committed to any one path at age 17.",
-    "The skills are genuinely useful in daily life — understanding taxes, investments, budgeting, and how money works is practical knowledge that most graduates from other streams don't have.",
-    "Combined with a professional certification, B.Com graduates can reach salary brackets that rival engineering and medicine — a CA or CFA charterholder with a B.Com background can earn as much as any top-tier professional.",
-    "The degree is widely respected for government job eligibility. Most competitive exams (UPSC, SSC CGL, IBPS PO) accept B.Com graduates, and the commerce background gives an advantage in the economics and accounting sections."
-  ],
-  "what_nobody_tells_you": [
-    "The B.Com curriculum is heavily theoretical and exam-focused — most colleges don't teach the tools employers actually use, like Tally Prime, Advanced Excel, Power BI, or GST filing software. You'll need to learn these on your own or through certification courses.",
-    "Campus placements at average B.Com colleges are skewed toward BPO, sales, and data entry roles, not the finance and accounting jobs students imagine when they choose the degree. Core finance roles typically go to students from top colleges or those with professional certifications.",
-    "Even Big 4 firms hire generic B.Com graduates mostly for backend processing and audit support work — the interesting advisory, consulting, and strategy roles go to CA-qualified or MBA candidates, even within the same firm.",
-    "Government exams (bank PO, SSC CGL, UPSC) are a common destination for B.Com graduates, but they require 1-2 years of dedicated preparation that your degree won't help with. Many students treat B.Com as a 'safety degree' while preparing for these exams, which means three years of divided focus.",
-    "The salary gap between a plain B.Com graduate and one with a professional certification widens every year. At entry level, the difference might be ₹1-2 LPA. By year 10, a CA or CFA charterholder can earn 3-5x more than an uncertified peer doing similar work."
-  ],
-  "who_thrives": [
-    "Students who treat B.Com as a foundation and pursue a professional certification alongside it — CA, CFA, ACCA, or CMA. The combination of a degree and a credential is significantly more valuable than either alone.",
-    "People who enjoy methodical, detail-oriented work with numbers — accounting, auditing, tax compliance, and financial analysis all reward precision and patience over speed and creativity.",
-    "Students who use B.Com's flexibility to explore different paths — a few months of internship in audit, a few months in banking, a few months in a startup — and decide which direction fits before committing to a specialization.",
-    "Those who see B.Com as a stepping stone into government jobs (banking, civil services) and use the three years to prepare for competitive exams while earning a degree that qualifies them for those exams."
-  ],
-  "who_regrets_it": [
-    "Students who hate repetitive desk work and detailed number-crunching but chose B.Com because it was the 'default commerce option' — the daily reality of accounting and audit work is detailed, process-oriented, and rarely glamorous.",
-    "Students who wanted to pursue CA alongside B.Com but couldn't clear the exams and had no backup plan — the gap between a CA's career trajectory and a plain B.Com graduate's trajectory widens every year, and the disappointment is amplified by how much time was invested.",
-    "People who needed a high starting salary immediately after graduation — B.Com alone typically starts at ₹2-4 LPA, and without certifications, salary growth is slow. The degree doesn't reward urgency.",
-    "Extroverts who thrive on client interaction, presentations, and strategic work — B.Com leads naturally toward backend, process-oriented roles, and breaking into client-facing management roles requires an additional MBA or several years of relationship-building.",
-    "Students who coasted through three years assuming the degree alone would carry them, graduating with no internships, no certifications, and no technical skills — they enter a market where they're indistinguishable from hundreds of thousands of other applicants."
-  ],
-  "before_you_commit": [
-    "By the end of your first year, decide whether you're pursuing a professional certification (CA, CFA, ACCA, CMA) alongside B.Com or preparing for government exams — the single biggest predictor of your B.Com outcome is what you add to it, and you can't afford to wait until graduation to figure this out.",
-    "Spend a week learning basic Tally Prime or Advanced Excel through YouTube tutorials. If the process of reconciling numbers and building financial statements feels tedious rather than satisfying, reconsider whether a commerce career matches how your mind works.",
-    "Talk to a B.Com graduate who is 3-4 years out without any professional certification — ask about their salary, their role, and whether they'd choose the same path again. Then talk to a CA or CFA charterholder and ask the same questions. The contrast will tell you everything.",
-    "Research the CA Foundation or CFA Level 1 syllabus and attempt a few practice questions. You don't need to commit, but understanding what these certifications actually test will help you decide whether to pursue them alongside your degree.",
-    "Check the placement record of the specific college you're considering — ask for the median package, not the highest. Compare it against the fee. If the numbers don't make sense for a 3-year investment, consider a more affordable option and invest the difference in certifications."
-  ],
-  "real_experiences": [
-    {
-      "source": "LinkedIn",
-      "quote": "Did B.Com from a regular college, cleared CFA Level 1 in my second year and Level 2 in my third year. Joined a mid-size investment firm as a research analyst at ₹5.5 LPA right after graduation. Three years in, I'm at ₹9 LPA and working toward the charter. The B.Com gave me the foundation, but the CFA is what opened doors.",
-      "url": "https://linkedin.com"
-    },
-    {
-      "source": "Reddit r/Indian_Academia",
-      "quote": "B.Com from a DU college. Got placed in accounts payable at a multinational at ₹3.5 LPA through campus placement. It's stable, decent pay for the work. But most of my growth has come from learning Excel and accounting software on the job — not from anything I studied in three years of college. B.Com gives you a base, but you have to build the house yourself.",
-      "url": "https://reddit.com/r/Indian_Academia"
-    },
-    {
-      "source": "Reddit r/india",
-      "quote": "Did B.Com from a local college, didn't pursue CA or any certification because I wasn't sure what I wanted. Four years after graduating, I'm still in the same clerical accounting role at ₹2.8 LPA that I started in. My friends who cleared CA are earning 3-4x what I do. I should have either committed to a professional course or used college time to build actual skills. A plain B.Com doesn't take you far on its own.",
-      "url": "https://reddit.com/r/india"
-    }
-  ],
-  "related_careers": [
-    "ca",
-    "bba",
-    "mba"
-  ]
-},
-    {
+     {
   "id": "zoology",
   "name": "B.Sc. Zoology",
   "category": "life_sciences",
@@ -1071,6 +562,18 @@
       "url": "https://reddit.com/r/india"
     }
   ],
+"choose_if": [
+  "You're genuinely fascinated by animal biology and the natural world.",
+  "You enjoy hands-on lab work, fieldwork, and patient observation.",
+  "You're comfortable with a long timeline — research careers take 8-12 more years.",
+  "You have a clear plan for further study (M.Sc., PhD) or an alternative direction (MBA, govt exams)."
+],
+"avoid_if": [
+  "You chose Zoology only because you couldn't get into MBBS.",
+  "You expect a stable, well-paying job immediately after a B.Sc. alone.",
+  "You dislike lab work, dissection, and detailed practical observation.",
+  "You need a clear, structured career path with predictable timelines."
+],
   "related_careers": [
     "mbbs",
     "pharmacy",
@@ -1142,9 +645,689 @@
       "url": "https://reddit.com/r/india"
     }
   ],
+"choose_if": [
+  "You're genuinely curious about plants, ecosystems, and agriculture.",
+  "You enjoy fieldwork and being outdoors regularly.",
+  "You're comfortable with a slow-building career requiring postgraduate study.",
+  "You're willing to specialize early in agriculture, forestry, pharma, or environmental consulting."
+],
+"avoid_if": [
+  "You chose it assuming a government job is guaranteed with just a B.Sc.",
+  "You dislike fieldwork, outdoor conditions, and physical work.",
+  "You expect a clear corporate or industry career path immediately.",
+  "You drifted into it without researching what professional botanists actually do."
+],
   "related_careers": [
     "zoology",
     "pharmacy"
+  ]
+},
+
+    {
+    "id": "cs_engineering",
+    "name": "Computer Science Engineering",
+    "category": "engineering",
+    "tagline": "The highest ceiling in Indian engineering. Also the most brutal filter.",
+    "overview": "B.Tech in Computer Science is a 4-year degree entered through JEE, state exams, or direct admission. It opens paths into software development, data science, product management, DevOps, and more. The honest reality: your college tier determines your starting point far more than your degree does. An IIT or NIT graduate and a tier-3 college graduate hold the same degree on paper — but face completely different hiring realities. If you're in or likely to get into a top college, CSE is one of the best decisions you can make. If you're looking at a mid or lower-tier college, the degree alone won't get you far — your portfolio, skills, and self-learning discipline will. This is not a career where the institution does the work for you.",
+    "what_nobody_tells_you": [
+      "Most CS graduates don't land software jobs. Roughly 60-70% of B.Tech CS graduates end up in IT service companies doing support, testing, or non-coding work at ₹3.5-5 LPA — or outside tech entirely. Core engineering roles go to a smaller group with strong DSA, internships, and portfolios.",
+      "College tier is a hard filter. Most product companies — Google, Microsoft, Atlassian, Zepto, PhonePe — screen by college before reading your resume. If you're not from a recognized institution, you need referrals or exceptional open-source/project work to bypass that filter.",
+      "The curriculum is almost irrelevant. What matters in interviews and on the job — Data Structures & Algorithms, system design, real frameworks — is not taught properly in 90% of colleges. You will learn it on your own or not at all.",
+      "AI is not replacing software engineers yet, but it is raising the bar. Junior tasks like writing boilerplate code and fixing simple bugs are increasingly automated. What's valued now: problem-solving, architecture, and judgment — skills that take years to build.",
+      "The LeetCode grind is real and ongoing. To get into good product companies, you need to solve hundreds of DSA problems. Even experienced engineers practice this to switch jobs. If you hate algorithmic problem-solving, job hunting in this field will be miserable.",
+      "Burnout is common and underreported. Fast-paced startups and FAANG-adjacent companies often demand 10-12 hour days. Many developers quietly burn out by their late 20s. Work-life balance varies enormously by company — some are excellent, many are not.",
+      "Layoffs are real. The 2022-2024 global tech downturn laid off hundreds of thousands of engineers worldwide, including many in Indian IT. Tech is not the recession-proof guarantee it was once marketed as.",
+      "Freelancing is possible but not passive. Indian developers do earn well freelancing internationally, but building a reliable client base takes 1-2 years of active effort and a strong portfolio. It is not a quick fallback."
+    ],
+    "salary": {
+      "entry": "₹3.5 - ₹12 LPA (realistic for most graduates from tier-2 and tier-3 colleges); ₹20-50 LPA for IIT/NIT top placements",
+      "mid": "₹12 - ₹30 LPA (5 years, strong skills, mid-level role at product or mid-size company)",
+      "senior": "₹35 - ₹80 LPA (8-12 years, senior/staff engineer or engineering manager at a strong company)"
+    },
+    "career_outlook": {
+      "india": "Demand is high but so is supply — India produces over 1.5 million engineering graduates annually, with a large portion in CS. Standing out requires either a strong college brand, exceptional skills demonstrated through projects and internships, or both. Startup hiring has slowed since 2022 but is recovering. Long-term demand for software talent in India remains strong, driven by SaaS, fintech, and global delivery.",
+      "abroad": "Excellent for strong engineers. Indian CS graduates are among the most sought-after internationally — USA (H1B), Canada (Express Entry), Germany (Job Seeker Visa), UK (Skilled Worker Visa), and Australia all have clear pathways. The challenge is the H1B lottery system for the US, which is unpredictable. Canada and Germany have become more popular alternatives. Remote work for foreign companies while based in India is increasingly common and pays in foreign currency."
+    },
+    "who_thrives": [
+      "People who genuinely enjoy building things — not just the idea of building, but sitting down and actually writing code for hours.",
+      "Disciplined self-learners who don't wait for college to teach them what they need to know.",
+      "Those who can handle ambiguity — requirements change, systems break, and the 'right' solution often doesn't exist.",
+      "People who view learning as permanent, not something that ends after graduation.",
+      "Those who can communicate clearly — underrated skill that separates average from senior engineers."
+    ],
+    "who_regrets_it": [
+      "Students who chose CS for the salary without genuinely enjoying coding — they find the daily work tedious and job hunting demoralising.",
+      "Graduates from tier-3 colleges who assumed a CS degree would do the work for them and didn't build skills or a portfolio independently.",
+      "People who dislike sedentary, screen-heavy work — this is not a physically active or highly social job by default.",
+      "Those who expected stable, predictable careers — tech has cycles of hiring booms and layoff waves, and that won't change.",
+      "Anyone who gets into the field chasing FAANG salaries without the patience for years of competitive grinding to reach that level."
+    ],
+    "why_people_love_it": [
+      "You can build something from nothing — a product used by thousands, with just a laptop and internet connection.",
+      "Highest salary ceiling of any undergraduate engineering degree in India, especially if you reach senior levels at product companies.",
+      "Genuinely global career — skills transfer across countries, remote work is normalized, and you can work for international companies from India.",
+      "Fast feedback: you write code, ship it, and see real users interact with it — the iteration cycle is unlike most other professions.",
+      "The field rewards merit more than credentials over time — a strong GitHub profile and project history can outweigh college pedigree after 2-3 years of experience."
+    ],
+    "before_you_commit": [
+      "Write code for 30 days straight — not tutorials, actual projects. If you find yourself dreading it after two weeks, that's important information.",
+      "Build 2-3 real projects and put them on GitHub before choosing this career. The process will tell you more than any college counsellor can.",
+      "Talk to developers 3-5 years into their careers — not freshers, not placement success stories. Ask them what their daily work actually looks like.",
+      "Research placement data for the specific college you're likely to attend, not the college's marketing brochure. Ask for company names and actual salary figures.",
+      "Understand the difference between service companies (TCS, Infosys, Wipro) and product companies (Google, Zepto, Razorpay) — they are very different working environments and salary bands.",
+      "If you're not getting into a tier-1 or tier-2 college, think carefully about whether a CS degree from a weak institution plus 4 years of self-learning beats an alternative path."
+    ],
+    "real_experiences": [
+      {
+        "source": "Reddit r/developersIndia",
+        "quote": "3 years at TCS, ₹4.2 LPA, doing the same support ticket work every day. Spent 6 months grinding Leetcode on nights and weekends, cracked an interview at a mid-size product company. Now at ₹18 LPA. The system is broken but you can navigate it — you just have to be willing to do the work nobody told you about.",
+        "url": "https://reddit.com/r/developersIndia"
+      },
+      {
+        "source": "LinkedIn (senior engineer, 8 years experience)",
+        "quote": "CS from an NIT opened every door for me. Internships from 2nd year, placed at ₹28 LPA, now at ₹55 LPA at 30. But I watch my friends from tier-3 colleges struggle even with good skills because they can't get past the resume filter. The college gap is real and it compounds.",
+        "url": "https://linkedin.com"
+      },
+      {
+        "source": "Reddit r/india",
+        "quote": "I chose CS because everyone said it was safe. I hate coding. Four years of pretending to enjoy it, a mediocre placement, and now I'm doing a job I don't care about. I should have explored what I actually liked before defaulting to the 'obvious' choice.",
+        "url": "https://reddit.com/r/india"
+      }
+    ],
+"choose_if": [
+  "You genuinely enjoy building things and writing code for hours.",
+  "You're a disciplined self-learner who doesn't wait for college to teach you.",
+  "You're comfortable with ambiguity and constant change.",
+  "You view learning as permanent — the field evolves constantly."
+],
+"avoid_if": [
+  "You chose CS only for the salary without enjoying coding.",
+  "You expect a degree from any college to do the work for you.",
+  "You dislike sedentary, screen-heavy work.",
+  "You want stable, predictable career progression — tech has boom and layoff cycles."
+],
+    "related_careers": [
+      "mba",
+      "ca",
+      "design"
+    ]
+  },
+    {
+  "id": "bca_mca",
+  "name": "BCA → MCA",
+  "category": "engineering",
+  "tagline": "The longer road to the same destination — if you're willing to walk it.",
+  "overview": "BCA (Bachelor of Computer Applications) is a 3-year undergraduate degree focused on programming and software. MCA (Master of Computer Applications) is a 2-year postgraduate degree that deepens technical knowledge and, more importantly, changes how employers see you. Here's the hard truth: BCA alone is treated differently from B.Tech by most hiring systems. Product companies and good engineering teams often filter out BCA-only graduates before looking at their skills. An MCA is the bridge that fixes this — with both degrees, you're competing on roughly equal footing with B.Tech graduates for the same software roles. This isn't a shortcut. It's 5 years (3+2) to reach the same starting line that a B.Tech student reaches in 4. But if B.Tech wasn't an option after Class 12, BCA + MCA is a legitimate second path into the same industry.",
+  "career_outlook": {
+    "india": "The IT services industry (TCS, Infosys, Wipro, Cognizant) continues to hire BCA graduates at scale, but at the lower end of the pay spectrum. Product companies remain difficult to enter without an MCA or a standout portfolio. AI is raising the bar for junior roles — boilerplate coding is increasingly automated, and companies expect stronger problem-solving skills than they did 5 years ago. BCA-only graduates will find this market increasingly tough. BCA+MCA graduates from strong institutions (NITs through NIMCET, top state universities) continue to have solid opportunities.",
+    "abroad": "Viable for experienced MCA graduates. Canada (Express Entry) and Germany (Job Seeker Visa) have clear pathways. The MCA satisfies the 16-year education requirement for US master's programs and H1B eligibility — BCA alone does not. Remote work for foreign companies while based in India is a growing option for strong developers regardless of degree."
+  },
+  "salary": {
+    "entry": "₹2.5 - ₹4.5 LPA (BCA only, service company) / ₹4 - ₹8 LPA (BCA+MCA, varies heavily by MCA college tier)",
+    "mid": "₹8 - ₹18 LPA (5 years, strong skills, product or mid-size company)",
+    "senior": "₹18 - ₹40 LPA (8-12 years, senior engineer or tech lead at a strong company)"
+  },
+  "why_people_love_it": [
+    "It's a genuine second chance — if B.Tech wasn't reachable after Class 12, BCA + MCA is a proven alternative that can take you to the same roles.",
+    "The work itself is creative — building software, solving real problems, seeing something you built used by actual people. That satisfaction doesn't depend on your degree name.",
+    "Skill eventually outweighs pedigree. After 3-4 years of experience, what you can build matters more than where you studied. A strong GitHub profile can open doors your degree alone couldn't.",
+    "MCA from a top NIT or university resets your career trajectory. Many NIT MCA graduates land roles comparable to B.Tech graduates from good engineering colleges."
+  ],
+  "what_nobody_tells_you": [
+    "BCA programs at many colleges teach outdated curricula. The frameworks and languages in your syllabus may already be irrelevant by graduation. Self-learning isn't optional — it's the only way to stay employable.",
+    "The MCA entrance itself is a competitive filter. NIMCET (for NITs) has acceptance rates below 5% in some years. A 'backup MCA college' may not open the doors you're hoping for — the college tier matters for MCA even more than it did for BCA.",
+    "The 5-year path has a real financial cost beyond just fees. You start earning a year later than a B.Tech graduate. That's one year of lost salary plus an extra year of expenses — the gap compounds.",
+    "Service company placements for BCA graduates often come with bonds (1-2 years). Leaving before the bond ends means paying ₹1-2 lakhs as penalty. Read the fine print before accepting an offer.",
+    "Your first promotion at a service company depends more on certification completion and tenure than on coding ability. Strong developers often stay longer than they should because switching requires clearing the degree filter all over again at the next company."
+  ],
+  "who_thrives": [
+    "Self-learners who don't wait for college to teach them what they need — the students who succeed in this path are the ones building projects, contributing to open source, and learning modern frameworks on their own from year one.",
+    "People who view BCA as a deliberate stepping stone, not a compromise. Those who plan for MCA from day one and use their BCA years to build the foundations that will make MCA count.",
+    "Students comfortable with a delayed payoff — the 5-year path means entering the job market later, but the long-term ceiling is similar to B.Tech graduates if you play it right.",
+    "Those who measure themselves by their portfolio and coding ability, not their degree name. This path rewards skill over credential eventually — but it takes longer to get there."
+  ],
+  "who_regrets_it": [
+    "Students who assumed BCA alone would open the same doors as B.Tech and never pursued MCA — they often discover the gap too late, after years of being filtered out of roles they could do.",
+    "Those who coasted through college without building projects or a portfolio, expecting the degree to do the work. BCA without tangible coding output leaves you with very little in a competitive market.",
+    "People who dislike programming but chose BCA because 'tech pays well.' The daily work is reading documentation, fixing bugs, and writing code. If that doesn't interest you, no degree will fix the mismatch.",
+    "Students who chose BCA specifically to avoid mathematics, then discovered that AI, data science, and the most interesting engineering roles all require the math they tried to escape.",
+    "Anyone who saw BCA as the 'easier' alternative to engineering without actually wanting to build software — the work itself isn't easier, just the admission process."
+  ],
+  "before_you_commit": [
+    "Check the actual placement record of the specific BCA college you're considering — median package, company names, and the percentage of students who actually got placed. Don't rely on the brochure.",
+    "Open a GitHub account and try building something — a calculator app, a to-do list, anything functional. If the process of debugging and fixing broken code frustrates you more than it interests you, that's important information.",
+    "Look up NIMCET cutoffs for the NITs. If your math isn't strong enough to consider NIT MCA, research state-level MCA entrance exams and their placement outcomes. Your MCA options depend on your BCA choices.",
+    "Talk to a BCA graduate who is 3-4 years into their career without an MCA — ask about their current role, salary growth, and how often their degree has come up in interviews.",
+    "Compare the total cost of 3 years BCA + 2 years MCA against 4 years B.Tech at a mid-tier college. Include tuition, living expenses, and one year of lost early salary. The numbers may surprise you."
+  ],
+  "real_experiences": [
+    {
+      "source": "Reddit r/developersIndia",
+      "quote": "Did BCA from a decent college, then MCA from an NIT through NIMCET. Currently working as a software engineer at a product company at ₹16 LPA. The MCA got my resume past filters that had been blocking me for years. But the actual coding skills came from building projects on my own — not from either degree. The degree opened the door, my portfolio got me through it.",
+      "url": "https://reddit.com/r/developersIndia"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "BCA from a tier-3 college, MCA from a state university. Took me 5 years instead of 4, and my first job after MCA was still a service company at ₹4.5 LPA. Switched to a mid-size product company after 2 years of grinding LeetCode and building side projects. Currently at ₹9 LPA. It worked out, but I'd be lying if I said the extra year and the degree filter struggle weren't real. If B.Tech was an option, take it. If it wasn't, this path works — just know what you're signing up for.",
+      "url": "https://reddit.com/r/Indian_Academia"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did BCA from a local college, didn't pursue MCA. Spent 4 years at a service company doing maintenance and support work at ₹3.2 LPA. Kept applying to product companies but my resume wouldn't get past the first screening. Finally enrolled in an MCA as a working professional. Should have done it right after BCA instead of trying to make the 3-year degree work on its own. Thought I could outperform the filter — I couldn't.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+"choose_if": [
+  "You're willing to commit to a 5-year path (3+2) to reach the same starting line as B.Tech.",
+  "You're a self-learner who builds projects independently.",
+  "You view BCA as a deliberate stepping stone, not a compromise.",
+  "You're comfortable measuring yourself by your portfolio, not your degree name."
+],
+"avoid_if": [
+  "You assume BCA alone will open the same doors as B.Tech.",
+  "You dislike programming but chose this because 'tech pays well.'",
+  "You chose BCA to avoid mathematics — AI and data science roles require it.",
+  "You see BCA as the 'easier' alternative to engineering without wanting to build software."
+],
+  "related_careers": [
+    "cs_engineering",
+    "design",
+    "mba"
+  ]
+},
+  {
+  "id": "ca",
+  "name": "Chartered Accountancy (CA)",
+  "category": "commerce",
+  "tagline": "Brutal to clear. Hard to make irrelevant once you do.",
+  "overview": "CA is ICAI's professional qualification — three exam levels (Foundation, Inter, Final) wrapped around 3 years of mandatory articleship. On paper it's a 3-year path after Class 12. In practice, most people take 5-7 years to actually finish and start earning properly, because the pass rates are brutal at every stage.",
+  "career_outlook": {
+    "india": "Extremely strong — every company needs finance and compliance, and CA is one of India's most recession-proof qualifications. Big 4 access depends heavily on which city and college network you're coming from.",
+    "abroad": "Doesn't transfer on its own — CA India isn't recognized internationally. ACCA (UK), CPA (USA), or CMA conversion is the real path if you want to work abroad."
+  },
+  "salary": {
+    "entry": "₹6-10 LPA (Big 4 or mid-size firm fresher — smaller firms and non-metro roles often start lower, around ₹4-6 LPA)",
+    "mid": "₹15-25 LPA (5 years, industry role or Big 4 manager)",
+    "senior": "₹30-80 LPA+ (CFO track, Big 4 partner, or your own practice — practice income has no real ceiling, but depends entirely on the client base you build)"
+  },
+  "why_people_love_it": [
+    "Recession-proof — every company needs finance and compliance, so demand never really dries up",
+    "Real ceiling once you're in — CFO track, Big 4 partner, or your own unlimited-upside practice",
+    "One of the most respected, portable qualifications in Indian finance — opens doors beyond just accounting",
+    "Skills transfer into real business decision-making, not just bookkeeping"
+  ],
+  "what_nobody_tells_you": [
+    "The '3 years' you hear about is a myth. Low pass rates mean most people take 5-7 years, some longer, to actually finish.",
+    "Articleship pays ₹2,000-₹15,000/month for 3 years of full-time work — you're essentially unpaid labor while studying for the hardest exams of your life.",
+    "Big 4 is the dream everyone chases, but they hire a small fraction of qualified CAs each year. Most end up at mid-size firms or in industry.",
+    "Clearing CA doesn't mean instant money — most freshers start at ₹6-10 LPA, not the 'CA = rich' number people assume.",
+    "The real long-term ceiling isn't in being an employee auditor forever — it's in industry leadership roles or building your own practice."
+  ],
+  "who_thrives": [
+    "High tolerance for delayed gratification and repeated failure without quitting",
+    "Genuine interest in finance, tax, and business — not just chasing the prestige",
+    "Detail-oriented and comfortable with rules, compliance, and repetitive precision",
+    "Has some financial cushion (savings or family support) to survive 3 years of near-zero articleship pay"
+  ],
+  "who_regrets_it": [
+    "Chose it as the 'default' commerce path without real interest in numbers",
+    "Needs early financial independence — can't survive articleship's near-zero pay",
+    "Hates repetitive, rule-heavy work in audit, tax, or compliance",
+    "Underestimated the emotional toll of repeated exam failures and a slow payoff"
+  ],
+  "before_you_commit": [
+    "Talk to someone currently in articleship, not just qualified CAs — the day-to-day reality lives there",
+    "Shadow a normal audit or tax-filing day if you can, before assuming the job matches the exam's prestige",
+    "Check actual Big 4 hiring numbers against total CA graduates in your target city — the odds matter",
+    "Calculate the real cost: coaching fees, 3 years at ₹2-15k/month articleship pay, and the opportunity cost of delayed full salary",
+    "Read threads from people 3-5 years qualified, not just toppers' success stories"
+  ],
+  "real_experiences": [
+    {
+      "source": "Reddit r/CAstudents",
+      "quote": "Cleared all groups first attempt somehow. Landed Big 4 at ₹9 LPA. Two years in, I'm at ₹18 LPA while my engineering friends who mocked my starting salary are still around ₹6-7L. Patience really is the whole game here.",
+      "url": "https://reddit.com/r/CAstudents"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "6.5 years, two Final attempts, now at a mid-size firm doing statutory audits. Not the Big 4 dream I had in college, but stable pay and I'm home by 7 most days outside tax season. No regrets, just recalibrated expectations.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "3 years into articleship at ₹8,000/month, failed Inter twice, seriously considering dropping it for an MBA instead. Nobody told 17-year-old me how long 'become a CA' actually takes.",
+      "url": "https://quora.com"
+    }
+  ],
+"choose_if": [
+  "You have a high tolerance for delayed gratification and repeated failure.",
+  "You're genuinely interested in finance, tax, and business.",
+  "You're detail-oriented and comfortable with compliance and precision.",
+  "You want one of India's most recession-proof qualifications."
+],
+"avoid_if": [
+  "You chose CA as the 'default' commerce path without real interest in numbers.",
+  "You need early financial independence — articleship pays near-zero for 3 years.",
+  "You hate repetitive, rule-heavy work in audit and tax.",
+  "You underestimate the emotional toll of repeated exam failures."
+],
+  "related_careers": [
+    "mba",
+    "cs_engineering",
+    "law"
+  ]
+},
+   {
+  "id": "bcom",
+  "name": "B.Com",
+  "category": "commerce",
+  "tagline": "A degree that opens doors — but only if you bring the key.",
+  "overview": "B.Com (Bachelor of Commerce) is a 3-year undergraduate degree covering accounting, finance, taxation, and economics. It's the most common commerce path after Class 12, and for good reason — it's affordable, widely available, and keeps your options open. The honest truth: a plain B.Com alone positions you for entry-level roles at ₹2–4 LPA. Its real value is as a foundation — combined with professional certifications (CA, CFA, ACCA, CMA) or an MBA, it becomes a genuinely strong credential. College brand matters less than what you add to the degree, which makes B.Com more forgiving than BBA in this regard. But if you graduate with just the degree and nothing extra, you'll be competing with lakhs of identical applicants for the same roles.",
+  "career_outlook": {
+    "india": "Steady demand for commerce graduates in accounting, audit, banking, and finance — but supply far exceeds demand at the entry level. The market heavily rewards specialization: a CA-qualified professional and a plain B.Com graduate exist in completely different salary brackets despite sharing the same undergraduate degree. Automation is reducing entry-level bookkeeping and data entry roles, making it harder to build a career on routine accounting work alone. Government jobs (bank PO, SSC CGL) remain a major employer of B.Com graduates, but these require separate exam preparation.",
+    "abroad": "A B.Com alone has limited international value. Combined with certifications like ACCA (UK), CPA (US), or CFA, it becomes globally portable. Canada, Australia, and the UK have clear pathways for accountants and auditors. The US H1B path is more competitive and typically requires an MBA or CPA."
+  },
+  "salary": {
+    "entry": "₹2 - ₹4 LPA (plain B.Com, tier-2/3 college) / ₹4 - ₹8 LPA (top DU colleges or with CA inter/CFA Level 1)",
+    "mid": "₹5 - ₹10 LPA (5 years, without professional certification) / ₹10 - ₹20 LPA (5 years, with CA/CFA/ACCA)",
+    "senior": "₹10 - ₹18 LPA (8-12 years, without certification, capped) / ₹20 - ₹50 LPA+ (with CA or CFA charter)"
+  },
+  "why_people_love_it": [
+    "It's a low-risk, affordable degree that keeps every door open — you can pivot to CA, CFA, ACCA, MBA, banking, or government jobs without having committed to any one path at age 17.",
+    "The skills are genuinely useful in daily life — understanding taxes, investments, budgeting, and how money works is practical knowledge that most graduates from other streams don't have.",
+    "Combined with a professional certification, B.Com graduates can reach salary brackets that rival engineering and medicine — a CA or CFA charterholder with a B.Com background can earn as much as any top-tier professional.",
+    "The degree is widely respected for government job eligibility. Most competitive exams (UPSC, SSC CGL, IBPS PO) accept B.Com graduates, and the commerce background gives an advantage in the economics and accounting sections."
+  ],
+  "what_nobody_tells_you": [
+    "The B.Com curriculum is heavily theoretical and exam-focused — most colleges don't teach the tools employers actually use, like Tally Prime, Advanced Excel, Power BI, or GST filing software. You'll need to learn these on your own or through certification courses.",
+    "Campus placements at average B.Com colleges are skewed toward BPO, sales, and data entry roles, not the finance and accounting jobs students imagine when they choose the degree. Core finance roles typically go to students from top colleges or those with professional certifications.",
+    "Even Big 4 firms hire generic B.Com graduates mostly for backend processing and audit support work — the interesting advisory, consulting, and strategy roles go to CA-qualified or MBA candidates, even within the same firm.",
+    "Government exams (bank PO, SSC CGL, UPSC) are a common destination for B.Com graduates, but they require 1-2 years of dedicated preparation that your degree won't help with. Many students treat B.Com as a 'safety degree' while preparing for these exams, which means three years of divided focus.",
+    "The salary gap between a plain B.Com graduate and one with a professional certification widens every year. At entry level, the difference might be ₹1-2 LPA. By year 10, a CA or CFA charterholder can earn 3-5x more than an uncertified peer doing similar work."
+  ],
+  "who_thrives": [
+    "Students who treat B.Com as a foundation and pursue a professional certification alongside it — CA, CFA, ACCA, or CMA. The combination of a degree and a credential is significantly more valuable than either alone.",
+    "People who enjoy methodical, detail-oriented work with numbers — accounting, auditing, tax compliance, and financial analysis all reward precision and patience over speed and creativity.",
+    "Students who use B.Com's flexibility to explore different paths — a few months of internship in audit, a few months in banking, a few months in a startup — and decide which direction fits before committing to a specialization.",
+    "Those who see B.Com as a stepping stone into government jobs (banking, civil services) and use the three years to prepare for competitive exams while earning a degree that qualifies them for those exams."
+  ],
+  "who_regrets_it": [
+    "Students who hate repetitive desk work and detailed number-crunching but chose B.Com because it was the 'default commerce option' — the daily reality of accounting and audit work is detailed, process-oriented, and rarely glamorous.",
+    "Students who wanted to pursue CA alongside B.Com but couldn't clear the exams and had no backup plan — the gap between a CA's career trajectory and a plain B.Com graduate's trajectory widens every year, and the disappointment is amplified by how much time was invested.",
+    "People who needed a high starting salary immediately after graduation — B.Com alone typically starts at ₹2-4 LPA, and without certifications, salary growth is slow. The degree doesn't reward urgency.",
+    "Extroverts who thrive on client interaction, presentations, and strategic work — B.Com leads naturally toward backend, process-oriented roles, and breaking into client-facing management roles requires an additional MBA or several years of relationship-building.",
+    "Students who coasted through three years assuming the degree alone would carry them, graduating with no internships, no certifications, and no technical skills — they enter a market where they're indistinguishable from hundreds of thousands of other applicants."
+  ],
+  "before_you_commit": [
+    "By the end of your first year, decide whether you're pursuing a professional certification (CA, CFA, ACCA, CMA) alongside B.Com or preparing for government exams — the single biggest predictor of your B.Com outcome is what you add to it, and you can't afford to wait until graduation to figure this out.",
+    "Spend a week learning basic Tally Prime or Advanced Excel through YouTube tutorials. If the process of reconciling numbers and building financial statements feels tedious rather than satisfying, reconsider whether a commerce career matches how your mind works.",
+    "Talk to a B.Com graduate who is 3-4 years out without any professional certification — ask about their salary, their role, and whether they'd choose the same path again. Then talk to a CA or CFA charterholder and ask the same questions. The contrast will tell you everything.",
+    "Research the CA Foundation or CFA Level 1 syllabus and attempt a few practice questions. You don't need to commit, but understanding what these certifications actually test will help you decide whether to pursue them alongside your degree.",
+    "Check the placement record of the specific college you're considering — ask for the median package, not the highest. Compare it against the fee. If the numbers don't make sense for a 3-year investment, consider a more affordable option and invest the difference in certifications."
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "Did B.Com from a regular college, cleared CFA Level 1 in my second year and Level 2 in my third year. Joined a mid-size investment firm as a research analyst at ₹5.5 LPA right after graduation. Three years in, I'm at ₹9 LPA and working toward the charter. The B.Com gave me the foundation, but the CFA is what opened doors.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "B.Com from a DU college. Got placed in accounts payable at a multinational at ₹3.5 LPA through campus placement. It's stable, decent pay for the work. But most of my growth has come from learning Excel and accounting software on the job — not from anything I studied in three years of college. B.Com gives you a base, but you have to build the house yourself.",
+      "url": "https://reddit.com/r/Indian_Academia"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did B.Com from a local college, didn't pursue CA or any certification because I wasn't sure what I wanted. Four years after graduating, I'm still in the same clerical accounting role at ₹2.8 LPA that I started in. My friends who cleared CA are earning 3-4x what I do. I should have either committed to a professional course or used college time to build actual skills. A plain B.Com doesn't take you far on its own.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+"choose_if": [
+  "You plan to pursue a professional certification (CA, CFA, ACCA, CMA) alongside or after the degree.",
+  "You enjoy methodical, detail-oriented work with numbers.",
+  "You value flexibility — B.Com keeps doors open for banking, government exams, MBA, or certifications.",
+  "You see the degree as an affordable foundation, not a finish line."
+],
+"avoid_if": [
+  "You assume a plain B.Com alone will lead to a high-paying corporate job.",
+  "You hate repetitive desk work and detailed number-crunching.",
+  "You need a high starting salary immediately after graduation.",
+  "You're not willing to pursue any additional certification or skill alongside the degree."
+],
+  "related_careers": [
+    "ca",
+    "bba",
+    "mba"
+  ]
+},
+    {
+  "id": "bba",
+  "name": "BBA",
+  "category": "commerce",
+  "tagline": "A degree that works best as a foundation — not a finish line.",
+  "overview": "BBA (Bachelor of Business Administration) is a 3-year undergraduate degree covering marketing, finance, HR, and operations. It's designed as a broad introduction to how businesses run. The honest reality: BBA alone doesn't open many doors. Without an MBA, most graduates start in sales, support, or generic operations roles at ₹2.5–4 LPA. College tier determines outcomes more than any other factor — an IIM IPM graduate and a tier-3 private college graduate hold the same degree name but face completely different placement realities. The BBA's real value is as preparation for an MBA. If that's not your plan, you need to think carefully about whether this degree justifies its cost.",
+  "career_outlook": {
+    "india": "The BBA market is sharply bifurcated. Top-tier programs (IIM IPM, NMIMS, Symbiosis, Shaheed Sukhdev) place graduates at ₹8–25 LPA in consulting, finance, and general management roles. The remaining majority — from tier-2 and tier-3 colleges — face a crowded market where the degree alone carries little weight. Most entry-level opportunities are in sales, business development, and customer operations. AI and automation are reducing entry-level analytical roles, making it harder to move from execution to strategy without an MBA.",
+    "abroad": "A BBA alone has limited value abroad. Most international master's programs in management expect a BBA as a base qualification, but the degree itself rarely qualifies you for skilled work visas. The typical path is BBA → MBA abroad or BBA → work experience in India → MBA abroad."
+  },
+  "salary": {
+    "entry": "₹2.5 - ₹4 LPA (most graduates from tier-2/3 colleges) / ₹8 - ₹25 LPA (top-tier programs like IIM IPM)",
+    "mid": "₹5 - ₹12 LPA (5 years, without MBA) / ₹15 - ₹30 LPA (5 years, with top MBA)",
+    "senior": "₹12 - ₹25 LPA (8-12 years, without MBA, capped by lack of postgraduate degree) / ₹30 LPA+ (with MBA)"
+  },
+  "why_people_love_it": [
+    "It gives you structured exposure to business concepts you wouldn't otherwise encounter until years into a career — marketing, finance, strategy, operations — all in one place.",
+    "The degree provides a clear, accepted pathway into an MBA. Top B-schools treat BBA graduates as natural applicants, and the curriculum aligns well with CAT/XAT/GMAT preparation.",
+    "The flexibility is real — BBA graduates have entered consulting, banking, marketing, operations, HR, and entrepreneurship. It doesn't lock you into one track the way engineering or CA does.",
+    "Top-tier BBA programs offer campus placements that rival good engineering colleges, with access to companies and roles that wouldn't be available through any other undergraduate degree."
+  ],
+  "what_nobody_tells_you": [
+    "BBA is a generalist degree that doesn't make you job-ready in any specific function. Companies hire for skills, not for knowing what a BCG matrix or Porter's Five Forces is. Excel, SQL, CRM tools, and data analysis — the skills that actually get you hired — are rarely taught in the curriculum.",
+    "Your college tier determines your starting point more than your grades, your internships, or your interview performance. A top-tier BBA graduate and a tier-3 BBA graduate have the same degree on paper and completely different career trajectories from day one.",
+    "Most entry-level roles open to BBA graduates from non-top colleges are in sales and business development — high pressure, variable pay tied to targets, and high attrition. Companies frame these as 'management trainee' roles, but the day-to-day reality is selling.",
+    "An MBA is effectively required to reach mid-to-senior management roles. If you can't pursue one — due to finances, academics, or family circumstances — the BBA's long-term value drops significantly, and you'll need to differentiate yourself through certifications and experience instead.",
+    "Career progression without an MBA is slower and hits a ceiling earlier. In many companies, senior roles require a postgraduate degree as a qualification, not just a preference. You'll watch MBA hires overtake you within 2-3 years of joining, even if you started at the same level."
+  ],
+  "who_thrives": [
+    "Students who see BBA as deliberate preparation for an MBA — using the three years to build a strong profile, prepare for CAT/XAT, and gain clarity on which business function they want to pursue.",
+    "Natural networkers who enjoy working with people and are comfortable in client-facing, sales, or relationship management roles — these are the most common entry points, and liking the work makes a big difference.",
+    "Self-starters who pursue internships, certifications, and real-world projects alongside the degree rather than waiting for the curriculum to make them employable.",
+    "Students at top-tier BBA programs who have access to campus placements that justify the fees — for them, the degree opens doors that few other undergraduate programs can."
+  ],
+  "who_regrets_it": [
+    "Students who paid premium fees at a tier-3 private college assuming the BBA brand alone would lead to a management job, then found themselves competing for sales roles at ₹2.5 LPA with B.Com and BA graduates.",
+    "Those who chose BBA over B.Com thinking it was more 'prestigious,' without understanding that B.Com plus a professional certification (CA, CFA, ACCA) often leads to better career outcomes than a standalone BBA.",
+    "People who pursued BBA because they didn't know what else to do — a generalist degree without a clear direction is a weak position in the job market, and BBA doesn't fix uncertainty, it just postpones it.",
+    "Students who assumed a BBA would automatically make them eligible for top MBA programs, not realizing that CAT scores, work experience, and a strong profile matter far more than what you studied in undergrad.",
+    "Anyone who expected a 'management' degree to lead to a 'manager' role at age 21, without understanding that management is something you earn after years of execution experience — no degree skips that."
+  ],
+  "before_you_commit": [
+    "Compare the total fee of the BBA college you're considering against its median placement package — not the highest package, the median. If the numbers don't add up, they never will.",
+    "Talk to a BBA graduate who is 3-4 years out and did NOT pursue an MBA. Ask about their current role, salary, and whether they'd choose the same path again.",
+    "Spend a week learning basic Excel and try building a simple profit-loss statement for a hypothetical business. If the process feels tedious, a business degree may not match what you actually enjoy doing.",
+    "Research the entrance exams and cutoffs for the MBA programs you might target later (CAT, XAT, GMAT). Check if the BBA curriculum at your chosen college actually aligns with the quantitative and verbal sections of these exams.",
+    "If you're choosing between BBA and B.Com, look up placement reports for both at the colleges you're considering. Don't assume BBA is 'better' — look at the actual outcomes for graduates from each program."
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "Did BBA from a top college, used the three years to prepare for CAT, got into an IIM. Currently working in consulting at ₹25 LPA. The BBA itself didn't get me here — but it gave me the foundation and the time to figure out what I wanted, which was worth more than any course content.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "BBA from a mid-tier college. Did a few solid internships during the degree. Landed a role in operations at a mid-size company at ₹3.8 LPA. Three years in, I'm at ₹5.5 LPA. It's fine, not great. My B.Com friends who did CA inter are earning similar or more with less fee paid. If I could do it again, I'd pick B.Com plus certifications instead of BBA.",
+      "url": "https://reddit.com/r/Indian_Academia"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did BBA from a private college that promised 'strong placements.' Paid ₹3+ lakhs per year in fees. When placement season came, the only offers were sales roles at ₹2.4 LPA. I spent two years in a job I could have gotten with any degree, paying off a loan for a credential that didn't open doors my B.Com classmates didn't already have. Now doing an MBA from a tier-2 institute, hoping it resets things.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+"choose_if": [
+  "You see BBA as deliberate preparation for an MBA and are ready to prepare for CAT/XAT.",
+  "You enjoy networking, client interaction, and business strategy.",
+  "You're a self-starter who pursues internships and projects alongside the degree.",
+  "You're aiming for a top-tier BBA program with strong campus placements."
+],
+"avoid_if": [
+  "You're paying premium fees at a tier-3 college assuming the degree alone will land a management job.",
+  "You chose BBA over B.Com thinking it's 'more prestigious' without understanding the outcomes.",
+  "You expect a 'management' degree to lead to a 'manager' role at age 21.",
+  "You don't plan to pursue an MBA — career progression without one hits a ceiling early."
+],
+  "related_careers": [
+    "ca",
+    "mba",
+    "law"
+  ]
+},
+  {
+  "id": "law",
+  "name": "Law (LLB / 5-Year Integrated)",
+  "category": "law",
+  "tagline": "TV lawyers argue in court. Most real ones spend their day reading, drafting, and waiting.",
+  "overview": "Law is a 5-year integrated degree (BA LLB) via CLAT after Class 12, or a 3-year LLB after graduation. National Law Universities dominate placements — the IIT effect, but for law. 'Lawyer' isn't one job though: litigation, corporate law, in-house counsel, judiciary, government legal services, and academia are genuinely different careers that just happen to share a degree.",
+  "career_outlook": {
+    "india": "Strong overall demand but sharply bifurcated — NLU graduates get excellent corporate law and policy access, while non-NLU graduates need to specialize (IP, tax, arbitration) or build a litigation practice slowly to compete.",
+    "abroad": "Indian law degrees don't transfer directly — an LLM plus bar exams are needed to practice abroad. Growing scope in international arbitration, legal consulting, and policy roles that don't require re-qualifying as a lawyer in that country."
+  },
+  "salary": {
+    "entry": "₹15,000/month (litigation junior under a senior advocate) to ₹20 LPA (NLU grad at a top corporate firm) — same degree, wildly different starting points depending on path and college",
+    "mid": "₹8-40 LPA (5 years — corporate lawyers at top firms or established specialist litigators)",
+    "senior": "₹30 LPA to several crores (senior advocates, law firm partners, or judiciary salary plus pension track)"
+  },
+  "why_people_love_it": [
+    "Deeply intellectual work that rewards sharp thinking, research, and persuasion",
+    "Genuinely wide range of paths from one degree — litigation, corporate, policy, judiciary, in-house, academia",
+    "Litigators who build a real reputation over a decade have an earning ceiling almost no other Indian profession can match",
+    "You get to actually shape outcomes for people and institutions, not just advise from the sidelines"
+  ],
+  "what_nobody_tells_you": [
+    "Litigation pays almost nothing for the first 5-10 years — junior lawyers under a senior advocate often earn ₹15,000-₹30,000/month, sometimes less.",
+    "Corporate law pays far better but is dominated by NLU graduates — non-NLU students face a genuinely steep climb into top firms.",
+    "The NLU vs non-NLU gap decides your starting salary before you've done a day of real work — as real as the IIT vs non-IIT split in engineering.",
+    "Litigation and corporate law aren't two versions of the same job. One is courtroom advocacy built on reputation over years; the other is desk-based contract and deal work built on billable hours.",
+    "Legal tech and AI are already automating document review and basic drafting — the grunt work juniors used to learn the ropes on is shrinking fast."
+  ],
+  "who_thrives": [
+    "Genuinely enjoys reading, arguing, and research — not just watching courtroom dramas",
+    "Has patience for a slow-building career, especially in litigation, where reputation compounds over a decade",
+    "Strong communicator who can think on their feet under pressure",
+    "Comfortable with ambiguity — most legal problems don't have one clean right answer"
+  ],
+  "who_regrets_it": [
+    "Expected every lawyer to argue dramatic cases in court — most work is reading, drafting, and waiting",
+    "Needs financial stability in their 20s — litigation's slow payoff doesn't suit that",
+    "Assumed corporate law and litigation were interchangeable, then got stuck on a track they didn't actually want",
+    "Finds sustained reading and verbal confrontation draining, not energizing",
+    "Has no family legal network and expected internships alone to open every door instantly"
+  ],
+  "before_you_commit": [
+    "Attend a court proceeding for a day — see what litigation actually looks like before romanticizing it",
+    "Talk to both a litigator and a corporate lawyer — they'll describe two different jobs, not two flavors of one",
+    "Read a few real judgments, not just case summaries — see how lawyers actually reason, not how TV writes it",
+    "Check the internship track record of the colleges you're targeting — internships matter more than the syllabus for where you end up",
+    "Understand judiciary, in-house counsel, and government legal services as real options — not just fallbacks if corporate or litigation doesn't work out"
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "NLU placement season got me an ₹18 LPA offer at a top law firm. Three years in, I'm leading due diligence on deals worth more than my entire family's net worth. Intense, but genuinely interesting.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/LawStudentsIndia",
+      "quote": "Non-NLU, did litigation for 4 years under a senior advocate, barely broke even most months. Switched to in-house counsel at a mid-size company last year — steadier pay, saner hours, less prestige. Don't regret the litigation years, they taught me how to actually think like a lawyer.",
+      "url": "https://reddit.com/r/LawStudentsIndia"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "First 3 years of litigation, I made less than my school friend who didn't even go to college. Nobody told me it takes a decade to build a name, and I didn't have the financial runway to wait that long. Moved to a compliance role instead.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+"choose_if": [
+  "You genuinely enjoy reading, researching, and constructing arguments.",
+  "You're patient — litigation builds reputation over a decade.",
+  "You're a strong communicator who can think on their feet.",
+  "You're comfortable with ambiguity — legal problems rarely have one clean answer."
+],
+"avoid_if": [
+  "You expect every lawyer to argue dramatic courtroom cases daily.",
+  "You need financial stability in your 20s — litigation pays little early on.",
+  "You're not from an NLU and expect corporate law doors to open easily.",
+  "You find sustained reading and verbal confrontation draining."
+],
+  "related_careers": [
+    "ca",
+    "mba"
+  ]
+},
+  {
+  "id": "design",
+  "name": "Design (NID / NIFT path)",
+  "category": "design",
+  "tagline": "Design isn't about drawing well. It's about solving problems people didn't know they had.",
+  "overview": "Design in India isn't one path — UI/UX, product design, graphic design, motion graphics, brand design, industrial design, and game design are genuinely different jobs sharing one umbrella term. Entry is through NID/NIFT (brutally competitive), IIT's design programs (UCEED), private colleges, or increasingly, a self-taught portfolio. The actual job is less about making things look nice and more about solving a problem for a user, client, or business.",
+  "career_outlook": {
+    "india": "Growing fast, especially UX/UI as Indian tech and startups mature. Fashion and product design scope is more limited, concentrated in metro cities, and depends heavily on your portfolio and network.",
+    "abroad": "Strong for UX/UI designers — a globally portable skill. Fashion design abroad means rebuilding your reputation from scratch in fiercely competitive scenes like Paris, Milan, or New York."
+  },
+  "salary": {
+    "entry": "₹4-12 LPA (UX/UI in tech pays more than traditional fashion or graphic design at entry level)",
+    "mid": "₹12-30 LPA (5 years, especially in UX/product design at tech companies)",
+    "senior": "₹30 LPA-₹1 crore+ (senior design leads, design directors at major tech companies, or successful independent labels)"
+  },
+  "why_people_love_it": [
+    "Genuinely varied work — no two briefs or projects look the same",
+    "Portfolio matters more than pedigree, so self-taught designers can compete with NID grads",
+    "UX/UI pays well and is globally portable, especially in tech",
+    "High entrepreneurial ceiling — freelance, agency, or your own label are all realistic paths"
+  ],
+  "what_nobody_tells_you": [
+    "NID and NIFT admit under 1% of applicants — most design students end up at private colleges of wildly uneven quality, and college name matters less here than almost any other field.",
+    "UX/UI in tech currently pays the best of any design specialization, often more than traditional fashion or graphic design roles.",
+    "Fashion design's glamorous image hides long hours, low starting pay, and a saturated market — unless you start your own label or land a top house.",
+    "AI tools are already changing entry-level work — they're replacing repetitive execution, not designers who can actually think through a problem. That distinction matters a lot if you're only good at the former.",
+    "Portfolio beats degree for almost every design job — a self-taught designer with 5 strong projects can beat an NID graduate with a weak one."
+  ],
+  "who_thrives": [
+    "Genuinely enjoys solving problems, not just making things look good",
+    "Willing to constantly build, update, and defend a portfolio",
+    "Comfortable with ambiguity and relentless subjective feedback",
+    "Handles both the creative and technical sides — tools, deadlines, and client constraints, not just ideas"
+  ],
+  "who_regrets_it": [
+    "Chose fashion design for the glamour, not the manufacturing and business grind behind it",
+    "Expected total creative freedom from day one — most early work is executing someone else's brief",
+    "Can't handle constant subjective critique — feedback in design never really stops",
+    "Relied only on college training without building an independent portfolio",
+    "Assumed a non-NID/NIFT design degree alone would open doors at competitive firms"
+  ],
+  "before_you_commit": [
+    "Recreate a popular app's interface from scratch — see if the process excites you or drains you",
+    "Complete a couple of real design challenges (Daily UI, a client brief) before assuming you'll like the job",
+    "Learn basic Figma — a free weekend is enough to know if the tool-heavy side appeals to you",
+    "Build a small portfolio of 3-5 projects and get it critiqued by a working designer, not just friends or family",
+    "Check the actual placement record of the specific college you're considering, not just its reputation"
+  ],
+  "real_experiences": [
+    {
+      "source": "Reddit r/india",
+      "quote": "Self-taught UX designer, no NID degree, just Figma tutorials and a portfolio I rebuilt three times. Landed a ₹9 LPA product design role at a startup. Portfolio really did matter more than pedigree.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Quora",
+      "quote": "NIFT fashion design, five years in. Started as an assistant designer at ₹18k/month doing production coordination, not creative work. Two years ago I set up a small label with a former classmate — barely breaking even, but it's mine and I'm learning the business side nobody taught us in college.",
+      "url": "https://quora.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did graphic design because I liked drawing in school. Turns out the job is 80% client feedback loops and brand guidelines, 20% actual creative work. Still doing it, but wish someone had told me design is a service industry before I chose it.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+"choose_if": [
+  "You genuinely enjoy solving problems, not just making things look good.",
+  "You're willing to constantly build, update, and defend a portfolio.",
+  "You're comfortable with relentless subjective feedback.",
+  "You handle both creative and technical sides — tools, deadlines, and client constraints."
+],
+"avoid_if": [
+  "You chose fashion design for the glamour, not the manufacturing and business grind.",
+  "You expect total creative freedom from day one.",
+  "You can't handle constant critique from clients and stakeholders.",
+  "You rely only on college training without building an independent portfolio."
+],
+  "related_careers": [
+    "cs_engineering",
+    "mba"
+  ]
+},
+  {
+  "id": "mba",
+  "name": "MBA",
+  "category": "management",
+  "tagline": "An MBA doesn't create direction. It accelerates whatever direction you already have.",
+  "overview": "MBA is a 2-year postgraduate degree via CAT/XAT/GMAT, ideally pursued after 2-5 years of work experience — though many in India do it straight after undergrad. It's not commerce-only: engineers, doctors, and humanities grads make up a large share of every batch. Consulting, product, marketing, finance, operations, HR, analytics, and general management are all real specializations under one degree, and which one you pick matters almost as much as which college you get into.",
+  "career_outlook": {
+    "india": "Strong for top-tier graduates, average for mid-tier, and often not worth the fees for bottom-tier colleges given the debt involved.",
+    "abroad": "Indian MBAs (especially IIM, ISB) are respected. Many pursue a further MBA abroad (INSEAD, top US schools) for global mobility, though that needs even higher GMAT scores and work experience."
+  },
+  "salary": {
+    "entry": "₹8-35 LPA (massive range — non-IIM vs IIM placements differ drastically; most graduates land toward the lower half)",
+    "mid": "₹20-70 lakh (consulting partners, product leads, business heads after 5-8 years)",
+    "senior": "₹50 LPA - several crores (CXO roles, partner-level consulting, business unit leadership)"
+  },
+  "why_people_love_it": [
+    "Genuinely accelerates people who already have direction and experience",
+    "Cohort and alumni networks can open doors for decades afterward",
+    "IIM/ISB-tier placements offer some of India's highest starting salaries",
+    "Flexible across consulting, product, marketing, finance, operations, or founding your own company"
+  ],
+  "what_nobody_tells_you": [
+    "An MBA amplifies what you already have — with no clear direction going in, it just adds a credential, not a fix.",
+    "The IIM vs non-IIM gap is enormous, like IIT vs non-IIT. Tier-3 colleges often don't justify their fees.",
+    "Cracking CAT is only half the battle. At the top IIMs, even an excellent CAT percentile doesn't guarantee admission—academics, interviews, work experience, and profile all matter.",
+    "The '₹20-30 LPA average' number you see everywhere is usually the highest package in a placement report, not the median — most graduates, even from decent colleges, earn less.",
+    "You don't need an MBA to start a business — plenty of founders never did one. It helps with structure and networks, not the idea itself."
+  ],
+  "who_thrives": [
+    "Has 2-5 years of work experience and a clear reason for the MBA, not just 'better options later'",
+    "Gets into a top-tier institute (IIM, ISB, or equivalent) — the ROI math changes completely below that tier",
+    "Strong networker and communicator, since cohort relationships matter as much as coursework",
+    "Knows which specialization they want going in, instead of picking based on salary alone"
+  ],
+  "who_regrets_it": [
+    "Did it right after undergrad with no work experience or clear goal",
+    "Took a large loan for a tier-3 college with weak placement records",
+    "Expected the degree alone to compensate for a lack of skills or direction",
+    "Dislikes intense networking, group work, and presentation-heavy environments",
+    "Picked a specialization based on salary data alone, then hated the actual work"
+  ],
+  "before_you_commit": [
+    "Talk to alumni from the specific colleges you're considering, not just their brochures",
+    "Compare actual placement reports — median and lower quartile, not just the highest package",
+    "Calculate real ROI after fees, loan interest, and 2 years of lost income — not just the projected salary",
+    "Get 2-3 years of work experience first if you can — it changes both your application and what you get out of the program",
+    "Pick a specialization you're curious about before applying, instead of deciding after you're already in"
+  ],
+  "real_experiences": [
+    {
+      "source": "LinkedIn",
+      "quote": "IIM placement got me into consulting at ₹28 LPA. Three years in, the alumni network alone has opened doors my resume never could. Was it expensive? Yes. Worth it? Also yes — but only because I already knew I wanted consulting.",
+      "url": "https://linkedin.com"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did an MBA from a decent tier-2 college after 3 years in marketing. Salary jump wasn't dramatic — ₹9 LPA to ₹14 LPA — but I moved from an execution role to actually owning strategy. That shift mattered more to me than the number.",
+      "url": "https://reddit.com/r/india"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Did MBA right after engineering with zero work experience because I didn't know what else to do. Same ₹6 LPA offer I could've gotten with just the engineering degree, minus 2 years and ₹18 lakhs in fees. The MBA didn't fix not knowing what I wanted — it just delayed finding out.",
+      "url": "https://reddit.com/r/india"
+    }
+  ],
+"choose_if": [
+  "You have 2-5 years of work experience and a clear reason for pursuing an MBA.",
+  "You're aiming for a top-tier institute (IIM, ISB, or equivalent) with strong placement records.",
+  "You're a strong networker and communicator.",
+  "You know which specialization you want going in, not picking based on salary alone."
+],
+"avoid_if": [
+  "You're doing it right after undergrad with no work experience or clear goal.",
+  "You're taking a large loan for a tier-3 college with weak placement records.",
+  "You expect the degree alone to compensate for lack of skills or direction.",
+  "You dislike intense networking, group work, and presentation-heavy environments."
+],
+  "related_careers": [
+    "ca",
+    "law",
+    "cs_engineering"
   ]
 }
 
