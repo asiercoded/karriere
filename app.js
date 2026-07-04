@@ -642,7 +642,6 @@ searchInput.addEventListener('input', () => {
       document.getElementById(scrollBtn.dataset.navScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-}
 
 let savedScrollY = 0;
 
