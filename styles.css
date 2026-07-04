@@ -1134,3 +1134,8 @@ footer {
   .comp-label { display: none; }
   .comp-decision-grid { grid-template-columns: 1fr; }
 }
+.compare-slot { min-height: 32px; margin-bottom: 10px; }
+.compare-slot-filled { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: var(--violet); background: var(--violet-dim); padding: 6px 12px; border-radius: 8px; }
+.compare-slot-empty { font-size: 14px; color: var(--ink-faint); }
+.compare-slot-remove { background: none; border: none; color: var(--violet); cursor: pointer; font-size: 14px; padding: 0; line-height: 1; }
+.compare-option-selected { opacity: 0.4; pointer-events: none; }

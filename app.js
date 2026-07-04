@@ -567,11 +567,28 @@ function attachListeners() {
     });
   }
       // Compare search filtering
-  const compareSearch = document.getElementById('compareSearch');
-  if (compareSearch) {
-    compareSearch.addEventListener('input', () => {
-      const q = compareSearch.value.trim().toLowerCase();
+  const compareSearchA = document.getElementById('compareSearchA');
+if (compareSearchA) {
+  compareSearchA.addEventListener('input', () => {
+    const q = compareSearchA.value.trim().toLowerCase();
+    document.querySelectorAll('.compare-option').forEach(opt => {
+      if (opt.disabled) return;
+      const name = opt.querySelector('.compare-option-name')?.textContent.toLowerCase() || '';
+      const tagline = opt.querySelector('.compare-option-tagline')?.textContent.toLowerCase() || '';
+      const id = opt.dataset.compareId || '';
+      const aliases = ALIASES[id] || [];
+      const match = name.includes(q) || tagline.includes(q) || aliases.some(a => a.includes(q));
+      opt.style.display = match ? '' : 'none';
+    });
+  });
+}
+
+  const compareSearchB = document.getElementById('compareSearchB');
+  if (compareSearchB) {
+    compareSearchB.addEventListener('input', () => {
+      const q = compareSearchB.value.trim().toLowerCase();
       document.querySelectorAll('.compare-option').forEach(opt => {
+        if (opt.disabled) return;
         const name = opt.querySelector('.compare-option-name')?.textContent.toLowerCase() || '';
         const tagline = opt.querySelector('.compare-option-tagline')?.textContent.toLowerCase() || '';
         const id = opt.dataset.compareId || '';
@@ -581,18 +598,24 @@ function attachListeners() {
       });
     });
   }
-  // Compare option click
+
+  }
+    // Compare option click
   document.querySelectorAll('.compare-option').forEach(opt => {
     opt.addEventListener('click', () => {
       const selectedId = opt.dataset.compareId;
-      const preselected = document.getElementById('compareA')?.value;
-      if (preselected) {
-        navigate(`compare=${preselected},${selectedId}`);
-      } else {
+      const slotA = document.getElementById('compareA')?.value;
+      const slotB = document.getElementById('compareB')?.value;
+      
+      if (slotA && slotB) return; // both filled
+      if (!slotA) {
         navigate(`compare=${selectedId},`);
+      } else {
+        navigate(`compare=${slotA},${selectedId}`);
       }
     });
   });
+
 
   
 
@@ -675,26 +698,47 @@ const id = isCompare ? '' : hash;
 }
 function renderComparePicker(preselectedId) {
   const selected = preselectedId && careers.find(c => c.id === preselectedId);
-  const list = careers.map(c => `
-    <button class="compare-option" data-compare-id="${c.id}">
+  let slotAFilled = !!selected;
+
+  const list = careers.map(c => {
+    const isSelected = c.id === preselectedId;
+    return `
+    <button class="compare-option ${isSelected ? 'compare-option-selected' : ''}" data-compare-id="${c.id}" ${isSelected ? 'disabled' : ''}>
       <span class="compare-option-cat">${CATEGORY_LABELS[c.category] || c.category}</span>
       <span class="compare-option-name">${c.name}</span>
       <span class="compare-option-tagline">${c.tagline}</span>
     </button>
-  `).join('');
+  `}).join('');
+
+  const slotA = selected ? `<span class="compare-slot-filled">${selected.name} <button class="compare-slot-remove" data-nav="compare=,">✕</button></span>` : '<span class="compare-slot-empty">—</span>';
+  const slotB = '<span class="compare-slot-empty" id="slotB">—</span>';
 
   return `
     <div class="wrap compare-picker-wrap">
       <button class="back-link" data-nav="">← Back</button>
-      <h1 class="compare-picker-title">${selected ? `Compare ${selected.name} with...` : 'Compare Careers'}</h1>
-      <div class="compare-search-field">
-        <input type="text" class="compare-search" id="compareSearch" placeholder="${selected ? 'Search a career to compare...' : 'Type a career name...'}" autofocus>
+      <h1 class="compare-picker-title">Compare Careers</h1>
+      
+      <div class="compare-two">
+        <div class="compare-col">
+          <div class="compare-col-label">Career 1</div>
+          <div class="compare-slot">${slotA}</div>
+          <input type="text" class="compare-search" id="compareSearchA" placeholder="Search..." autofocus>
+          ${selected ? `<input type="hidden" id="compareA" value="${selected.id}">` : ''}
+        </div>
+        <div class="compare-vs">vs</div>
+        <div class="compare-col">
+          <div class="compare-col-label">Career 2</div>
+          <div class="compare-slot">${slotB}</div>
+          <input type="text" class="compare-search" id="compareSearchB" placeholder="Search...">
+          <input type="hidden" id="compareB" value="">
+        </div>
       </div>
-      ${selected ? `<input type="hidden" id="compareA" value="${selected.id}">` : ''}
+      
       <div class="compare-options" id="compareOptions">${list}</div>
     </div>
   `;
 }
+
 
 function renderCompareView(id1, id2) {
   const a = careers.find(c => c.id === id1);
