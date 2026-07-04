@@ -633,14 +633,14 @@ searchInput.addEventListener('input', () => {
     }
   }, 250);
 });
-
+  
   }
   document.querySelectorAll('[data-nav-scroll]').forEach(scrollBtn => {
     scrollBtn.addEventListener('click', () => {
       document.getElementById(scrollBtn.dataset.navScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-
+}
 let savedScrollY = 0;
 
 async function render(animate = true) {
@@ -692,6 +692,8 @@ const id = isCompare ? '' : hash;
   if (searchInput && document.activeElement !== searchInput && searchQuery) {
     // preserve focus/caret only when re-rendering from typing; no-op on hash nav
   }
+  const career = careers.find(c => c.id === id);
+  updateMetaTags(career?.name, career?.tagline);
 }
 function renderComparePicker(preselectedId) {
   const selected = preselectedId && careers.find(c => c.id === preselectedId);
@@ -840,7 +842,7 @@ function renderCompareView(id1, id2) {
 initTheme();
 window.addEventListener('hashchange', () => render(true));
 render(true);
-// Update OG meta tags on navigation
+
 function updateMetaTags(careerName, careerTagline) {
   const title = careerName
     ? `${careerName} — Karriere`
@@ -851,12 +853,3 @@ function updateMetaTags(careerName, careerTagline) {
   document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
   document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc);
 }
-
-// Patch render to update meta tags
-const originalRender = render;
-render = async function(animate) {
-  await originalRender(animate);
-  const id = window.location.hash.replace('#', '');
-  const career = careers.find(c => c.id === id);
-  updateMetaTags(career?.name, career?.tagline);
-};
