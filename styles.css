@@ -1142,3 +1142,93 @@ footer {
 
 /* ── LOADING SKELETON (theme-aware) ── */
 .skeleton-block { background: var(--rule); border-radius: 6px; }
+
+/* ── TAB BAR ── */
+.detail-tab-bar {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid var(--rule);
+  margin-bottom: 28px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.detail-tab-bar::-webkit-scrollbar { display: none; }
+
+.detail-tab {
+  flex-shrink: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  background: none;
+  border: none;
+  padding: 10px 16px 12px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.detail-tab:hover { color: var(--ink-soft); }
+
+.detail-tab.active {
+  color: var(--violet);
+  border-bottom-color: var(--violet);
+}
+
+.detail-tab-content {
+  min-height: 200px;
+}
+
+/* ── VERDICT CARD ── */
+.verdict-card {
+  background: var(--surface);
+  border: 2px solid var(--violet-dim);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-top: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.verdict-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--violet);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.verdict-section { margin-bottom: 20px; }
+
+.verdict-choose-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--sage);
+  margin-bottom: 10px;
+}
+
+.verdict-avoid-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dustred);
+  margin-bottom: 10px;
+}
+
+.verdict-commit-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.verdict-card .love-list li { font-size: 14px; margin-bottom: 8px; }
+.verdict-card .pain-list li { font-size: 14px; margin-bottom: 8px; }
+
+@media (max-width: 640px) {
+  .verdict-card { padding: 20px 18px; }
+}

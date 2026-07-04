@@ -1,6 +1,7 @@
 let careers = [];
 let activeCategory = 'all';
 let searchQuery = '';
+let activeDetailTab = 'overview';
 
 const CATEGORY_LABELS = {
   medical: 'Medical',
@@ -384,35 +385,45 @@ function renderListView() {
 function renderDetailView(id) {
   const career = careers.find(c => c.id === id);
   if (!career) return `<div class="wrap detail-wrap"><button class="back-link" data-nav="">← Back</button><div class="not-found">Career not found.</div></div>`;
+
   const cm = CARD_METRICS[career.id] || {};
   const dm = DETAIL_METRICS[career.id] || {};
-  const timelineStages = [
-    { label: 'Class 12', sub: 'Entrance exam / cutoff' },
-    { label: 'College', sub: cm.duration || '' }
-  ];
-  if (dm.internship) timelineStages.push({ label: 'Internship', sub: dm.internship });
-  timelineStages.push({ label: 'Entry role', sub: career.salary.entry });
-  timelineStages.push({ label: 'Senior / Established', sub: career.salary.senior });
 
+  // ── Tab definitions ──
+  const tabs = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'realities', label: "What It's Like" },
+    { id: 'fit', label: 'Is This for You' },
+    { id: 'pay', label: 'Pay & Progression' },
+    { id: 'experiences', label: 'Student Experiences' }
+  ];
+
+  const tabBar = `
+    <div class="detail-tab-bar">
+      ${tabs.map(t => `
+        <button class="detail-tab ${activeDetailTab === t.id ? 'active' : ''}" data-tab="${t.id}">${t.label}</button>
+      `).join('')}
+    </div>`;
+
+  // ── Tab content renderers ──
+  const tabContent = renderTabContent(career, cm, dm);
+
+  // ── Verdict card ──
+  const verdictHtml = renderVerdictCard(career);
+
+  // ── Related careers ──
   const relatedHtml = (career.related_careers || []).map(rid => {
     const rc = careers.find(c => c.id === rid);
     return rc ? `<button class="related-pill" data-nav="${rc.id}">${rc.name}</button>` : '';
   }).join('');
 
-  const chooseSection = career.why_people_love_it ? `
-    <div class="section">
-      <div class="section-label">Why people choose this</div>
-      <ul class="love-list">${career.why_people_love_it.map(p => `<li>${p}</li>`).join('')}</ul>
-    </div>
-  ` : '';
-
   return `
     <div class="wrap detail-wrap">
-      <button class="back-link" data-nav="">← Back to all careers</button>
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
-        <button class="masthead-small">${LOGOMARK}<span>Karriere</span></button>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <button class="back-link" data-nav="">← Back to all careers</button>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
       </div>
+      <button class="masthead-small">${LOGOMARK}<span>Karriere</span></button>
 
       <div class="career-header">
         <div class="career-tag">${CATEGORY_ICONS[career.category] || ''} ${CATEGORY_LABELS[career.category] || career.category}</div>
@@ -420,165 +431,201 @@ function renderDetailView(id) {
         <p class="career-tagline">${career.tagline}</p>
       </div>
 
-      <div class="section">
-        <div class="section-body">${career.overview}
-<div class="glance-zone"><div class="glance-eyebrow">At a glance</div> 
-<div class="section quickfacts-section">
-        <div class="section-label">Quick facts</div>
-        <div class="quickfacts-grid">
-          <div class="quickfacts-item"><div class="quickfacts-label">Years to qualify</div><div class="quickfacts-value">${cm.duration || '—'}</div></div>
-          <div class="quickfacts-item"><div class="quickfacts-label">Entry salary</div><div class="quickfacts-value">${career.salary.entry}</div></div>
-          <div class="quickfacts-item"><div class="quickfacts-label">Mid-career salary</div><div class="quickfacts-value">${career.salary.mid}</div></div>
-          <div class="quickfacts-item"><div class="quickfacts-label">Competition</div>${renderQFMeter(cm.competition, 'competition')}</div>
-          <div class="quickfacts-item"><div class="quickfacts-label">Stress</div>${renderQFMeter(cm.stress, 'stress')}</div>
-          <div class="quickfacts-item"><div class="quickfacts-label">Work-life balance</div>${renderQFMeter(dm.work_life_balance, 'worklife')}</div>
-          <div class="quickfacts-item"><div class="quickfacts-label">Job availability</div>${renderQFMeter(dm.job_availability, 'neutral')}</div>
-          <div class="quickfacts-item"><div class="quickfacts-label">Abroad prospects</div>${renderQFMeter(dm.abroad_prospects, 'neutral')}</div>
-          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Ideal personality</div><div class="quickfacts-value quickfacts-text">${dm.ideal_personality || '—'}</div></div>
-          ${career.career_outlook ? `
-          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (India)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.india}</div></div>
-          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (Abroad)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.abroad}</div></div>
-          ` : `
-          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (India)</div><div class="quickfacts-value quickfacts-text">${career.scope?.india || '—'}</div></div>
-          <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (Abroad)</div><div class="quickfacts-value quickfacts-text">${career.scope?.abroad || '—'}</div></div>
-          `}
-        </div>
+      ${tabBar}
+
+      <div class="detail-tab-content">
+        ${tabContent}
       </div>
 
-      <div class="section snapshot-section">
-        <div class="section-label">Reality snapshot</div>
-        <div class="snapshot-card">
-          <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.salary}</span><span class="snapshot-name">Salary potential</span>${renderStars(dm.salary_potential)}</div>
-<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.stress}</span><span class="snapshot-name">Stress</span>${renderStars(cm.stress)}</div>
-<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.worklife}</span><span class="snapshot-name">Work-life balance</span>${renderStars(dm.work_life_balance)}</div>
-<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.study}</span><span class="snapshot-name">Study difficulty</span>${renderStars(dm.study_difficulty)}</div>
-<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.competition}</span><span class="snapshot-name">Competition</span>${renderStars(cm.competition)}</div>
-<div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.abroad}</span><span class="snapshot-name">Abroad opportunities</span>${renderStars(dm.abroad_prospects)}</div>
-          <div class="snapshot-duration">Average training time: <strong>${cm.duration || '—'}</strong></div>
-          <div class="snapshot-quotes">
-            <div class="snapshot-quote"><span class="snapshot-quote-label">Biggest misconception</span><span class="snapshot-quote-text">"${dm.misconception || ''}"</span></div>
-            <div class="snapshot-quote"><span class="snapshot-quote-label">Most common regret</span><span class="snapshot-quote-text">"${dm.regret || ''}"</span></div>
-            <div class="snapshot-quote"><span class="snapshot-quote-label">Most common praise</span><span class="snapshot-quote-text">"${dm.praise || ''}"</span></div>
-          </div>
-        </div>
-      </div>
+      ${verdictHtml}
 
-      <div class="section">
-        <div class="section-label">Salary progression</div>
-        <div class="salary-track">
-          <div class="salary-row">
-            <div class="salary-stage">Entry</div>
-            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="40"><span class="salary-value">${career.salary.entry}</span></div></div>
-          </div>
-          <div class="salary-row">
-            <div class="salary-stage">Mid</div>
-            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="68"><span class="salary-value">${career.salary.mid}</span></div></div>
-          </div>
-          <div class="salary-row">
-            <div class="salary-stage">Senior</div>
-            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="95"><span class="salary-value">${career.salary.senior}</span></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section timeline-section">
-        <div class="section-label">Timeline</div>
-        <div class="timeline-track">
-          ${timelineStages.map((t, i) => `
-            <div class="timeline-stage">
-              <div class="timeline-dot"></div>
-              <div class="timeline-label">${t.label}</div>
-              <div class="timeline-sub">${t.sub}</div>
-            </div>
-            ${i < timelineStages.length - 1 ? '<div class="timeline-line"></div>' : ''}
-          `).join('')}
-        </div>
-      </div>
-
-      <div class="section progression-section">
-        <div class="section-label">Typical career progression</div>
-        <div class="progression-track">
-          ${(dm.progression || []).map((stage, i) => `
-            <span class="progression-stage">${stage}</span>
-            ${i < dm.progression.length - 1 ? '<span class="progression-arrow">→</span>' : ''}
-          `).join('')}
-        </div>
-      </div>
-</div>
-      </div>
-        ${chooseSection}
-
-        <div class="section-label">What nobody tells you</div>
-        <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
-      </div>
-
-      <div class="section">
-        <div class="section-label">Who thrives here vs Who struggles</div>
-        <div class="fit-grid">
-          <div class="fit-card">
-            <div class="fit-label">Who thrives here</div>
-            <ul>${career.who_thrives.map(t => `<li>${t}</li>`).join('')}</ul>
-          </div>
-          <div class="fit-card struggle">
-            <div class="fit-label">Who might struggle or regret this</div>
-            <ul>${career.who_regrets_it.map(t => `<li>${t}</li>`).join('')}</ul>
-          </div>
-        </div>
-      </div>
-
-      ${career.before_you_commit ? `
-<div class="section">
-  <div class="section-label">Before you commit</div>
-  <ul class="love-list">
-    ${career.before_you_commit.map(item => `<li>${item}</li>`).join('')}
-  </ul>
-</div>
-` : `
-<div class="section">
-  <div class="section-label">A day in the life</div>
-  <div class="dayinlife-grid">
-    <div class="dayinlife-card">
-      <div class="dayinlife-role">As a student</div>
-      <div class="dayinlife-text">${career.day_in_the_life.student}</div>
-    </div>
-    <div class="dayinlife-card">
-      <div class="dayinlife-role">As a professional</div>
-      <div class="dayinlife-text">${career.day_in_the_life.professional}</div>
-    </div>
-  </div>
-</div>
-`}
-
-      <div class="section">
-        <div class="section-label">Testimonies</div>
-        ${career.real_experiences.map(q => `
-          <div class="quote-block">
-            <div class="quote-text">"${q.quote}"</div>
-            <a class="quote-source" href="${q.url}" target="_blank" rel="noopener noreferrer">${q.source}${q.url ? ' ↗' : ''}</a>
-          </div>
-        `).join('')}
-      </div>
-
-      ${relatedHtml ? `
-      <div class="section">
+      <div class="section" style="margin-top:40px;">
         <div class="section-label">Related paths</div>
-        <div class="related-row">${relatedHtml}</div>
-      </div>` : ''}
-            <div class="section">
+        <div class="related-row">${relatedHtml || 'None yet'}</div>
+      </div>
+
+      <div class="section">
         <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
       </div>
       ${career.related_careers && career.related_careers.length ? `
       <div class="section">
         <div class="section-label">Students often compare</div>
         <div class="related-row">${career.related_careers.map(rid => {
-    const rc = careers.find(c => c.id === rid);
-    return rc ? `<button class="related-pill" data-nav="compare=${career.id},${rc.id}">${rc.name}</button>` : '';
-  }).join('')}</div>
+          const rc = careers.find(c => c.id === rid);
+          return rc ? `<button class="related-pill" data-nav="compare=${career.id},${rc.id}">${rc.name}</button>` : '';
+        }).join('')}</div>
       </div>` : ''}
-
-    </div>
-  `;
+    </div>`;
 }
+function renderTabContent(career, cm, dm) {
+  switch (activeDetailTab) {
+    case 'overview': return renderOverviewTab(career, cm, dm);
+    case 'realities': return renderRealitiesTab(career, cm, dm);
+    case 'fit': return renderFitTab(career, cm, dm);
+    case 'pay': return renderPayTab(career, cm, dm);
+    case 'experiences': return renderExperiencesTab(career, cm, dm);
+    default: return renderOverviewTab(career, cm, dm);
+  }
+}
+
+function renderOverviewTab(career, cm, dm) {
+  return `
+    <div class="section-body" style="margin-bottom:24px;">${career.overview}</div>
+
+    <div class="quickfacts-grid">
+      <div class="quickfacts-item"><div class="quickfacts-label">Years to qualify</div><div class="quickfacts-value">${cm.duration || '—'}</div></div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Entry salary</div><div class="quickfacts-value">${career.salary?.entry || '—'}</div></div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Mid-career salary</div><div class="quickfacts-value">${career.salary?.mid || '—'}</div></div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Competition</div>${renderQFMeter(cm.competition, 'competition')}</div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Stress</div>${renderQFMeter(cm.stress, 'stress')}</div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Work-life balance</div>${renderQFMeter(dm.work_life_balance, 'worklife')}</div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Job availability</div>${renderQFMeter(dm.job_availability, 'neutral')}</div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Abroad prospects</div>${renderQFMeter(dm.abroad_prospects, 'neutral')}</div>
+      <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Ideal personality</div><div class="quickfacts-value quickfacts-text">${dm.ideal_personality || '—'}</div></div>
+      ${career.career_outlook ? `
+      <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (India)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.india}</div></div>
+      <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (Abroad)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.abroad}</div></div>
+      ` : `
+      <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (India)</div><div class="quickfacts-value quickfacts-text">${career.scope?.india || '—'}</div></div>
+      <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (Abroad)</div><div class="quickfacts-value quickfacts-text">${career.scope?.abroad || '—'}</div></div>
+      `}
+    </div>`;
+}
+
+function renderRealitiesTab(career, cm, dm) {
+  return `
+    <div class="section-label">What nobody tells you</div>
+    <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
+
+    <div style="margin-top:32px;">
+      <div class="section-label">Reality snapshot</div>
+      <div class="snapshot-card">
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.salary}</span><span class="snapshot-name">Salary potential</span>${renderStars(dm.salary_potential)}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.stress}</span><span class="snapshot-name">Stress</span>${renderStars(cm.stress)}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.worklife}</span><span class="snapshot-name">Work-life balance</span>${renderStars(dm.work_life_balance)}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.study}</span><span class="snapshot-name">Study difficulty</span>${renderStars(dm.study_difficulty)}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.competition}</span><span class="snapshot-name">Competition</span>${renderStars(cm.competition)}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.abroad}</span><span class="snapshot-name">Abroad opportunities</span>${renderStars(dm.abroad_prospects)}</div>
+        <div class="snapshot-duration">Average training time: <strong>${cm.duration || '—'}</strong></div>
+        <div class="snapshot-quotes">
+          <div class="snapshot-quote"><span class="snapshot-quote-label">Biggest misconception</span><span class="snapshot-quote-text">"${dm.misconception || ''}"</span></div>
+          <div class="snapshot-quote"><span class="snapshot-quote-label">Most common regret</span><span class="snapshot-quote-text">"${dm.regret || ''}"</span></div>
+          <div class="snapshot-quote"><span class="snapshot-quote-label">Most common praise</span><span class="snapshot-quote-text">"${dm.praise || ''}"</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <div class="section-label">Why people choose this</div>
+      <ul class="love-list">${(career.why_people_love_it || []).map(p => `<li>${p}</li>`).join('')}</ul>
+    </div>`;
+}
+
+function renderFitTab(career, cm, dm) {
+  return `
+    <div class="fit-grid">
+      <div class="fit-card">
+        <div class="fit-label">Who thrives here</div>
+        <ul>${(career.who_thrives || []).map(t => `<li>${t}</li>`).join('')}</ul>
+      </div>
+      <div class="fit-card struggle">
+        <div class="fit-label">Who might struggle or regret this</div>
+        <ul>${(career.who_regrets_it || []).map(t => `<li>${t}</li>`).join('')}</ul>
+      </div>
+    </div>`;
+}
+
+function renderPayTab(career, cm, dm) {
+  const timelineStages = [
+    { label: 'Class 12', sub: 'Entrance exam / cutoff' },
+    { label: 'College', sub: cm.duration || '' }
+  ];
+  if (dm.internship) timelineStages.push({ label: 'Internship', sub: dm.internship });
+  timelineStages.push({ label: 'Entry role', sub: career.salary?.entry || '—' });
+  timelineStages.push({ label: 'Senior / Established', sub: career.salary?.senior || '—' });
+
+  return `
+    <div class="section-label">Salary progression</div>
+    <div class="salary-track">
+      <div class="salary-row">
+        <div class="salary-stage">Entry</div>
+        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="40"><span class="salary-value">${career.salary?.entry || '—'}</span></div></div>
+      </div>
+      <div class="salary-row">
+        <div class="salary-stage">Mid</div>
+        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="68"><span class="salary-value">${career.salary?.mid || '—'}</span></div></div>
+      </div>
+      <div class="salary-row">
+        <div class="salary-stage">Senior</div>
+        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="95"><span class="salary-value">${career.salary?.senior || '—'}</span></div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <div class="section-label">Timeline</div>
+      <div class="timeline-track">
+        ${timelineStages.map((t, i) => `
+          <div class="timeline-stage">
+            <div class="timeline-dot"></div>
+            <div class="timeline-label">${t.label}</div>
+            <div class="timeline-sub">${t.sub}</div>
+          </div>
+          ${i < timelineStages.length - 1 ? '<div class="timeline-line"></div>' : ''}
+        `).join('')}
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <div class="section-label">Typical career progression</div>
+      <div class="progression-track">
+        ${(dm.progression || []).map((stage, i) => `
+          <span class="progression-stage">${stage}</span>
+          ${i < dm.progression.length - 1 ? '<span class="progression-arrow">→</span>' : ''}
+        `).join('')}
+      </div>
+    </div>`;
+}
+
+function renderExperiencesTab(career, cm, dm) {
+  const exps = career.real_experiences || [];
+  if (!exps.length) return '<p style="color:var(--ink-faint);">No experiences yet.</p>';
+
+  return exps.map((q, i) => `
+    <div class="quote-block" ${i === 0 ? '' : ''}>
+      <div class="quote-text">"${q.quote}"</div>
+      <a class="quote-source" href="${q.url}" target="_blank" rel="noopener noreferrer">${q.source}${q.url ? ' ↗' : ''}</a>
+    </div>
+  `).join('');
+}
+
+function renderVerdictCard(career) {
+  const choose = (career.choose_if || []).map(c => `<li>${c}</li>`).join('');
+  const avoid = (career.avoid_if || []).map(c => `<li>${c}</li>`).join('');
+  const commit = (career.before_you_commit || []).map(c => `<li>${c}</li>`).join('');
+
+  if (!choose && !avoid && !commit) return '';
+
+  return `
+    <div class="verdict-card">
+      <div class="verdict-label">Should you choose this?</div>
+      ${choose ? `
+      <div class="verdict-section">
+        <div class="verdict-choose-title">Choose ${career.name} if…</div>
+        <ul class="love-list">${choose}</ul>
+      </div>` : ''}
+      ${avoid ? `
+      <div class="verdict-section">
+        <div class="verdict-avoid-title">Avoid if…</div>
+        <ul class="pain-list">${avoid}</ul>
+      </div>` : ''}
+      ${commit ? `
+      <div class="verdict-section">
+        <div class="verdict-commit-title">Before you commit</div>
+        <ul class="love-list">${commit}</ul>
+      </div>` : ''}
+    </div>`;
+}
+
 
 function renderAboutView() {
   return `
@@ -675,6 +722,7 @@ function renderAboutView() {
     </div>
   `;
 }
+
 
 
 function attachListeners() {
@@ -774,9 +822,24 @@ function attachListeners() {
       document.getElementById(scrollBtn.dataset.navScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+    // Tab click listeners
+  document.querySelectorAll('.detail-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      activeDetailTab = tab.dataset.tab;
+      const id = window.location.hash.replace('#', '');
+      if (id && !id.startsWith('compare=') && id !== 'about') {
+        const view = document.getElementById('view');
+        view.innerHTML = renderDetailView(id);
+        attachListeners();
+        document.querySelectorAll('.salary-bar-fill').forEach(el => {
+          requestAnimationFrame(() => setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 80));
+        });
+      }
+    });
+  });
 }
-let savedScrollY = 0;
 
+let savedScrollY = 0;
 async function render(animate = true) {
   await loadCareers();
   const view = document.getElementById('view');
