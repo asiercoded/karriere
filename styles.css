@@ -1184,51 +1184,102 @@ footer {
 }
 
 /* ── VERDICT CARD ── */
+.verdict-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0 32px;
+}
+
+.verdict-divider::before,
+.verdict-divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--ink);
+}
+
+.verdict-divider-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
 .verdict-card {
-  background: var(--surface);
-  border: 2px solid var(--violet-dim);
-  border-radius: 14px;
-  padding: 28px 32px;
-  margin-top: 40px;
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(122,59,46,0.04) 100%);
+  border: 2px solid var(--violet);
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: 0 4px 20px rgba(122,59,46,0.12);
 }
 
 .verdict-label {
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 800;
   color: var(--violet);
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--violet-dim);
 }
 
-.verdict-section { margin-bottom: 20px; }
+.verdict-section { margin-bottom: 24px; }
 
 .verdict-choose-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--sage);
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdict-choose-title::before {
+  content: '✓';
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .verdict-avoid-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--dustred);
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdict-avoid-title::before {
+  content: '✗';
+  font-size: 16px;
+  font-weight: 800;
 }
 
 .verdict-commit-title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdict-commit-title::before {
+  content: '→';
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--violet);
 }
 
 .verdict-card .love-list li { font-size: 14px; margin-bottom: 8px; }
 .verdict-card .pain-list li { font-size: 14px; margin-bottom: 8px; }
 
 @media (max-width: 640px) {
-  .verdict-card { padding: 20px 18px; }
+  .verdict-card { padding: 22px 18px; }
 }

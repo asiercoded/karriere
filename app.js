@@ -437,6 +437,9 @@ function renderDetailView(id) {
         ${tabContent}
       </div>
 
+       <div class="verdict-divider">
+        <span class="verdict-divider-label">Your decision</span>
+      </div>
       ${verdictHtml}
 
       <div class="section" style="margin-top:40px;">
