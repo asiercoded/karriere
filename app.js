@@ -54,111 +54,143 @@ const CARD_METRICS = {
   bcom: { duration: '3 yrs', stress: 2, competition: 3 },
   zoology: { duration: '3 yrs', stress: 2, competition: 3 },
   botany: { duration: '3 yrs', stress: 2, competition: 3 },
-  };
+};
 
 const DETAIL_METRICS = {
-  mbbs: { salary_potential: 4, study_difficulty: 5, work_life_balance: 1, job_availability: 5, abroad_prospects: 4,
+  mbbs: {
+    salary_potential: 4, study_difficulty: 5, work_life_balance: 1, job_availability: 5, abroad_prospects: 4,
     ideal_personality: 'Emotionally resilient, high stress tolerance, genuinely curious about biology',
     internship: '1 yr compulsory rotating internship (within MBBS)',
     progression: ['Intern', 'Junior Resident (MD/MS)', 'Senior Resident', 'Consultant / Specialist'],
     misconception: 'Once you finish MBBS, you\'re financially set.', regret: 'I underestimated how long it takes to actually start earning well.',
-    praise: 'Helping even one patient makes the difficult days feel worthwhile.' },
-  bds: { salary_potential: 3, study_difficulty: 4, work_life_balance: 3, job_availability: 2, abroad_prospects: 2,
+    praise: 'Helping even one patient makes the difficult days feel worthwhile.'
+  },
+  bds: {
+    salary_potential: 3, study_difficulty: 4, work_life_balance: 3, job_availability: 2, abroad_prospects: 2,
     ideal_personality: 'Detail-oriented, hands-on, comfortable running a small business',
     internship: '1 yr compulsory internship',
     progression: ['Intern', 'Associate Dentist', 'MDS Specialist / Clinic Owner', 'Established Private Practice'],
     misconception: 'A dental degree pays like a medical degree.', regret: 'I only chose BDS because I missed the MBBS cutoff.',
-    praise: 'Precise, hands-on work with visible, immediate results for patients.' },
-  cs_engineering: { salary_potential: 5, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 5,
+    praise: 'Precise, hands-on work with visible, immediate results for patients.'
+  },
+  cs_engineering: {
+    salary_potential: 5, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 5,
     ideal_personality: 'Self-learner who enjoys problem-solving and constant change',
     internship: 'Typically one summer internship before final year',
     progression: ['SDE 1 / Junior Developer', 'SDE 2 / Mid-level Engineer', 'Senior Engineer / Tech Lead', 'Staff Engineer / EM'],
     misconception: 'Every CS graduate gets a high-paying tech job.', regret: 'I assumed college alone would prepare me — I had to self-learn everything that mattered.',
-    praise: 'Skills compound fast, and the ceiling on pay and impact is genuinely high.' },
-  ca: { salary_potential: 5, study_difficulty: 5, work_life_balance: 1, job_availability: 5, abroad_prospects: 2,
+    praise: 'Skills compound fast, and the ceiling on pay and impact is genuinely high.'
+  },
+  ca: {
+    salary_potential: 5, study_difficulty: 5, work_life_balance: 1, job_availability: 5, abroad_prospects: 2,
     ideal_personality: 'Disciplined, persistent, comfortable with delayed gratification and repeated failure',
     duration: '5-7 yrs',
     progression: ['Articleship Trainee', 'Fresher CA (Big 4 / mid-size)', 'Manager (5 yrs)', 'CFO track / Partner / Own Practice'],
     misconception: "You'll be a lakhpati the moment you pass.", regret: 'I thought it would take 3 years. It took me 6.5, and two failed attempts along the way.',
-    praise: "It's one of the most recession-proof, respected qualifications in Indian finance." },
-  law: { salary_potential: 5, study_difficulty: 4, work_life_balance: 2, job_availability: 3, abroad_prospects: 2,
+    praise: "It's one of the most recession-proof, respected qualifications in Indian finance."
+  },
+  law: {
+    salary_potential: 5, study_difficulty: 4, work_life_balance: 2, job_availability: 3, abroad_prospects: 2,
     ideal_personality: 'Strong communicator who enjoys reading, arguing, and slow-building a reputation',
     internship: 'Mandatory internships every vacation — they matter more than your syllabus for where you end up',
     progression: ['Junior Associate / Litigation Trainee', 'Mid-level (Corporate Associate or Litigator)', 'Senior Associate / Specialist Litigator', 'Partner / Senior Advocate / Judiciary'],
     misconception: 'Every lawyer argues dramatic courtroom cases like on TV.', regret: "I didn't realize litigation pays almost nothing for the first 5-10 years, and I didn't have the runway to wait it out.",
-    praise: 'Deeply intellectually engaging work that rewards sharp thinking and persistence.' },
-  design: { salary_potential: 4, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 4,
+    praise: 'Deeply intellectually engaging work that rewards sharp thinking and persistence.'
+  },
+  design: {
+    salary_potential: 4, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 4,
     ideal_personality: "Creatively driven self-starter who's comfortable with constant critique",
     internship: 'Helps with portfolio-building, but matters less than the portfolio itself',
     progression: ['Junior Designer', 'Product / UX Designer', 'Senior Designer / Design Lead', 'Design Director / Independent Label'],
     misconception: 'Design is easy, low-stress work where creativity alone gets you through.', regret: 'I thought design was mostly creative work — turns out it\'s 80% client feedback and revisions.',
-    praise: 'Genuinely creative, varied work — no two days or projects look the same.' },
-  mba: { salary_potential: 5, study_difficulty: 3, work_life_balance: 2, job_availability: 3, abroad_prospects: 4,
+    praise: 'Genuinely creative, varied work — no two days or projects look the same.'
+  },
+  mba: {
+    salary_potential: 5, study_difficulty: 3, work_life_balance: 2, job_availability: 3, abroad_prospects: 4,
     ideal_personality: 'Strategic networker with clear career goals going in',
     internship: 'Mandatory summer internship between year 1 and 2',
     progression: ['Associate / Management Trainee', 'Manager (3-5 yrs)', 'Senior Manager / Practice Lead', 'Director / CXO track'],
     misconception: 'MBA automatically leads to leadership roles, regardless of where you did it.', regret: "I went for an MBA right after graduation without work experience. Later I realized I would have understood more, earned more, and chosen better roles if I had worked first.",
-    praise: 'It genuinely opens doors and accelerates people who already have direction.' },
-  pharmacy: { salary_potential: 3, study_difficulty: 3, work_life_balance: 4, job_availability: 3, abroad_prospects: 3,
+    praise: 'It genuinely opens doors and accelerates people who already have direction.'
+  },
+  pharmacy: {
+    salary_potential: 3, study_difficulty: 3, work_life_balance: 4, job_availability: 3, abroad_prospects: 3,
     ideal_personality: 'Detail-oriented, regulation-comfortable, interested in chemistry',
     internship: 'Internships at pharmacies or pharma companies during the degree',
     progression: ['Pharmacist / QA-QC Trainee', 'Store Manager / Industry Executive', 'Regulatory Affairs / QA Manager', 'Chain Owner / Senior Industry Role'],
     misconception: 'Pharmacists just hand out medicines at a counter.', regret: 'I defaulted into retail instead of exploring the better-paying industry roles.',
-    praise: "Strong, stable demand thanks to India's massive pharma manufacturing base." },
-  paramedical_physiotherapy: { salary_potential: 3, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 4,
+    praise: "Strong, stable demand thanks to India's massive pharma manufacturing base."
+  },
+  paramedical_physiotherapy: {
+    salary_potential: 3, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 4,
     ideal_personality: 'Patient, hands-on, genuinely interested in human movement and recovery',
     internship: '1 yr compulsory internship (within the 5-year BPT)',
     progression: ['Intern', 'Junior Physiotherapist', 'Senior Physiotherapist / Practice Building', 'Established Private Practice / Sports Physio'],
     misconception: 'Physiotherapy is a quick, easy medical-adjacent degree.', regret: 'I underestimated how physically demanding the day-to-day work actually is.',
-    praise: 'You see steady, tangible progress in patients — deeply satisfying work.' },
-  paramedical_nursing: { salary_potential: 3, study_difficulty: 3, work_life_balance: 2, job_availability: 4, abroad_prospects: 5,
+    praise: 'You see steady, tangible progress in patients — deeply satisfying work.'
+  },
+  paramedical_nursing: {
+    salary_potential: 3, study_difficulty: 3, work_life_balance: 2, job_availability: 4, abroad_prospects: 5,
     ideal_personality: 'Empathetic, resilient, comfortable with shift work',
     internship: 'Extensive clinical postings throughout the degree',
     progression: ['Staff Nurse (India or abroad)', 'Senior / Charge Nurse', 'Nurse Specialist / Ward Manager', 'Nurse Practitioner / Matron (esp. abroad)'],
     misconception: 'There\'s little room for career growth in nursing.', regret: "I didn't plan for licensing exams abroad early enough — it delayed my income by years.",
-    praise: 'One of the most globally portable healthcare careers there is.' },
-  radiology_tech: { salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 4, abroad_prospects: 3,
+    praise: 'One of the most globally portable healthcare careers there is.'
+  },
+  radiology_tech: {
+    salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 4, abroad_prospects: 3,
     ideal_personality: 'Technically minded, precise, comfortable with equipment and shift schedules',
     internship: 'Hospital-based practical training throughout the degree',
     progression: ['Trainee Technologist', 'Radiology Technologist', 'Specialized Technologist (MRI/CT/Sonography)', 'Imaging Center Manager'],
     misconception: 'Radiology technologists read and diagnose scans.', regret: "I didn't realize I'd be treated as a machine operator, not a medical professional. The degree is called 'Radiology' but you're a technician to everyone around you.",
-    praise: 'High demand and comparatively good pay for a paramedical path, without an extremely long education.' },
-  bca_mca: { salary_potential: 4, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 3,
+    praise: 'High demand and comparatively good pay for a paramedical path, without an extremely long education.'
+  },
+  bca_mca: {
+    salary_potential: 4, study_difficulty: 3, work_life_balance: 3, job_availability: 3, abroad_prospects: 3,
     ideal_personality: 'Self-learner who treats BCA as a stepping stone and builds coding skills independently',
     internship: 'Varies by college — top programs have industry internships; many tier-3 colleges have none at all',
     progression: ['Junior Developer', 'Software Engineer', 'Senior Engineer / Tech Lead', 'Engineering Manager / Architect'],
     misconception: 'BCA has less math than B.Tech, which makes it a more practical, coding-focused alternative to engineering.',
     regret: 'I thought I could make BCA alone work, spent years stuck in low-growth roles that B.Tech graduates weren\'t even considered for, and lost time I can\'t get back.',
-    praise: 'The MCA completely reset my career trajectory — the same companies that wouldn\'t look at my BCA resume started calling me for interviews.' },
-  bba: { salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 2, abroad_prospects: 2,
+    praise: 'The MCA completely reset my career trajectory — the same companies that wouldn\'t look at my BCA resume started calling me for interviews.'
+  },
+  bba: {
+    salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 2, abroad_prospects: 2,
     ideal_personality: 'Networker who enjoys business concepts, comfortable with sales/operations as entry point, and sees BBA as MBA preparation',
     internship: 'Critical for employability — graduates with multiple internships land significantly better roles than those without any',
     progression: ['Management Trainee / Sales Associate', 'Assistant Manager / Team Lead', 'Manager / Department Head', 'Senior Manager / Director (with MBA)'],
     misconception: 'BBA is a "management degree" while B.Com is "just accounting" — so BBA is the better, more prestigious choice for a corporate career.',
     regret: 'I paid premium fees at a private college for a degree that didn\'t open any doors my B.Com classmates didn\'t already have — I should have saved the money and gone for professional certifications instead.',
-    praise: 'A BBA from a good program with solid internships set me up for an MBA far better than any other undergraduate degree could have.' },
-  bcom: { salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 3, abroad_prospects: 2,
+    praise: 'A BBA from a good program with solid internships set me up for an MBA far better than any other undergraduate degree could have.'
+  },
+  bcom: {
+    salary_potential: 3, study_difficulty: 2, work_life_balance: 3, job_availability: 3, abroad_prospects: 2,
     ideal_personality: 'Detail-oriented and patient with numbers, comfortable with process-driven work, sees the degree as a foundation for further certification',
     internship: 'Varies by college — top programs have structured internships; most tier-3 colleges offer none, making self-sourced internships critical',
     progression: ['Accounts Assistant / Audit Trainee', 'Accountant / Financial Analyst', 'Senior Accountant / Team Lead', 'Manager / CA-CFA-qualified Specialist'],
     misconception: 'B.Com is only useful if you plan to become a CA — otherwise it\'s a dead-end degree with no real career value.',
     regret: 'I assumed the degree alone would lead to a corporate career, but without certifications or skills I\'ve been stuck in the same clerical role for years while watching CA-qualified peers advance.',
-    praise: 'A B.Com combined with the right certification gives you a career foundation as strong as any professional degree — at a fraction of the cost and time.' },
-  zoology: { salary_potential: 2, study_difficulty: 3, work_life_balance: 4, job_availability: 2, abroad_prospects: 3,
+    praise: 'A B.Com combined with the right certification gives you a career foundation as strong as any professional degree — at a fraction of the cost and time.'
+  },
+  zoology: {
+    salary_potential: 2, study_difficulty: 3, work_life_balance: 4, job_availability: 2, abroad_prospects: 3,
     ideal_personality: 'Genuinely curious about biology, comfortable with hands-on lab work, willing to commit to additional qualifications after the degree',
     internship: 'Not typically structured into the curriculum — self-sourced internships at research institutes, wildlife organizations, or labs are essential for building a competitive M.Sc. application',
     progression: ['Lab Technician / Field Assistant', 'M.Sc. Graduate / Junior Research Fellow', 'PhD Scholar / Research Associate', 'Professor / Senior Scientist'],
     misconception: 'B.Sc. Zoology is a backup degree — you can coast through it easily while you figure out what to do with your life.',
     regret: 'I chose Zoology as a default after NEET without any real plan, drifted through three years, and graduated with no applications, no direction, and no job prospects.',
-    praise: 'B.Sc. Zoology with a clear plan for what comes next is one of the most genuinely interesting undergraduate degrees you can choose — the subject is endlessly fascinating if you actually care about it.' },
-  botany: { salary_potential: 2, study_difficulty: 3, work_life_balance: 4, job_availability: 2, abroad_prospects: 3,
+    praise: 'B.Sc. Zoology with a clear plan for what comes next is one of the most genuinely interesting undergraduate degrees you can choose — the subject is endlessly fascinating if you actually care about it.'
+  },
+  botany: {
+    salary_potential: 2, study_difficulty: 3, work_life_balance: 4, job_availability: 2, abroad_prospects: 3,
     ideal_personality: 'Genuinely curious about plants and ecosystems, comfortable with fieldwork and outdoor conditions, patient with a slow-building career',
     internship: 'Not typically structured — self-sourced internships at agricultural research stations, botanical gardens, herbal pharma companies, or environmental consulting firms are essential',
     progression: ['Lab Technician / Nursery Assistant', 'M.Sc. Graduate / Agricultural Officer', 'PhD Scholar / Research Scientist', 'Professor / Forestry Officer / Senior Researcher'],
     misconception: 'Botany is just "studying plants" — a narrow, outdated science with limited career scope in the modern economy.',
     regret: 'I chose Botany because of the promise of government jobs, but the competition was far higher than I expected and I ended up stuck with no backup plan.',
-    praise: 'A B.Sc. in Botany combined with a targeted M.Sc. in plant biotechnology, forestry, or agriculture opens doors to careers that genuinely matter — feeding a growing population and protecting ecosystems.' },
-  };
+    praise: 'A B.Sc. in Botany combined with a targeted M.Sc. in plant biotechnology, forestry, or agriculture opens doors to careers that genuinely matter — feeding a growing population and protecting ecosystems.'
+  },
+};
 const ALIASES = {
   mbbs: ['doctor', 'medicine', 'medical'],
   bds: ['dentist', 'dental', 'dentistry'],
@@ -338,7 +370,7 @@ function renderListView() {
       <div class="career-list">${listHtml}</div>
       <footer>
         <span>Karriere — built for students who deserve the truth.</span>
-        <span>${careers.length} careers profiled</span>
+        <span><button class="footer-about" data-nav="about" style="background:none;border:none;padding:0;font:inherit;color:var(--violet);cursor:pointer;text-decoration:underline;text-underline-offset:2px;">About</button> · ${careers.length} careers profiled</span>
       </footer>
     </div>
   `;
@@ -347,7 +379,7 @@ function renderListView() {
 function renderDetailView(id) {
   const career = careers.find(c => c.id === id);
   if (!career) return `<div class="wrap detail-wrap"><button class="back-link" data-nav="">← Back</button><div class="not-found">Career not found.</div></div>`;
-const cm = CARD_METRICS[career.id] || {};
+  const cm = CARD_METRICS[career.id] || {};
   const dm = DETAIL_METRICS[career.id] || {};
   const timelineStages = [
     { label: 'Class 12', sub: 'Entrance exam / cutoff' },
@@ -534,23 +566,120 @@ const cm = CARD_METRICS[career.id] || {};
       <div class="section">
         <div class="section-label">Students often compare</div>
         <div class="related-row">${career.related_careers.map(rid => {
-          const rc = careers.find(c => c.id === rid);
-          return rc ? `<button class="related-pill" data-nav="compare=${career.id},${rc.id}">${rc.name}</button>` : '';
-        }).join('')}</div>
+    const rc = careers.find(c => c.id === rid);
+    return rc ? `<button class="related-pill" data-nav="compare=${career.id},${rc.id}">${rc.name}</button>` : '';
+  }).join('')}</div>
       </div>` : ''}
 
     </div>
   `;
 }
 
+function renderAboutView() {
+  return `
+    <div class="wrap detail-wrap">
+      <button class="back-link" data-nav="">← Back to careers</button>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+        <button class="masthead-small">${LOGOMARK}<span>Karriere</span></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
+      </div>
+
+      <div class="career-header">
+        <h1 class="career-title">About Karriere</h1>
+        <p class="career-tagline">Choosing a career shouldn't feel like gambling.</p>
+      </div>
+
+      <div class="section">
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:24px;">Every year, millions of Indian students choose a career based on coaching institutes, relatives, social media, or random YouTube videos.</p>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:24px;">Most career websites don't help much. They usually tell you:</p>
+        <ul class="pain-list" style="margin-bottom:24px;">
+          <li>"High salary."</li>
+          <li>"Excellent scope."</li>
+          <li>"Bright future."</li>
+        </ul>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:24px;">But they rarely answer the questions students actually have:</p>
+        <ul class="pain-list" style="margin-bottom:24px;">
+          <li>What is the work really like?</li>
+          <li>Who regrets choosing this career?</li>
+          <li>What does a typical career path look like?</li>
+          <li>Is this career actually a good fit for me?</li>
+        </ul>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);">Karriere exists to answer those questions honestly.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Our philosophy</div>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:16px;">We believe a career should be chosen based on fit, not hype.</p>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:16px;">That's why every career on Karriere includes:</p>
+        <ul class="love-list">
+          <li>An honest overview</li>
+          <li>What nobody tells you</li>
+          <li>Who thrives</li>
+          <li>Who struggles</li>
+          <li>Real experiences from students and professionals</li>
+          <li>Things to do before committing</li>
+        </ul>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-top:16px;">The goal isn't to convince you to choose a career. The goal is to help you avoid choosing the wrong one.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">How the content is created</div>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:16px;">Every career page is built using information from multiple sources, including:</p>
+        <ul class="love-list">
+          <li>Official university and government resources</li>
+          <li>Industry reports</li>
+          <li>Practicing professionals</li>
+          <li>Student experiences</li>
+          <li>Public discussions (such as Reddit, Quora, and LinkedIn)</li>
+        </ul>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-top:16px;">Where possible, we also speak directly with students and professionals to understand what the career is actually like beyond brochures and advertisements.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">A note about salaries</div>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:8px;">Salary figures are estimates. They vary depending on:</p>
+        <ul class="pain-list">
+          <li>City</li>
+          <li>Skills</li>
+          <li>College</li>
+          <li>Experience</li>
+          <li>Employer</li>
+          <li>Economic conditions</li>
+        </ul>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-top:8px;">They should be viewed as realistic ranges, not guarantees.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">This isn't career counselling</div>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);">Karriere is an independent educational resource. It does not replace professional career counselling, academic advisors, or conversations with people already working in the field. Think of it as one input into your decision — not the only one.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Founder's Note</div>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">Hi, I'm James.</p>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">I'm currently a student studying in India. While choosing my own career, I found that most guidance online focused on placements, salaries, or promotional content. Honest discussions about the realities of different careers were surprisingly difficult to find.</p>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">I built Karriere to create the resource I wish I'd had before making my own decision.</p>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">The project is still growing, and every career page is continuously refined as I learn more, interview students and professionals, and receive feedback from readers.</p>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);">If Karriere helps even one student avoid choosing the wrong career, it has done its job.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Help improve Karriere</div>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);">If you notice outdated information, an error, or would like to share your own experience with a career, I'd love to hear from you. Every suggestion helps make Karriere more accurate for the next student.</p>
+      </div>
+    </div>
+  `;
+}
+
+
 function attachListeners() {
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => { activeCategory = btn.dataset.cat; render(false); });
   });
-    document.querySelectorAll('.career-entry').forEach(btn => {
+  document.querySelectorAll('.career-entry').forEach(btn => {
     btn.addEventListener('click', () => navigate(btn.dataset.id));
   });
-    document.querySelectorAll('[data-nav]').forEach(btn => {
+  document.querySelectorAll('[data-nav]').forEach(btn => {
     btn.addEventListener('click', () => navigate(btn.dataset.nav));
   });
   document.querySelectorAll('.wordmark, .masthead-small').forEach(el => {
@@ -559,29 +688,29 @@ function attachListeners() {
   document.querySelectorAll('.salary-bar-fill').forEach(el => {
     requestAnimationFrame(() => setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 80));
   });
-    const themeBtn = document.getElementById('themeToggle');
+  const themeBtn = document.getElementById('themeToggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
       setTheme(current === 'dark' ? 'light' : 'dark');
     });
   }
-      // Compare search filtering
+  // Compare search filtering
   const compareSearchA = document.getElementById('compareSearchA');
-if (compareSearchA) {
-  compareSearchA.addEventListener('input', () => {
-    const q = compareSearchA.value.trim().toLowerCase();
-    document.querySelectorAll('.compare-option').forEach(opt => {
-      if (opt.disabled) return;
-      const name = opt.querySelector('.compare-option-name')?.textContent.toLowerCase() || '';
-      const tagline = opt.querySelector('.compare-option-tagline')?.textContent.toLowerCase() || '';
-      const id = opt.dataset.compareId || '';
-      const aliases = ALIASES[id] || [];
-      const match = name.includes(q) || tagline.includes(q) || aliases.some(a => a.includes(q));
-      opt.style.display = match ? '' : 'none';
+  if (compareSearchA) {
+    compareSearchA.addEventListener('input', () => {
+      const q = compareSearchA.value.trim().toLowerCase();
+      document.querySelectorAll('.compare-option').forEach(opt => {
+        if (opt.disabled) return;
+        const name = opt.querySelector('.compare-option-name')?.textContent.toLowerCase() || '';
+        const tagline = opt.querySelector('.compare-option-tagline')?.textContent.toLowerCase() || '';
+        const id = opt.dataset.compareId || '';
+        const aliases = ALIASES[id] || [];
+        const match = name.includes(q) || tagline.includes(q) || aliases.some(a => a.includes(q));
+        opt.style.display = match ? '' : 'none';
+      });
     });
-  });
-}
+  }
 
   const compareSearchB = document.getElementById('compareSearchB');
   if (compareSearchB) {
@@ -598,13 +727,13 @@ if (compareSearchA) {
       });
     });
   }
-    // Compare option click
+  // Compare option click
   document.querySelectorAll('.compare-option').forEach(opt => {
     opt.addEventListener('click', () => {
       const selectedId = opt.dataset.compareId;
       const slotA = document.getElementById('compareA')?.value;
       const slotB = document.getElementById('compareB')?.value;
-      
+
       if (slotA && slotB) return; // both filled
       if (!slotA) {
         navigate(`compare=${selectedId},`);
@@ -615,25 +744,25 @@ if (compareSearchA) {
   });
 
 
-  
+
 
   const searchInput = document.getElementById('hero-search');
   if (searchInput) {
     let searchTimeout;
-searchInput.addEventListener('input', () => {
-  clearTimeout(searchTimeout);
-  searchTimeout = setTimeout(async () => {
-    searchQuery = searchInput.value;
-    const cursorPos = searchInput.selectionStart;
-    await render(false);
-    const newInput = document.getElementById('hero-search');
-    if (newInput) {
-      newInput.focus();
-      newInput.setSelectionRange(cursorPos, cursorPos);
-    }
-  }, 250);
-});
-  
+    searchInput.addEventListener('input', () => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(async () => {
+        searchQuery = searchInput.value;
+        const cursorPos = searchInput.selectionStart;
+        await render(false);
+        const newInput = document.getElementById('hero-search');
+        if (newInput) {
+          newInput.focus();
+          newInput.setSelectionRange(cursorPos, cursorPos);
+        }
+      }, 250);
+    });
+
   }
   document.querySelectorAll('[data-nav-scroll]').forEach(scrollBtn => {
     scrollBtn.addEventListener('click', () => {
@@ -647,34 +776,39 @@ async function render(animate = true) {
   await loadCareers();
   const view = document.getElementById('view');
   const hash = window.location.hash.replace('#', '');
-const isCompare = hash.startsWith('compare=');
-const id = isCompare ? '' : hash;
+  const isCompare = hash.startsWith('compare=');
+  const id = isCompare ? '' : hash;
 
 
   if (animate) {
     view.classList.add('leaving');
     await new Promise(r => setTimeout(r, 150));
   }
-    // Save scroll position before navigating to detail
+  // Save scroll position before navigating to detail
   if (!id && window.prevScrollY) {
     // Restoring from detail back to list
   }
   if (isCompare) {
-  const ids = hash.replace('compare=', '').split(',');
-  if (ids.length === 2 && ids[0] && ids[1]) {
-    view.innerHTML = renderCompareView(ids[0], ids[1]);
-  } else if (ids.length >= 1 && ids[0]) {
-    view.innerHTML = renderComparePicker(ids[0]);
+    const ids = hash.replace('compare=', '').split(',');
+    if (ids.length === 2 && ids[0] && ids[1]) {
+      view.innerHTML = renderCompareView(ids[0], ids[1]);
+    } else if (ids.length >= 1 && ids[0]) {
+      view.innerHTML = renderComparePicker(ids[0]);
+    } else {
+      view.innerHTML = renderComparePicker(null);
+    }
   } else {
-    view.innerHTML = renderComparePicker(null);
-  }
+    if (id === 'about') {
+  view.innerHTML = renderAboutView();
 } else {
   view.innerHTML = id ? renderDetailView(id) : renderListView();
 }
 
+  }
+
   view.classList.remove('leaving');
 
-    if (animate) {
+  if (animate) {
     if (id) {
       window.prevScrollY = window.scrollY;
       window.scrollTo({ top: 0, behavior: 'instant' });
