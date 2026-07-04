@@ -1,11 +1,11 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #E8E2D6;
-  --surface: #FAF7F2;
+  --bg: #EDE8DD;
+  --surface: #FCFAF7;
   --ink: #2B2420;
   --ink-soft: rgba(43,36,32,0.75);
-  --ink-faint: rgba(43,36,32,0.52);
+  --ink-faint: rgba(43,36,32,0.65);
   --rule: rgba(43,36,32,0.14);
   --rule-strong: rgba(43,36,32,0.26);
   --violet: #7A3B2E;
@@ -775,7 +775,11 @@ footer {
 .quickfacts-value { font-size: 14px; font-weight: 700; color: var(--ink); line-height: 1.4; }
 .quickfacts-text { font-weight: 600; font-size: 13px; color: var(--ink-soft); }
 .quickfacts-wide { grid-column: 1 / -1; }
-@media (max-width: 640px) { .quickfacts-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) {
+  .quickfacts-grid { grid-template-columns: 1fr; }
+  .quickfacts-item { overflow-wrap: break-word; }
+}
+
 
 .qf-bar { display: inline-flex; gap: 3px; }
 .qf-seg { width: 16px; height: 8px; border-radius: 2px; background: var(--rule); display: inline-block; }

@@ -502,7 +502,9 @@ function renderRealitiesTab(career, cm, dm) {
 
     <div style="margin-top:32px;">
       <div class="section-label">Reality snapshot</div>
-      <div class="snapshot-card">
+            <div class="snapshot-card">
+      <div style="font-size:11px;color:var(--ink-soft);margin-bottom:8px;padding:0 0 8px;border-bottom:1px solid var(--rule);">Scale: 1 = low, 5 = high</div>
+
         <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.salary}</span><span class="snapshot-name">Salary potential</span>${renderStars(dm.salary_potential)}</div>
         <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.stress}</span><span class="snapshot-name">Stress</span>${renderStars(cm.stress)}</div>
         <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.worklife}</span><span class="snapshot-name">Work-life balance</span>${renderStars(dm.work_life_balance)}</div>
