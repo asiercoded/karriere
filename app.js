@@ -688,22 +688,9 @@ function renderComparePicker(preselectedId) {
       <button class="back-link" data-nav="">← Back</button>
       <h1 class="compare-picker-title">${selected ? `Compare ${selected.name} with...` : 'Compare Careers'}</h1>
       <div class="compare-search-field">
-        <input type="text" class="compare-search" id="compareSearch" placeholder="Search a career..." autofocus>
+        <input type="text" class="compare-search" id="compareSearch" placeholder="${selected ? 'Search a career to compare...' : 'Type a career name...'}" autofocus>
       </div>
-      ${selected ? `<input type="hidden" id="compareA" value="${selected.id}">` : `
-      <div class="compare-two">
-        <div class="compare-col">
-          <div class="compare-col-label">Career 1</div>
-          <input type="text" class="compare-search compare-search-half" id="compareSearchA" placeholder="Search..." autofocus>
-          <div class="compare-options" id="compareOptionsA"></div>
-        </div>
-        <div class="compare-vs">vs</div>
-        <div class="compare-col">
-          <div class="compare-col-label">Career 2</div>
-          <input type="text" class="compare-search compare-search-half" id="compareSearchB" placeholder="Search...">
-          <div class="compare-options" id="compareOptionsB"></div>
-        </div>
-      </div>`}
+      ${selected ? `<input type="hidden" id="compareA" value="${selected.id}">` : ''}
       <div class="compare-options" id="compareOptions">${list}</div>
     </div>
   `;
