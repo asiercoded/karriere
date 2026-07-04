@@ -580,7 +580,7 @@ function attachListeners() {
       });
     });
   }
-
+  }
   // Compare option click
   document.querySelectorAll('.compare-option').forEach(opt => {
     opt.addEventListener('click', () => {
@@ -594,7 +594,7 @@ function attachListeners() {
     });
   });
 
-  }
+  
 
   const searchInput = document.getElementById('hero-search');
   if (searchInput) {
@@ -653,7 +653,6 @@ const id = isCompare ? '' : hash;
 }
 
   view.classList.remove('leaving');
-    view.classList.remove('leaving');
 
     if (animate) {
     if (id) {
