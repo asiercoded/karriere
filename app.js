@@ -859,5 +859,4 @@ render = async function(animate) {
   const id = window.location.hash.replace('#', '');
   const career = careers.find(c => c.id === id);
   updateMetaTags(career?.name, career?.tagline);
-}
-}
+};
