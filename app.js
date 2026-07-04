@@ -565,6 +565,7 @@ function attachListeners() {
       const current = document.documentElement.getAttribute('data-theme');
       setTheme(current === 'dark' ? 'light' : 'dark');
     });
+  }
       // Compare search filtering
   const compareSearch = document.getElementById('compareSearch');
   if (compareSearch) {
@@ -579,7 +580,6 @@ function attachListeners() {
         opt.style.display = match ? '' : 'none';
       });
     });
-  }
   }
   // Compare option click
   document.querySelectorAll('.compare-option').forEach(opt => {
