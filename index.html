@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <script>
 (function() {
-  var theme = localStorage.getItem('karriere-theme') || 'light';
+  var theme = localStorage.getItem('karriere-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', theme);
 })();
 </script>
@@ -20,24 +20,26 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://asiercoded.github.io/karriere/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="careers.json" as="fetch" crossorigin>
+<link rel="preload" href="careers.json" as="fetch">
 </head>
 <body>
 
 <div id="view">
   <div id="loading-skeleton" style="max-width:980px;margin:80px auto;padding:0 28px;">
-    <div style="height:36px;width:200px;background:rgba(43,36,32,0.1);border-radius:6px;margin-bottom:40px;"></div>
-    <div style="height:20px;width:360px;background:rgba(43,36,32,0.08);border-radius:4px;margin-bottom:12px;"></div>
-    <div style="height:20px;width:280px;background:rgba(43,36,32,0.08);border-radius:4px;margin-bottom:50px;"></div>
-    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;margin-bottom:12px;"></div>
-    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;margin-bottom:12px;"></div>
-    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;margin-bottom:12px;"></div>
-    <div style="height:80px;background:rgba(43,36,32,0.06);border-radius:12px;"></div>
+    <div class="skeleton-block" style="height:36px;width:200px;margin-bottom:40px;"></div>
+    <div class="skeleton-block" style="height:20px;width:360px;margin-bottom:12px;"></div>
+    <div class="skeleton-block" style="height:20px;width:280px;margin-bottom:50px;"></div>
+    <div class="skeleton-block" style="height:80px;margin-bottom:12px;"></div>
+    <div class="skeleton-block" style="height:80px;margin-bottom:12px;"></div>
+    <div class="skeleton-block" style="height:80px;margin-bottom:12px;"></div>
+    <div class="skeleton-block" style="height:80px;"></div>
   </div>
 </div>
 

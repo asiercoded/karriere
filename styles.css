@@ -605,11 +605,11 @@ footer {
 .section { margin-bottom: 48px; }
 
 .section-label {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--ink-faint);
+  letter-spacing: 0.08em;
+  color: var(--ink);
   margin-bottom: 16px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--rule);
@@ -899,7 +899,7 @@ footer {
 }
 .glance-zone .section { margin-bottom: 32px; }
 .glance-zone .section-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink);
   border-bottom: none;
   padding-bottom: 0;
