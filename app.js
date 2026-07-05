@@ -34,6 +34,14 @@ const SNAPSHOT_ICONS = {
   abroad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path></svg>',
   clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>'
 };
+const TAB_ICONS = {
+  overview: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"></path><path d="M15 3v3h3"></path><line x1="9" y1="11" x2="15" y2="11"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>',
+  realities: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>',
+  fit: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="8.5 12.5 11 15 16 9"></polyline></svg>',
+  pay: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg>',
+  experiences: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>'
+};
+
 const LOGOMARK = '<svg class="logomark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"></line><line x1="5.07" y1="8" x2="18.93" y2="16"></line><line x1="18.93" y1="8" x2="5.07" y2="16"></line></svg>';
 
 const ALIASES = {
@@ -239,13 +247,16 @@ function renderDetailView(id) {
     { id: 'realities', label: "What It's Like" },
     { id: 'fit', label: 'Is This for You' },
     { id: 'pay', label: 'Pay & Progression' },
-    { id: 'experiences', label: 'Student Experiences' }
+    { id: 'experiences', label: 'Experiences' }
   ];
 
-  const tabBar = `
-    <div class="detail-tab-bar">
+   const tabBar = `
+    <div class="detail-tab-bar" role="tablist">
       ${tabs.map(t => `
-        <button class="detail-tab ${activeDetailTab === t.id ? 'active' : ''}" data-tab="${t.id}">${t.label}</button>
+        <button class="detail-tab ${activeDetailTab === t.id ? 'active' : ''}" data-tab="${t.id}" role="tab" aria-selected="${activeDetailTab === t.id}">
+          <span class="detail-tab-icon">${TAB_ICONS[t.id]}</span>
+          <span class="detail-tab-label">${t.label}</span>
+        </button>
       `).join('')}
     </div>`;
 
@@ -277,9 +288,14 @@ function renderDetailView(id) {
 
       ${tabBar}
 
-      <div class="detail-tab-content">
-        ${tabContent}
+        <div class="detail-tab-content">
+        <div class="tab-panel" data-tab="overview" ${activeDetailTab === 'overview' ? '' : 'hidden'}>${renderOverviewTab(career, cm, dm)}</div>
+        <div class="tab-panel" data-tab="realities" ${activeDetailTab === 'realities' ? '' : 'hidden'}>${renderRealitiesTab(career, cm, dm)}</div>
+        <div class="tab-panel" data-tab="fit" ${activeDetailTab === 'fit' ? '' : 'hidden'}>${renderFitTab(career, cm, dm)}</div>
+        <div class="tab-panel" data-tab="pay" ${activeDetailTab === 'pay' ? '' : 'hidden'}>${renderPayTab(career, cm, dm)}</div>
+        <div class="tab-panel" data-tab="experiences" ${activeDetailTab === 'experiences' ? '' : 'hidden'}>${renderExperiencesTab(career, cm, dm)}</div>
       </div>
+
 
        <div class="verdict-divider">
         <span class="verdict-divider-label">Your decision</span>
@@ -660,36 +676,24 @@ if (compareSearchB) compareSearchB.addEventListener('input', () => filterCompare
     });
   });
     // Tab click listeners
-  document.querySelectorAll('.detail-tab').forEach(tab => {
+    document.querySelectorAll('.detail-tab').forEach(tab => {
     tab.addEventListener('click', () => {
+      document.querySelectorAll('.detail-tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.querySelectorAll('.tab-panel').forEach(p => p.hidden = true);
+      const panel = document.querySelector(`.tab-panel[data-tab="${tab.dataset.tab}"]`);
+      if (panel) panel.hidden = false;
       activeDetailTab = tab.dataset.tab;
-  const base = window.location.hash.split('?')[0]; // e.g. "#mbbs"
-    const newHash = `${base}?tab=${activeDetailTab}`;
-    history.replaceState(null, '', newHash);
-      const id = window.location.hash.replace('#', '').split('?')[0];
-      if (id && !id.startsWith('compare=') && id !== 'about') {
-      
-      
-        const view = document.getElementById('view');
-        const tabContent = document.querySelector('.detail-tab-content');
-if (tabContent) {
-  const career = careers.find(c => c.id === id);
-  const cm = career.metrics || {};
-  const dm = career.metrics || {};
-  tabContent.innerHTML = renderTabContent(career, cm, dm);
-}
-// Re-highlight tabs
-document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
-tab.classList.add('active');
-
-        document.querySelectorAll('.salary-bar-fill').forEach(el => {
-           if (activeDetailTab === 'pay') {
-          requestAnimationFrame(() => setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 80));
-           }
-        });
-      }
+      const base = window.location.hash.split('?')[0];
+      const newHash = `${base}?tab=${activeDetailTab}`;
+      history.replaceState(null, '', newHash);
     });
   });
+
 }
 
 let savedScrollY = 0;
@@ -783,7 +787,7 @@ function renderComparePicker(preselectedId) {
         <div class="compare-col">
           <div class="compare-col-label">Career 1</div>
           <div class="compare-slot">${slotA}</div>
-          <input type="text" class="compare-search" id="compareSearchA" placeholder="Search..." autofocus>
+          <input type="text" class="compare-search" id="compareSearchA" placeholder="Search...">
           ${selected ? `<input type="hidden" id="compareA" value="${selected.id}">` : ''}
         </div>
         <div class="compare-vs">vs</div>

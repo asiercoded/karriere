@@ -1199,48 +1199,60 @@ footer {
 .skeleton-block { background: var(--rule); border-radius: 6px; }
 
 /* ── TAB BAR ── */
+/* ── DETAIL TABS (discrete selectable objects, not underlined links) ── */
 .detail-tab-bar {
   display: flex;
-  gap: 4px;
-  border-bottom: 2px solid var(--rule);
-  margin-bottom: 28px;
+  gap: 8px;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  padding-bottom:16px;
+  margin-bottom: 28px;
 }
-
 .detail-tab-bar::-webkit-scrollbar { display: none; }
 
 .detail-tab {
+  height:46px;
+  min-width:120px;
+  justify-content:center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   flex-shrink: 0;
-  font-family: 'Manrope', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--surface-2);
   color: var(--ink-faint);
-  background: none;
-  border: none;
-  padding: 10px 16px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
-  transition: color 0.15s, border-color 0.15s;
-  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.detail-tab:hover { color: var(--ink-soft); }
+.detail-tab-icon { display: flex; }
+.detail-tab-icon svg { display: block; }
+
+.detail-tab:hover:not(.active) {
+  background: var(--surface);
+  border-color: var(--rule);
+  color: var(--ink-soft);
+}
 
 .detail-tab.active {
+  background: var(--surface);
+  border-color: var(--rule-strong);
   color: var(--violet);
-  background: var(--violet-dim);
-  border-bottom-color: var(--violet);
-  border-bottom-width: 3px;
-  border-radius: 8px 8px 0 0;
   font-weight: 800;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
 }
 
 .detail-tab-content {
   min-height: 200px;
 }
+.tab-panel[hidden] { display: none; }
+
 
 /* ── VERDICT CARD ── */
 .verdict-divider {
