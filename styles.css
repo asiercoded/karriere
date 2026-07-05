@@ -1203,7 +1203,7 @@ footer {
 .detail-tab-bar {
   display: flex;
   gap: 8px;
-  overflow-x: auto;
+  flex-wrap: wrap;
   scrollbar-width: none;
   padding-bottom:16px;
   margin-bottom: 28px;
@@ -1211,13 +1211,13 @@ footer {
 .detail-tab-bar::-webkit-scrollbar { display: none; }
 
 .detail-tab {
+  flex: 1 1 auto;
   height:46px;
-  min-width:120px;
+  min-width:0px;
   justify-content:center;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
   padding: 9px 16px;
   border: 1px solid transparent;
   border-radius: 10px;
