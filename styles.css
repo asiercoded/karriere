@@ -4,38 +4,38 @@
    LIGHT MODE — root tokens
    ═══════════════════════════════════════ */
 :root {
-  --bg: #F1EFEA;            /* soft neutral canvas — was too close to --surface */
-  --surface: #FFFFFF;       /* clean white cards — real separation from --bg now */
-  --surface-2: #F6F3EF;     /* elevated/hover state, sits between bg and surface */
+  --bg: #F7F7F5;             /* soft neutral canvas, not beige/tan — Notion/Linear-style paper, not vintage newsprint */
+  --surface: #FFFFFF;        /* clean white cards */
+  --surface-2: #F0EFEC;      /* elevated/hover state */
 
-  --ink: #33302B;                        /* softened from #2B2420 — less eye strain on long reads */
-  --ink-soft: rgba(51,48,43,0.72);
-  --ink-faint: rgba(51,48,43,0.50);      /* was 0.65 — too close to ink-soft, no real hierarchy step */
+  --ink: #2A2A2E;                         /* neutral near-black, NOT warm brown — this alone removes most of the "muddy" feeling */
+  --ink-soft: rgba(42,42,46,0.68);
+  --ink-faint: rgba(42,42,46,0.46);
 
-  --rule: rgba(51,48,43,0.12);
-  --rule-strong: rgba(51,48,43,0.22);
+  --rule: rgba(42,42,46,0.10);
+  --rule-strong: rgba(42,42,46,0.18);
 
-  --violet: #7A3B2E;
-  --violet-dim: rgba(122,59,46,0.08);
-  --amber: #B8722E;
-  --amber-dim: rgba(184,114,46,0.12);
-  --sage: #5B7A5B;
-  --dustred: #A8452F;
-  --azure: #3E6B8A;
+  --violet: #5B4B93;         /* an ACTUAL violet now, not a brown/maroon — this is the single biggest fix here */
+  --violet-dim: rgba(91,75,147,0.08);
+  --amber: #C88A2E;          /* brightened slightly so it reads as warm data-emphasis, not another shade of dirt */
+  --amber-dim: rgba(200,138,46,0.12);
+  --sage: #4F8064;
+  --dustred: #B24A3A;
+  --azure: #3E7BA6;
 
-  --shadow-sm: 0 1px 2px rgba(51,48,43,0.08);
-  --shadow-md: 0 8px 22px rgba(51,48,43,0.12);
+  --shadow-sm: 0 1px 2px rgba(42,42,46,0.07);
+  --shadow-md: 0 8px 22px rgba(42,42,46,0.10);
 }
 
 /* ═══════════════════════════════════════
    DARK MODE — root tokens (neutral charcoal, no sepia)
    ═══════════════════════════════════════ */
 [data-theme="dark"] {
-  --bg: #17181A;            /* neutral charcoal — was #1A1817 (warm-leaning) */
-  --surface: #1F2124;       /* neutral dark card surface */
-  --surface-2: #262930;     /* distinct elevated/hover step — did not exist before */
+  --bg: #121316;
+  --surface: #1B1D22;
+  --surface-2: #242833;
 
-  --ink: #E7E7E5;                        /* neutral off-white — was #E8E2DA (warm cream) */
+  --ink: #E7E7E5;
   --ink-soft: rgba(231,231,229,0.75);
   --ink-faint: rgba(231,231,229,0.52);
 
@@ -44,7 +44,31 @@
 
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.35);
   --shadow-md: 0 8px 22px rgba(0,0,0,0.45);
+
+  --violet: #A496D6;
+  --violet-dim: rgba(164,150,214,0.12);
+  --violet-solid: #6B54B0;
+
+  --amber: #D9A24F;                        /* same hue as light-mode amber, lightened for dark bg */
+  --amber-dim: rgba(217,162,79,0.14);
+  --sage: #7CAE8F;                         /* same hue as light-mode sage, lightened */
+  --dustred: #D97B68;                      /* same hue as light-mode dustred, lightened */
+  --azure: #6FA8D1;                        /* same hue as light-mode azure, lightened */
 }
+
+[data-theme="dark"] .compare-cta {
+  background: var(--violet-solid);
+}
+
+[data-theme="dark"] .verdict-card {
+  background: #2C2F35;
+  box-shadow:
+    0 12px 32px rgba(0,0,0,0.55),
+    0 2px 6px rgba(0,0,0,0.35);
+  border-color: var(--violet);
+}
+[data-theme="dark"] .filter-btn.active { background: var(--violet-solid); }
+[data-theme="dark"] .hero-spotlight-eyebrow { background: var(--violet-solid); }
 
 html { scroll-behavior: smooth; }
 
@@ -961,25 +985,6 @@ footer {
   /* .progression-arrow { display: none; } */
 }
 
-/* ── DARK MODE ── */
-[data-theme="dark"] {
-  --bg: #1A1817;
-  --surface: #262220;
-  --ink: #E8E2DA;
-  --ink-soft: rgba(232,226,218,0.78);
-  --ink-faint: rgba(232,226,218,0.55);
-  --rule: rgba(232,226,218,0.12);
-  --rule-strong: rgba(232,226,218,0.22);
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-  --shadow-md: 0 8px 22px rgba(0,0,0,0.4);
-}
-
-[data-theme="dark"] .hero-spotlight-eyebrow { background: var(--violet); }
-[data-theme="dark"] .glance-zone { background: rgba(255,255,255,0.03); }
-[data-theme="dark"] .qf-seg { background: var(--rule); }
-[data-theme="dark"] .salary-row:nth-child(1) .salary-bar-fill { background: rgba(231,231,229,0.2); }
-[data-theme="dark"] .salary-row:nth-child(1) .salary-value { color: var(--ink-soft); }
-[data-theme="dark"] #loading-skeleton > div { background: rgba(231,231,229,0.08) !important; }
 
 /* ── THEME TOGGLE BUTTON ── */
 .theme-toggle {
