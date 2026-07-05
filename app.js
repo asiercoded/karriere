@@ -570,7 +570,7 @@ function renderAboutView() {
 
       <div class="section">
         <div class="section-label">Founder's Note</div>
-        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">Hi, I'm James.</p>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">Hi, I'm Asier.</p>
         <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">I'm currently a student studying in India. While choosing my own career, I found that most guidance online focused on placements, salaries, or promotional content. Honest discussions about the realities of different careers were surprisingly difficult to find.</p>
         <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">I built Karriere to create the resource I wish I'd had before making my own decision.</p>
         <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:12px;">The project is still growing, and every career page is continuously refined as I learn more, interview students and professionals, and receive feedback from readers.</p>

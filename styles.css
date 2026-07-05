@@ -714,7 +714,7 @@ footer {
   width: 0;
 }
 
-.salary-row:nth-child(1) .salary-bar-fill { background: rgba(43,36,32,0.22); }
+.salary-row:nth-child(1) .salary-bar-fill { background: var(--rule-strong); }
 .salary-row:nth-child(2) .salary-bar-fill { background: var(--sage); }
 .salary-row:nth-child(3) .salary-bar-fill { background: var(--amber); }
 

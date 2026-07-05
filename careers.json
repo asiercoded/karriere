@@ -103,15 +103,14 @@
     "overview": "BDS is a 5-year undergraduate dental degree (4 years + 1 year mandatory internship), entered through NEET. It trains you to diagnose and treat oral diseases, perform surgeries, and manage dental health across all age groups. Most BDS graduates build private practices over time — this is a business-heavy career as much as a clinical one. Those who genuinely want dentistry and are willing to invest in building their practice tend to do well. Those who landed here after missing MBBS often struggle to stay motivated.",
     "what_nobody_tells_you": [
       "BDS is a slow-burn career. The first 3-5 years after graduation are financially difficult for most — associate pay is low and building your own practice takes capital and time.",
+      "Setting up a clinic requires significant investment in equipment — a basic chair, X-ray unit, autoclave, and instruments can cost ₹10-20 lakhs minimum. Many new graduates work as associates for years before they can afford their own setup.",
       "Government dental jobs barely exist. PSC and central government vacancies are rare and highly competitive. Most BDS graduates end up in private practice or teaching.",
       "Urban markets are oversaturated. In metro cities, there is a dentist on every corner. Semi-urban and rural areas have far less competition and often more loyal patient bases.",
       "MDS (postgraduate specialization) changes everything — income, reputation, and referral potential all improve significantly. But NEET-MDS is as competitive as NEET-PG for MBBS graduates.",
-      "Setting up a clinic is expensive. A basic setup costs ₹10-20 lakhs minimum. Most new graduates work as associates earning ₹20,000-₹35,000/month before they can afford their own space.",
-      "Your income grows with your patient base, not with years of experience alone. Marketing, word-of-mouth, and patient trust matter as much as clinical skill.",
       "Abroad is not easy. Most countries (UK, Canada, Australia, USA) require you to clear their own licensing exams — sometimes multi-year processes — before you can practice. It is possible but not straightforward."
     ],
     "salary": {
-      "entry": "₹20,000 - ₹35,000/month (associate dentist at someone else's clinic, first 2-3 years)",
+      "entry": "₹15,000 - ₹30,000/month (associate dentist at someone else's clinic, first 2-3 years)",
       "mid": "₹60,000 - ₹1.5 lakh/month (own clinic with steady patient base, or MDS specialist at 5 years)",
       "senior": "₹2 - ₹15 lakh/month (established multi-chair clinic, MDS specialist with referrals, or multi-location practice)"
     },
@@ -128,6 +127,7 @@
     ],
     "who_regrets_it": [
       "Students who chose BDS only after missing the MBBS cutoff and never developed genuine interest in dentistry.",
+      "Those who couldn't afford the ₹10-20 lakh equipment cost to start their own practice and got stuck in low-paying associate roles.",
       "Those expecting MBBS-equivalent income or social status — dentistry has its own ceiling, not medicine's.",
       "People uncomfortable with repetitive clinical procedures day after day — extractions, fillings, and root canals are the core of general practice.",
       "Anyone unwilling to handle the business side — staff, marketing, patient retention, and finances are unavoidable in private practice.",
@@ -173,7 +173,7 @@
 "avoid_if": [
   "You chose BDS only because you missed the MBBS cutoff.",
   "You expect MBBS-equivalent income or social status.",
-  "You dislike repetitive procedures and patient interaction all day.",
+  "You don't have ₹10-20 lakhs for clinic setup and can't handle years of low associate pay.",
   "You're unwilling to handle the business side of running a practice."
 ],
     "related_careers": [
@@ -185,7 +185,7 @@
   "duration": "5 yrs", "stress": 3, "competition": 5,
   "salary_potential": 3, "study_difficulty": 4, "work_life_balance": 3, "job_availability": 2, "abroad_prospects": 2,
   "ideal_personality": "Detail-oriented, hands-on, comfortable running a small business",
-  "internship": "1 yr compulsory internship",
+  "internship": "1 yr compulsory internship(within BDS)",
   "progression": ["Intern", "Associate Dentist", "MDS Specialist / Clinic Owner", "Established Private Practice"],
   "misconception": "A dental degree pays like a medical degree.",
   "regret": "I only chose BDS because I missed the MBBS cutoff.",
