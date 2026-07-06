@@ -4,16 +4,16 @@
    LIGHT MODE — root tokens
    ═══════════════════════════════════════ */
 :root {
-  --bg: #F7F7F5;             /* soft neutral canvas, not beige/tan — Notion/Linear-style paper, not vintage newsprint */
-  --surface: #FFFFFF;        /* clean white cards */
-  --surface-2: #F0EFEC;      /* elevated/hover state */
+  --bg: #C2C1BC;             /* muted warm grey — much darker, comfortable for eyes */
+  --surface: #D4D3CE;        /* soft muted cards */
+  --surface-2: #CECDCA;      /* elevated/hover state */
 
-  --ink: #2A2A2E;                         /* neutral near-black, NOT warm brown — this alone removes most of the "muddy" feeling */
-  --ink-soft: rgba(42,42,46,0.68);
-  --ink-faint: rgba(42,42,46,0.46);
+  --ink: #1C1C1F;                         /* darker near-black for better contrast on softer bg */
+  --ink-soft: rgba(28,28,31,0.68);
+  --ink-faint: rgba(28,28,31,0.46);
 
-  --rule: rgba(42,42,46,0.10);
-  --rule-strong: rgba(42,42,46,0.18);
+  --rule: rgba(28,28,31,0.10);
+  --rule-strong: rgba(28,28,31,0.18);
 
   --violet: #5B4B93;         /* an ACTUAL violet now, not a brown/maroon — this is the single biggest fix here */
   --violet-dim: rgba(91,75,147,0.08);
@@ -23,8 +23,8 @@
   --dustred: #B24A3A;
   --azure: #3E7BA6;
 
-  --shadow-sm: 0 1px 2px rgba(42,42,46,0.07);
-  --shadow-md: 0 8px 22px rgba(42,42,46,0.10);
+  --shadow-sm: 0 1px 2px rgba(28,28,31,0.07);
+  --shadow-md: 0 8px 22px rgba(28,28,31,0.10);
 }
 
 /* ═══════════════════════════════════════
@@ -1869,12 +1869,12 @@ footer {
     display: flex;
     overflow-x: auto;
     gap: 8px;
-    padding-top: 28px;
+    padding-top: 22px;
   }
 
   .detail-wrap .detail-tab {
     flex: 0 0 158px;
-    padding: 22px 12px;
+    padding: 12px 12px;
     font-size: 15px;
   }
 

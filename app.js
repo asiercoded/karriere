@@ -308,7 +308,6 @@ function renderListView() {
                 <input type="text" class="hero-search" id="hero-search" placeholder="Search a career — try 'law', 'design', or 'stress-free'" value="${searchQuery}" aria-label="Search careers">
               </div>
             </div>
-            <div class="hero-hint">Or browse by stream — <button data-nav-scroll="list-section">jump to the full list ↓</button></div>
           </div>
         </div>
       </div>
