@@ -2,6 +2,7 @@ let careers = [];
 let activeCategory = 'all';
 let searchQuery = '';
 let activeDetailTab = 'overview';
+let activeCompareSlot = 'a';
 
 const CATEGORY_LABELS = {
   medical: 'Medical',
@@ -138,6 +139,8 @@ const ALIASES = {
   mba: ['master of business administration', 'management']
 };
 
+const DETAIL_TABS = ['overview', 'realities', 'fit', 'pay', 'experiences'];
+
 function getThemeIcon() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   return isDark
@@ -179,13 +182,25 @@ function renderMeter(value, type) {
   return `<span class="metric-meter metric-${type}"><span class="metric-meter-label">${label}</span><span class="meter-bar">${segs}</span></span>`;
 }
 
+function animateSalaryBars() {
+  document.querySelectorAll('.salary-bar-fill').forEach(el => {
+    el.style.width = '0%';
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        el.style.width = `${el.dataset.target}%`;
+      }, 80);
+    });
+  });
+}
+
 
 async function loadCareers() {
-  if (careers.length) return;
+  if (careers.length) return true;
   try {
     const res = await fetch('careers.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     careers = await res.json();
+    return true;
   } catch (err) {
     document.getElementById('view').innerHTML = `
       <div class="wrap" style="text-align:center;padding-top:80px;">
@@ -193,6 +208,7 @@ async function loadCareers() {
         <p style="color:var(--ink-soft);margin-top:12px;">${err.message}. Please check your connection and refresh.</p>
         <button onclick="location.reload()" style="margin-top:20px;padding:10px 24px;background:var(--amber);color:#fff;border:none;border-radius:8px;cursor:pointer;">Try again</button>
       </div>`;
+    return false;
   }
 }
 
@@ -349,7 +365,7 @@ function renderDetailView(id) {
 
   return `
     <div class="wrap detail-wrap">
-      <div style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="detail-topbar">
         <button class="back-link" data-nav="">← Back to all careers</button>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
       </div>
@@ -372,21 +388,22 @@ function renderDetailView(id) {
       </div>
 
 
-       <div class="verdict-divider">
+      <div class="verdict-divider">
         <span class="verdict-divider-label">Your decision</span>
       </div>
       ${verdictHtml}
 
-      <div class="section" style="margin-top:40px;">
+      <div class="detail-actions">
+        <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
+      </div>
+
+      <div class="section related-section">
         <div class="section-label">Related paths</div>
         <div class="related-row">${relatedHtml || 'None yet'}</div>
       </div>
 
-      <div class="section">
-        <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
-      </div>
       ${career.related_careers && career.related_careers.length ? `
-      <div class="section">
+      <div class="section related-section">
         <div class="section-label">Students often compare</div>
         <div class="related-row">${career.related_careers.map(rid => {
           const rc = careers.find(c => c.id === rid);
@@ -408,7 +425,7 @@ function renderTabContent(career, cm, dm) {
 
 function renderOverviewTab(career, cm, dm) {
   return `
-    <div class="section-body" style="margin-bottom:24px;">${career.overview}</div>
+    <div class="section-body overview-copy">${career.overview}</div>
 
     <div class="quickfacts-grid">
       <div class="quickfacts-item"><div class="quickfacts-label">Years to qualify</div><div class="quickfacts-value">${cm.duration || '—'}</div></div>
@@ -432,10 +449,10 @@ function renderRealitiesTab(career, cm, dm) {
     <div class="section-label">What nobody tells you</div>
     <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
 
-    <div style="margin-top:32px;">
+    <div class="section sub-section">
       <div class="section-label">Reality snapshot</div>
-            <div class="snapshot-card">
-      <div style="font-size:11px;color:var(--ink-soft);margin-bottom:8px;padding:0 0 8px;border-bottom:1px solid var(--rule);">Scale: 1 = low, 5 = high</div>
+      <div class="snapshot-card">
+      <div class="snapshot-scale">Scale: 1 = low, 5 = high</div>
 
         <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.salary}</span><span class="snapshot-name">Salary potential</span>${renderStars(dm.salary_potential)}</div>
         <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.stress}</span><span class="snapshot-name">Stress</span>${renderStars(cm.stress)}</div>
@@ -452,7 +469,7 @@ function renderRealitiesTab(career, cm, dm) {
       </div>
     </div>
 
-    <div style="margin-top:32px;">
+    <div class="section sub-section">
       <div class="section-label">Why people choose this</div>
       <ul class="love-list">${(career.why_people_love_it || []).map(p => `<li>${p}</li>`).join('')}</ul>
     </div>`;
@@ -498,7 +515,7 @@ function renderPayTab(career, cm, dm) {
       </div>
     </div>
 
-    <div style="margin-top:32px;">
+    <div class="section sub-section">
       <div class="section-label">Timeline</div>
       <div class="timeline-track">
         ${timelineStages.map((t, i) => `
@@ -512,7 +529,7 @@ function renderPayTab(career, cm, dm) {
       </div>
     </div>
 
-    <div style="margin-top:32px;">
+    <div class="section sub-section">
       <div class="section-label">Typical career progression</div>
       <div class="progression-track">
         ${(dm.progression || []).map((stage, i) => `
@@ -675,11 +692,7 @@ function attachListeners() {
   document.querySelectorAll('.wordmark, .masthead-small').forEach(el => {
     el.addEventListener('click', () => navigate(''));
   });
-  document.querySelectorAll('.salary-bar-fill').forEach(el => {
-     if (activeDetailTab === 'pay') {
-    requestAnimationFrame(() => setTimeout(() => { el.style.width = el.dataset.target + '%'; }, 80));
-     }
-  });
+  if (activeDetailTab === 'pay') animateSalaryBars();
   const themeBtn = document.getElementById('themeToggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
@@ -703,24 +716,38 @@ function filterCompareOptions(inputEl) {
 }
 
 const compareSearchA = document.getElementById('compareSearchA');
-if (compareSearchA) compareSearchA.addEventListener('input', () => filterCompareOptions(compareSearchA));
+if (compareSearchA) {
+  compareSearchA.addEventListener('focus', () => { activeCompareSlot = 'a'; });
+  compareSearchA.addEventListener('input', () => filterCompareOptions(compareSearchA));
+}
 
 const compareSearchB = document.getElementById('compareSearchB');
-if (compareSearchB) compareSearchB.addEventListener('input', () => filterCompareOptions(compareSearchB));
+if (compareSearchB) {
+  compareSearchB.addEventListener('focus', () => { activeCompareSlot = 'b'; });
+  compareSearchB.addEventListener('input', () => filterCompareOptions(compareSearchB));
+}
 
   // Compare option click
   document.querySelectorAll('.compare-option').forEach(opt => {
     opt.addEventListener('click', () => {
       const selectedId = opt.dataset.compareId;
-      const slotA = document.getElementById('compareA')?.value;
-      const slotB = document.getElementById('compareB')?.value;
+      const slotA = document.getElementById('compareA')?.value || '';
+      const slotB = document.getElementById('compareB')?.value || '';
 
       if (slotA && slotB) return; // both filled
-      if (!slotA) {
-        navigate(`compare=${selectedId},`);
+      if (selectedId === slotA || selectedId === slotB) return;
+
+      let nextA = slotA;
+      let nextB = slotB;
+      if (activeCompareSlot === 'b') {
+        if (!nextB) nextB = selectedId;
+        else if (!nextA) nextA = selectedId;
       } else {
-        navigate(`compare=${slotA},${selectedId}`);
+        if (!nextA) nextA = selectedId;
+        else if (!nextB) nextB = selectedId;
       }
+
+      navigate(`compare=${nextA},${nextB}`);
     });
   });
 
@@ -763,6 +790,7 @@ if (compareSearchB) compareSearchB.addEventListener('input', () => filterCompare
       const panel = document.querySelector(`.tab-panel[data-tab="${tab.dataset.tab}"]`);
       if (panel) panel.hidden = false;
       activeDetailTab = tab.dataset.tab;
+      if (activeDetailTab === 'pay') animateSalaryBars();
       const base = window.location.hash.split('?')[0];
       const newHash = `${base}?tab=${activeDetailTab}`;
       history.replaceState(null, '', newHash);
@@ -773,7 +801,8 @@ if (compareSearchB) compareSearchB.addEventListener('input', () => filterCompare
 
 let savedScrollY = 0;
 async function render(animate = true) {
-  await loadCareers();
+  const loaded = await loadCareers();
+  if (!loaded) return;
   const view = document.getElementById('view');
   const hash = window.location.hash.replace('#', '');
   const isCompare = hash.startsWith('compare=');
@@ -782,7 +811,7 @@ async function render(animate = true) {
 // Restore tab from URL
 if (!isCompare && id) {
   const tabMatch = window.location.hash.match(/[?&]tab=([^&]+)/);
-  if (tabMatch) activeDetailTab = tabMatch[1];
+  activeDetailTab = tabMatch && DETAIL_TABS.includes(tabMatch[1]) ? tabMatch[1] : 'overview';
 }
 
 
@@ -799,10 +828,10 @@ if (!isCompare && id) {
     const ids = hash.replace('compare=', '').split(',');
     if (ids.length === 2 && ids[0] && ids[1]) {
       view.innerHTML = renderCompareView(ids[0], ids[1]);
-    } else if (ids.length >= 1 && ids[0]) {
-      view.innerHTML = renderComparePicker(ids[0]);
+    } else if (ids.length >= 1 && (ids[0] || ids[1])) {
+      view.innerHTML = renderComparePicker(ids[0] || null, ids[1] || null);
     } else {
-      view.innerHTML = renderComparePicker(null);
+      view.innerHTML = renderComparePicker(null, null);
     }
   } else {
     if (id === 'about') {
@@ -836,12 +865,12 @@ if (!isCompare && id) {
   const career = careers.find(c => c.id === id);
   updateMetaTags(career?.name, career?.tagline);
 }
-function renderComparePicker(preselectedId) {
-  const selected = preselectedId && careers.find(c => c.id === preselectedId);
-  let slotAFilled = !!selected;
+function renderComparePicker(preselectedA, preselectedB) {
+  const selectedA = preselectedA && careers.find(c => c.id === preselectedA);
+  const selectedB = preselectedB && careers.find(c => c.id === preselectedB);
 
   const list = careers.map(c => {
-    const isSelected = c.id === preselectedId;
+    const isSelected = c.id === preselectedA || c.id === preselectedB;
     return `
     <button class="compare-option ${isSelected ? 'compare-option-selected' : ''}" data-compare-id="${c.id}" ${isSelected ? 'disabled' : ''}>
       <span class="compare-option-cat">${CATEGORY_LABELS[c.category] || c.category}</span>
@@ -850,8 +879,12 @@ function renderComparePicker(preselectedId) {
     </button>
   `}).join('');
 
-  const slotA = selected ? `<span class="compare-slot-filled">${selected.name} <button class="compare-slot-remove" data-nav="compare=,">✕</button></span>` : '<span class="compare-slot-empty">—</span>';
-  const slotB = '<span class="compare-slot-empty" id="slotB">—</span>';
+  const slotA = selectedA
+    ? `<span class="compare-slot-filled">${selectedA.name} <button class="compare-slot-remove" data-nav="compare=,${selectedB?.id || ''}">✕</button></span>`
+    : '<span class="compare-slot-empty">—</span>';
+  const slotB = selectedB
+    ? `<span class="compare-slot-filled">${selectedB.name} <button class="compare-slot-remove" data-nav="compare=${selectedA?.id || ''},">✕</button></span>`
+    : '<span class="compare-slot-empty" id="slotB">—</span>';
 
   return `
     <div class="wrap compare-picker-wrap">
@@ -863,14 +896,14 @@ function renderComparePicker(preselectedId) {
           <div class="compare-col-label">Career 1</div>
           <div class="compare-slot">${slotA}</div>
           <input type="text" class="compare-search" id="compareSearchA" placeholder="Search...">
-          ${selected ? `<input type="hidden" id="compareA" value="${selected.id}">` : ''}
+          <input type="hidden" id="compareA" value="${selectedA?.id || ''}">
         </div>
         <div class="compare-vs">vs</div>
         <div class="compare-col">
           <div class="compare-col-label">Career 2</div>
           <div class="compare-slot">${slotB}</div>
           <input type="text" class="compare-search" id="compareSearchB" placeholder="Search...">
-          <input type="hidden" id="compareB" value="">
+          <input type="hidden" id="compareB" value="${selectedB?.id || ''}">
         </div>
       </div>
       
