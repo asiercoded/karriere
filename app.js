@@ -395,6 +395,7 @@ function renderDetailView(id) {
 
       <div class="detail-actions">
         <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
+        <button class="share-btn share-whatsapp" data-share-whatsapp="${career.id}" data-share-name="${career.name}">Share on WhatsApp</button>
       </div>
 
       <div class="section related-section">
@@ -670,8 +671,40 @@ function renderAboutView() {
       </div>
 
       <div class="section">
-        <div class="section-label">Help improve Karriere</div>
-        <p style="font-size:16px;line-height:1.75;color:var(--ink);">If you notice outdated information, an error, or would like to share your own experience with a career, I'd love to hear from you. Every suggestion helps make Karriere more accurate for the next student.</p>
+        <div class="section-label">Get in touch</div>
+        <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:24px;">If you notice outdated information, find an error, want to share your own experience with a career, or would like to collaborate — I'd love to hear from you.</p>
+        <form class="contact-form" action="https://formspree.io/f/xojobezo" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="Your name (optional)">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-email">Email</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="email@example.com (optional, if you want a reply)">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-subject">Subject</label>
+            <select id="form-subject" name="subject" class="form-input form-select">
+              <option value="">Select a topic…</option>
+              <option value="Suggest a career">Suggest a career</option>
+              <option value="Report an error">Report an error</option>
+              <option value="Share my experience">Share my experience</option>
+              <option value="Partnership / Collaboration">Partnership / Collaboration</option>
+              <option value="General feedback">General feedback</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-career">Related career (optional)</label>
+            <input type="text" id="form-career" name="career" class="form-input" placeholder="e.g. MBBS, CS Engineering, MBA, etc.">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-message">Message <span class="form-required">*</span></label>
+            <textarea id="form-message" name="message" class="form-input form-textarea" rows="5" placeholder="Share your thoughts, experience, or correction..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send message</button>
+        </form>
       </div>
     </div>
   `;
@@ -777,6 +810,22 @@ if (compareSearchB) {
       document.getElementById(scrollBtn.dataset.navScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+  // WhatsApp share buttons
+  document.querySelectorAll('.share-whatsapp').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.shareName;
+      const shareId = btn.dataset.shareWhatsapp || btn.dataset.shareCompare;
+      let url;
+      if (btn.dataset.shareWhatsapp) {
+        url = `${window.location.origin}/karriere/#${shareId}`;
+      } else if (btn.dataset.shareCompare) {
+        url = `${window.location.origin}/karriere/#compare=${shareId}`;
+      }
+      const text = encodeURIComponent(`Check out ${name} on Karriere — honest career insights.\n\n${url}`);
+      window.open(`https://wa.me/?text=${text}`, '_blank');
+    });
+  });
+
     // Tab click listeners
     document.querySelectorAll('.detail-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -1034,6 +1083,9 @@ const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_re
             </div>
           </div>
         </div>
+      </div>
+      <div class="detail-actions">
+        <button class="share-btn share-whatsapp" data-share-compare="${id1},${id2}" data-share-name="${a.name} vs ${b.name}">Share on WhatsApp</button>
       </div>
     </div>
   `;
