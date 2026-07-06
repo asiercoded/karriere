@@ -395,7 +395,7 @@ function renderDetailView(id) {
 
       <div class="detail-actions">
         <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
-        <button class="share-btn share-whatsapp" data-share-whatsapp="${career.id}" data-share-name="${career.name}">Share on WhatsApp</button>
+        <button class="share-btn share-whatsapp" data-share-whatsapp="${career.id}" data-share-name="${career.name}">Share</button>
       </div>
 
       <div class="section related-section">
@@ -821,7 +821,7 @@ if (compareSearchB) {
       } else if (btn.dataset.shareCompare) {
         url = `${window.location.origin}/karriere/#compare=${shareId}`;
       }
-      const text = encodeURIComponent(`Check out ${name} on Karriere — honest career insights.\n\n${url}`);
+      const text = encodeURIComponent(`Check out this honest career guide for ${name} on Karriere.\n\n${url}`);
       window.open(`https://wa.me/?text=${text}`, '_blank');
     });
   });
@@ -1085,7 +1085,7 @@ const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_re
         </div>
       </div>
       <div class="detail-actions">
-        <button class="share-btn share-whatsapp" data-share-compare="${id1},${id2}" data-share-name="${a.name} vs ${b.name}">Share on WhatsApp</button>
+        <button class="share-btn share-whatsapp" data-share-compare="${id1},${id2}" data-share-name="${a.name} vs ${b.name}">Share</button>
       </div>
     </div>
   `;
