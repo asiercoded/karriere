@@ -42,6 +42,81 @@ const TAB_ICONS = {
   experiences: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>'
 };
 
+const COMPARE_ICONS = {
+  glance: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>',
+  snapshot: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>',
+  salary: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path><path d="M3 7l3-3h12"></path><circle cx="17" cy="12" r="1"></circle></svg>',
+  warning: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>',
+  thrives: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="8 12 11 15 16 9"></polyline></svg>',
+  struggle: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>',
+  target: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg>'
+};
+
+const WINNER_BADGE = '<svg class="comp-winner-icon" viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+const METRIC_DIRECTION = {
+  stress: 'lower', competition: 'lower', salary_potential: 'higher', study_difficulty: 'lower',
+  work_life_balance: 'higher', job_availability: 'higher', abroad_prospects: 'higher',
+  duration: 'lower', salary: 'higher'
+};
+
+function parseSalaryLakhs(str) {
+  if (!str) return null;
+  const seg = str.split('(')[0];
+  const numMatch = seg.match(/[\d,.]+/);
+  if (!numMatch) return null;
+  const num = parseFloat(numMatch[0].replace(/,/g, ''));
+  if (isNaN(num)) return null;
+  if (/crore/i.test(seg)) return num * 100;
+  if (/LPA|lakh/i.test(seg)) return num;
+  if (/\/month/i.test(seg)) return (num * 12) / 100000;
+  return null; // unrecognized unit — don't guess, just skip highlighting
+}
+
+function parseDurationYears(str) {
+  if (!str) return null;
+  const plus = str.match(/(\d+)\s*\+\s*(\d+)/);
+  if (plus) return parseInt(plus[1]) + parseInt(plus[2]);
+  const range = str.match(/(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)/);
+  if (range) return (parseFloat(range[1]) + parseFloat(range[2])) / 2;
+  const single = str.match(/(\d+(?:\.\d+)?)/);
+  return single ? parseFloat(single[1]) : null;
+}
+
+function pickWinner(valA, valB, direction) {
+  if (valA == null || valB == null || valA === valB) return null;
+  if (direction === 'higher') return valA > valB ? 'a' : 'b';
+  return valA < valB ? 'a' : 'b';
+}
+
+function splitBullets(text) {
+  if (!text) return [];
+  const sentences = text.split(/(?<=[a-zA-Z\)])\.\s+(?=[A-Z])/).map(s => s.trim()).filter(Boolean);
+  return sentences.map(s => s.endsWith('.') ? s : s + '.');
+}
+
+function bulletCell(text) {
+  if (!text) return '—';
+  const parts = splitBullets(text);
+  if (parts.length <= 1) return text || '—';
+  return `<ul class="comp-bullets">${parts.map(p => `<li>${p}</li>`).join('')}</ul>`;
+}
+
+function salaryCell(str) {
+  if (!str) return '—';
+  const [amountRaw, restRaw] = str.split('(');
+  const note = restRaw ? restRaw.replace(')', '').trim() : '';
+    return `
+    <span class="comp-salary-amount">${amountRaw.trim()}</span>
+    ${note ? `<span class="comp-salary-note">${note}</span>` : ''}
+  `;
+}
+
+function starCell(value) {
+  if (!value) return '—';
+  return `${renderStars(value)}<span class="comp-star-num">${value}/5</span>`;
+}
+
 const LOGOMARK = '<svg class="logomark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"></line><line x1="5.07" y1="8" x2="18.93" y2="16"></line><line x1="18.93" y1="8" x2="5.07" y2="16"></line></svg>';
 
 const ALIASES = {
@@ -810,33 +885,85 @@ function renderCompareView(id1, id2) {
   const b = careers.find(c => c.id === id2);
   if (!a || !b) return `<div class="wrap"><button class="back-link" data-nav="">← Back</button><div class="not-found">One or both careers not found.</div></div>`;
 
-  const cmA = a.metrics || {};
-  const cmB = b.metrics || {};
-  const dmA = a.metrics || {};
-  const dmB = b.metrics || {};
+  const mA = a.metrics || {};
+  const mB = b.metrics || {};
 
 
-  function row(label, valA, valB) {
-    return `<div class="comp-row"><div class="comp-label">${label}</div><div class="comp-val comp-a">${valA || '—'}</div><div class="comp-val comp-b">${valB || '—'}</div></div>`;
+   function sectionHeading(title, iconKey) {
+    return `<div class="section-label comp-heading">${COMPARE_ICONS[iconKey] || ''}<span>${title}</span></div>`;
   }
 
-  function section(title, itemsA, itemsB) {
-    const max = Math.max(itemsA ? itemsA.length : 0, itemsB ? itemsB.length : 0);
-    let rows = '';
-    for (let i = 0; i < max; i++) {
-      rows += row('', itemsA?.[i] || '', itemsB?.[i] || '');
-    }
+  function row(label, valA, valB, winner) {
+    const badgeA = winner === 'a' ? WINNER_BADGE : '';
+    const badgeB = winner === 'b' ? WINNER_BADGE : '';
+    return `<div class="comp-row">
+      <div class="comp-label">${label}</div>
+      <div class="comp-val comp-a ${winner === 'a' ? 'comp-winner' : ''}">${badgeA}${valA ?? '—'}</div>
+      <div class="comp-val comp-b ${winner === 'b' ? 'comp-winner' : ''}">${badgeB}${valB ?? '—'}</div>
+    </div>`;
+  }
+
+  function tableWrap(title, iconKey, rowsHtml) {
     return `
       <div class="comp-section">
-        <div class="section-label">${title}</div>
+        ${sectionHeading(title, iconKey)}
         <div class="comp-table">
           <div class="comp-header"><div class="comp-label"></div><div class="comp-val comp-a">${a.name}</div><div class="comp-val comp-b">${b.name}</div></div>
-          ${rows}
+          ${rowsHtml}
         </div>
       </div>`;
   }
 
-  // Decision guide
+function narrativeSection(title, iconKey, itemsA, itemsB, nameA, nameB) {
+  const colHtml = (name, items) => `
+    <div class="comp-narrative-col">
+      <div class="comp-narrative-name">${name}</div>
+      <ul class="comp-narrative-list">
+        ${(items && items.length) ? items.map(i => `<li>${i}</li>`).join('') : '<li class="comp-narrative-empty">No data available</li>'}
+      </ul>
+    </div>`;
+
+  return `
+    <div class="comp-section">
+      ${sectionHeading(title, iconKey)}
+      <div class="comp-narrative">
+        ${colHtml(nameA, itemsA)}
+        ${colHtml(nameB, itemsB)}
+      </div>
+    </div>`;
+}
+
+  // ── At a Glance ──
+  const glanceRows =
+    row('Duration', mA.duration, mB.duration, pickWinner(parseDurationYears(mA.duration), parseDurationYears(mB.duration), 'lower')) +
+    row('Entry salary', salaryCell(a.salary?.entry), salaryCell(b.salary?.entry), pickWinner(parseSalaryLakhs(a.salary?.entry), parseSalaryLakhs(b.salary?.entry), 'higher')) +
+    row('Stress', starCell(mA.stress), starCell(mB.stress), pickWinner(mA.stress, mB.stress, 'lower')) +
+    row('Competition', starCell(mA.competition), starCell(mB.competition), pickWinner(mA.competition, mB.competition, 'lower'));
+  const glanceHtml = tableWrap('At a Glance', 'glance', glanceRows);
+
+  // ── Reality Snapshot ──
+  const snapshotMetrics = [
+    ['salary_potential', 'Salary potential'], ['study_difficulty', 'Study difficulty'],
+    ['work_life_balance', 'Work-life balance'], ['job_availability', 'Job availability'],
+    ['abroad_prospects', 'Abroad prospects']
+  ];
+  const snapshotRows = snapshotMetrics.map(([key, label]) =>
+    row(label, starCell(mA[key]), starCell(mB[key]), pickWinner(mA[key], mB[key], METRIC_DIRECTION[key]))
+  ).join('');
+  const snapshotHtml = tableWrap('Reality Snapshot', 'snapshot', snapshotRows);
+
+  // ── Salary Progression ──
+  const salaryStages = [['entry', 'Entry'], ['mid', 'Mid'], ['senior', 'Senior']];
+  const salaryRows = salaryStages.map(([key, label]) =>
+    row(label, salaryCell(a.salary?.[key]), salaryCell(b.salary?.[key]), pickWinner(parseSalaryLakhs(a.salary?.[key]), parseSalaryLakhs(b.salary?.[key]), 'higher'))
+  ).join('');
+  const salaryHtml = tableWrap('Salary Progression', 'salary', salaryRows);
+
+// replace the three listSection(...) calls with:
+const nobodyHtml = narrativeSection('What Nobody Tells You', 'warning', a.what_nobody_tells_you?.slice(0, 3), b.what_nobody_tells_you?.slice(0, 3), a.name, b.name);
+const thrivesHtml = narrativeSection('Who Thrives Here', 'thrives', a.who_thrives, b.who_thrives, a.name, b.name);
+const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_regrets_it?.slice(0, 3), b.who_regrets_it?.slice(0, 3), a.name, b.name);
+
   const chooseA = (a.choose_if || []).map(c => `<li>${c}</li>`).join('');
   const chooseB = (b.choose_if || []).map(c => `<li>${c}</li>`).join('');
   const avoidA = (a.avoid_if || []).map(c => `<li>${c}</li>`).join('');
@@ -845,59 +972,32 @@ function renderCompareView(id1, id2) {
   return `
     <div class="wrap compare-results-wrap">
       <button class="back-link" data-nav="compare=,">← Back to compare</button>
+      <div class="comp-header-banner"><h1>${a.name} vs ${b.name}</h1></div>
 
-      <div class="comp-header-banner">
-        <h1>${a.name} vs ${b.name}</h1>
-      </div>
-
-      <div class="comp-section">
-        <div class="section-label">At a Glance</div>
-        <div class="comp-table">
-          <div class="comp-header"><div class="comp-label"></div><div class="comp-val comp-a">${a.name}</div><div class="comp-val comp-b">${b.name}</div></div>
-          ${row('Duration', cmA.duration, cmB.duration)}
-          ${row('Entry salary', a.salary?.entry, b.salary?.entry)}
-          ${row('Stress level', cmA.stress + '/5', cmB.stress + '/5')}
-          ${row('Competition', cmA.competition + '/5', cmB.competition + '/5')}
-        </div>
-      </div>
-
-      <div class="comp-section">
-        <div class="section-label">Reality Snapshot</div>
-        <div class="comp-table">
-          <div class="comp-header"><div class="comp-label"></div><div class="comp-val comp-a">${a.name}</div><div class="comp-val comp-b">${b.name}</div></div>
-          ${row('Salary potential', dmA.salary_potential + '/5', dmB.salary_potential + '/5')}
-          ${row('Study difficulty', dmA.study_difficulty + '/5', dmB.study_difficulty + '/5')}
-          ${row('Work-life balance', dmA.work_life_balance + '/5', dmB.work_life_balance + '/5')}
-          ${row('Job availability', dmA.job_availability + '/5', dmB.job_availability + '/5')}
-          ${row('Abroad prospects', dmA.abroad_prospects + '/5', dmB.abroad_prospects + '/5')}
-        </div>
-      </div>
-
-      ${section('Salary Progression', [a.salary?.entry, a.salary?.mid, a.salary?.senior], [b.salary?.entry, b.salary?.mid, b.salary?.senior])}
-
-      ${section('What Nobody Tells You', a.what_nobody_tells_you?.slice(0, 3), b.what_nobody_tells_you?.slice(0, 3))}
-
-      ${section('Who Thrives Here', a.who_thrives, b.who_thrives)}
-
-      ${section('Who Might Struggle', a.who_regrets_it?.slice(0, 3), b.who_regrets_it?.slice(0, 3))}
+      ${glanceHtml}
+      ${snapshotHtml}
+      ${salaryHtml}
+      ${nobodyHtml}
+      ${thrivesHtml}
+      ${struggleHtml}
 
       <div class="comp-section comp-decision">
-        <div class="section-label">Decision Guide</div>
+        ${sectionHeading('Decision Guide', 'target')}
         <div class="comp-decision-grid">
           <div class="comp-decision-card">
-            <div class="comp-decision-name">Choose ${a.name} if...</div>
+            <div class="comp-decision-name">Choose ${a.name} if…</div>
             <ul class="love-list">${chooseA}</ul>
-            <div class="comp-decision-avoid" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--rule);">
-              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--dustred);margin-bottom:8px;">Avoid if...</div>
-              <ul class="love-list" style="list-style:none;">${avoidA}</ul>
+            <div class="comp-decision-avoid">
+              <div class="comp-decision-avoid-label">Avoid if…</div>
+              <ul class="pain-list">${avoidA}</ul>
             </div>
           </div>
           <div class="comp-decision-card">
-            <div class="comp-decision-name">Choose ${b.name} if...</div>
+            <div class="comp-decision-name">Choose ${b.name} if…</div>
             <ul class="love-list">${chooseB}</ul>
-            <div class="comp-decision-avoid" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--rule);">
-              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--dustred);margin-bottom:8px;">Avoid if...</div>
-              <ul class="love-list" style="list-style:none;">${avoidB}</ul>
+            <div class="comp-decision-avoid">
+              <div class="comp-decision-avoid-label">Avoid if…</div>
+              <ul class="pain-list">${avoidB}</ul>
             </div>
           </div>
         </div>

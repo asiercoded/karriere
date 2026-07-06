@@ -1114,7 +1114,15 @@ footer {
   color: var(--ink);
 }
 
-.comp-section { margin-bottom: 36px; }
+/* ── COMPARE TABLES ── */
+.comp-section { margin-bottom: 56px; }
+
+.comp-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
 
 .comp-table {
   border: 1px solid var(--rule);
@@ -1122,47 +1130,105 @@ footer {
   overflow: hidden;
 }
 
-.comp-header {
+.comp-header, .comp-row {
   display: grid;
-  grid-template-columns: 140px 1fr 1fr;
-  background: var(--surface);
-  border-bottom: 2px solid var(--rule-strong);
+  grid-template-columns: 130px 1fr 1fr;
+  align-items: stretch;
+}
+
+.comp-header {
+  border-bottom: 1px solid var(--rule-strong);
 }
 
 .comp-header .comp-val {
-  font-size: 13px;
-  font-weight: 700;
-  padding: 14px 16px;
+  font-weight: 800;
+  font-size: 14px;
   color: var(--ink);
+  background: var(--surface-2);
 }
 
-.comp-row {
-  display: grid;
-  grid-template-columns: 140px 1fr 1fr;
-  border-bottom: 1px solid var(--rule);
-}
-
-.comp-row:last-child { border-bottom: none; }
+.comp-row:not(:last-child) { border-bottom: 1px solid var(--rule); }
 
 .comp-label {
-  font-size: 12px;
-  font-weight: 600;
+  min-width: 0;
+  width: 100%;
+  
+  padding: 14px;
+  white-space: normal;
+  background: var(--surface-2);
   color: var(--ink-soft);
-  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 13px;
   display: flex;
   align-items: center;
+  padding: 14px 10px;
 }
 
 .comp-val {
-  font-size: 13px;
-  padding: 12px 16px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  font-size: 14px;
   color: var(--ink);
-  line-height: 1.5;
+  border-left: 1px solid var(--rule);
+  background: var(--surface);
 }
 
-.comp-a { background: var(--surface); }
-.comp-b { background: var(--surface-2); }
 
+.comp-winner {
+  font-weight: 800;
+  color: var(--violet);
+}
+
+.comp-winner-icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: -1px;
+  color: var(--violet);
+}
+
+.comp-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.comp-bullets li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.comp-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--ink-faint);
+}
+
+.comp-salary-amount {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--ink);
+}
+.comp-salary-note {
+  display:inline;
+  font-size: 12px;
+  color: var(--ink-faint);
+  line-height: 1.4;
+}
+
+.comp-star-num {
+  margin-left: 6px;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+/* ── DECISION GUIDE (the compare page's strongest element — everything above supports this) ── */
 .comp-decision-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1170,30 +1236,108 @@ footer {
 }
 
 .comp-decision-card {
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: 12px;
-  padding: 24px;
+  background: var(--surface-2);
+  border: 2px solid var(--violet);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow-md);
 }
 
 .comp-decision-name {
-  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
   font-size: 16px;
-  font-weight: 700;
   color: var(--violet);
   margin-bottom: 14px;
 }
 
-@media (max-width: 640px) {
-  .comp-header, .comp-row { grid-template-columns: 1fr 1fr; }
-  .comp-label { display: none; }
-  .comp-decision-grid { grid-template-columns: 1fr; }
+.comp-decision-avoid {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
 }
-.compare-slot { min-height: 32px; margin-bottom: 10px; }
-.compare-slot-filled { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: var(--violet); background: var(--violet-dim); padding: 6px 12px; border-radius: 8px; }
-.compare-slot-empty { font-size: 14px; color: var(--ink-faint); }
-.compare-slot-remove { background: none; border: none; color: var(--violet); cursor: pointer; font-size: 14px; padding: 0; line-height: 1; }
-.compare-option-selected { opacity: 0.4; pointer-events: none; }
+.comp-decision-avoid-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--dustred);
+  margin-bottom: 8px;
+}
+
+/* ── NARRATIVE COMPARISON (two independent lists, not a table) ── */
+.comp-narrative {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.comp-narrative-col {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.comp-narrative-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.comp-narrative-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comp-narrative-list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.comp-narrative-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--ink-faint);
+}
+
+.comp-narrative-empty {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .comp-narrative { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .comp-header, .comp-row { grid-template-columns: 100px 1fr 1fr; }
+  .comp-label { max-width: 100px; }
+  .comp-label, .comp-val { padding: 10px 8px; font-size: 12.5px; }
+  .comp-val { overflow-wrap: break-word; white-space: normal; }
+  .comp-salary-amount { font-size: 13.5px; }
+  .comp-decision-grid { grid-template-columns: 1fr; }
+  .comp-decision-card { padding: 20px; }
+  .compare-results-wrap { padding-left: 16px; padding-right: 16px; }
+  .comp-narrative-col { padding: 12px 10px; }
+.comp-narrative-list li { font-size: 13.5px; }
+
+}
+@media (max-width: 420px) {
+  .comp-narrative-list li { font-size: 12px; }
+}
 
 /* ── LOADING SKELETON (theme-aware) ── */
 .skeleton-block { background: var(--rule); border-radius: 6px; }
