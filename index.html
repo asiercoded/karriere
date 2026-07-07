@@ -24,14 +24,28 @@
 <link rel="canonical" href="https://asiercoded.github.io/karriere/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="careers.json" as="fetch">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Karriere — The unfiltered career file",
+  "description": "Honest career guidance for Indian students. Real salaries, real timelines, real regrets — from people who lived each path.",
+  "url": "https://asiercoded.github.io/karriere/",
+  "about": {
+    "@type": "Thing",
+    "name": "Career guidance for Indian students"
+  }
+}
+</script>
 </head>
 <body>
 
-<div id="view">
+<div id="view" role="main" aria-live="polite" aria-atomic="false">
   <div id="loading-skeleton" style="max-width:980px;margin:80px auto;padding:0 28px;">
     <div class="skeleton-block" style="height:36px;width:200px;margin-bottom:40px;"></div>
     <div class="skeleton-block" style="height:20px;width:360px;margin-bottom:12px;"></div>

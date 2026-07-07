@@ -350,9 +350,6 @@ function renderDetailView(id) {
       `).join('')}
     </div>`;
 
-  // ── Tab content renderers ──
-  const tabContent = renderTabContent(career, cm, dm);
-
   // ── Verdict card ──
   const verdictHtml = renderVerdictCard(career);
 
@@ -412,23 +409,12 @@ function renderDetailView(id) {
       </div>` : ''}
     </div>`;
 }
-function renderTabContent(career, cm, dm) {
-  switch (activeDetailTab) {
-    case 'overview': return renderOverviewTab(career, cm, dm);
-    case 'realities': return renderRealitiesTab(career, cm, dm);
-    case 'fit': return renderFitTab(career, cm, dm);
-    case 'pay': return renderPayTab(career, cm, dm);
-    case 'experiences': return renderExperiencesTab(career, cm, dm);
-    default: return renderOverviewTab(career, cm, dm);
-  }
-}
-
 function renderOverviewTab(career, cm, dm) {
   return `
     <div class="section-body overview-copy">${career.overview}</div>
 
     <div class="quickfacts-grid">
-      <div class="quickfacts-item"><div class="quickfacts-label">Years to qualify</div><div class="quickfacts-value">${cm.duration || '—'}</div></div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Duration</div><div class="quickfacts-value">${cm.duration || '—'}</div></div>
       <div class="quickfacts-item"><div class="quickfacts-label">Entry salary</div><div class="quickfacts-value">${career.salary?.entry || '—'}</div></div>
       <div class="quickfacts-item"><div class="quickfacts-label">Mid-career salary</div><div class="quickfacts-value">${career.salary?.mid || '—'}</div></div>
       <div class="quickfacts-item"><div class="quickfacts-label">Competition</div>${renderQFMeter(cm.competition, 'competition')}</div>
@@ -733,6 +719,19 @@ function attachListeners() {
     });
   }
 
+  // Escape key handler — navigate back
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const hash = window.location.hash.replace('#', '');
+      if (!hash) return;
+      if (hash.startsWith('compare=')) {
+        navigate('compare=,');
+      } else {
+        navigate('');
+      }
+    }
+  });
+
   // Compare search filtering
 function filterCompareOptions(inputEl) {
   const q = inputEl.value.trim().toLowerCase();
@@ -881,6 +880,16 @@ if (!isCompare && id) {
     } else {
       view.innerHTML = renderComparePicker(null, null);
     }
+    // Save/restore scroll for compare views
+    if (ids.length === 2 && ids[0] && ids[1]) {
+      window.prevScrollY = window.scrollY;
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    } else if (window.prevScrollY !== undefined) {
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: window.prevScrollY, behavior: 'instant' });
+        window.prevScrollY = undefined;
+      });
+    }
   } else {
     if (id === 'about') {
   view.innerHTML = renderAboutView();
@@ -938,6 +947,8 @@ function renderComparePicker(preselectedA, preselectedB) {
     <div class="wrap compare-picker-wrap">
       <button class="back-link" data-nav="">← Back</button>
       <h1 class="compare-picker-title">Compare Careers</h1>
+      
+      ${!preselectedA && !preselectedB ? '<p style="font-size:15px;color:var(--ink-soft);margin-bottom:28px;line-height:1.6;">Select a career for each slot below to see a side-by-side comparison. Click any career in the list to add it.</p>' : ''}
       
       <div class="compare-two">
         <div class="compare-col">
