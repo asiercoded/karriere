@@ -3,6 +3,7 @@ let activeCategory = 'all';
 let searchQuery = '';
 let activeDetailTab = 'overview';
 let activeCompareSlot = 'a';
+let isFirstRender = true;
 
 const CATEGORY_LABELS = {
   medical: 'Medical',
@@ -940,7 +941,22 @@ if (!isCompare && id) {
   }
   const career = careers.find(c => c.id === id);
   updateMetaTags(career?.name, career?.tagline);
+
+  // Focus + announce on real route changes only (not on in-place filter/search re-renders)
+  if (animate && !isFirstRender) {
+    const heading = view.querySelector('h1');
+    let label = heading ? heading.textContent.trim() : 'Karriere';
+    if (!isCompare && !id) label = 'Karriere — all careers';
+    if (heading) {
+      if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
+      heading.focus({ preventScroll: true });
+    }
+    const announcer = document.getElementById('route-announcer');
+    if (announcer) announcer.textContent = `Now viewing: ${label}`;
+  }
+  isFirstRender = false;
 }
+
 function renderComparePicker(preselectedA, preselectedB) {
   const selectedA = preselectedA && careers.find(c => c.id === preselectedA);
   const selectedB = preselectedB && careers.find(c => c.id === preselectedB);
