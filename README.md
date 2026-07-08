@@ -2,7 +2,7 @@
 
 **Honest career guidance for Indian students.** Real salaries, real timelines, real regrets — from people who lived each path. No brochures, no fluff.
 
-[![Live Site](https://img.shields.io/badge/Live-View%20Site-blue)](https://asiercoded.github.io/karriere/)
+[![Live Site](https://img.shields.io/badge/Live-View%20Site-blue)](https://karrierehq.pages.dev/)
 
 ---
 

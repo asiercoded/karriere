@@ -226,10 +226,22 @@ function formatEntrySalary(entry) {
   return `From ${numMatch[0]}${unitText}`;
 }
 
-const BASE = '/karriere';
+const BASE = '';
 
 function navigate(path) {
-  window.location.hash = path;
+  if (path.startsWith('compare=')) {
+    const ids = path.replace('compare=', '').split(',');
+    if (ids.length === 2 && ids[0] && ids[1]) {
+      history.pushState(null, '', `/compare?id1=${ids[0]}&id2=${ids[1]}`);
+    } else {
+      history.pushState(null, '', '/compare');
+    }
+  } else if (path) {
+    history.pushState(null, '', `/${path}`);
+  } else {
+    history.pushState(null, '', '/');
+  }
+  render(true);
 }
 
 function getFilteredCareers() {
@@ -722,9 +734,9 @@ function attachListeners() {
   // Escape key handler — navigate back
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      const hash = window.location.hash.replace('#', '');
-      if (!hash) return;
-      if (hash.startsWith('compare=')) {
+      const path = window.location.pathname.replace(/^\/+/, '');
+      if (!path) return;
+      if (path.startsWith('compare')) {
         navigate('compare=,');
       } else {
         navigate('');
@@ -815,9 +827,9 @@ if (compareSearchB) {
       const shareId = btn.dataset.shareWhatsapp || btn.dataset.shareCompare;
       let url;
       if (btn.dataset.shareWhatsapp) {
-        url = `${window.location.origin}/karriere/#${shareId}`;
+        url = `${window.location.origin}/${shareId}`;
       } else if (btn.dataset.shareCompare) {
-        url = `${window.location.origin}/karriere/#compare=${shareId}`;
+        url = `${window.location.origin}/compare?id1=${shareId}`;
       }
       const text = encodeURIComponent(`Check out this honest career guide for ${name} on Karriere.\n\n${url}`);
       window.open(`https://wa.me/?text=${text}`, '_blank');
@@ -838,9 +850,9 @@ if (compareSearchB) {
       if (panel) panel.hidden = false;
       activeDetailTab = tab.dataset.tab;
       if (activeDetailTab === 'pay') animateSalaryBars();
-      const base = window.location.hash.split('?')[0];
-      const newHash = `${base}?tab=${activeDetailTab}`;
-      history.replaceState(null, '', newHash);
+      const base = window.location.pathname.replace(/\/+$/, '');
+      const newPath = `${base}?tab=${activeDetailTab}`;
+      history.replaceState(null, '', newPath);
     });
   });
 
@@ -851,14 +863,14 @@ async function render(animate = true) {
   const loaded = await loadCareers();
   if (!loaded) return;
   const view = document.getElementById('view');
-  const hash = window.location.hash.replace('#', '');
-  const isCompare = hash.startsWith('compare=');
-  const baseHash = hash.split('?')[0];          // strip ?tab=... from the hash
-  const id = isCompare ? '' : baseHash;
+  const path = window.location.pathname.replace(/^\/+/, '').split('?')[0];
+  const urlParams = new URLSearchParams(window.location.search);
+  const isCompare = path.startsWith('compare');
+  const id = isCompare ? '' : path;
 // Restore tab from URL
 if (!isCompare && id) {
-  const tabMatch = window.location.hash.match(/[?&]tab=([^&]+)/);
-  activeDetailTab = tabMatch && DETAIL_TABS.includes(tabMatch[1]) ? tabMatch[1] : 'overview';
+  const tabParam = urlParams.get('tab');
+  activeDetailTab = tabParam && DETAIL_TABS.includes(tabParam) ? tabParam : 'overview';
 }
 
 
@@ -872,16 +884,17 @@ if (!isCompare && id) {
     // Restoring from detail back to list
   }
   if (isCompare) {
-    const ids = hash.replace('compare=', '').split(',');
-    if (ids.length === 2 && ids[0] && ids[1]) {
-      view.innerHTML = renderCompareView(ids[0], ids[1]);
-    } else if (ids.length >= 1 && (ids[0] || ids[1])) {
-      view.innerHTML = renderComparePicker(ids[0] || null, ids[1] || null);
+    const id1 = urlParams.get('id1');
+    const id2 = urlParams.get('id2');
+    if (id1 && id2) {
+      view.innerHTML = renderCompareView(id1, id2);
+    } else if (id1 || id2) {
+      view.innerHTML = renderComparePicker(id1 || null, id2 || null);
     } else {
       view.innerHTML = renderComparePicker(null, null);
     }
     // Save/restore scroll for compare views
-    if (ids.length === 2 && ids[0] && ids[1]) {
+    if (id1 && id2) {
       window.prevScrollY = window.scrollY;
       window.scrollTo({ top: 0, behavior: 'instant' });
     } else if (window.prevScrollY !== undefined) {
@@ -1101,8 +1114,33 @@ const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_re
   `;
 }
 
+// Backward compatibility: redirect old #hash URLs to clean paths
+(function handleOldHash() {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#')) {
+    const cleanHash = hash.replace('#', '');
+    if (cleanHash.startsWith('compare=')) {
+      const ids = cleanHash.replace('compare=', '').split(',');
+      if (ids.length === 2 && ids[0] && ids[1]) {
+        history.replaceState(null, '', `/compare?id1=${ids[0]}&id2=${ids[1]}`);
+      } else {
+        history.replaceState(null, '', '/compare');
+      }
+    } else if (cleanHash) {
+      const tabMatch = cleanHash.match(/^([^?]+)\?tab=([^&]+)/);
+      if (tabMatch) {
+        history.replaceState(null, '', `/${tabMatch[1]}?tab=${tabMatch[2]}`);
+      } else {
+        history.replaceState(null, '', `/${cleanHash.split('?')[0]}`);
+      }
+    } else {
+      history.replaceState(null, '', '/');
+    }
+  }
+})();
+
 initTheme();
-window.addEventListener('hashchange', () => render(true));
+window.addEventListener('popstate', () => render(true));
 render(true);
 
 function updateMetaTags(careerName, careerTagline) {
