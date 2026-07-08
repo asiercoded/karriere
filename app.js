@@ -295,7 +295,7 @@ function renderListView() {
         <button class="wordmark">${LOGOMARK}<span>Karriere</span></button>
         <div style="display:flex;align-items:center;gap:12px;">
           <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
-          <div class="masthead-meta">Vol. 1 — India Edition</div>
+          
         </div>
       </div>
       <div class="dateline">
@@ -311,7 +311,7 @@ function renderListView() {
             <span class="trust-item"><span class="trust-check">✓</span>${careers.length} careers covered</span>
             <span class="trust-item"><span class="trust-check">✓</span>${totalVoices} verified testimonies</span>
             <span class="trust-item"><span class="trust-check">✓</span>Updated regularly</span>
-            <span class="trust-item"><span class="trust-check">✓</span>Sourced from Reddit, surveys &amp; professionals</span>
+            <span class="trust-item"><span class="trust-check">✓</span>Sourced from Reddit, surveys & professionals</span>
           </div>
           <div class="hero-actions">
             <div class="hero-search-row">
@@ -375,7 +375,13 @@ function renderDetailView(id) {
     <div class="wrap detail-wrap">
       <div class="detail-topbar">
         <button class="back-link" data-nav="">← Back to all careers</button>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
+        <div class="detail-topbar-actions">
+          <button class="share-btn share-page" data-share-id="${career.id}" data-share-name="${career.name}" aria-label="Share this career">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+            <span>Share</span>
+          </button>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">${getThemeIcon()}</button>
+        </div>
       </div>
       <button class="masthead-small">${LOGOMARK}<span>Karriere</span></button>
 
@@ -403,7 +409,6 @@ function renderDetailView(id) {
 
       <div class="detail-actions">
         <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
-        <button class="share-btn share-whatsapp" data-share-whatsapp="${career.id}" data-share-name="${career.name}">Share</button>
       </div>
 
       <div class="section related-section">
@@ -820,21 +825,48 @@ if (compareSearchB) {
       document.getElementById(scrollBtn.dataset.navScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-  // WhatsApp share buttons
-  document.querySelectorAll('.share-whatsapp').forEach(btn => {
-    btn.addEventListener('click', () => {
+  // Share buttons — Web Share API with clipboard fallback
+  document.querySelectorAll('.share-page').forEach(btn => {
+    btn.addEventListener('click', async () => {
       const name = btn.dataset.shareName;
-      const shareId = btn.dataset.shareWhatsapp || btn.dataset.shareCompare;
-      let url;
-      if (btn.dataset.shareWhatsapp) {
-        url = `${window.location.origin}/${shareId}`;
-      } else if (btn.dataset.shareCompare) {
-        url = `${window.location.origin}/compare?id1=${shareId}`;
+      const url = window.location.href;
+      const title = name ? `Karriere – ${name}` : 'Karriere — The unfiltered career file';
+      const text = name
+        ? `Check out ${name} on Karriere — honest career insights.`
+        : 'Honest career guidance for Indian students. Real salaries, real timelines, real regrets.';
+
+      if (navigator.share) {
+        try {
+          await navigator.share({ title, text, url });
+        } catch (err) {
+          if (err.name !== 'AbortError') {
+            fallbackCopy(url);
+          }
+        }
+      } else {
+        fallbackCopy(url);
       }
-      const text = encodeURIComponent(`Check out this honest career guide for ${name} on Karriere.\n\n${url}`);
-      window.open(`https://wa.me/?text=${text}`, '_blank');
     });
   });
+
+  function fallbackCopy(url) {
+    navigator.clipboard.writeText(url).then(() => {
+      const toast = document.getElementById('share-toast') || createToast();
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }).catch(() => {
+      // Clipboard not available — do nothing gracefully
+    });
+  }
+
+  function createToast() {
+    const toast = document.createElement('div');
+    toast.id = 'share-toast';
+    toast.className = 'share-toast';
+    toast.textContent = 'Link copied!';
+    document.body.appendChild(toast);
+    return toast;
+  }
 
     // Tab click listeners
     document.querySelectorAll('.detail-tab').forEach(tab => {
@@ -1108,7 +1140,10 @@ const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_re
         </div>
       </div>
       <div class="detail-actions">
-        <button class="share-btn share-whatsapp" data-share-compare="${id1},${id2}" data-share-name="${a.name} vs ${b.name}">Share</button>
+        <button class="share-btn share-page" data-share-name="${a.name} vs ${b.name}" data-share-compare="1" aria-label="Share this comparison">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+          <span>Share</span>
+        </button>
       </div>
     </div>
   `;
