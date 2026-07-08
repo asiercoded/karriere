@@ -4,21 +4,21 @@
    LIGHT MODE — root tokens
    ═══════════════════════════════════════ */
 :root {
-  --bg: #C2C1BC;             /* muted warm grey — much darker, comfortable for eyes */
-  --surface: #D4D3CE;        /* soft muted cards */
-  --surface-2: #CECDCA;      /* elevated/hover state */
+--bg: #DAD8D1;               /* darker, still cool-neutral — no warm cast */
+--surface: #F2F0EA;          /* card surfaces stay light for content legibility */
+--surface-2: #CFCDC5;        /* elevated/hover state */
 
-  --ink: #1C1C1F;                         /* darker near-black for better contrast on softer bg */
-  --ink-soft: rgba(28,28,31,0.68);
-  --ink-faint: rgba(28,28,31,0.46);
+--ink: #1C1C1F;
+--ink-soft: rgba(28,28,31,0.70);
+--ink-faint: rgba(28,28,31,0.68);
 
-  --rule: rgba(28,28,31,0.10);
-  --rule-strong: rgba(28,28,31,0.18);
+--rule: rgba(28,28,31,0.14);
+--rule-strong: rgba(28,28,31,0.24);
 
-  --violet: #5B4B93;         /* an ACTUAL violet now, not a brown/maroon — this is the single biggest fix here */
-  --violet-dim: rgba(91,75,147,0.08);
-  --amber: #C88A2E;          /* brightened slightly so it reads as warm data-emphasis, not another shade of dirt */
-  --amber-dim: rgba(200,138,46,0.12);
+--violet: #5B4B93;
+--violet-dim: rgba(91,75,147,0.08);
+--amber: #7A5014;
+--amber-dim: rgba(122,80,20,0.14);
   --sage: #4F8064;
   --dustred: #B24A3A;
   --azure: #3E7BA6;

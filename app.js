@@ -58,21 +58,8 @@ const WINNER_BADGE = '<svg class="comp-winner-icon" viewBox="0 0 24 24" width="1
 const METRIC_DIRECTION = {
   stress: 'lower', competition: 'lower', salary_potential: 'higher', study_difficulty: 'lower',
   work_life_balance: 'higher', job_availability: 'higher', abroad_prospects: 'higher',
-  duration: 'lower', salary: 'higher'
+  duration: 'lower'
 };
-
-function parseSalaryLakhs(str) {
-  if (!str) return null;
-  const seg = str.split('(')[0];
-  const numMatch = seg.match(/[\d,.]+/);
-  if (!numMatch) return null;
-  const num = parseFloat(numMatch[0].replace(/,/g, ''));
-  if (isNaN(num)) return null;
-  if (/crore/i.test(seg)) return num * 100;
-  if (/LPA|lakh/i.test(seg)) return num;
-  if (/\/month/i.test(seg)) return (num * 12) / 100000;
-  return null; // unrecognized unit — don't guess, just skip highlighting
-}
 
 function parseDurationYears(str) {
   if (!str) return null;
@@ -736,19 +723,6 @@ function attachListeners() {
     });
   }
 
-  // Escape key handler — navigate back
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      const path = window.location.pathname.replace(/^\/+/, '');
-      if (!path) return;
-      if (path.startsWith('compare')) {
-        navigate('compare=,');
-      } else {
-        navigate('');
-      }
-    }
-  });
-
   // Compare search filtering
 function filterCompareOptions(inputEl) {
   const q = inputEl.value.trim().toLowerCase();
@@ -1073,7 +1047,7 @@ function narrativeSection(title, iconKey, itemsA, itemsB, nameA, nameB) {
   // ── At a Glance ──
   const glanceRows =
     row('Duration', mA.duration, mB.duration, pickWinner(parseDurationYears(mA.duration), parseDurationYears(mB.duration), 'lower')) +
-    row('Entry salary', salaryCell(a.salary?.entry), salaryCell(b.salary?.entry), pickWinner(parseSalaryLakhs(a.salary?.entry), parseSalaryLakhs(b.salary?.entry), 'higher')) +
+    row('Entry salary', salaryCell(a.salary?.entry), salaryCell(b.salary?.entry), null) +
     row('Stress', starCell(mA.stress), starCell(mB.stress), pickWinner(mA.stress, mB.stress, 'lower')) +
     row('Competition', starCell(mA.competition), starCell(mB.competition), pickWinner(mA.competition, mB.competition, 'lower'));
   const glanceHtml = tableWrap('At a Glance', 'glance', glanceRows);
@@ -1092,8 +1066,8 @@ function narrativeSection(title, iconKey, itemsA, itemsB, nameA, nameB) {
   // ── Salary Progression ──
   const salaryStages = [['entry', 'Entry'], ['mid', 'Mid'], ['senior', 'Senior']];
   const salaryRows = salaryStages.map(([key, label]) =>
-    row(label, salaryCell(a.salary?.[key]), salaryCell(b.salary?.[key]), pickWinner(parseSalaryLakhs(a.salary?.[key]), parseSalaryLakhs(b.salary?.[key]), 'higher'))
-  ).join('');
+  row(label, salaryCell(a.salary?.[key]), salaryCell(b.salary?.[key]), null)
+).join('');
   const salaryHtml = tableWrap('Salary Progression', 'salary', salaryRows);
 
 // replace the three listSection(...) calls with:
@@ -1176,6 +1150,18 @@ const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_re
 
 initTheme();
 window.addEventListener('popstate', () => render(true));
+
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  const path = window.location.pathname.replace(/^\/+/, '');
+  if (!path) return;
+  if (path.startsWith('compare')) {
+    navigate('compare=,');
+  } else {
+    navigate('');
+  }
+});
+
 render(true);
 
 function updateMetaTags(careerName, careerTagline) {
