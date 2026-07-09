@@ -218,12 +218,9 @@ const BASE = '';
 
 function navigate(path) {
   if (path.startsWith('compare=')) {
-    const ids = path.replace('compare=', '').split(',');
-    if (ids.length === 2 && ids[0] && ids[1]) {
-      history.pushState(null, '', `/compare?id1=${ids[0]}&id2=${ids[1]}`);
-    } else {
-      history.pushState(null, '', '/compare');
-    }
+    const [a, b] = path.replace('compare=', '').split(',');
+    const qs = [a && `id1=${a}`, b && `id2=${b}`].filter(Boolean).join('&');
+    history.pushState(null, '', qs ? `/compare?${qs}` : '/compare');
   } else if (path) {
     history.pushState(null, '', `/${path}`);
   } else {
