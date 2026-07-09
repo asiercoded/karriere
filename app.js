@@ -82,16 +82,30 @@ function parseDurationYears(str) {
 }
 
 function calculateSalaryPercentage(entryStr, midStr, seniorStr) {
-  // Rough normalizer to compare mixed units (e.g., /month vs LPA)
   function parseValue(str) {
     if (!str) return 0;
-    const clean = str.replace(/,/g, '').toLowerCase();
-    let multiplier = 1;
-    if (clean.includes('month')) multiplier *= 12; // Annualize monthly pay
-    if (clean.includes('lakh') || clean.includes('lpa')) multiplier *= 100000;
     
-    const nums = clean.match(/\d+(?:\.\d+)?/g);
-    return nums ? Math.max(...nums.map(Number)) * multiplier : 0;
+    // 1. STRIP THE NOTES: Cut off everything from the '(' onward so numbers like "5 years" don't break the math
+    const noNotes = str.split('(')[0];
+
+    // 2. Normalize all en-dashes, em-dashes, and the word "to" into a standard hyphen
+    const clean = noNotes.replace(/,/g, '').toLowerCase().replace(/[–—]| to /g, '-');
+    
+    let timeMultiplier = 1;
+    if (clean.includes('month')) timeMultiplier = 12;
+
+    const parts = clean.split('-');
+    const maxPart = parts[parts.length - 1]; 
+    
+    let unitMultiplier = 1;
+    if (maxPart.includes('lakh') || maxPart.includes('lpa')) unitMultiplier = 100000;
+    else if (maxPart.includes('cr') || maxPart.includes('crore')) unitMultiplier = 10000000;
+    else if (clean.includes('lakh') || clean.includes('lpa')) unitMultiplier = 100000; 
+    
+    const nums = maxPart.match(/\d+(?:\.\d+)?/g);
+    const val = nums ? Math.max(...nums.map(Number)) : 0;
+
+    return val * unitMultiplier * timeMultiplier;
   }
 
   const e = parseValue(entryStr);
@@ -101,9 +115,9 @@ function calculateSalaryPercentage(entryStr, midStr, seniorStr) {
 
   // Return minimum 15% fill so the bar is always visible
   return {
-    entry: e ? Math.max(15, (e / max) * 100) : 15,
-    mid: m ? Math.max(15, (m / max) * 100) : 50,
-    senior: s ? Math.max(15, (s / max) * 100) : 100
+    entry: e ? Math.max(20, (e / max) * 100) : 20,
+    mid: m ? Math.max(40, (m / max) * 100) : 40,
+    senior: s ? Math.max(60, (s / max) * 100) : 100
   };
 }
 
@@ -541,20 +555,43 @@ function renderPayTab(career, cm, dm) {
 
   const pct = calculateSalaryPercentage(career.salary?.entry, career.salary?.mid, career.salary?.senior);
 
+  // Helper to split the number from the parenthetical note
+  function splitBarData(str) {
+    if (!str) return { amount: '—', note: '' };
+    const [amt, ...rest] = str.split('(');
+    return { 
+      amount: amt.trim(), 
+      note: rest.length ? '(' + rest.join('(').trim() : '' 
+    };
+  }
+
+  const eData = splitBarData(career.salary?.entry);
+  const mData = splitBarData(career.salary?.mid);
+  const sData = splitBarData(career.salary?.senior);
+
   return `
     <div class="section-label">Salary progression</div>
     <div class="salary-track">
       <div class="salary-row">
         <div class="salary-stage">Entry</div>
-        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.entry}"><span class="salary-value">${career.salary?.entry || '—'}</span></div></div>
+        <div class="salary-bar-group">
+          <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.entry}"><span class="salary-value">${eData.amount}</span></div></div>
+          ${eData.note ? `<div class="salary-bar-note">${eData.note}</div>` : ''}
+        </div>
       </div>
       <div class="salary-row">
         <div class="salary-stage">Mid</div>
-        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.mid}"><span class="salary-value">${career.salary?.mid || '—'}</span></div></div>
+        <div class="salary-bar-group">
+          <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.mid}"><span class="salary-value">${mData.amount}</span></div></div>
+          ${mData.note ? `<div class="salary-bar-note">${mData.note}</div>` : ''}
+        </div>
       </div>
       <div class="salary-row">
         <div class="salary-stage">Senior</div>
-        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.senior}"><span class="salary-value">${career.salary?.senior || '—'}</span></div></div>
+        <div class="salary-bar-group">
+          <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.senior}"><span class="salary-value">${sData.amount}</span></div></div>
+          ${sData.note ? `<div class="salary-bar-note">${sData.note}</div>` : ''}
+        </div>
       </div>
     </div>
 
