@@ -25,13 +25,15 @@ export async function onRequest(context) {
     });
   }
 
-  let careers;
+ let careers;
   try {
     const careersRes = await env.ASSETS.fetch(new URL('/careers.json', request.url));
     if (!careersRes.ok) return response;
     careers = await careersRes.json();
-  } catch {
-    return response; // if anything goes wrong, fall back to the unmodified page rather than erroring
+  } catch (err) {
+    // Log the error so it appears in your Cloudflare dashboard
+    console.error("Edge Worker failed to parse careers.json:", err.message);
+    return response; // Fall back to the unmodified page
   }
 
   const career = careers.find(c => c.id === id);

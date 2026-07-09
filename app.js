@@ -81,7 +81,31 @@ function parseDurationYears(str) {
   }
 }
 
+function calculateSalaryPercentage(entryStr, midStr, seniorStr) {
+  // Rough normalizer to compare mixed units (e.g., /month vs LPA)
+  function parseValue(str) {
+    if (!str) return 0;
+    const clean = str.replace(/,/g, '').toLowerCase();
+    let multiplier = 1;
+    if (clean.includes('month')) multiplier = 12; // Annualize monthly pay
+    if (clean.includes('lakh') || clean.includes('lpa')) multiplier = 100000;
+    
+    const nums = clean.match(/\d+(?:\.\d+)?/g);
+    return nums ? Math.max(...nums.map(Number)) * multiplier : 0;
+  }
 
+  const e = parseValue(entryStr);
+  const m = parseValue(midStr);
+  const s = parseValue(seniorStr);
+  const max = Math.max(e, m, s, 1); // Avoid division by zero
+
+  // Return minimum 15% fill so the bar is always visible
+  return {
+    entry: e ? Math.max(15, (e / max) * 100) : 15,
+    mid: m ? Math.max(15, (m / max) * 100) : 50,
+    senior: s ? Math.max(15, (s / max) * 100) : 100
+  };
+}
 
 function pickWinner(valA, valB, direction) {
   if (valA == null || valB == null || valA === valB) return null;
@@ -205,7 +229,20 @@ async function loadCareers() {
   try {
     const res = await fetch('careers.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    careers = await res.json();
+    
+    const rawData = await res.json();
+    
+    // Deep Sanitize: Recursively escapes HTML in all strings to prevent XSS
+    const sanitize = (obj) => {
+      if (typeof obj === 'string') return escapeHtml(obj);
+      if (Array.isArray(obj)) return obj.map(sanitize);
+      if (obj !== null && typeof obj === 'object') {
+        return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, sanitize(v)]));
+      }
+      return obj;
+    };
+    
+    careers = sanitize(rawData);
     return true;
   } catch (err) {
     document.getElementById('view').innerHTML = `
@@ -505,20 +542,22 @@ function renderPayTab(career, cm, dm) {
   timelineStages.push({ label: 'Entry role', sub: career.salary?.entry || '—' });
   timelineStages.push({ label: 'Senior / Established', sub: career.salary?.senior || '—' });
 
+  const pct = calculateSalaryPercentage(career.salary?.entry, career.salary?.mid, career.salary?.senior);
+
   return `
     <div class="section-label">Salary progression</div>
     <div class="salary-track">
       <div class="salary-row">
         <div class="salary-stage">Entry</div>
-        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="40"><span class="salary-value">${career.salary?.entry || '—'}</span></div></div>
+        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.entry}"><span class="salary-value">${career.salary?.entry || '—'}</span></div></div>
       </div>
       <div class="salary-row">
         <div class="salary-stage">Mid</div>
-        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="68"><span class="salary-value">${career.salary?.mid || '—'}</span></div></div>
+        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.mid}"><span class="salary-value">${career.salary?.mid || '—'}</span></div></div>
       </div>
       <div class="salary-row">
         <div class="salary-stage">Senior</div>
-        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="95"><span class="salary-value">${career.salary?.senior || '—'}</span></div></div>
+        <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.senior}"><span class="salary-value">${career.salary?.senior || '—'}</span></div></div>
       </div>
     </div>
 
