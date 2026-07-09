@@ -87,8 +87,8 @@ function calculateSalaryPercentage(entryStr, midStr, seniorStr) {
     if (!str) return 0;
     const clean = str.replace(/,/g, '').toLowerCase();
     let multiplier = 1;
-    if (clean.includes('month')) multiplier = 12; // Annualize monthly pay
-    if (clean.includes('lakh') || clean.includes('lpa')) multiplier = 100000;
+    if (clean.includes('month')) multiplier *= 12; // Annualize monthly pay
+    if (clean.includes('lakh') || clean.includes('lpa')) multiplier *= 100000;
     
     const nums = clean.match(/\d+(?:\.\d+)?/g);
     return nums ? Math.max(...nums.map(Number)) * multiplier : 0;
@@ -215,11 +215,8 @@ function renderMeter(value, type) {
 function animateSalaryBars() {
   document.querySelectorAll('.salary-bar-fill').forEach(el => {
     el.style.width = '0%';
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        el.style.width = `${el.dataset.target}%`;
-      }, 80);
-    });
+    el.offsetHeight; // Forces a sync layout reflow so the browser registers 0%
+    el.style.width = `${el.dataset.target}%`;
   });
 }
 
@@ -947,7 +944,6 @@ document.addEventListener('submit', async (e) => {
 });
 
 // --- INITIALIZATION ---
-let savedScrollY = 0;
 initTheme();
 window.addEventListener('popstate', () => render(true));
 
@@ -984,25 +980,6 @@ function updateMetaTags(careerName, careerTagline) {
     return toast;
   }
 
-    // Tab click listeners
-    document.querySelectorAll('.detail-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.detail-tab').forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-      document.querySelectorAll('.tab-panel').forEach(p => p.hidden = true);
-      const panel = document.querySelector(`.tab-panel[data-tab="${tab.dataset.tab}"]`);
-      if (panel) panel.hidden = false;
-      activeDetailTab = tab.dataset.tab;
-      if (activeDetailTab === 'pay') animateSalaryBars();
-      const base = window.location.pathname.replace(/\/+$/, '');
-      const newPath = `${base}?tab=${activeDetailTab}`;
-      history.replaceState(null, '', newPath);
-    });
-  });
 async function render(animate = true) {
   const loaded = await loadCareers();
   if (!loaded) return;
@@ -1304,19 +1281,3 @@ const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_re
     }
   }
 })();
-
-initTheme();
-window.addEventListener('popstate', () => render(true));
-
-document.addEventListener('keydown', (e) => {
-  if (e.key !== 'Escape') return;
-  const path = window.location.pathname.replace(/^\/+/, '');
-  if (!path) return;
-  if (path.startsWith('compare')) {
-    navigate('compare=,');
-  } else {
-    navigate('');
-  }
-});
-
-render(true);
