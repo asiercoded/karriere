@@ -63,19 +63,37 @@ const METRIC_DIRECTION = {
 };
 
 function parseDurationYears(str) {
-  if (!str) return null;
-  const plus = str.match(/(\d+)\s*\+\s*(\d+)/);
-  if (plus) return parseInt(plus[1]) + parseInt(plus[2]);
-  const range = str.match(/(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)/);
-  if (range) return (parseFloat(range[1]) + parseFloat(range[2])) / 2;
-  const single = str.match(/(\d+(?:\.\d+)?)/);
-  return single ? parseFloat(single[1]) : null;
+  // 1. Strict type check to prevent .match() crashes on undefined/numbers
+  if (typeof str !== 'string') return 0; 
+  
+  try {
+    const plus = str.match(/(\d+)\s*\+\s*(\d+)/);
+    if (plus) return parseInt(plus[1], 10) + parseInt(plus[2], 10);
+    
+    const range = str.match(/(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)/);
+    if (range) return (parseFloat(range[1]) + parseFloat(range[2])) / 2;
+    
+    const single = str.match(/(\d+(?:\.\d+)?)/);
+    return single ? parseFloat(single[1]) : 0;
+  } catch (err) {
+    // 2. Absolute fallback to prevent comparison engine failure
+    return 0; 
+  }
 }
+
+
 
 function pickWinner(valA, valB, direction) {
   if (valA == null || valB == null || valA === valB) return null;
   if (direction === 'higher') return valA > valB ? 'a' : 'b';
   return valA < valB ? 'a' : 'b';
+}
+
+function escapeHtml(str) {
+  if (str == null) return '';
+  return String(str).replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[c]);
 }
 
 function splitBullets(text) {
@@ -214,17 +232,18 @@ function formatEntrySalary(entry) {
   return `From ${numMatch[0]}${unitText}`;
 }
 
-const BASE = '';
+// Automatically detect if we are hosted in a subdirectory (like GitHub Pages)
+const BASE = window.location.pathname.toLowerCase().includes('/karriere') ? '/karriere' : '';
 
 function navigate(path) {
   if (path.startsWith('compare=')) {
     const [a, b] = path.replace('compare=', '').split(',');
     const qs = [a && `id1=${a}`, b && `id2=${b}`].filter(Boolean).join('&');
-    history.pushState(null, '', qs ? `/compare?${qs}` : '/compare');
+    history.pushState(null, '', qs ? `${BASE}/compare?${qs}` : `${BASE}/compare`);
   } else if (path) {
-    history.pushState(null, '', `/${path}`);
+    history.pushState(null, '', `${BASE}/${path}`);
   } else {
-    history.pushState(null, '', '/');
+    history.pushState(null, '', `${BASE}/`);
   }
   render(true);
 }
@@ -302,7 +321,7 @@ function renderListView() {
             <div class="hero-search-row">
               <div class="hero-search-field">
                 <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" class="hero-search" id="hero-search" placeholder="Search a career — try 'law', 'design', or 'stress-free'" value="${searchQuery}" aria-label="Search careers">
+                <input type="text" class="hero-search" id="hero-search" placeholder="Search a career — try 'law', 'design', or 'stress-free'" value="${escapeHtml(searchQuery)}" aria-label="Search careers">
               </div>
             </div>
           </div>
@@ -697,64 +716,44 @@ function renderAboutView() {
   `;
 }
 
-
-
 function attachListeners() {
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => { activeCategory = btn.dataset.cat; render(false); });
-  });
-  document.querySelectorAll('.career-entry').forEach(btn => {
-    btn.addEventListener('click', () => navigate(btn.dataset.id));
-  });
-  document.querySelectorAll('[data-nav]').forEach(btn => {
-    btn.addEventListener('click', () => navigate(btn.dataset.nav));
-  });
-  document.querySelectorAll('.wordmark, .masthead-small').forEach(el => {
-    el.addEventListener('click', () => navigate(''));
-  });
+  // 1. Trigger Salary Animation if on the pay tab
   if (activeDetailTab === 'pay') animateSalaryBars();
-  const themeBtn = document.getElementById('themeToggle');
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      setTheme(current === 'dark' ? 'light' : 'dark');
+
+  // 2. Compare search filtering
+  function filterCompareOptions(inputEl) {
+    const q = inputEl.value.trim().toLowerCase();
+    document.querySelectorAll('.compare-option').forEach(opt => {
+      if (opt.disabled) return;
+      const name = opt.querySelector('.compare-option-name')?.textContent.toLowerCase() || '';
+      const tagline = opt.querySelector('.compare-option-tagline')?.textContent.toLowerCase() || '';
+      const id = opt.dataset.compareId || '';
+      const aliases = ALIASES[id] || [];
+      const match = name.includes(q) || tagline.includes(q) || aliases.some(a => a.includes(q));
+      opt.style.display = match ? '' : 'none';
     });
   }
 
-  // Compare search filtering
-function filterCompareOptions(inputEl) {
-  const q = inputEl.value.trim().toLowerCase();
-  document.querySelectorAll('.compare-option').forEach(opt => {
-    if (opt.disabled) return;
-    const name = opt.querySelector('.compare-option-name')?.textContent.toLowerCase() || '';
-    const tagline = opt.querySelector('.compare-option-tagline')?.textContent.toLowerCase() || '';
-    const id = opt.dataset.compareId || '';
-    const aliases = ALIASES[id] || [];
-    const match = name.includes(q) || tagline.includes(q) || aliases.some(a => a.includes(q));
-    opt.style.display = match ? '' : 'none';
-  });
-}
+  const compareSearchA = document.getElementById('compareSearchA');
+  if (compareSearchA) {
+    compareSearchA.addEventListener('focus', () => { activeCompareSlot = 'a'; });
+    compareSearchA.addEventListener('input', () => filterCompareOptions(compareSearchA));
+  }
 
-const compareSearchA = document.getElementById('compareSearchA');
-if (compareSearchA) {
-  compareSearchA.addEventListener('focus', () => { activeCompareSlot = 'a'; });
-  compareSearchA.addEventListener('input', () => filterCompareOptions(compareSearchA));
-}
+  const compareSearchB = document.getElementById('compareSearchB');
+  if (compareSearchB) {
+    compareSearchB.addEventListener('focus', () => { activeCompareSlot = 'b'; });
+    compareSearchB.addEventListener('input', () => filterCompareOptions(compareSearchB));
+  }
 
-const compareSearchB = document.getElementById('compareSearchB');
-if (compareSearchB) {
-  compareSearchB.addEventListener('focus', () => { activeCompareSlot = 'b'; });
-  compareSearchB.addEventListener('input', () => filterCompareOptions(compareSearchB));
-}
-
-  // Compare option click
+  // 3. Compare option click
   document.querySelectorAll('.compare-option').forEach(opt => {
     opt.addEventListener('click', () => {
       const selectedId = opt.dataset.compareId;
       const slotA = document.getElementById('compareA')?.value || '';
       const slotB = document.getElementById('compareB')?.value || '';
 
-      if (slotA && slotB) return; // both filled
+      if (slotA && slotB) return; 
       if (selectedId === slotA || selectedId === slotB) return;
 
       let nextA = slotA;
@@ -766,14 +765,11 @@ if (compareSearchB) {
         if (!nextA) nextA = selectedId;
         else if (!nextB) nextB = selectedId;
       }
-
       navigate(`compare=${nextA},${nextB}`);
     });
   });
 
-
-
-
+  // 4. Hero Search Bar
   const searchInput = document.getElementById('hero-search');
   if (searchInput) {
     let searchTimeout;
@@ -790,14 +786,9 @@ if (compareSearchB) {
         }
       }, 250);
     });
-
   }
-  document.querySelectorAll('[data-nav-scroll]').forEach(scrollBtn => {
-    scrollBtn.addEventListener('click', () => {
-      document.getElementById(scrollBtn.dataset.navScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-  // Share buttons — Web Share API with clipboard fallback
+
+  // 5. Share buttons
   document.querySelectorAll('.share-page').forEach(btn => {
     btn.addEventListener('click', async () => {
       const name = btn.dataset.shareName;
@@ -811,9 +802,7 @@ if (compareSearchB) {
         try {
           await navigator.share({ title, text, url });
         } catch (err) {
-          if (err.name !== 'AbortError') {
-            fallbackCopy(url);
-          }
+          if (err.name !== 'AbortError') fallbackCopy(url);
         }
       } else {
         fallbackCopy(url);
@@ -823,13 +812,129 @@ if (compareSearchB) {
 
   function fallbackCopy(url) {
     navigator.clipboard.writeText(url).then(() => {
-      const toast = document.getElementById('share-toast') || createToast();
+      let toast = document.getElementById('share-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'share-toast';
+        toast.className = 'share-toast';
+        toast.textContent = 'Link copied!';
+        document.body.appendChild(toast);
+      }
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 2000);
-    }).catch(() => {
-      // Clipboard not available — do nothing gracefully
-    });
+    }).catch(() => {});
   }
+}
+
+// --- GLOBAL EVENT DELEGATION (Handles Clicks) ---
+document.addEventListener('click', async (e) => {
+  const target = e.target.closest('button, .career-entry, [data-nav], [data-nav-scroll], .share-page, .compare-option');
+  if (!target) return;
+
+  if (target.dataset.nav !== undefined) {
+    navigate(target.dataset.nav);
+    return;
+  }
+  if (target.classList.contains('career-entry')) {
+    navigate(target.dataset.id);
+    return;
+  }
+  if (target.classList.contains('filter-btn')) {
+    activeCategory = target.dataset.cat;
+    render(false);
+    return;
+  }
+  if (target.classList.contains('detail-tab')) {
+    document.querySelectorAll('.detail-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    target.classList.add('active');
+    target.setAttribute('aria-selected', 'true');
+    
+    document.querySelectorAll('.tab-panel').forEach(p => p.hidden = true);
+    const panel = document.querySelector(`.tab-panel[data-tab="${target.dataset.tab}"]`);
+    if (panel) panel.hidden = false;
+    
+    activeDetailTab = target.dataset.tab;
+    if (activeDetailTab === 'pay') animateSalaryBars();
+    
+    const base = window.location.pathname.replace(/\/+$/, '');
+    history.replaceState(null, '', `${base}?tab=${activeDetailTab}`);
+    return;
+  }
+  if (target.dataset.navScroll) {
+    document.getElementById(target.dataset.navScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+  if (target.closest('#themeToggle')) {
+    const current = document.documentElement.getAttribute('data-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark');
+    return;
+  }
+  if (target.classList.contains('wordmark') || target.classList.contains('masthead-small')) {
+    navigate('');
+    return;
+  }
+});
+
+// --- GLOBAL FORM SUBMIT HANDLER ---
+document.addEventListener('submit', async (e) => {
+  if (e.target.classList.contains('contact-form')) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.innerHTML = '<div style="padding: 40px 0; text-align: center; color: var(--sage); font-weight: 700; font-size: 16px;">Thanks for your feedback! It has been received.</div>';
+      } else {
+        throw new Error('Network response failed');
+      }
+    } catch (err) {
+      btn.textContent = 'Error. Try Again.';
+      btn.disabled = false;
+      setTimeout(() => { btn.textContent = originalText; }, 3000);
+    }
+  }
+});
+
+// --- INITIALIZATION ---
+let savedScrollY = 0;
+initTheme();
+window.addEventListener('popstate', () => render(true));
+
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  const path = window.location.pathname.replace(/^\/+/, '');
+  if (!path) return;
+  if (path.startsWith('compare')) {
+    navigate('compare=,');
+  } else {
+    navigate('');
+  }
+});
+
+render(true);
+
+function updateMetaTags(careerName, careerTagline) {
+  const title = careerName
+    ? `${careerName} — Karriere`
+    : 'Karriere — The unfiltered career file';
+  const desc = careerTagline || 'Honest career guidance for Indian students. Real salaries, real timelines, real regrets.';
+  document.title = title;
+  document.querySelector('meta[name="description"]')?.setAttribute('content', desc);
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc);
+}
 
   function createToast() {
     const toast = document.createElement('div');
@@ -859,15 +964,15 @@ if (compareSearchB) {
       history.replaceState(null, '', newPath);
     });
   });
-
-}
-
-let savedScrollY = 0;
 async function render(animate = true) {
   const loaded = await loadCareers();
   if (!loaded) return;
   const view = document.getElementById('view');
-  const path = window.location.pathname.replace(/^\/+/, '').split('?')[0];
+// Remove the BASE folder if it exists, strip slashes, and ignore index.html
+  let path = window.location.pathname.replace(BASE, '').replace(/^\/+|\/+$/g, '').split('?')[0];
+  if (path === 'index.html') {
+    path = '';
+  }
   const urlParams = new URLSearchParams(window.location.search);
   const isCompare = path.startsWith('compare');
   const id = isCompare ? '' : path;
@@ -1144,19 +1249,19 @@ const struggleHtml = narrativeSection('Who Might Struggle', 'struggle', a.who_re
     if (cleanHash.startsWith('compare=')) {
       const ids = cleanHash.replace('compare=', '').split(',');
       if (ids.length === 2 && ids[0] && ids[1]) {
-        history.replaceState(null, '', `/compare?id1=${ids[0]}&id2=${ids[1]}`);
+        history.replaceState(null, '', `${BASE}/compare?id1=${ids[0]}&id2=${ids[1]}`);
       } else {
-        history.replaceState(null, '', '/compare');
+        history.replaceState(null, '', `${BASE}/compare`);
       }
     } else if (cleanHash) {
       const tabMatch = cleanHash.match(/^([^?]+)\?tab=([^&]+)/);
       if (tabMatch) {
-        history.replaceState(null, '', `/${tabMatch[1]}?tab=${tabMatch[2]}`);
+        history.replaceState(null, '', `${BASE}/${tabMatch[1]}?tab=${tabMatch[2]}`);
       } else {
-        history.replaceState(null, '', `/${cleanHash.split('?')[0]}`);
+        history.replaceState(null, '', `${BASE}/${cleanHash.split('?')[0]}`);
       }
     } else {
-      history.replaceState(null, '', '/');
+      history.replaceState(null, '', `${BASE}/`);
     }
   }
 })();
@@ -1176,14 +1281,3 @@ document.addEventListener('keydown', (e) => {
 });
 
 render(true);
-
-function updateMetaTags(careerName, careerTagline) {
-  const title = careerName
-    ? `${careerName} — Karriere`
-    : 'Karriere — The unfiltered career file';
-  const desc = careerTagline || 'Honest career guidance for Indian students. Real salaries, real timelines, real regrets.';
-  document.title = title;
-  document.querySelector('meta[name="description"]')?.setAttribute('content', desc);
-  document.querySelector('meta[property="og:title"]')?.setAttribute('content', title);
-  document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc);
-}
