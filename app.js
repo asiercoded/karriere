@@ -569,28 +569,30 @@ function renderPayTab(career, cm, dm) {
   const mData = splitBarData(career.salary?.mid);
   const sData = splitBarData(career.salary?.senior);
 
-  return `
-    <div class="section-label">Salary progression</div>
-    <div class="salary-track">
-      <div class="salary-row">
-        <div class="salary-stage">Entry</div>
-        <div class="salary-bar-group">
-          <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.entry}"><span class="salary-value">${eData.amount}</span></div></div>
-          ${eData.note ? `<div class="salary-bar-note">${eData.note}</div>` : ''}
+return `
+    <div class="section">
+      <div class="section-label">Salary progression</div>
+      <div class="salary-track">
+        <div class="salary-row">
+          <div class="salary-stage">Entry</div>
+          <div class="salary-bar-group">
+            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.entry}"><span class="salary-value">${eData.amount}</span></div></div>
+            ${eData.note ? `<div class="salary-bar-note">${eData.note}</div>` : ''}
+          </div>
         </div>
-      </div>
-      <div class="salary-row">
-        <div class="salary-stage">Mid</div>
-        <div class="salary-bar-group">
-          <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.mid}"><span class="salary-value">${mData.amount}</span></div></div>
-          ${mData.note ? `<div class="salary-bar-note">${mData.note}</div>` : ''}
+        <div class="salary-row">
+          <div class="salary-stage">Mid</div>
+          <div class="salary-bar-group">
+            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.mid}"><span class="salary-value">${mData.amount}</span></div></div>
+            ${mData.note ? `<div class="salary-bar-note">${mData.note}</div>` : ''}
+          </div>
         </div>
-      </div>
-      <div class="salary-row">
-        <div class="salary-stage">Senior</div>
-        <div class="salary-bar-group">
-          <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.senior}"><span class="salary-value">${sData.amount}</span></div></div>
-          ${sData.note ? `<div class="salary-bar-note">${sData.note}</div>` : ''}
+        <div class="salary-row">
+          <div class="salary-stage">Senior</div>
+          <div class="salary-bar-group">
+            <div class="salary-bar-shell"><div class="salary-bar-fill" data-target="${pct.senior}"><span class="salary-value">${sData.amount}</span></div></div>
+            ${sData.note ? `<div class="salary-bar-note">${sData.note}</div>` : ''}
+          </div>
         </div>
       </div>
     </div>

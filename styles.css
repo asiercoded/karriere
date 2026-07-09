@@ -246,7 +246,7 @@ button, input { font-family: inherit; }
   max-width: 480px;
 }
 
-.hero-search-row { display: flex; gap: 10px; }
+.hero-search-row { display: flex; gap: 8px; }
 
 .hero-search-field {
   position: relative;
@@ -552,7 +552,7 @@ button, input { font-family: inherit; }
 }
 
 footer {
-  margin-top: 60px;
+  margin-top: 48px;
   padding-top: 28px;
   border-top: 1px solid var(--rule);
   font-size: 12px;
@@ -1460,7 +1460,7 @@ footer {
 }
 
 .detail-tab-content {
-  padding-top: 24px;
+  padding-top: 32px;
   min-height: 260px;
 }
 .tab-panel[hidden] { display: none; }
@@ -1494,7 +1494,7 @@ footer {
   font-size: 18px;
   font-weight: 800;
   color: var(--ink);
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--rule);
 }
