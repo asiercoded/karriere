@@ -750,7 +750,7 @@ function renderAboutView() {
       <div class="section">
         <div class="section-label">Get in touch</div>
         <p style="font-size:16px;line-height:1.75;color:var(--ink);margin-bottom:24px;">If you notice outdated information, find an error, want to share your own experience with a career, or would like to collaborate — I'd love to hear from you.</p>
-        <form class="contact-form" action="https://formspree.io/f/xojobezo" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/mwvdgwgz" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="form-name">Name</label>
