@@ -81,39 +81,32 @@ function parseDurationYears(str) {
   }
 }
 
+function parseSalaryValue(str) {
+  if (!str) return 0;
+  const noNotes = str.split('(')[0];
+  const clean = noNotes.replace(/,/g, '').toLowerCase().replace(/[–—]| to /g, '-');
+  
+  let timeMultiplier = clean.includes('month') ? 12 : 1;
+  const parts = clean.split('-');
+  const maxPart = parts[parts.length - 1]; 
+  
+  let unitMultiplier = 1;
+  if (maxPart.includes('lakh') || maxPart.includes('lpa')) unitMultiplier = 100000;
+  else if (maxPart.includes('cr') || maxPart.includes('crore')) unitMultiplier = 10000000;
+  else if (clean.includes('lakh') || clean.includes('lpa')) unitMultiplier = 100000; 
+  
+  const nums = maxPart.match(/\d+(?:\.\d+)?/g);
+  const val = nums ? Math.max(...nums.map(Number)) : 0;
+  return val * unitMultiplier * timeMultiplier;
+}
+
+// 2. Update calculateSalaryPercentage
 function calculateSalaryPercentage(entryStr, midStr, seniorStr) {
-  function parseValue(str) {
-    if (!str) return 0;
-    
-    // 1. STRIP THE NOTES: Cut off everything from the '(' onward so numbers like "5 years" don't break the math
-    const noNotes = str.split('(')[0];
+  const e = parseSalaryValue(entryStr);
+  const m = parseSalaryValue(midStr);
+  const s = parseSalaryValue(seniorStr);
+  const max = Math.max(e, m, s, 1); 
 
-    // 2. Normalize all en-dashes, em-dashes, and the word "to" into a standard hyphen
-    const clean = noNotes.replace(/,/g, '').toLowerCase().replace(/[–—]| to /g, '-');
-    
-    let timeMultiplier = 1;
-    if (clean.includes('month')) timeMultiplier = 12;
-
-    const parts = clean.split('-');
-    const maxPart = parts[parts.length - 1]; 
-    
-    let unitMultiplier = 1;
-    if (maxPart.includes('lakh') || maxPart.includes('lpa')) unitMultiplier = 100000;
-    else if (maxPart.includes('cr') || maxPart.includes('crore')) unitMultiplier = 10000000;
-    else if (clean.includes('lakh') || clean.includes('lpa')) unitMultiplier = 100000; 
-    
-    const nums = maxPart.match(/\d+(?:\.\d+)?/g);
-    const val = nums ? Math.max(...nums.map(Number)) : 0;
-
-    return val * unitMultiplier * timeMultiplier;
-  }
-
-  const e = parseValue(entryStr);
-  const m = parseValue(midStr);
-  const s = parseValue(seniorStr);
-  const max = Math.max(e, m, s, 1); // Avoid division by zero
-
-  // Return minimum 15% fill so the bar is always visible
   return {
     entry: e ? Math.max(20, (e / max) * 100) : 20,
     mid: m ? Math.max(40, (m / max) * 100) : 40,
@@ -227,11 +220,10 @@ function renderMeter(value, type) {
 }
 
 function animateSalaryBars() {
-  document.querySelectorAll('.salary-bar-fill').forEach(el => {
-    el.style.width = '0%';
-    el.offsetHeight; // Forces a sync layout reflow so the browser registers 0%
-    el.style.width = `${el.dataset.target}%`;
-  });
+  const bars = document.querySelectorAll('.salary-bar-fill');
+  bars.forEach(el => { el.style.width = '0%'; });
+  if (bars[0]) bars[0].offsetHeight; // Forces one sync layout reflow
+  bars.forEach(el => { el.style.width = `${el.dataset.target}%`; });
 }
 
 
@@ -248,13 +240,17 @@ async function loadCareers() {
       if (typeof obj === 'string') return escapeHtml(obj);
       if (Array.isArray(obj)) return obj.map(sanitize);
       if (obj !== null && typeof obj === 'object') {
-        return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, sanitize(v)]));
+        // Freeze individual objects recursively
+        return Object.freeze(Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, sanitize(v)])));
       }
       return obj;
     };
     
-    careers = sanitize(rawData);
+    // Apply sanitization and freeze the main array
+    careers = Object.freeze(sanitize(rawData));
+    
     return true;
+    
   } catch (err) {
     document.getElementById('view').innerHTML = `
       <div class="wrap" style="text-align:center;padding-top:80px;">
@@ -280,8 +276,8 @@ function formatEntrySalary(entry) {
   return `From ${numMatch[0]}${unitText}`;
 }
 
-// Automatically detect if we are hosted in a subdirectory (like GitHub Pages)
-const BASE = window.location.pathname.toLowerCase().includes('/karriere') ? '/karriere' : '';
+// Automatically detect if hosted on GitHub Pages (subdirectory) vs Custom Domain
+const BASE = window.location.hostname.includes('github.io') ? '/karriere' : '';
 
 function navigate(path) {
   if (path.startsWith('compare=')) {
@@ -821,29 +817,6 @@ function attachListeners() {
     compareSearchB.addEventListener('input', () => filterCompareOptions(compareSearchB));
   }
 
-  // 3. Compare option click
-  document.querySelectorAll('.compare-option').forEach(opt => {
-    opt.addEventListener('click', () => {
-      const selectedId = opt.dataset.compareId;
-      const slotA = document.getElementById('compareA')?.value || '';
-      const slotB = document.getElementById('compareB')?.value || '';
-
-      if (slotA && slotB) return; 
-      if (selectedId === slotA || selectedId === slotB) return;
-
-      let nextA = slotA;
-      let nextB = slotB;
-      if (activeCompareSlot === 'b') {
-        if (!nextB) nextB = selectedId;
-        else if (!nextA) nextA = selectedId;
-      } else {
-        if (!nextA) nextA = selectedId;
-        else if (!nextB) nextB = selectedId;
-      }
-      navigate(`compare=${nextA},${nextB}`);
-    });
-  });
-
   // 4. Hero Search Bar
   const searchInput = document.getElementById('hero-search');
   if (searchInput) {
@@ -862,29 +835,7 @@ function attachListeners() {
       }, 250);
     });
   }
-
-  // 5. Share buttons
-  document.querySelectorAll('.share-page').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const name = btn.dataset.shareName;
-      const url = window.location.href;
-      const title = name ? `Karriere – ${name}` : 'Karriere — The unfiltered career file';
-      const text = name
-        ? `Check out ${name} on Karriere — honest career insights.`
-        : 'Honest career guidance for Indian students. Real salaries, real timelines, real regrets.';
-
-      if (navigator.share) {
-        try {
-          await navigator.share({ title, text, url });
-        } catch (err) {
-          if (err.name !== 'AbortError') fallbackCopy(url);
-        }
-      } else {
-        fallbackCopy(url);
-      }
-    });
-  });
-
+}
   function fallbackCopy(url) {
     navigator.clipboard.writeText(url).then(() => {
       let toast = document.getElementById('share-toast');
@@ -899,14 +850,13 @@ function attachListeners() {
       setTimeout(() => toast.classList.remove('show'), 2000);
     }).catch(() => {});
   }
-}
 
 // --- GLOBAL EVENT DELEGATION (Handles Clicks) ---
 document.addEventListener('click', async (e) => {
   const target = e.target.closest('button, .career-entry, [data-nav], [data-nav-scroll], .share-page, .compare-option');
   if (!target) return;
 
-  if (target.dataset.nav !== undefined) {
+    if (target.dataset.nav !== undefined) {
     navigate(target.dataset.nav);
     return;
   }
@@ -951,7 +901,50 @@ document.addEventListener('click', async (e) => {
     navigate('');
     return;
   }
+
+if (target.classList.contains('compare-option')) {
+    if (target.disabled) return;
+    const selectedId = target.dataset.compareId;
+    const slotA = document.getElementById('compareA')?.value || '';
+    const slotB = document.getElementById('compareB')?.value || '';
+
+    if (slotA && slotB) return; 
+    if (selectedId === slotA || selectedId === slotB) return;
+
+    let nextA = slotA;
+    let nextB = slotB;
+    if (activeCompareSlot === 'b') {
+      if (!nextB) nextB = selectedId;
+      else if (!nextA) nextA = selectedId;
+    } else {
+      if (!nextA) nextA = selectedId;
+      else if (!nextB) nextB = selectedId;
+    }
+    navigate(`compare=${nextA},${nextB}`);
+    return;
+  }
+
+  if (target.classList.contains('share-page')) {
+    const name = target.dataset.shareName;
+    const url = window.location.href;
+    const title = name ? `Karriere – ${name}` : 'Karriere — The unfiltered career file';
+    const text = name
+      ? `Check out ${name} on Karriere — honest career insights.`
+      : 'Honest career guidance for Indian students. Real salaries, real timelines, real regrets.';
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, text, url });
+      } catch (err) {
+        if (err.name !== 'AbortError') fallbackCopy(url);
+      }
+    } else {
+      fallbackCopy(url);
+    }
+    return;
+  }
 });
+
 
 // --- GLOBAL FORM SUBMIT HANDLER ---
 document.addEventListener('submit', async (e) => {
@@ -1010,15 +1003,6 @@ function updateMetaTags(careerName, careerTagline) {
   document.querySelector('meta[property="og:description"]')?.setAttribute('content', desc);
 }
 
-  function createToast() {
-    const toast = document.createElement('div');
-    toast.id = 'share-toast';
-    toast.className = 'share-toast';
-    toast.textContent = 'Link copied!';
-    document.body.appendChild(toast);
-    return toast;
-  }
-
 async function render(animate = true) {
   const loaded = await loadCareers();
   if (!loaded) return;
@@ -1043,37 +1027,52 @@ if (!isCompare && id) {
     view.classList.add('leaving');
     await new Promise(r => setTimeout(r, 150));
   }
-  // Save scroll position before navigating to detail
-  if (!id && window.prevScrollY) {
-    // Restoring from detail back to list
-  }
-  if (isCompare) {
-    const id1 = urlParams.get('id1');
-    const id2 = urlParams.get('id2');
-    if (id1 && id2) {
-      view.innerHTML = renderCompareView(id1, id2);
-    } else if (id1 || id2) {
-      view.innerHTML = renderComparePicker(id1 || null, id2 || null);
-    } else {
-      view.innerHTML = renderComparePicker(null, null);
-    }
-    // Save/restore scroll for compare views
-    if (id1 && id2) {
-      window.prevScrollY = window.scrollY;
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    } else if (window.prevScrollY !== undefined) {
-      requestAnimationFrame(() => {
-        window.scrollTo({ top: window.prevScrollY, behavior: 'instant' });
-        window.prevScrollY = undefined;
-      });
+if (isCompare) {
+    try {
+      const id1 = urlParams.get('id1');
+      const id2 = urlParams.get('id2');
+      if (id1 && id2) {
+        view.innerHTML = renderCompareView(id1, id2);
+      } else if (id1 || id2) {
+        view.innerHTML = renderComparePicker(id1 || null, id2 || null);
+      } else {
+        view.innerHTML = renderComparePicker(null, null);
+      }
+      
+      if (id1 && id2) {
+        window.prevScrollY = window.scrollY;
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (window.prevScrollY !== undefined) {
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: window.prevScrollY, behavior: 'instant' });
+          window.prevScrollY = undefined;
+        });
+      }
+    } catch (err) {
+      console.error("Compare render failed:", err);
+      view.innerHTML = `
+        <div class="wrap" style="text-align:center;padding-top:80px;">
+          <h2>Comparison unavailable</h2>
+          <p style="color:var(--ink-soft);margin-top:12px;">We encountered an error loading this comparison.</p>
+          <button onclick="location.reload()" style="margin-top:24px;padding:12px 24px;background:var(--violet);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;">Refresh Page</button>
+        </div>`;
     }
   } else {
-    if (id === 'about') {
-  view.innerHTML = renderAboutView();
-} else {
-  view.innerHTML = id ? renderDetailView(id) : renderListView();
-}
-
+    try {
+      if (id === 'about') {
+        view.innerHTML = renderAboutView();
+      } else {
+        view.innerHTML = id ? renderDetailView(id) : renderListView();
+      }
+    } catch (err) {
+      console.error("Render failed:", err);
+      view.innerHTML = `
+        <div class="wrap" style="text-align:center;padding-top:80px;">
+          <h2>Something went wrong</h2>
+          <p style="color:var(--ink-soft);margin-top:12px;">We couldn't render this page properly.</p>
+          <button onclick="location.reload()" style="margin-top:24px;padding:12px 24px;background:var(--violet);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;">Refresh Page</button>
+        </div>`;
+    }
   }
 
   view.classList.remove('leaving');
@@ -1093,9 +1092,6 @@ if (!isCompare && id) {
   }
   attachListeners();
   const searchInput = document.getElementById('hero-search');
-  if (searchInput && document.activeElement !== searchInput && searchQuery) {
-    // preserve focus/caret only when re-rendering from typing; no-op on hash nav
-  }
   const career = careers.find(c => c.id === id);
   updateMetaTags(career?.name, career?.tagline);
 
