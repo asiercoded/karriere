@@ -247,7 +247,7 @@ async function loadCareers() {
     };
     
     // Apply sanitization and freeze the main array
-    careers = Object.freeze(sanitize(rawData));
+    careers = Object.freeze(sanitize(rawData.careers));
     
     return true;
     
