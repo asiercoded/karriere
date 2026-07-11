@@ -9,16 +9,25 @@ export async function onRequest(context) {
 
   const response = await context.next();
 
-  if (!id1 && !id2) return response; // bare picker page — generic meta is already fine
+  // If no params are passed, serve the bare picker page
+  if (!id1 && !id2) return response; 
 
   let careers;
   try {
     const careersRes = await env.ASSETS.fetch(new URL('/careers.json', request.url));
     if (!careersRes.ok) return response;
-    careers = await careersRes.json();
+    
+    const data = await careersRes.json();
+    
+    // FIX: Extract the actual array from the JSON structure
+    careers = Array.isArray(data) ? data : (data.careers || []);
+    
   } catch {
-    return response;
+    return response; // Failsafe
   }
+
+  // Double-check to prevent TypeError: careers.find is not a function
+  if (!Array.isArray(careers)) return response;
 
   const a = careers.find(c => c.id === id1);
   const b = careers.find(c => c.id === id2);
