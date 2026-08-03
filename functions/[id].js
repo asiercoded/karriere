@@ -13,42 +13,53 @@ export async function onRequest(context) {
     return context.next();
   }
 
-  // Get the normal SPA response first (this already goes through your _redirects
-  // rule, so it's the same index.html every route serves today).
-  const response = await context.next();
+  // Request an uncompressed HTML body — HTMLRewriter cannot reliably parse
+  // gzip/brotli/zstd-encoded responses and may throw on them.
+  const fetchRequest = new Request(request, {
+    headers: { ...Object.fromEntries(request.headers), 'Accept-Encoding': 'identity' }
+  });
 
-  if (id === 'about') {
-    return rewriteMeta(response, {
-      title: 'About Karriere — The unfiltered career file',
-      description: "Why Karriere exists, how the content is created, and what we're honest about.",
-      url: request.url
-    });
-  }
-
-  let careers;
   try {
-    const careersRes = await env.ASSETS.fetch(new URL('/careers.json', request.url));
-    if (!careersRes.ok) return response;
-    const data = await careersRes.json();
-    careers = Array.isArray(data) ? data : (data.careers || []);
+    const response = await context.next(fetchRequest);
+
+    if (id === 'about') {
+      return rewriteMeta(response, {
+        title: 'About Karriere — The unfiltered career file',
+        description: "Why Karriere exists, how the content is created, and what we're honest about.",
+        url: request.url
+      });
+    }
+
+    let careers;
+    try {
+      const careersRes = await env.ASSETS.fetch(new URL('/careers.json', request.url));
+      if (!careersRes.ok) return response;
+      const data = await careersRes.json();
+      careers = Array.isArray(data) ? data : (data.careers || []);
+    } catch (err) {
+      console.error("Edge Worker failed to parse careers.json:", err.message);
+      return response;
+    }
+
+    if (!Array.isArray(careers)) return response;
+
+    const career = careers.find(c => c.id === id);
+    if (!career) return response;
+
+    const title = `${career.name} — Karriere`;
+    const description = career.tagline || (typeof career.overview === 'string' ? career.overview.slice(0, 155) : '');
+
+    return rewriteMeta(response, { title, description, url: request.url, faq: career.faq });
   } catch (err) {
-    // Log the error so it appears in your Cloudflare dashboard
-    console.error("Edge Worker failed to parse careers.json:", err.message);
-    return response; // Fall back to the unmodified page
+    console.error("Edge Worker failed:", err.message);
+    return context.next();
   }
-
-  if (!Array.isArray(careers)) return response;
-
-  const career = careers.find(c => c.id === id);
-  if (!career) return response; // unknown path — not a career — leave it alone
-
-  const title = `${career.name} — Karriere`;
-  const description = career.tagline || (career.overview ? career.overview.slice(0, 155) : '');
-
-  return rewriteMeta(response, { title, description, url: request.url, faq: career.faq });
 }
 
 function rewriteMeta(response, { title, description, url, faq }) {
+  // Nothing to rewrite (e.g. HEAD request) — pass through untouched
+  if (!response.body) return response;
+
   const rewriter = new HTMLRewriter()
     .on('title', { element(el) { el.setInnerContent(title); } })
     .on('meta[name="description"]', { element(el) { el.setAttribute('content', description); } })
@@ -76,5 +87,10 @@ function rewriteMeta(response, { title, description, url, faq }) {
     rewriter.on('head', { element(el) { el.append(`<script type="application/ld+json">${faqJson}</script>`); } });
   }
 
-  return rewriter.transform(response);
+  try {
+    return rewriter.transform(response);
+  } catch (err) {
+    console.error("rewriteMeta failed:", err.message);
+    return response;
+  }
 }
