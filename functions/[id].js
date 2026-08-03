@@ -84,7 +84,7 @@ function rewriteMeta(response, { title, description, url, faq }) {
     };
     // Escape < to prevent </script> injection in the JSON-LD block
     const faqJson = JSON.stringify(faqSchema).replace(/</g, '\\u003c');
-    rewriter.on('head', { element(el) { el.append(`<script type="application/ld+json">${faqJson}</script>`); } });
+    rewriter.on('head', { element(el) { el.append(`<script type="application/ld+json">${faqJson}</script>`, { html: true }); } });
   }
 
   try {
