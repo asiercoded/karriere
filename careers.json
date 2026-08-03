@@ -194,7 +194,29 @@
         "misconception": "Once you finish MBBS, you're financially set.",
         "regret": "I underestimated how long it takes to actually start earning well.",
         "praise": "Helping even one patient makes the difficult days feel worthwhile."
-      }
+      },
+      "faq": [
+        {
+          "question": "How bad is the rural service bond actually?",
+          "answer": "It varies by state, but it can be brutal. You are often posted in Primary Health Centres (PHCs) with minimal equipment, no senior supervision, and severe medicine shortages. If you want to break the bond to study for NEET-PG, the penalty can range from ₹10 lakhs to ₹40 lakhs. Always read the state bond policy before joining a government college."
+        },
+        {
+          "question": "Is the 'toxic residency culture' exaggerated on Reddit?",
+          "answer": "No. Especially in clinical branches (Medicine, Surgery, OBGYN) at government hospitals. 36-to-48-hour shifts without sleep, extreme patient loads, and intense verbal abuse from senior residents are normalized as 'character building.' It is the primary reason many doctors now prefer non-clinical branches or migrating abroad."
+        },
+        {
+          "question": "Can I afford to open my own hospital or clinic anymore?",
+          "answer": "A small OPD consulting clinic is affordable. A nursing home or multi-bed hospital is nearly impossible for a first-generation doctor today. Corporate hospital chains have dominated the market, and real estate plus medical equipment costs run into crores. Most young doctors now accept they will be lifelong employees of corporate hospitals."
+        },
+        {
+          "question": "Are private medical colleges worth a ₹1 Crore fee?",
+          "answer": "From a pure ROI perspective? No. It will take you 15+ years to earn that money back organically. Students who take this route usually have family wealth or doctor parents with an established hospital waiting for them to take over. Taking a massive education loan for a private MBBS is financial suicide."
+        },
+        {
+          "question": "What if I can't crack NEET-PG even after 2-3 drops?",
+          "answer": "This is the silent nightmare for thousands of MBBS grads. Your options are: work as a permanent Junior Resident/MO (salary caps early), pivot to Hospital Administration (MHA), attempt UPSC CMS for central government jobs, or take the extremely expensive route of management quota PG seats."
+        }
+      ]
     },
     {
       "id": "bds",
@@ -406,7 +428,29 @@
         "misconception": "A dental degree pays like a medical degree.",
         "regret": "I only chose BDS because I missed the MBBS cutoff.",
         "praise": "Precise, hands-on work with visible, immediate results for patients."
-      }
+      },
+      "faq": [
+        {
+          "question": "Why do people say BDS is 'saturated'?",
+          "answer": "Because dental colleges multiplied rapidly in the 2000s, dumping thousands of dentists into urban markets. In cities like Mumbai, Delhi, or Bangalore, there is literally a dental clinic on every street. However, tier-3 cities and large towns are still heavily underserved."
+        },
+        {
+          "question": "Is quackery actually a threat to my practice?",
+          "answer": "Yes, especially in semi-urban areas. Untrained technicians (quacks) offer extractions and dentures at a fraction of your cost. They don't follow sterilization protocols and use cheap materials. You cannot compete with them on price; you must compete on hygiene, trust, and advanced procedures."
+        },
+        {
+          "question": "Do associates really work for free?",
+          "answer": "Unfortunately, yes. Many established clinics refuse to pay fresh BDS graduates a salary, framing it as 'unpaid observation' or 'hands-on training.' Even when paid, ₹10k–15k per month is standard. You are expected to endure this for 1-2 years just to learn clinic management and patient handling."
+        },
+        {
+          "question": "Can I survive without doing MDS?",
+          "answer": "Yes, but you must be an exceptional clinician and businessman. You have to invest heavily in diploma courses for Implants, Rotary Endodontics, and Aesthetic Dentistry. A plain BDS doing only basic extractions and fillings will not survive today's market."
+        },
+        {
+          "question": "How long does it take for a new clinic to break even?",
+          "answer": "Usually 12 to 24 months. For the first year, your patient footfall will be mostly family, friends, and walk-ins. You need enough working capital saved up to pay rent, electricity, and your assistant's salary during these zero-profit months."
+        }
+      ]
     },
     {
       "id": "pharmacy",
@@ -584,7 +628,29 @@
         "misconception": "Pharmacists just hand out medicines at a counter.",
         "regret": "I defaulted into retail instead of exploring the better-paying industry roles.",
         "praise": "Strong, stable demand thanks to India's massive pharma manufacturing base."
-      }
+      },
+      "faq": [
+        {
+          "question": "Is B.Pharm better than Pharm.D in India?",
+          "answer": "Financially and practically, yes. Pharm.D is a 6-year clinical degree designed for the US system, but Indian hospitals still treat Pharm.D grads as regular pharmacists and pay them poorly. B.Pharm is a 4-year degree that gets you into the booming corporate pharma industry much faster."
+        },
+        {
+          "question": "Why does everyone on Quora say pharmacy salaries are terrible?",
+          "answer": "Because most graduates only apply to retail pharmacies or basic manufacturing plants, where the entry salary is ₹15k–25k. The high-paying corporate roles (Pharmacovigilance, Regulatory Affairs, Clinical Data Management) are rarely talked about in tier-3 colleges, so students miss them."
+        },
+        {
+          "question": "Can I pivot into IT/Tech with a Pharmacy degree?",
+          "answer": "Yes! Clinical SAS programming and Clinical Data Management are massive fields where IT meets pharma. Companies like TCS, Cognizant, and IQVIA hire pharmacy grads who learn basic data skills to manage clinical trial data. It pays like a tech job."
+        },
+        {
+          "question": "Is renting my license safe? Everyone does it.",
+          "answer": "It is a massive legal risk. If the shop owner sells Schedule H drugs without a prescription, sells expired medicines, or gets raided by the drug inspector, YOUR license gets canceled, and you face the legal FIR, not just the shop owner."
+        },
+        {
+          "question": "Do I absolutely need an M.Pharm for R&D?",
+          "answer": "Yes. Pharma companies do not trust B.Pharm freshers with formulation, research, or clinical trials. If you want to invent or test drugs rather than just manufacture or sell them, an M.Pharm (ideally from NIPER or BITS) is non-negotiable."
+        }
+      ]
     },
     {
       "id": "paramedical_nursing",
@@ -762,7 +828,29 @@
         "misconception": "There's little room for career growth in nursing.",
         "regret": "I didn't plan for licensing exams abroad early enough — it delayed my income by years.",
         "praise": "One of the strongest healthcare careers if your long-term goal is working abroad."
-      }
+      },
+      "faq": [
+        {
+          "question": "Are nursing agencies for UK/Gulf jobs a scam?",
+          "answer": "Many are. Reputable agencies are paid by the foreign hospital, NOT by you. If an agency demands ₹5-10 lakhs upfront for 'processing fees' or 'visa assistance,' walk away. Always verify the agency with the NHS or the respective foreign health ministry's official portal."
+        },
+        {
+          "question": "Is NORCET (AIIMS) the only good government job?",
+          "answer": "It is the most famous, but state PSCs, Railway Hospitals, and Military Nursing Services (MNS) also offer excellent pay and permanent status. The syllabus is vast, and you must prepare for 1-2 years alongside your private job to clear them."
+        },
+        {
+          "question": "Do male nurses face stigma in India?",
+          "answer": "Socially, sometimes. Professionally, absolutely not. Hospitals desperately need male nurses for ICUs, psychiatric wards, emergency rooms, and orthopedic wards where heavy lifting and aggressive patient management are required. Internationally, no one cares about your gender."
+        },
+        {
+          "question": "Why do Indian nurses rush to clear OET/IELTS immediately?",
+          "answer": "Because a nurse in the UK (NHS) or the Gulf makes ₹2L-₹3L per month with strict 40-hour work weeks and extreme legal protection. In India, they make ₹20k for 60-hour weeks. The ROI on clearing the language exam is the highest of any profession."
+        },
+        {
+          "question": "What is the reality of the 'bond' in private nursing colleges?",
+          "answer": "Many private hospitals run their own nursing colleges and force students to sign a 1-2 year bond to work in their hospital at a very low salary (₹12k-15k) after graduation. Never surrender your original certificates to them."
+        }
+      ]
     },
     {
       "id": "paramedical_physiotherapy",
@@ -937,6 +1025,28 @@
           "explanation": "Managing acute injuries, conditioning, and rehab for professional athletes, sports academies, or national teams.",
           "difficulty": "Extreme — highly niche, requiring specialized sports degrees and aggressive networking to break into professional leagues.",
           "watch_out": "Most sports PTs start by working for free or peanuts at local academies before ever seeing a professional team."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do physiotherapists suffer from severe back pain?",
+          "answer": "Yes, it is the biggest irony of the profession. Manual therapy, lifting patients, and bending over beds for 8 hours a day destroys a PT's back and thumbs. If you do not maintain strict ergonomics and strength training for yourself, your career will end in 10 years."
+        },
+        {
+          "question": "Is sports physiotherapy actually glamorous?",
+          "answer": "No. For every PT working with the Indian Cricket Team, there are a thousand working for free or ₹10k/month at local sports academies, standing in the sun, taping ankles, and dealing with aggressive coaches. It takes years of free labor to build a sports network."
+        },
+        {
+          "question": "Why do doctors refuse to refer patients to PTs?",
+          "answer": "In India, many orthopedic surgeons fear losing the patient to the PT, or they run their own in-house rehab centers. You have to actively network, prove your clinical results, and build immense trust with surgeons to get a steady stream of referrals."
+        },
+        {
+          "question": "Is doing an MPT worth the time and money?",
+          "answer": "Only if you specialize in Neurology, Cardiopulmonary, or Sports, and plan to open an advanced clinic or teach. If you just want to do basic orthopedics (back pain, knee pain), a BPT with good manual therapy certificate courses is often enough."
+        },
+        {
+          "question": "Can I prescribe medicines as a PT?",
+          "answer": "No. You cannot prescribe NSAIDs (painkillers), muscle relaxants, or injections. Doing so is practicing medicine without a license. You treat purely through biomechanics, exercise prescription, and electro-modalities."
         }
       ]
     },
@@ -1115,6 +1225,28 @@
           "difficulty": "Moderate to High — requires stepping away from clinical work and proving business and administrative competence.",
           "watch_out": "You become responsible for machine downtime and revenue targets, effectively becoming a healthcare sales/admin hybrid."
         }
+      ],
+      "faq": [
+        {
+          "question": "What happens if a patient is allergic to the contrast dye?",
+          "answer": "This is the scariest part of the job. In CT and MRI, patients can go into anaphylactic shock from the contrast media. You must know CPR, immediately stop the scan, and call the radiologist and emergency code. The pressure in that 60-second window is immense."
+        },
+        {
+          "question": "Do I have to work night shifts forever?",
+          "answer": "In hospitals, yes. Trauma doesn't stop at 9 PM. Freshers get the worst graveyard shifts (12 AM - 8 AM). The only way out of night shifts is to move to standalone private diagnostic centers (which close at 9 PM) or become a department manager."
+        },
+        {
+          "question": "Why are female radiographers heavily preferred for Mammography and TVS?",
+          "answer": "For patient comfort and legal safety. In India, most hospitals mandate that breast imaging (mammograms) and certain ultrasounds be performed by female technologists. Female grads often have an easier time securing high-paying roles in women's diagnostic centers."
+        },
+        {
+          "question": "Is ultrasound (sonography) part of the B.Sc degree?",
+          "answer": "Basic physics is taught, but becoming an independent sonographer is complex. In India, the PCPNDT Act strictly regulates who can perform ultrasounds (mostly MBBS/MD doctors) to prevent sex determination. Techs mostly assist, unless working abroad where sonography is a standalone tech career."
+        },
+        {
+          "question": "What is AERB and why should I care?",
+          "answer": "The Atomic Energy Regulatory Board (AERB) governs radiation safety in India. If a hospital or clinic is not AERB approved, they are using outdated, leaking machines and not providing you with dosimeter badges. Never work in an unapproved center; you are risking your life."
+        }
       ]
     },
     {
@@ -1292,6 +1424,28 @@
           "difficulty": "High — you are competing against millions of engineers, arts, and commerce students for the exact same clerical or officer seats.",
           "watch_out": "This is a massive sunk-cost trap; many waste 4-5 years of their youth preparing for exams they never clear."
         }
+      ],
+      "faq": [
+        {
+          "question": "Why are JRF stipends always delayed?",
+          "answer": "This is the dark truth of Indian academia. Even if you clear CSIR-NET and get a Junior Research Fellowship (JRF), the government is notoriously slow in releasing the funds. Scholars routinely wait 6-8 months for their stipend to arrive. You need a financial safety net."
+        },
+        {
+          "question": "Is the coaching industry the only real job for Zoology grads?",
+          "answer": "For many, yes. With the explosion of NEET coaching (Allen, Aakash, Physics Wallah), graduates with good communication skills often make more money teaching Class 11/12 biology than they would as PhD researchers. It pays well but stalls your actual scientific career."
+        },
+        {
+          "question": "Does a B.Sc Zoology have any value in the corporate world?",
+          "answer": "Zero. Corporate HRs do not know what to do with a pure science degree. If you want corporate jobs (FMCG, banking, analytics), you must do an MBA. Your Zoology degree is just a graduation certificate to them."
+        },
+        {
+          "question": "How hard is it to get into Wildlife Conservation?",
+          "answer": "Extremely hard. Institutes like WII (Wildlife Institute of India) take very few students. The jobs involve living in remote forests, dealing with forest bureaucracy, and very low pay from NGOs. It is a passion field, not a money field."
+        },
+        {
+          "question": "What is CUET PG and why is it important?",
+          "answer": "It is the entrance exam for Central Universities (DU, BHU, JNU) for your M.Sc. An M.Sc from a local tier-3 college has no value in research. You must clear CUET PG or IIT JAM to get into a university with actual lab funding and good professors."
+        }
       ]
     },
     {
@@ -1467,6 +1621,28 @@
           "explanation": "Elite government service managing wildlife sanctuaries, national parks, and state forestry initiatives.",
           "difficulty": "Extreme — UPSC IFoS is one of the toughest exams in the country; botany is just an optional subject advantage.",
           "watch_out": "Do not study Botany just because you think it will make cracking IFoS easy; the success rate is microscopic."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Are there actual jobs in 'Herbal/Ayurvedic' companies?",
+          "answer": "Yes. Companies like Dabur, Himalaya, and Patanjali hire botanists for 'Pharmacognosy'—authenticating raw plant materials before they go into manufacturing. However, they strongly prefer M.Sc Botany graduates over B.Sc."
+        },
+        {
+          "question": "Is B.Sc Botany useless compared to B.Sc Agriculture?",
+          "answer": "In terms of immediate corporate placements, yes. Seed companies (like Mahyco or Syngenta) and fertilizer companies actively recruit B.Sc Agriculture grads from campus. Botany grads usually have to do an M.Sc or cold-apply to get into the same agri-tech companies."
+        },
+        {
+          "question": "What does a Botanist actually do in the field?",
+          "answer": "You don't just 'look at trees.' Fieldwork involves intense ecological surveys—laying quadrats, sampling soil, identifying invasive species, and writing environmental impact assessments (EIA) for construction companies before they can build dams or highways."
+        },
+        {
+          "question": "Do I have to study Chemistry as well?",
+          "answer": "Yes. Most B.Sc programs are 'CBZ' (Chemistry, Botany, Zoology). You cannot escape chemistry. Plant physiology, biochemistry, and molecular biology require a deep understanding of chemical pathways. If you hate chemistry, you will fail Botany."
+        },
+        {
+          "question": "How realistic is the Indian Forest Service (IFoS)?",
+          "answer": "It is the UPSC of the forest. The syllabus is massive, the physical standards are strict (you must complete a 25km walk in 4 hours), and the vacancies are microscopic. Botany is a great optional subject for it, but do not make IFoS your only career plan."
         }
       ]
     },
@@ -1650,6 +1826,28 @@
           "difficulty": "High — requires ₹40-60L in funding/loans and navigating the volatile H1-B visa lottery system.",
           "watch_out": "The US tech market is no longer a guaranteed gold rush; many students graduate with heavy debt and struggle to find sponsorships."
         }
+      ],
+      "faq": [
+        {
+          "question": "Is the 'Bench Period' at WITCH companies real?",
+          "answer": "Yes. Companies like TCS, Infosys, and Wipro over-hire freshers and keep them on the 'bench' (no project) for 3-6 months. You get your base salary, but you learn nothing. If you stay on the bench too long, your skills rot, and you get laid off."
+        },
+        {
+          "question": "Do I really need to grind LeetCode (DSA)?",
+          "answer": "For companies paying above ₹12 LPA, yes. Product companies (Amazon, Uber, Swiggy) use Data Structures and Algorithms (Graphs, Dynamic Programming) as a brutal filter round. You might never invert a binary tree on the actual job, but you must do it to get the job."
+        },
+        {
+          "question": "What is the 90-day notice period trap?",
+          "answer": "Most Indian IT service companies have a 3-month notice period. When you try to switch jobs, product companies refuse to wait 90 days and reject you. It is a deliberate tactic to stop attrition. You often have to resign without a backup offer just to get interviews."
+        },
+        {
+          "question": "Is Web Development (MERN stack) saturated?",
+          "answer": "The 'React beginner' market is brutally saturated. Everyone builds a to-do list and a weather app. To get hired now, your portfolio needs complex backend architecture (Node/Go), cloud deployment (AWS/Docker), and real authentication. Stop building clones; build real products."
+        },
+        {
+          "question": "Does CGPA matter if I have good coding skills?",
+          "answer": "Yes, for campus placements. Most companies set a hard cutoff at 7.0 or 8.0 CGPA. If you have a 6.5, the automated portal won't even let you sit for the coding round, regardless of how good your GitHub is. Off-campus, it matters less."
+        }
       ]
     },
     {
@@ -1829,6 +2027,28 @@
           "difficulty": "Moderate — a great pivot if you dislike hardcore application architecture but are good with logic and numbers.",
           "watch_out": "Don't confuse Data Analysis with Data Science; you will mostly be writing SQL and building Excel/Tableau reports."
         }
+      ],
+      "faq": [
+        {
+          "question": "I am a Commerce student without Math in 12th. Can I survive BCA?",
+          "answer": "You can survive BCA, but you will hit a wall at MCA. The NIMCET (the entrance exam for NITs, which is the whole point of doing an MCA) is 60% Class 11/12 level Mathematics (Calculus, Vectors, Probability). You must learn high school math alongside your BCA."
+        },
+        {
+          "question": "Is an IGNOU or Online MCA completely useless?",
+          "answer": "For freshers, yes. Product companies filter out distance degrees immediately. An online MCA is only useful for someone already working in IT who just needs a 'Master's degree' checkbox ticked for a promotion or an onsite visa."
+        },
+        {
+          "question": "Why do B.Tech students look down on BCA?",
+          "answer": "Because the curriculum in 90% of BCA colleges is severely outdated (teaching C++ on TurboC, old PHP). B.Tech students are forced through rigorous engineering math and OS fundamentals. To compete, a BCA student has to self-learn modern stacks completely outside of college."
+        },
+        {
+          "question": "Do product companies like Amazon/Google hire MCA grads?",
+          "answer": "Yes, but almost exclusively from top NITs (Trichy, Surathkal, Warangal) or top universities (JNU, DU, HCU). If you do your MCA from the same Tier-3 private college you did your BCA from, you will end up in the exact same mass-recruitment IT support jobs."
+        },
+        {
+          "question": "Should I learn Data Science or Web Dev in BCA?",
+          "answer": "Web/App Development. Entry-level Data Science roles heavily prefer B.Tech/Statistics/M.Sc math grads because of the rigorous math required. Web Development is purely about logic and building things, which is much easier to break into with a BCA portfolio."
+        }
       ]
     },
     {
@@ -2005,6 +2225,28 @@
           "explanation": "Reaching the absolute peak of the financial food chain, either as a Big 4 equity partner or Chief Financial Officer of a large corporation.",
           "difficulty": "Extreme — requires not just technical accounting brilliance, but elite leadership, politics, and client-winning ability.",
           "watch_out": "This requires dedicating your entire life to the firm/company; it is a lifestyle, not just a job."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is 'Dummy Articleship' a smart move to clear CA Final?",
+          "answer": "It is the biggest trap in CA. A dummy articleship gives you time to study, but once you clear CA Final, you have zero practical skills. Big 4 and good industry roles will destroy you in the technical interview. A CA degree with dummy experience usually ends up in a low-paying clerical job."
+        },
+        {
+          "question": "What is the toxic culture at Big 4 really like?",
+          "answer": "During audit season (Jan-Sept), 14-hour days, working on weekends, and extreme pressure from managers are standard. You will cry in the washroom. The tradeoff is that surviving 3 years at EY, PwC, Deloitte, or KPMG gives you an elite brand name that pays dividends for the next 30 years."
+        },
+        {
+          "question": "Should I give both groups together or one by one?",
+          "answer": "Giving both groups together gets you an All India Rank (AIR) and 'set-off' benefits (excess marks in one group cover a deficit in the other). However, it is mentally exhausting. If your prep is weak, give one group. A pass is better than failing both."
+        },
+        {
+          "question": "What happens if I take 4-5 attempts for CA Final?",
+          "answer": "You will likely be filtered out by the Big 4 and top FMCG companies (HUL, ITC) for entry-level roles, as they strictly prefer first-attempt CAs. You will have to start at a mid-size firm, gain 2-3 years of solid experience, and then jump to larger corporations where attempts stop mattering."
+        },
+        {
+          "question": "Are the ITT and GMCS trainings actually useful?",
+          "answer": "The Advanced ITT and Management & Communication Skills (MCS) trainings organized by ICAI are notorious for being treated as a joke by students. However, for a student from a tier-3 city, it is often their only exposure to presentation skills and Excel before facing Big 4 interviews."
         }
       ]
     },
@@ -2184,6 +2426,28 @@
           "difficulty": "Extreme — the syllabus isn't hard, but you are fighting a mathematical war of attrition against millions of applicants.",
           "watch_out": "The preparation vortex traps many students well into their late 20s with a completely blank resume."
         }
+      ],
+      "faq": [
+        {
+          "question": "Can I do CFA Level 1 while in my B.Com?",
+          "answer": "Yes, and you absolutely should if you want a career in core finance. The CFA institute allows students in their second-to-last year of undergrad to sit for Level 1. A B.Com with CFA Level 1 puts your resume in the top 5% of commerce graduates immediately."
+        },
+        {
+          "question": "Is a BPO/Call Center job a trap after B.Com?",
+          "answer": "Yes. Companies like Genpact, Concentrix, or TCS BPS will hire you for ₹2-3 LPA for backend operations or call support. Once you spend 2 years there, it is nearly impossible to pivot into core accounting or financial analysis because your experience is considered 'non-technical'."
+        },
+        {
+          "question": "How do I build my profile for CAT during B.Com?",
+          "answer": "Do not just study the syllabus. IIMs look for 'spikes'. Win national-level case competitions, hold leadership positions in college societies (Enactus, Finance Club), do a live project/internship at a startup, and maintain a 8.5+ CGPA. A plain B.Com with 99%ile in CAT can still fail the interview."
+        },
+        {
+          "question": "Does doing B.Com from a local college ruin my career?",
+          "answer": "Only if you rely solely on it. If you are at a local college, you have massive amounts of free time. Use it to clear CA Foundation/Inter, learn financial modeling, or master Advanced Excel and PowerBI. Skills mask a bad college brand."
+        },
+        {
+          "question": "Is an M.Com worth doing after B.Com?",
+          "answer": "Only if you want to become a professor (clear UGC NET) or need to buy time to prepare for government exams. In the corporate world, an M.Com holds zero weight compared to an MBA or a professional certification (CA/CFA/ACCA)."
+        }
       ]
     },
     {
@@ -2360,6 +2624,28 @@
           "explanation": "Taking over an existing family manufacturing/trading business or using venture capital to launch a startup.",
           "difficulty": "Extreme — requires either inherited business infrastructure or the high risk tolerance to survive startup failure rates.",
           "watch_out": "BBA theory rarely survives contact with the realities of Indian taxation, vendor management, and labor laws."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Why do B.Tech grads get preferred for MBA over BBA grads?",
+          "answer": "Because the CAT exam is heavily skewed towards quantitative aptitude (Math). Engineers historically crush the Quants section. Furthermore, tech and consulting companies love hiring 'B.Tech + MBA' because they have both analytical horsepower and management training."
+        },
+        {
+          "question": "Can I do a Master's abroad with a 3-year BBA?",
+          "answer": "This is a massive hurdle. The US and Canada strict 16-year education rule (12 years school + 4 years undergrad). A 3-year BBA often gets rejected. You usually have to look at the UK, Australia, or do a 1-year PG diploma in India before applying to North America."
+        },
+        {
+          "question": "Is specializing in HR a bad idea?",
+          "answer": "At the undergraduate level, yes. Entry-level HR roles are glorified recruiters—cold-calling candidates on Naukri.com all day. The strategic HR roles (Organizational Development, Comp & Ben) go strictly to MBA HR grads from institutes like TISS or XLRI."
+        },
+        {
+          "question": "Should I join my family business immediately after BBA?",
+          "answer": "No. The biggest mistake is going straight to your father's shop/factory. Work in a completely different corporate company for 2 years. Learn how other people run systems, fire people, and handle clients. You need external discipline before returning as the 'boss's kid'."
+        },
+        {
+          "question": "Are BBA internships actually useful?",
+          "answer": "Only if you do actual work. A 'marketing internship' where you just sell unacademy subscriptions to your friends or post on Instagram is useless. You need internships where you use CRM software, analyze sales data, or run paid ad campaigns with real money."
         }
       ]
     },
@@ -2538,6 +2824,28 @@
           "explanation": "Clearing state judicial exams to become a magistrate. Offers immense social power, security, and government housing.",
           "difficulty": "Extreme — exams are notoriously difficult, syllabus is vast, and vacancies are sporadic depending on the state.",
           "watch_out": "Postings are often in remote rural districts for the first decade of your career."
+        }
+      ],
+      "faq": [
+        {
+          "question": "How do first-generation lawyers survive the first 3 years?",
+          "answer": "Barely. You will earn ₹10k–15k/month under a senior advocate. You survive by doing side hustles: drafting basic contracts for local businesses, registering trademarks/MSMEs, or tutoring CLAT aspirants. You cannot rely purely on litigation income initially."
+        },
+        {
+          "question": "Is CLAT coaching a mafia?",
+          "answer": "Yes. The coaching industry artificially inflates the difficulty of the exam and forces students into rigorous, expensive programs. You absolutely need mock tests, but paying ₹1.5 lakhs for a classroom program is overkill. Consistent reading speed and logical reasoning practice is what actually clears CLAT."
+        },
+        {
+          "question": "Does an LLM abroad get me a job there?",
+          "answer": "Rarely. An LLM from Oxford or Harvard is incredible for your resume in India, but it does NOT give you a license to practice in the UK/US. Without clearing the local Bar exam, foreign law firms will not hire you just because you have an LLM. Most Indian LLM grads return to India."
+        },
+        {
+          "question": "What is 'Corporate Litigation'?",
+          "answer": "It is the middle ground between arguing criminal cases and reviewing contracts. You represent corporations in tribunals like NCLT (bankruptcy), SAT (securities), or in arbitration. It pays far better than general district court litigation and has saner hours."
+        },
+        {
+          "question": "Why do lawyers leave Tier-1 law firms?",
+          "answer": "Burnout. Earning ₹18 LPA at 23 is amazing, until you realize you are working from 10 AM to 2 AM, canceling every family vacation, and developing stress-induced health issues. Many leave after 3 years for 'In-House' roles (working for a single company) for less money but a 9-to-6 life."
         }
       ]
     },
@@ -2718,6 +3026,28 @@
           "difficulty": "High — design skills matter less here than your ability to do sales, client management, and pricing negotiation.",
           "watch_out": "A beautiful portfolio does not magically attract paying clients; you have to hustle for every invoice."
         }
+      ],
+      "faq": [
+        {
+          "question": "Are UI/UX bootcamps a scam?",
+          "answer": "Mostly, yes. They promise 'Guaranteed Placements in 3 months.' In reality, the market is flooded with 10,000 bootcamp grads who all have the exact same food-delivery app redesign in their portfolio. Companies reject them instantly. You have to build original, complex projects to stand out."
+        },
+        {
+          "question": "Why do designers hate Dribbble?",
+          "answer": "Dribbble is for 'aesthetic' UI—beautiful designs that are impossible to code, have terrible contrast, and ignore user psychology. Hiring managers hate Dribbble portfolios. They want to see case studies that show your messy wireframes, user research, and how you solved a business problem."
+        },
+        {
+          "question": "Is NIFT still the king of Fashion Design?",
+          "answer": "Yes, but the industry is broken. Even NIFT grads start at ₹15k-25k working grueling hours under established designers. The glamorous 'fashion' part is 5% of the job; 95% is fighting with tailors, managing supply chains, and sourcing buttons in crowded markets."
+        },
+        {
+          "question": "What is the difference between UCEED and NID DAT?",
+          "answer": "UCEED gets you into IITs (like IDC IIT Bombay) which heavily lean towards Industrial Design, Tech, and UX. NID DAT gets you into NIDs, which are more art, craft, and traditional design-focused. The tech industry generally prefers the IIT/UCEED pipeline for high-paying product roles."
+        },
+        {
+          "question": "Should I code my own designs?",
+          "answer": "You don't have to be a developer, but a designer who knows basic HTML/CSS and understands React constraints is a unicorn. If you design something the devs can't actually build, you are a liability. Knowing the limits of code makes you a vastly better designer."
+        }
       ]
     },
     {
@@ -2895,6 +3225,28 @@
           "explanation": "Advising on mega-mergers, IPOs, and corporate fundraising. The most lucrative and cutthroat role in the financial world.",
           "difficulty": "Extreme — banks hire exclusively from the top 10 B-schools and demand flawless academic and quantitative pedigrees.",
           "watch_out": "The highest burnout rate of any profession; 100-hour work weeks are standard, and your personal life will cease to exist."
+        }
+      ],
+      "faq": [
+        {
+          "question": "I am a GEM (General Engineer Male). Am I doomed for IIMs?",
+          "answer": "Not doomed, but you are playing on 'Hard Mode.' IIMs push aggressively for academic and gender diversity. A non-engineer female with 95%ile might get a call that a GEM with 99.2%ile misses. As a GEM, your CAT score must be astronomical, and your work-ex better be stellar."
+        },
+        {
+          "question": "Is the 'Summer Placement' pressure real?",
+          "answer": "It is a bloodbath. Within 2 months of joining an IIM, companies arrive for summer internships (which often convert to PPOs - Pre-Placement Offers). Your resume is locked, sleep deprivation is extreme, and seniors grill you in mock interviews. If you mess up summers, final placements become much harder."
+        },
+        {
+          "question": "What is the IIM ABC vs. BLACKI vs. Baby IIMs difference?",
+          "answer": "ABC (Ahmedabad, Bangalore, Calcutta) are elite globally. BLACKI (adds Lucknow, Kozhikode, Indore) form the old, prestigious tier-1. 'Baby IIMs' (the newest ones) often share campuses with other colleges and struggle with placements. A top private college (SPJIMR, XLRI, MDI) is vastly better than a Baby IIM."
+        },
+        {
+          "question": "Do I really need 9/9/9 academics for Consulting?",
+          "answer": "Yes. MBB (McKinsey, BCG, Bain) are notoriously elitist. They want 90%+ in 10th, 12th, and Undergrad (the 9/9/9 profile). If you have a '7' in your past, MBB will likely short-list you out before you even get an interview, regardless of your CAT score or MBA grades."
+        },
+        {
+          "question": "Is an Executive MBA treated the same as a regular MBA?",
+          "answer": "In India, no. The 1-year Executive MBA (even from IIMs) is excellent for people with 5+ years of experience looking to accelerate their current career path. But for campus placements and pivoting completely into a new industry (like going from IT to Investment Banking), the 2-year flagship program is required."
         }
       ]
     }

@@ -41,7 +41,8 @@ const TAB_ICONS = {
   realities: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>',
   fit: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="8.5 12.5 11 15 16 9"></polyline></svg>',
   pay: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg>',
-  experiences: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>'
+  experiences: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>',
+  faq: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12" y2="17"></line></svg>'
 };
 
 const COMPARE_ICONS = {
@@ -190,7 +191,7 @@ const ALIASES = {
   mba: ['master of business administration', 'management']
 };
 
-const DETAIL_TABS = ['overview', 'realities', 'fit', 'pay', 'experiences'];
+const DETAIL_TABS = ['overview', 'realities', 'fit', 'pay', 'experiences', 'faq'];
 
 function getThemeIcon() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -411,7 +412,8 @@ function renderDetailView(id) {
     { id: 'realities', label: "What It's Like" },
     { id: 'fit', label: 'Is This for You' },
     { id: 'pay', label: 'Paths & Pay' },
-    { id: 'experiences', label: 'Experiences' }
+    { id: 'experiences', label: 'Reviews' },
+    { id: 'faq', label: 'FAQ' }
   ];
 
    const tabBar = `
@@ -423,9 +425,6 @@ function renderDetailView(id) {
         </button>
       `).join('')}
     </div>`;
-
-  // ── Verdict card ──
-  const verdictHtml = renderVerdictCard(career);
 
   // ── Related careers ──
   const relatedHtml = (career.related_careers || []).map(rid => {
@@ -461,31 +460,18 @@ function renderDetailView(id) {
         <div class="tab-panel" data-tab="fit" ${activeDetailTab === 'fit' ? '' : 'hidden'}>${renderFitTab(career, cm, dm)}</div>
         <div class="tab-panel" data-tab="pay" ${activeDetailTab === 'pay' ? '' : 'hidden'}>${renderPayTab(career, cm, dm)}</div>
         <div class="tab-panel" data-tab="experiences" ${activeDetailTab === 'experiences' ? '' : 'hidden'}>${renderExperiencesTab(career, cm, dm)}</div>
+        <div class="tab-panel" data-tab="faq" ${activeDetailTab === 'faq' ? '' : 'hidden'}>${renderFaqTab(career, cm, dm)}</div>
       </div>
 
-
-      <div class="verdict-divider">
-        <span class="verdict-divider-label">Your decision</span>
-      </div>
-      ${verdictHtml}
 
       <div class="detail-actions">
         <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
       </div>
 
       <div class="section related-section">
-        <div class="section-label">Related paths</div>
+        <div class="section-label">Explore similar degrees</div>
         <div class="related-row">${relatedHtml || 'None yet'}</div>
       </div>
-
-      ${career.related_careers && career.related_careers.length ? `
-      <div class="section related-section">
-        <div class="section-label">Students often compare</div>
-        <div class="related-row">${career.related_careers.map(rid => {
-          const rc = careers.find(c => c.id === rid);
-          return rc ? `<button class="related-pill" data-nav="compare=${career.id},${rc.id}">${rc.name}</button>` : '';
-        }).join('')}</div>
-      </div>` : ''}
     </div>`;
 }
 function renderOverviewTab(career, cm, dm) {
@@ -551,7 +537,12 @@ function renderFitTab(career, cm, dm) {
         <div class="fit-label">Who might struggle or regret this</div>
         <ul>${(career.who_regrets_it || []).map(t => `<li>${t}</li>`).join('')}</ul>
       </div>
-    </div>`;
+    </div>
+
+    <div class="verdict-divider">
+      <span class="verdict-divider-label">Your decision</span>
+    </div>
+    ${renderVerdictCard(career)}`;
 }
 
 const PATH_LIKELIHOOD_LABELS = {
@@ -680,6 +671,28 @@ function renderExperiencesTab(career, cm, dm) {
       <a class="quote-source" href="${q.url}" target="_blank" rel="noopener noreferrer">${q.source}${q.url ? ' ↗' : ''}</a>
     </div>
   `).join('');
+}
+
+function renderFaqTab(career, cm, dm) {
+  const faqs = career.faq || [];
+  if (!faqs.length) return '<p style="color:var(--ink-faint);">No FAQs yet.</p>';
+
+  return `
+    <div class="section-label">Frequently asked questions</div>
+    <p class="section-subline">The questions students actually ask — answered honestly.</p>
+    <div class="faq-list">
+      ${faqs.map(f => `
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">${f.question}</span>
+            <span class="faq-question-chevron">▾</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p class="faq-answer-text">${f.answer}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>`;
 }
 
 function renderVerdictCard(career) {
@@ -927,6 +940,14 @@ document.addEventListener('click', async (e) => {
     const isExpanded = target.getAttribute('aria-expanded') === 'true';
     target.setAttribute('aria-expanded', String(!isExpanded));
     if (body) body.hidden = isExpanded;
+    return;
+  }
+  if (target.classList.contains('faq-question')) {
+    const item = target.closest('.faq-item');
+    const answer = item?.querySelector('.faq-answer');
+    const isExpanded = target.getAttribute('aria-expanded') === 'true';
+    target.setAttribute('aria-expanded', String(!isExpanded));
+    if (answer) answer.hidden = isExpanded;
     return;
   }
   if (target.classList.contains('detail-tab')) {

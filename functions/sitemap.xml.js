@@ -6,7 +6,8 @@ export async function onRequest(context) {
   try {
     const res = await env.ASSETS.fetch(new URL('/careers.json', request.url));
     if (res.ok) {
-      careers = await res.json();
+      const data = await res.json();
+      careers = Array.isArray(data) ? data : (data.careers || []);
     }
   } catch (err) {
     // If it fails, we will just return a basic sitemap with the homepage

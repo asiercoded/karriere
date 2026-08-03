@@ -25,16 +25,19 @@ export async function onRequest(context) {
     });
   }
 
- let careers;
+  let careers;
   try {
     const careersRes = await env.ASSETS.fetch(new URL('/careers.json', request.url));
     if (!careersRes.ok) return response;
-    careers = await careersRes.json();
+    const data = await careersRes.json();
+    careers = Array.isArray(data) ? data : (data.careers || []);
   } catch (err) {
     // Log the error so it appears in your Cloudflare dashboard
     console.error("Edge Worker failed to parse careers.json:", err.message);
     return response; // Fall back to the unmodified page
   }
+
+  if (!Array.isArray(careers)) return response;
 
   const career = careers.find(c => c.id === id);
   if (!career) return response; // unknown path — not a career — leave it alone
@@ -42,16 +45,36 @@ export async function onRequest(context) {
   const title = `${career.name} — Karriere`;
   const description = career.tagline || (career.overview ? career.overview.slice(0, 155) : '');
 
-  return rewriteMeta(response, { title, description, url: request.url });
+  return rewriteMeta(response, { title, description, url: request.url, faq: career.faq });
 }
 
-function rewriteMeta(response, { title, description, url }) {
-  return new HTMLRewriter()
+function rewriteMeta(response, { title, description, url, faq }) {
+  const rewriter = new HTMLRewriter()
     .on('title', { element(el) { el.setInnerContent(title); } })
     .on('meta[name="description"]', { element(el) { el.setAttribute('content', description); } })
     .on('meta[property="og:title"]', { element(el) { el.setAttribute('content', title); } })
     .on('meta[property="og:description"]', { element(el) { el.setAttribute('content', description); } })
     .on('meta[property="og:url"]', { element(el) { el.setAttribute('content', url); } })
-    .on('link[rel="canonical"]', { element(el) { el.setAttribute('href', url); } })
-    .transform(response);
+    .on('link[rel="canonical"]', { element(el) { el.setAttribute('href', url); } });
+
+  // Inject FAQPage schema for Google rich results when a career has FAQs
+  if (faq && faq.length) {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faq.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.answer
+        }
+      }))
+    };
+    // Escape < to prevent </script> injection in the JSON-LD block
+    const faqJson = JSON.stringify(faqSchema).replace(/</g, '\\u003c');
+    rewriter.on('head', { element(el) { el.append(`<script type="application/ld+json">${faqJson}</script>`); } });
+  }
+
+  return rewriter.transform(response);
 }
