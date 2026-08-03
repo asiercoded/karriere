@@ -81,6 +81,20 @@ function parseDurationYears(str) {
   }
 }
 
+// Returns {min, max} years for a duration string like "3–5 yrs", "+2–4 yrs", "Immediately..." → {0,0}
+function parseDurationRange(str) {
+  if (typeof str !== 'string' || !str) return { min: 0, max: 0 };
+  try {
+    const range = str.match(/(\d+(?:\.\d+)?)\s*[-–—]\s*(\d+(?:\.\d+)?)/);
+    if (range) return { min: parseFloat(range[1]), max: parseFloat(range[2]) };
+    const single = str.match(/(\d+(?:\.\d+)?)/);
+    const v = single ? parseFloat(single[1]) : 0;
+    return { min: v, max: v };
+  } catch (err) {
+    return { min: 0, max: 0 };
+  }
+}
+
 function parseSalaryValue(str) {
   if (!str) return 0;
   const noNotes = str.split('(')[0];
@@ -354,12 +368,12 @@ function renderListView() {
         <div class="hero-main">
           <div class="hero-eyebrow">Before you choose</div>
           <h1>What career counsellors won't tell a 17-year-old.</h1>
-          <p>Verified salaries, honest timelines, and anonymous accounts from people who lived each path — including the regrets, the burnout, and the work-life trade-offs nobody puts on a brochure.</p>
+          <p>Forget the college placement brochures. We break down the actual entry barriers, the real money you make on day one, and the hidden struggles nobody warns you about until you are already three years into a degree.</p>
           <div class="trust-row">
             <span class="trust-item"><span class="trust-check">✓</span>${careers.length} careers covered</span>
-            <span class="trust-item"><span class="trust-check">✓</span>${totalVoices} verified testimonies</span>
-            <span class="trust-item"><span class="trust-check">✓</span>Updated regularly</span>
-            <span class="trust-item"><span class="trust-check">✓</span>Sourced from Reddit, surveys & professionals</span>
+            <span class="trust-item"><span class="trust-check">✓</span>No fake placement stats</span>
+            <span class="trust-item"><span class="trust-check">✓</span>Real Entry Barriers</span>
+            <span class="trust-item"><span class="trust-check">✓</span>Sourced from real professionals (and Reddit)</span>
           </div>
           <div class="hero-actions">
             <div class="hero-search-row">
@@ -396,7 +410,7 @@ function renderDetailView(id) {
     { id: 'overview', label: 'Overview' },
     { id: 'realities', label: "What It's Like" },
     { id: 'fit', label: 'Is This for You' },
-    { id: 'pay', label: 'Pay & Progression' },
+    { id: 'pay', label: 'Paths & Pay' },
     { id: 'experiences', label: 'Experiences' }
   ];
 
@@ -540,14 +554,73 @@ function renderFitTab(career, cm, dm) {
     </div>`;
 }
 
+const PATH_LIKELIHOOD_LABELS = {
+  most_graduates: 'Most graduates',
+  common: 'Common',
+  some: 'Some',
+  few: 'Few'
+};
+
+function renderCareerPaths(career) {
+  const paths = career.career_paths || [];
+  if (!paths.length) return '';
+
+  const cards = paths.map(p => {
+    const likelihoodLabel = PATH_LIKELIHOOD_LABELS[p.likelihood] || p.likelihood || '';
+    const pathwayChips = (p.pathway || []).map((step, i) => `
+      <span class="path-chip">${step}</span>
+      ${i < p.pathway.length - 1 ? '<span class="path-arrow">→</span>' : ''}
+    `).join('');
+
+    return `
+      <div class="path-card" id="path-${p.id}">
+        <button class="path-card-head" aria-expanded="false">
+          <div class="path-card-title-row">
+            <span class="path-card-name">${p.name}</span>
+            ${likelihoodLabel ? `<span class="path-likelihood path-likelihood-${p.likelihood}">${likelihoodLabel}</span>` : ''}
+          </div>
+          <div class="path-card-pathway">${pathwayChips}</div>
+          <div class="path-card-meta">
+            <span class="path-meta-item">${SNAPSHOT_ICONS.clock} ${p.time || '—'}</span>
+            <span class="path-meta-item path-meta-salary">${p.salary || '—'}</span>
+          </div>
+          <span class="path-card-chevron">▾</span>
+        </button>
+        <div class="path-card-body" hidden>
+          ${p.explanation ? `<p class="path-explanation">${p.explanation}</p>` : ''}
+          ${p.difficulty ? `<p class="path-difficulty"><span class="path-difficulty-label">Difficulty:</span> ${p.difficulty}</p>` : ''}
+          ${p.watch_out ? `<p class="path-watchout"><span class="path-watchout-label">⚠ Watch out:</span> ${p.watch_out}</p>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="section">
+      <div class="section-label">Where graduates end up</div>
+      <p class="paths-intro">Most ${career.name} graduates don't become specialists overnight. Here are the realistic destinations, roughly in order of how common they are.</p>
+      <div class="paths-grid">${cards}</div>
+      <p class="paths-footnote">Likelihood is our editorial estimate from graduates' accounts, not precise statistics.</p>
+    </div>
+  `;
+}
+
 function renderPayTab(career, cm, dm) {
-  const timelineStages = [
-    { label: 'Class 12', sub: 'Entrance exam / cutoff' },
-    { label: 'College', sub: cm.duration || '' }
-  ];
-  if (dm.internship) timelineStages.push({ label: 'Internship', sub: dm.internship });
-  timelineStages.push({ label: 'Entry role', sub: career.salary?.entry || '—' });
-  timelineStages.push({ label: 'Senior / Established', sub: career.salary?.senior || '—' });
+  const pathsHtml = renderCareerPaths(career);
+  const paths = career.career_paths || [];
+  const degreeYears = parseDurationYears(cm.duration);
+
+  // One-line journey summary: from Class 12, through the degree, to an established role.
+  // Estimate = degree years + span of realistic (non-'few') path durations. Paths are
+  // alternatives, not sequential, so we take the earliest start and latest end.
+  const realisticTimes = paths
+    .filter(p => p.likelihood !== 'few')
+    .map(p => parseDurationRange(p.time));
+  const estMin = degreeYears + (realisticTimes.length ? Math.min(...realisticTimes.map(r => r.min)) : 0);
+  const estMax = degreeYears + (realisticTimes.length ? Math.max(...realisticTimes.map(r => r.max)) : 0);
+  const journeySummary = estMax > estMin
+    ? `From Class 12 to an established role: ~${Math.round(estMin)}–${Math.round(estMax)} yrs.`
+    : `From Class 12 to an established role: ~${Math.round(estMin)} yrs.`;
 
   const pct = calculateSalaryPercentage(career.salary?.entry, career.salary?.mid, career.salary?.senior);
 
@@ -566,8 +639,11 @@ function renderPayTab(career, cm, dm) {
   const sData = splitBarData(career.salary?.senior);
 
 return `
-    <div class="section">
+    ${pathsHtml}
+
+    <div class="section sub-section">
       <div class="section-label">Salary progression</div>
+      <p class="section-subline">Degree-level earnings across your career. ${journeySummary}</p>
       <div class="salary-track">
         <div class="salary-row">
           <div class="salary-stage">Entry</div>
@@ -590,30 +666,6 @@ return `
             ${sData.note ? `<div class="salary-bar-note">${sData.note}</div>` : ''}
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="section sub-section">
-      <div class="section-label">Timeline</div>
-      <div class="timeline-track">
-        ${timelineStages.map((t, i) => `
-          <div class="timeline-stage">
-            <div class="timeline-dot"></div>
-            <div class="timeline-label">${t.label}</div>
-            <div class="timeline-sub">${t.sub}</div>
-          </div>
-          ${i < timelineStages.length - 1 ? '<div class="timeline-line"></div>' : ''}
-        `).join('')}
-      </div>
-    </div>
-
-    <div class="section sub-section">
-      <div class="section-label">Typical career progression</div>
-      <div class="progression-track">
-        ${(dm.progression || []).map((stage, i) => `
-          <span class="progression-stage">${stage}</span>
-          ${i < dm.progression.length - 1 ? '<span class="progression-arrow">→</span>' : ''}
-        `).join('')}
       </div>
     </div>`;
 }
@@ -867,6 +919,14 @@ document.addEventListener('click', async (e) => {
   if (target.classList.contains('filter-btn')) {
     activeCategory = target.dataset.cat;
     render(false);
+    return;
+  }
+  if (target.classList.contains('path-card-head')) {
+    const card = target.closest('.path-card');
+    const body = card?.querySelector('.path-card-body');
+    const isExpanded = target.getAttribute('aria-expanded') === 'true';
+    target.setAttribute('aria-expanded', String(!isExpanded));
+    if (body) body.hidden = isExpanded;
     return;
   }
   if (target.classList.contains('detail-tab')) {

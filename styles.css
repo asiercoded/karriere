@@ -516,6 +516,14 @@ footer {
 
 .section-body { font-size: 16px; line-height: 1.75; color: var(--ink); }
 
+.section-subline {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: -8px 0 18px;
+  font-weight: 500;
+}
+
 /* ── LOVE IT (positives) ── */
 .love-list { list-style: none; }
 
@@ -772,26 +780,190 @@ footer {
   .snapshot-card { padding: 20px; }
 }
 
-/* ── TIMELINE ── */
-.timeline-track { display: flex; align-items: flex-start; overflow-x: auto; padding: 18px 0 8px; }
-.timeline-stage { flex: 1; min-width: 110px; text-align: center; }
-.timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-faint); margin: 0 auto 10px; }
-.timeline-label { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
-.timeline-sub { font-size: 12px; color: var(--ink-soft); line-height: 1.4; padding: 0 6px; }
-.timeline-line { flex: 0.6; height: 1px; background: var(--rule-strong); margin-top: 6px; }
-@media (max-width: 640px) {
-  .timeline-track { flex-direction: column; align-items: stretch; }
-  .timeline-stage { display: flex; align-items: center; gap: 10px; text-align: left; min-width: 0; margin-bottom: 10px; }
-  .timeline-dot { margin: 0; flex-shrink: 0; }
-  .timeline-sub { padding: 0; }
-  .timeline-line { display: none; }
+/* ── CAREER PATHS (Where graduates end up) ── */
+.paths-intro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+  max-width: 640px;
 }
 
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
 
-/* ── PROGRESSION ── */
-.progression-track { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-.progression-stage { font-size: 13px; font-weight: 700; border: 1px solid var(--rule-strong); padding: 8px 16px; border-radius: 6px; color: var(--ink); background: var(--surface); }
-.progression-arrow { color: var(--ink-faint); font-size: 14px; }
+.path-card {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.path-card:hover { border-color: var(--rule-strong); }
+
+.path-card-head {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 16px 18px;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+.path-card-head:hover .path-card-name { color: var(--violet); }
+
+.path-card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.path-card-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+  transition: color 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.path-likelihood {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.path-likelihood-most_graduates { color: var(--sage); background: rgba(79,128,100,0.12); }
+.path-likelihood-common { color: var(--sage); background: rgba(79,128,100,0.12); }
+.path-likelihood-some { color: var(--amber); background: var(--amber-dim); }
+.path-likelihood-few { color: var(--dustred); background: rgba(178,74,58,0.12); }
+
+.path-card-pathway {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.path-chip {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  border: 1px solid var(--rule-strong);
+  padding: 4px 9px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  white-space: nowrap;
+}
+
+.path-arrow { color: var(--ink-faint); font-size: 12px; }
+
+.path-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+}
+
+.path-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.path-meta-item svg { width: 12px; height: 12px; flex-shrink: 0; }
+
+.path-meta-salary { color: var(--sage); font-weight: 700; }
+
+.path-card-chevron {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  color: var(--ink-faint);
+  font-size: 12px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.path-card-head[aria-expanded="true"] .path-card-chevron { transform: rotate(180deg); }
+
+.path-card-body {
+  border-top: 1px solid var(--rule);
+  padding: 14px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.path-explanation {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.path-difficulty {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.path-difficulty-label {
+  font-weight: 800;
+  color: var(--amber);
+  text-transform: uppercase;
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+.path-watchout {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  background: var(--amber-dim);
+  border-left: 3px solid var(--amber);
+  padding: 10px 12px;
+  border-radius: 0 6px 6px 0;
+}
+
+.path-watchout-label {
+  font-weight: 800;
+  color: var(--amber);
+  text-transform: uppercase;
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+.paths-footnote {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .paths-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 600px) {
 
   .trust-row {
@@ -829,15 +1001,7 @@ footer {
     display: inline;
     font-size: 10px;
   }
-
-  .progression-track {
-    gap: 10px;
-  }
-
-  /* Optional - I'd leave arrows for now */
-  /* .progression-arrow { display: none; } */
 }
-
 
 /* ── THEME TOGGLE BUTTON ── */
 .theme-toggle {

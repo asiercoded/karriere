@@ -21,7 +21,15 @@
       "category": "medical",
       "tagline": "The most respected degree in India. Also the most punishing.",
       "overview": "5.5-year degree (4.5 years + 1 year internship) that's the first step to becoming a doctor — but for most, the real financial and career payoff starts after 3+ more years of postgraduate specialization.",
-      "tags": ["mbbs", "doctor", "medicine", "medical", "neet", "physician", "medical degree"],
+      "tags": [
+        "mbbs",
+        "doctor",
+        "medicine",
+        "medical",
+        "neet",
+        "physician",
+        "medical degree"
+      ],
       "why_people_love_it": [
         "You directly improve people's lives every day.",
         "One of the most respected professions in India — the social recognition and trust patients place in doctors is genuinely meaningful.",
@@ -93,13 +101,96 @@
           "url": "https://reddit.com/r/indianmedschool"
         }
       ],
-      "related_careers": ["bds", "paramedical_physiotherapy", "paramedical_nursing"],
+      "related_careers": [
+        "bds",
+        "paramedical_physiotherapy",
+        "paramedical_nursing"
+      ],
+      "career_paths": [
+        {
+          "id": "junior_resident",
+          "name": "Junior Resident / General Duty Medical Officer",
+          "pathway": [
+            "MBBS",
+            "1-yr Internship",
+            "JR / GDMO"
+          ],
+          "time": "Immediately after internship",
+          "salary": "₹40k–80k/month (govt or private hospital)",
+          "likelihood": "most_graduates",
+          "gate_type": "licensure",
+          "explanation": "Frontline medical grunt work in wards and emergencies, often involving 24-48 hour shifts with immense patient load.",
+          "difficulty": "Low entry barrier — hospitals always need cheap clinical labor to function.",
+          "watch_out": "Staying a plain MBBS severely caps your career and respect in the medical hierarchy; most are forced to prepare for NEET-PG simultaneously."
+        },
+        {
+          "id": "md_ms_specialist",
+          "name": "MD/MS Specialist",
+          "pathway": [
+            "MBBS",
+            "NEET-PG",
+            "3-yr Residency",
+            "Specialist"
+          ],
+          "time": "+3–4 yrs after MBBS",
+          "salary": "₹1L–2L/month (early career)",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Specialized practice (Medicine, Surgery, Pediatrics, etc.) that elevates you from a general physician to a definitive consultant.",
+          "difficulty": "Extreme — NEET-PG is brutally competitive, and residency often means toxic work hours and immense stress.",
+          "watch_out": "Clinical branches (Derma, Radio, Medicine) are fiercely gatekept by high cutoff ranks; you might have to settle for non-clinical if your rank is low."
+        },
+        {
+          "id": "abroad_usmle_plab",
+          "name": "Foreign Medical Practitioner (US/UK)",
+          "pathway": [
+            "MBBS",
+            "USMLE / PLAB",
+            "Foreign Residency"
+          ],
+          "time": "+2–5 yrs after MBBS",
+          "salary": "₹3L–5L/month (equivalent during residency)",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Migrating to the US, UK, or Australia for better work-life balance, higher pay, and structured training environments.",
+          "difficulty": "High — requires clearing expensive, multi-step foreign licensing exams and building a strong CV for matching.",
+          "watch_out": "The financial cost of USMLE steps and US clinical experiences can easily exceed ₹15-20L with no guarantee of matching."
+        },
+        {
+          "id": "super_specialist",
+          "name": "Super-specialist (DM/MCh)",
+          "pathway": [
+            "MD/MS",
+            "NEET-SS",
+            "3-yr Fellowship",
+            "Consultant"
+          ],
+          "time": "+6–8 yrs after MBBS",
+          "salary": "₹3L–15L/month (established)",
+          "likelihood": "few",
+          "gate_type": "exam",
+          "explanation": "The absolute pinnacle of the medical hierarchy (Cardiology, Neurosurgery, Oncology), handling the most complex cases.",
+          "difficulty": "Extreme — requires surviving another brutal entrance exam (NEET-SS) after already completing MD/MS.",
+          "watch_out": "By the time you finish, you will be in your early to mid-30s just starting your actual career."
+        }
+      ],
       "metrics": {
-        "duration": "5.5 yrs", "stress": 5, "competition": 5,
-        "salary_potential": 4, "study_difficulty": 5, "work_life_balance": 1, "job_availability": 5, "abroad_prospects": 4,
+        "duration": "5.5 yrs",
+        "stress": 5,
+        "competition": 5,
+        "salary_potential": 4,
+        "study_difficulty": 5,
+        "work_life_balance": 1,
+        "job_availability": 5,
+        "abroad_prospects": 4,
         "ideal_personality": "Emotionally resilient, high stress tolerance, genuinely curious about biology",
         "internship": "1 yr compulsory rotating internship (within MBBS)",
-        "progression": ["Intern", "Junior Resident (MD/MS)", "Senior Resident", "Consultant / Specialist"],
+        "progression": [
+          "Intern",
+          "Junior Resident (MD/MS)",
+          "Senior Resident",
+          "Consultant / Specialist"
+        ],
         "misconception": "Once you finish MBBS, you're financially set.",
         "regret": "I underestimated how long it takes to actually start earning well.",
         "praise": "Helping even one patient makes the difficult days feel worthwhile."
@@ -111,7 +202,14 @@
       "category": "medical",
       "tagline": "A real profession with a real future — if you actually want it.",
       "overview": "BDS is a 5-year dental degree (4 years + 1 year internship) entered through NEET. It trains you to diagnose and treat oral diseases, but this is as much a business career as a clinical one — most graduates build private practices over time. Those who genuinely want dentistry and invest in their practice do well; those who landed here after missing MBBS often struggle to stay motivated.",
-      "tags": ["bds", "dentist", "dental", "dentistry", "neet", "oral health"],
+      "tags": [
+        "bds",
+        "dentist",
+        "dental",
+        "dentistry",
+        "neet",
+        "oral health"
+      ],
       "why_people_love_it": [
         "You own your practice and your time — no corporate hierarchy.",
         "Visible, immediate results: patients walk in anxious or in pain and leave relieved.",
@@ -185,13 +283,126 @@
           "url": "https://quora.com"
         }
       ],
-      "related_careers": ["mbbs", "pharmacy", "paramedical_physiotherapy"],
+      "related_careers": [
+        "mbbs",
+        "pharmacy",
+        "paramedical_physiotherapy"
+      ],
+      "career_paths": [
+        {
+          "id": "associate_dentist",
+          "name": "Associate Dentist",
+          "pathway": [
+            "BDS",
+            "Internship",
+            "Associate Dentist"
+          ],
+          "time": "1–2 yrs after internship",
+          "salary": "₹15k–30k/month (early)",
+          "likelihood": "most_graduates",
+          "gate_type": "licensure",
+          "explanation": "Chair-side treatment under a senior dentist while building speed, patient trust, and a referral base.",
+          "difficulty": "Low entry barrier — openings are plentiful, but pay is low and hours are long for the first 2–3 years.",
+          "watch_out": "The low-pay grind filters most graduates out of staying in dentistry — this is where most who leave, leave."
+        },
+        {
+          "id": "own_clinic",
+          "name": "Own Clinic",
+          "pathway": [
+            "Associate 3–5 yrs",
+            "Own clinic setup"
+          ],
+          "time": "5–8 yrs after BDS",
+          "salary": "₹60k–1.5L/month (steady patient base)",
+          "likelihood": "some",
+          "gate_type": "capital",
+          "explanation": "The entrepreneur route: build a patient base as an associate first, then open your own setup. Semi-urban and rural areas have far less competition.",
+          "difficulty": "High — needs ₹10–20L for equipment plus business skills (staff, marketing, finances).",
+          "watch_out": "Most associates never save the ₹10–20L needed for equipment — plan the capital before you commit."
+        },
+        {
+          "id": "mds_specialist",
+          "name": "MDS Specialist",
+          "pathway": [
+            "BDS",
+            "NEET-MDS",
+            "3-yr residency",
+            "MDS Specialist"
+          ],
+          "time": "+3–4 yrs after BDS",
+          "salary": "₹60k–1.5L/month",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Specialist practice (orthodontics, endodontics, prosthodontics…) with far higher fees, referrals, and reputation.",
+          "difficulty": "High — NEET-MDS is competitive and the residency is intense, but it changes your income ceiling.",
+          "watch_out": "Your specialization choice matters more than your college — research it before you commit."
+        },
+        {
+          "id": "academia",
+          "name": "Academia & Research",
+          "pathway": [
+            "MDS",
+            "PhD",
+            "Professor"
+          ],
+          "time": "8–12 yrs after BDS",
+          "salary": "₹60k–1L/month (govt institution)",
+          "likelihood": "few",
+          "gate_type": "exam",
+          "explanation": "Teach and research at a dental college. Few seats, high stability, and predictable hours — but a long academic climb.",
+          "difficulty": "High — requires MDS plus a PhD and competitive faculty openings.",
+          "watch_out": "Government dental teaching posts are rare and highly competitive."
+        },
+        {
+          "id": "public_health",
+          "name": "Public Health",
+          "pathway": [
+            "BDS",
+            "MPH",
+            "Public sector / NGO"
+          ],
+          "time": "6–10 yrs after BDS",
+          "salary": "₹50k–1L/month (govt)",
+          "likelihood": "few",
+          "gate_type": "exam",
+          "explanation": "A pivot into population-level oral health — policy, community programs, or NGO work. A different kind of impact than chair-side care.",
+          "difficulty": "Moderate — needs an MPH or equivalent, but the clinical grind is left behind.",
+          "watch_out": "Public-health roles are fewer and pay less than private practice — choose it for the mission, not the money."
+        },
+        {
+          "id": "industry",
+          "name": "Industry (pharma / dental products)",
+          "pathway": [
+            "BDS",
+            "MBA / MS",
+            "Pharma / device management"
+          ],
+          "time": "6–9 yrs after BDS",
+          "salary": "₹10–25 LPA",
+          "likelihood": "few",
+          "gate_type": "skills",
+          "explanation": "A corporate pivot into dental product companies, pharma, or medical devices — sales, marketing, or product roles.",
+          "difficulty": "Moderate — needs an MBA or strong business skills; the clinical degree becomes a differentiator.",
+          "watch_out": "This path leaves clinical dentistry behind — only choose it if you want out of chair-side work."
+        }
+      ],
       "metrics": {
-        "duration": "5 yrs", "stress": 3, "competition": 5,
-        "salary_potential": 3, "study_difficulty": 4, "work_life_balance": 3, "job_availability": 2, "abroad_prospects": 2,
+        "duration": "5 yrs",
+        "stress": 3,
+        "competition": 5,
+        "salary_potential": 3,
+        "study_difficulty": 4,
+        "work_life_balance": 3,
+        "job_availability": 2,
+        "abroad_prospects": 2,
         "ideal_personality": "Detail-oriented, hands-on, comfortable running a small business",
         "internship": "1 yr compulsory internship (within BDS)",
-        "progression": ["Intern", "Associate Dentist", "MDS Specialist / Clinic Owner", "Established Private Practice"],
+        "progression": [
+          "Intern",
+          "Associate Dentist",
+          "MDS Specialist / Clinic Owner",
+          "Established Private Practice"
+        ],
         "misconception": "A dental degree pays like a medical degree.",
         "regret": "I only chose BDS because I missed the MBBS cutoff.",
         "praise": "Precise, hands-on work with visible, immediate results for patients."
@@ -203,7 +414,14 @@
       "category": "paramedical",
       "tagline": "Not just a chemist shop job — but most graduates end up there anyway.",
       "overview": "4-year degree in drug chemistry and pharmaceutical sciences. It opens paths into hospital pharmacy, manufacturing, QC, R&D, regulatory affairs, clinical research, pharmacovigilance, and medical writing — but most students only hear about retail, which is why most end up there by default.",
-      "tags": ["pharmacy", "bpharm", "pharmacist", "pharmaceutical", "drugs", "chemistry"],
+      "tags": [
+        "pharmacy",
+        "bpharm",
+        "pharmacist",
+        "pharmaceutical",
+        "drugs",
+        "chemistry"
+      ],
       "why_people_love_it": [
         "India is the pharmacy of the world — training here puts you at the center of a globally significant industry.",
         "Diverse paths beyond retail — pharma companies, regulatory affairs, drug safety, research.",
@@ -275,13 +493,94 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["mbbs", "bds", "paramedical_nursing"],
+      "related_careers": [
+        "mbbs",
+        "bds",
+        "paramedical_nursing"
+      ],
+      "career_paths": [
+        {
+          "id": "retail_pharmacist",
+          "name": "Retail / Hospital Pharmacist",
+          "pathway": [
+            "B.Pharm",
+            "State Council Registration",
+            "Retail/Hospital"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹15k–25k/month",
+          "likelihood": "most_graduates",
+          "gate_type": "licensure",
+          "explanation": "Dispensing medications, managing inventory, and checking prescriptions in Apollo, MedPlus, or local hospitals.",
+          "difficulty": "Low — high demand for registered pharmacists just to fulfill legal licensing requirements for medical stores.",
+          "watch_out": "The salary stagnates incredibly fast; you will be earning essentially the same amount 5 years later."
+        },
+        {
+          "id": "pharma_qa_qc",
+          "name": "Pharma Industry (QA/QC)",
+          "pathway": [
+            "B.Pharm",
+            "Campus Placement / Walk-in",
+            "QA/QC Executive"
+          ],
+          "time": "1–2 yrs after B.Pharm",
+          "salary": "₹25k–35k/month",
+          "likelihood": "common",
+          "gate_type": "skills",
+          "explanation": "Working in manufacturing plants testing drug batches, maintaining regulatory compliance, and ensuring manufacturing standards.",
+          "difficulty": "Moderate — requires relocating to industrial hubs (Baddi, Vapi, Hyderabad) and working strict shift hours.",
+          "watch_out": "Plant jobs are monotonous and growth is strictly tied to years of experience, not necessarily talent."
+        },
+        {
+          "id": "regulatory_affairs",
+          "name": "Regulatory Affairs / Pharmacovigilance",
+          "pathway": [
+            "B.Pharm",
+            "M.Pharm / Certification",
+            "Corporate Desk Job"
+          ],
+          "time": "2–4 yrs after B.Pharm",
+          "salary": "₹40k–80k/month (mid-level)",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "The white-collar side of pharma: tracking adverse drug reactions or submitting drug approval dossiers to the FDA/EMA.",
+          "difficulty": "Moderate — usually requires an M.Pharm or specialized diplomas to bypass the entry-level manufacturing roles.",
+          "watch_out": "Highly corporate and desk-bound; you are essentially a specialized legal and compliance clerk for drugs."
+        },
+        {
+          "id": "own_pharmacy",
+          "name": "Own Pharmacy",
+          "pathway": [
+            "B.Pharm",
+            "2-3 yrs Experience",
+            "Setup License & Store"
+          ],
+          "time": "3–5 yrs after B.Pharm",
+          "salary": "₹40k–1L+/month (depends on location)",
+          "likelihood": "some",
+          "gate_type": "capital",
+          "explanation": "Opening your own medical store. Success depends entirely on location, doctor tie-ups, and inventory management.",
+          "difficulty": "High — requires capital for shop deposits and initial inventory, plus fighting off competition from online pharmacies.",
+          "watch_out": "Many 'pharmacists' just rent their license to businessmen for ₹3k/month illegally—don't reduce your degree to a rental agreement."
+        }
+      ],
       "metrics": {
-        "duration": "4 yrs", "stress": 2, "competition": 2,
-        "salary_potential": 3, "study_difficulty": 3, "work_life_balance": 4, "job_availability": 3, "abroad_prospects": 3,
+        "duration": "4 yrs",
+        "stress": 2,
+        "competition": 2,
+        "salary_potential": 3,
+        "study_difficulty": 3,
+        "work_life_balance": 4,
+        "job_availability": 3,
+        "abroad_prospects": 3,
         "ideal_personality": "Detail-oriented, regulation-comfortable, interested in chemistry",
         "internship": "Internships at pharmacies or pharma companies during the degree",
-        "progression": ["Pharmacist / QA-QC Trainee", "Store Manager / Industry Executive", "Regulatory Affairs / QA Manager", "Chain Owner / Senior Industry Role"],
+        "progression": [
+          "Pharmacist / QA-QC Trainee",
+          "Store Manager / Industry Executive",
+          "Regulatory Affairs / QA Manager",
+          "Chain Owner / Senior Industry Role"
+        ],
         "misconception": "Pharmacists just hand out medicines at a counter.",
         "regret": "I defaulted into retail instead of exploring the better-paying industry roles.",
         "praise": "Strong, stable demand thanks to India's massive pharma manufacturing base."
@@ -293,7 +592,13 @@
       "category": "paramedical",
       "tagline": "Globally in-demand, India-underpaid. The international route changes everything.",
       "overview": "4-year degree in patient care and clinical practice. Indian nurses are in massive global demand — domestic pay is low, but the UK, Gulf, Australia, and Canada offer multiples of Indian salaries.",
-      "tags": ["nursing", "nurse", "bsc nursing", "patient care", "healthcare"],
+      "tags": [
+        "nursing",
+        "nurse",
+        "bsc nursing",
+        "patient care",
+        "healthcare"
+      ],
       "why_people_love_it": [
         "One of the clearest international career pathways from India — actively recruited by UK, Gulf, Australia, and Canada.",
         "Genuine job security — the global nursing shortage isn't disappearing anytime soon.",
@@ -365,13 +670,95 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["paramedical_physiotherapy", "mbbs", "bds"],
+      "related_careers": [
+        "paramedical_physiotherapy",
+        "mbbs",
+        "bds"
+      ],
+      "career_paths": [
+        {
+          "id": "private_staff_nurse",
+          "name": "Staff Nurse (Private Hospital)",
+          "pathway": [
+            "B.Sc Nursing",
+            "State Registration",
+            "Private Hospital"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹15k–25k/month",
+          "likelihood": "most_graduates",
+          "gate_type": "licensure",
+          "explanation": "Bedside patient care, administering IVs, and assisting doctors in corporate or local private hospitals.",
+          "difficulty": "Low entry barrier — massive attrition means private hospitals are constantly hiring fresh graduates.",
+          "watch_out": "Brutal shift work, poor nurse-to-patient ratios, and salaries that border on exploitation in smaller cities."
+        },
+        {
+          "id": "govt_staff_nurse",
+          "name": "Government Hospital Nurse",
+          "pathway": [
+            "B.Sc Nursing",
+            "NORCET / State Exams",
+            "Govt Hospital"
+          ],
+          "time": "1–3 yrs of prep after graduation",
+          "salary": "₹50k–70k/month",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Nursing at AIIMS or state medical colleges. Offers high job security, government benefits, and a much better salary scale.",
+          "difficulty": "High — requires cracking highly competitive nursing recruitment exams like NORCET.",
+          "watch_out": "The competition for central govt nursing jobs is intense; many spend years studying while working private shifts."
+        },
+        {
+          "id": "abroad_nurse",
+          "name": "Abroad Nurse (UK/Gulf/US)",
+          "pathway": [
+            "B.Sc Nursing",
+            "1-2 yrs Exp",
+            "OET/IELTS/NCLEX",
+            "Migration"
+          ],
+          "time": "2–4 yrs after graduation",
+          "salary": "₹2.5L–5L/month (foreign currency)",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Migrating to countries with severe nursing shortages for significantly better pay, respect, and standard of living.",
+          "difficulty": "High — requires clearing language exams (OET/IELTS), licensing exams (NCLEX/CBT), and securing sponsorship.",
+          "watch_out": "Agencies often take massive cuts or lock you into contracts; navigate the visa and placement process very carefully."
+        },
+        {
+          "id": "nurse_educator",
+          "name": "Nurse Educator",
+          "pathway": [
+            "B.Sc Nursing",
+            "M.Sc Nursing",
+            "Nursing College"
+          ],
+          "time": "3–5 yrs after graduation",
+          "salary": "₹40k–80k/month",
+          "likelihood": "few",
+          "gate_type": "exam",
+          "explanation": "Teaching clinical skills and theory to nursing students in academic institutions.",
+          "difficulty": "Moderate to High — strictly requires an M.Sc Nursing degree and clinical experience.",
+          "watch_out": "Takes you away from bedside care entirely; choose this only if you prefer academics over clinical action."
+        }
+      ],
       "metrics": {
-        "duration": "4 yrs", "stress": 4, "competition": 2,
-        "salary_potential": 3, "study_difficulty": 3, "work_life_balance": 2, "job_availability": 4, "abroad_prospects": 5,
+        "duration": "4 yrs",
+        "stress": 4,
+        "competition": 2,
+        "salary_potential": 3,
+        "study_difficulty": 3,
+        "work_life_balance": 2,
+        "job_availability": 4,
+        "abroad_prospects": 5,
         "ideal_personality": "Empathetic, resilient, comfortable with shift work",
         "internship": "Extensive clinical postings throughout the degree",
-        "progression": ["Staff Nurse", "Senior / Charge Nurse", "Nurse Specialist / Ward Manager", "Nurse Practitioner / Matron (esp. abroad)"],
+        "progression": [
+          "Staff Nurse",
+          "Senior / Charge Nurse",
+          "Nurse Specialist / Ward Manager",
+          "Nurse Practitioner / Matron (esp. abroad)"
+        ],
         "misconception": "There's little room for career growth in nursing.",
         "regret": "I didn't plan for licensing exams abroad early enough — it delayed my income by years.",
         "praise": "One of the strongest healthcare careers if your long-term goal is working abroad."
@@ -383,7 +770,13 @@
       "category": "paramedical",
       "tagline": "Steady, hands-on, growing field — often overlooked because it's not MBBS.",
       "overview": "5-year degree (4 years + 1 year internship) focused on rehabilitation, injury recovery, and movement therapy. Growing demand from aging population, sports medicine growth, and increased awareness of physical wellness.",
-      "tags": ["physiotherapy", "bpt", "physical therapy", "rehabilitation", "sports medicine"],
+      "tags": [
+        "physiotherapy",
+        "bpt",
+        "physical therapy",
+        "rehabilitation",
+        "sports medicine"
+      ],
       "why_people_love_it": [
         "Deeply personal, rewarding work — helping someone regain movement after injury is one of the most tangible impacts a healthcare professional can have.",
         "Growing field with genuine demand — sports medicine, elderly care, and post-surgical rehab are all expanding.",
@@ -454,17 +847,98 @@
           "url": "https://quora.com"
         }
       ],
-      "related_careers": ["mbbs", "bds", "paramedical_nursing"],
+      "related_careers": [
+        "mbbs",
+        "bds",
+        "paramedical_nursing"
+      ],
       "metrics": {
-        "duration": "5 yrs", "stress": 3, "competition": 2,
-        "salary_potential": 3, "study_difficulty": 3, "work_life_balance": 3, "job_availability": 3, "abroad_prospects": 4,
+        "duration": "5 yrs",
+        "stress": 3,
+        "competition": 2,
+        "salary_potential": 3,
+        "study_difficulty": 3,
+        "work_life_balance": 3,
+        "job_availability": 3,
+        "abroad_prospects": 4,
         "ideal_personality": "Patient, hands-on, genuinely interested in human movement and recovery",
         "internship": "1 yr compulsory internship (within the 5-year BPT)",
-        "progression": ["Intern", "Junior Physiotherapist", "Senior Physiotherapist / Practice Building", "Established Private Practice / Sports Physio"],
+        "progression": [
+          "Intern",
+          "Junior Physiotherapist",
+          "Senior Physiotherapist / Practice Building",
+          "Established Private Practice / Sports Physio"
+        ],
         "misconception": "Physiotherapy is a quick, easy medical-adjacent degree.",
         "regret": "I underestimated how physically demanding the day-to-day work actually is.",
         "praise": "You see steady, tangible progress in patients — deeply satisfying work."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "hospital_physio",
+          "name": "Hospital Physiotherapist",
+          "pathway": [
+            "BPT",
+            "Internship",
+            "Hospital Staff"
+          ],
+          "time": "Immediately after BPT",
+          "salary": "₹15k–25k/month",
+          "likelihood": "most_graduates",
+          "gate_type": "licensure",
+          "explanation": "Performing post-op rehab, ICU chest PT, and out-patient therapies under the direction of orthopedics or neurologists.",
+          "difficulty": "Low — general PT roles in hospitals are easy to get, but they treat you as a subordinate technician.",
+          "watch_out": "Hospitals rarely pay PTs well because they don't view them as primary revenue generators."
+        },
+        {
+          "id": "own_practice_pt",
+          "name": "Own Practice / Clinic",
+          "pathway": [
+            "BPT",
+            "2-4 yrs Experience",
+            "Independent Setup"
+          ],
+          "time": "3–5 yrs after BPT",
+          "salary": "₹35k–80k/month (mid-level)",
+          "likelihood": "some",
+          "gate_type": "capital",
+          "explanation": "Running a private rehab clinic. Requires heavy networking with orthopedic surgeons for referrals and good patient rapport.",
+          "difficulty": "High — requires capital for modalities (IFT, Ultrasound) and the business acumen to attract private patients.",
+          "watch_out": "Your income is entirely dependent on your ability to market yourself and get doctors to send patients your way."
+        },
+        {
+          "id": "mpt_specialist",
+          "name": "MPT Specialist",
+          "pathway": [
+            "BPT",
+            "MPT Entrance",
+            "2-yr Masters"
+          ],
+          "time": "+2 yrs after BPT",
+          "salary": "₹40k–70k/month",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Specializing in Neurology, Orthopedics, or Cardiopulmonary PT, allowing for higher consulting fees and specialized hospital roles.",
+          "difficulty": "Moderate — requires clearing MPT entrance exams and spending two more years in academia.",
+          "watch_out": "An MPT does not magically double your salary in the private sector unless you use it to upgrade your own clinic."
+        },
+        {
+          "id": "sports_physio",
+          "name": "Sports Physiotherapist",
+          "pathway": [
+            "BPT",
+            "MPT Sports / Certifications",
+            "Sports Teams"
+          ],
+          "time": "4–6 yrs after BPT",
+          "salary": "₹1L–4L/month (elite levels)",
+          "likelihood": "few",
+          "gate_type": "network",
+          "explanation": "Managing acute injuries, conditioning, and rehab for professional athletes, sports academies, or national teams.",
+          "difficulty": "Extreme — highly niche, requiring specialized sports degrees and aggressive networking to break into professional leagues.",
+          "watch_out": "Most sports PTs start by working for free or peanuts at local academies before ever seeing a professional team."
+        }
+      ]
     },
     {
       "id": "radiology_tech",
@@ -472,7 +946,14 @@
       "category": "paramedical",
       "tagline": "You operate the imaging. The radiologist interprets it. Two essential roles—often confused.",
       "overview": "3-4 year degree training you to operate X-ray, CT, MRI, ultrasound, and nuclear medicine equipment. Technologists work across hospitals, diagnostic centers, cath labs, and trauma units, combining healthcare with hands-on technical skill.",
-      "tags": ["radiology", "medical imaging", "x-ray", "mri", "ct scan", "radiographer"],
+      "tags": [
+        "radiology",
+        "medical imaging",
+        "x-ray",
+        "mri",
+        "ct scan",
+        "radiographer"
+      ],
       "why_people_love_it": [
         "High-tech environment — you operate some of the most advanced medical equipment there is.",
         "Comparatively good pay for the education investment, especially with MRI/CT specialization.",
@@ -544,17 +1025,97 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["mbbs", "paramedical_nursing", "paramedical_physiotherapy"],
+      "related_careers": [
+        "mbbs",
+        "paramedical_nursing",
+        "paramedical_physiotherapy"
+      ],
       "metrics": {
-        "duration": "3-4 yrs", "stress": 2, "competition": 2,
-        "salary_potential": 3, "study_difficulty": 2, "work_life_balance": 3, "job_availability": 4, "abroad_prospects": 3,
+        "duration": "3-4 yrs",
+        "stress": 2,
+        "competition": 2,
+        "salary_potential": 3,
+        "study_difficulty": 2,
+        "work_life_balance": 3,
+        "job_availability": 4,
+        "abroad_prospects": 3,
         "ideal_personality": "Technically minded, precise, comfortable with equipment and shift schedules",
         "internship": "Hospital-based practical training throughout the degree",
-        "progression": ["Trainee Technologist", "Radiology Technologist", "Specialized Technologist (MRI/CT/Sonography)", "Imaging Center Manager"],
+        "progression": [
+          "Trainee Technologist",
+          "Radiology Technologist",
+          "Specialized Technologist (MRI/CT/Sonography)",
+          "Imaging Center Manager"
+        ],
         "misconception": "Radiology technologists read and diagnose scans.",
         "regret": "I didn't realize I'd be treated as a machine operator, not a medical professional.",
         "praise": "High demand and comparatively good pay for a paramedical path."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "hospital_radiographer",
+          "name": "Hospital Radiographer (X-Ray/Basic CT)",
+          "pathway": [
+            "B.Sc Radiology",
+            "Hospital Placement"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹18k–30k/month",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Positioning patients and operating X-Ray and basic CT machines in hospitals or small diagnostic centers.",
+          "difficulty": "Low — standard requirement for any healthcare facility; jobs are plentiful but mundane.",
+          "watch_out": "Radiation exposure is a daily reality; ensure your employer strictly follows dosimeter monitoring protocols."
+        },
+        {
+          "id": "mri_ct_specialist",
+          "name": "MRI / Advanced CT Technologist",
+          "pathway": [
+            "B.Sc Radiology",
+            "Specialized Training",
+            "Advanced Tech"
+          ],
+          "time": "2–4 yrs after graduation",
+          "salary": "₹40k–80k/month",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Operating complex, multi-crore MRI and advanced CT scanners. Requires deep understanding of cross-sectional anatomy and physics.",
+          "difficulty": "Moderate — requires on-the-job training and earning the trust of senior radiologists to handle expensive equipment.",
+          "watch_out": "You are confined to dark, cold console rooms for your entire shift, dealing with claustrophobic or anxious patients."
+        },
+        {
+          "id": "abroad_tech",
+          "name": "Radiographer (Gulf/UK)",
+          "pathway": [
+            "B.Sc Radiology",
+            "2-3 yrs Exp",
+            "Licensing Exams"
+          ],
+          "time": "3–5 yrs after graduation",
+          "salary": "₹1.5L–3L/month (foreign currency)",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Working as an allied health professional in the NHS (UK) or DHA (Dubai), where technicians are paid premium wages.",
+          "difficulty": "High — requires passing international licensing and language exams, plus verifying clinical hours.",
+          "watch_out": "Titles and scope of practice change drastically abroad; you must relearn local protocols and safety standards."
+        },
+        {
+          "id": "imaging_center_manager",
+          "name": "Imaging Center Manager",
+          "pathway": [
+            "Senior Tech",
+            "MBA / Admin Skills",
+            "Center Manager"
+          ],
+          "time": "6–10 yrs after graduation",
+          "salary": "₹90k–2L/month",
+          "likelihood": "few",
+          "gate_type": "skills",
+          "explanation": "Pivoting away from the machines to run the business operations, machine maintenance contracts, and staffing for large diagnostic chains.",
+          "difficulty": "Moderate to High — requires stepping away from clinical work and proving business and administrative competence.",
+          "watch_out": "You become responsible for machine downtime and revenue targets, effectively becoming a healthcare sales/admin hybrid."
+        }
+      ]
     },
     {
       "id": "zoology",
@@ -562,7 +1123,13 @@
       "category": "life_sciences",
       "tagline": "Fascinating subject, limited finish line — what you build on top of it matters most.",
       "overview": "3-year degree studying animal biology. Fascinating if you love the subject — but you'll almost certainly need M.Sc., B.Ed., or an MBA on top to build a stable career.",
-      "tags": ["zoology", "biology", "animal science", "life sciences", "wildlife"],
+      "tags": [
+        "zoology",
+        "biology",
+        "animal science",
+        "life sciences",
+        "wildlife"
+      ],
       "why_people_love_it": [
         "The subject is genuinely fascinating — you study how animals work, how ecosystems function, and how evolution shaped life.",
         "Practical work (field surveys, microscopy, dissections) keeps the degree engaging.",
@@ -634,17 +1201,98 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["mbbs", "pharmacy", "bds"],
+      "related_careers": [
+        "mbbs",
+        "pharmacy",
+        "bds"
+      ],
       "metrics": {
-        "duration": "3 yrs", "stress": 2, "competition": 3,
-        "salary_potential": 2, "study_difficulty": 3, "work_life_balance": 4, "job_availability": 2, "abroad_prospects": 3,
+        "duration": "3 yrs",
+        "stress": 2,
+        "competition": 3,
+        "salary_potential": 2,
+        "study_difficulty": 3,
+        "work_life_balance": 4,
+        "job_availability": 2,
+        "abroad_prospects": 3,
         "ideal_personality": "Genuinely curious about biology, comfortable with hands-on lab work, willing to commit to additional qualifications",
         "internship": "Not typically structured — self-sourced internships at research institutes or labs are essential",
-        "progression": ["Lab Technician / Field Assistant", "M.Sc. Graduate / Junior Research Fellow", "PhD Scholar / Research Associate", "Professor / Senior Scientist"],
+        "progression": [
+          "Lab Technician / Field Assistant",
+          "M.Sc. Graduate / Junior Research Fellow",
+          "PhD Scholar / Research Associate",
+          "Professor / Senior Scientist"
+        ],
         "misconception": "B.Sc. Zoology is a backup degree — you can coast through it easily while you figure out what to do with your life.",
         "regret": "I chose Zoology after NEET without a clear career plan. By graduation, I realized that the degree alone doesn't open many doors—you have to build a path beyond it.",
         "praise": "The subject is engaging for students who enjoy biology, ecology, and wildlife, especially if they already have a long-term goal."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "lab_technician",
+          "name": "Lab Technician / Field Assistant",
+          "pathway": [
+            "B.Sc Zoology",
+            "Direct Application"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹1.8L–3 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Washing glassware, preparing basic slides, or collecting field samples for senior researchers or pathology labs.",
+          "difficulty": "Low — high turnover in these roles makes them easy to get, but they offer zero upward mobility.",
+          "watch_out": "A plain B.Sc in pure sciences has almost zero market value in the corporate world; you will be underpaid."
+        },
+        {
+          "id": "school_teacher",
+          "name": "School Teacher (Biology)",
+          "pathway": [
+            "B.Sc Zoology",
+            "B.Ed",
+            "School Placement"
+          ],
+          "time": "2 yrs after graduation",
+          "salary": "₹3L–5 LPA",
+          "likelihood": "common",
+          "gate_type": "exam",
+          "explanation": "Teaching middle or high school biology. Provides stable hours, holidays, and a predictable career progression.",
+          "difficulty": "Moderate — requires spending two additional years to complete a B.Ed, plus clearing state TET exams for govt schools.",
+          "watch_out": "Private schools often exploit fresh teachers with low pay; government teaching jobs require years of exam prep."
+        },
+        {
+          "id": "msc_research",
+          "name": "M.Sc → Research & Academia",
+          "pathway": [
+            "B.Sc",
+            "M.Sc Zoology",
+            "NET / PhD",
+            "Researcher"
+          ],
+          "time": "4–8 yrs after graduation",
+          "salary": "₹6L–10 LPA (Fellowship/Asst Prof)",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Pursuing a PhD to become a university professor or a scientist in government research institutes (like ZSI).",
+          "difficulty": "Extreme — cracking CSIR-NET is brutal, and academia is infamous for academic politics and lack of permanent vacancies.",
+          "watch_out": "You will spend your late 20s living on meager PhD stipends while your peers are earning corporate salaries."
+        },
+        {
+          "id": "govt_exams",
+          "name": "General Government Exams",
+          "pathway": [
+            "B.Sc",
+            "2-3 yrs Prep",
+            "UPSC / SSC / Banking"
+          ],
+          "time": "2–4 yrs after graduation",
+          "salary": "₹5L–12 LPA",
+          "likelihood": "few",
+          "gate_type": "exam",
+          "explanation": "Abandoning science entirely to use the B.Sc merely as a graduation criteria for general competitive exams.",
+          "difficulty": "High — you are competing against millions of engineers, arts, and commerce students for the exact same clerical or officer seats.",
+          "watch_out": "This is a massive sunk-cost trap; many waste 4-5 years of their youth preparing for exams they never clear."
+        }
+      ]
     },
     {
       "id": "botany",
@@ -652,7 +1300,14 @@
       "category": "life_sciences",
       "tagline": "The science of everything that keeps us alive — careers here take patience to cultivate.",
       "overview": "3-year degree studying plant biology. India needs plant scientists, but most roles in agriculture, forestry and environmental consulting require M.Sc. or PhD.",
-      "tags": ["botany", "plants", "biology", "life sciences", "agriculture", "forestry"],
+      "tags": [
+        "botany",
+        "plants",
+        "biology",
+        "life sciences",
+        "agriculture",
+        "forestry"
+      ],
       "why_people_love_it": [
         "The subject connects you to the most essential systems on Earth — agriculture, ecosystems, and the plants that sustain life.",
         "Fieldwork takes you outside — plant collection, ecological surveys, agricultural extension work.",
@@ -724,17 +1379,96 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["zoology", "pharmacy"],
+      "related_careers": [
+        "zoology",
+        "pharmacy"
+      ],
       "metrics": {
-        "duration": "3 yrs", "stress": 2, "competition": 3,
-        "salary_potential": 2, "study_difficulty": 3, "work_life_balance": 4, "job_availability": 2, "abroad_prospects": 3,
+        "duration": "3 yrs",
+        "stress": 2,
+        "competition": 3,
+        "salary_potential": 2,
+        "study_difficulty": 3,
+        "work_life_balance": 4,
+        "job_availability": 2,
+        "abroad_prospects": 3,
         "ideal_personality": "Curious about plants and ecosystems, comfortable with fieldwork and outdoor conditions, patient with a slow-building career",
         "internship": "Not typically structured — self-sourced internships at agricultural research stations, botanical gardens, herbal pharma companies, or environmental consulting firms are essential",
-        "progression": ["Lab Technician / Nursery Assistant", "M.Sc. Graduate / Agricultural Officer", "PhD Scholar / Research Scientist", "Professor / Forestry Officer / Senior Researcher"],
+        "progression": [
+          "Lab Technician / Nursery Assistant",
+          "M.Sc. Graduate / Agricultural Officer",
+          "PhD Scholar / Research Scientist",
+          "Professor / Forestry Officer / Senior Researcher"
+        ],
         "misconception": "Botany is just 'studying plants' — a narrow science with limited career scope in the modern economy.",
         "regret": "I chose Botany because of the promise of government jobs, but the competition was far higher than I expected and I ended up stuck with no backup plan.",
         "praise": "A B.Sc. in Botany combined with a targeted M.Sc. in plant biotechnology, forestry, or agriculture opens doors to careers that genuinely matter."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "lab_nursery_assistant",
+          "name": "Lab / Nursery Assistant",
+          "pathway": [
+            "B.Sc Botany",
+            "Direct Application"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹2L–3.5 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Routine cataloging, plant tissue culture prep, or assisting in commercial nurseries and botanical gardens.",
+          "difficulty": "Low — entry-level grunt work that requires basic handling of plant materials.",
+          "watch_out": "Just like Zoology, a plain B.Sc Botany holds very little independent financial weight in the job market."
+        },
+        {
+          "id": "msc_agri_forestry",
+          "name": "M.Sc → Agriculture / Forestry Sector",
+          "pathway": [
+            "B.Sc Botany",
+            "M.Sc Botany/Agri",
+            "Agri-tech / Seed Companies"
+          ],
+          "time": "2–3 yrs after graduation",
+          "salary": "₹4L–8 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Working for agrochemical companies, seed manufacturers, or herbal product industries doing QA, research, or field trials.",
+          "difficulty": "Moderate — requires an M.Sc to be taken seriously by corporate R&D and agri-businesses.",
+          "watch_out": "Field roles often require extensive travel to rural agricultural zones, which isn't for everyone."
+        },
+        {
+          "id": "school_teacher_botany",
+          "name": "School Teacher (Biology)",
+          "pathway": [
+            "B.Sc Botany",
+            "B.Ed",
+            "School Placement"
+          ],
+          "time": "2 yrs after graduation",
+          "salary": "₹3L–5 LPA",
+          "likelihood": "common",
+          "gate_type": "exam",
+          "explanation": "Teaching science and biology in private or government schools. A stable, traditional fallback for pure science grads.",
+          "difficulty": "Moderate — strictly requires a B.Ed degree and clearing teaching eligibility tests.",
+          "watch_out": "Teaching is fundamentally a communication and classroom-management job, not a scientific research job."
+        },
+        {
+          "id": "ifos_govt",
+          "name": "Indian Forest Service (IFoS) / Govt",
+          "pathway": [
+            "B.Sc Botany",
+            "UPSC IFoS Prep",
+            "Forest Officer"
+          ],
+          "time": "3–5 yrs after graduation",
+          "salary": "₹8L–15 LPA (plus massive perks)",
+          "likelihood": "few",
+          "gate_type": "exam",
+          "explanation": "Elite government service managing wildlife sanctuaries, national parks, and state forestry initiatives.",
+          "difficulty": "Extreme — UPSC IFoS is one of the toughest exams in the country; botany is just an optional subject advantage.",
+          "watch_out": "Do not study Botany just because you think it will make cracking IFoS easy; the success rate is microscopic."
+        }
+      ]
     },
     {
       "id": "cs_engineering",
@@ -742,7 +1476,15 @@
       "category": "engineering",
       "tagline": "The highest ceiling in Indian engineering. Also the most brutal filter.",
       "overview": "4-year degree entered through JEE or state exams. Your college tier determines your starting point far more than your degree does. An IIT/NIT graduate and a tier-3 college graduate face completely different hiring realities.",
-      "tags": ["computer science", "cse", "engineering", "software", "coding", "btech", "it"],
+      "tags": [
+        "computer science",
+        "cse",
+        "engineering",
+        "software",
+        "coding",
+        "btech",
+        "it"
+      ],
       "why_people_love_it": [
         "You can build something from nothing — a product used by thousands with just a laptop.",
         "Highest salary ceiling of any undergraduate engineering degree in India.",
@@ -816,17 +1558,99 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["mba", "ca", "design"],
+      "related_careers": [
+        "mba",
+        "ca",
+        "design"
+      ],
       "metrics": {
-        "duration": "4 yrs", "stress": 3, "competition": 4,
-        "salary_potential": 5, "study_difficulty": 3, "work_life_balance": 3, "job_availability": 3, "abroad_prospects": 5,
+        "duration": "4 yrs",
+        "stress": 3,
+        "competition": 4,
+        "salary_potential": 5,
+        "study_difficulty": 3,
+        "work_life_balance": 3,
+        "job_availability": 3,
+        "abroad_prospects": 5,
         "ideal_personality": "Self-learner who enjoys problem-solving and constant change",
         "internship": "Typically one summer internship before final year",
-        "progression": ["SDE 1 / Junior Developer", "SDE 2 / Mid-level Engineer", "Senior Engineer / Tech Lead", "Staff Engineer / EM"],
+        "progression": [
+          "SDE 1 / Junior Developer",
+          "SDE 2 / Mid-level Engineer",
+          "Senior Engineer / Tech Lead",
+          "Staff Engineer / EM"
+        ],
         "misconception": "Every CS graduate gets a high-paying tech job.",
         "regret": "I assumed college alone would prepare me — I had to self-learn everything that mattered.",
         "praise": "Skills compound fast, and the ceiling on pay and impact is genuinely high."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "it_services_engineer",
+          "name": "IT Services Engineer (WITCH)",
+          "pathway": [
+            "B.Tech CS",
+            "Mass Recruitment",
+            "System Engineer"
+          ],
+          "time": "Immediately upon graduation",
+          "salary": "₹3.5L–6 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Deployed at mass-recruiters (TCS, Infosys, Wipro) doing basic maintenance, testing, or support rather than core development.",
+          "difficulty": "Low — mass recruiters hire in thousands based on basic aptitude and minimal coding knowledge.",
+          "watch_out": "Salary increments are notoriously slow; you must aggressively upskill on your own time to escape the 'service-based' trap."
+        },
+        {
+          "id": "product_sde",
+          "name": "Product Company SDE",
+          "pathway": [
+            "B.Tech CS",
+            "DSA & LeetCode",
+            "SDE 1"
+          ],
+          "time": "0–2 yrs after graduation",
+          "salary": "₹12L–30 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Writing core logic, building scalable backend systems, or complex front-ends for startups, fintechs, or FAANG-level companies.",
+          "difficulty": "High — requires rigorous mastery of Data Structures and Algorithms (DSA), System Design, and surviving 4-5 rounds of intense technical interviews.",
+          "watch_out": "Your college tier dictates whether these companies visit your campus; Tier-3 grads must fight brutally off-campus."
+        },
+        {
+          "id": "data_ai_engineer",
+          "name": "Data / AI Engineer",
+          "pathway": [
+            "B.Tech CS",
+            "ML/AI Portfolio",
+            "Data Engineer"
+          ],
+          "time": "1–3 yrs after graduation",
+          "salary": "₹10L–25 LPA",
+          "likelihood": "some",
+          "gate_type": "portfolio",
+          "explanation": "Building data pipelines, training machine learning models, and optimizing AI integrations instead of traditional software engineering.",
+          "difficulty": "High — requires deep math/statistics foundations and specialized tool knowledge (PyTorch, Kafka) beyond standard web dev.",
+          "watch_out": "Many 'AI' entry-level jobs are just glorified data cleaning and API wrapping; real ML engineering requires serious chops."
+        },
+        {
+          "id": "ms_abroad_cs",
+          "name": "MS Abroad → US/EU Tech Scene",
+          "pathway": [
+            "B.Tech CS",
+            "GRE/TOEFL",
+            "MS in CS",
+            "Foreign SDE"
+          ],
+          "time": "2–3 yrs after graduation",
+          "salary": "$100k–150k/year (foreign currency)",
+          "likelihood": "few",
+          "gate_type": "capital",
+          "explanation": "Using a Master's degree in the US, Europe, or Canada as a direct entry ticket into their high-paying tech markets.",
+          "difficulty": "High — requires ₹40-60L in funding/loans and navigating the volatile H1-B visa lottery system.",
+          "watch_out": "The US tech market is no longer a guaranteed gold rush; many students graduate with heavy debt and struggle to find sponsorships."
+        }
+      ]
     },
     {
       "id": "bca_mca",
@@ -834,7 +1658,14 @@
       "category": "engineering",
       "tagline": "The longer road to the same destination — if you're willing to walk it.",
       "overview": "3+2 year path (BCA + MCA) to reach the same starting line as a B.Tech. If B.Tech wasn't an option after Class 12, this is a legitimate second path into the same industry.",
-      "tags": ["bca", "mca", "computer applications", "software", "it", "nimcet"],
+      "tags": [
+        "bca",
+        "mca",
+        "computer applications",
+        "software",
+        "it",
+        "nimcet"
+      ],
       "why_people_love_it": [
         "It's a genuine second chance — if B.Tech wasn't reachable, BCA + MCA is a proven alternative.",
         "The work itself is creative — building software used by real people.",
@@ -906,17 +1737,99 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["cs_engineering", "design", "mba"],
+      "related_careers": [
+        "cs_engineering",
+        "design",
+        "mba"
+      ],
       "metrics": {
-        "duration": "3+2 yrs", "stress": 3, "competition": 4,
-        "salary_potential": 4, "study_difficulty": 3, "work_life_balance": 3, "job_availability": 3, "abroad_prospects": 3,
+        "duration": "3+2 yrs",
+        "stress": 3,
+        "competition": 4,
+        "salary_potential": 4,
+        "study_difficulty": 3,
+        "work_life_balance": 3,
+        "job_availability": 3,
+        "abroad_prospects": 3,
         "ideal_personality": "Self-learner who treats BCA as a stepping stone and builds coding skills independently",
         "internship": "Varies by college — top programs have internships; many tier-3 colleges have none at all",
-        "progression": ["Junior Developer", "Software Engineer", "Senior Engineer / Tech Lead", "Engineering Manager / Architect"],
+        "progression": [
+          "Junior Developer",
+          "Software Engineer",
+          "Senior Engineer / Tech Lead",
+          "Engineering Manager / Architect"
+        ],
         "misconception": "A BCA degree alone is enough to get a good software job.",
         "regret": "I focused only on passing college exams instead of building real coding skills and projects.",
         "praise": "Doing MCA after BCA was the best decision I made. It gave me a second chance to build the skills, confidence, and resume I should've had after graduation."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "it_services_bca",
+          "name": "IT Services Executive (BCA Level)",
+          "pathway": [
+            "BCA",
+            "Campus Placement",
+            "Operations/Testing"
+          ],
+          "time": "Immediately upon graduation",
+          "salary": "₹2.5L–4 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Entry-level roles in tech support, manual testing, or basic associate roles at service companies, heavily capped compared to B.Techs.",
+          "difficulty": "Low — easy to get, but you are treated as a 'sub-engineer' and paid significantly less than B.Tech peers for the same work.",
+          "watch_out": "A standalone BCA from a tier-3 college holds very little weight; product companies will auto-reject your resume."
+        },
+        {
+          "id": "mca_to_sde",
+          "name": "MCA → Software Engineer",
+          "pathway": [
+            "BCA",
+            "NIMCET / Entrance",
+            "MCA",
+            "SDE"
+          ],
+          "time": "2–3 yrs after BCA",
+          "salary": "₹8L–18 LPA",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Using an MCA (ideally from an NIT or top university) to bridge the gap and compete directly with B.Tech CS grads for developer roles.",
+          "difficulty": "Moderate — requires clearing NIMCET to get into a top NIT, which mathematically levels the playing field with engineers.",
+          "watch_out": "An MCA from the same Tier-3 college you did your BCA from will not fix your career; the college brand matters here."
+        },
+        {
+          "id": "freelance_web_dev",
+          "name": "Freelance Web / UI Developer",
+          "pathway": [
+            "BCA",
+            "Self-Taught Stack",
+            "Freelance / Agency"
+          ],
+          "time": "1–3 yrs building clients",
+          "salary": "₹4L–10 LPA (highly variable)",
+          "likelihood": "some",
+          "gate_type": "portfolio",
+          "explanation": "Bypassing corporate degrees entirely by building a strong portfolio in React, Node, or UI/UX and taking freelance contracts.",
+          "difficulty": "Moderate — requires zero permission or degrees, but demands extreme self-discipline and client acquisition skills.",
+          "watch_out": "Feast or famine income; you are running a solo business, not just writing code."
+        },
+        {
+          "id": "data_analyst",
+          "name": "Data Analyst",
+          "pathway": [
+            "BCA / MCA",
+            "SQL + Python + Tableau",
+            "Analyst"
+          ],
+          "time": "1–2 yrs after graduation",
+          "salary": "₹5L–12 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Querying databases, building dashboards, and extracting business insights for non-technical stakeholders.",
+          "difficulty": "Moderate — a great pivot if you dislike hardcore application architecture but are good with logic and numbers.",
+          "watch_out": "Don't confuse Data Analysis with Data Science; you will mostly be writing SQL and building Excel/Tableau reports."
+        }
+      ]
     },
     {
       "id": "ca",
@@ -924,7 +1837,14 @@
       "category": "commerce",
       "tagline": "Brutal to clear. Hard to make irrelevant once you do.",
       "overview": "ICAI professional qualification with three exam levels (Foundation, Inter, Final) and around 2 years of mandatory articleship. The fastest route takes around 4 years, but many students take longer because the pass rates are brutal at every stage.",
-      "tags": ["ca", "chartered accountant", "finance", "accounting", "tax", "audit"],
+      "tags": [
+        "ca",
+        "chartered accountant",
+        "finance",
+        "accounting",
+        "tax",
+        "audit"
+      ],
       "why_people_love_it": [
         "Recession-proof — every company needs finance and compliance.",
         "Real ceiling once you're in — CFO track, Big 4 partner, or your own unlimited-upside practice.",
@@ -995,17 +1915,98 @@
           "url": "https://quora.com"
         }
       ],
-      "related_careers": ["mba", "cs_engineering", "law"],
+      "related_careers": [
+        "mba",
+        "cs_engineering",
+        "law"
+      ],
       "metrics": {
-        "duration": "5-7 yrs", "stress": 5, "competition": 5,
-        "salary_potential": 5, "study_difficulty": 5, "work_life_balance": 1, "job_availability": 5, "abroad_prospects": 2,
+        "duration": "5-7 yrs",
+        "stress": 5,
+        "competition": 5,
+        "salary_potential": 5,
+        "study_difficulty": 5,
+        "work_life_balance": 1,
+        "job_availability": 5,
+        "abroad_prospects": 2,
         "ideal_personality": "Disciplined, persistent, comfortable with delayed gratification and repeated failure",
         "internship": "2 years mandatory articleship (during the CA course)",
-        "progression": ["Articleship Trainee", "Fresher CA (Big 4 / mid-size)", "Manager (5 yrs)", "CFO track / Partner / Own Practice"],
+        "progression": [
+          "Articleship Trainee",
+          "Fresher CA (Big 4 / mid-size)",
+          "Manager (5 yrs)",
+          "CFO track / Partner / Own Practice"
+        ],
         "misconception": "Passing CA automatically guarantees a high-paying job.",
         "regret": "I underestimated how mentally exhausting repeated exam attempts could be. The delays were harder to accept than the syllabus itself.",
         "praise": "The moment I qualified, people treated me differently. The respect that comes with the CA designation is real."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "big4_audit",
+          "name": "Big 4 Audit / Tax",
+          "pathway": [
+            "CA Final",
+            "Campus/Off-campus",
+            "Big 4 Associate"
+          ],
+          "time": "Immediately after clearing CA",
+          "salary": "₹8L–12 LPA",
+          "likelihood": "common",
+          "gate_type": "skills",
+          "explanation": "Grinding in Statutory Audit or Taxation at EY, PwC, Deloitte, or KPMG. Incredible learning curve and CV brand value.",
+          "difficulty": "Moderate (once CA is cleared) — Big 4s hire bulk CAs, but getting in depends on your articleship quality and number of attempts.",
+          "watch_out": "Infamous for 14-hour workdays during 'busy season'; you will trade your work-life balance for the brand name."
+        },
+        {
+          "id": "industry_finance",
+          "name": "Industry Corporate Finance",
+          "pathway": [
+            "CA Final",
+            "Corporate Placement",
+            "Finance Manager"
+          ],
+          "time": "1–3 yrs after CA",
+          "salary": "₹10L–20 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Working in the finance department of FMCG, Tech, or manufacturing companies doing FP&A, internal audit, or financial reporting.",
+          "difficulty": "High — FMCG and top tech companies usually strictly filter for CAs who cleared their finals in the first or second attempt.",
+          "watch_out": "Slower promotions compared to Big 4, but significantly better work-life balance and stability."
+        },
+        {
+          "id": "own_practice_ca",
+          "name": "Own CA Practice",
+          "pathway": [
+            "CA Final",
+            "Network Building",
+            "Independent Firm"
+          ],
+          "time": "3–7 yrs after CA",
+          "salary": "₹15L–30L+ (no ceiling)",
+          "likelihood": "some",
+          "gate_type": "network",
+          "explanation": "Setting up your own firm handling tax filings, GST, and audits for SMEs, HNIs, and local businesses.",
+          "difficulty": "High — earning the CA tag doesn't give you clients; you need fierce networking and sales skills to acquire businesses.",
+          "watch_out": "The first 3 years are financially brutal as you build a client base; most pivot back to jobs."
+        },
+        {
+          "id": "cfo_track",
+          "name": "CFO / Partner Track",
+          "pathway": [
+            "Big 4 / Industry",
+            "10-15 yrs Grinding",
+            "CFO / Partner"
+          ],
+          "time": "10–15 yrs after CA",
+          "salary": "₹50L–1 Crore+",
+          "likelihood": "few",
+          "gate_type": "network",
+          "explanation": "Reaching the absolute peak of the financial food chain, either as a Big 4 equity partner or Chief Financial Officer of a large corporation.",
+          "difficulty": "Extreme — requires not just technical accounting brilliance, but elite leadership, politics, and client-winning ability.",
+          "watch_out": "This requires dedicating your entire life to the firm/company; it is a lifestyle, not just a job."
+        }
+      ]
     },
     {
       "id": "bcom",
@@ -1013,7 +2014,13 @@
       "category": "commerce",
       "tagline": "A degree that opens doors — but only if you bring the key.",
       "overview": "3-year degree in accounting, finance, taxation, and economics. Affordable and widely available — but a plain B.Com alone starts at ₹2–4 LPA. Its real value is as a foundation for CA, CFA, ACCA, or an MBA.",
-      "tags": ["bcom", "commerce", "accounting", "finance", "business"],
+      "tags": [
+        "bcom",
+        "commerce",
+        "accounting",
+        "finance",
+        "business"
+      ],
       "why_people_love_it": [
         "Low-risk, affordable degree that keeps every door open — you can pivot to CA, CFA, ACCA, MBA, banking, or government jobs.",
         "Skills are genuinely useful in daily life — understanding taxes, investments, and how money works.",
@@ -1085,17 +2092,99 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["ca", "bba", "mba"],
+      "related_careers": [
+        "ca",
+        "bba",
+        "mba"
+      ],
       "metrics": {
-        "duration": "3 yrs", "stress": 2, "competition": 3,
-        "salary_potential": 3, "study_difficulty": 2, "work_life_balance": 3, "job_availability": 3, "abroad_prospects": 2,
+        "duration": "3 yrs",
+        "stress": 2,
+        "competition": 3,
+        "salary_potential": 3,
+        "study_difficulty": 2,
+        "work_life_balance": 3,
+        "job_availability": 3,
+        "abroad_prospects": 2,
         "ideal_personality": "Detail-oriented, patient with numbers, sees the degree as a foundation for further certification",
         "internship": "Varies by college — top programs have structured internships; most tier-3 colleges offer none",
-        "progression": ["Accounts Assistant / Audit Trainee", "Accountant / Financial Analyst", "Senior Accountant / Team Lead", "Manager / CA-CFA-qualified Specialist"],
+        "progression": [
+          "Accounts Assistant / Audit Trainee",
+          "Accountant / Financial Analyst",
+          "Senior Accountant / Team Lead",
+          "Manager / CA-CFA-qualified Specialist"
+        ],
         "misconception": "A B.Com degree automatically leads to a good corporate job after graduation.",
         "regret": "I underestimated how competitive the job market would be. By graduation, I realized that B.Com alone wasn't enough—I needed additional skills, certifications, or higher studies.",
         "praise": "A B.Com combined with the right certification gives you a career foundation as strong as any professional degree — at a fraction of the cost and time."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "accounts_executive",
+          "name": "Accounts / Finance Executive",
+          "pathway": [
+            "B.Com",
+            "Local Placement",
+            "Accounts Exec"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹2L–4 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Routine book-keeping, basic tally entries, GST filings, and payroll processing for small-to-medium businesses or BPOs.",
+          "difficulty": "Low — standard desk job available everywhere, but requires competing with thousands of other B.Com grads.",
+          "watch_out": "A plain B.Com is the most commoditized degree in India; you will be underpaid and easily replaceable without further skills."
+        },
+        {
+          "id": "ca_cfa_track",
+          "name": "Professional Certifications (CA/CFA/ACCA)",
+          "pathway": [
+            "B.Com",
+            "Clear Pro Exams",
+            "Corporate Finance"
+          ],
+          "time": "2–4 yrs after B.Com",
+          "salary": "₹8L–15 LPA (upon clearing)",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Using B.Com as a backup while actively cracking CA, CFA, or ACCA to break into core finance, audit, or investment analysis.",
+          "difficulty": "High — these exams have brutal pass rates and require years of dedicated study alongside or after college.",
+          "watch_out": "Half-finished CA/CFA levels hold very little market value; you must cross the finish line to see the ROI."
+        },
+        {
+          "id": "mba_pivot",
+          "name": "MBA → Corporate Management",
+          "pathway": [
+            "B.Com",
+            "CAT Prep",
+            "MBA",
+            "Corporate Role"
+          ],
+          "time": "2–3 yrs after graduation",
+          "salary": "₹12L–25 LPA (Tier-1/2 MBA)",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Using an MBA to completely overwrite the B.Com degree and pivot into high-paying marketing, consulting, or finance roles.",
+          "difficulty": "High — requires cracking CAT/XAT and spending ₹15-25L on MBA tuition.",
+          "watch_out": "Doing an MBA from a Tier-3 college just to delay unemployment is a financial death sentence; college tier is everything."
+        },
+        {
+          "id": "govt_banking_exams",
+          "name": "Banking & Government Jobs",
+          "pathway": [
+            "B.Com",
+            "1-3 yrs Prep",
+            "IBPS / SSC CGL"
+          ],
+          "time": "2–4 yrs after graduation",
+          "salary": "₹5L–10 LPA",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "Clerical or Probationary Officer roles in public sector banks (SBI, PNB) or central government departments.",
+          "difficulty": "Extreme — the syllabus isn't hard, but you are fighting a mathematical war of attrition against millions of applicants.",
+          "watch_out": "The preparation vortex traps many students well into their late 20s with a completely blank resume."
+        }
+      ]
     },
     {
       "id": "bba",
@@ -1103,7 +2192,12 @@
       "category": "commerce",
       "tagline": "A degree that works best as a foundation — not a finish line.",
       "overview": "3-year degree covering marketing, finance, HR, and operations. Designed as broad business introduction — but BBA alone opens sales and support roles at ₹2.5–4 LPA. Its real value is as preparation for an MBA.",
-      "tags": ["bba", "business administration", "management", "business"],
+      "tags": [
+        "bba",
+        "business administration",
+        "management",
+        "business"
+      ],
       "why_people_love_it": [
         "Structured exposure to business concepts — marketing, finance, strategy, operations — all in one place.",
         "Clear, accepted pathway into an MBA — top B-schools treat BBA graduates as natural applicants.",
@@ -1175,17 +2269,99 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["ca", "mba", "law"],
+      "related_careers": [
+        "ca",
+        "mba",
+        "law"
+      ],
       "metrics": {
-        "duration": "3 yrs", "stress": 2, "competition": 3,
-        "salary_potential": 3, "study_difficulty": 2, "work_life_balance": 3, "job_availability": 2, "abroad_prospects": 2,
+        "duration": "3 yrs",
+        "stress": 2,
+        "competition": 3,
+        "salary_potential": 3,
+        "study_difficulty": 2,
+        "work_life_balance": 3,
+        "job_availability": 2,
+        "abroad_prospects": 2,
         "ideal_personality": "Networker who enjoys business concepts, comfortable with sales/operations as entry point, and sees BBA as MBA preparation",
         "internship": "Critical — graduates with multiple internships land significantly better roles than those without any",
-        "progression": ["Management Trainee / Sales Associate", "Assistant Manager / Team Lead", "Manager / Department Head", "Senior Manager / Director (with MBA)"],
+        "progression": [
+          "Management Trainee / Sales Associate",
+          "Assistant Manager / Team Lead",
+          "Manager / Department Head",
+          "Senior Manager / Director (with MBA)"
+        ],
         "misconception": "BBA degree automatically leads to management roles straight after graduation.",
         "regret": "I assumed the BBA itself would make me stand out. By graduation, I realized internships, skills, and the reputation of my college mattered far more than the degree name.",
         "praise": "A BBA from a good program with solid internships set me up for an MBA far better than any other undergraduate degree could have."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "sales_ops_exec",
+          "name": "Sales / Operations Executive",
+          "pathway": [
+            "BBA",
+            "Campus Placement",
+            "Sales/Ops"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹2.5L–5 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Ground-level B2B/B2C sales, cold calling, or backend supply chain operations. Often high pressure with target-based incentives.",
+          "difficulty": "Low — companies are always aggressively hiring fresh graduates for frontline sales and revenue generation.",
+          "watch_out": "Sales is a high-burnout field; if you cannot hit your targets, you will be managed out very quickly."
+        },
+        {
+          "id": "bba_to_mba",
+          "name": "MBA → Mid-Level Management",
+          "pathway": [
+            "BBA",
+            "CAT / GMAT",
+            "Top Tier MBA",
+            "Manager"
+          ],
+          "time": "2–3 yrs after BBA",
+          "salary": "₹15L–30 LPA",
+          "likelihood": "some",
+          "gate_type": "exam",
+          "explanation": "The intended progression of a BBA. An MBA unlocks strategy, consulting, and brand management roles blocked to undergrads.",
+          "difficulty": "High — BBA grads face tough competition in CAT against engineers who dominate the quantitative sections.",
+          "watch_out": "A BBA + a Tier-3 MBA is entirely redundant; you must aim for Tier-1/2 institutes to see a salary jump."
+        },
+        {
+          "id": "digital_marketing_hr",
+          "name": "Marketing / HR Specialist",
+          "pathway": [
+            "BBA",
+            "Niche Skill Building",
+            "Specialist"
+          ],
+          "time": "1–3 yrs after BBA",
+          "salary": "₹5L–10 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Bypassing an MBA by hyper-specializing in performance marketing, SEO, or talent acquisition at tech startups or agencies.",
+          "difficulty": "Moderate — requires building a specialized portfolio or certifications (like Google Ads) that college doesn't teach.",
+          "watch_out": "You will be competing against engineers and mass-comm students who self-taught the same digital skills."
+        },
+        {
+          "id": "entrepreneurship",
+          "name": "Family Business / Entrepreneurship",
+          "pathway": [
+            "BBA",
+            "Mentorship",
+            "Own Business"
+          ],
+          "time": "3–5 yrs after BBA",
+          "salary": "Highly Variable",
+          "likelihood": "few",
+          "gate_type": "capital",
+          "explanation": "Taking over an existing family manufacturing/trading business or using venture capital to launch a startup.",
+          "difficulty": "Extreme — requires either inherited business infrastructure or the high risk tolerance to survive startup failure rates.",
+          "watch_out": "BBA theory rarely survives contact with the realities of Indian taxation, vendor management, and labor laws."
+        }
+      ]
     },
     {
       "id": "law",
@@ -1193,7 +2369,15 @@
       "category": "law",
       "tagline": "TV lawyers argue in court. Most real ones spend their day reading, drafting, and waiting.",
       "overview": "5-year integrated degree (BA LLB) via CLAT after Class 12, or a 3-year LLB after graduation. National Law Universities dominate placements — the IIT effect, but for law. Litigation, corporate, in-house counsel, judiciary are genuinely different careers sharing one degree.",
-      "tags": ["law", "llb", "legal", "lawyer", "advocate", "clat", "nlu"],
+      "tags": [
+        "law",
+        "llb",
+        "legal",
+        "lawyer",
+        "advocate",
+        "clat",
+        "nlu"
+      ],
       "why_people_love_it": [
         "Deeply intellectual work that rewards sharp thinking, research, and persuasion.",
         "Genuinely wide range of paths from one degree — litigation, corporate, policy, judiciary, in-house, academia.",
@@ -1265,17 +2449,97 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["ca", "mba"],
+      "related_careers": [
+        "ca",
+        "mba"
+      ],
       "metrics": {
-        "duration": "5 yrs", "stress": 4, "competition": 4,
-        "salary_potential": 5, "study_difficulty": 4, "work_life_balance": 2, "job_availability": 3, "abroad_prospects": 2,
+        "duration": "5 yrs",
+        "stress": 4,
+        "competition": 4,
+        "salary_potential": 5,
+        "study_difficulty": 4,
+        "work_life_balance": 2,
+        "job_availability": 3,
+        "abroad_prospects": 2,
         "ideal_personality": "Strong communicator who enjoys reading, arguing, and slow-building a reputation",
         "internship": "Mandatory internships every vacation — they matter more than your syllabus",
-        "progression": ["Junior Associate / Litigation Trainee", "Mid-level (Corporate Associate or Litigator)", "Senior Associate / Specialist Litigator", "Partner / Senior Advocate / Judiciary"],
+        "progression": [
+          "Junior Associate / Litigation Trainee",
+          "Mid-level (Corporate Associate or Litigator)",
+          "Senior Associate / Specialist Litigator",
+          "Partner / Senior Advocate / Judiciary"
+        ],
         "misconception": "Every lawyer argues dramatic courtroom cases like on TV.",
         "regret": "I didn't realize litigation pays almost nothing for the first 5-10 years, and I didn't have the runway to wait it out.",
         "praise": "Deeply intellectually engaging work that rewards sharp thinking and persistence."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "litigation_junior",
+          "name": "Litigation (Junior Advocate)",
+          "pathway": [
+            "LLB",
+            "Bar Exam",
+            "Junior to Senior Advocate"
+          ],
+          "time": "Immediately after LLB",
+          "salary": "₹15k–30k/month",
+          "likelihood": "common",
+          "gate_type": "licensure",
+          "explanation": "Drafting petitions, running around district or high courts for dates, and doing the grueling ground-work for an established senior lawyer.",
+          "difficulty": "Moderate to enter, brutal to survive — seniors rarely pay juniors a living wage for the first 3-5 years.",
+          "watch_out": "First generation lawyers face immense struggles; without a family legal background, building your own client base takes a decade."
+        },
+        {
+          "id": "corporate_associate",
+          "name": "Corporate Law Firm Associate",
+          "pathway": [
+            "LLB (Usually NLU)",
+            "Campus Placement",
+            "Law Firm"
+          ],
+          "time": "Immediately after LLB",
+          "salary": "₹12L–20 LPA",
+          "likelihood": "some",
+          "gate_type": "portfolio",
+          "explanation": "Working at top-tier firms (CAM, SAM, Khaitan) doing mergers, acquisitions, and contract reviews. Zero court visits.",
+          "difficulty": "Extreme — Tier-1 firms hire almost exclusively from top NLUs based on moot court records and internships.",
+          "watch_out": "The money is fantastic, but the 14-16 hour work days will utterly destroy your physical and mental health."
+        },
+        {
+          "id": "in_house_counsel",
+          "name": "In-house Counsel",
+          "pathway": [
+            "LLB",
+            "2-4 yrs Firm Exp",
+            "Corporate Legal Team"
+          ],
+          "time": "3–5 yrs after LLB",
+          "salary": "₹10L–25 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Working inside a company (like Amazon, Tata, or ICICI) managing their specific legal compliance, vendor contracts, and HR disputes.",
+          "difficulty": "Moderate — usually requires cutting your teeth at a law firm first before a company trusts you with their internal risk.",
+          "watch_out": "Great work-life balance compared to law firms, but your salary ceiling is much lower than law firm partners."
+        },
+        {
+          "id": "judiciary",
+          "name": "Judicial Services (Civil Judge)",
+          "pathway": [
+            "LLB",
+            "State PCS-J Prep",
+            "Magistrate/Judge"
+          ],
+          "time": "2–4 yrs of prep after LLB",
+          "salary": "₹80k–1.2L/month + Govt Perks",
+          "likelihood": "few",
+          "gate_type": "exam",
+          "explanation": "Clearing state judicial exams to become a magistrate. Offers immense social power, security, and government housing.",
+          "difficulty": "Extreme — exams are notoriously difficult, syllabus is vast, and vacancies are sporadic depending on the state.",
+          "watch_out": "Postings are often in remote rural districts for the first decade of your career."
+        }
+      ]
     },
     {
       "id": "design",
@@ -1283,7 +2547,16 @@
       "category": "design",
       "tagline": "Design isn't about drawing well. It's about solving problems people didn't know they had.",
       "overview": "4-year degree with specializations in UI/UX, product, graphic, fashion, industrial, and game design. Portfolio beats degree for almost every design job — a self-taught designer with strong projects can beat an NID graduate with a weak one.",
-      "tags": ["design", "nid", "nift", "ux", "ui", "graphic design", "fashion design", "product design"],
+      "tags": [
+        "design",
+        "nid",
+        "nift",
+        "ux",
+        "ui",
+        "graphic design",
+        "fashion design",
+        "product design"
+      ],
       "why_people_love_it": [
         "Genuinely varied work — no two briefs or projects look the same.",
         "Portfolio matters more than pedigree — self-taught designers can compete with NID grads.",
@@ -1355,17 +2628,97 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["cs_engineering", "mba"],
+      "related_careers": [
+        "cs_engineering",
+        "mba"
+      ],
       "metrics": {
-        "duration": "4 yrs", "stress": 3, "competition": 5,
-        "salary_potential": 4, "study_difficulty": 3, "work_life_balance": 3, "job_availability": 3, "abroad_prospects": 4,
+        "duration": "4 yrs",
+        "stress": 3,
+        "competition": 5,
+        "salary_potential": 4,
+        "study_difficulty": 3,
+        "work_life_balance": 3,
+        "job_availability": 3,
+        "abroad_prospects": 4,
         "ideal_personality": "Creatively driven self-starter who's comfortable with constant critique",
         "internship": "Helps with portfolio-building, but matters less than the portfolio itself",
-        "progression": ["Junior Designer", "Product / UX Designer", "Senior Designer / Design Lead", "Design Director / Independent Label"],
+        "progression": [
+          "Junior Designer",
+          "Product / UX Designer",
+          "Senior Designer / Design Lead",
+          "Design Director / Independent Label"
+        ],
         "misconception": "Design is easy, low-stress work where creativity alone gets you through.",
         "regret": "I thought design was mostly creative work — turns out it's 80% client feedback and revisions.",
         "praise": "Genuinely creative, varied work — no two days or projects look the same."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "graphic_brand_designer",
+          "name": "Graphic / Brand Designer",
+          "pathway": [
+            "B.Des / Portfolio",
+            "Agency Placement",
+            "Designer"
+          ],
+          "time": "Immediately after graduation",
+          "salary": "₹4L–8 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "portfolio",
+          "explanation": "Creating logos, social media creatives, packaging, and marketing collateral for ad agencies or corporate marketing teams.",
+          "difficulty": "Low — high demand across all industries, but the barrier to entry is non-existent so competition is massive.",
+          "watch_out": "You are competing against self-taught freelancers and AI tools; you must evolve past making basic social media posts to scale."
+        },
+        {
+          "id": "ui_ux_designer",
+          "name": "UI/UX Designer",
+          "pathway": [
+            "B.Des",
+            "Tech Portfolio",
+            "Product Team"
+          ],
+          "time": "1–2 yrs after graduation",
+          "salary": "₹8L–15 LPA (Entry/Mid)",
+          "likelihood": "some",
+          "gate_type": "portfolio",
+          "explanation": "Designing digital interfaces and user journeys for apps and websites at tech companies and startups.",
+          "difficulty": "Moderate — requires understanding user psychology, wireframing (Figma), and basic technical constraints, not just aesthetics.",
+          "watch_out": "Tech companies pay UI/UX designers much closer to software engineering salaries than traditional graphic design roles."
+        },
+        {
+          "id": "product_industrial_designer",
+          "name": "Industrial / Product Designer",
+          "pathway": [
+            "B.Des (Industrial)",
+            "Manufacturing Placement",
+            "Designer"
+          ],
+          "time": "2–3 yrs after graduation",
+          "salary": "₹6L–12 LPA",
+          "likelihood": "some",
+          "gate_type": "portfolio",
+          "explanation": "Designing physical objects (cars, furniture, electronics) focusing on ergonomics, material science, and mass production.",
+          "difficulty": "High — highly niche industry in India; requires deep understanding of manufacturing processes like injection molding.",
+          "watch_out": "Far fewer jobs exist for physical product design compared to digital UI/UX design."
+        },
+        {
+          "id": "independent_freelance",
+          "name": "Independent Freelance / Studio Owner",
+          "pathway": [
+            "Designer",
+            "3-5 yrs Network",
+            "Independent Studio"
+          ],
+          "time": "3–5 yrs after graduation",
+          "salary": "₹10L–30L+ (Highly Variable)",
+          "likelihood": "some",
+          "gate_type": "network",
+          "explanation": "Running your own design studio, taking on high-ticket branding, web design, or fashion projects directly from clients.",
+          "difficulty": "High — design skills matter less here than your ability to do sales, client management, and pricing negotiation.",
+          "watch_out": "A beautiful portfolio does not magically attract paying clients; you have to hustle for every invoice."
+        }
+      ]
     },
     {
       "id": "mba",
@@ -1373,7 +2726,14 @@
       "category": "management",
       "tagline": "An MBA doesn't create direction. It accelerates whatever direction you already have.",
       "overview": "2-year postgraduate degree via CAT/XAT/GMAT. Ideally pursued after 2-5 years of work experience. Consulting, product, marketing, finance, operations, and HR are all real specializations under one degree.",
-      "tags": ["mba", "management", "business", "cat", "iim", "isb"],
+      "tags": [
+        "mba",
+        "management",
+        "business",
+        "cat",
+        "iim",
+        "isb"
+      ],
       "why_people_love_it": [
         "Genuinely accelerates people who already have direction and experience.",
         "Cohort and alumni networks can open doors for decades afterward.",
@@ -1445,17 +2805,98 @@
           "url": "https://reddit.com/r/india"
         }
       ],
-      "related_careers": ["ca", "law", "cs_engineering"],
+      "related_careers": [
+        "ca",
+        "law",
+        "cs_engineering"
+      ],
       "metrics": {
-        "duration": "2 yrs", "stress": 4, "competition": 4,
-        "salary_potential": 5, "study_difficulty": 3, "work_life_balance": 2, "job_availability": 3, "abroad_prospects": 4,
+        "duration": "2 yrs",
+        "stress": 4,
+        "competition": 4,
+        "salary_potential": 5,
+        "study_difficulty": 3,
+        "work_life_balance": 2,
+        "job_availability": 3,
+        "abroad_prospects": 4,
         "ideal_personality": "Strategic networker with clear career goals going in",
         "internship": "Mandatory summer internship between year 1 and 2",
-        "progression": ["Associate / Management Trainee", "Manager (3-5 yrs)", "Senior Manager / Practice Lead", "Director / CXO track"],
+        "progression": [
+          "Associate / Management Trainee",
+          "Manager (3-5 yrs)",
+          "Senior Manager / Practice Lead",
+          "Director / CXO track"
+        ],
         "misconception": "Any MBA is worth it—the institute matters far less than the degree itself.",
         "regret": "I rushed into an MBA without knowing what I wanted from it. I graduated with the same uncertainty, just with a bigger education loan.",
         "praise": "A good MBA doesn't guarantee success, but it can accelerate your career in ways few other degrees can."
-      }
+      },
+      "career_paths": [
+        {
+          "id": "sales_ops_tier2",
+          "name": "Operations / Area Sales Manager",
+          "pathway": [
+            "Tier-2/3 MBA",
+            "Campus Placement",
+            "Manager"
+          ],
+          "time": "Immediately after MBA",
+          "salary": "₹8L–15 LPA",
+          "likelihood": "most_graduates",
+          "gate_type": "skills",
+          "explanation": "Managing distributor networks, retail territories, or supply chain logistics for FMCG, manufacturing, or retail brands.",
+          "difficulty": "Moderate — the standard exit for non-IIM MBA graduates; heavy focus on ground-level execution and people management.",
+          "watch_out": "Often involves brutal travel schedules and intense pressure from leadership to hit quarterly revenue targets."
+        },
+        {
+          "id": "management_consulting",
+          "name": "Management Consulting",
+          "pathway": [
+            "Tier-1 MBA",
+            "Case Interviews",
+            "Consultant"
+          ],
+          "time": "Immediately after top MBA",
+          "salary": "₹25L–35 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Flying to client sites (MBB, Big 4) to solve high-level corporate strategy problems, optimize costs, or manage mergers.",
+          "difficulty": "Extreme — strictly gatekept by top IIMs/ISB and requires surviving grueling case-study interviews.",
+          "watch_out": "You will live out of a suitcase in hotels and work 70+ hour weeks, optimizing PowerPoint decks at 2 AM."
+        },
+        {
+          "id": "product_management",
+          "name": "Product Management",
+          "pathway": [
+            "MBA",
+            "Tech Alignment",
+            "PM Role"
+          ],
+          "time": "1–3 yrs after MBA",
+          "salary": "₹20L–40 LPA",
+          "likelihood": "some",
+          "gate_type": "skills",
+          "explanation": "Acting as the 'mini-CEO' of a tech product feature, bridging the gap between business strategy, UI/UX design, and software engineering.",
+          "difficulty": "High — tech companies prefer MBAs who also have an engineering background (B.Tech + MBA) for these roles.",
+          "watch_out": "You have all the responsibility for the product's success but zero actual authority over the engineers building it."
+        },
+        {
+          "id": "corporate_finance_ib",
+          "name": "Investment Banking / PE",
+          "pathway": [
+            "Tier-1 MBA",
+            "Finance Major",
+            "IB Associate"
+          ],
+          "time": "Immediately after top MBA",
+          "salary": "₹30L–50L+ (with massive bonuses)",
+          "likelihood": "few",
+          "gate_type": "network",
+          "explanation": "Advising on mega-mergers, IPOs, and corporate fundraising. The most lucrative and cutthroat role in the financial world.",
+          "difficulty": "Extreme — banks hire exclusively from the top 10 B-schools and demand flawless academic and quantitative pedigrees.",
+          "watch_out": "The highest burnout rate of any profession; 100-hour work weeks are standard, and your personal life will cease to exist."
+        }
+      ]
     }
   ]
 }
