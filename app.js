@@ -569,13 +569,13 @@ function renderCareerPaths(career) {
           <div class="path-card-title-row">
             <span class="path-card-name">${p.name}</span>
             ${likelihoodLabel ? `<span class="path-likelihood path-likelihood-${p.likelihood}">${likelihoodLabel}</span>` : ''}
+            <span class="path-card-expand" aria-hidden="true"></span>
           </div>
           <div class="path-card-pathway">${pathwayChips}</div>
           <div class="path-card-meta">
             <span class="path-meta-item">${SNAPSHOT_ICONS.clock} ${p.time || '—'}</span>
             <span class="path-meta-item path-meta-salary">${p.salary || '—'}</span>
           </div>
-          <span class="path-card-chevron">▾</span>
         </button>
         <div class="path-card-body" hidden>
           ${p.explanation ? `<p class="path-explanation">${p.explanation}</p>` : ''}
