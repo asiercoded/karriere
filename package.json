@@ -1,0 +1,9 @@
+{
+  "name": "karriere",
+  "version": "1.0.0",
+  "description": "Career decision guide",
+  "scripts": {
+    "check": "node validate.js",
+    "dev": "serve . -p 4321"
+  }
+}

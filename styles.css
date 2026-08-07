@@ -280,6 +280,22 @@ button, input { font-family: inherit; }
   border-bottom: 1px solid var(--rule);
 }
 
+@media (max-width: 640px) {
+  .filter-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 16px;
+    /* Bleed to screen edges for a native feel */
+    margin-left: -28px;
+    margin-right: -28px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .filter-row::-webkit-scrollbar { display: none; }
+}
+
 .filter-btn {
   font-size: 13px;
   font-weight: 600;
@@ -306,6 +322,31 @@ button, input { font-family: inherit; }
   color: var(--ink-faint);
   margin: -16px 0 20px;
 }
+
+.trust-notice {
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.trust-notice-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  color: var(--violet);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s;
+}
+
+.trust-notice-link:hover { opacity: 0.75; }
 
 /* ── CAREER LIST ── */
 .career-list { display: flex; flex-direction: column; gap: 10px; }
@@ -496,6 +537,33 @@ footer {
   font-family: 'Manrope', sans-serif;
 }
 
+/* ── HERO QUOTE (surfaces above tabs on career detail page) ── */
+.hero-quote-block {
+  border-left: 3px solid var(--violet);
+  padding: 14px 20px;
+  margin: 22px 0 0;
+  background: var(--violet-dim);
+  border-radius: 0 8px 8px 0;
+}
+
+.hero-quote-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--violet);
+  margin-bottom: 8px;
+}
+
+.hero-quote-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0 0 10px;
+  max-width: 620px;
+}
+
 @media (max-width: 520px) {
   .career-title { font-size: 34px; }
   .career-tagline, .overview-copy { font-size: 16px; }
@@ -620,6 +688,18 @@ footer {
   padding-left: 4px;
 }
 
+/* Financial context note below salary bars */
+.salary-context-note {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 6px 6px 0;
+}
+
 /* Colors */
 .salary-row:nth-child(1) .salary-bar-fill { background: var(--rule-strong); }
 .salary-row:nth-child(2) .salary-bar-fill { background: var(--sage); }
@@ -713,32 +793,30 @@ footer {
 .not-found { text-align: center; padding: 80px 0; color: var(--ink-faint); }
 /* ── QUICK FACTS ── */
 .quickfacts-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  padding: 0;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px 0;
 }
 .quickfacts-item {
-  min-height: 96px;
-  padding: 18px 20px;
-  border-right: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  overflow-wrap: break-word;
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 140px;
 }
-.quickfacts-item:nth-child(4n) { border-right: 0; }
-.quickfacts-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); margin-bottom: 8px; }
-.quickfacts-value { font-size: 14px; font-weight: 700; color: var(--ink); line-height: 1.4; }
+.quickfacts-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); margin-bottom: 6px; }
+.quickfacts-value { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.4; }
 .quickfacts-text { font-weight: 500; font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
-.quickfacts-wide { grid-column: span 2; }
+.metric-sub {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-faint);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 2px;
+  font-style: normal;
+}
+.quickfacts-wide { flex: 1 1 100%; }
 
 @media (max-width: 760px) {
-  .quickfacts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .quickfacts-item:nth-child(4n) { border-right: 1px solid var(--rule); }
-  .quickfacts-item:nth-child(2n) { border-right: 0; }
   .quickfacts-wide { grid-column: 1 / -1; }
 }
 @media (max-width: 520px) {
@@ -747,38 +825,32 @@ footer {
 }
 
 
-.qf-bar { display: inline-flex; gap: 3px; }
-.qf-seg { width: 16px; height: 8px; border-radius: 2px; background: var(--rule); display: inline-block; }
-.qf-seg.filled.salary { background: var(--sage); }
-.qf-seg.filled.stress { background: var(--dustred); }
-.qf-seg.filled.competition { background: var(--amber); }
-.qf-seg.filled.worklife { background: var(--azure); }
-.qf-seg.filled.neutral { background: var(--ink-faint); }
+.metric-thin-bar { display: inline-flex; align-items: center; gap: 8px; }
+.metric-thin-label { font-size: 13px; font-weight: 600; color: var(--ink); }
+.metric-thin-track { width: 64px; height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; display: block; }
+.metric-thin-fill { display: block; height: 100%; border-radius: 2px; }
+
+.metric-thin-fill.salary, .metric-thin-fill.worklife, .metric-thin-fill.stars-positive { background: var(--sage); }
+.metric-thin-fill.stress, .metric-thin-fill.competition, .metric-thin-fill.stars-negative { background: var(--dustred); }
+.metric-thin-fill.neutral { background: var(--ink-faint); }
 
 /* ── REALITY SNAPSHOT ── */
 .snapshot-card {
   background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  padding: 20px 24px;
+  padding: 12px 0;
   box-shadow: none;
 }
 .snapshot-scale { font-size: 11px; color: var(--ink-soft); margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
-.snapshot-row { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.snapshot-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
 .snapshot-row:last-of-type { border-bottom: none; }
 .snapshot-icon { width: 20px; height: 20px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; color: var(--ink-faint); }
 .snapshot-icon svg { width: 15px; height: 15px; }
 .metric-chip.metric-duration svg { width: 11px; height: 11px; vertical-align: -1.5px; margin-right: 1px; }
-.snapshot-name { flex: 1; font-weight: 600; color: var(--ink); }
-.snapshot-stars { color: var(--amber); letter-spacing: 1px; font-size: 15px; }
+.snapshot-name { flex: 1; font-weight: 500; color: var(--ink); }
 .snapshot-duration { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-soft); }
-.snapshot-quotes { margin-top: 18px; display: flex; flex-direction: column; gap: 12px; }
-.snapshot-quote-label { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: 3px; }
+.snapshot-quotes { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; padding: 16px; background: var(--surface); border-radius: 8px; border: 1px solid var(--rule); }
+.snapshot-quote-label { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: 4px; }
 .snapshot-quote-text { color: var(--ink); font-style: normal; font-size: 13.5px; line-height: 1.5; }
-
-@media (max-width: 520px) {
-  .snapshot-card { padding: 20px; }
-}
 
 /* ── CAREER PATHS (Where graduates end up) ── */
 .paths-intro {
@@ -1021,11 +1093,16 @@ footer {
   background: none;
   border: none;
   cursor: pointer;
+  list-style: none; /* Hide default summary marker */
   font-family: inherit;
   font-size: 15px;
   font-weight: 700;
   color: var(--ink);
   text-align: left;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
 }
 
 .faq-question:hover .faq-question-text { color: var(--violet); }
@@ -1049,13 +1126,13 @@ footer {
 }
 
 .faq-question:hover .faq-question-chevron,
-.faq-question[aria-expanded="true"] .faq-question-chevron {
+details[open] .faq-question-chevron {
   border-color: var(--violet);
   color: var(--violet);
   background: var(--violet-dim);
 }
 
-.faq-question[aria-expanded="true"] .faq-question-chevron { transform: rotate(180deg); }
+details[open] .faq-question-chevron { transform: rotate(180deg); }
 
 .faq-question::after {
   content: 'Details';
@@ -1070,7 +1147,7 @@ footer {
 }
 
 .faq-question:hover::after { opacity: 1; }
-.faq-question[aria-expanded="true"]::after { content: 'Close'; }
+details[open] .faq-question::after { content: 'Close'; }
 
 .faq-answer {
   border-top: 1px solid var(--rule);
@@ -1176,6 +1253,104 @@ footer {
 
 .compare-search::placeholder { color: var(--ink-faint); }
 .compare-search:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px var(--amber-dim); }
+
+/* ── UNIFIED COMPARE FIELD (search + selection in one element) ── */
+.compare-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid var(--rule-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  min-height: 52px;
+  margin-bottom: 12px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* Empty state: search icon + text input */
+.compare-field--empty {
+  padding: 0 16px;
+}
+
+.compare-field--empty:focus-within {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-dim);
+}
+
+.compare-field-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--ink-faint);
+  transition: color 0.15s;
+}
+
+.compare-field--empty:focus-within .compare-field-icon {
+  color: var(--amber);
+}
+
+/* Override .compare-search defaults when inside the unified field */
+.compare-field .compare-search {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 14px 0;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.compare-field .compare-search:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Filled state: career name chip + clear button */
+.compare-field--filled {
+  padding: 12px 14px 12px 18px;
+  justify-content: space-between;
+  border-color: var(--violet);
+  background: var(--violet-dim);
+}
+
+.compare-field-name {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--violet);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.compare-field-clear {
+  flex-shrink: 0;
+  background: none;
+  border: 1.5px solid var(--rule-strong);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--ink-soft);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  font-family: 'Manrope', sans-serif;
+}
+
+.compare-field-clear:hover {
+  background: var(--dustred);
+  color: #fff;
+  border-color: var(--dustred);
+}
 
 .compare-options { display: flex; flex-direction: column; gap: 6px; }
 
@@ -1623,6 +1798,18 @@ footer {
   box-shadow: none;
 }
 
+/* Warning treatment for the Avoid If section — cannot be scrolled past unnoticed */
+.verdict-avoid-block {
+  background: rgba(178, 74, 58, 0.07);
+  border-left: 3px solid var(--dustred);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+}
+
+[data-theme="dark"] .verdict-avoid-block {
+  background: rgba(217, 123, 104, 0.10);
+}
+
 .verdict-label {
   font-family: 'Manrope', sans-serif;
   font-size: 18px;
@@ -1786,6 +1973,35 @@ footer {
   flex-shrink: 0;
 }
 
+/* ── INLINE COMPARE BUTTON (lives in detail topbar) ── */
+.compare-btn-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border: 1.5px solid var(--violet);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  font-family: 'Manrope', sans-serif;
+  background: var(--violet-dim);
+  color: var(--violet);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.compare-btn-inline:hover {
+  background: var(--violet);
+  color: #fff;
+}
+
+/* On very small screens, hide the text label — keep only the ⇄ glyph */
+@media (max-width: 460px) {
+  .compare-btn-inline .compare-label { display: none; }
+}
+
 /* ── SHARE TOAST ── */
 .share-toast {
   position: fixed;
@@ -1908,4 +2124,41 @@ footer {
   .contact-form {
     padding: 20px;
   }
+}
+
+/* ── PROGRESSION LADDER ── */
+.progression-ladder {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+.progression-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.progression-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--violet);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.progression-text {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.progression-divider {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: 24px;
+}
+
+.metric-a11y-label {
+  font-weight: normal;
+  color: var(--ink-faint);
+  font-size: 0.9em;
+  margin-left: 2px;
 }

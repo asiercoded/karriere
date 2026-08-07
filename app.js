@@ -34,7 +34,8 @@ const SNAPSHOT_ICONS = {
   study: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5c2-1.3 5-2 8-1v14c-3-1-6-.3-8 1V5z"></path><path d="M22 5c-2-1.3-5-2-8-1v14c3-1 6-.3 8 1V5z"></path></svg>',
   competition: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"></path><path d="M7 5H4a1 1 0 0 0-1 1c0 2.5 1.8 4.5 4 4.8"></path><path d="M17 5h3a1 1 0 0 1 1 1c0 2.5-1.8 4.5-4 4.8"></path><path d="M12 14v3"></path><path d="M9 21h6"></path><path d="M9.5 17h5l.5 4h-6l.5-4z"></path></svg>',
   abroad: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path></svg>',
-  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>'
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>',
+  job: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>'
 };
 const TAB_ICONS = {
   overview: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"></path><path d="M15 3v3h3"></path><line x1="9" y1="11" x2="15" y2="11"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>',
@@ -63,65 +64,19 @@ const METRIC_DIRECTION = {
   duration: 'lower'
 };
 
-function parseDurationYears(str) {
-  // 1. Strict type check to prevent .match() crashes on undefined/numbers
-  if (typeof str !== 'string') return 0; 
-  
-  try {
-    const plus = str.match(/(\d+)\s*\+\s*(\d+)/);
-    if (plus) return parseInt(plus[1], 10) + parseInt(plus[2], 10);
-    
-    const range = str.match(/(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)/);
-    if (range) return (parseFloat(range[1]) + parseFloat(range[2])) / 2;
-    
-    const single = str.match(/(\d+(?:\.\d+)?)/);
-    return single ? parseFloat(single[1]) : 0;
-  } catch (err) {
-    // 2. Absolute fallback to prevent comparison engine failure
-    return 0; 
-  }
+function getMid(range) {
+  if (!range || (!range.min && !range.max)) return 0;
+  if (!range.min) return range.max;
+  if (!range.max) return range.min;
+  return (range.min + range.max) / 2;
 }
 
-// Returns {min, max} years for a duration string like "3–5 yrs", "+2–4 yrs", "Immediately..." → {0,0}
-function parseDurationRange(str) {
-  if (typeof str !== 'string' || !str) return { min: 0, max: 0 };
-  try {
-    const range = str.match(/(\d+(?:\.\d+)?)\s*[-–—]\s*(\d+(?:\.\d+)?)/);
-    if (range) return { min: parseFloat(range[1]), max: parseFloat(range[2]) };
-    const single = str.match(/(\d+(?:\.\d+)?)/);
-    const v = single ? parseFloat(single[1]) : 0;
-    return { min: v, max: v };
-  } catch (err) {
-    return { min: 0, max: 0 };
-  }
-}
-
-function parseSalaryValue(str) {
-  if (!str) return 0;
-  const noNotes = str.split('(')[0];
-  const clean = noNotes.replace(/,/g, '').toLowerCase().replace(/[–—]| to /g, '-');
-  
-  let timeMultiplier = clean.includes('month') ? 12 : 1;
-  const parts = clean.split('-');
-  const maxPart = parts[parts.length - 1]; 
-  
-  let unitMultiplier = 1;
-  if (maxPart.includes('lakh') || maxPart.includes('lpa')) unitMultiplier = 100000;
-  else if (maxPart.includes('cr') || maxPart.includes('crore')) unitMultiplier = 10000000;
-  else if (clean.includes('lakh') || clean.includes('lpa')) unitMultiplier = 100000; 
-  
-  const nums = maxPart.match(/\d+(?:\.\d+)?/g);
-  const val = nums ? Math.max(...nums.map(Number)) : 0;
-  return val * unitMultiplier * timeMultiplier;
-}
-
-// 2. Update calculateSalaryPercentage
-function calculateSalaryPercentage(entryStr, midStr, seniorStr) {
-  const e = parseSalaryValue(entryStr);
-  const m = parseSalaryValue(midStr);
-  const s = parseSalaryValue(seniorStr);
+function calculateSalaryPercentage(salaryParsed) {
+  if (!salaryParsed) return { entry: 20, mid: 40, senior: 100 };
+  const e = getMid(salaryParsed.entry);
+  const m = getMid(salaryParsed.mid);
+  const s = getMid(salaryParsed.senior);
   const max = Math.max(e, m, s, 1); 
-
   return {
     entry: e ? Math.max(20, (e / max) * 100) : 20,
     mid: m ? Math.max(40, (m / max) * 100) : 40,
@@ -165,9 +120,18 @@ function salaryCell(str) {
   `;
 }
 
-function starCell(value) {
+function starCell(value, metricKey = '') {
   if (!value) return '—';
-  return `${renderStars(value)}<span class="comp-star-num">${value}/5</span>`;
+  let colorClass = '';
+  if (metricKey) {
+    const dir = METRIC_DIRECTION[metricKey];
+    if (dir === 'lower') {
+      colorClass = value >= 4 ? 'stars-negative' : (value <= 2 ? 'stars-positive' : '');
+    } else if (dir === 'higher') {
+      colorClass = value >= 4 ? 'stars-positive' : (value <= 2 ? 'stars-negative' : '');
+    }
+  }
+  return renderStars(value, colorClass);
 }
 
 const LOGOMARK = '<svg class="logomark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"></line><line x1="5.07" y1="8" x2="18.93" y2="16"></line><line x1="18.93" y1="8" x2="5.07" y2="16"></line></svg>';
@@ -214,17 +178,48 @@ function initTheme() {
 }
 
 
-function renderStars(value) {
-  if (!value) return '<span class="snapshot-stars">—</span>';
-  let s = '';
-  for (let i = 1; i <= 5; i++) s += i <= value ? '★' : '☆';
-  return `<span class="snapshot-stars">${s}</span>`;
+function renderStars(value, colorClass = '') {
+  if (!value) return `<span class="metric-thin-bar"><span class="metric-thin-track"></span></span>`;
+  const pct = (value / 5) * 100;
+  let label = '';
+  if (value >= 4) label = ' <span class="metric-a11y-label">(High)</span>';
+  else if (value <= 2) label = ' <span class="metric-a11y-label">(Low)</span>';
+  else label = ' <span class="metric-a11y-label">(Avg)</span>';
+
+  return `
+    <span class="metric-thin-bar">
+      <span class="metric-thin-label">${value}/5${label}</span>
+      <span class="metric-thin-track"><span class="metric-thin-fill ${colorClass}" style="width: ${pct}%;"></span></span>
+    </span>`;
+}
+
+function truncateText(str, maxLen) {
+  if (!str || str.length <= maxLen) return str;
+  let cut = str.lastIndexOf(' ', maxLen);
+  if (cut < 50) cut = maxLen;
+  // Strip any trailing incomplete HTML entity (e.g. &amp or &#39)
+  let result = str.slice(0, cut).replace(/&[^;]{0,6}$/, '');
+  return result + '\u2026';
+}
+
+function getSalaryContext(entryParsed) {
+  if (!entryParsed || (!entryParsed.min && !entryParsed.max)) return null;
+  const annual = getMid(entryParsed);
+  if (!annual) return null;
+  const monthly = annual / 12;
+  if (monthly < 50000) return 'Enough for basics in a Tier-2 city. Will be tight in metros without family support.';
+  if (monthly < 150000) return 'A comfortable independent living in most Indian cities.';
+  return 'Well above average. Financially comfortable from day one.';
 }
 
 function renderQFMeter(value, colorClass) {
-  let segs = '';
-  for (let i = 1; i <= 5; i++) segs += `<span class="qf-seg ${colorClass} ${i <= value ? 'filled' : ''}"></span>`;
-  return `<span class="qf-bar">${segs}</span>`;
+  if (!value) return `<span class="metric-thin-bar"><span class="metric-thin-track"></span></span>`;
+  const pct = (value / 5) * 100;
+  return `
+    <span class="metric-thin-bar">
+      <span class="metric-thin-label">${value}/5</span>
+      <span class="metric-thin-track"><span class="metric-thin-fill ${colorClass}" style="width: ${pct}%;"></span></span>
+    </span>`;
 }
 
 function renderMeter(value, type) {
@@ -294,6 +289,15 @@ function formatEntrySalary(entry) {
 // Automatically detect if hosted on GitHub Pages (subdirectory) vs Custom Domain
 const BASE = window.location.hostname.includes('github.io') ? '/karriere' : '';
 
+function updateSearchUrl() {
+  const params = new URLSearchParams();
+  if (activeCategory !== 'all') params.set('filter', activeCategory);
+  if (searchQuery.trim()) params.set('q', searchQuery.trim());
+  const qs = params.toString();
+  const newUrl = qs ? `${BASE}/?${qs}` : `${BASE}/`;
+  history.replaceState(null, '', newUrl);
+}
+
 function navigate(path) {
   if (path.startsWith('compare=')) {
     const [a, b] = path.replace('compare=', '').split(',');
@@ -311,14 +315,37 @@ function getFilteredCareers() {
   let list = activeCategory === 'all' ? careers : careers.filter(c => c.category === activeCategory);
   if (searchQuery.trim()) {
     const q = searchQuery.trim().toLowerCase();
-    list = list.filter(c =>
-      c.name?.toLowerCase().includes(q) ||
-      c.tagline?.toLowerCase().includes(q) ||
-      c.overview?.toLowerCase().includes(q) ||
-      (c.what_nobody_tells_you || []).some(p => p?.toLowerCase().includes(q)) ||
-      c.salary?.entry?.toLowerCase().includes(q) ||
-      (ALIASES[c.id] || []).some(a => a.toLowerCase().includes(q))
-    );
+    const scoredList = [];
+    
+    for (const c of list) {
+      let score = 0;
+      
+      const n = c.name?.toLowerCase() || '';
+      if (n === q) score += 100;
+      else if (n.startsWith(q)) score += 50;
+      else if (n.includes(q)) score += 30;
+      
+      if ((c.tags || []).some(t => t?.toLowerCase().includes(q))) score += 20;
+      if ((ALIASES[c.id] || []).some(a => a.toLowerCase().includes(q))) score += 20;
+      if (c.tagline?.toLowerCase().includes(q)) score += 10;
+      
+      const bodyHit = 
+        c.overview?.toLowerCase().includes(q) ||
+        (c.what_nobody_tells_you || []).some(p => p?.toLowerCase().includes(q)) ||
+        (c.why_people_love_it || []).some(p => p?.toLowerCase().includes(q)) ||
+        (c.who_thrives || []).some(p => p?.toLowerCase().includes(q)) ||
+        (c.who_regrets_it || []).some(p => p?.toLowerCase().includes(q)) ||
+        (c.choose_if || []).some(p => p?.toLowerCase().includes(q)) ||
+        (c.avoid_if || []).some(p => p?.toLowerCase().includes(q)) ||
+        (c.career_paths || []).some(p => p.name?.toLowerCase().includes(q) || p.explanation?.toLowerCase().includes(q)) ||
+        (c.faq || []).some(f => f.question?.toLowerCase().includes(q) || f.answer?.toLowerCase().includes(q));
+        
+      if (bodyHit) score += 1;
+      
+      if (score > 0) scoredList.push({ c, score });
+    }
+    
+    list = scoredList.sort((a, b) => b.score - a.score).map(i => i.c);
   }
   return list;
 }
@@ -327,7 +354,7 @@ function getFilteredCareers() {
 function renderListView() {
   const cats = [...new Set(careers.map(c => c.category))];
   const filtered = getFilteredCareers();
-  const totalVoices = careers.reduce((sum, c) => sum + (c.real_experiences ? c.real_experiences.length : 0), 0);
+
 
   const filterButtons = `<button class="filter-btn ${activeCategory === 'all' ? 'active' : ''}" data-cat="all" aria-pressed="${activeCategory === 'all'}">All</button>` +
     cats.map(cat => `<button class="filter-btn ${activeCategory === cat ? 'active' : ''}" data-cat="${cat}" aria-pressed="${activeCategory === cat}">${CATEGORY_LABELS[cat] || cat}</button>`).join('');
@@ -350,7 +377,12 @@ function renderListView() {
       <div class="entry-arrow">→</div>
     </button>
   `;
-  }).join('') : `<div class="no-results">No careers match "${searchQuery}". Try a different search or clear the filter.</div>`;
+  }).join('') : `
+    <div class="no-results">
+      <p style="font-size:16px;font-weight:600;margin-bottom:8px;">No careers match "${escapeHtml(searchQuery)}"</p>
+      <p style="font-size:14px;color:var(--ink-soft);margin-bottom:16px;">Try searching by keywords like "doctor", "lawyer", "high salary", or "stress-free".</p>
+      <button class="filter-btn active" onclick="searchQuery=''; render(false);" style="padding:8px 16px;">Clear search filter</button>
+    </div>`;
 
   return `
     <div class="wrap">
@@ -380,14 +412,15 @@ function renderListView() {
             <div class="hero-search-row">
               <div class="hero-search-field">
                 <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" class="hero-search" id="hero-search" placeholder="Search a career — try 'law', 'design', or 'stress-free'" value="${escapeHtml(searchQuery)}" aria-label="Search careers">
+                <input type="text" class="hero-search" id="hero-search" placeholder="Search by degree (B.Tech), job (Lawyer), or vibe (stress-free)" value="${escapeHtml(searchQuery)}" aria-label="Search careers">
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="filter-row" id="list-section">${filterButtons}</div>
-          <button class="compare-cta" data-nav="compare=,">Compare Careers</button>
+      <div class="trust-notice">Not a coaching institute &middot; Zero ads &middot; No sponsored results &middot; <button class="trust-notice-link" data-nav="about">Our story &rarr;</button></div>
+      <button class="compare-cta" data-nav="compare=,">Compare Careers</button>
 
       <div class="results-count">Showing ${filtered.length} of ${careers.length} careers</div>
       <div class="career-list">${listHtml}</div>
@@ -403,8 +436,7 @@ function renderDetailView(id) {
   const career = careers.find(c => c.id === id);
   if (!career) return `<div class="wrap detail-wrap"><button class="back-link" data-nav="">← Back</button><div class="not-found">Career not found.</div></div>`;
 
-  const cm = career.metrics || {};
-  const dm = career.metrics || {};
+  const m = career.metrics || {};
 
   // ── Tab definitions ──
   const tabs = [
@@ -419,7 +451,7 @@ function renderDetailView(id) {
    const tabBar = `
     <div class="detail-tab-bar" role="tablist">
       ${tabs.map(t => `
-        <button class="detail-tab ${activeDetailTab === t.id ? 'active' : ''}" data-tab="${t.id}" role="tab" aria-selected="${activeDetailTab === t.id}">
+        <button class="detail-tab ${activeDetailTab === t.id ? 'active' : ''}" id="tab-${t.id}" data-tab="${t.id}" role="tab" aria-selected="${activeDetailTab === t.id}" aria-controls="panel-${t.id}">
           <span class="detail-tab-icon">${TAB_ICONS[t.id]}</span>
           <span class="detail-tab-label">${t.label}</span>
         </button>
@@ -432,11 +464,20 @@ function renderDetailView(id) {
     return rc ? `<button class="related-pill" data-nav="${rc.id}">${rc.name}</button>` : '';
   }).join('');
 
+  // ── Hero quote: surface first real experience above the tabs ──
+  const firstExp = (career.real_experiences || [])[0];
+  const heroQuoteHtml = firstExp ? `<div class="hero-quote-block">
+    <div class="hero-quote-label">From someone who lived it</div>
+    <blockquote class="hero-quote-text">&ldquo;${truncateText(firstExp.quote, 220)}&rdquo;</blockquote>
+    <a class="quote-source" href="${firstExp.url}" target="_blank" rel="noopener noreferrer">${firstExp.source}${firstExp.url ? ' &uarr;' : ''}</a>
+  </div>` : '';
+
   return `
     <div class="wrap detail-wrap">
       <div class="detail-topbar">
         <button class="back-link" data-nav="">← Back to all careers</button>
         <div class="detail-topbar-actions">
+          <button class="compare-btn-inline" data-nav="compare=${career.id}," title="Compare with another career">⇄ <span class="compare-label">Compare</span></button>
           <button class="share-btn share-page" data-share-id="${career.id}" data-share-name="${career.name}" aria-label="Share this career">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
             <span>Share</span>
@@ -452,21 +493,20 @@ function renderDetailView(id) {
         <p class="career-tagline">${career.tagline}</p>
       </div>
 
+      ${heroQuoteHtml}
+
       ${tabBar}
 
-        <div class="detail-tab-content">
-        <div class="tab-panel" data-tab="overview" ${activeDetailTab === 'overview' ? '' : 'hidden'}>${renderOverviewTab(career, cm, dm)}</div>
-        <div class="tab-panel" data-tab="realities" ${activeDetailTab === 'realities' ? '' : 'hidden'}>${renderRealitiesTab(career, cm, dm)}</div>
-        <div class="tab-panel" data-tab="fit" ${activeDetailTab === 'fit' ? '' : 'hidden'}>${renderFitTab(career, cm, dm)}</div>
-        <div class="tab-panel" data-tab="pay" ${activeDetailTab === 'pay' ? '' : 'hidden'}>${renderPayTab(career, cm, dm)}</div>
-        <div class="tab-panel" data-tab="experiences" ${activeDetailTab === 'experiences' ? '' : 'hidden'}>${renderExperiencesTab(career, cm, dm)}</div>
-        <div class="tab-panel" data-tab="faq" ${activeDetailTab === 'faq' ? '' : 'hidden'}>${renderFaqTab(career, cm, dm)}</div>
+      <div class="detail-tab-content">
+        <div class="tab-panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" data-tab="overview" ${activeDetailTab === 'overview' ? '' : 'hidden'}>${renderOverviewTab(career, m)}</div>
+        <div class="tab-panel" id="panel-realities" role="tabpanel" aria-labelledby="tab-realities" data-tab="realities" ${activeDetailTab === 'realities' ? '' : 'hidden'}>${renderRealitiesTab(career, m)}</div>
+        <div class="tab-panel" id="panel-fit" role="tabpanel" aria-labelledby="tab-fit" data-tab="fit" ${activeDetailTab === 'fit' ? '' : 'hidden'}>${renderFitTab(career, m)}</div>
+        <div class="tab-panel" id="panel-pay" role="tabpanel" aria-labelledby="tab-pay" data-tab="pay" ${activeDetailTab === 'pay' ? '' : 'hidden'}>${renderPayTab(career, m)}</div>
+        <div class="tab-panel" id="panel-experiences" role="tabpanel" aria-labelledby="tab-experiences" data-tab="experiences" ${activeDetailTab === 'experiences' ? '' : 'hidden'}>${renderExperiencesTab(career, m)}</div>
+        <div class="tab-panel" id="panel-faq" role="tabpanel" aria-labelledby="tab-faq" data-tab="faq" ${activeDetailTab === 'faq' ? '' : 'hidden'}>${renderFaqTab(career, m)}</div>
       </div>
 
 
-      <div class="detail-actions">
-        <button class="compare-cta compare-from-detail" data-nav="compare=${career.id},">Compare with another career</button>
-      </div>
 
       <div class="section related-section">
         <div class="section-label">Explore similar degrees</div>
@@ -474,20 +514,16 @@ function renderDetailView(id) {
       </div>
     </div>`;
 }
-function renderOverviewTab(career, cm, dm) {
+function renderOverviewTab(career, m) {
   return `
     <div class="section-body overview-copy">${career.overview}</div>
 
     <div class="quickfacts-grid">
-      <div class="quickfacts-item"><div class="quickfacts-label">Duration</div><div class="quickfacts-value">${cm.duration || '—'}</div></div>
+      <div class="quickfacts-item"><div class="quickfacts-label">Duration</div><div class="quickfacts-value">${m.duration || '—'}</div></div>
       <div class="quickfacts-item"><div class="quickfacts-label">Entry salary</div><div class="quickfacts-value">${career.salary?.entry || '—'}</div></div>
       <div class="quickfacts-item"><div class="quickfacts-label">Mid-career salary</div><div class="quickfacts-value">${career.salary?.mid || '—'}</div></div>
-      <div class="quickfacts-item"><div class="quickfacts-label">Competition</div>${renderQFMeter(cm.competition, 'competition')}</div>
-      <div class="quickfacts-item"><div class="quickfacts-label">Stress</div>${renderQFMeter(cm.stress, 'stress')}</div>
-      <div class="quickfacts-item"><div class="quickfacts-label">Work-life balance</div>${renderQFMeter(dm.work_life_balance, 'worklife')}</div>
-      <div class="quickfacts-item"><div class="quickfacts-label">Job availability</div>${renderQFMeter(dm.job_availability, 'neutral')}</div>
-      <div class="quickfacts-item"><div class="quickfacts-label">Abroad prospects</div>${renderQFMeter(dm.abroad_prospects, 'neutral')}</div>
-      <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Ideal personality</div><div class="quickfacts-value quickfacts-text">${dm.ideal_personality || '—'}</div></div>
+      <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Ideal personality</div><div class="quickfacts-value quickfacts-text">${m.ideal_personality || '—'}</div></div>
+      ${m.internship ? `<div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Internship</div><div class="quickfacts-value quickfacts-text">${m.internship}</div></div>` : ''}
       ${career.career_outlook ? `
       <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (India)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.india}</div></div>
       <div class="quickfacts-item quickfacts-wide"><div class="quickfacts-label">Career outlook (Abroad)</div><div class="quickfacts-value quickfacts-text">${career.career_outlook.abroad}</div></div>
@@ -495,7 +531,7 @@ function renderOverviewTab(career, cm, dm) {
     </div>`;
 }
 
-function renderRealitiesTab(career, cm, dm) {
+function renderRealitiesTab(career, m) {
   return `
     <div class="section-label">What nobody tells you</div>
     <ul class="pain-list">${career.what_nobody_tells_you.map(p => `<li>${p}</li>`).join('')}</ul>
@@ -505,18 +541,18 @@ function renderRealitiesTab(career, cm, dm) {
       <div class="snapshot-card">
       <div class="snapshot-scale">Scale: 1 = low, 5 = high</div>
 
-        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.salary}</span><span class="snapshot-name">Salary potential</span>${renderStars(dm.salary_potential)}</div>
-        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.stress}</span><span class="snapshot-name">Stress</span>${renderStars(cm.stress)}</div>
-        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.worklife}</span><span class="snapshot-name">Work-life balance</span>${renderStars(dm.work_life_balance)}</div>
-        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.study}</span><span class="snapshot-name">Study difficulty</span>${renderStars(dm.study_difficulty)}</div>
-        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.competition}</span><span class="snapshot-name">Competition</span>${renderStars(cm.competition)}</div>
-        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.abroad}</span><span class="snapshot-name">Abroad opportunities</span>${renderStars(dm.abroad_prospects)}</div>
-        <div class="snapshot-duration">Average training time: <strong>${cm.duration || '—'}</strong></div>
-        <div class="snapshot-quotes">
-          <div class="snapshot-quote"><span class="snapshot-quote-label">Biggest misconception</span><span class="snapshot-quote-text">"${dm.misconception || ''}"</span></div>
-          <div class="snapshot-quote"><span class="snapshot-quote-label">Most common regret</span><span class="snapshot-quote-text">"${dm.regret || ''}"</span></div>
-          <div class="snapshot-quote"><span class="snapshot-quote-label">Most common praise</span><span class="snapshot-quote-text">"${dm.praise || ''}"</span></div>
-        </div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.salary}</span><span class="snapshot-name">Salary potential</span>${renderStars(m.salary_potential, 'stars-positive')}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.stress}</span><span class="snapshot-name">Stress</span>${renderStars(m.stress, 'stars-negative')}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.worklife}</span><span class="snapshot-name">Work-life balance</span>${renderStars(m.work_life_balance, 'stars-positive')}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.study}</span><span class="snapshot-name">Study difficulty</span>${renderStars(m.study_difficulty, 'stars-negative')}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.competition}</span><span class="snapshot-name">Competition <span class="metric-sub">(entrance)</span></span>${renderStars(m.competition, 'stars-negative')}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.job}</span><span class="snapshot-name">Job availability</span>${renderStars(m.job_availability, 'stars-positive')}</div>
+        <div class="snapshot-row"><span class="snapshot-icon">${SNAPSHOT_ICONS.abroad}</span><span class="snapshot-name">Abroad opportunities</span>${renderStars(m.abroad_prospects, 'stars-positive')}</div>
+      </div>
+      <div class="snapshot-quotes">
+        <div class="snapshot-quote"><span class="snapshot-quote-label">Biggest misconception</span><span class="snapshot-quote-text">"${m.misconception || ''}"</span></div>
+        <div class="snapshot-quote"><span class="snapshot-quote-label">Most common regret</span><span class="snapshot-quote-text">"${m.regret || ''}"</span></div>
+        <div class="snapshot-quote"><span class="snapshot-quote-label">Most common praise</span><span class="snapshot-quote-text">"${m.praise || ''}"</span></div>
       </div>
     </div>
 
@@ -526,7 +562,7 @@ function renderRealitiesTab(career, cm, dm) {
     </div>`;
 }
 
-function renderFitTab(career, cm, dm) {
+function renderFitTab(career, m) {
   return `
     <div class="fit-grid">
       <div class="fit-card">
@@ -596,24 +632,24 @@ function renderCareerPaths(career) {
   `;
 }
 
-function renderPayTab(career, cm, dm) {
+function renderPayTab(career, m) {
   const pathsHtml = renderCareerPaths(career);
   const paths = career.career_paths || [];
-  const degreeYears = parseDurationYears(cm.duration);
+  const degreeYears = career.duration_parsed || 0;
 
   // One-line journey summary: from Class 12, through the degree, to an established role.
   // Estimate = degree years + span of realistic (non-'few') path durations. Paths are
   // alternatives, not sequential, so we take the earliest start and latest end.
   const realisticTimes = paths
     .filter(p => p.likelihood !== 'few')
-    .map(p => parseDurationRange(p.time));
+    .map(p => p.time_parsed || { min: 0, max: 0 });
   const estMin = degreeYears + (realisticTimes.length ? Math.min(...realisticTimes.map(r => r.min)) : 0);
   const estMax = degreeYears + (realisticTimes.length ? Math.max(...realisticTimes.map(r => r.max)) : 0);
   const journeySummary = estMax > estMin
     ? `From Class 12 to an established role: ~${Math.round(estMin)}–${Math.round(estMax)} yrs.`
     : `From Class 12 to an established role: ~${Math.round(estMin)} yrs.`;
 
-  const pct = calculateSalaryPercentage(career.salary?.entry, career.salary?.mid, career.salary?.senior);
+  const pct = calculateSalaryPercentage(career.salary_parsed);
 
   // Helper to split the number from the parenthetical note
   function splitBarData(str) {
@@ -628,6 +664,7 @@ function renderPayTab(career, cm, dm) {
   const eData = splitBarData(career.salary?.entry);
   const mData = splitBarData(career.salary?.mid);
   const sData = splitBarData(career.salary?.senior);
+  const salaryCtx = getSalaryContext(career.salary_parsed?.entry);
 
 return `
     ${pathsHtml}
@@ -658,22 +695,40 @@ return `
           </div>
         </div>
       </div>
+      ${salaryCtx ? `<p class="salary-context-note">&rarr; ${salaryCtx}</p>` : ''}
     </div>`;
 }
 
-function renderExperiencesTab(career, cm, dm) {
+function renderExperiencesTab(career, m) {
   const exps = career.real_experiences || [];
-  if (!exps.length) return '<p style="color:var(--ink-faint);">No experiences yet.</p>';
+  
+  let progressionHtml = '';
+  if (m && m.progression && m.progression.length) {
+    progressionHtml = `
+      <div class="section-label">Typical progression</div>
+      <div class="progression-ladder">
+        ${m.progression.map((step, i) => `
+          <div class="progression-step">
+            <span class="progression-dot"></span>
+            <span class="progression-text">${step}</span>
+          </div>
+        `).join('')}
+      </div>
+      <div class="progression-divider"></div>
+    `;
+  }
 
-  return exps.map((q, i) => `
-    <div class="quote-block" ${i === 0 ? '' : ''}>
+  const expsHtml = exps.length ? exps.map((q, i) => `
+    <div class="quote-block">
       <div class="quote-text">"${q.quote}"</div>
       <a class="quote-source" href="${q.url}" target="_blank" rel="noopener noreferrer">${q.source}${q.url ? ' ↗' : ''}</a>
     </div>
-  `).join('');
+  `).join('') : '<p style="color:var(--ink-faint);">No experiences yet.</p>';
+
+  return progressionHtml + expsHtml;
 }
 
-function renderFaqTab(career, cm, dm) {
+function renderFaqTab(career) {
   const faqs = career.faq || [];
   if (!faqs.length) return '<p style="color:var(--ink-faint);">No FAQs yet.</p>';
 
@@ -682,15 +737,15 @@ function renderFaqTab(career, cm, dm) {
     <p class="section-subline">The questions students actually ask — answered honestly.</p>
     <div class="faq-list">
       ${faqs.map(f => `
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
+        <details class="faq-item">
+          <summary class="faq-question">
             <span class="faq-question-text">${f.question}</span>
             <span class="faq-question-chevron">▾</span>
-          </button>
-          <div class="faq-answer" hidden>
+          </summary>
+          <div class="faq-answer">
             <p class="faq-answer-text">${f.answer}</p>
           </div>
-        </div>
+        </details>
       `).join('')}
     </div>`;
 }
@@ -713,7 +768,9 @@ function renderVerdictCard(career) {
       ${avoid ? `
       <div class="verdict-section">
         <div class="verdict-avoid-title">Avoid if…</div>
-        <ul class="pain-list">${avoid}</ul>
+        <div class="verdict-avoid-block">
+          <ul class="pain-list">${avoid}</ul>
+        </div>
       </div>` : ''}
       ${commit ? `
       <div class="verdict-section">
@@ -890,6 +947,7 @@ function attachListeners() {
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(async () => {
         searchQuery = searchInput.value;
+        updateSearchUrl();
         const cursorPos = searchInput.selectionStart;
         await render(false);
         const newInput = document.getElementById('hero-search');
@@ -916,7 +974,25 @@ function attachListeners() {
     }).catch(() => {});
   }
 
-// --- GLOBAL EVENT DELEGATION (Handles Clicks) ---
+// --- GLOBAL EVENT DELEGATION (Handles Clicks & Keydown) ---
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+    const tabList = e.target.closest('[role="tablist"]');
+    if (!tabList) return;
+    const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
+    const index = tabs.indexOf(e.target);
+    if (index > -1) {
+      let nextIndex = 0;
+      if (e.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      if (e.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      tabs[nextIndex].focus();
+      tabs[nextIndex].click();
+      e.preventDefault();
+    }
+  }
+});
+
+
 document.addEventListener('click', async (e) => {
   const target = e.target.closest('button, .career-entry, [data-nav], [data-nav-scroll], .share-page, .compare-option');
   if (!target) return;
@@ -931,9 +1007,11 @@ document.addEventListener('click', async (e) => {
   }
   if (target.classList.contains('filter-btn')) {
     activeCategory = target.dataset.cat;
+    updateSearchUrl();
     render(false);
     return;
   }
+
   if (target.classList.contains('path-card-head')) {
     const card = target.closest('.path-card');
     const body = card?.querySelector('.path-card-body');
@@ -942,14 +1020,7 @@ document.addEventListener('click', async (e) => {
     if (body) body.hidden = isExpanded;
     return;
   }
-  if (target.classList.contains('faq-question')) {
-    const item = target.closest('.faq-item');
-    const answer = item?.querySelector('.faq-answer');
-    const isExpanded = target.getAttribute('aria-expanded') === 'true';
-    target.setAttribute('aria-expanded', String(!isExpanded));
-    if (answer) answer.hidden = isExpanded;
-    return;
-  }
+
   if (target.classList.contains('detail-tab')) {
     document.querySelectorAll('.detail-tab').forEach(t => {
       t.classList.remove('active');
@@ -1094,6 +1165,13 @@ async function render(animate = true) {
     path = '';
   }
   const urlParams = new URLSearchParams(window.location.search);
+  
+  if (!window.initialLoadDone) {
+    if (urlParams.has('q')) searchQuery = urlParams.get('q');
+    if (urlParams.has('filter')) activeCategory = urlParams.get('filter');
+    window.initialLoadDone = true;
+  }
+
   const isCompare = path.startsWith('compare');
   const id = isCompare ? '' : path;
 // Restore tab from URL
@@ -1103,12 +1181,12 @@ if (!isCompare && id) {
 }
 
 
-
   if (animate) {
     view.classList.add('leaving');
     await new Promise(r => setTimeout(r, 150));
   }
-if (isCompare) {
+
+  if (isCompare) {
     try {
       const id1 = urlParams.get('id1');
       const id2 = urlParams.get('id2');
@@ -1131,12 +1209,7 @@ if (isCompare) {
       }
     } catch (err) {
       console.error("Compare render failed:", err);
-      view.innerHTML = `
-        <div class="wrap" style="text-align:center;padding-top:80px;">
-          <h2>Comparison unavailable</h2>
-          <p style="color:var(--ink-soft);margin-top:12px;">We encountered an error loading this comparison.</p>
-          <button onclick="location.reload()" style="margin-top:24px;padding:12px 24px;background:var(--violet);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;">Refresh Page</button>
-        </div>`;
+      view.innerHTML = `<div class="wrap"><button class="back-link" data-nav="">← Back</button><div class="not-found">Error loading compare view.</div></div>`;
     }
   } else {
     try {
@@ -1205,32 +1278,43 @@ function renderComparePicker(preselectedA, preselectedB) {
     </button>
   `}).join('');
 
-  const slotA = selectedA
-    ? `<span class="compare-slot-filled">${selectedA.name} <button class="compare-slot-remove" data-nav="compare=,${selectedB?.id || ''}">✕</button></span>`
-    : '<span class="compare-slot-empty">—</span>';
-  const slotB = selectedB
-    ? `<span class="compare-slot-filled">${selectedB.name} <button class="compare-slot-remove" data-nav="compare=${selectedA?.id || ''},">✕</button></span>`
-    : '<span class="compare-slot-empty" id="slotB">—</span>';
+  const SEARCH_ICON = `<svg class="compare-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
+
+  function compareField(selected, clearNav, searchId, placeholder) {
+    if (selected) {
+      return `
+        <div class="compare-field compare-field--filled">
+          <span class="compare-field-name">${selected.name}</span>
+          <button class="compare-field-clear" data-nav="${clearNav}" aria-label="Remove ${selected.name}">✕</button>
+        </div>`;
+    }
+    return `
+      <div class="compare-field compare-field--empty">
+        ${SEARCH_ICON}
+        <input type="text" class="compare-search" id="${searchId}" placeholder="${placeholder}" autocomplete="off">
+      </div>`;
+  }
+
+  const fieldA = compareField(selectedA, `compare=,${selectedB?.id || ''}`, 'compareSearchA', 'Search Career 1…');
+  const fieldB = compareField(selectedB, `compare=${selectedA?.id || ''},`, 'compareSearchB', 'Search Career 2…');
 
   return `
     <div class="wrap compare-picker-wrap">
       <button class="back-link" data-nav="">← Back</button>
       <h1 class="compare-picker-title">Compare Careers</h1>
       
-      ${!preselectedA && !preselectedB ? '<p style="font-size:15px;color:var(--ink-soft);margin-bottom:28px;line-height:1.6;">Select a career for each slot below to see a side-by-side comparison. Click any career in the list to add it.</p>' : ''}
+      ${!preselectedA && !preselectedB ? '<p style="font-size:15px;color:var(--ink-soft);margin-bottom:28px;line-height:1.6;">Pick one career in each column — click any card in the list to add it.</p>' : ''}
       
       <div class="compare-two">
         <div class="compare-col">
           <div class="compare-col-label">Career 1</div>
-          <div class="compare-slot">${slotA}</div>
-          <input type="text" class="compare-search" id="compareSearchA" placeholder="Search...">
+          ${fieldA}
           <input type="hidden" id="compareA" value="${selectedA?.id || ''}">
         </div>
         <div class="compare-vs">vs</div>
         <div class="compare-col">
           <div class="compare-col-label">Career 2</div>
-          <div class="compare-slot">${slotB}</div>
-          <input type="text" class="compare-search" id="compareSearchB" placeholder="Search...">
+          ${fieldB}
           <input type="hidden" id="compareB" value="${selectedB?.id || ''}">
         </div>
       </div>
@@ -1296,10 +1380,10 @@ function narrativeSection(title, iconKey, itemsA, itemsB, nameA, nameB) {
 
   // ── At a Glance ──
   const glanceRows =
-    row('Duration', mA.duration, mB.duration, pickWinner(parseDurationYears(mA.duration), parseDurationYears(mB.duration), 'lower')) +
-    row('Entry salary', salaryCell(a.salary?.entry), salaryCell(b.salary?.entry), null) +
-    row('Stress', starCell(mA.stress), starCell(mB.stress), pickWinner(mA.stress, mB.stress, 'lower')) +
-    row('Competition', starCell(mA.competition), starCell(mB.competition), pickWinner(mA.competition, mB.competition, 'lower'));
+    row('Duration', mA.duration, mB.duration, pickWinner(a.duration_parsed, b.duration_parsed, 'lower')) +
+    row('Entry salary', salaryCell(a.salary?.entry), salaryCell(b.salary?.entry), pickWinner(getMid(a.salary_parsed?.entry), getMid(b.salary_parsed?.entry), 'higher')) +
+    row('Stress (lower is better)', starCell(mA.stress, 'stress'), starCell(mB.stress, 'stress'), pickWinner(mA.stress, mB.stress, 'lower')) +
+    row('Competition (entrance)', starCell(mA.competition, 'competition'), starCell(mB.competition, 'competition'), pickWinner(mA.competition, mB.competition, 'lower'));
   const glanceHtml = tableWrap('At a Glance', 'glance', glanceRows);
 
   // ── Reality Snapshot ──
@@ -1309,15 +1393,15 @@ function narrativeSection(title, iconKey, itemsA, itemsB, nameA, nameB) {
     ['abroad_prospects', 'Abroad prospects']
   ];
   const snapshotRows = snapshotMetrics.map(([key, label]) =>
-    row(label, starCell(mA[key]), starCell(mB[key]), pickWinner(mA[key], mB[key], METRIC_DIRECTION[key]))
+    row(label, starCell(mA[key], key), starCell(mB[key], key), pickWinner(mA[key], mB[key], METRIC_DIRECTION[key]))
   ).join('');
   const snapshotHtml = tableWrap('Reality Snapshot', 'snapshot', snapshotRows);
 
   // ── Salary Progression ──
   const salaryStages = [['entry', 'Entry'], ['mid', 'Mid'], ['senior', 'Senior']];
   const salaryRows = salaryStages.map(([key, label]) =>
-  row(label, salaryCell(a.salary?.[key]), salaryCell(b.salary?.[key]), null)
-).join('');
+    row(label, salaryCell(a.salary?.[key]), salaryCell(b.salary?.[key]), pickWinner(getMid(a.salary_parsed?.[key]), getMid(b.salary_parsed?.[key]), 'higher'))
+  ).join('');
   const salaryHtml = tableWrap('Salary Progression', 'salary', salaryRows);
 
 // replace the three listSection(...) calls with:
