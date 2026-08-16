@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /auth
+Disallow: /saved
+
+Sitemap: https://karriere.freebuff.app/sitemap.xml
