@@ -27,11 +27,15 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Deploy Convex backend
+        run: bunx convex deploy --cmd 'bun run build'
+        env:
+          CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
+          VITE_CONVEX_URL: ${{ secrets.VITE_CONVEX_URL }}
+
       - name: Build
         run: bun run build
         env:
-          # Required: the production Convex deployment URL.
-          # Set it as a repository secret (Settings → Secrets and variables → Actions).
           VITE_CONVEX_URL: ${{ secrets.VITE_CONVEX_URL }}
 
       # No-op if the project already exists.
