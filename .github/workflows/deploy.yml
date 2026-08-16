@@ -36,22 +36,14 @@ jobs:
 
       # No-op if the project already exists.
       - name: Create Pages project (if needed)
-        uses: cloudflare/wrangler-action@v3
+        run: npx wrangler pages project create ${{ vars.CLOUDFLARE_PAGES_PROJECT || 'karriere' }} --production-branch=main
         continue-on-error: true
         env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          preCommands: npm install -g wrangler@latest
-          command: pages project create ${{ vars.CLOUDFLARE_PAGES_PROJECT || 'karriere' }} --production-branch=main
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        run: npx wrangler pages deploy dist --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT || 'karriere' }} --branch=main
         env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          preCommands: npm install -g wrangler@latest
-          command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT || 'karriere' }} --branch=main
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
