@@ -177,9 +177,9 @@ export default function Landing() {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Try &ldquo;MBBS&rdquo;, &ldquo;CA&rdquo;, &ldquo;stress-free&rdquo;…"
                 aria-label="Search careers"
-                className="h-9 flex-1 bg-transparent text-[15px] placeholder:text-muted-foreground/70 focus:outline-none"
+                className="h-9 min-w-0 flex-1 bg-transparent text-[15px] placeholder:text-muted-foreground/70 focus:outline-none"
               />
-              <Button type="submit" size="sm" className="rounded-full px-4">
+              <Button type="submit" size="sm" className="shrink-0 rounded-full px-4">
                 Explore
               </Button>
             </form>
