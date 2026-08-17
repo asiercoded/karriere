@@ -23,7 +23,7 @@ This is a standard Vite SPA — the frontend is static files (built with `bun ru
 
 ### Before you go live
 
-The repo currently hardcodes the placeholder domain `karriere.freebuff.app` in:
+The repo currently hardcodes the placeholder domain `karrierehq.pages.dev` in:
 - `index.html` (canonical + og:image + twitter:image)
 - `public/sitemap.xml`, `public/robots.txt`
 - `scripts/og.mjs` (URL text baked into the share-card PNGs — regenerate with `bun run og`)

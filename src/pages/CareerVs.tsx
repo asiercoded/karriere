@@ -12,7 +12,6 @@ import {
   metricMeta,
   pickWinner,
   verdictNarrative,
-  type CareerProfile,
   type MetricNumberKey,
 } from "@/lib/career-data";
 import { useCareers } from "@/lib/career-loader";

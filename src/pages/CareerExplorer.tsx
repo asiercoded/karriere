@@ -67,15 +67,7 @@ export default function CareerExplorer() {
     const exam = careersList.filter((c) => entryMeta(c).isExam).length;
     return { exam, none: careersList.length - exam };
   }, [careersList]);
-  const streamCounts = useMemo(() => {
-    const counts: Record<string, number> = { any: 0 };
-    for (const s of STREAM_META) counts[s.id] = 0;
-    for (const c of careersList) {
-      const { streams } = entryMeta(c);
-      for (const s of streams) counts[s] = (counts[s] ?? 0) + 1;
-    }
-    return counts;
-  }, [careersList]);
+
 
   // Structured data: the full index as an ItemList for search engines.
   const itemListSchema = useMemo(

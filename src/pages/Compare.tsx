@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Check, RefreshCw, Scale, Search, X } from "lucide-react";
@@ -143,7 +143,8 @@ function SlotPicker({
   const [open, setOpen] = useState(false);
   const [focusIndex, setFocusIndex] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
-  const listId = useRef(`slot-list-${label.toLowerCase().replace(/\W+/g, "-")}`).current;
+  const baseId = useId();
+  const listId = `slot-list-${baseId}`;
   const optionRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const selected = careers.find((c) => c.id === value);
 
@@ -163,6 +164,7 @@ function SlotPicker({
   // Roving focus: the list re-opens or re-filters, the tab stop resets to the top.
   useEffect(() => {
     if (!open) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setFocusIndex(0);
   }, [open, query]);
 

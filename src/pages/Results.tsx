@@ -85,6 +85,7 @@ export default function Results() {
       }
       // Remember shared-link answers so refresh/back keep working without the URL.
       if (!stored) sessionStorage.setItem("quizAnswers", JSON.stringify(parsed));
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setAnswers(parsed as QuizAnswers);
       setRecommendations(recs);
       setLoaded(true);

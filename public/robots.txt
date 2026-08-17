@@ -3,4 +3,4 @@ Allow: /
 Disallow: /auth
 Disallow: /saved
 
-Sitemap: https://karriere.freebuff.app/sitemap.xml
+Sitemap: https://karrierehq.pages.dev/sitemap.xml

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { ArrowRight, BadgeCheck, Download, MessageCircle, Printer } from "lucide-react";
+import { ArrowRight, BadgeCheck, Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/Chip";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -290,7 +290,7 @@ export default function ForParents() {
           </section>
 
           <footer className="mt-6 border-t border-neutral-300 pt-3 text-[10px] text-neutral-500">
-            Every salary, timeline, and quote on karriere.freebuff.app is sourced and dated — no ads,
+            Every salary, timeline, and quote on karrierehq.pages.dev is sourced and dated — no ads,
             no sponsors, no career paying to be listed. Start at the 5-minute match with your child.
           </footer>
         </div>

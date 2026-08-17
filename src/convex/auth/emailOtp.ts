@@ -1,5 +1,5 @@
 import { Email } from "@convex-dev/auth/providers/Email";
-import axios from "axios";
+
 import { RandomReader, generateRandomString } from "@oslojs/crypto/random";
 
 export const emailOtp = Email({
@@ -17,19 +17,22 @@ export const emailOtp = Email({
   },
   async sendVerificationRequest({ identifier: email, token }) {
     try {
-      await axios.post(
-        "https://auth.freebuff.app/send_otp",
-        {
+      const res = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "Karriere <onboarding@resend.dev>",
           to: email,
-          otp: token,
-          appName: process.env.VLY_APP_NAME || "a freebuff.com application",
-        },
-        {
-          headers: {
-            "x-api-key": "fb_email_2crN1hqIArZP2bEfvjp5Qik4",
-          },
-        },
-      );
+          subject: "Sign in to Karriere",
+          text: `Your sign-in code is ${token}`,
+        }),
+      });
+      if (!res.ok) {
+        throw new Error(await res.text());
+      }
     } catch (error) {
       throw new Error(JSON.stringify(error));
     }

@@ -640,7 +640,6 @@ export function verdictNarrative(a: CareerProfile, b: CareerProfile): string[] {
 
   if (entryA && entryB && Math.abs(entryA - entryB) / Math.max(entryA, entryB) > 0.15) {
     const higher = entryA > entryB ? a : b;
-    const lower = entryA > entryB ? b : a;
     sentences.push(`${higher.name} pays more at the start (${formatLakhs(Math.max(entryA, entryB))} vs ${formatLakhs(Math.min(entryA, entryB))}) — important if you need early financial independence.`);
   }
   if (seniorA && seniorB) {

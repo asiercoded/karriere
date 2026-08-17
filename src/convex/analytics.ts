@@ -36,7 +36,10 @@ export const record = mutation({
     // Sanitize before it touches the table.
     const careerId = args.careerId?.trim().slice(0, 40) || undefined;
     const query = args.query?.trim().replace(/\s+/g, " ").slice(0, 80) || undefined;
-    if (!careerId && !query) return; // nothing meaningful to record
+    // career_view must have a careerId; search must have a query.
+    // quiz_completed and compare_view are valid with no payload.
+    if (args.type === "career_view" && !careerId) return;
+    if (args.type === "search" && !query) return;
 
     await ctx.db.insert("analytics", {
       type: args.type,

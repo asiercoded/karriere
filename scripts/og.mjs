@@ -131,7 +131,7 @@ function careerSVG(c) {
   verdictLines.forEach((l, i) => el.push(text(l, P + boxPad, boxTop + labelH + 34 + i * verdictLH, 25)));
   el.push(checkMark(P, 604));
   el.push(text(`FACTS VERIFIED · ${c.last_verified.toUpperCase()}`, P + 20, 612, 20, { fill: C.faint }));
-  el.push(text(`karriere.freebuff.app/careers/${c.id}`, W - P, 612, 19, { fill: C.faint, end: true }));
+  el.push(text(`karrierehq.pages.dev/careers/${c.id}`, W - P, 612, 19, { fill: C.faint, end: true }));
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
 ${el.join("\n")}
@@ -153,7 +153,7 @@ function defaultSVG() {
   el.push(text(`${n} careers · ${fields} fields · every figure sourced · no ads, no sponsors`, P + 32, 444, 27));
   el.push(checkMark(P, 604));
   el.push(text(`FACTS VERIFIED · ${d._metadata.last_updated.toUpperCase().replace(/-/g, ".")}`, P + 20, 612, 20, { fill: C.faint }));
-  el.push(text("karriere.freebuff.app", W - P, 612, 19, { fill: C.faint, end: true }));
+  el.push(text("karrierehq.pages.dev", W - P, 612, 19, { fill: C.faint, end: true }));
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
 ${el.join("\n")}
