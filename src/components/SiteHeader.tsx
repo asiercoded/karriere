@@ -1,8 +1,10 @@
 import { useLocation, useNavigate } from "react-router";
+import { LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { SkipLink } from "@/components/SkipLink";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/use-auth";
 
 const NAV = [
   { key: "index", label: "Careers", href: "/careers" },
@@ -32,6 +34,7 @@ function NavPill({ href, label, current }: { href: string; label: string; curren
 export function SiteHeader() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { isAuthenticated, signOut } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-md">
@@ -55,6 +58,15 @@ export function SiteHeader() {
           <Button size="sm" onClick={() => navigate("/quiz")} className="hidden sm:inline-flex">
             Get matched
           </Button>
+          {isAuthenticated ? (
+            <Button size="icon" variant="ghost" onClick={() => signOut()} title="Sign out" aria-label="Sign out">
+              <LogOut className="h-4 w-4 text-muted-foreground" />
+            </Button>
+          ) : (
+            <Button size="sm" variant="outline" onClick={() => navigate("/auth")} className="hidden sm:inline-flex">
+              Sign in
+            </Button>
+          )}
           <ThemeToggle />
         </div>
       </div>
@@ -64,6 +76,7 @@ export function SiteHeader() {
         {NAV.map((item) => (
           <NavPill key={item.key} href={item.href} label={item.label} current={pathname.startsWith(item.href)} />
         ))}
+        {!isAuthenticated && <NavPill href="/auth" label="Sign in" current={pathname.startsWith("/auth")} />}
       </nav>
     </header>
   );

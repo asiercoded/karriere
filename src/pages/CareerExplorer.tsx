@@ -7,15 +7,11 @@ import { Chip } from "@/components/Chip";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
-  STREAM_META,
-  careerMatchesStream,
   categories,
   categoryLabel,
-  entryMeta,
   formatSalaryRange,
   searchCareers,
   type CareerProfile,
-  type StreamId,
 } from "@/lib/career-data";
 import { useCareers } from "@/lib/career-loader";
 import { useAnalytics } from "@/lib/analytics";
@@ -41,13 +37,16 @@ function entryMid(career: CareerProfile): number {
   return ((e.min ?? 0) + (e.max ?? e.min ?? 0)) / 2;
 }
 
+type QuickFilterType = "all" | "high_pay" | "no_maths" | "quickest";
+
 export default function CareerExplorer() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
   const [category, setCategory] = useState(searchParams.get("cat") ?? "all");
-  const [gate, setGate] = useState(searchParams.get("gate") ?? "all");
-  const [stream, setStream] = useState<StreamId | "all">((searchParams.get("stream") as StreamId | null) ?? "all");
+  const [quickFilter, setQuickFilter] = useState<QuickFilterType>(
+    (searchParams.get("quick") as QuickFilterType) ?? "all"
+  );
   const [sort, setSort] = useState<SortKey>("relevance");
   const shortlist = useShortlist();
   const careers = useCareers();
@@ -63,10 +62,7 @@ export default function CareerExplorer() {
     return () => clearTimeout(t);
   }, [query, track]);
 
-  const gateCounts = useMemo(() => {
-    const exam = careersList.filter((c) => entryMeta(c).isExam).length;
-    return { exam, none: careersList.length - exam };
-  }, [careersList]);
+
 
 
   // Structured data: the full index as an ItemList for search engines.
@@ -90,8 +86,15 @@ export default function CareerExplorer() {
   const filtered = useMemo(() => {
     let list = query.trim() ? searchCareers(careersList, query) : [...careersList];
     if (category !== "all") list = list.filter((c) => c.category === category);
-    if (gate !== "all") list = list.filter((c) => entryMeta(c).isExam === (gate === "exam"));
-    if (stream !== "all") list = list.filter((c) => careerMatchesStream(c, stream));
+    
+    if (quickFilter === "high_pay") {
+      list = list.filter((c) => entryMid(c) >= 400000);
+    } else if (quickFilter === "no_maths") {
+      const mathCareers = ["cs_engineering", "core_engineering", "bca_mca", "architecture", "economics"];
+      list = list.filter((c) => !mathCareers.includes(c.id) && c.category !== "engineering");
+    } else if (quickFilter === "quickest") {
+      list = list.filter((c) => c.durationParsed <= 3);
+    }
 
     switch (sort) {
       case "salary":
@@ -110,7 +113,7 @@ export default function CareerExplorer() {
         break;
     }
     return list;
-  }, [query, category, gate, stream, sort, careersList]);
+  }, [query, category, quickFilter, sort, careersList]);
 
   const selectCategory = (id: string) => {
     setCategory(id);
@@ -120,19 +123,11 @@ export default function CareerExplorer() {
     setSearchParams(next, { replace: true });
   };
 
-  const selectGate = (id: string) => {
-    setGate(id);
+  const selectQuickFilter = (id: QuickFilterType) => {
+    setQuickFilter(id);
     const next = new URLSearchParams(searchParams);
-    if (id === "all") next.delete("gate");
-    else next.set("gate", id);
-    setSearchParams(next, { replace: true });
-  };
-
-  const selectStream = (id: StreamId | "all") => {
-    setStream(id);
-    const next = new URLSearchParams(searchParams);
-    if (id === "all") next.delete("stream");
-    else next.set("stream", id);
+    if (id === "all") next.delete("quick");
+    else next.set("quick", id);
     setSearchParams(next, { replace: true });
   };
 
@@ -147,8 +142,7 @@ export default function CareerExplorer() {
   const clearFilters = () => {
     setQuery("");
     setCategory("all");
-    setGate("all");
-    setStream("all");
+    setQuickFilter("all");
     setSearchParams(new URLSearchParams(), { replace: true });
   };
 
@@ -195,7 +189,7 @@ export default function CareerExplorer() {
               onChange={(e) => submitSearch(e.target.value)}
               placeholder="Search by degree (B.Tech), job (Nurse), or vibe (stress-free)…"
               aria-label="Search careers"
-              className="h-9 flex-1 bg-transparent text-[15px] placeholder:text-muted-foreground/70 focus:outline-none"
+              className="h-9 flex-1 min-w-0 bg-transparent text-[15px] placeholder:text-muted-foreground/70 focus:outline-none"
             />
             {query && (
               <button
@@ -239,57 +233,30 @@ export default function CareerExplorer() {
           })}
         </div>
 
-        {/* Entry gate + stream chips */}
+        {/* Quick Filters */}
         <div className="mt-5 flex flex-wrap gap-1.5">
-          {[
-            { id: "all", label: "Entry" },
-            { id: "exam", label: "Entrance exam", count: gateCounts.exam },
-            { id: "none", label: "No entrance exam", count: gateCounts.none },
-          ].map((g) => {
-            const active = gate === g.id;
+          {(
+            [
+              { id: "all", label: "Any" },
+              { id: "high_pay", label: "💰 High Entry Pay" },
+              { id: "no_maths", label: "🚫 No Maths" },
+              { id: "quickest", label: "⚡ Quickest to Earn" },
+            ] as { id: QuickFilterType; label: string }[]
+          ).map((q) => {
+            const active = quickFilter === q.id;
             return (
               <button
-                key={g.id}
-                onClick={() => selectGate(g.id)}
+                key={q.id}
+                onClick={() => selectQuickFilter(q.id)}
                 aria-pressed={active}
                 className={cn(
-                  "flex items-center gap-1.5 rounded-full border py-1.5 pl-3.5 pr-2.5 text-sm font-semibold transition-colors",
+                  "flex items-center gap-1.5 rounded-full border py-1.5 px-3.5 text-sm font-semibold transition-colors",
                   active
                     ? "border-saffron/50 bg-saffron-dim text-saffron"
                     : "border-border bg-card text-muted-foreground hover:border-saffron/30 hover:text-foreground",
                 )}
               >
-                {g.label}
-                {g.count !== undefined && (
-                  <span
-                    className={cn(
-                      "rounded-full px-1.5 py-0.5 text-[10px] font-bold tabular-nums",
-                      active ? "bg-saffron text-primary-foreground" : "bg-secondary text-muted-foreground",
-                    )}
-                  >
-                    {g.count}
-                  </span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-        <div className="mt-2 flex flex-wrap gap-1.5">
-          {[{ id: "all" as const, label: "Stream" }, ...STREAM_META.map((s) => ({ id: s.id, label: s.label }))].map((s) => {
-            const active = stream === s.id;
-            return (
-              <button
-                key={s.id}
-                onClick={() => selectStream(s.id)}
-                aria-pressed={active}
-                className={cn(
-                  "rounded-full border px-3.5 py-1.5 text-[13px] font-semibold transition-colors",
-                  active
-                    ? "border-saffron/50 bg-saffron-dim text-saffron"
-                    : "border-border bg-card text-muted-foreground hover:border-saffron/30 hover:text-foreground",
-                )}
-              >
-                {s.label}
+                {q.label}
               </button>
             );
           })}

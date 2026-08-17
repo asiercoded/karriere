@@ -1,7 +1,6 @@
 @import "@fontsource-variable/inter";
 @import "@fontsource-variable/inter-tight";
 @import "@fontsource-variable/geist-mono";
-@import "@fontsource/instrument-serif";
 @import "tailwindcss";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
@@ -10,8 +9,6 @@
   --font-display: "Inter Tight Variable", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, monospace;
-  /* Editorial voice — pull quotes & reviews read like a magazine, not a form */
-  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: calc(var(--radius) - 1px);
   --radius-lg: var(--radius);

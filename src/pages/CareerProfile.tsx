@@ -886,7 +886,7 @@ export default function CareerProfile() {
                   {career.realExperiences.slice(0, n).map((exp, i) => (
                     <div key={i} className="rounded-2xl border border-border bg-card p-6">
                       <Quote className="h-5 w-5 text-saffron/50" aria-hidden="true" />
-                      <blockquote className="mt-3 font-serif text-[15px] italic leading-relaxed tracking-tight md:text-base">
+                      <blockquote className="mt-3 text-[15px] italic leading-relaxed tracking-tight md:text-base">
                         &ldquo;{exp.quote}&rdquo;
                       </blockquote>
                       {exp.url ? (
