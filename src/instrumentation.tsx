@@ -89,14 +89,6 @@ function ErrorDialog({
           </Collapsible>
         </div>
         <DialogFooter>
-          <a
-            href={`https://freebuff.com/project/${import.meta.env.VITE_VLY_APP_ID}`}
-            target="_blank"
-          >
-            <Button>
-              <ExternalLink /> Open editor
-            </Button>
-          </a>
         </DialogFooter>
       </DialogContent>
     </Dialog>

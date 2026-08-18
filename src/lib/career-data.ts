@@ -303,7 +303,7 @@ export const metricMeta: {
   { key: "stress", label: "Stress", goodWhen: "low" },
   { key: "workLifeBalance", label: "Work-life balance", goodWhen: "high" },
   { key: "studyDifficulty", label: "Study difficulty", goodWhen: "low" },
-  { key: "competition", label: "Competition (entrance)", goodWhen: "low" },
+  { key: "competition", label: "Competition", goodWhen: "low" },
   { key: "jobAvailability", label: "Job availability", goodWhen: "high" },
   { key: "abroadProspects", label: "Abroad opportunities", goodWhen: "high" },
 ];

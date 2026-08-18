@@ -319,7 +319,7 @@ function CompareView({ a, b }: { a: CareerProfile; b: CareerProfile }) {
       bSub: "lower is better",
     },
     {
-      label: "Competition (entrance)",
+      label: "Competition",
       a: `${a.metrics.competition}/5`,
       b: `${b.metrics.competition}/5`,
       winner: pickWinner(a.metrics.competition, b.metrics.competition, "lower"),

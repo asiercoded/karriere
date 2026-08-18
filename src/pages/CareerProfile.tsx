@@ -652,22 +652,7 @@ export default function CareerProfile() {
                 graduates actually take — not promises.
               </p>
             </div>
-            <div className="mt-10 max-w-2xl">
-              <SectionLabel>Typical progression</SectionLabel>
-              <div className="mt-5 rounded-2xl border border-border bg-card px-6 py-4">
-                {career.metrics.progression.map((step, i) => (
-                  <div key={step} className="flex gap-4">
-                    <div className="flex flex-col items-center">
-                      <div className="mt-2 size-2 rounded-full bg-saffron" />
-                      {i < career.metrics.progression.length - 1 && <div className="my-1 w-px flex-1 bg-border" />}
-                    </div>
-                    <div className={cn("text-[15px] leading-relaxed", i < career.metrics.progression.length - 1 && "pb-5")}>
-                      {step}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </Reveal>
         </section>
 

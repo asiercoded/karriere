@@ -22,6 +22,7 @@ import {
   categories,
   categoryLabel,
   formatSalaryRange,
+  searchCareers,
   type CareerProfile,
 } from "@/lib/career-data";
 import { useCareers } from "@/lib/career-loader";
@@ -112,7 +113,13 @@ export default function Landing() {
   const careersList = careers ?? [];
   const featured = useMemo(() => featuredCareers(careersList), [careersList]);
   const [query, setQuery] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
   const pullQuote = useMemo(() => careersList.find((c) => c.id === "mbbs")?.realExperiences[0] ?? null, [careersList]);
+  
+  const searchResults = useMemo(() => {
+    if (!query.trim() || !careersList.length) return [];
+    return searchCareers(careersList, query).slice(0, 5);
+  }, [query, careersList]);
 
   // Site-level structured data for search engines.
   const siteSchema = useMemo(
@@ -164,11 +171,16 @@ export default function Landing() {
 
             {/* Search */}
             <form
-              className="mx-auto mt-9 flex max-w-xl items-center gap-2 rounded-full border border-border bg-card py-2 pl-4 pr-2 shadow-sm"
+              className="relative mx-auto mt-9 flex max-w-xl items-center gap-2 rounded-full border border-border bg-card py-2 pl-4 pr-2 shadow-sm focus-within:ring-2 focus-within:ring-saffron/20 transition-all"
               role="search"
               onSubmit={(e) => {
                 e.preventDefault();
                 navigate(query.trim() ? `/careers?q=${encodeURIComponent(query.trim())}` : "/careers");
+              }}
+              onFocus={() => setIsFocused(true)}
+              onBlur={(e) => {
+                // Delay hiding so clicks on the dropdown register before blur hides it
+                setTimeout(() => setIsFocused(false), 200);
               }}
             >
               <Search className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
@@ -182,6 +194,31 @@ export default function Landing() {
               <Button type="submit" size="sm" className="shrink-0 rounded-full px-4">
                 Explore
               </Button>
+
+              {isFocused && searchResults.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 rounded-2xl border border-border bg-card p-2 shadow-xl z-50 text-left animate-in fade-in slide-in-from-top-2">
+                  {searchResults.map((c) => (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() => navigate(`/careers/${c.id}`)}
+                      className="w-full flex items-center justify-between gap-3 rounded-xl px-4 py-3 hover:bg-secondary text-left transition-colors"
+                    >
+                      <div>
+                        <div className="font-semibold text-[15px]">{c.name}</div>
+                        <div className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{c.tagline}</div>
+                      </div>
+                      <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground opacity-50" />
+                    </button>
+                  ))}
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 rounded-xl px-4 py-3 mt-1 hover:bg-secondary text-sm font-semibold text-saffron transition-colors"
+                  >
+                    See all results <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
+              )}
             </form>
           </motion.div>
         </div>
@@ -242,6 +279,13 @@ export default function Landing() {
             </Reveal>
             ))}
         </div>
+        <Reveal delay={0.2}>
+          <div className="mt-10 flex justify-center">
+            <Button variant="outline" size="lg" onClick={() => navigate("/careers")} className="rounded-full px-8">
+              Show all {careers ? careersList.length : ""} careers
+            </Button>
+          </div>
+        </Reveal>
       </section>
 
       {/* Where do I start — quiz / compare / guide */}
