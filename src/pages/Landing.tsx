@@ -148,12 +148,12 @@ export default function Landing() {
       <SiteHeader />
 
       {/* Hero */}
-      <section id="main" className="relative z-50">
+      <section id="main" className="relative z-40">
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
           <div className="absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-saffron/15 blur-[120px]" />
         </div>
-        <div className="relative mx-auto max-w-6xl px-5 pt-16 pb-14 text-center sm:px-6 md:pt-24 md:pb-16 z-50">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="relative z-50">
+        <div className="relative mx-auto max-w-6xl px-5 pt-16 pb-14 text-center sm:px-6 md:pt-24 md:pb-16 z-40">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="relative z-40">
             <Chip tone="saffron" className="mb-7">
               <span className="inline-flex size-1.5 rounded-full bg-saffron" aria-hidden="true" />
               The unfiltered career file
@@ -170,7 +170,7 @@ export default function Landing() {
 
             {/* Search */}
             <form
-              className="relative mx-auto mt-9 flex max-w-xl items-center gap-2 rounded-full border border-border bg-card py-2 pl-4 pr-2 shadow-sm focus-within:ring-2 focus-within:ring-saffron/20 transition-all"
+              className="relative z-50 mx-auto mt-9 flex max-w-xl items-center gap-2 rounded-full border border-border bg-card py-2 pl-4 pr-2 shadow-sm focus-within:ring-2 focus-within:ring-saffron/20 transition-all"
               role="search"
               onSubmit={(e) => {
                 e.preventDefault();
@@ -224,7 +224,7 @@ export default function Landing() {
       </section>
 
       {/* Featured careers — the content, up front */}
-      <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-6 md:pb-16">
+      <section className="relative z-10 mx-auto max-w-6xl px-5 pb-14 sm:px-6 md:pb-16">
         <Reveal>
           <SectionHeading
             title="Start with a career"
