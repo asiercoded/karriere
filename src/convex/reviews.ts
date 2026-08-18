@@ -29,10 +29,15 @@ export const getApprovedReviews = query({
     careerId: v.string(),
   },
   handler: async (ctx, args) => {
-    return await ctx.db
+    const reviews = await ctx.db
       .query("careerReviews")
-      .withIndex("by_career_status", (q) => q.eq("careerId", args.careerId).eq("status", "approved"))
-      .order("desc")
+      .filter((q) => q.and(
+        q.eq(q.field("careerId"), args.careerId),
+        q.eq(q.field("status"), "approved")
+      ))
       .collect();
+      
+    // Sort descending by createdAt
+    return reviews.sort((a, b) => b.createdAt - a.createdAt);
   },
 });
