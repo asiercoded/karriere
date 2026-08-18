@@ -42,8 +42,9 @@ import { SITE_DESC, SITE_TITLE, useJsonLd, usePageMeta } from "@/lib/meta";
 import { ShareDialog } from "@/components/ShareDialog";
 import { FeedbackWidget } from "@/components/FeedbackWidget";
 import { SubmitReviewDialog } from "@/components/SubmitReviewDialog";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
+// Live reviews disabled until Convex production schema is confirmed deployed
+// import { useQuery } from "convex/react";
+// import { api } from "@/convex/_generated/api";
 import { cn } from "@/lib/utils";
 
 const CHAPTERS = [
@@ -325,14 +326,10 @@ export default function CareerProfile() {
     active?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
   }, [activeChapter]);
 
-  const liveReviews = useQuery(api.reviews.getApprovedReviews, career ? { careerId: career.id } : "skip");
   const allReviews = useMemo(() => {
     if (!career) return [];
-    const live = Array.isArray(liveReviews)
-      ? liveReviews.map((r) => ({ quote: r.quote, source: r.label, url: undefined }))
-      : [];
-    return [...live, ...career.realExperiences];
-  }, [liveReviews, career]);
+    return career.realExperiences;
+  }, [career]);
 
   if (careers === null) {
     return (
