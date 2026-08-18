@@ -361,7 +361,7 @@ function CompareView({ a, b }: { a: CareerProfile; b: CareerProfile }) {
   return (
     <div id="main" className="mx-auto max-w-4xl px-5 py-10 sm:px-6 relative">
       {/* Sticky Mobile Header */}
-      <div className="sticky top-14 md:top-16 z-40 -mx-5 mb-6 border-b border-border bg-background/95 backdrop-blur-md sm:-mx-6">
+      <div className="sticky top-16 z-40 -mx-5 mb-6 border-b border-border bg-background/95 backdrop-blur-md sm:-mx-6">
         <div className="grid grid-cols-2 divide-x divide-border">
           <div className="truncate px-4 py-3 text-center text-[13px] font-bold tracking-tight">{a.name}</div>
           <div className="truncate px-4 py-3 text-center text-[13px] font-bold tracking-tight text-saffron">{b.name}</div>
