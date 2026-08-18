@@ -16,7 +16,9 @@ import type { CareerProfile } from "./career-data";
    changes materially and the cache self-invalidates.
    ───────────────────────────────────────────────────────────── */
 
-const CACHE_VERSION = 'v18';
+declare const __CAREERS_HASH__: string;
+
+const CACHE_VERSION = typeof __CAREERS_HASH__ !== 'undefined' ? __CAREERS_HASH__ : 'dev-fallback';
 const CACHE_KEY = `karriere-careers-${CACHE_VERSION}`;
 const CACHE_TTL_MS = 3 * 24 * 60 * 60 * 1000; // 3 days — stale but safe for static content
 

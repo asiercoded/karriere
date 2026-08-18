@@ -1,11 +1,20 @@
 import { vlyPlugin } from "@vly-ai/integrations";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import fs from "fs";
+import crypto from "crypto";
 import path from "path";
 import { defineConfig } from "vite";
 
+const careersFile = path.resolve(__dirname, "./src/lib/careers.json");
+const careersContent = fs.readFileSync(careersFile, "utf-8");
+const careersHash = crypto.createHash("md5").update(careersContent).digest("hex").substring(0, 8);
+
 // https://vite.dev/config/
 export default defineConfig({
+  define: {
+    __CAREERS_HASH__: JSON.stringify(careersHash),
+  },
   plugins: [vlyPlugin(), react(), tailwindcss()],
   resolve: {
     alias: {
@@ -79,7 +88,7 @@ export default defineConfig({
   },
   // Performance hints
   server: {
-    // Freebuff requires HMR to remain disabled; platform-managed rebuilds handle updates
+    // The platform requires HMR to remain disabled; platform-managed rebuilds handle updates
     hmr: false,
   },
 });
