@@ -72,8 +72,7 @@ function ErrorDialog({
         <DialogHeader>
           <DialogTitle>Runtime Error</DialogTitle>
         </DialogHeader>
-        A runtime error occurred. Open the vly editor to automatically debug the
-        error.
+        A runtime error occurred. Please check the console for more details or refresh the page.
         <div className="mt-4">
           <Collapsible>
             <CollapsibleTrigger>
