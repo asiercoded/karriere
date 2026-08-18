@@ -325,6 +325,13 @@ export default function CareerProfile() {
     active?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
   }, [activeChapter]);
 
+  const liveReviews = useQuery(api.reviews.getApprovedReviews, career ? { careerId: career.id } : "skip") ?? [];
+  const allReviews = useMemo(() => {
+    if (!career) return [];
+    const live = liveReviews.map((r) => ({ quote: r.quote, source: r.label, url: undefined }));
+    return [...live, ...career.realExperiences];
+  }, [liveReviews, career]);
+
   if (careers === null) {
     return (
       <div className="min-h-screen bg-background text-foreground">
@@ -360,11 +367,6 @@ export default function CareerProfile() {
 
   const saved = shortlist.includes(career.id);
   const vsPair = VS_PAIRS.find((p) => p.a === career.id || p.b === career.id);
-  const liveReviews = useQuery(api.reviews.getApprovedReviews, { careerId: career.id }) ?? [];
-  const allReviews = useMemo(() => {
-    const live = liveReviews.map((r) => ({ quote: r.quote, source: r.label, url: undefined }));
-    return [...live, ...career.realExperiences];
-  }, [liveReviews, career.realExperiences]);
   const heroQuote = allReviews[0];
   const salaryCtx = getSalaryContext(career.salaryParsed.entry);
   const journey = journeySummary(career);
