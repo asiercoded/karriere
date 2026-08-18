@@ -289,33 +289,12 @@ export default function CareerProfile() {
     return [
       {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: career.faq.map((f) => ({
-          "@type": "Question",
-          name: f.question,
-          acceptedAnswer: { "@type": "Answer", text: f.answer },
-        })),
-      },
-      {
-        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` },
           { "@type": "ListItem", position: 2, name: "Careers", item: `${origin}/careers` },
           { "@type": "ListItem", position: 3, name: career.name, item: `${origin}/careers/${career.id}` },
         ],
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: career.faq.map((f) => ({
-          "@type": "Question",
-          name: f.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: f.answer,
-          },
-        })),
       },
     ];
   }, [career]);
