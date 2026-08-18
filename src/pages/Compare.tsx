@@ -5,6 +5,8 @@ import { ArrowLeft, ArrowUpRight, Check, RefreshCw, Scale, Search, X } from "luc
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/Chip";
 import { SiteHeader } from "@/components/SiteHeader";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Drawer, DrawerContent } from "@/components/ui/drawer";
 import {
   categoryLabel,
   formatLakhs,
@@ -29,9 +31,9 @@ function BetterTag() {
 
 function MiniBar({ value, tone }: { value: number; tone: "good" | "bad" }) {
   return (
-    <span className="inline-flex items-center gap-2 align-middle">
-      <span className="font-mono text-sm font-semibold tabular-nums">{value}/5</span>
-      <span className="inline-block h-1.5 w-16 overflow-hidden rounded-full bg-border">
+    <span className="inline-flex items-center gap-1.5 md:gap-2 align-middle">
+      <span className="font-mono text-xs md:text-sm font-semibold tabular-nums">{value}/5</span>
+      <span className="inline-block h-1.5 w-10 md:w-16 overflow-hidden rounded-full bg-border">
         <span className={cn("block h-full rounded-full", tone === "good" ? "bg-good" : "bg-bad")} style={{ width: `${(value / 5) * 100}%` }} />
       </span>
     </span>
@@ -58,18 +60,18 @@ function Row({
   // pure CSS — halves the vertical scroll of the old stacked layout on phones.
   return (
     <div className="grid grid-cols-2 md:grid-cols-[170px_1fr_1fr]">
-      <div className="col-span-2 flex items-center border-b border-border px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-muted-foreground md:col-span-1 md:border-b-0 md:border-r md:py-3.5">
+      <div className="col-span-2 flex items-center border-b border-border px-3 py-2 text-[11px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground md:col-span-1 md:border-b-0 md:border-r md:px-4 md:py-3.5">
         {label}
       </div>
-      <div className={cn("border-r border-border px-4 py-3.5 text-sm", winner === "b" && "text-muted-foreground")}>
+      <div className={cn("border-r border-border px-3 py-2.5 text-[13px] md:px-4 md:py-3.5 md:text-sm", winner === "b" && "text-muted-foreground")}>
         {winner === "a" && <BetterTag />}
         <span className="inline align-middle">{a}</span>
-        {aSub && <div className="mt-1 text-xs text-muted-foreground">{aSub}</div>}
+        {aSub && <div className="mt-1 text-[11px] md:text-xs text-muted-foreground">{aSub}</div>}
       </div>
-      <div className={cn("px-4 py-3.5 text-sm", winner === "a" && "text-muted-foreground")}>
+      <div className={cn("px-3 py-2.5 text-[13px] md:px-4 md:py-3.5 md:text-sm", winner === "a" && "text-muted-foreground")}>
         {winner === "b" && <BetterTag />}
         <span className="inline align-middle">{b}</span>
-        {bSub && <div className="mt-1 text-xs text-muted-foreground">{bSub}</div>}
+        {bSub && <div className="mt-1 text-[11px] md:text-xs text-muted-foreground">{bSub}</div>}
       </div>
     </div>
   );
@@ -147,6 +149,7 @@ function SlotPicker({
   const listId = `slot-list-${baseId}`;
   const optionRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const selected = careers.find((c) => c.id === value);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
@@ -174,6 +177,78 @@ function SlotPicker({
     setFocusIndex(clamped);
     optionRefs.current[clamped]?.focus();
   };
+
+  const popoverContent = (
+    <>
+      <div className={cn("relative border-b border-border p-3", isMobile && "pt-6")}>
+        <Search className={cn("absolute left-6 h-3.5 w-3.5 text-muted-foreground", isMobile ? "top-[38px]" : "top-1/2 -translate-y-1/2")} aria-hidden="true" />
+        <input
+          autoFocus={!isMobile}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "ArrowDown") {
+              e.preventDefault();
+              moveFocus(0);
+            }
+          }}
+          placeholder="Search…"
+          aria-label={`Search ${label}`}
+          className="w-full rounded-lg bg-transparent py-2 pl-9 pr-3 text-sm focus:outline-none"
+        />
+      </div>
+      <div
+        id={listId}
+        role="listbox"
+        aria-label={`${label} careers`}
+        className={cn("divide-y divide-border overflow-y-auto", isMobile ? "h-[50vh]" : "max-h-72")}
+        onKeyDown={(e) => {
+          const current = Math.min(focusIndex, Math.max(options.length - 1, 0));
+          switch (e.key) {
+            case "ArrowDown":
+              e.preventDefault();
+              moveFocus(current + 1);
+              break;
+            case "ArrowUp":
+              e.preventDefault();
+              moveFocus(current - 1);
+              break;
+            case "Home":
+              e.preventDefault();
+              moveFocus(0);
+              break;
+            case "End":
+              e.preventDefault();
+              moveFocus(options.length - 1);
+              break;
+          }
+        }}
+      >
+        {options.map((c, i) => (
+          <button
+            key={c.id}
+            ref={(el) => {
+              optionRefs.current[i] = el;
+            }}
+            role="option"
+            aria-selected={c.id === value}
+            tabIndex={i === focusIndex ? 0 : -1}
+            onFocus={() => setFocusIndex(i)}
+            onClick={() => {
+              onChange(c.id);
+              setOpen(false);
+              setQuery("");
+            }}
+            className="w-full px-4 py-3 text-left transition-colors hover:bg-secondary/60"
+          >
+            <span className="block text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{categoryLabel(c.category)}</span>
+            <span className="font-display text-base font-bold tracking-tight">{c.name}</span>
+          </button>
+        ))}
+        {!options.length && <p className="px-4 py-3 text-sm text-muted-foreground">No matches.</p>}
+      </div>
+    </>
+  );
 
   return (
     <div
@@ -206,76 +281,18 @@ function SlotPicker({
         )}
       </button>
 
-      {open && (
+      {open && !isMobile && (
         <div className="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-2xl border border-border bg-popover shadow-xl">
-          <div className="relative border-b border-border p-3">
-            <Search className="absolute left-6 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
-            <input
-              autoFocus
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "ArrowDown") {
-                  e.preventDefault();
-                  moveFocus(0);
-                }
-              }}
-              placeholder="Search…"
-              aria-label={`Search ${label}`}
-              className="w-full rounded-lg bg-transparent py-2 pl-9 pr-3 text-sm focus:outline-none"
-            />
-          </div>
-          <div
-            id={listId}
-            role="listbox"
-            aria-label={`${label} careers`}
-            className="max-h-72 divide-y divide-border overflow-y-auto"
-            onKeyDown={(e) => {
-              const current = Math.min(focusIndex, Math.max(options.length - 1, 0));
-              switch (e.key) {
-                case "ArrowDown":
-                  e.preventDefault();
-                  moveFocus(current + 1);
-                  break;
-                case "ArrowUp":
-                  e.preventDefault();
-                  moveFocus(current - 1);
-                  break;
-                case "Home":
-                  e.preventDefault();
-                  moveFocus(0);
-                  break;
-                case "End":
-                  e.preventDefault();
-                  moveFocus(options.length - 1);
-                  break;
-              }
-            }}
-          >
-            {options.map((c, i) => (
-              <button
-                key={c.id}
-                ref={(el) => {
-                  optionRefs.current[i] = el;
-                }}
-                role="option"
-                aria-selected={c.id === value}
-                tabIndex={i === focusIndex ? 0 : -1}
-                onFocus={() => setFocusIndex(i)}
-                onClick={() => {
-                  onChange(c.id);
-                  setOpen(false);
-                  setQuery("");
-                }}
-                className="w-full px-4 py-3 text-left transition-colors hover:bg-secondary/60"
-              >
-                <span className="block text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{categoryLabel(c.category)}</span>
-                <span className="font-display text-base font-bold tracking-tight">{c.name}</span>
-              </button>
-            ))}
-            {!options.length && <p className="px-4 py-3 text-sm text-muted-foreground">No matches.</p>}
-          </div>
+          {popoverContent}
         </div>
+      )}
+
+      {isMobile && (
+        <Drawer open={open} onOpenChange={setOpen}>
+          <DrawerContent>
+            {popoverContent}
+          </DrawerContent>
+        </Drawer>
       )}
     </div>
   );
@@ -342,7 +359,15 @@ function CompareView({ a, b }: { a: CareerProfile; b: CareerProfile }) {
   ];
 
   return (
-    <div id="main" className="mx-auto max-w-4xl px-5 py-10 sm:px-6">
+    <div id="main" className="mx-auto max-w-4xl px-5 py-10 sm:px-6 relative">
+      {/* Sticky Mobile Header */}
+      <div className="sticky top-14 md:top-16 z-40 -mx-5 mb-6 border-b border-border bg-background/95 backdrop-blur-md sm:-mx-6">
+        <div className="grid grid-cols-2 divide-x divide-border">
+          <div className="truncate px-4 py-3 text-center text-[13px] font-bold tracking-tight">{a.name}</div>
+          <div className="truncate px-4 py-3 text-center text-[13px] font-bold tracking-tight text-saffron">{b.name}</div>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="mb-6 flex items-center justify-between">
         <button onClick={() => navigate("/compare")} className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
@@ -352,26 +377,26 @@ function CompareView({ a, b }: { a: CareerProfile; b: CareerProfile }) {
           <Button variant="outline" size="sm" onClick={() => navigate(`/compare?a=${b.id}&b=${a.id}`)}>
             <RefreshCw className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" /> Swap
           </Button>
-          <Button variant="ghost" size="sm" onClick={() => navigate("/compare")} className="text-muted-foreground">
+          <Button variant="ghost" size="sm" onClick={() => navigate("/compare")} className="text-muted-foreground hidden sm:inline-flex">
             Change careers
           </Button>
         </div>
       </div>
 
       <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Head to head</p>
-      <div className="mb-10 grid gap-5 md:grid-cols-[1fr_auto_1fr] md:items-start">
+      <div className="mb-10 grid grid-cols-2 gap-4 md:grid-cols-[1fr_auto_1fr] md:items-start md:gap-5">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Career A</div>
-          <h1 className="mt-1 font-display text-4xl font-bold leading-none tracking-tight md:text-5xl">{a.name}</h1>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-foreground/80">{a.verdict}</p>
+          <h1 className="mt-1 font-display text-3xl font-bold leading-none tracking-tight md:text-5xl">{a.name}</h1>
+          <p className="mt-3 max-w-md text-xs leading-relaxed text-foreground/80 md:text-sm">{a.verdict}</p>
         </div>
         <div className="hidden pt-1 md:flex md:justify-center">
           <span className="shrink-0 self-start rounded-full bg-secondary px-3 py-1 font-mono text-xs font-bold text-muted-foreground">vs</span>
         </div>
-        <div className="md:text-right">
+        <div className="text-right md:text-right">
           <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Career B</div>
-          <h1 className="mt-1 font-display text-4xl font-bold leading-none tracking-tight text-saffron md:text-5xl">{b.name}</h1>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-foreground/80 md:ml-auto">{b.verdict}</p>
+          <h1 className="mt-1 font-display text-3xl font-bold leading-none tracking-tight text-saffron md:text-5xl">{b.name}</h1>
+          <p className="mt-3 max-w-md text-xs leading-relaxed text-foreground/80 md:ml-auto md:text-sm">{b.verdict}</p>
         </div>
       </div>
 
