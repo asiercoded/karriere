@@ -41,6 +41,9 @@ import { useChecklist } from "@/lib/checklist";
 import { SITE_DESC, SITE_TITLE, useJsonLd, usePageMeta } from "@/lib/meta";
 import { ShareDialog } from "@/components/ShareDialog";
 import { FeedbackWidget } from "@/components/FeedbackWidget";
+import { SubmitReviewDialog } from "@/components/SubmitReviewDialog";
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
 import { cn } from "@/lib/utils";
 
 const CHAPTERS = [
@@ -366,7 +369,12 @@ export default function CareerProfile() {
 
   const saved = shortlist.includes(career.id);
   const vsPair = VS_PAIRS.find((p) => p.a === career.id || p.b === career.id);
-  const heroQuote = career.realExperiences[0];
+  const liveReviews = useQuery(api.reviews.getApprovedReviews, { careerId: career.id }) ?? [];
+  const allReviews = useMemo(() => {
+    const live = liveReviews.map((r) => ({ quote: r.quote, source: r.label, url: undefined }));
+    return [...live, ...career.realExperiences];
+  }, [liveReviews, career.realExperiences]);
+  const heroQuote = allReviews[0];
   const salaryCtx = getSalaryContext(career.salaryParsed.entry);
   const journey = journeySummary(career);
   const related = career.relatedCareers
@@ -859,16 +867,19 @@ export default function CareerProfile() {
           <Reveal>
             <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">Reviews</h2>
             <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-              Verbatim accounts from real threads. One person&rsquo;s experience is not a trend — read them all.
+              Verbatim accounts from real threads and our community. One person&rsquo;s experience is not a trend — read them all.
             </p>
-            <p className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-saffron/30 bg-saffron-dim px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-saffron">
-              <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" />
-              Reviews collected &amp; linked · {career.lastVerified}
-            </p>
-            <ShowMore count={career.realExperiences.length} initial={2} label="reviews">
+            <div className="mt-4 flex flex-wrap items-center gap-4">
+              <SubmitReviewDialog careerId={career.id} careerName={career.name} />
+              <p className="inline-flex items-center gap-1.5 rounded-full border border-saffron/30 bg-saffron-dim px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-saffron">
+                <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" />
+                {allReviews.length} Verified stories
+              </p>
+            </div>
+            <ShowMore count={allReviews.length} initial={3} label="reviews">
               {(n) => (
                 <div className="mt-7 space-y-4">
-                  {career.realExperiences.slice(0, n).map((exp, i) => (
+                  {allReviews.slice(0, n).map((exp, i) => (
                     <div key={i} className="rounded-2xl border border-border bg-card p-6">
                       <Quote className="h-5 w-5 text-saffron/50" aria-hidden="true" />
                       <blockquote className="mt-3 text-[15px] italic leading-relaxed tracking-tight md:text-base">

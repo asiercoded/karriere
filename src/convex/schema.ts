@@ -67,12 +67,19 @@ const schema = defineSchema(
       query: v.optional(v.string()),
     }).index("by_type", ["type"]),
 
-    // add other tables here
+    // User submitted stories/reviews for the "Real voices" section
+    careerReviews: defineTable({
+      careerId: v.string(),
+      quote: v.string(),
+      label: v.string(),
+      status: v.union(v.literal("pending"), v.literal("approved"), v.literal("rejected")),
+      userId: v.optional(v.id("users")),
+      createdAt: v.number(),
+    })
+      .index("by_career_status", ["careerId", "status"])
+      .index("by_status", ["status"]),
 
-    // tableName: defineTable({
-    //   ...
-    //   // table fields
-    // }).index("by_field", ["field"])
+    // add other tables here
   },
   {
     schemaValidation: false,
