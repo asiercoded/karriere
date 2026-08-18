@@ -37,16 +37,11 @@ function entryMid(career: CareerProfile): number {
   return ((e.min ?? 0) + (e.max ?? e.min ?? 0)) / 2;
 }
 
-type QuickFilterType = "all" | "high_pay" | "no_maths" | "quickest";
-
 export default function CareerExplorer() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
   const [category, setCategory] = useState(searchParams.get("cat") ?? "all");
-  const [quickFilter, setQuickFilter] = useState<QuickFilterType>(
-    (searchParams.get("quick") as QuickFilterType) ?? "all"
-  );
   const [sort, setSort] = useState<SortKey>("relevance");
   const shortlist = useShortlist();
   const careers = useCareers();
@@ -86,15 +81,6 @@ export default function CareerExplorer() {
   const filtered = useMemo(() => {
     let list = query.trim() ? searchCareers(careersList, query) : [...careersList];
     if (category !== "all") list = list.filter((c) => c.category === category);
-    
-    if (quickFilter === "high_pay") {
-      list = list.filter((c) => entryMid(c) >= 400000);
-    } else if (quickFilter === "no_maths") {
-      const mathCareers = ["cs_engineering", "core_engineering", "bca_mca", "architecture", "economics"];
-      list = list.filter((c) => !mathCareers.includes(c.id) && c.category !== "engineering");
-    } else if (quickFilter === "quickest") {
-      list = list.filter((c) => c.durationParsed <= 3);
-    }
 
     switch (sort) {
       case "salary":
@@ -113,21 +99,13 @@ export default function CareerExplorer() {
         break;
     }
     return list;
-  }, [query, category, quickFilter, sort, careersList]);
+  }, [query, category, sort, careersList]);
 
   const selectCategory = (id: string) => {
     setCategory(id);
     const next = new URLSearchParams(searchParams);
     if (id === "all") next.delete("cat");
     else next.set("cat", id);
-    setSearchParams(next, { replace: true });
-  };
-
-  const selectQuickFilter = (id: QuickFilterType) => {
-    setQuickFilter(id);
-    const next = new URLSearchParams(searchParams);
-    if (id === "all") next.delete("quick");
-    else next.set("quick", id);
     setSearchParams(next, { replace: true });
   };
 
@@ -142,7 +120,6 @@ export default function CareerExplorer() {
   const clearFilters = () => {
     setQuery("");
     setCategory("all");
-    setQuickFilter("all");
     setSearchParams(new URLSearchParams(), { replace: true });
   };
 
@@ -228,35 +205,6 @@ export default function CareerExplorer() {
                 >
                   {count}
                 </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Quick Filters */}
-        <div className="mt-5 flex flex-wrap gap-1.5">
-          {(
-            [
-              { id: "all", label: "Any" },
-              { id: "high_pay", label: "💰 High Entry Pay" },
-              { id: "no_maths", label: "🚫 No Maths" },
-              { id: "quickest", label: "⚡ Quickest to Earn" },
-            ] as { id: QuickFilterType; label: string }[]
-          ).map((q) => {
-            const active = quickFilter === q.id;
-            return (
-              <button
-                key={q.id}
-                onClick={() => selectQuickFilter(q.id)}
-                aria-pressed={active}
-                className={cn(
-                  "flex items-center gap-1.5 rounded-full border py-1.5 px-3.5 text-sm font-semibold transition-colors",
-                  active
-                    ? "border-saffron/50 bg-saffron-dim text-saffron"
-                    : "border-border bg-card text-muted-foreground hover:border-saffron/30 hover:text-foreground",
-                )}
-              >
-                {q.label}
               </button>
             );
           })}
