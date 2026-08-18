@@ -897,29 +897,31 @@ export default function CareerProfile() {
         </section>
 
         {/* FAQ */}
-        <section id="ch-faq" className="scroll-mt-32 pt-12 md:pt-16">
-          <Reveal>
-            <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">FAQ</h2>
-            <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-              The questions students actually ask — answered honestly.
-            </p>
-            <ShowMore count={career.faq.length} initial={5} label="questions">
-              {(n) => (
-                <div className="mt-7 space-y-3">
-                  {career.faq.slice(0, n).map((f) => (
-                    <details key={f.question} className="group rounded-2xl border border-border bg-card transition-colors open:border-saffron/40">
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
-                        <span className="font-display text-base font-bold tracking-tight">{f.question}</span>
-                        <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true" />
-                      </summary>
-                      <p className="px-5 pb-6 text-[15px] leading-relaxed text-foreground/85">{f.answer}</p>
-                    </details>
-                  ))}
-                </div>
-              )}
-            </ShowMore>
-          </Reveal>
-        </section>
+        {career.faq && career.faq.length > 0 && (
+          <section id="ch-faq" className="scroll-mt-32 pt-12 md:pt-16">
+            <Reveal>
+              <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">FAQ</h2>
+              <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+                The questions students actually ask — answered honestly.
+              </p>
+              <ShowMore count={career.faq.length} initial={5} label="questions">
+                {(n) => (
+                  <div className="mt-7 space-y-3">
+                    {career.faq.slice(0, n).map((f) => (
+                      <details key={f.question} className="group rounded-2xl border border-border bg-card transition-colors open:border-saffron/40">
+                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
+                          <span className="font-display text-base font-bold tracking-tight">{f.question}</span>
+                          <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true" />
+                        </summary>
+                        <p className="px-5 pb-6 text-[15px] leading-relaxed text-foreground/85">{f.answer}</p>
+                      </details>
+                    ))}
+                  </div>
+                )}
+              </ShowMore>
+            </Reveal>
+          </section>
+        )}
 
         {/* Sources */}
         <section className="scroll-mt-32 pt-12 md:pt-16">
