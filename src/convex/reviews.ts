@@ -29,15 +29,21 @@ export const getApprovedReviews = query({
     careerId: v.string(),
   },
   handler: async (ctx, args) => {
-    const reviews = await ctx.db
-      .query("careerReviews")
-      .filter((q) => q.and(
-        q.eq(q.field("careerId"), args.careerId),
-        q.eq(q.field("status"), "approved")
-      ))
-      .collect();
-      
-    // Sort descending by createdAt
-    return reviews.sort((a, b) => b.createdAt - a.createdAt);
+    try {
+      const reviews = await ctx.db
+        .query("careerReviews")
+        .filter((q) =>
+          q.and(
+            q.eq(q.field("careerId"), args.careerId),
+            q.eq(q.field("status"), "approved"),
+          ),
+        )
+        .collect();
+
+      return reviews.sort((a, b) => (b.createdAt ?? 0) - (a.createdAt ?? 0));
+    } catch (err) {
+      console.error("Error fetching approved reviews:", err);
+      return [];
+    }
   },
 });

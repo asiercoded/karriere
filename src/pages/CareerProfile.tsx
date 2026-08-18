@@ -325,10 +325,12 @@ export default function CareerProfile() {
     active?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
   }, [activeChapter]);
 
-  const liveReviews = useQuery(api.reviews.getApprovedReviews, career ? { careerId: career.id } : "skip") ?? [];
+  const liveReviews = useQuery(api.reviews.getApprovedReviews, career ? { careerId: career.id } : "skip");
   const allReviews = useMemo(() => {
     if (!career) return [];
-    const live = liveReviews.map((r) => ({ quote: r.quote, source: r.label, url: undefined }));
+    const live = Array.isArray(liveReviews)
+      ? liveReviews.map((r) => ({ quote: r.quote, source: r.label, url: undefined }))
+      : [];
     return [...live, ...career.realExperiences];
   }, [liveReviews, career]);
 
