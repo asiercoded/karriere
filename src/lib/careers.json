@@ -57,7 +57,7 @@
           "url": "https://www.ndtv.com/education/neet-pg-2026-india-has-86-360-seats-centre-plans-5-000-more-11882280"
         }
       ],
-      "overview": "5.5-year degree (4.5 years + 1 year internship). Not a career in itself — it's the entry ticket to a career. For most, the real money and title only arrive after 3+ more years of postgraduate specialization (MD/MS). MBBS alone puts you in a hospital ward at ₹40-80k/month.",
+      "overview": "MBBS in India is no longer the golden ticket it once was. It demands 10+ years of grueling training and competition for PG seats, with low pay, toxic hierarchy, and high burnout. The honest consensus from students and young doctors is that it is a poor ROI for most middle-class families unless you land a top government seat, or have substantial financial backing to absorb private college debt and wait 10+ years for a payoff.",
       "tags": [
         "mbbs",
         "doctor",
@@ -74,18 +74,15 @@
         "Medicine keeps changing. If you hate monotony, this is for you."
       ],
       "what_nobody_tells_you": [
-        "MBBS is not the finish line — it's the starting gun for NEET-PG. Only ~86,000 PG seats (MD/MS, DNB, and Diplomas combined) exist for 1.2+ lakh new MBBS grads each year. Miss NEET-PG and your career stalls.",
-        "The entrance math is brutal: 22.79 lakh registered, ~20 lakh appeared, 11.21 lakh qualified — for just ~1.37 lakh MBBS seats (2026-27). Roughly 1 in 8 who qualifies gets in.",
-        "Even MD/MS holders queue for government jobs. Rajasthan 2026: 30,000 applicants for 1,600 posts — most of them already specialists.",
-        "Plain MBBS pays ₹50-80k/month in government. The 'doctors earn lakhs' image is a specialist at 35, not you at 26.",
-        "Your B.Tech friends start earning at 21. You'll still be studying at 28.",
-        "Private medical college: up to ₹1 crore total. Taking a loan for this is financial suicide.",
-        "Patient deaths, 36-hour shifts, angry relatives — this will happen before you're 25."
+        "The '1-2 crore/year right after MBBS' narrative is pure social media fiction. Real high earners are usually 10+ years into practice with their own hospitals or elite specialties.",
+        "Interns can make as little as ₹4,000/month for 8-10 hour days, and rural postings (₹15k/month) sometimes involve physical assaults and out-of-pocket costs.",
+        "NEET PG prep often takes 1-4+ years of drops and repeats, meaning the actual time before independent practice is closer to 10-12 years.",
+        "Toxicity is rampant: interns and junior residents consistently report extreme mental and physical abuse from seniors, alongside violence from patients/attendants."
       ],
       "salary": {
-        "entry": "₹40,000 - ₹80,000/month (government job or junior resident)",
-        "mid": "₹1 - ₹2 lakh/month (after MD/MS, 5 years experience)",
-        "senior": "₹3 - ₹15 lakh/month (established specialist, varies massively by specialty and city)"
+        "entry": "₹3L - ₹6L (Fresh MBBS)",
+        "mid": "₹7L - ₹14L (Junior Consultant)",
+        "senior": "₹15L - ₹25L+"
       },
       "career_outlook": {
         "india": "~823 colleges, ~1.37 lakh MBBS seats (NMC 2026-27) — but only ~86,000 PG seats (MD/MS, DNB, Diplomas) for 1.2+ lakh new grads annually. Government jobs are a warzone: 30,000 applicants for 1,600 posts in Rajasthan (2026). Corporate hospitals underpay plain MBBS. Private practice needs startup capital you won't have. Realistic path: MBBS → NEET-PG → MD/MS → job. Minimum 10 years.",
@@ -289,16 +286,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 480000,
-          "max": 960000
+          "min": 300000,
+          "max": 600000
         },
         "mid": {
-          "min": 1200000,
-          "max": 2400000
+          "min": 700000,
+          "max": 1400000
         },
         "senior": {
-          "min": 3600000,
-          "max": 18000000
+          "min": 1500000,
+          "max": 2500000
         }
       },
       "duration_parsed": 5.5
@@ -328,7 +325,7 @@
           "url": "https://www.reddit.com/r/dentalschoolindia/comments/1sbnlyp/is_dentistry_worth_it_for_you/"
         }
       ],
-      "overview": "BDS is a 5-year degree (4 years + 1 year internship). But let's be honest: dentistry is a business. You are a doctor, but you are also a clinic owner. If you have the capital and the hustle, the sky's the limit. If you took BDS just because you missed the MBBS cutoff, you will hate it.",
+      "overview": "BDS in India is severely oversaturated, underpaid at the entry-level, and brutally dependent on your ability to invest in your own clinic or go abroad. The honest consensus from students and young dentists is grim: starting salaries are often ₹10k–25k/month, private-college debt is massive, and an MDS is no longer a guarantee of success. For most middle-class families, it offers a poor ROI unless you have family money, a ready-made practice to inherit, or a clear plan to pass licensing exams abroad.",
       "tags": [
         "bds",
         "dentist",
@@ -345,18 +342,15 @@
         "Tier-2 and Tier-3 cities are a goldmine right now."
       ],
       "what_nobody_tells_you": [
-        "The first 3-5 years are brutal. You'll likely work as an associate for ₹15k-30k/month while your B.Tech friends are hitting ₹20 LPA.",
-        "Setting up a clinic costs ₹15-20 lakhs minimum. MDS specialization? Add another ₹30-50 lakhs. If you don't have family wealth, the loans will drown you.",
-        "Government dental jobs are a myth. PSC vacancies are practically non-existent.",
-        "India produces ~27,926 new dentists a year. We have 1 dentist per 3,846 people in metros (WHO recommends 1:7,500). The market is choked.",
-        "Going rural isn't a cheat code. Villagers can't afford root canals, and local 'quacks' will steal your patients with ₹100 extractions.",
-        "MDS is becoming the new baseline, not a luxury. But PG seats are incredibly expensive.",
-        "Discount dentistry is ruining the market. Clinics slash prices to survive, forcing them to use cheap materials and rush patients."
+        "India has an oversupply of dentists. In many cities, there are 10+ MDS specialists within a 1km radius. A standalone BDS clinic cannot compete.",
+        "MDS is no longer a golden ticket; it is merely the new baseline. Many MDS holders still run rented clinics or earn ₹30k/month as faculty.",
+        "Starting a practice requires ₹10–25 lakh in capital and 1–2 years of financial runway where you will earn almost nothing while building a patient base.",
+        "Interns frequently get paid ₹0. Many young dentists feel trapped and financially dependent on their parents into their late 20s or 30s."
       ],
       "salary": {
-        "entry": "₹15,000 - ₹30,000/month (associate dentist, first 2-3 years)",
-        "mid": "₹60,000 - ₹1.5 lakh/month (own clinic with steady patient base, or MDS specialist at 5 years)",
-        "senior": "₹2 - ₹15 lakh/month (established multi-chair clinic, MDS specialist with referrals)"
+        "entry": "₹1.2L - ₹3.5L (Associate BDS)",
+        "mid": "₹4L - ₹7L (MDS Fresher)",
+        "senior": "₹12L - ₹30L+ (Clinic Owner)"
       },
       "career_outlook": {
         "india": "Metros are dead zones—way too many dentists. India pumps out ~27,926 BDS grads every year, driving the ratio to 1:3,846 (WHO wants 1:7,500). Tier-2/3 cities are your best bet. Unless you do MDS and drop serious cash on a high-end clinic, you'll be stuck doing cheap fillings to survive.",
@@ -597,16 +591,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 180000,
-          "max": 360000
+          "min": 120000,
+          "max": 350000
         },
         "mid": {
-          "min": 720000,
-          "max": 1800000
+          "min": 400000,
+          "max": 700000
         },
         "senior": {
-          "min": 2400000,
-          "max": 18000000
+          "min": 1200000,
+          "max": 3000000
         }
       },
       "duration_parsed": 5
@@ -636,7 +630,7 @@
           "url": "https://www.reddit.com/r/indianmedschool/comments/1l6kwwb/pros_and_cons_of_bams_please/"
         }
       ],
-      "overview": "Bachelor of Ayurvedic Medicine and Surgery — a 5.5-year degree. Yes, the 'Dr.' title is completely legal. But the reality check hits hard after graduation: government jobs are nearly non-existent, private practice takes years to build, and most private colleges charge a fortune for a degree with terrible ROI.",
+      "overview": "BAMS offers clearer clinic pathways than BHMS and receives substantial government/AYUSH support. However, the objective reality involves low-to-moderate starting salaries, a heavy reliance on private practice, and a constant identity/status struggle compared to MBBS. Without a family clinic, a strong local reputation, or a secure government role, the first 5-7 years are financially and emotionally challenging.",
       "tags": [
         "bams",
         "ayurveda",
@@ -654,30 +648,28 @@
         "It's less chaotic than MBBS. No 36-hour emergency ward duties."
       ],
       "what_nobody_tells_you": [
-        "Out of 52,720+ AYUSH seats, only ~7,165 are government BAMS. The rest are private colleges, and many are absolute scams with zero real patients.",
-        "Government jobs are a myth for most. Unlike MBBS, there is no smooth pipeline into the system.",
-        "A Govt AYUSH medical officer makes ~₹30k/month to start. Private clinics pay freshers a brutal ₹2-4 LPA.",
-        "Private colleges charge ₹2-5 lakh/year (up to ₹15 lakh in deemed universities). The ROI is the worst among medical degrees.",
-        "Because clinics are empty, a massive chunk of grads end up in sales for Dabur, Patanjali, or Himalaya instead of treating patients.",
-        "If you don't actually believe in Ayurveda, studying it for 5.5 years will feel like a prison sentence."
+        "The demand for 'pure Ayurveda' is limited. Many practitioners feel pressured into ethical gray zones (or 'quackery' accusations) by prescribing allopathic medicines to survive.",
+        "There is a massive and persistent social status gap between MBBS and BAMS. You will likely face an identity crisis regarding your 'doctor' tag.",
+        "Opening a private practice means operating at a loss or break-even (earning ₹10k-20k/month) for the first 1-3 years while building trust.",
+        "A small elite of practitioners in metros can make ₹2-10 Lakhs a month by seeing 50+ patients daily, but this requires years of compounding reputation."
       ],
       "salary": {
-        "entry": "₹2–4 LPA private; ~₹30k/month in-hand as a govt AYUSH medical officer",
-        "mid": "₹5–8 LPA (established practice, MD specialist, pharma roles)",
-        "senior": "₹10–25 LPA (successful private practice, senior govt/administrative posts)"
+        "entry": "₹2.4L - ₹4.8L (₹20k-40k/mo)",
+        "mid": "₹4.8L - ₹12L",
+        "senior": "₹12L - ₹24L+"
       },
       "salary_parsed": {
         "entry": {
-          "min": 200000,
-          "max": 400000
+          "min": 240000,
+          "max": 480000
         },
         "mid": {
-          "min": 500000,
-          "max": 800000
+          "min": 480000,
+          "max": 1200000
         },
         "senior": {
-          "min": 1000000,
-          "max": 2500000
+          "min": 1200000,
+          "max": 2400000
         }
       },
       "career_outlook": {
@@ -918,7 +910,7 @@
           "url": "https://www.reddit.com/r/indianmedschool/comments/1al02wl/should_bamsbumsbhms_be_discontinued_as_a_degree/"
         }
       ],
-      "overview": "Bachelor of Homeopathic Medicine and Surgery — a 5.5-year degree. With only ~13,000 seats nationally, it's the smallest AYUSH branch. Yes, the degree is real. But homeopathy faces brutal global skepticism, the government jobs are microscopic, and fresh grads often start at a grim ₹2.5–3 LPA.",
+      "overview": "BHMS is a highly polarizing career with very low starting salaries in clinical roles. Success is almost entirely dependent on building a private practice over 5-7 years. Graduates face constant stigma and a 'quack' label from mainstream medicine. It is a make-or-break path where a small elite become famous homeopaths, while the vast majority struggle with slow financial growth and identity crises.",
       "tags": [
         "bhms",
         "homeopathy",
@@ -935,30 +927,27 @@
         "It's a much more relaxed college experience than MBBS."
       ],
       "what_nobody_tells_you": [
-        "It's the smallest job market in medicine. Entry is easy, but getting a job after is incredibly hard.",
-        "You will constantly be told your degree is pseudoscience. Are you ready to defend it for the next 40 years?",
-        "Freshers make the lowest pay in the medical sector: ₹2.5–3 LPA (~₹20k/month).",
-        "Government jobs exist (state departments, ESIC), but they are rare and fiercely competitive.",
-        "Your degree means nothing outside India. You cannot migrate and practice clinical homeopathy in the US or UK.",
-        "Homeopathic pharma (SBL, Dr. Reckeweg) hires grads, but for ₹3-6 LPA corporate roles, not clinical ones.",
-        "Colleges will tell you it's 'equivalent to MBBS'. The job market strongly disagrees."
+        "Salaried opportunities are even weaker than in BAMS. Most clinical jobs pay only ₹15k–25k per month and involve long hours of patient counseling.",
+        "You will face relentless stigma and questioning of the scientific validity of your degree from MBBS peers and the internet.",
+        "Private practice requires extreme patience. Years 1-3 often result in break-even earnings of ₹10k-20k/month while you build a patient base.",
+        "To reach the ₹3-10 Lakh/month bracket, you must have exceptional communication skills, family financial support during the early years, and 5-7+ years of patience."
       ],
       "salary": {
-        "entry": "₹2.5–3 LPA (~₹20–25k/month, fresh)",
-        "mid": "₹5–8 LPA (established practice, government officer mid-scale)",
-        "senior": "₹10–20 LPA (successful private practice, senior government posts)"
+        "entry": "₹1.8L - ₹3.6L (₹15k-30k/mo)",
+        "mid": "₹6L - ₹12L",
+        "senior": "₹12L - ₹20L+"
       },
       "salary_parsed": {
         "entry": {
-          "min": 250000,
-          "max": 300000
+          "min": 180000,
+          "max": 360000
         },
         "mid": {
-          "min": 500000,
-          "max": 800000
+          "min": 600000,
+          "max": 1200000
         },
         "senior": {
-          "min": 1000000,
+          "min": 1200000,
           "max": 2000000
         }
       },
@@ -1201,7 +1190,7 @@
           "url": "https://www.reddit.com/r/PharmacyIndia/"
         }
       ],
-      "overview": "B.Pharm is a 4-year degree in drug chemistry. It's supposed to open doors to R&D, clinical research, and quality control. But here is the brutal reality: India pumps out ~5 lakh pharmacy graduates a year. Most colleges don't teach industry-relevant skills, so graduates end up working the counter at Apollo Pharmacy for ₹15,000/month.",
+      "overview": "B.Pharm is currently massively oversupplied in India and is not the high-paying, high-status degree many assume it is. The neutral, honest consensus from young pharmacists is: low starting salaries (often ₹15k–25k/month), a heavy sales or production grind, and very few 'respectful' core roles unless you pivot to higher-paying niches (PV, CRA, regulatory) or obtain an M.Pharm from a top institute.",
       "tags": [
         "pharmacy",
         "bpharm",
@@ -1217,17 +1206,15 @@
         "If you have capital, owning a medical store chain is a cash cow."
       ],
       "what_nobody_tells_you": [
-        "Most graduates get stuck in retail pharmacy because they have no idea how to crack corporate roles.",
-        "The real money (Regulatory Affairs, QA) requires networking and often an M.Pharm.",
-        "A plain B.Pharm hits a salary ceiling incredibly fast.",
-        "Freshers make ₹15k-25k/month. Meanwhile, private college fees have skyrocketed to ₹8-12 lakhs. The math is broken.",
-        "Government jobs often hire D.Pharm (Diploma) holders over B.Pharm graduates because it's cheaper.",
-        "70-75% of B.Pharm graduates are considered unemployable by the pharma industry."
+        "The '₹40-50k starting salary' is a complete myth. Most freshers start between ₹15k-25k per month.",
+        "Medical Representative (MR) roles are brutal. They involve heavy field work, aggressive daily doctor visits, and targets that destroy work-life balance.",
+        "Plant and production roles (QA/QC) often involve 12-hour rotating shifts and exposure to chemicals, with very slow salary growth in small units.",
+        "The 'government pharmacist' dream is mathematically improbable. There are often thousands of applicants for just a handful of posts."
       ],
       "salary": {
-        "entry": "₹15,000-₹25,000/month (retail) vs ₹25,000-₹35,000/month (industry, QA/QC roles)",
-        "mid": "₹35,000-₹70,000/month (own pharmacy or mid-level industry role, 5 years)",
-        "senior": "₹80,000-₹2.5 lakh/month (senior industry roles like regulatory affairs manager, or established pharmacy chain owner)"
+        "entry": "₹1.8L - ₹3.6L (₹15k-30k/mo)",
+        "mid": "₹4L - ₹7L",
+        "senior": "₹8L - ₹15L+"
       },
       "career_outlook": {
         "india": "The industry is booming ($50B market), but the talent pool is flooded (~5 lakh grads/year). If you end up in retail, expect ₹15k-25k/month and a stagnant career. The only way to win is to get into QA/QC, Regulatory Affairs, or Pharmacovigilance. For that, you usually need an M.Pharm from a good college.",
@@ -1426,15 +1413,15 @@
       "salary_parsed": {
         "entry": {
           "min": 180000,
-          "max": 300000
+          "max": 360000
         },
         "mid": {
-          "min": 420000,
-          "max": 840000
+          "min": 400000,
+          "max": 700000
         },
         "senior": {
-          "min": 960000,
-          "max": 3000000
+          "min": 800000,
+          "max": 1500000
         }
       },
       "duration_parsed": 4
@@ -1464,7 +1451,7 @@
           "url": "https://www.nmc.org.uk/"
         }
       ],
-      "overview": "B.Sc Nursing is a 4-year degree in clinical patient care. It is arguably the easiest and most reliable way to migrate out of India. While domestic private hospitals will exploit you for ₹15,000/month, countries like the UK, Australia, and the Gulf are aggressively hiring Indian nurses at 10x the salary.",
+      "overview": "Nursing in India is severely undervalued in the private sector. The objective consensus: private hospital nursing means brutal physical workloads and low pay (₹15k–25k/month). However, it becomes a highly rewarding and stable path if you manage to clear fiercely competitive government exams (AIIMS/ESIC) or execute a planned, funded abroad route (Gulf, UK, Canada).",
       "tags": [
         "nursing",
         "nurse",
@@ -1479,16 +1466,15 @@
         "Tons of specialization options (ICU, OT, Pediatrics) so you don't get bored."
       ],
       "what_nobody_tells_you": [
-        "Private hospitals in India will treat you like cheap labor. Expect ₹15,000-₹25,000/month for years.",
-        "The only way to make real money is moving abroad. A UK nurse makes ~₹3 lakh/month doing the exact same job.",
-        "Government hospital jobs (AIIMS, State hospitals) pay really well (₹50k-70k), but cracking the NORCET exam is brutal.",
-        "You will do night shifts. You will clean up bodily fluids. This is not a glamour job.",
-        "The migration window is tightening. Clearing OET/NCLEX is harder now, and you need to start planning in college."
+        "The nurse-to-patient ratio in private hospitals is physically punishing (often 1:15 or 1:20), leading to extreme burnout.",
+        "Social status issues persist; nurses are frequently treated poorly and seen as 'laborers' or 'doctor's helpers'.",
+        "The 'abroad dream' is not automatic. It requires clearing exams (IELTS/OET, Prometric), paying upfront costs, and having 2+ years of prior bedside experience.",
+        "Government nursing jobs offer real security and decent pay (₹6-10 LPA), but the competition is brutal (e.g., 400,000 applicants for 400 spots)."
       ],
       "salary": {
-        "entry": "₹15,000-₹25,000/month (Private hospital)",
-        "mid": "₹30,000-₹60,000/month (India) vs ₹2.5-₹5 lakh/month (UK, Gulf, after a few years)",
-        "senior": "₹50,000-₹1.5 lakh/month (India, senior roles) vs ₹5-₹10 lakh/month (USA, UK after specialization)"
+        "entry": "₹1.8L - ₹3.6L (Private)",
+        "mid": "₹6L - ₹10L (Govt)",
+        "senior": "₹12L - ₹24L+ (Abroad)"
       },
       "career_outlook": {
         "india": "A massive trap if you stick to private hospitals (₹15k-25k/month). If you stay in India, your only goal should be cracking government exams like NORCET, which secure a ₹70k+ salary and great benefits. Otherwise, you are underpaid and overworked.",
@@ -1684,15 +1670,15 @@
       "salary_parsed": {
         "entry": {
           "min": 180000,
-          "max": 300000
+          "max": 360000
         },
         "mid": {
-          "min": 360000,
-          "max": 720000
+          "min": 600000,
+          "max": 1000000
         },
         "senior": {
-          "min": 600000,
-          "max": 12000000
+          "min": 1200000,
+          "max": 2400000
         }
       },
       "duration_parsed": 4
@@ -1725,7 +1711,7 @@
           "label": "Indian Association of Physiotherapists — college count"
         }
       ],
-      "overview": "BPT is now a 5-year degree requiring NEET-UG. It's a highly physical job. While demand is growing (sports injuries, aging population), the market is flooded with graduates from private colleges. Entry-level pay is terrible, but the ceiling is high if you build a private practice or specialize (MPT).",
+      "overview": "BPT offers a slow-growth, low-paid start. The honest consensus: salaried hospital jobs pay poorly for years (₹10k–25k/month) with a low hard ceiling. Real financial upside only comes from building a strong private practice, specializing in sports/neuro rehab, or moving abroad—all of which require significant time, skill, and capital.",
       "tags": [
         "physiotherapy",
         "bpt",
@@ -1740,17 +1726,15 @@
         "Sports physiotherapy (IPL, national teams) is a highly lucrative and glamorous niche."
       ],
       "what_nobody_tells_you": [
-        "The first 3 years are financially brutal. Private hospitals will pay you ₹15,000–25,000/month.",
-        "It is physically exhausting. You are on your feet, doing manual therapy and lifting patients all day.",
-        "BPT is no longer the 'easy backup without an exam'. It now requires NEET-UG and takes 5 full years.",
-        "There are 500+ physio colleges in India now. The market is saturated at the bottom. Some freshers do home visits for less than what a plumber charges.",
-        "Government jobs pay great (₹45k–1.4L), but vacancies are incredibly rare and fiercely contested.",
-        "To make real money, you have to run it like a business. Your clinical skills matter less than your ability to market yourself and get referrals from orthopedic surgeons."
+        "The ceiling for salaried hospital jobs is extremely low; many cap out at ₹40k-70k per month even after years of experience.",
+        "Setting up a private clinic takes 5-8 years of grinding to build a patient base; it is not an instant money-maker.",
+        "There is a frustrating identity struggle; many patients view physios merely as 'massage therapists' rather than independent clinical professionals.",
+        "Moving abroad (UK/Canada) requires clearing licensing exams that can cost lakhs and take 6-12 months of preparation."
       ],
       "salary": {
-        "entry": "₹15,000 - ₹25,000/month",
-        "mid": "₹35,000 - ₹80,000/month (5 years, own practice building or MPT specialist in hospital)",
-        "senior": "₹1 - ₹4 lakh/month (established private practice, sports team physiotherapist, or specialized rehab clinic owner)"
+        "entry": "₹1.2L - ₹3L (₹10k-25k/mo)",
+        "mid": "₹3.6L - ₹7.2L",
+        "senior": "₹10L - ₹20L+ (Private Clinic)"
       },
       "career_outlook": {
         "india": "Demand is high, but supply is higher. If you just get a BPT and look for a hospital job, you'll be stuck at ₹20k/month. To win, you must do an MPT (Sports/Neuro) or hustle to build your own private clinic. Government jobs are great but basically a lottery due to low vacancies.",
@@ -1956,16 +1940,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 180000,
+          "min": 120000,
           "max": 300000
         },
         "mid": {
-          "min": 420000,
-          "max": 960000
+          "min": 360000,
+          "max": 720000
         },
         "senior": {
-          "min": 1200000,
-          "max": 4800000
+          "min": 1000000,
+          "max": 2000000
         }
       },
       "duration_parsed": 5
@@ -1998,7 +1982,7 @@
           "label": "Delhi govt — paramedical pay matrix (₹19,900–2,09,200/month)"
         }
       ],
-      "overview": "A 3-4 year degree where you learn to operate X-ray, CT, MRI, and ultrasound machines. You are the technician who positions the patient and runs the scan. You do not diagnose diseases. The demand is huge, but you have to master advanced machines (like MRI) to make real money.",
+      "overview": "Radiology tech is one of the stronger paramedical options in terms of job availability and ROI. The objective consensus points to decent starting salaries (₹2.5–4.5 LPA) and clear growth up to ₹8–15 LPA by specializing in CT, MRI, or PET scans. It is machine-heavy, involves shift work, and is less glamorous than being a radiologist (MD), but it offers solid stability.",
       "tags": [
         "radiology",
         "medical imaging",
@@ -2014,17 +1998,15 @@
         "The Gulf, UK, and Australia heavily recruit Indian radiographers."
       ],
       "what_nobody_tells_you": [
-        "Don't confuse this with an MD Radiologist. They make ₹2 lakh/month. You make ₹18k-30k/month as a fresher.",
-        "Colleges are pumping out basic X-ray techs, keeping entry-level salaries horribly low.",
-        "You will work brutal night shifts. Trauma patients come in at 3 AM and need immediate scans.",
-        "It's not just 'pressing buttons'. You have to physically lift and position patients who might be bleeding or unconscious.",
-        "AI is already starting to read routine scans. If you just take basic X-rays, you will be replaced. You must learn MRI and CT.",
-        "Private diagnostic chains pay better than government hospitals, but they will squeeze you for 10-12 hour shifts."
+        "You are not a doctor. Many confuse radiology tech with radiologist (MD). Techs operate machines; radiologists interpret scans and make the big money.",
+        "Shift work and night duties are very common, especially in hospitals with 24/7 CT/MRI services.",
+        "Pay is highly location-dependent. Better pay and roles exist almost exclusively in metros and large diagnostic chains.",
+        "You can pivot into highly paid corporate/vendor roles (Application Specialist for Siemens/GE), which pay ₹12-24 LPA but require heavy travel."
       ],
       "salary": {
-        "entry": "₹18,000-₹30,000/month",
-        "mid": "₹40,000-₹80,000/month (5 years, especially with MRI/CT specialization)",
-        "senior": "₹90,000-₹2.5 lakh/month (senior technologist, imaging center manager, or specialized sonographer)"
+        "entry": "₹2.5L - ₹4.5L",
+        "mid": "₹5L - ₹9L (CT/MRI)",
+        "senior": "₹10L - ₹16L+ (Specialist/Vendor)"
       },
       "career_outlook": {
         "india": "Diagnostic chains are booming, but entry-level pay is stuck at ₹15k–30k. The only way to double or triple your income is to master MRI and advanced CT machines. If you stay as an X-ray tech, your career is a dead end.",
@@ -2215,16 +2197,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 216000,
-          "max": 360000
+          "min": 250000,
+          "max": 450000
         },
         "mid": {
-          "min": 480000,
-          "max": 960000
+          "min": 500000,
+          "max": 900000
         },
         "senior": {
-          "min": 1080000,
-          "max": 3000000
+          "min": 1000000,
+          "max": 1600000
         }
       },
       "duration_parsed": 3.5
@@ -2254,7 +2236,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/"
         }
       ],
-      "overview": "B.Sc Zoology is a 3-year degree in animal biology. On its own, it has almost zero market value. You will absolutely need an M.Sc, a B.Ed, or an MBA to make a career out of it. It is heavily populated by students who missed the NEET cutoff.",
+      "overview": "B.Sc Zoology is a passion-driven, extremely low-ROI degree. The objective consensus: direct jobs are practically non-existent and starting salaries hover around a dismal ₹2–4 LPA. True career progression requires a heavy commitment to higher studies (M.Sc/PhD), cracking government roles, or entering academia/teaching. It is a long, highly academic path that should only be pursued if you genuinely love biology.",
       "tags": [
         "zoology",
         "biology",
@@ -2269,17 +2251,15 @@
         "Wildlife and conservation jobs (if you can get them) let you work in forests instead of cubicles."
       ],
       "what_nobody_tells_you": [
-        "Society will treat this degree as a consolation prize for failing NEET.",
-        "A plain B.Sc gets you a ₹1.8L-3L/year job washing beakers as a lab assistant.",
-        "To become a professor, you have to clear CSIR-NET. The pass rate is 5-8%. It is brutal.",
-        "The 'wildlife biologist' dream is heavily romanticized. The Wildlife Institute of India hires maybe 20 people a year. Most conservation work is unpaid volunteering.",
-        "Indian academia is notoriously slow. Even if you clear JRF for research funding, your ₹37,000/month stipend will often be delayed by 6-8 months.",
-        "If you want to enter the corporate world, this degree is useless. You will have to do an MBA."
+        "In India, a B.Sc in Zoology holds very little standalone value in the private job market, and average entry roles pay as little as ₹15k–20k/month.",
+        "A Bachelor's degree is rarely enough. An M.Sc, PhD, or a B.Ed is practically mandatory to secure a decent career.",
+        "Most high-paying opportunities are restricted to the extremely competitive academic research track (JRF/SRF) or top-tier NEET coaching faculties.",
+        "It is very uncommon to find individuals achieving significant financial success with this degree outside of very niche fields (pharma research or high-end teaching)."
       ],
       "salary": {
-        "entry": "₹1.8 - ₹3 LPA (lab technician, field assistant, or school teaching with B.Ed.)",
-        "mid": "₹3 - ₹6 LPA (M.Sc. graduate, government role, or teaching with experience)",
-        "senior": "₹6 - ₹15 LPA (PhD holder, professor, senior scientist, or government officer)"
+        "entry": "₹2L - ₹4L (Teaching/Lab)",
+        "mid": "₹4L - ₹8L",
+        "senior": "₹10L - ₹25L+ (PhD/Academia)"
       },
       "career_outlook": {
         "india": "Terrible for plain B.Sc grads. Great for those who do a B.Ed and become teachers. Brutal but rewarding for those who do an M.Sc, clear CSIR-NET, and enter research. Many graduates just end up preparing for banking or UPSC exams for years.",
@@ -2472,16 +2452,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 180000,
-          "max": 300000
+          "min": 200000,
+          "max": 400000
         },
         "mid": {
-          "min": 300000,
-          "max": 600000
+          "min": 400000,
+          "max": 800000
         },
         "senior": {
-          "min": 600000,
-          "max": 1500000
+          "min": 1000000,
+          "max": 2500000
         }
       },
       "duration_parsed": 3
@@ -2511,7 +2491,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/"
         }
       ],
-      "overview": "A 3-year degree in plant biology. A plain B.Sc will get you a ₹2 LPA nursery job. The real money is in agriculture, forestry, and the herbal industry (Dabur, Himalaya) — but they strictly hire M.Sc or PhD graduates.",
+      "overview": "B.Sc Botany is an even more niche and lower-ROI degree than Zoology. The objective consensus: direct jobs are scarce, starting salaries are very low (₹2.5–4.5 LPA), and success is heavily dependent on committing to an M.Sc, PhD, or teaching role. Only true plant-science enthusiasts who are ready for a long, financially modest academic path should pursue this.",
       "tags": [
         "botany",
         "plants",
@@ -2527,17 +2507,15 @@
         "It doesn't have the heavy 'failed medical student' baggage that Zoology carries."
       ],
       "what_nobody_tells_you": [
-        "A B.Sc alone is financially useless. You will start at ₹2L-3.5L/year.",
-        "Every promotion costs 2-3 years of your life: M.Sc gets you to ₹4L-8L, PhD gets you to ₹8L-15L.",
-        "The IFoS (Indian Forest Service) dream is a lottery ticket. The success rate is under 1%.",
-        "Fieldwork is mandatory, and it's not glamorous. It means collecting soil samples in the blazing Indian summer.",
-        "The herbal/nutraceutical industry pays well, but jobs are heavily clustered in just three states: Maharashtra, Gujarat, and Karnataka.",
-        "UGC-NET (for teaching) clears less than 10% of applicants. The 'safe' academic route is a bloodbath."
+        "The 'Pls no' sentiment is common among current students; many feel a Botany degree is a dead-end for private sector jobs in India.",
+        "A B.Sc alone is inadequate. You almost certainly have to pursue an M.Sc, a PhD, and clear NET to build a viable career.",
+        "Fresh graduates typically find themselves stuck in low-paying lab technician or research assistant roles earning ₹18k–25k/month.",
+        "True financial success requires pivoting into specialized environmental consulting, conservation, or pharmaceutical industry roles that value plant expertise."
       ],
       "salary": {
-        "entry": "₹2 - ₹3.5 LPA (lab technician, nursery assistant, field survey roles)",
-        "mid": "₹4 - ₹8 LPA (M.Sc. graduate, agricultural officer, research associate)",
-        "senior": "₹8 - ₹15 LPA (PhD holder, senior scientist, forestry officer, professor)"
+        "entry": "₹2.5L - ₹4.5L",
+        "mid": "₹5L - ₹10L",
+        "senior": "₹10L - ₹20L+ (Professor/Scientist)"
       },
       "career_outlook": {
         "india": "Excellent if you do an M.Sc and target the $7.5B herbal industry or agriculture sector. Terrible if you stop at a B.Sc and hope for a generic government job. Treat this as a 5-year degree, minimum.",
@@ -2727,16 +2705,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 200000,
-          "max": 350000
+          "min": 250000,
+          "max": 450000
         },
         "mid": {
-          "min": 400000,
-          "max": 800000
+          "min": 500000,
+          "max": 1000000
         },
         "senior": {
-          "min": 800000,
-          "max": 1500000
+          "min": 1000000,
+          "max": 2000000
         }
       },
       "duration_parsed": 3
@@ -2770,7 +2748,7 @@
           "url": "https://www.reddit.com/r/Psychology_India/comments/1jc1mf6/so_what_is_the_salary_of_a_psychologist_in_india/"
         }
       ],
-      "overview": "A BA in Psychology is just a starter pack. You essentially have three paths: Clinical (requires RCI license, very hard), Counselling (unregulated, very crowded, low pay), and Corporate/UX (tech & HR, highest pay). Pick your lane early, or you will end up unemployed.",
+      "overview": "Psychology in India is a high-demand but severely underpaid field at the entry level. There is a massive gap between mental health awareness and actual, stable jobs. The objective consensus: a BA/B.Sc alone is practically worthless for clinical work. Real financial value comes only through an M.A/M.Sc + specialized licensing (Clinical, I/O) or a successful private practice, but even then, income remains highly unstable for the vast majority.",
       "tags": [
         "psychology",
         "ba psychology",
@@ -2791,30 +2769,27 @@
         "Therapy cannot be replaced by AI. Human empathy is automation-proof."
       ],
       "what_nobody_tells_you": [
-        "Only ~4,309 clinical psychologists are registered in all of India (RCI, 2025) — 0.3 per lakh people. The title is legally protected; 'counsellor' isn't, which is exactly why that lane is the most crowded.",
-        "The clinical route is changing right now: the M.Phil in Clinical Psychology is being replaced by a 2-year M.Psy from 2025-26, and RCI-recognised seats are scarce — most applicants don't get in.",
-        "A BA alone gets you almost nothing: entry therapy/research pay is ₹15–35k/month for the first 5 years. The degree is a foundation, not a job.",
-        "Government hospital posts average ~₹40k/month; private clinics ₹20–30k. The ₹1L/month school counsellor and ₹18–40 LPA corporate seniors are the top of long, slow curves.",
-        "The real demand surge is schools and corporates — but those roles hire skills: CBSE schools want counsellors, and HR-analytics and UX research pay ₹8–14 LPA to people who can do the work, not just hold the degree.",
-        "CUET Psychology drew 38,019 registrations in 2026 for seats across ~1,000 colleges — the entry gate is competitive, and so is the job market after it.",
-        "The emotional load compounds: back-to-back sessions, case notes, supervision, and holding other people's secrets — burnout is a documented problem in the field."
+        "You cannot legally practice clinical psychology with just a Bachelor's degree. You are restricted to HR, research assistance, or low-paid NGO support roles.",
+        "Despite the heavy emotional labor and burnout risk, a salary of ₹15k–25k/month is the harsh reality and typical outcome for many years.",
+        "While top private practitioners in metros can earn ₹4-5 lacs a month, the vast majority of professionals struggle to find long-term financial stability.",
+        "Treat this as a 5-7 year journey minimum (Bachelor's + Master's + Licensing). There is no quick money or clear corporate ladder here."
       ],
       "salary": {
-        "entry": "₹2.5–5 LPA (unlicensed counselling, school roles); therapy lanes ₹15–35k/month",
-        "mid": "₹5–8 LPA (experienced school counsellor, licensed clinical in hospitals)",
-        "senior": "₹12–40 LPA (private clinical practice, senior IO/HR-analytics, UX research leads)"
+        "entry": "₹2.5L - ₹4.5L (BA/B.Sc)",
+        "mid": "₹5L - ₹12L (M.A/M.Sc)",
+        "senior": "₹15L - ₹40L+ (Private Practice)"
       },
       "salary_parsed": {
         "entry": {
           "min": 250000,
-          "max": 500000
+          "max": 450000
         },
         "mid": {
           "min": 500000,
-          "max": 800000
+          "max": 1200000
         },
         "senior": {
-          "min": 1200000,
+          "min": 1500000,
           "max": 4000000
         }
       },
@@ -3054,7 +3029,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/comments/1brl3cd/is_doing_bed_in_india_worth_it_when_tgtpgt/"
         }
       ],
-      "overview": "A B.Ed allows you to teach in schools. Government teaching jobs pay incredibly well (₹45k–60k/month) and offer immense stability. But to get one, you must beat out literally millions of other applicants in the CTET and state exams. If you fail, you are stuck in private schools with terrible pay.",
+      "overview": "Teaching in India is highly tier-dependent. The objective consensus: landing a government school/college job or a role in a top private/IB school offers stable pay and respect. However, for the vast majority, B.Ed leads to low-paying, highly exploitative private-school roles (₹15k–25k/month) with heavy non-teaching duties and stagnant growth.",
       "tags": [
         "teaching",
         "b.ed",
@@ -3074,16 +3049,15 @@
         "You actually get to shape the lives of kids (if you care about that)."
       ],
       "what_nobody_tells_you": [
-        "Private schools will exploit you. They routinely pay ₹15k-25k/month for 9-hour days.",
-        "The CTET exam is just the first filter. Only 25% pass it. Then you have to give a state exam.",
-        "The competition is insane. Over 19 lakh B.Ed graduates enter the market every year fighting for a few thousand government vacancies.",
-        "Teaching is not just 'giving a lecture'. It is 80% classroom management, dealing with angry parents, and grading papers.",
-        "NEP 2020 is replacing the 2-year B.Ed with a 4-year ITEP, meaning the rules are changing right now."
+        "Private-school exploitation is rampant. It is common to be forced to sign a contract for ₹50k/month, but only receive ₹15k-20k and be forced to secretly 'donate' the rest back to the school.",
+        "Doing a B.Ed just as a 'safety net' is a terrible idea that leads to deep career regret and burnout.",
+        "You will be asked to do massive amounts of unpaid non-teaching work: admission drives, event management, and marketing for the school.",
+        "Clearing the TET/CTET is only half the battle. Due to politics and limited vacancies, the wait for an actual government posting can take years."
       ],
       "salary": {
-        "entry": "₹15–25k/month (private schools); ₹42–45k/month (govt PRT once selected)",
-        "mid": "₹52–60k/month (govt TGT/PGT, 7th Pay Commission)",
-        "senior": "₹70k–1L+/month (senior govt scales, vice-principal/principal)"
+        "entry": "₹1.8L - ₹3L (Private)",
+        "mid": "₹4.5L - ₹8L (Govt/Top Private)",
+        "senior": "₹8L - ₹15L+ (Govt/IB Schools)"
       },
       "salary_parsed": {
         "entry": {
@@ -3091,12 +3065,12 @@
           "max": 300000
         },
         "mid": {
-          "min": 520000,
-          "max": 600000
+          "min": 450000,
+          "max": 800000
         },
         "senior": {
-          "min": 700000,
-          "max": 1200000
+          "min": 800000,
+          "max": 1500000
         }
       },
       "career_outlook": {
@@ -3333,7 +3307,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/comments/1c6am97/seeking_direction_for_my_future_as_a_ba_student/"
         }
       ],
-      "overview": "Over 24 lakh people graduate with a BA every year. Because it is so common, the degree alone has almost zero value in the job market. You must use the 3 years to prep for UPSC, do an MBA, study for an LLB, or build a strong portfolio in content writing or data analytics.",
+      "overview": "A BA in Arts/Humanities is highly flexible but acts as a low-signal degree in the Indian job market. The objective consensus: without high-demand skills, internships, or further studies, graduates often find themselves stuck in generic roles (BPO, sales, basic content writing) earning ₹2.5–5 LPA. True financial upside requires aggressive specialization (law, design, media, economics) or building a strong stack of tangible skills like digital marketing or data analytics.",
       "tags": [
         "ba",
         "english",
@@ -3353,29 +3327,28 @@
         "It's cheap and accessible. Getting into a top-tier college (like DU) gives you massive brand value."
       ],
       "what_nobody_tells_you": [
-        "The 'useless degree' stereotype exists because millions of students do nothing for 3 years and then expect a job.",
-        "If you want to teach, you need an MA + B.Ed + NET. That's 4-5 extra years of exams.",
-        "Even in UPSC, engineers are taking over. Humanities students only made up 25% of selections recently.",
-        "Unless you learn hard skills (Excel, SEO, writing, analytics) while in college, your starting salary will be ₹2.5L-3L max.",
-        "A 3-year LLB after a BA is the ultimate career reset button if you realize you made a mistake."
+        "The degree alone has very little signaling power. Employers care vastly more about your hard skills and portfolio than your BA tag, which is often treated as 'just a piece of paper.'",
+        "Even top humanities colleges (like DU) are heavily criticized for having weak placement cells, forcing students to rely entirely on self-hustling for jobs.",
+        "Career regret vs STEM is a very common theme; many students find themselves wishing they had chosen a path with more 'tangible' outcomes when faced with ₹20k/month BPO or sales jobs.",
+        "Unless you have significant financial backing from your family, pursuing pure fine arts is widely considered financially unviable in India."
       ],
       "salary": {
-        "entry": "₹2.5–4 LPA (content, research assistant, NGO roles); ₹3–5 LPA (analyst with skills)",
-        "mid": "₹6–10 LPA (content strategist, analyst, government officer after selection)",
-        "senior": "₹12–30 LPA (UPSC/state PSC senior officers, analytics leads, academia)"
+        "entry": "₹2L - ₹4L (BPO/Content)",
+        "mid": "₹4L - ₹8L (Generic)",
+        "senior": "₹8L - ₹15L+ (Specialized)"
       },
       "salary_parsed": {
         "entry": {
-          "min": 250000,
+          "min": 200000,
           "max": 400000
         },
         "mid": {
-          "min": 600000,
-          "max": 1000000
+          "min": 400000,
+          "max": 800000
         },
         "senior": {
-          "min": 1200000,
-          "max": 3000000
+          "min": 800000,
+          "max": 1500000
         }
       },
       "career_outlook": {
@@ -3591,27 +3564,6 @@
       "id": "journalism",
       "name": "Journalism & Mass Communication (BJMC)",
       "category": "humanities",
-      "tagline": "Everyone wants to be on TV. The industry pays like the reality is different.",
-      "verdict": "A real but low-paying entry — ₹2.5–5 LPA with PR/digital paying better than newsrooms — the winners build clips and pivot to PR/content/analytics.",
-      "last_verified": "August 2026",
-      "sources": [
-        {
-          "label": "r/Journalism — 'Need college & career advice for journalism and mass communication'",
-          "url": "https://www.reddit.com/r/Journalism/comments/1thqdos/need_college_career_advice_for_journalism_and/"
-        },
-        {
-          "label": "r/Journalism — 'I really really want to be a journalist — but I need advice'",
-          "url": "https://www.reddit.com/r/Journalism/comments/1g9h6um/i_really_really_want_to_be_a_journalist_but_i/"
-        },
-        {
-          "label": "Apeejay — journalism & mass communication salary guide",
-          "url": "https://www.apeejay.edu/aimc/blogs/journalism-and-mass-communication-salary/"
-        },
-        {
-          "label": "r/Journalism — 'I'm seeking guidance for summer internship 2026 (India)'",
-          "url": "https://www.reddit.com/r/Journalism/comments/1rqvy0d/im_seeking_some_guidance_for_summer_internship/"
-        }
-      ],
       "tagline": "Everyone wants to be a TV anchor. Almost everyone ends up writing SEO articles for ₹25k a month.",
       "verdict": "Great if you pivot to PR, Corporate Comms, or Digital Marketing. Terrible if you stay in a traditional newsroom.",
       "last_verified": "August 2026",
@@ -3633,7 +3585,7 @@
           "url": "https://www.reddit.com/r/Journalism/comments/1rqvy0d/im_seeking_some_guidance_for_summer_internship/"
         }
       ],
-      "overview": "A 3-year BA (BJMC). The media industry is massive, but newsroom jobs pay terribly and have zero job security. The only way to make real money with this degree is to leave journalism and go into Public Relations (PR) or Corporate Content Writing.",
+      "overview": "Journalism in India is a highly romanticized but financially punishing career. The objective consensus: the industry is plagued by stagnant entry salaries (₹20k–35k/month), exploitative unpaid internships, and frequent layoffs. Real financial upside comes only through top-tier colleges (IIMC), niche specializations like business or data journalism, or by pivoting entirely to PR and corporate communications.",
       "tags": [
         "journalism",
         "mass communication",
@@ -3652,24 +3604,23 @@
         "You get to meet fascinating people and tell their stories (if you actually land a reporting job)."
       ],
       "what_nobody_tells_you": [
-        "Starting salaries in newsrooms are insulting. Expect ₹15k to ₹25k per month.",
-        "Your degree does not matter. Editors only care about your published portfolio (clips).",
-        "The TV Anchor dream is a myth. 99% of people end up at a desk editing text or writing clickbait.",
-        "Newsrooms have horrible job security. Mass layoffs happen constantly.",
-        "PR pays better than Journalism. Most smart journalists jump to Corporate PR after 3 years for double the salary."
+        "Salaries have remained practically stagnant for years. Even top graduates report starting at ₹25k-30k/month with zero growth despite massive inflation.",
+        "Unpaid internships are an open secret. Many graduates work 6–12 months unpaid in 'prestigious' media houses just to get a foot in the door for a ₹22k job.",
+        "Regional news can be highly toxic, with reports of no contracts and environments operating as 'collection centres for power' rather than real newsrooms.",
+        "Job security is virtually non-existent. Frequent layoffs and hiring freezes make it incredibly difficult to save or invest unless you reach the very top 1%."
       ],
       "salary": {
-        "entry": "₹2.5–5 LPA (content writer, junior reporter, digital roles)",
-        "mid": "₹6–10 LPA (content strategist, PR executive, senior digital journalist)",
-        "senior": "₹12–25 LPA (PR managers, editors, media leads)"
+        "entry": "₹2L - ₹4L (Often Unpaid Internships)",
+        "mid": "₹5L - ₹10L",
+        "senior": "₹12L - ₹25L+ (Top Editors/PR Pivot)"
       },
       "salary_parsed": {
         "entry": {
-          "min": 250000,
-          "max": 500000
+          "min": 200000,
+          "max": 400000
         },
         "mid": {
-          "min": 600000,
+          "min": 500000,
           "max": 1000000
         },
         "senior": {
@@ -3910,7 +3861,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/comments/1hhwzwy/why_do_people_regret_studying_biotechnology_in/"
         }
       ],
-      "overview": "A 3-year B.Sc or 4-year B.Tech. While India's biotech industry is worth $195B, they do not hire freshers for exciting lab work. A plain B.Sc will get you a ₹2.5L/year Quality Control job in a factory. To do real science, you need a PhD. To make real money, you need to learn data analytics (Bioinformatics) or Clinical Research.",
+      "overview": "Biotech in India is highly polarized. The objective consensus: a generic B.Tech or B.Sc in Biotech without a specialization or master's degree is often a low-ROI trap leading to poorly paid lab roles (₹20k-25k/month) and widespread regret. However, targeting specific niches like bioinformatics, clinical research, or pursuing a funded PhD track can lead to decent-to-good careers.",
       "tags": [
         "biotechnology",
         "b.sc biotech",
@@ -3929,16 +3880,15 @@
         "It's a great stepping stone to doing a Master's degree abroad in Europe or the US."
       ],
       "what_nobody_tells_you": [
-        "B.Tech Biotechnology is a trap. You get an engineering degree but you will not get IT-level placements.",
-        "Most entry-level jobs (₹2.5L-4L/year) are in Quality Control/QA. You will be testing batches in a manufacturing plant, not curing cancer.",
-        "The core R&D path requires clearing NET/GATE (single-digit pass rate) and surviving on a ₹20k-40k/month stipend for years.",
-        "The highest-paying jobs aren't in the lab. They are in Bioinformatics (coding) and Regulatory Affairs (paperwork).",
-        "It is heavily populated by students who failed to clear NEET and had no backup plan."
+        "'Generalist biotech' is not a job description. Employers want specific skills (clinical research, QA/QC, data analysis), not just a generic degree.",
+        "There is a massive degree vs job mismatch. Many graduates with a 4-year engineering degree end up doing basic, repetitive lab technician work.",
+        "India has a very limited core biotech R&D ecosystem. Most jobs are in generic pharma manufacturing, quality control, or sales.",
+        "You must be prepared for higher studies. A Bachelor's alone is rarely enough; an M.Sc or PhD is the industry standard for meaningful R&D work."
       ],
       "salary": {
-        "entry": "₹2.5–5 LPA (B.Sc/B.Tech fresher; many start at ₹20–30k/month)",
-        "mid": "₹6–10 LPA (M.Sc + 3–5 years: QC/QA, bioinformatics, regulatory)",
-        "senior": "₹15–30 LPA (PhD scientists, R&D leads, senior regulatory)"
+        "entry": "₹2.5L - ₹5L (Generic Biotech)",
+        "mid": "₹6L - ₹14L (Niche/Specialized)",
+        "senior": "₹15L - ₹40L+ (Bioinformatics)"
       },
       "salary_parsed": {
         "entry": {
@@ -3947,11 +3897,11 @@
         },
         "mid": {
           "min": 600000,
-          "max": 1000000
+          "max": 1400000
         },
         "senior": {
           "min": 1500000,
-          "max": 3000000
+          "max": 4000000
         }
       },
       "career_outlook": {
@@ -4189,7 +4139,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/comments/1bab6su/is_bsc_agriculture_from_a_good_agri_college_worth/"
         }
       ],
-      "overview": "A 4-year degree (B.Sc Agriculture). The private sector pays poorly (₹3L-5L/year) and expects you to travel to remote villages for sales. The real reason to do this degree is Government Exams: IBPS AFO, NABARD, and State ADO specifically hire agriculture grads and pay ₹60k-90k/month.",
+      "overview": "B.Sc Agriculture is one of the few non-engineering degrees with a clear government job pipeline, but the private sector is often a harsh reality. The objective consensus: it is only worth it if you target government exams (ADO/FCI/NABARD) or top FMCG/agribusiness roles; otherwise, you risk ending up in field-heavy, door-to-door pesticide sales earning ₹20k–30k/month.",
       "tags": [
         "agriculture",
         "b.sc agriculture",
@@ -4208,29 +4158,28 @@
         "Agritech startups are booming in India, offering a secondary private sector route."
       ],
       "what_nobody_tells_you": [
-        "If your degree does not have the '(Hons)' tag, you are largely unemployable in the corporate world.",
-        "Private sector jobs are brutal field sales roles. You will be traveling in the sun selling fertilizers to farmers.",
-        "This is the second biggest dumping ground for students who failed NEET.",
-        "Research requires an M.Sc and clearing ICAR NET, which is extremely tough.",
-        "The NABARD and IBPS AFO exams are highly competitive. You must start preparing in your 2nd year."
+        "The private sector reality is often reduced to a binary: you either crack a top corporate agribusiness role, or you do grueling field sales for seeds and pesticides.",
+        "Field roles mean rural or semi-rural postings with heavy travel, far away from the typical corporate metro lifestyle.",
+        "Outside of FMCG and Agritech startups, the private sector pay ceiling is incredibly low, with many plateauing at ₹4–8 LPA even after 5+ years.",
+        "Government jobs (like ADO or AAO) are the true 'win' condition for this degree, offering ₹35k–55k/month with unmatched job security and respect."
       ],
       "salary": {
-        "entry": "₹3–5 LPA private; ₹35–55k/month (state ADO) once selected",
-        "mid": "₹6–10 LPA (AFO/NABARD scale, agritech leads)",
-        "senior": "₹12–25 LPA (NABARD senior, agribusiness management)"
+        "entry": "₹2.5L - ₹4.5L (Field Sales) / ₹4.5L - ₹7L (Govt)",
+        "mid": "₹8L - ₹15L",
+        "senior": "₹15L - ₹35L+"
       },
       "salary_parsed": {
         "entry": {
-          "min": 300000,
-          "max": 500000
+          "min": 250000,
+          "max": 700000
         },
         "mid": {
-          "min": 600000,
-          "max": 1000000
+          "min": 800000,
+          "max": 1500000
         },
         "senior": {
-          "min": 1200000,
-          "max": 2500000
+          "min": 1500000,
+          "max": 3500000
         }
       },
       "career_outlook": {
@@ -4467,7 +4416,7 @@
           "url": "https://www.linkedin.com/posts/gokul-mj-14135321b_foodtechnology-foodtechindia-foodsafety-activity-7391348728395292672-FqzD"
         }
       ],
-      "overview": "A B.Tech or B.Sc degree. The Food Processing industry in India is massive (projected $1.27 Trillion by 2027), but the entry-level reality for graduates is working shift-hours in a noisy, remote factory doing Quality Control for ₹3 Lakhs/year. The real money is in cracking the FSSAI Food Safety Officer exam.",
+      "overview": "Food Technology is one of the most undervalued and underpaid core engineering degrees in India. The objective consensus: an extreme oversupply of graduates has led to a harsh 'norm' of ₹2–4 LPA for freshers. The work is plant-heavy, physically exhausting, and offers slow growth. Unless you secure a top FMCG campus placement (HUL/Nestlé), clear a government exam (FSSAI), or pivot via an MBA, the core field is a high-regret path.",
       "tags": [
         "food technology",
         "food tech",
@@ -4486,29 +4435,28 @@
         "The FMCG sector (Nestle, ITC, Amul) will always be hiring because people will always eat."
       ],
       "what_nobody_tells_you": [
-        "Your first job will not be in an R&D lab inventing new chocolate flavors. You will be checking the pH of milk in a factory at 2 AM for ₹20k a month.",
-        "Factories are usually built far outside the city. Prepare to live in rural or industrial areas.",
-        "A B.Tech is heavily preferred over a B.Sc by private employers.",
-        "The FSSAI exams are extremely competitive because everyone realizes how bad the private sector pays.",
-        "AI and automation are rapidly taking over basic Quality Control (QC) jobs."
+        "A starting salary of ₹2–4 LPA (₹15k-25k/month) is the industry standard, not an exception—even for those with an M.Tech.",
+        "The lifestyle is grueling. Most jobs are located in remote industrial plants with 10-12 hour rotating shifts, 6-day work weeks, and no weekends.",
+        "Companies actively exploit the massive oversupply of graduates, keeping wages artificially depressed because they know someone desperate will accept the low pay.",
+        "The comparison trauma is severe. Many graduates eventually abandon the core field entirely to pursue an MBA in Agribusiness just to escape the low pay and harsh conditions."
       ],
       "salary": {
-        "entry": "₹3–5 LPA (QC/production); ₹30–40k/month (FSSAI officer)",
-        "mid": "₹6–10 LPA (production manager, QA lead, senior FSSAI)",
-        "senior": "₹12–25 LPA (R&D lead, plant head, senior regulatory)"
+        "entry": "₹2L - ₹4L (Often ₹15k/mo)",
+        "mid": "₹6L - ₹12L",
+        "senior": "₹15L - ₹30L+ (FMCG/Plant Head)"
       },
       "salary_parsed": {
         "entry": {
-          "min": 300000,
-          "max": 500000
+          "min": 200000,
+          "max": 400000
         },
         "mid": {
           "min": 600000,
-          "max": 1000000
+          "max": 1200000
         },
         "senior": {
-          "min": 1200000,
-          "max": 2500000
+          "min": 1500000,
+          "max": 3000000
         }
       },
       "career_outlook": {
@@ -4740,7 +4688,7 @@
           "url": "https://www.reddit.com/r/developersIndia/"
         }
       ],
-      "overview": "A 4-year B.Tech in CS. The single most sought-after degree in India, which means it is brutally saturated. Your starting point is entirely determined by your college tier (IIT/NIT vs Tier-3) and your LeetCode skills. You can make ₹50 LPA or you can sit unemployed.",
+      "overview": "B.Tech CSE in India is still a viable route, but there is a brutal, sharp divide. While a relatively small elite group lands high-paying product or remote roles, the vast majority of graduates begin at ₹20,000–₹35,000 per month. These roles are often in support-heavy environments or mass-recruiting service (WITCH) companies. The degree alone is not a differentiator anymore; college tier, practical coding skills, and internships matter far more. Paying ₹25-30 Lakhs for a tier-2/3 private college is an enormous financial risk that rarely yields an immediate ROI.",
       "tags": [
         "computer science",
         "cse",
@@ -4757,16 +4705,15 @@
         "Meritocracy still exists: If your code works better than the guy from IIT, you can out-earn him eventually."
       ],
       "what_nobody_tells_you": [
-        "Over 60% of CS grads end up in IT service companies (TCS, Infosys) doing boring support work for ₹3.5L/year.",
-        "College syllabus is completely useless. You have to self-learn Data Structures, Algorithms, and System Design.",
-        "The market is flooded. 16 Lakh B.Tech seats exist in India. To stand out, you have to grind hundreds of LeetCode problems.",
-        "AI is destroying junior coding jobs. Companies refuse to train freshers now; they expect you to be job-ready on Day 1.",
-        "The burnout is severe. 12-hour workdays and constant weekend deployments are the norm in product startups."
+        "A major trap is confusing CTC with take-home pay. A '6 LPA' offer does not mean ₹50,000 arrives in the bank every month after deductions and variables.",
+        "Your first job might not even be 'software engineering'. Many graduates are placed into testing, application support, or maintenance work.",
+        "Startups can offer decent early pay but often come with soul-crushing work-life balance—late-night calls, weekend deployments, and no adherence to time.",
+        "Placement marketing is often entirely unrealistic, advertising 'highest packages' that apply to literally one student out of thousands."
       ],
       "salary": {
-        "entry": "₹3.5 - ₹12 LPA (Tier-2 & Tier-3 colleges); ₹20-50 LPA for IIT/NIT top placements",
-        "mid": "₹12 - ₹30 LPA (5 years, mid-level role at product or mid-size company)",
-        "senior": "₹35 - ₹80 LPA (8-12 years, senior/staff engineer or engineering manager at a strong company)"
+        "entry": "₹2.5L - ₹4.5L (Mass)",
+        "mid": "₹8L - ₹15L",
+        "senior": "₹15L - ₹30L+"
       },
       "career_outlook": {
         "india": "Highly polarized. A Google/Uber fresher makes ₹30L-50L/year. A Tier-3 fresher struggles to get ₹3L/year. Companies no longer care about your degree; they care if you can build scalable backend architecture. If you are average, this is the worst time in a decade to graduate in CS.",
@@ -4957,16 +4904,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 350000,
-          "max": 1200000
+          "min": 250000,
+          "max": 450000
         },
         "mid": {
-          "min": 1200000,
-          "max": 3000000
+          "min": 800000,
+          "max": 1500000
         },
         "senior": {
-          "min": 3500000,
-          "max": 8000000
+          "min": 1500000,
+          "max": 3000000
         }
       },
       "duration_parsed": 4
@@ -4996,22 +4943,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/"
         }
       ],
-      "overview": "3+2 year path (BCA + MCA) to reach the same starting line as a B.Tech. If B.Tech wasn't an option after Class 12, this is a legitimate second path into the same industry.",
-      "tags": [
-        "bca",
-        "mca",
-        "computer applications",
-        "software",
-        "it",
-        "nimcet"
-      ],
-      "why_people_love_it": [
-        "It's a genuine second chance — if B.Tech wasn't reachable, BCA + MCA is a proven alternative.",
-        "The work itself is creative — building software used by real people.",
-        "Skill eventually outweighs pedigree after 3-4 years of experience.",
-        "MCA from a top NIT or university resets your career trajectory."
-      ],
-      "overview": "A 3-year BCA followed by a 2-year MCA. The market is brutally clear: A standalone BCA from a private college gets you a low-paying 'Analyst' or Tech Support job. To compete with B.Tech CS students and get actual Software Engineering jobs, you MUST complete an MCA from a Tier-1 college.",
+      "overview": "BCA (Bachelor of Computer Applications) is a 3-year undergraduate degree focusing on software development. Because it is a 3-year degree, HR filters historically view it as inferior to a B.Tech CSE. This creates the biggest trap in Indian tech: the pressure to do an MCA. The brutal reality? Unless you crack NIMCET to get into a top NIT or DU, doing an MCA from a Tier-3 college is largely a waste of 2 years. Many students deeply regret rejecting low-paying BCA jobs to do an average MCA, only to realize that 2 years of actual work experience and coding skills are vastly more valuable than a mediocre master's degree.",
       "tags": [
         "bca",
         "mca",
@@ -5027,16 +4959,14 @@
         "It gives you 5 years to build an unbeatable coding portfolio."
       ],
       "what_nobody_tells_you": [
-        "A standalone BCA degree is practically useless for product company jobs (Amazon, Zepto, Swiggy).",
-        "BCA syllabus in most colleges is 10 years out of date. You will be learning C++ on TurboC.",
-        "IT Service Companies (TCS, Wipro) hire BCA grads but pay them significantly less than B.Tech grads for the exact same work.",
-        "The NIMCET exam (for NIT MCA) is insanely competitive and is heavily based on 11th/12th grade Mathematics.",
-        "You start earning a year later than your B.Tech peers."
+        "Many visiting companies completely exclude MCA students during campus shortlisting, strictly hiring B.Tech CSE only.",
+        "BCA alone is seen as low prestige. If you don't build a strong GitHub and hustle for off-campus roles, you will struggle to get interviews.",
+        "The median offer for an average private college MCA is barely ₹3-6 LPA, almost identical to what they would have gotten after BCA, but with 2 extra years lost."
       ],
       "salary": {
-        "entry": "₹2.5 - ₹4.5 LPA (BCA only, service company) / ₹4 - ₹8 LPA (BCA+MCA, varies by MCA college tier)",
-        "mid": "₹8 - ₹18 LPA (5 years, strong skills, product or mid-size company)",
-        "senior": "₹18 - ₹40 LPA (8-12 years, senior engineer or tech lead at a strong company)"
+        "entry": "₹2.5L - ₹4.5L (BCA)",
+        "mid": "₹6L - ₹12L (MCA)",
+        "senior": "₹12L - ₹20L+"
       },
       "career_outlook": {
         "india": "Binary. BCA-only grads are fed into mass-recruitment IT sweatshops at ₹2.5L-4.5L/year. MCA grads from NITs or DU compete for ₹15L-30L/year Software Engineering roles. Do not stop at BCA.",
@@ -5217,7 +5147,7 @@
         },
         {
           "question": "Is BCA + MCA really equal to B.Tech?",
-          "answer": "Roughly equal if the MCA is from a strong institute (DU, NITs, top universities) — companies treat those MCA grads at par with B.Tech. For everything else, the gap is real: BCA-only freshers get tagged as 'analysts,' sit idle at service companies, and rarely cross ₹6 LPA early. The 2026 community advice is blunt: if a B.Tech seat is available at any reasonable college, take it; if not, treat BCA as step one of a plan that must include a strong MCA or exceptional self-built skills — never as the finish line."
+          "answer": "Only if the MCA is from a top institute (NITs via NIMCET, DU, HCU). If it is, companies treat you exactly like a B.Tech CSE grad. If you do an MCA from a standard private college, it is NOT equal. The 2026 community consensus is blunt: a BCA graduate with 2 years of work experience (even if it started low) is far more valuable than a fresh MCA graduate from a tier-3 college. Do not do an MCA because your parents told you it's mandatory."
         },
         {
           "question": "What do the employability numbers actually say about BCA vs MCA?",
@@ -5230,12 +5160,12 @@
           "max": 450000
         },
         "mid": {
-          "min": 800000,
-          "max": 1800000
+          "min": 600000,
+          "max": 1200000
         },
         "senior": {
-          "min": 1800000,
-          "max": 4000000
+          "min": 1200000,
+          "max": 2000000
         }
       },
       "duration_parsed": 5
@@ -5265,7 +5195,7 @@
           "url": "https://www.reddit.com/r/IndiaCareers/comments/1qgh18v/reaching_out_to_core_engineers/"
         }
       ],
-      "overview": "The classic B.Tech branches: Mechanical, Civil, Electrical, and ECE. The brutal truth is that 85% of graduates from these branches never work in their core field. They either get dumped into IT Service companies (TCS, Infosys) for low pay, or they spend years preparing for GATE to get a Government PSU job.",
+      "overview": "Core Engineering (Mechanical, Civil, Electrical) in India is currently caught in a brutal paradox. While the nation builds infrastructure, the actual entry-level engineers on the ground are severely undervalued compared to their IT/CSE peers. The reality for the average graduate (especially in Civil and Mechanical) is grim: starting salaries of ₹10,000 to ₹15,000 per month, 12-14 hour workdays, 6-day weeks, and toxic site conditions with salaries often delayed by months. The only exceptions are those graduating from top IITs/NITs, or those who pivot into niche high-value domains like VLSI, semiconductor design, power electronics, or oil & gas.",
       "tags": [
         "mechanical",
         "civil",
@@ -5284,29 +5214,28 @@
         "Core engineering has less day-to-day burnout and 'hustle culture' than the software industry."
       ],
       "what_nobody_tells_you": [
-        "Only 10-15% of graduates actually get a 'Core' job. The rest are forced into IT or sales.",
-        "Private sector core jobs pay horribly. A Tier-3 mechanical engineer is lucky to get ₹2.5L/year.",
-        "GATE is insanely competitive. Lakhs of students fight for just ~2,000 PSU vacancies.",
-        "ECE students think they are in 'tech', but unless you specialize in VLSI/Embedded Systems (which usually requires an M.Tech), you are just treated as a failed CS student.",
-        "You will watch your CS friends start at ₹12L/year while you struggle to find a ₹4L/year factory job."
+        "The 'infrastructure boom' does not translate to high salaries for freshers; it relies on cheap, easily replaceable engineering labor.",
+        "You will constantly compare your salary to IT peers. A core engineer with 5 years of experience often makes ₹8-12 LPA, while an IT peer might be making ₹25-50 LPA.",
+        "In Civil, 6-day work weeks and 12-14 hour shifts at remote sites are standard, and companies routinely withhold salaries for 2-3 months.",
+        "Electrical Engineering is considered 'dead' by many unless you pivot to IT, or specialize deeply in VLSI/Semiconductors (where salaries can reach 30-50 LPA for top talent)."
       ],
       "salary": {
-        "entry": "₹2.5–5 LPA (tier-1/2); ₹1.8–4 LPA at tier-3 if placed",
-        "mid": "₹6–10 LPA (5–8 years: manufacturing, IT services, or PSU entry)",
-        "senior": "₹15–30 LPA (PSU executive, engineering manager, M.Tech specialists)"
+        "entry": "₹1.5L - ₹3.5L",
+        "mid": "₹6L - ₹12L",
+        "senior": "₹12L - ₹20L+"
       },
       "salary_parsed": {
         "entry": {
-          "min": 250000,
-          "max": 500000
+          "min": 150000,
+          "max": 350000
         },
         "mid": {
           "min": 600000,
-          "max": 1000000
+          "max": 1200000
         },
         "senior": {
-          "min": 1500000,
-          "max": 3000000
+          "min": 1200000,
+          "max": 2000000
         }
       },
       "career_outlook": {
@@ -5493,7 +5422,7 @@
       "faq": [
         {
           "question": "Is core engineering dead in 2026?",
-          "answer": "No — but 'core job' is rare: only 10–15% of core graduates work in core. The living routes are GATE/PSU (₹10–18 LPA), M.Tech + specialisation, manufacturing/energy, and IT services as the floor. The degree isn't dead; the no-plan version of it is."
+          "answer": "For the average private college graduate, traditional core is severely underpaid (₹10k-₹15k/month). The 'living' routes are GATE/PSU (₹10–18 LPA), pivoting into high-value niches (VLSI, semiconductor design), or going abroad (Middle East/EU)."
         },
         {
           "question": "Mechanical vs civil vs electrical vs ECE — which is best?",
@@ -5509,7 +5438,7 @@
         },
         {
           "question": "Is tier-3 core engineering worth it?",
-          "answer": "Only with a deliberate exit: GATE, M.Tech, or heavy skilling. The default tier-3 core placement runs ₹1.8–4 LPA if it happens at all — the college gives you the degree, not the job."
+          "answer": "Absolutely not, unless you have a deliberate exit plan: GATE, M.Tech, or heavy IT skilling. The default tier-3 core placement runs ₹1.2–2.4 LPA (often on toxic sites with 6-day weeks). The college gives you a piece of paper, not a career."
         },
         {
           "question": "Do core engineers get hired in IT companies?",
@@ -5539,7 +5468,7 @@
           "url": "https://www.reddit.com/r/CharteredAccountants/"
         }
       ],
-      "overview": "The ICAI Chartered Accountancy course. It's not a college degree; it's a professional qualification consisting of three brutal exam levels (Foundation, Inter, Final) and 2 years of mandatory, near-unpaid 'Articleship'. While the brochure says it takes 4 years, the reality is that most students take 5 to 7 years due to punishingly low pass rates.",
+      "overview": "CA is still a solid finance career, but it is no longer the automatic 'rich life' ticket. The objective reality: brutal exams, low-paid articleships (often ₹4,000/month), and a widening salary gap post-qualification. Only those who clear in few attempts, secure top articleships (Big 4/mid-size), and build skills beyond passing exams (like Power BI, business communication) see the massive financial upside.",
       "tags": [
         "ca",
         "chartered accountant",
@@ -5555,16 +5484,15 @@
         "You can start your own firm and have a technically unlimited income ceiling."
       ],
       "what_nobody_tells_you": [
-        "The pass rates are designed to crush you. CA Final pass rates usually hover around 9-14%. Failing is the norm, not the exception.",
-        "Articleship is legalized exploitation. You will work 10-12 hour days for ₹4,000 to ₹15,000 a month for two full years.",
-        "Clearing CA in 4-5 attempts severely hurts your starting salary. Big 4 companies heavily prefer first-attempt clearers.",
-        "The 'dummy articleship' trap is real. If you skip practical training just to study, you will fail the technical interviews later.",
-        "Your social life will disappear for 5 years."
+        "Articleship stipends are often legally as low as ₹4,000/month, even in metros, for 10-12 hour workdays during busy seasons.",
+        "The 'CA alone' myth is dead. Employers now expect communication skills, Excel mastery, and data tools. A CA degree alone without these leads to average salaries.",
+        "Multiple attempts and an average articleship often result in being stuck at ₹6–10 LPA for the first few years, which is jarring after years of studying.",
+        "There is massive inequality in the profession. Rankers and Big 4 CAs do exceptionally well, while the 'average' CA feels underpaid and undervalued."
       ],
       "salary": {
-        "entry": "₹6-14 LPA (mid-size ₹6-8L, Big 4/listed ~₹9-14L — attempts decide which end)",
-        "mid": "₹15-25 LPA (5 years, industry role or Big 4 manager)",
-        "senior": "₹30-80 LPA+ (CFO track, Big 4 partner, or your own practice — income has no real ceiling)"
+        "entry": "₹6L - ₹10L (Fresh CA)",
+        "mid": "₹15L - ₹25L",
+        "senior": "₹30L - ₹40L+"
       },
       "career_outlook": {
         "india": "Bulletproof. You will get a job. The only question is how much it pays. First-attempt CAs land Big 4 jobs at ₹10L-14L/year. Multiple-attempt CAs often have to start at mid-size firms for ₹6L-8L/year. If you stick it out and reach the CFO level, you will make ₹50L+ easily.",
@@ -5752,7 +5680,7 @@
       "salary_parsed": {
         "entry": {
           "min": 600000,
-          "max": 1400000
+          "max": 1000000
         },
         "mid": {
           "min": 1500000,
@@ -5760,7 +5688,7 @@
         },
         "senior": {
           "min": 3000000,
-          "max": 8000000
+          "max": 4000000
         }
       },
       "duration_parsed": 6
@@ -5790,7 +5718,7 @@
           "url": "https://www.reddit.com/r/IndianWorkplace/"
         }
       ],
-      "overview": "A 3-year degree in accounting and finance. Over 10 Lakh students enroll in this every year, making it the most commoditized degree in the country. A plain B.Com gets you a ₹2L-4L/year back-office or BPO job. You must stack it with a CA, CFA, ACCA, or MBA to have a real career.",
+      "overview": "B.Com is the default commerce degree in India, but as a standalone qualification, it is increasingly seen as low-value. The objective reality involves low starting salaries (₹15k–25k/month) and poor employability (~48%) unless actively paired with strong certifications (CA/ACCA/CFA/MBA), data skills, or government exam preparation.",
       "tags": [
         "bcom",
         "commerce",
@@ -5804,16 +5732,15 @@
         "If you pair it with a CFA Level 1 or CA Inter, your salary instantly doubles."
       ],
       "what_nobody_tells_you": [
-        "Nearly 50% of B.Com graduates are deemed 'unemployable' by corporate India.",
-        "The syllabus is entirely theoretical. Your college won't teach you Advanced Excel, Tally Prime, or Power BI, which is the only thing employers actually want.",
-        "Campus placements mostly offer BPO (Call Center) or door-to-door Sales jobs. Not the 'Finance' jobs you imagine.",
-        "Big 4 firms (EY, Deloitte) will hire you, but only for backend data entry. The real Advisory roles go to CAs and MBAs.",
-        "Without an extra certification, your salary will permanently plateau around ₹5L-8L/year."
+        "One in two commerce graduates cannot find work matching their degree. Many end up in unrelated sales, BPO, or admin roles.",
+        "A B.Com degree alone is a weak signal to employers. You will feel immediate pressure to pursue expensive or grueling professional courses just to become employable.",
+        "Many students choose B.Com due to peer pressure, only to regret the lack of direct earning potential upon graduation.",
+        "To survive with just a B.Com, you must aggressively upskill in tools like Excel, Power BI, and GST to secure analyst roles."
       ],
       "salary": {
-        "entry": "₹2 - ₹4 LPA (plain B.Com) / ₹4 - ₹8 LPA (top DU colleges or with CA inter/CFA Level 1)",
-        "mid": "₹5 - ₹10 LPA (without certification) / ₹10 - ₹20 LPA (5 years, with CA/CFA/ACCA, 5 years)",
-        "senior": "₹10 - ₹18 LPA (without certification, capped) / ₹20 - ₹50 LPA+ (with CA or CFA charter)"
+        "entry": "₹1.8L - ₹3L (₹15k-25k/mo)",
+        "mid": "₹4L - ₹8L",
+        "senior": "₹8L - ₹15L (with certs)"
       },
       "career_outlook": {
         "india": "You are competing with 10 Lakh people for the exact same jobs. If you have just a B.Com, expect ₹2L-4L/year doing mindless data entry. If you add CA/CFA or an MBA, you jump into the ₹12L-20L/year bracket.",
@@ -5998,16 +5925,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 200000,
-          "max": 400000
+          "min": 180000,
+          "max": 300000
         },
         "mid": {
-          "min": 500000,
-          "max": 1000000
+          "min": 400000,
+          "max": 800000
         },
         "senior": {
-          "min": 1000000,
-          "max": 1800000
+          "min": 800000,
+          "max": 1500000
         }
       },
       "duration_parsed": 3
@@ -6036,7 +5963,7 @@
           "label": "US/Canada 16-year education rule for master's programs"
         }
       ],
-      "overview": "A 3-year undergraduate management degree. Over 1.5 Lakh students graduate every year. The illusion is that you will get a 'corporate strategy' job. The reality is that without an MBA, a BBA graduate from an average college gets pushed directly into frontline B2B/B2C Sales or call-center operations for ₹2.5L-4L/year.",
+      "overview": "BBA suffers from an even more diluted perception than B.Com. The objective consensus points to modest starting salaries (₹2.5–4 LPA), a heavy sales/operations grind, and real value only emerging if used as a stepping stone to a strong MBA or if graduated from a top-tier institution.",
       "tags": [
         "bba",
         "business administration",
@@ -6050,16 +5977,15 @@
         "You get exposed to Marketing, Finance, HR, and Operations early on."
       ],
       "what_nobody_tells_you": [
-        "The gap between Tier-1 BBA and Tier-3 BBA is insane. IIM IPM grads start at ₹15L-20L. Tier-3 grads start at ₹2.5L doing cold-calling.",
-        "You will not get a 'Manager' role at 21. You will get a 'Trainee' or 'Sales Executive' role.",
-        "BBA is a generalist degree. It doesn't teach you hard skills like Advanced Excel or SQL, which means you lose out to engineers for Analyst roles.",
-        "You will hit a glass ceiling in 3-4 years. You will watch younger MBAs get promoted over you simply because of their degree.",
-        "Because it is a 3-year degree, it disqualifies you from many US and Canadian Master's programs that require 16 years of education."
+        "Recruiters often view a BBA from an unknown private college as a 'time-pass' degree, especially if the student lacks internships.",
+        "A weak BBA without active upskilling leads almost directly to high-attrition sales or business development roles.",
+        "The true value of a BBA is heavily back-loaded. It is a foundation for an MBA, not a final destination.",
+        "First-year regret is incredibly common as students realize the degree alone will not land them a high-paying management job."
       ],
       "salary": {
-        "entry": "₹2.5 - ₹4 LPA (most graduates from tier-2/3 colleges) / ₹8 - ₹25 LPA (top-tier programs like IIM IPM)",
-        "mid": "₹5 - ₹12 LPA (5 years, without MBA) / ₹15 - ₹30 LPA (5 years, with top MBA)",
-        "senior": "₹12 - ₹25 LPA (without MBA, capped) / ₹30 LPA+ (with MBA)"
+        "entry": "₹2.5L - ₹4.5L (₹20k-35k/mo)",
+        "mid": "₹6L - ₹12L (Without MBA)",
+        "senior": "₹15L - ₹30L+ (With MBA)"
       },
       "career_outlook": {
         "india": "A stepping stone. If you treat BBA as just the first half of your MBA, you will do great. If you try to build a long-term corporate career solely on a BBA from a mid-tier college, you will be stuck in middle-management purgatory forever.",
@@ -6245,15 +6171,15 @@
       "salary_parsed": {
         "entry": {
           "min": 250000,
-          "max": 400000
+          "max": 450000
         },
         "mid": {
-          "min": 500000,
+          "min": 600000,
           "max": 1200000
         },
         "senior": {
-          "min": 1200000,
-          "max": 2500000
+          "min": 1500000,
+          "max": 3000000
         }
       },
       "duration_parsed": 3
@@ -6283,7 +6209,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/comments/1ha6uco/is_it_worth_it_to_do_a_babsc_economics_in_2025/"
         }
       ],
-      "overview": "A 3-year degree focused on micro/macro theory and statistics. The brutal truth is that 'Economics' sounds prestigious but has near-zero direct employability. Unless you pair it with hard skills (Excel, SQL, Python) to become a Data Analyst or spend years clearing Banking/RBI exams, you will struggle to find a job that pays more than ₹20,000/month.",
+      "overview": "BA Economics (Hons) is highly polarized based on college tier. From top institutions (e.g., DU SRCC/Hansraj, Ashoka), it is respected and leads to strong corporate roles. However, from average colleges, it is often viewed as 'just another arts degree' with unclear ROI. Success requires leveraging math/stats, completing internships, and often targeting an MBA, CFA, or government exams.",
       "tags": [
         "economics",
         "ba economics",
@@ -6302,29 +6228,28 @@
         "It is a highly respected degree for migrating to Europe for a Master's."
       ],
       "what_nobody_tells_you": [
-        "There is no job called 'Economist' for 21-year-olds. Real Economists have PhDs and are 45 years old.",
-        "The brand name of your college is everything. A DU/ISI grad gets ₹15L analytics jobs. A local college grad gets a ₹3L BPO job.",
-        "You will be competing for Data Analyst jobs against Engineers who know Python much better than you do.",
-        "The government exam route (IBPS/RBI) is a bloodbath. You will spend 2-3 years after graduation just studying in your room.",
-        "A 'plain' BA Economics degree has the exact same market value as a plain BA History degree: zero."
+        "From a top college, it frequently outperforms B.Com in placements and acts as a premium pipeline to top IIMs.",
+        "From an average college without math or analytics skills, it lacks a clear corporate path, leading many to prep for UPSC or RBI exams.",
+        "It is a strategic base degree, not a standalone 'job-ready' ticket unless you actively build a quantitative and internship profile.",
+        "The starting salary variance is massive: from ₹3-6 LPA in average colleges to ₹12-18 LPA for top performers in elite institutions."
       ],
       "salary": {
-        "entry": "₹3–6 LPA (analyst roles, private); ₹65–76k/month (IBPS PO once selected)",
-        "mid": "₹8–15 LPA (banking officer, data analyst, policy analyst)",
-        "senior": "₹15–40 LPA (economist, RBI senior, analytics leads)"
+        "entry": "₹3L - ₹7L (Average to Good)",
+        "mid": "₹7L - ₹15L",
+        "senior": "₹15L - ₹25L+"
       },
       "salary_parsed": {
         "entry": {
           "min": 300000,
-          "max": 600000
+          "max": 700000
         },
         "mid": {
-          "min": 800000,
+          "min": 700000,
           "max": 1500000
         },
         "senior": {
           "min": 1500000,
-          "max": 4000000
+          "max": 2500000
         }
       },
       "career_outlook": {
@@ -6561,7 +6486,7 @@
           "url": "https://www.reddit.com/r/LegalAdviceIndia/"
         }
       ],
-      "overview": "A 5-year integrated BA LLB or a 3-year LLB. The legal field in India is insanely unequal. A tiny fraction of graduates (mostly from top National Law Universities) land high-paying Corporate Law jobs. The vast majority enter Litigation, where they spend 5-10 years doing grunt work for senior lawyers at starvation wages.",
+      "overview": "Law in India is extremely bimodal and high-variance. Graduates from top NLUs entering corporate law earn elite salaries right away, while non-NLU grads in litigation often face a multi-year apprenticeship of very low pay. The objective reality: college brand, internships, and specialization matter far more than the degree itself. Without these, many end up underpaid and regretful.",
       "tags": [
         "law",
         "llb",
@@ -6578,16 +6503,15 @@
         "You can pivot to the Judiciary and become a Judge, which offers ultimate job security."
       ],
       "what_nobody_tells_you": [
-        "Litigation pays practically nothing at the start. You will be 25 years old earning ₹15,000/month while your engineering friends are buying cars.",
-        "Corporate Law (₹15L+ starting) is reserved for top NLUs. If you go to a local private law college, corporate law firms will not even look at your resume.",
-        "CLAT is brutal. ~1 Lakh students fight for ~3,500 NLU seats.",
-        "Nepotism is real. First-generation lawyers have to grind 10x harder to build a client base than someone whose father is already a Senior Advocate.",
-        "Corporate lawyers don't go to court. They sit in an office for 14 hours a day reviewing M&A contracts until their eyes bleed."
+        "The 'NLU premium' determines everything early on. A top NLU grad can start at ₹22.5 LPA in a corporate firm, while a non-NLU grad might start at ₹15,000/month in litigation.",
+        "Litigation requires a 3-7 year grind where you earn almost nothing (₹10k-25k/month) before gaining any real independence or client base.",
+        "The median practicing advocate in India earns ₹3–7 LPA. The TV-show illusion of wealthy lawyers only applies to the top 5-10%.",
+        "Taking a ₹20-25 lakh loan for a top NLU is incredibly risky for a first-generation lawyer unless a high-paying corporate placement is guaranteed."
       ],
       "salary": {
-        "entry": "₹15,000/month (litigation junior) to ₹20 LPA (NLU grad at top corporate firm)",
-        "mid": "₹8-40 LPA (5 years — corporate lawyers or established litigators)",
-        "senior": "₹30 LPA to several crores (senior advocates, law firm partners, or judiciary salary plus pension)"
+        "entry": "₹2L - ₹22L (Massive Gap)",
+        "mid": "₹5L - ₹40L",
+        "senior": "₹15L - ₹1Cr+"
       },
       "career_outlook": {
         "india": "A tale of two cities. Top NLU grads get placed in Tier-1 firms (CAM, SAM, Khaitan) at ₹16L-20L/year and burn out in 3 years. Everyone else goes into Litigation, struggles for 5-7 years, and eventually builds a decent practice or pivots to In-House Counsel or the Judiciary.",
@@ -6777,16 +6701,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 180000,
-          "max": 180000
+          "min": 200000,
+          "max": 2200000
         },
         "mid": {
-          "min": 800000,
+          "min": 500000,
           "max": 4000000
         },
         "senior": {
-          "min": 3000000,
-          "max": 50000000
+          "min": 1500000,
+          "max": 10000000
         }
       },
       "duration_parsed": 5
@@ -6795,8 +6719,6 @@
       "id": "design",
       "name": "Design (NID / NIFT path)",
       "category": "design",
-      "tagline": "Design isn't about drawing well. It's about solving problems people didn't know they had.",
-      "verdict": "Portfolio beats degree, but the junior door is tight — the winners build real case studies early.",
       "tagline": "A college degree matters less than a good portfolio. You are competing with 16-year-olds who learned Figma on YouTube.",
       "verdict": "UI/UX Design pays extremely well. Fashion/Graphic Design pays ₹15,000/month. Pick your lane carefully, and remember that no one cares about your degree if your portfolio sucks.",
       "last_verified": "August 2026",
@@ -6818,7 +6740,7 @@
           "url": "https://www.reddit.com/r/Indian_Academia/"
         }
       ],
-      "overview": "A 4-year degree (B.Des) specializing in UI/UX, Graphic, Product, or Fashion Design. The entry funnel is brutal (NID accepts ~1% of applicants), but the irony is that design is the only field where a self-taught freelancer with a killer portfolio can steal a job from an NID graduate.",
+      "overview": "Design is a high-variance, extremely college-dependent field. The objective consensus: top institutes (NID/NIFT/IIT) lead to strong careers, but average private colleges result in weak ROI and frequent regret. UX and Product Design traditionally pay the best, but have recently suffered massive market saturation and a harsh salary collapse for freshers.",
       "tags": [
         "design",
         "nid",
@@ -6836,16 +6758,15 @@
         "It is very easy to do freelance work for foreign clients and earn in Dollars."
       ],
       "what_nobody_tells_you": [
-        "Fashion Design is a trap. NIFT grads often start at ₹15k-25k/month managing tailors in sweatshops, not designing clothes.",
-        "Graphic Design is dead. Basic logos and social media posts are being completely automated by AI (Midjourney/Canva).",
-        "The market is flooded with 'UI/UX Bootcamp' graduates who all have the exact same food-delivery app redesign in their portfolio. Companies reject them instantly.",
-        "You will not have 'creative freedom'. You will spend 80% of your time changing button colors because the client said they 'want it to pop'.",
-        "Paying ₹20 Lakhs for a private B.Des degree to earn ₹3 LPA as a Graphic Designer is financial suicide."
+        "The UX/UI market has collapsed for freshers. Due to bootcamp saturation, entry-level salaries that were ₹5-8 LPA in 2021 have crashed to ₹2.5-4 LPA in 2026.",
+        "College brand dictates your early career trajectory. An NID/IIT grad operates in a completely different job and salary bracket than an average private college grad.",
+        "If you don't have a top brand degree, your portfolio and case studies are the ONLY things that matter. The degree itself carries almost zero weight.",
+        "Graphic design is heavily crowded; many start at just ₹15k–25k/month in small agencies and struggle to grow."
       ],
       "salary": {
-        "entry": "₹4-12 LPA (UX/UI in tech pays more than traditional fashion or graphic design at entry)",
-        "mid": "₹12-30 LPA (5 years, especially in UX/product design at tech companies)",
-        "senior": "₹30 LPA-₹1 crore+ (senior design leads, design directors at major tech companies, or successful independent labels)"
+        "entry": "₹2.5L - ₹12L (Massive Gap)",
+        "mid": "₹8L - ₹25L",
+        "senior": "₹15L - ₹40L+"
       },
       "career_outlook": {
         "india": "Highly dependent on your specialization. UI/UX Product Designers in Tech will thrive (₹8L-15L entry). General Graphic Designers will struggle to cross ₹5L/year as AI eats their jobs. Fashion Designers will grind for years before seeing real money.",
@@ -7043,16 +6964,16 @@
       ],
       "salary_parsed": {
         "entry": {
-          "min": 400000,
+          "min": 250000,
           "max": 1200000
         },
         "mid": {
-          "min": 1200000,
-          "max": 3000000
+          "min": 800000,
+          "max": 2500000
         },
         "senior": {
-          "min": 3000000,
-          "max": 10000000
+          "min": 1500000,
+          "max": 4000000
         }
       },
       "duration_parsed": 4
@@ -7082,7 +7003,7 @@
           "url": "https://www.reddit.com/r/Architects/comments/1gf4p2j/has_architecture_always_been_a_low_paying_career/"
         }
       ],
-      "overview": "A 5-year degree (B.Arch) requiring a license from the Council of Architecture. It takes one year longer than Engineering, yet starting salaries (₹2.4L-3.6L/year) are 30% lower than what a fresh engineer makes. You are basically doing 5 years of intense, sleep-deprived labor to get a low-paying desk job drafting floor plans.",
+      "overview": "Architecture in India is highly romanticized but financially brutal. The objective consensus points to very low starting salaries (₹10k–25k/month), exhausting hours, and extremely slow growth. Real financial upside only comes if you land a top government/foreign role, or if you have the capital and network to launch your own successful practice.",
       "tags": [
         "architecture",
         "b.arch",
@@ -7101,29 +7022,28 @@
         "Independent practice has the widest upside of any design field once established."
       ],
       "what_nobody_tells_you": [
-        "You will make ₹15,000 to ₹20,000 a month in your first job. This is not a joke. It is standard across the industry.",
-        "The mandatory 100-day internship is often unpaid, or pays a maximum of ₹4,000-₹10,000 a month.",
-        "Architecture colleges don't have 'Campus Placements'. You have to beg for a job by emailing your portfolio to 100 firms.",
-        "The 'Design' phase is 10% of the job. The other 90% is fighting with contractors, municipal compliance, and drawing toilets on AutoCAD.",
-        "Almost half the seats in architecture colleges go empty because people have realized the ROI is awful."
+        "After a rigorous 5-year degree, fresh B.Arch graduates often earn ₹10k–25k/month, which is comparable to gig economy delivery workers.",
+        "The financial growth is so slow that many architects report severe 'financial guilt' and regret in their late 20s as peers in IT/Finance surge ahead.",
+        "Long hours, all-nighters before submissions, and extreme client pressure are standard, leading to widespread burnout.",
+        "To make real money, you usually need to start your own firm. This requires significant family capital, business acumen, and networking—not just design talent."
       ],
       "salary": {
-        "entry": "₹2.4–3.6 LPA (junior architect, often ₹15–20k/month)",
-        "mid": "₹6–10 LPA (5–8 years: BIM specialist, senior studio architect, government)",
-        "senior": "₹15–37 LPA (principal architect, developer design leads, established practice)"
+        "entry": "₹1.2L - ₹3.6L (₹10k-30k/mo)",
+        "mid": "₹6L - ₹12L",
+        "senior": "₹12L - ₹25L+ (Firm Owners)"
       },
       "salary_parsed": {
         "entry": {
-          "min": 240000,
+          "min": 120000,
           "max": 360000
         },
         "mid": {
           "min": 600000,
-          "max": 1000000
+          "max": 1200000
         },
         "senior": {
-          "min": 1500000,
-          "max": 3700000
+          "min": 1200000,
+          "max": 2500000
         }
       },
       "career_outlook": {
@@ -7359,7 +7279,7 @@
           "url": "https://www.reddit.com/r/MBA/"
         }
       ],
-      "overview": "A 2-year postgraduate degree that has become the default escape hatch for confused engineers. The reality is brutal: Top IIMs place you in ₹25L+ Consulting/Finance roles. Tier-2 gets you ₹10-15L Marketing/Operations jobs. Tier-3 takes ₹15 Lakhs from you and hands you a ₹5L frontline sales job pushing credit cards.",
+      "overview": "MBA in India is a high-variance, extremely tier-dependent bet. Tier-1 colleges (IIMs/ISB/XLRI) deliver elite careers and strong ROI. Tier-2/3 MBAs often result in slow ROI, generic roles, and frequent regret due to the massive opportunity cost. The objective consensus: 'MBA is not worth it for most people' unless you secure a top college or have a crystal-clear niche plan. Otherwise, you are better off upskilling and switching jobs.",
       "tags": [
         "mba",
         "management",
@@ -7375,16 +7295,15 @@
         "You get to skip the grueling bottom rungs of the corporate ladder and enter straight into middle management."
       ],
       "what_nobody_tells_you": [
-        "Getting an MBA as a 'fresher' (zero work experience) is a terrible idea unless it is an IIM ABC. Companies want experienced professionals.",
-        "General Engineer Males (GEM) are playing on hardcore mode. IIMs want 'diversity', so if you are a GEM, a 99 percentile in CAT still doesn't guarantee a call.",
-        "The '₹25 LPA Average Package' is a lie. That's usually the CTC which includes fake ESOPs, one-time bonuses, and inflated variables. The actual in-hand is much lower.",
-        "Summer Placements happen 2 months after you join. It is a bloodbath of sleep deprivation, toxic competition, and crying in hostel rooms.",
-        "If you go to a Tier-3 college, you are paying ₹15 Lakhs to get a job you could have gotten for free with a BBA."
+        "The CTC vs in-hand shock is massive. A ₹20-25 LPA offer letter often means ₹14-18 LPA in actual fixed pay.",
+        "Around 90% of non-Tier-1 graduates find themselves in similar jobs post-MBA (sales, generic operations) just with slightly different titles and ₹15-20 Lakhs in debt.",
+        "The true cost of a full-time MBA includes your foregone salary. If you already earn ₹10 LPA, a ₹25 lakh MBA actually costs you ₹45 lakhs.",
+        "Regret is extremely common among Tier-2/3 graduates who took loans expecting an automatic six-figure lifestyle that never materialized."
       ],
       "salary": {
-        "entry": "₹5L-35L (The most polarized salary range in India. Totally depends on the college brand.)",
-        "mid": "₹20L-70L (Senior Managers, Consulting Partners, Product Leads)",
-        "senior": "₹50L - ₹5 Crore+ (CXOs, Managing Directors)"
+        "entry": "₹8L - ₹25L (Massive Tier Gap)",
+        "mid": "₹15L - ₹60L+",
+        "senior": "₹30L - ₹1Cr+"
       },
       "career_outlook": {
         "india": "Brutally tiered, and the odds are visible upfront: ~2.95 lakh registered for CAT 2025 for ~5,500 IIM seats (about 1 in 54), and only ~100-150 of India's 5,000+ B-schools reliably justify their fees. Top IIMs still average ₹30 LPA+ (IIM Calcutta: ₹36 LPA in 2026); tier-2/3 outcomes are real but slower (IMT Nagpur ~₹7 LPA campus → ₹24 LPA over 5 years; tier-3 ~₹4-5 LPA → ₹12 LPA); and bottom-tier colleges with heavy debt can be net-negative. The real cost is fees plus two years of lost salary — compute that before applying.",
@@ -7580,15 +7499,15 @@
       "salary_parsed": {
         "entry": {
           "min": 800000,
-          "max": 3500000
+          "max": 2500000
         },
         "mid": {
-          "min": 2000000,
-          "max": 7000000
+          "min": 1500000,
+          "max": 6000000
         },
         "senior": {
-          "min": 5000000,
-          "max": 50000000
+          "min": 3000000,
+          "max": 10000000
         }
       },
       "duration_parsed": 2
@@ -7618,7 +7537,7 @@
           "url": "https://www.reddit.com/r/Hotels_India/comments/1lim2o8/my_hotel_management_internship_experience_hell/"
         }
       ],
-      "overview": "A 3-year or 4-year degree focusing on Hotel Operations. The industry desperately needs cheap labor, so these colleges will take anyone. The curriculum is mostly common sense masked as 'management'. Your first job will involve standing in a lobby or serving food for 12 hours a day while guests yell at you.",
+      "overview": "Hotel Management is one of the most romanticized yet underpaid careers in India. The objective consensus points to very low starting salaries (₹15k–25k/month), grueling shifts, festival work, and painfully slow growth. Unless you graduate from a top IHM and secure an international/cruise role, or are purely driven by passion and accept modest pay for the lifestyle, it is a poor financial choice.",
       "tags": [
         "hotel management",
         "bhm",
@@ -7637,29 +7556,28 @@
         "If you survive for 15 years, General Managers at luxury properties get paid ₹25L+ and live like kings."
       ],
       "what_nobody_tells_you": [
-        "The starting salary is criminal. You will be offered ₹12,000 to ₹18,000 per month.",
-        "You do not get holidays. While everyone else is celebrating Diwali or New Year's Eve, you will be working a double shift.",
-        "Internships are basically unpaid forced labor. You will scrub pots and clean rooms for 6 months.",
-        "A degree from a random private institute is utterly worthless. Even top IHM grads struggle if they don't crack a premium MT program.",
-        "The physical toll is immense. You will be on your feet for 10-12 hours a day."
+        "Starting salaries often sit between ₹12,000 to ₹25,000 per month, which is lower than many BPO or gig economy jobs.",
+        "'Work when others celebrate' is the industry norm. You will miss weekends, Diwali, and New Year's working 10-12 hour shifts on your feet.",
+        "Salary growth is painfully slow in India. Reaching a ₹7 LPA package can take nearly a decade unless you move abroad or onto cruise ships.",
+        "There is a persistent social stigma in India ('sir/madam culture' and 'cleaning stigma') that causes significant mental fatigue for many graduates."
       ],
       "salary": {
-        "entry": "₹15–20k/month (₹2–3.5 LPA) — front office / F&B trainee",
-        "mid": "₹5–8 LPA (department head, front office manager, 5–8 years)",
-        "senior": "₹12–25 LPA (GM of a luxury property, 15+ years) or ₹1–2L/month tax-free on cruises/Gulf"
+        "entry": "₹1.8L - ₹3.6L (₹15k-30k/mo)",
+        "mid": "₹4L - ₹8L",
+        "senior": "₹10L - ₹24L (GM level)"
       },
       "salary_parsed": {
         "entry": {
-          "min": 200000,
-          "max": 350000
+          "min": 180000,
+          "max": 360000
         },
         "mid": {
-          "min": 500000,
+          "min": 400000,
           "max": 800000
         },
         "senior": {
-          "min": 1200000,
-          "max": 2500000
+          "min": 1000000,
+          "max": 2400000
         }
       },
       "career_outlook": {
@@ -7909,7 +7827,7 @@
           "url": "https://www.reddit.com/r/UPSC/comments/1tjhrn1/just_819_lakh_applicants_in_cse_26_interesting/"
         }
       ],
-      "overview": "The Civil Services Exam (UPSC). 8 Lakh people apply, 900 get selected. It is an industry built on selling false hope to small-town kids. If you crack it, you become an IAS/IPS officer with immense social power. If you fail (which you probably will), you become a 28-year-old 'fresher' with a massive gap in your resume.",
+      "overview": "UPSC is not a standard 'career option'—it is a high-risk, all-or-nothing grind with a success rate of <0.2%. The objective reality involves 3–7+ years of intense preparation with a brutal mental and financial toll. For those who clear, the power and impact are unmatched. For the vast majority who do not, it often leads to severe regret and lost earning years unless they have a strong backup plan and financial safety net.",
       "tags": [
         "upsc",
         "ias",
@@ -7929,28 +7847,28 @@
         "It is the only way a 24-year-old can legally wield power over billionaires."
       ],
       "what_nobody_tells_you": [
-        "You are not fighting to get in. You are fighting to not be eliminated. 99.9% of aspirants fail.",
-        "Coaching institutes are leeches. They will charge you ₹2 Lakhs to teach you things you can read for free in NCERT books.",
-        "UPSC prep destroys your mental health. You will sit in an 8x8 room in Rajinder Nagar for 3 years while your engineering friends get promoted and get married.",
-        "The 'Backup Plan' myth: Most people think they can just get a corporate job if they fail. Companies do not want to hire 27-year-olds with zero work experience who are depressed about failing UPSC."
+        "You are competing for ~500 final spots against 5-10 lakh applicants. The effective rejection rate is over 99.8%.",
+        "Without generational wealth, a job, or a strong backup plan, investing 5 years into this exam is incredibly financially reckless.",
+        "Anxiety, depression, burnout, and severe social isolation are the norm, not the exception, during the 30-50 hour weekly prep grind.",
+        "The starting salary is modest (~₹56k-60k basic). The real draw is the unparalleled administrative authority, housing, and job security, not the cash."
       ],
       "salary": {
-        "entry": "~₹1L+/month gross (Level 10 basic ₹56,100 + allowances)",
-        "mid": "₹1.5–2.5L/month (Joint Secretary-scale after ~15 yrs)",
-        "senior": "₹2.5L+/month (Secretary / Cabinet Secretary scale)"
+        "entry": "₹10L - ₹14L (CTC w/ Perks)",
+        "mid": "₹15L - ₹20L",
+        "senior": "₹25L - ₹35L+"
       },
       "salary_parsed": {
         "entry": {
-          "min": 1200000,
-          "max": 1800000
+          "min": 1000000,
+          "max": 1400000
         },
         "mid": {
-          "min": 1800000,
-          "max": 3000000
+          "min": 1500000,
+          "max": 2000000
         },
         "senior": {
-          "min": 3000000,
-          "max": 5000000
+          "min": 2500000,
+          "max": 3500000
         }
       },
       "career_outlook": {

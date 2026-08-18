@@ -2,500 +2,887 @@
   "_note": "Verbatim reviews from real Reddit threads (and a few personal interviews) for careers beyond the edit range of careers.json. Merged in career-profiles.ts: an entry here REPLACES careers.json's real_experiences for that career. Every review carries the thread's post date, verified Aug 2026; quotes are taken verbatim from the linked threads.",
   "mbbs": [
     {
-      "source": "Reddit r/indianmedschool — AFIH graduate, Factory Medical Officer (AMA) · Sep 2025",
-      "quote": "I am an AFIH graduate working as a Factory Medical Officer (FMO). Minimum salary I've seen is 12 LPA for freshers, pay starts from 12 LPA once you finish AFIH. I know freshers who are paid 25 LPA.",
-      "url": "https://www.reddit.com/r/indianmedschool/comments/1n0c4yj/"
+      "source": "Reddit r/IndiaCareers — MBBS doctor (6+ years post-12th)",
+      "quote": "Having completed my MBBS and spent several years in the field, I, along with some friends, find ourselves earning less than ₹75,000 a month at one of India's leading private hospitals… Meanwhile, my peers who graduated from IIT and IIM are raking in several times what I earn.",
+      "url": "https://www.reddit.com/r/IndiaCareers/comments/1vgd3vn/"
     },
     {
-      "source": "Reddit r/indianmedschool — 'Reality of MBBS grad?' · Apr 2026",
-      "quote": "This is the reality when you pass the NEET-UG rat race but get stuck in the next one — NEET-PG. That said, there are many offers available to even MBBS graduates today, avenues that didn't exist 20 years ago. The base pay of an MBBS is at least ₹30k/month in almost any rural corner of this country — far above the basic pay of a BA/B.Sc pass. It's harsh, but it's not the doom-post.",
-      "url": "https://www.reddit.com/r/indianmedschool/comments/1syxoet/"
+      "source": "Reddit r/india — 'The truth about working hard'",
+      "quote": "A friend of mine worked as an intern in a hospital for 8 to 10 hours a day over the course of eight months, earning just 4,000 rupees a month. Another acquaintance spent two years in a remote village, receiving only 15,000 rupees monthly, and he endured physical assaults.",
+      "url": "https://www.reddit.com/r/india/comments/1qe73g8/"
     },
     {
-      "source": "Reddit r/indianmedschool — 'MBBS is not worth anymore' · Aug 2026",
-      "quote": "MBBS is not worth anymore.",
-      "url": "https://www.reddit.com/r/indianmedschool/comments/1vi2zmw/"
+      "source": "Reddit r/DoctorsofIndia — 'The financial reality of being a doctor in India'",
+      "quote": "It often takes doctors between 8 to 12 years to begin earning a salary of one lakh per month; many never reach that milestone. Among those who do, only a few manage to earn upwards of 20 lakh per annum, making high earners in major hospitals a rare exception.",
+      "url": "https://www.reddit.com/r/DoctorsofIndia/comments/1skh7ed/"
     },
     {
-      "source": "Reddit r/indianmedschool — 'Is there any circumstance in which residency isn't brutal in India?' · 2024",
-      "quote": "I'm not particularly concerned with what I would earn, but I'm very intimidated by the idea of working 80 hour weeks.",
-      "url": "https://www.reddit.com/r/indianmedschool/comments/1blfsk8/"
+      "source": "Reddit r/indianmedschool — 'Did you guys regret it?'",
+      "quote": "I regret it everyday.",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1te0acv/"
     },
     {
-      "source": "Reddit r/indianmedschool — 'Will you guys choose medicine as a profession again?' · Jun 2024",
-      "quote": "Unpopular opinion given the comments here, but I'd do it again.",
-      "url": "https://www.reddit.com/r/indianmedschool/comments/1dj9rq3/"
+      "source": "Reddit r/indianmedschool — 'Did you guys regret it?'",
+      "quote": "Given another opportunity, I would ensure I never put myself in this situation again… Honestly, I wouldn't advise anyone to pursue MBBS; the stress begins with NEET and seems to persist indefinitely.",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1te0acv/"
+    },
+    {
+      "source": "Reddit r/AskIndia — Young Doctor in Bangalore",
+      "quote": "I find myself regretting my decision to become a doctor… Working in Bangalore feels disheartening, as duty doctors are often treated poorly. Meanwhile, I observe those around me leading more fulfilling lives... all for a monthly salary of just 30,000.",
+      "url": "https://www.reddit.com/r/AskIndia/comments/1rdckxc/"
+    },
+    {
+      "source": "Reddit r/indianmedschool — 'IS MBBS WORTH IT?'",
+      "quote": "It was a good choice nearly 15 years ago, but now it's not. Consider exploring better alternatives. Go for JEE.",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1q95hej/"
+    },
+    {
+      "source": "Reddit r/indianmedschool — 'Is MBBS worth it?'",
+      "quote": "Yahan paisa nahi hai, 40 saal ki umr ke baad hi paisa aayega. (There's no money here; money only comes after age 40.)",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1uso76y/"
     }
   ],
   "bed_teaching": [
     {
-      "source": "Reddit r/Indian_Academia — 'Is doing B.Ed. in India worth it when TGT/PGT teachers are paid less than 20K…' · 2024",
-      "quote": "I am paying 1,20,000 for the entire course (including agent's commission). I am earning just 15K per month.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1brl3cd/is_doing_bed_in_india_worth_it_when_tgtpgt/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "Often, these schools will require you to sign a contract stating a salary of over 50,000 per month. However, the actual payment tends to be around 15,000 to 20,000. Many times, teachers find themselves needing to ‘donate’ or return a significant portion of that salary back to the institution.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1pne559/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Left Private Teaching, Preparing for Govt Exams' · 2025",
-      "quote": "My current plan is to dedicate myself to preparing for a government teaching exam (e.g., KVS, DSSSB, etc.).",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1nveu01/advice_needed_25f_left_private_teaching_preparing/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "I think doing b,ed and qualifying NET was my biggest mistake… Unfortunately, I find that all my qualifications seem to hold little value in the current Indian job market.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1vgwpuf/"
     },
     {
-      "source": "Reddit r/Indian_Academia — '6 years primary school teacher, need advice' · 2026",
-      "quote": "Do masters and become a government teacher or icse or cbse because you b.ed in hand you just need masters. Eg. Kendriya vidyalaya, state…",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1t0k792/6_years_primary_school_teacher_desperately_in/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "The dilemma I’m facing is that I don’t see teaching as a long-term career path, yet I’m contemplating pursuing a B.Ed as a safety net in case I don’t succeed in the exams.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1n5gtz9/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'I need some advice about B.Ed or Masters please' · Aug 2026",
-      "quote": "I think doing b,ed and qualifying NET was my biggest mistake.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1vhxw2w/i_need_some_advice_about_bed_or_masters_please/"
+      "source": "Reddit r/delhi",
+      "quote": "However, even with these qualifications, her starting salary at a private school is unlikely to exceed 20–25k.",
+      "url": "https://www.reddit.com/r/delhi/comments/1uh5hpd/"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "In private institutions, salaries seem to start around 15,000 per month, and even after passing government exams, there’s often a long wait for job openings.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1n15uua/"
     }
   ],
   "bds": [
     {
-      "source": "Practicing dentist, Ahmedabad (personal interview) · Aug 2026",
-      "quote": "I chose BDS because I didn't get an MBBS seat. Now I run 8 clinics and I'm more than grateful. Once you have the skills and the drive, there is no ceiling. But it took 20 years of consistent work to get here."
+      "source": "Reddit r/dentalschoolindia — 'Is BDS really that bad?'",
+      "quote": "Try something else besides this, bro... With respect, I advise against enrolling in this course.",
+      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1s8wsk7/"
     },
     {
-      "source": "Reddit r/dentalschoolindia — 'BDS. Internship. Years of hard work. ₹10,000 salary.' · Jun 2026",
-      "quote": "Many fresh BDS graduates are being offered ₹15,000–20,000/month, while some MDS graduates start at ₹25,000–30,000/month.",
-      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1tul72v/"
+      "source": "Reddit r/dentalschoolindia — Saturation breakdown",
+      "quote": "BDS is heavily oversupplied. The number of dentists earning over 20k per year is problematic… 95% of Indians have low income and cannot afford dental care.",
+      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1psvkkf/"
     },
     {
-      "source": "Reddit r/dentalschoolindia — 'Salary after BDS and MDS in India' · Aug 2025",
-      "quote": "BDS — ₹10–25k, varies on location. MDS — ₹35–60k. Salary increases, and most good clinics provide incentives per patient.",
-      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1muhy9x/"
+      "source": "Reddit r/AskIndianWomen — 26F BDS→MDS student",
+      "quote": "Before starting the program, everyone told me dentists earn well, but once I began, I only heard about how saturated the field is and how underpaid dentists can be... Now, two months into my PG, I already despise it... I regret the money and the years I've wasted.",
+      "url": "https://www.reddit.com/r/AskIndianWomen/comments/1nfcd7c/"
     },
     {
-      "source": "Reddit r/dentalschoolindia — 'Found the perfect post for y'all taking BDS' · Aug 2026",
-      "quote": "\"Solution to the saturation? Moving abroad, leaving dentistry after giving it years, or putting a clinic in a rural area — but how would rural patients, who barely have basic health facilities, pay for costly procedures?\"",
-      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1vn3uhk/"
+      "source": "Reddit r/dentalschoolindia — Rant on MDS reality",
+      "quote": "Starting a practice requires skill, capital, and 1–2 years of financial runway... In my tier-2 city, within a 1 km radius of my home, there are 13 MDS specialists. A BDS-only clinic cannot compete. MDS used to be a differentiator; now it is the baseline.",
+      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1q2kfke/"
     },
     {
-      "source": "Reddit r/dentalschoolindia — 'Is dentistry worth it for you?' · Apr 2026",
-      "quote": "Fresher, 7 months out of college — hired at ₹48k/month after they evaluated my performance. The scope is as good as your skills. But honestly, most of my batchmates aren't satisfied with the pay or the hours.",
-      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1sbnlyp/"
+      "source": "Reddit r/dentalschoolindia — BDS Student",
+      "quote": "My professors earn only a 28k salary despite holding an MDS, and their clinics operate on rent, bruh. My PGs receive just a 3k monthly stipend, and interns don't get paid at all.",
+      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1s8wsk7/"
+    },
+    {
+      "source": "Reddit r/AskIndianWomen — Female dentist",
+      "quote": "Even while preparing for NEET-MDS, I regretted choosing BDS. I completed my PG at a government college, but the environment was so toxic that I never wanted to return to that field.",
+      "url": "https://www.reddit.com/r/AskIndianWomen/comments/1nfcd7c/"
+    },
+    {
+      "source": "Reddit r/dentalschoolindia — Interns / Fresh Grads",
+      "quote": "I regret having pursued this degree... There's nothing to be done. I regret having pursued this degree.",
+      "url": "https://www.reddit.com/r/dentalschoolindia/comments/1q2kfke/"
     }
   ],
   "pharmacy": [
     {
-      "source": "Reddit r/Indian_Academia — 'Is B.Pharma a good career option after 12th?' · Apr 2026",
-      "quote": "From a B.Pharm dropout, HELL NO! Absolutely NO!",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1shg7us/"
-    },
-    {
-      "source": "Reddit r/IndianAcademia — 'Is B.Pharm worth it in India?' · Feb 2026",
-      "quote": "Did B.Pharm, graduated with an 8.62 CGPA. Starting salary: ₹16k/month as a Medical Representative. It's not worth the fees I paid. There's rarely any government vacancy — most posts require a diploma in pharmacy, not B.Pharm. If you like research and can afford M.Pharm/PhD, this course is for you. Otherwise, rethink.",
+      "source": "Reddit r/IndianAcademia",
+      "quote": "Unless you're willing to accept a ₹15,000 salary for the first three years as a medical representative with no lunch breaks and poor work-life balance, there are virtually no placements at the bachelor's level.",
       "url": "https://www.reddit.com/r/IndianAcademia/comments/1qy56c4/"
     },
     {
-      "source": "Reddit r/IndianAcademia — 'Smartest career move after B.Pharm?' · Jun 2026",
-      "quote": "Completed B.Pharm and recently finished a 1-year internship at Glenmark in QC. I'm at a stage where I can take around ₹15 lakh education loan if needed.",
-      "url": "https://www.reddit.com/r/IndianAcademia/comments/1tqyrm9/"
+      "source": "LinkedIn — Pharma Recruiter",
+      "quote": "'After B.Pharm I'll get 40–50K/month easily.' This is the biggest salary MYTH in Indian pharma right now. Reality today (2025): Typical fresher range: ₹18K–₹30K/month… Most campus/off-campus offers sit between ₹2.5–₹4.5 LPA CTC in the first year.",
+      "url": "https://www.linkedin.com/posts/pharmacrewconnect_bpharm-pharmajobs-pharmafreshers"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Career options after B.Pharm / M.Pharm?' · 2024",
-      "quote": "my_qualifications: 2nd year B.Pharm. What are the available options for a B.Pharm grad — names of specific roles would be nice, or just a direction.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/183by0u/"
+      "source": "Career Blog",
+      "quote": "So you finished B.Pharm... and then hit the part nobody warned you about: the actual jobs on offer start near ₹12,000 a month, the medical rep role means daily targets... and the 'government pharmacist' dream has maybe four posts for four thousand applicants.",
+      "url": "https://www.esalahkaar.com/blog/is-a-pharmacy-career-worth-it-in-india-2026-truth"
+    },
+    {
+      "source": "Career Blog",
+      "quote": "Twelve-hour shifts, rotating timings, and starting pay that can sit near ₹8,000–15,000 a month for the first year or two are common, especially outside the big MNCs.",
+      "url": "https://www.esalahkaar.com/blog/is-a-pharmacy-career-worth-it-in-india-2026-truth"
+    },
+    {
+      "source": "LinkedIn Post",
+      "quote": "Job offers: ₹18K – ₹20K in-hand salary. That too after: Long working hours, Huge responsibility over medicines, Constant pressure in medical stores, hospitals, or pharma companies.",
+      "url": "https://www.linkedin.com/posts/faiz-ansari-228352167_pharmacy-bpharm-pharmacistlife"
+    },
+    {
+      "source": "Reddit r/IndianPharmacy",
+      "quote": "Avoid pursuing a BPharm after completing 12th; it isn't worthwhile... People here seem to regret choosing B.Pharm, and I'm feeling lost about what to do.",
+      "url": "https://www.reddit.com/r/IndianPharmacy/comments/1qwehko/"
     }
   ],
   "paramedical_nursing": [
     {
-      "source": "Reddit r/studyAbroad — 'Indian B.Sc Nursing student, guidance on migrating' · Dec 2025",
-      "quote": "Usual salary of nurses (RN) in the UK can be around ₹2.5 lakh, and in Australia can be ₹3 lakh.",
-      "url": "https://www.reddit.com/r/studyAbroad/comments/1p4qxfz/"
+      "source": "Reddit r/MEDICOreTARDS",
+      "quote": "In India, the role of a nurse often resembles labor work in hospitals rather than the glamorous depiction seen in American television series.",
+      "url": "https://www.reddit.com/r/MEDICOreTARDS/comments/1saatxj/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Is B.Sc nursing a good option?' · Feb 2026",
-      "quote": "Final-year B.Sc nursing student. It's a good option for a financially stable future — with experience, salaries around ₹70k/month in India are realistic and keep climbing. The cost is long duty hours, night shifts, and full accountability for patients. And from my class, most students are moving abroad — it's seen as the safest route out.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1qwvktj/"
+      "source": "Career Blog",
+      "quote": "The work is physically punishing: recommended nurse-to-patient ratios are routinely broken, with one nurse covering fifteen to twenty patients on a general ward and eight to ten beds in an emergency ward.",
+      "url": "https://www.esalahkaar.com/blog/is-a-nursing-career-worth-it-in-india-2026-truth"
     },
     {
-      "source": "Reddit r/returnToIndia — 'Returning to India as a Registered Nurse' · Apr 2026",
-      "quote": "Making more than ₹45–50k a month as a nurse working in private healthcare in India? ₹45,000 is the best case scenario.",
-      "url": "https://www.reddit.com/r/returnToIndia/comments/1s8yzpf/"
+      "source": "Reddit r/MEDICOreTARDS",
+      "quote": "My sister completed her BSc in Nursing, but she’s currently jobless and is now studying for government exams that only have about 400 openings while attracting around 400,000 applicants.",
+      "url": "https://www.reddit.com/r/MEDICOreTARDS/comments/1saa61u/"
     },
     {
-      "source": "Reddit r/Indians_StudyAbroad — 'Anyone working as a nurse in Germany?' · Jun 2026",
-      "quote": "I am doing my nursing here in India right now and plan to migrate abroad — here the scope of nursing is very little compared to the US, Canada…",
-      "url": "https://www.reddit.com/r/Indians_StudyAbroad/comments/1tzh13d/"
+      "source": "Career Blog",
+      "quote": "You will likely regret a nursing career if you need decent money and humane hours in year one in India, if you cannot handle rotating nights and heavy ward ratios, or if you assumed ‘abroad’ would happen automatically.",
+      "url": "https://www.esalahkaar.com/blog/is-a-nursing-career-worth-it-in-india-2026-truth"
+    },
+    {
+      "source": "Reddit r/indianmedschool",
+      "quote": "As a medical professional, I believe that pursuing a career in nursing is a more favorable choice if you’re considering working overseas, particularly in countries like Germany or Norway.",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1st7q4i/"
     }
   ],
   "paramedical_physiotherapy": [
     {
-      "source": "Reddit r/physiotherapy — 'Is physiotherapy in India even worth it?' · Apr 2026",
-      "quote": "Right now, most physiotherapists are earning somewhere in the range of ₹15k–₹40k/month in smaller setups, and ₹40k–₹80k+ in bigger centers.",
-      "url": "https://www.reddit.com/r/physiotherapy/comments/1sasmlq/"
+      "source": "Reddit r/physiotherapy",
+      "quote": "As a physiotherapist, I can tell you that the time invested in this field may not be justified… Additionally, the costs associated with obtaining a license can run into lakhs... I strongly advise against pursuing this course.",
+      "url": "https://www.reddit.com/r/physiotherapy/comments/1ou2nxq/"
     },
     {
-      "source": "Reddit r/physiotherapy — 'Is BPT in India really worth it in 2026?'",
-      "quote": "BPT 2023, MPT 2025, working in Delhi. Started at ₹20k, now ₹30k, 8-10 hour days. Physiotherapy is very saturated — any college teaches it now, cheap labour flooded the sector, even home-visit charges are below what seniors got 20 years ago. Recognition stays stagnant until we get our own board. If money is your priority, look at OT, prosthetics & orthotics, or pharma instead.",
-      "url": "https://www.reddit.com/r/physiotherapy/comments/1ujpr7a/"
+      "source": "Reddit r/physiotherapy",
+      "quote": "In most jobs within the country, the maximum salary you can expect by the time you reach retirement is around 70,000 to 90,000.",
+      "url": "https://www.reddit.com/r/physiotherapy/comments/1uvyyoh/"
     },
     {
-      "source": "Reddit r/physiotherapy — 'Is physiotherapy a good field in India?' · 2024",
-      "quote": "I have done my BPT. If you want to work, employers will give you hardly ₹15–18k as a fresher.",
-      "url": "https://www.reddit.com/r/physiotherapy/comments/1d2gl3b/"
+      "source": "Reddit r/physiotherapy",
+      "quote": "Many clinics require you to work between 8 to 10 hours a day for an average salary of around 25,000, with minimal opportunities for advancement.",
+      "url": "https://www.reddit.com/r/physiotherapy/comments/1s3cfbj/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Real scope of physiotherapy as a career in India' · Sep 2025",
-      "quote": "Entry level (after BPT): ₹2.4–6 LPA, often on the lower end, 18–25k/month. Mid-career: ₹4–6 LPA. Senior roles/specialists: ₹6–10 LPA+.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1n9667b/"
+      "source": "Reddit r/MEDICOreTARDS",
+      "quote": "In India, job opportunities in the field of BPT are limited, and the average salaries tend to be on the lower side. Typically, entry-level positions offer around 15,000 to 20,000 INR.",
+      "url": "https://www.reddit.com/r/MEDICOreTARDS/comments/1v2h8e8/"
     },
     {
-      "source": "Reddit r/physiotherapy — 'Pursuing bpt in India and I'm confused, need honest advice' · Dec 2025",
-      "quote": "you might be able to immigrate abroad and salary : life ratio would be infinitely better.",
-      "url": "https://www.reddit.com/r/physiotherapy/comments/1p3rqat/"
+      "source": "YouTube Career Guide",
+      "quote": "My answer would be yes, but only if your expectations are realistic and you are genuinely interested in rehabilitation and patient care.",
+      "url": "https://www.youtube.com/watch?v=inDxYmCtUCQ"
     }
   ],
   "radiology_tech": [
     {
-      "source": "Reddit r/keralaCareers — 'Opinion on taking B.Sc radiology (technician)' · May 2026",
-      "quote": "Salary is like ₹12–15k if you're lucky. Work is based on shifts — irregular, sometimes morning, sometimes night…",
-      "url": "https://www.reddit.com/r/keralaCareers/comments/1tby8um/"
+      "source": "Career Guide",
+      "quote": "Entry-level: ₹2.8–4.5 LPA. Mid-level (3–5 years) with MRI/CT specialization: ₹5–9 LPA. Senior modality specialists (PET-CT, interventional radiology) earn ₹10–16 LPA in tier-1 hospitals.",
+      "url": "https://ahs.jkkn.ac.in/course-blog/radiology-imaging-technology-career-guide"
     },
     {
-      "source": "Reddit r/RadiologyCareers — 'Radiography student needs career advice' · Jun 2026",
-      "quote": "The salary in the private sector isn't much.",
-      "url": "https://www.reddit.com/r/RadiologyCareers/comments/1tjwa9x/"
+      "source": "Reddit r/RadiologyCareers",
+      "quote": "A few reasons I like it are the good work‑life balance, the difficulty for AI to replace it, and the decent pay.",
+      "url": "https://www.reddit.com/r/RadiologyCareers/comments/1qm4x41/"
     },
     {
-      "source": "Reddit r/indianmedschool — 'Current status and future of radiology as a career?' · Feb 2026",
-      "quote": "What is the current status and future of radiology as a career — income? private setup? AI? work-life balance? saturation?",
-      "url": "https://www.reddit.com/r/indianmedschool/comments/1r7wgax/"
+      "source": "Reddit r/RadiologyCareers",
+      "quote": "The job market varies by location. Focusing on specific modalities—such as CT, MR, and others—can open up more prospects and increase earnings.",
+      "url": "https://www.reddit.com/r/RadiologyCareers/comments/1q94k4z/"
+    },
+    {
+      "source": "Job Portal",
+      "quote": "Expected Salary (India): ₹2.5–₹5.5 Lakhs per annum (LPA) starting; ₹6–₹12 LPA+ with experience.",
+      "url": "https://www.collegesimplified.in/post/top-radiology-tech-jobs-2026-career-guide-salaries-future-scope"
+    },
+    {
+      "source": "Reddit r/careerguidance",
+      "quote": "Radiology technology is definitely a great option, even for those without a medical background.",
+      "url": "https://www.reddit.com/r/careerguidance/comments/1qrazki/"
     }
   ],
   "zoology": [
     {
-      "source": "Reddit r/Indian_Academia — 'PG in zoology? But don't know how…' · Sep 2024",
-      "quote": "I suggest you avoid a master's degree in zoology. There are no regular jobs in zoology, and the only jobs you can get are teaching in colleges…",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1fjoq90/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "In fact, it’s uncommon to find individuals achieving significant success with degrees in Zoology or Botany in this country.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1tdqmgv/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'What to pursue after a bachelor's in zoology?' · May 2026",
-      "quote": "Alternative options are biotechnology or bioinformatics. It's the most useless field in India.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1sqfbbh/"
+      "source": "Reddit r/studyAbroad",
+      "quote": "In India, a degree in BSc Zoology tends to be viewed as less valuable in the job market.",
+      "url": "https://www.reddit.com/r/studyAbroad/comments/1s33t2g/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'What to do after B.Sc zoology?' · Jan 2025",
-      "quote": "Academia is not easy either — academic jobs are as competitive as corporate. You shouldn't go into academia because it's your only option.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1hyw2tg/"
+      "source": "Reddit r/CUETards",
+      "quote": "My advice would be to consider this path only if you have a genuine enthusiasm for research.",
+      "url": "https://www.reddit.com/r/CUETards/comments/1oxxt8e/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'I want to study zoology. Is there any scope?' · 2025",
-      "quote": "There is definitely scope in zoology. Try taking a combination with biochemistry or ecology.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1i2qtuq/"
+      "source": "Job Portal",
+      "quote": "Average salary for request zoology graduate: Rs 2,55,331 for year… around ₹20,659 per month.",
+      "url": "https://in.jooble.org/salary/zoology-graduate"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "Zoology ke baad B.Ed. karke teacher banne ka option hai, jismein aapko 15,000 se 25,000 ki salary mil sakti hai, khaas taur par private schools mein.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1tqnz30/"
     }
   ],
   "botany": [
     {
-      "source": "Reddit r/Indian_Academia — 'After B.Sc botany: competitive exams or…?' · Dec 2025",
-      "quote": "Botany is a bad subject for the life sciences industry. If you do get a master's degree, make sure you switch to biotech.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1pd2u9g/"
+      "source": "Reddit r/delhiuniversity",
+      "quote": "Is bsc hons botany worth it ?? … Pls no",
+      "url": "https://www.reddit.com/r/delhiuniversity/comments/1syu80q/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Career advice after B.Sc botany' · 2025",
-      "quote": "I think you should do Masters in Botany only or maybe any other bioscience field. You can easily get a job at a school or coaching centre.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1kc3l59/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "In fact, it’s uncommon to find individuals achieving significant success with degrees in Zoology or Botany in this country.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1tdqmgv/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Is B.Sc in botany really that bad?' · 2023",
-      "quote": "Is B.Sc in botany really that bad as my parents are saying? — Currently in B.Sc botany first sem.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/15i5mhp/"
+      "source": "Reddit r/delhiuniversity",
+      "quote": "Pursuing botany from any location may not be very beneficial.",
+      "url": "https://www.reddit.com/r/delhiuniversity/comments/1pmdb4j/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Confused about my career after B.Sc botany' · Aug 2026",
-      "quote": "I'm a 20-year-old. My qualifications are B.Sc in Botany (5th semester) at a tier-3 college. I had PCB in +2 (with 1 gap year).",
+      "source": "Reddit r/Indian_Academia",
+      "quote": "I’m a 20-year-old currently pursuing a Bachelor of Science in Botany and am in my fifth semester at a tier‑3 college. Confused About My Career After BSc Botany...",
       "url": "https://www.reddit.com/r/Indian_Academia/comments/1vgavw0/"
+    },
+    {
+      "source": "Salary Guide",
+      "quote": "Entry-level positions typically offer between ₹2.5 LPA to ₹4.5 LPA, while experienced professionals can earn upwards of ₹8 LPA to ₹15 LPA or more.",
+      "url": "https://articles.findmycollege.com/bsc-botany-salary-in-india/"
     }
   ],
   "psychology": [
     {
-      "source": "Reddit r/Psychology_India — 'Psychology Career in India — A Rant' (2025)",
-      "quote": "The pay in psychology oriented careers (therapy/core research) will be around 15-35k for the beginning 5 years.",
-      "url": "https://www.reddit.com/r/Psychology_India/comments/1jn7aju/psychology_career_in_india_a_rant/"
+      "source": "Reddit r/Psychology_India",
+      "quote": "The pay for a clinical psychologist at NIMHANS is 40,000 rupees. If that is the standard there, you can picture what happens elsewhere.",
+      "url": "https://www.reddit.com/r/Psychology_India/comments/1s8sjia/"
     },
     {
-      "source": "Reddit r/Psychology_India — 'So what is the salary of a psychologist in India?' (2025)",
-      "quote": "If you manage to get hired by a govt hospital, then 40k salary is the average pay. It's lower in the private sector, around 20-30k.",
-      "url": "https://www.reddit.com/r/Psychology_India/comments/1jc1mf6/so_what_is_the_salary_of_a_psychologist_in_india/"
+      "source": "Reddit r/Psychology_India",
+      "quote": "A 20k salary is the typical outcome after years of effort in this field, and asking for more usually results in an immediate rejection.",
+      "url": "https://www.reddit.com/r/Psychology_India/comments/1s8sjia/"
     },
     {
-      "source": "Reddit r/Psychology_India — AMA (2026)",
-      "quote": "8 years work ex, earning 1lac/month as a school counsellor.",
-      "url": "https://www.reddit.com/r/Psychology_India/comments/1swa2ss/ama_8_years_work_ex_earning_1lacmonth_as_a_school/"
+      "source": "LinkedIn Post",
+      "quote": "For psychology graduates, the average salary remains ₹3–5 LPA, even after a master’s degree. While a few specialisations like neuro or organizational psychology pay more, the majority of professionals earn below ₹25,000/month...",
+      "url": "https://www.linkedin.com/posts/chaitanya-jadhav-b33750170_forensicpsychology-psychologyinindia"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'I'm interested in studying Psychology but everyone says…' · 2025",
-      "quote": "Only MBBS, rest are useless degrees (according to people).",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1k45oax/im_interested_in_studying_psychology_but_everyone/"
+      "source": "Career Guide",
+      "quote": "A BA/BSc psychology graduate cannot practise clinical psychology — they can work in human resources, research assistance, welfare organisations... The value of an undergraduate psychology degree is primarily as a gateway to postgraduate specialisation.",
+      "url": "https://www.dheya.com/insights/psychology-career-india-scope"
+    },
+    {
+      "source": "Reddit r/careerguidance",
+      "quote": "It seems that even after finishing college, securing a placement isn’t guaranteed.",
+      "url": "https://www.reddit.com/r/careerguidance/comments/1spx1it/"
     }
   ],
   "biotechnology": [
     {
-      "source": "Reddit r/Indian_Academia — 'Do biotech has any scope in India in future?' · 2025",
-      "quote": "Msc is necessary for a basic entry level job. Bsc grads aren't even considered for jobs. get 20 - 30k per month. PhD stipends are mediocre like…",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1jozi5r/do_biotech_has_any_scope_in_india_in_future_or_i/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "In a single sentence, it’s an absolutely foolish decision.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1p19tvi/"
     },
     {
-      "source": "Reddit r/IndiaCareers — 'Are there really no good jobs after doing a master's in biotechnology?' · Feb 2025",
-      "quote": "25F, unemployed, super depressed, now preparing for bank exams. Basically just successfully destroyed my whole life and the most crucial 20s of my life pursuing…",
-      "url": "https://www.reddit.com/r/IndiaCareers/comments/1iu312k/are_there_really_no_good_jobs_after_doing_a/"
+      "source": "Reddit r/biotech",
+      "quote": "Not worth it. Not worth the effort. Should have gone with fiancé instead.",
+      "url": "https://www.reddit.com/r/biotech/comments/1vn8ve3/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'I regret taking Btech in biotechnology. What should I do?' · Aug 2025",
-      "quote": "I know my interest is in computers and tech and should have for the love of god chosen CSE.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1n3ugxv/i_regret_taking_btech_in_biotechnology_what/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "Landing a job in the biotech sector can be quite challenging without a master’s degree or PhD, as these qualifications are often considered essential.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1vay2af/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Everyone is saying don't do btech biotechnology' · Jun 2026",
-      "quote": "Most ppl are like 'don't do btech biotechnology, specially not from tier 2 or 3 college'.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1u4lz89/everyone_is_saying_dont_do_btech_biotechnology/"
+      "source": "Career Guide",
+      "quote": "A BSc Biotechnology alone, without specialisation, frequently leads to low-paying quality control or lab technician roles.",
+      "url": "https://www.dheya.com/insights/biotechnology-career-india"
+    },
+    {
+      "source": "Reddit r/biotech",
+      "quote": "I’ve heard that pursuing a BTech in Biotech in India can be a ‘trap’ for average students, often resulting in entry-level lab positions that pay around 20k–25k per month.",
+      "url": "https://www.reddit.com/r/biotech/comments/1u7k0hp/"
     }
   ],
   "cs_engineering": [
     {
-      "source": "Reddit r/developersIndia — 'Is getting a job as a fresher in 2026 difficult or just impossible?'",
-      "quote": "I'm a fresher from a below-tier-3 college. We did not have any kind of placements in my final year.",
-      "url": "https://www.reddit.com/r/developersIndia/comments/1qv26w9/"
+      "source": "Reddit r/developersIndia — 'What was your salary as a fresher'",
+      "quote": "22k per month as a fresher, 1L per month now… 6.5 YOE. Working in WITCH company.",
+      "url": "https://www.reddit.com/r/developersIndia/comments/1akzm53/"
     },
     {
-      "source": "Reddit r/developersIndia — 'Software developer jobs are not worth in 2026?'",
-      "quote": "The job market is way down. I am a B.Tech CSE graduate and have 3 years of work experience — not a single interview in the past months.",
-      "url": "https://www.reddit.com/r/developersIndia/comments/1sfpe89/"
+      "source": "Reddit r/developersIndia — 'Salary progression'",
+      "quote": "Started at 13k, now at 1L, 4 yrs same company. The account reflects the low starting point many graduates face despite holding an engineering degree.",
+      "url": "https://www.reddit.com/r/developersIndia/comments/1akzm53/"
     },
     {
-      "source": "Reddit r/developersIndia — 'Future of IT in India' · Aug 2025",
-      "quote": "It's estimated that the IT workforce in India will double by 2030, reaching 10 million compared to 5 million in 2025.",
-      "url": "https://www.reddit.com/r/developersIndia/comments/1mw6x14/"
+      "source": "Reddit r/IndianWorkplace — 'Trapped in India's IT Hell: A Rant from the Burnout Trenches'",
+      "quote": "There's little to no work-life balance. I frequently get calls late at night, and the demands for longer shifts are unrelenting. I rarely get weekends off, and taking time off is a challenge.",
+      "url": "https://www.reddit.com/r/IndianWorkplace/comments/1ky3juh/"
     },
     {
-      "source": "Reddit r/Btechtards — 2026 grad",
-      "quote": "2026 grad from a tier-3 college. Got a remote 'AI engineer' role at a US-based firm that promised training — worked 45 days, had to beg for work for 20 of them, then got fired because 'we can't train a newbie right now.' I rejected 3 other offers for that role. The market is fried this year.",
-      "url": "https://www.reddit.com/r/Btechtards/comments/1vjnvti/"
+      "source": "Reddit r/IndianWorkplace — Startup Developer",
+      "quote": "I’m currently a software developer in Mumbai earning a relatively low salary of 35k. I have nearly a year of experience at a startup.",
+      "url": "https://www.reddit.com/r/IndianWorkplace/comments/1ky3juh/"
+    },
+    {
+      "source": "Reddit r/developersIndia — 'Freshers salary'",
+      "quote": "8k/month as intern, 35k/month as full time, YOE - 1.6 yrs. The transition from internship to full-time employment was real but modest, not the rapid salary jump suggested by many placement advertisements.",
+      "url": "https://www.reddit.com/r/developersIndia/comments/1akzm53/"
+    },
+    {
+      "source": "Reddit r/developersIndia — 'Work-life balance in Service based company'",
+      "quote": "No work life balance. From deployments starting from mid night till early morning, no adherence to time like work 24x7 and so many iterations.",
+      "url": "https://www.reddit.com/r/developersIndia/comments/14yots6/"
+    },
+    {
+      "source": "Reddit r/IndianWorkplace — 'Burnout Trenches'",
+      "quote": "The salary seemed reasonable, but no one warned me about the soul-crushing downsides.",
+      "url": "https://www.reddit.com/r/IndianWorkplace/comments/1ky3juh/"
+    },
+    {
+      "source": "Reddit r/Indian_Academia — 'VIT Vellore Tier 2 Fees'",
+      "quote": "Def not with cat4/5 not worth the fees… If you do, you better work your ass off to make the investment worth it.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/w6ln43/"
+    },
+    {
+      "source": "Reddit r/Indian_Academia — 'Private B.Tech realities'",
+      "quote": "The biggest issue is the high tuition fees, making the college feel more like a fashion show than an academic institution.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/wrh7sd/"
     }
   ],
   "bca_mca": [
     {
-      "source": "Reddit r/developersIndia — 'Why MCA doesn't hold the same value as B.Tech CS' · 2024",
-      "quote": "The pay may not be good, but it's better to have a salary rather than dreaming that you'll get 15 LPA+ in your first job whenever you get one.",
-      "url": "https://www.reddit.com/r/developersIndia/comments/1c6euz4/"
+      "source": "Reddit r/BCA_MCA — 'MCA /BCA is dead'",
+      "quote": "This subreddit really ought to be called ‘Forget BCA.’ I share the same sentiment—forget BCA and MCA!",
+      "url": "https://www.reddit.com/r/BCA_MCA/comments/1tkdp6r/"
     },
     {
-      "source": "Reddit r/developersIndia — 'MCA even if I got a 5 LPA full-stack offer?'",
-      "quote": "Switching jobs with 2 YOE will definitely be better than being an MCA fresher, unless you are pursuing MCA from a very reputed institute.",
-      "url": "https://www.reddit.com/r/developersIndia/comments/1b64c4d/"
+      "source": "Reddit r/BCA_MCA — 'What career regret do you have?'",
+      "quote": "Looking back, I regret not accepting the job offer I received after completing my BCA, as I followed my parents' advice to continue with my master's degree. I could have begun my journey in the corporate world, but now I'm just preparing for ICET exams.",
+      "url": "https://www.reddit.com/r/BCA_MCA/comments/1oy9cka/"
     },
     {
-      "source": "Reddit r/developersIndia — 'Is it worth pursuing MCA after BCA?' · 2023",
-      "quote": "You will have more chances of landing a good paying job in a good product-based company if you have 3 years of good development experience.",
-      "url": "https://www.reddit.com/r/developersIndia/comments/13l015d/"
+      "source": "Reddit r/BCA_MCA — 'Work Experience vs Degree'",
+      "quote": "Two years of practical work experience is far more valuable than having a two-year MCA degree from any institution in India.",
+      "url": "https://www.reddit.com/r/BCA_MCA/comments/1oy9cka/"
     },
     {
-      "source": "Reddit r/developersIndia — 'Salary as a fresher and after one year' · 2025",
-      "quote": "2024 batch — my pay was ₹1,13,000 per month when I started in June. It is ₹1,27,000 now.",
-      "url": "https://www.reddit.com/r/developersIndia/comments/1id2jb3/"
+      "source": "Reddit r/BCA_MCA — 'Someone help me to choose right path.'",
+      "quote": "I completed my BCA in 2025 and received offers from both Wipro… and ICICI… However, I chose not to accept either… Now, I find myself regretting that decision, especially since nearly a year has passed, and I currently have no job offers.",
+      "url": "https://www.reddit.com/r/BCA_MCA/comments/1utl3x5/"
+    },
+    {
+      "source": "Reddit r/BCA_MCA — 'MCA people tell your greatest regrets'",
+      "quote": "I wish I had spent more time coding during my MCA/BCA studies.",
+      "url": "https://www.reddit.com/r/BCA_MCA/comments/1ow71fu/"
+    },
+    {
+      "source": "Reddit r/Indian_Academia — 'Is BCA + MCA still worth it in 2026?'",
+      "quote": "Regrettably, neither the government nor students and parents seem to acknowledge that BCA and MCA programs were created for a different time…",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1sp0g7r/"
+    },
+    {
+      "source": "LinkedIn — MCA grad calling out poor placement reality",
+      "quote": "The placement support from the Placement/TPO department was extremely poor… Very few companies were brought in for MCA students. Many visiting companies excluded MCA students during shortlisting…",
+      "url": "https://www.linkedin.com/posts/adidev_mca-placementreality-studentexperience-activity-7408577000371564545-PpbZ"
     }
   ],
   "ca": [
     {
-      "source": "Reddit r/CharteredAccountants — 'Articleship is the biggest scam in CA' · 2024",
-      "quote": "Articleship is the biggest scam in CA. Maintain files, vouching, filing, tax audit, reconciliations — I did 3 years of articleship too…",
-      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1adrsec/"
+      "source": "Reddit r/CharteredAccountants",
+      "quote": "I recently came across a job posting for a Chartered Accountant role offering ₹2–7 LPA in a metro city. The role included statutory audit, compliance, and other responsibilities.",
+      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1tfjfar/"
     },
     {
-      "source": "Reddit r/CharteredAccountants — 'Is CA really worth it?' · Jul 2024",
-      "quote": "Despite all that, I would say it's worth it. CAs can keep working — in service or practice — much longer than others, who have to retire by 60.",
-      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1duuevi/"
+      "source": "Reddit r/CharteredAccountants",
+      "quote": "In general, if you possess average articleship experience and have attempted the exam multiple times, you can still anticipate a salary range between 9 to 12 LPA.",
+      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1tfjfar/"
     },
     {
-      "source": "Reddit r/CharteredAccountants — CA salary megathread (H1CY26) · 2026",
-      "quote": "In hand — ₹140k per month, bonus last year was 30%. Articleship — mid-tier firm, mid-size firm. Decent…",
-      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1rimbbz/"
+      "source": "LinkedIn Post",
+      "quote": "CA is not worth it in 2026... You see posts saying even rankers are underpaid. Some aren't even hired. And honestly, that part isn't entirely false… In 2026, CA alone is not enough.",
+      "url": "https://www.linkedin.com/posts/pranjalbajaj30_ca-is-not-worth-it-in-2026-at-least-that"
     },
     {
-      "source": "Reddit r/CharteredAccountants — 2026 salary megathread",
-      "quote": "I cleared CA Final in my 5th attempt and my starting CTC was ₹14 LPA — not due to any special skills, honestly just luck. If you get into a good, reputable company, the pay wouldn't be this low. Attempts matter, but they're not the end of the story.",
-      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1u4pj51/"
+      "source": "Reddit r/CharteredAccountants",
+      "quote": "Indian CA Students Earn ₹4,000/Month Articleship. Here's What the Rest of the World Pays Their Accounting Trainees.",
+      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1t12h6p/"
+    },
+    {
+      "source": "Reddit r/CharteredAccountants",
+      "quote": "I wouldn't suggest this course in 2026.",
+      "url": "https://www.reddit.com/r/CharteredAccountants/comments/1phhp51/"
+    },
+    {
+      "source": "Career Blog",
+      "quote": "Even in big cities, the minimum stipend can be as low as ₹4,000/month. And legally, that's acceptable… Many students struggle to even cover travel expenses. Work hours often exceed typical jobs.",
+      "url": "https://buddingca.com/stipend-reality-of-ca-students-in-india-expectation-vs-reality/"
     }
   ],
   "bcom": [
     {
-      "source": "Reddit r/Indian_Academia — 'Family say I shouldn't have done B.Com' · 2024",
-      "quote": "This year I graduated from DU B.Com and am preparing for CAT. I tried to get placed but couldn't clear the final round of interview.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/162skfx/"
+      "source": "LinkedIn Article",
+      "quote": "You finished your B.Com. Here's the uncomfortable truth: employability among B.Com graduates in India sat at approximately 48% in 2024… One in two commerce graduates could not find work matching their degree.",
+      "url": "https://www.linkedin.com/pulse/bcom-graduate-job-heres-where-market-actually-hiring-2026"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Is a B.Com degree worth it in the current job market?' · Mar 2026",
-      "quote": "Is a B.Com degree worth it in terms of pay?",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1rg9avn/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "Without pursuing additional qualifications like CFA, FRM, CA, ACCA, or an MBA, the degrees may not carry much significance.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1qmdn6w/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'What skills did you find most valuable after your B.Com?' · Nov 2025",
-      "quote": "I've noticed that people from science and tech backgrounds often earn higher salaries compared to commerce graduates.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1olgtge/"
+      "source": "Reddit r/TeenIndia",
+      "quote": "I chose Commerce in peer pressure, I regret it every second of my life, it has no money, if u are not CA or MBA from top clg.",
+      "url": "https://www.reddit.com/r/TeenIndia/comments/1vlnkh4/"
     },
     {
-      "source": "Reddit r/IndiaCareers — 'Those who did B.Com, what are you doing right now?' · 2025",
-      "quote": "Those who did B.Com — what are you doing right now? Tell us with your salary.",
-      "url": "https://www.reddit.com/r/IndiaCareers/comments/1jcmheu/"
+      "source": "LinkedIn Article",
+      "quote": "A traditional B.Com accountant earns roughly 30–50% less than a data-enabled finance analyst with the same years of experience. The market rewards skill, not just credentials.",
+      "url": "https://www.linkedin.com/pulse/bcom-graduate-job-heres-where-market-actually-hiring-2026"
+    },
+    {
+      "source": "Reddit r/CBSE",
+      "quote": "The genuine error was opting for CBSE, my son.",
+      "url": "https://www.reddit.com/r/CBSE/comments/1urkjy2/"
     }
   ],
   "bba": [
     {
-      "source": "Reddit r/Indian_Academia — 'I made a mistake by doing BBA' · Dec 2023",
-      "quote": "Worked for a low salary in a Big 4. BBA isn't the end of the world. I suggest you start applying for jobs.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/18oej9q/"
+      "source": "Reddit r/OnlineEducationHub",
+      "quote": "The reality: a BBA isn't useless, but its value hinges on how you leverage it… A BBA is worthwhile if you intend to pursue an MBA later… A BBA is not worthwhile if you believe the degree alone guarantees employment.",
+      "url": "https://www.reddit.com/r/OnlineEducationHub/comments/1s8hmvo/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Why everyone gave a bad look at BBA and BCA graduates' · Oct 2022",
-      "quote": "BBA from a local college won't give you much. Job opportunities are less unless one is from a top college.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/xv8iv8/"
+      "source": "Career Site",
+      "quote": "Reality Check: BBA alone is not a high-salary degree — its real value shows after a good MBA. A weak private BBA with no internships often leads to ₹2.5–4 LPA sales roles.",
+      "url": "https://www.bmu.edu.in/social/is-bba-worth-it-in-2026/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'BBA in a private college worth 11 lakh?' · 2024",
-      "quote": "I just met my classmate 3 days back. He makes 20 times my salary now.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/1d3riwz/"
+      "source": "Reddit r/IndiaCareers",
+      "quote": "A BBA degree often receives negative perceptions overall. Individuals presenting this qualification on their resumes may face unfavorable evaluations during job applications.",
+      "url": "https://www.reddit.com/r/IndiaCareers/comments/1qsqg9u/"
     },
     {
-      "source": "Reddit r/Indian_Academia — 'Is BBA worth it, or X degree + MBA?' · Jul 2023",
-      "quote": "BBA suits the Business Analyst / Data Analyst jobs.",
-      "url": "https://www.reddit.com/r/Indian_Academia/comments/15bqbnv/"
+      "source": "Reddit r/MBAIndia",
+      "quote": "A BBA alone may not guarantee employment, but when paired with an MBA from a reputable business school, it becomes valuable.",
+      "url": "https://www.reddit.com/r/MBAIndia/comments/1u90ncp/"
     },
     {
-      "source": "Reddit r/IndianWorkplace — 'BBA graduate (Tier-3 college, India) – Internship in operations' · Jan 2026",
-      "quote": "Tier-3 college in India — 6-month paid internship offer (₹20k/month) from a Tier-2 SaaS company. The role involves operations, compliance…",
-      "url": "https://www.reddit.com/r/IndianWorkplace/comments/1q5il8m/"
+      "source": "Reddit r/ahmedabad",
+      "quote": "GLS University BBA 1st Year – Honestly Regretting My Decision 😭",
+      "url": "https://www.reddit.com/r/ahmedabad/comments/1p5ewsd/"
     }
   ],
   "law": [
     {
-      "source": "Reddit r/IndiaCareers — 'Is law a good career in India?' · Mar 2025",
-      "quote": "After 5 or 6 years into the degree and at least 15 internships, you may still end up with a barely decent salary the first two years.",
-      "url": "https://www.reddit.com/r/IndiaCareers/comments/1j8ht54/"
+      "source": "Salary Guide",
+      "quote": "At one end: junior advocates in district courts earning ₹10,000–25,000 per month, or junior associates at small firms earning ₹20,000–40,000 per month, well below the median salary of a fresh engineering graduate.",
+      "url": "https://www.dheya.com/insights/lawyer-salary-india-guide"
     },
     {
-      "source": "Reddit r/india — 'Corporate lawyers of India: how is the life?' · Aug 2019",
-      "quote": "The salary is great generally, and at 30, many lawyers who stick with it and shine in a corporate law firm will earn between ₹2.5L and ₹5L a month.",
-      "url": "https://www.reddit.com/r/india/comments/cmvln8/"
+      "source": "Career Guide",
+      "quote": "The NLU premium is real: A BA LLB fresher from NLSIU Bangalore or NLU Delhi entering a Tier 1 firm earns ₹18L–₹22.5L LPA. The same graduate from a non-NLU private college earns ₹3L–₹8L LPA at a smaller firm.",
+      "url": "https://careershuru.com/blog/lawyer-career-india-2026/"
     },
     {
-      "source": "Reddit r/LegalAdviceIndia — 'Is corporate law career that bad?' · 2024",
-      "quote": "What I have seen during my career dilemma is that very few law firms pay well. Also there are very few law firms available outside big cities.",
-      "url": "https://www.reddit.com/r/LegalAdviceIndia/comments/1d202vh/"
+      "source": "Reddit r/careerguidance",
+      "quote": "Is law as a career even worth it? (First gen)? … The coaching costs are around 2 lakh, and top institutions like NLSIU and NLU Delhi charge between 20–25 lakh for their programs.",
+      "url": "https://www.reddit.com/r/careerguidance/comments/1sry1p5/"
     },
     {
-      "source": "Reddit r/NLUs — NLU graduate, batch 2024",
-      "quote": "Even from a top NLU you are not guaranteed a job. Internships are extremely competitive, and many students run after professors, seniors, and referrals just for exposure. A large number of NLU students come from financially strong or well-connected families. Many law graduates, even from good NLUs, end up preparing for judiciary or UPSC because survival in law is not easy. Choose law only if you genuinely love the subject, can handle uncertainty, and have financial support.",
-      "url": "https://www.reddit.com/r/NLUs/comments/1rhxav1/"
+      "source": "Salary Guide",
+      "quote": "The median practicing advocate in India earns ₹3–7 LPA — roughly the income of an entry-level IT professional.",
+      "url": "https://www.dheya.com/insights/lawyer-salary-india-guide"
+    },
+    {
+      "source": "Reddit r/NLUs",
+      "quote": "I just came across a discussion where people mentioned that after a decade of experience, you hardly earn 50k.",
+      "url": "https://www.reddit.com/r/NLUs/comments/1v8pzrl/"
     }
   ],
   "design": [
     {
-      "source": "Reddit r/DesignIndia — 'Are design schools in India worthy?' · Jun 2026",
-      "quote": "A Bachelor in design can cost anywhere from ₹5–40 lakh. And the average salary of a fresher designer is ₹2.5 LPA.",
-      "url": "https://www.reddit.com/r/DesignIndia/comments/1tn8q6c/"
+      "source": "Medium Article on UX Collapse",
+      "quote": "You graduated in 2021. Design bootcamp. Portfolio looked decent. You got hired at ₹6.5 lakhs... Your friend graduated in 2025. Same bootcamp. Got one offer. ₹2.5 lakhs... Salary cut by 60%. And everyone's acting like this is normal.",
+      "url": "https://waffledesigns.medium.com/salaries-are-dropping-especially-in-india-2b62af6e9c4d"
     },
     {
-      "source": "Reddit r/UXDesign — 'UI/UX design career oversaturated in India?' · 2025",
-      "quote": "Soooo many people applying to UX/product designer positions with 0 relevant experience or skills, but somehow seem to think they're owed a job.",
-      "url": "https://www.reddit.com/r/UXDesign/comments/1gymd4t/"
+      "source": "Medium Article on UX Collapse",
+      "quote": "What junior roles paid in 2021: UI/UX Designer — Fresher: ₹5–8 lakhs per year... What they pay now in 2026: UI/UX Designer — Fresher: ₹2.5–4 lakhs per year.",
+      "url": "https://waffledesigns.medium.com/salaries-are-dropping-especially-in-india-2b62af6e9c4d"
     },
     {
-      "source": "Reddit r/DesignIndia — 'Real UX design salaries in India' · Dec 2025",
-      "quote": "UX Designer — compensation ~₹1–1.2 lakh per month in-hand. Going from under 6 LPA to roughly 8–12 LPA is definitely possible.",
+      "source": "Reddit r/DesignIndia",
+      "quote": "The design sector is already saturated, particularly in India, where you can receive over a thousand applications for a single position within hours.",
+      "url": "https://www.reddit.com/r/DesignIndia/comments/1obcplc/"
+    },
+    {
+      "source": "Reddit r/DesignIndia",
+      "quote": "I'm a graphic designer with 1.5 years of experience from NIFT Delhi, earning ₹45,000 a month.",
       "url": "https://www.reddit.com/r/DesignIndia/comments/1pnv7k4/"
     },
     {
-      "source": "Reddit r/UXDesign — 10-year designer, 2026",
-      "quote": "Designer with 10 years of experience, back in the job market. In 2022 I applied to ~30 companies and had an offer within 2 months. In 2026: 70+ applications, 4 interviews — only 1 from an actual application, the rest from connections. It's never been this competitive in my career.",
-      "url": "https://www.reddit.com/r/UXDesign/comments/1qee23g/"
+      "source": "Reddit r/NIFTards",
+      "quote": "If you're into tech, avoid NIFT—I did and regret it.",
+      "url": "https://www.reddit.com/r/NIFTards/comments/1pb9e35/"
     }
   ],
   "architecture": [
     {
-      "source": "Reddit r/Indian_architects — 'Is 35–40 lakhs worth it for B.Arch in private uni?' · 2025",
-      "quote": "There are no placements in Architecture. Best case scenario, you land a job of 5 lpa. That means your ROI will be in 7 years minimum.",
-      "url": "https://www.reddit.com/r/Indian_architects/comments/1mbo0bg/is_3540_lakhs_worth_it_for_b_arch_in_private_uni/"
+      "source": "Reddit r/Indian_architects",
+      "quote": "Is doing B.Arch worth it in 2026? No.",
+      "url": "https://www.reddit.com/r/Indian_architects/comments/1rvoiev/"
     },
     {
-      "source": "Reddit r/Architects — 'Architects are underpaid in India' · Oct 2025",
-      "quote": "Most architecture studios in India offer freshers around ₹15,000/month. I have been offered a job in my dream firm with 19k/month salary.",
-      "url": "https://www.reddit.com/r/Architects/comments/1np5738/architects_are_underpaid_in_india_and_its/"
+      "source": "Reddit r/Indian_architects",
+      "quote": "Your initial pay will range from 18‑25k per month, and only if you're exceptionally fortunate could it reach 28‑30k... a fresh graduate typically earns between ₹8,000 and ₹15,000 per month in most cities.",
+      "url": "https://www.reddit.com/r/Indian_architects/comments/1rzv4w5/"
     },
     {
-      "source": "Reddit r/Architects — 'Has architecture always been a low paying career?' · Oct 2024",
-      "quote": "Architecture degrees aren't teaching us business skills. They're teaching us to burn extra hours to make the client happy like we did in studio.",
-      "url": "https://www.reddit.com/r/Architects/comments/1gf4p2j/has_architecture_always_been_a_low_paying_career/"
+      "source": "Salary Blog",
+      "quote": "At ₹2.4–4.2 lakh per annum, a fresh B.Arch graduate earns roughly what a delivery executive makes, despite five years of study and substantial tuition fees.",
+      "url": "https://archgee.com/blog/architect-salary-india"
     },
     {
-      "source": "LinkedIn — CEPT B.Arch graduate (2025)",
-      "quote": "94% in 12th, JEE rank 1021, NATA rank 7 — salary of ₹25,000 per month.",
-      "url": "https://www.linkedin.com/posts/dakshgoel_architecture-design-india-activity-7437752394236461057-El0Q"
+      "source": "Reddit r/Indian_architects",
+      "quote": "Feeling regret and guilt over being broke in your late twenties and early thirties can linger and harm your self‑esteem, particularly if you were a high‑achieving student in school or college.",
+      "url": "https://www.reddit.com/r/Indian_architects/comments/1rtfvr0/"
+    },
+    {
+      "source": "Reddit r/Architects",
+      "quote": "I regret becoming an architect.",
+      "url": "https://www.reddit.com/r/Architects/comments/1up53lc/"
     }
   ],
   "mba": [
     {
-      "source": "Reddit r/CATpreparation — 'Has MBA ROI peaked in India?' · Jul 2026",
-      "quote": "Current 2nd-year at IIM I here. Fees are touching ₹30–35 lakhs at many top B-schools.",
-      "url": "https://www.reddit.com/r/CATpreparation/comments/1uf84f0/"
+      "source": "Reddit r/careeradvice",
+      "quote": "MBA expenses can range from: ₹20–30 lakhs in India... Add 1–2 years of not being employed. Sunk cost... ₹30 lakhs to ₹1 crore... At this pace, it can take 6–10 years to recover your investment.",
+      "url": "https://www.reddit.com/r/careeradvice/comments/1p9wawi/"
     },
     {
-      "source": "Reddit r/CATpreparation — 'Reality of placements post-MBA' · Oct 2025",
-      "quote": "Reality of placements post-MBA. Placements are a scam… will it be worth it?",
-      "url": "https://www.reddit.com/r/CATpreparation/comments/1o0ze2d/"
+      "source": "Reddit r/Indian_Academia",
+      "quote": "I regret doing MBA, Contrary to what this sub says It's not worth it for most of the people… TL;DR: A government job in a tier 2 city outweighs an MBA from IIM.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1p50s22/"
     },
     {
-      "source": "Reddit r/CATpreparation — Tier-2/3 grads salary thread (2026)",
-      "quote": "Tier-2/1.5 finance grad, complete fresher. Campus placement was ~₹14 LPA; switched within 10 months, now at ₹30 LPA. The college gets you in the room — everything after that is on you.",
-      "url": "https://www.reddit.com/r/CATpreparation/comments/1t2ck06/"
+      "source": "Reddit r/careeradvice",
+      "quote": "However, what often goes unmentioned is that around 90% of graduates find themselves in similar jobs post-MBA, just with slightly different titles. There's a prevalent belief that an MBA equals financial gain, but the numbers often don't support this idea.",
+      "url": "https://www.reddit.com/r/careeradvice/comments/1p9wawi/"
     },
     {
-      "source": "Reddit r/CATpreparation — 'What's going wrong with MBA placements?' · Feb 2024",
-      "quote": "Future 'tense' for 72 IIM-L grads as alumni rally to secure placements.",
-      "url": "https://www.reddit.com/r/CATpreparation/comments/1ah468i/"
+      "source": "Reddit r/MBAIndia",
+      "quote": "Is MBA still worth it for average students in 2026?",
+      "url": "https://www.reddit.com/r/MBAIndia/comments/1qv25lz/"
+    },
+    {
+      "source": "Reddit r/CATpreparation",
+      "quote": "On average, a graduate from a college like KJ can expect to earn between 20 to 25 lakh per annum after five years of professional experience.",
+      "url": "https://www.reddit.com/r/CATpreparation/comments/1pyelhl/"
     }
   ],
   "hotel_management": [
     {
-      "source": "Reddit r/Hotels_India — 'Is hotel management courses and the industry worth it?' · 2025",
-      "quote": "Hotel management courses will look like a scam for years to come.",
-      "url": "https://www.reddit.com/r/Hotels_India/comments/1mag3mm/is_hotel_management_courses_and_the_industry/"
+      "source": "Career Blog",
+      "quote": "Entry-level pay in Indian hotels commonly sits at ₹15,000–30,000 a month, or roughly ₹2.5–4 lakh a year, for front office, food and beverage, or housekeeping roles.",
+      "url": "https://www.esalahkaar.com/blog/is-hotel-management-worth-it-in-india-2026-truth"
     },
     {
-      "source": "Reddit r/Hotels_India — 'My hotel management Internship experience (hell)' · Jun 2025",
-      "quote": "Unpaid over time, no weekends and under pay is…",
-      "url": "https://www.reddit.com/r/Hotels_India/comments/1lim2o8/my_hotel_management_internship_experience_hell/"
+      "source": "Reddit r/IndiaCareers",
+      "quote": "For those considering a career in hotel management in India, I'd strongly advise against it.",
+      "url": "https://www.reddit.com/r/IndiaCareers/comments/1sds8x6/"
     },
     {
-      "source": "Reddit r/india — 'People who did Hotel Management course in the 2000s'",
-      "quote": "I am one of the person who jumped into this Hotel Management course during the early 2000s due to the craze it created at that time.",
-      "url": "https://www.reddit.com/r/india/comments/u7pmbm/people_who_did_hotel_management_course_in_the/"
+      "source": "LinkedIn Post",
+      "quote": "Hospitality Dreams vs Industry Reality: Who's Accountable for the Broken Promises? … Long hours, slow growth, and salary stagnation are common. Even reaching a ₹7 lakh package can take nearly a decade in metro cities.",
+      "url": "https://www.linkedin.com/posts/amit-bhati-887046aa_hospitality-dreams-vs-industry-reality"
     },
     {
-      "source": "Reddit r/IndianWorkplace — 'Stuck in the Hotel Industry But Want to Switch Careers' · 2025",
-      "quote": "The problem is, I don't know what options I have with a hotel management degree and some work experience.",
-      "url": "https://www.reddit.com/r/IndianWorkplace/comments/1jtegjm/need_advice_stuck_in_the_hotel_industry_but_want/"
+      "source": "Reddit r/hotels",
+      "quote": "Is Hotel Management Still a Good Career Choice in 2026? If you enjoy putting in long hours at work, then the answer is yes!",
+      "url": "https://www.reddit.com/r/hotels/comments/1tulkqv/"
+    },
+    {
+      "source": "Reddit r/IndianTeenagers",
+      "quote": "Additionally, my mom has concerns about the stigma surrounding hotel management, worrying that it might lead to low-status jobs like cleaning.",
+      "url": "https://www.reddit.com/r/IndianTeenagers/comments/1q3hk8n/"
     }
   ],
   "upsc": [
     {
-      "source": "Reddit r/UPSC — 'Consolidation (Part 1): How I cracked UPSC CSE twice' · 2025",
-      "quote": "I had gap years in my resume before even giving my first attempt.",
-      "url": "https://www.reddit.com/r/UPSC/comments/1mhhnzf/consolidation_part_1_how_i_cracked_upsc_cse_twice/"
+      "source": "Reddit Post by ex-Aspirant",
+      "quote": "If, after six years, you're still without a job, generational wealth, or a family business to fall back on, the consequences can be severe. Treat your next attempt as your final one.",
+      "url": "https://www.moneycontrol.com/education/six-failed-attempts-at-upsc-the-brutally-honest-confession-of-an-ias-aspirant-article-13462606.html"
     },
     {
-      "source": "Reddit r/upsc_discussions — 'Seeking Brutally Honest Advice from Serious UPSC aspirants' · 2025",
-      "quote": "Regarding 5 years UPSC prep, I'd say, begin the prep only 2 years prior to your first attempt.",
-      "url": "https://www.reddit.com/r/upsc_discussions/comments/1l5txwp/seeking_brutally_honest_advice_from_serious_upsc/"
+      "source": "Reddit r/UPSC",
+      "quote": "With around 500 appealing positions available for 500,000 hopeful applicants, while some of us may find success individually, collectively we are almost certain to face disappointment.",
+      "url": "https://www.reddit.com/r/UPSC/comments/1tvrp43/"
     },
     {
-      "source": "Reddit r/UPSC — 'How to Utilise Oct-Dec 2025 for 2026 Attempt' · 2025",
-      "quote": "Preparing for 2027 as my first and last attempt with a fulltime…",
-      "url": "https://www.reddit.com/r/UPSC/comments/1nv1zgk/how_to_utilise_octdec_2025_for_2026_attempt_what/"
+      "source": "Reddit r/upsc_discussions",
+      "quote": "It isn't worth it—stay in IT.",
+      "url": "https://www.reddit.com/r/upsc_discussions/comments/1pt3a4x/"
     },
     {
-      "source": "Reddit r/UPSC — 'Gave UPSC attempts, 9 years gap, what to do now' · 2024",
-      "quote": "My qualifications - B.E. ECE - 2015, 59%, 10th - 91%, 12 - 69%. Gave UPSC from 2016-2024 - gave few mains, cleared prelims, but failed in mains.",
-      "url": "https://www.reddit.com/r/UPSC/comments/1e2dhvs/gave_upsc_attempts_9_years_gap_what_to_do_now/"
+      "source": "Reddit r/UPSC",
+      "quote": "Absolutely not. It's only acceptable if you have sufficient financial backing and a solid backup plan, or if you're currently employed. Otherwise, it's not a good idea at all.",
+      "url": "https://www.reddit.com/r/UPSC/comments/1u98gcx/"
+    },
+    {
+      "source": "Reddit r/UPSC",
+      "quote": "UPSC has left me anxious, isolated, and feeling stuck... Mujhe toh har 15 din mein burnout mehsoos hota hai, isliye main 1 ya 1.5 din ka break le leta hoon.",
+      "url": "https://www.reddit.com/r/UPSC/comments/1pws5lw/"
+    },
+    {
+      "source": "Reddit Post by ex-Aspirant",
+      "quote": "A minimum of 30 hours per week is essential. Anything less, and it's time to quit. Ideally, aim for 50 hours of focused study weekly.",
+      "url": "https://www.moneycontrol.com/education/six-failed-attempts-at-upsc-the-brutally-honest-confession-of-an-ias-aspirant-article-13462606.html"
+    }
+  ],
+  "core_engineering": [
+    {
+      "source": "Reddit r/IndianWorkplace — 33-year-old civil engineer",
+      "quote": "I often regret my decision to pursue civil engineering, and I sometimes wish I had switched to IT right from the start… At 33, I feel it might be too late to change careers. Sometimes, I even find myself wishing for a heart attack, just to escape this overwhelming situation.",
+      "url": "https://www.reddit.com/r/IndianWorkplace/comments/1upna7d/"
+    },
+    {
+      "source": "Reddit r/Btechtards — NIT mechanical freshman",
+      "quote": "Mujhe top 7 NIT mein Mechanical engineering mein admission mila tha… ab yeh samajh aa raha hai ki mujhe core subjects mein koi ruchi nahi hai… Main core field mein jaana nahi chahta, aur ab main seriously soch raha hoon ki ek saal drop le kar CSE ya IT ki taraf focus karun.",
+      "url": "https://www.reddit.com/r/Btechtards/comments/1nwcm1f/"
+    },
+    {
+      "source": "Reddit r/civilengineering — Rant on civil engineering reality",
+      "quote": "Entry-level engineers often receive low pay, typically between ₹10,000 and ₹15,000… Civil engineers frequently endure extended work hours, often surpassing 14 hours a day… Many firms do not offer weekly days off… companies withhold salaries for 2–3 months.",
+      "url": "https://www.reddit.com/r/civilengineering/comments/1nysjfe/"
+    },
+    {
+      "source": "Reddit r/IndiaCareers — 29yo civil engineer (4 YOE)",
+      "quote": "I’m 29 years old, hold a B.Tech in Civil Engineering from a well-regarded institution... My salary is ₹24,000 per month. I work six days a week… I approached my manager… The response I received was simply, ‘Quit the job.’",
+      "url": "https://www.reddit.com/r/IndiaCareers/comments/1ukmal2/"
+    },
+    {
+      "source": "Reddit r/ThirtiesIndia — Mechanical engineer",
+      "quote": "In the core sector, despite years of experience, the maximum salary barely reaches 12 LPA. That’s the stark reality… Everywhere I turn, I see guys boasting about their salaries—30 LPA, 50 LPA packages. It really makes me reflect on my own career decisions.",
+      "url": "https://www.reddit.com/r/ThirtiesIndia/comments/1n8dd99/"
+    },
+    {
+      "source": "Reddit r/Btechtards — Electrical engineers salary thread",
+      "quote": "The average salary for entry-level positions is around 3–4 LPA, particularly if you’re focusing on core electrical roles and not venturing into marketing or coding.",
+      "url": "https://www.reddit.com/r/Btechtards/comments/1u29kib/"
+    }
+  ],
+  "bams": [
+    {
+      "source": "Reddit r/indianmedschool — 'Should I Join BAMS now?'",
+      "quote": "I want to be honest with you—I'm currently pursuing a BAMS degree, and I find myself regretting it on a daily basis.",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1v7tdwy/"
+    },
+    {
+      "source": "Reddit r/indianmedschool",
+      "quote": "Choosing BAMS may lead to long-term regret, as there is a significant disparity in the social status between MBBS and non-MBBS medical professionals.",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1pc67ut/"
+    },
+    {
+      "source": "Reddit r/MEDICOreTARDS",
+      "quote": "In India, graduates of BAMS and BHMS programs are sometimes allowed to prescribe 'allopathic' medications after completing bridge courses, even though their training does not match that of an MBBS degree.",
+      "url": "https://www.reddit.com/r/MEDICOreTARDS/comments/1ulcqod/"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "I'm also aware of BAMS practitioners who can make 10k a day… working in private practice at a rate of 150 per patient and seeing around 50 patients could easily yield her 7.5k each day.",
+      "url": "https://www.reddit.com/r/india/comments/1qe73g8/"
+    },
+    {
+      "source": "Reddit r/MEDICOreTARDS",
+      "quote": "Don't do it, Lala; you'll regret it later.",
+      "url": "https://www.reddit.com/r/MEDICOreTARDS/comments/1urxitj/"
+    }
+  ],
+  "bhms": [
+    {
+      "source": "Reddit r/MEDICOreTARDS — 'Regrets'",
+      "quote": "I had considered applying for BAMS, but I didn't get in during the third round, so I reluctantly opted for BHMS.",
+      "url": "https://www.reddit.com/r/MEDICOreTARDS/comments/1oggdkx/"
+    },
+    {
+      "source": "Reddit r/indianmedschool",
+      "quote": "How we docs are actually responsible for BAMS, BHMS and other quacks prospering… many years, the only medical practitioners available in this region… were BAMS and BHMS graduates, along with some unqualified Bengali quacks who provided allopathic treatments.",
+      "url": "https://www.reddit.com/r/indianmedschool/comments/1mxu7or/"
+    },
+    {
+      "source": "BHMS Salary Article",
+      "quote": "In private practice, it usually takes 5–7 years of established reputation to reach this figure [₹3–10 L/month].",
+      "url": "https://propelld.com/site/blog/bhms-salary-complete-guide"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "Just curious to know BHMS and BAMS are scammers? Means there is no logic behind them is it true?",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1mw9epd/"
+    },
+    {
+      "source": "BHMS Salary Guide",
+      "quote": "Entry-level doctors generally earn between ₹15,000 to ₹30,000 per month, while experienced professionals can earn between ₹40,000 to ₹1,00,000 per month.",
+      "url": "https://www.collegesimplified.in/post/salary-of-bhms-doctor-in-india-2026-govt-medical-officer-vs-private-practice-reality"
+    }
+  ],
+  "economics": [
+    {
+      "source": "Reddit r/CUETards",
+      "quote": "However, it's worth noting that a degree in Economics (Honors) is often regarded as a more prestigious option. It typically offers enhanced placement opportunities and is favored during recruitment processes compared to a BCom degree.",
+      "url": "https://www.reddit.com/r/CUETards/comments/1v5qpxc/"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "For those interested in corporate careers, these colleges attract a variety of companies offering salaries starting at 12 LPA and above.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1qdp10r/"
+    },
+    {
+      "source": "Career Overview",
+      "quote": "Freshers after BA Honours in Economics earn an average starting salary of INR 4–8 LPA. However, job packages vary based on college, academic performance, role and other factors.",
+      "url": "https://articles.findmycollege.com/ba-honours-in-economics-full-overview/"
+    },
+    {
+      "source": "Reddit r/CUETards",
+      "quote": "Economics tends to be a more favorable choice compared to statistics, unless your aim is to pursue a career in actuarial sciences.",
+      "url": "https://www.reddit.com/r/CUETards/comments/1u3i87u/"
+    },
+    {
+      "source": "Reddit r/CUETards",
+      "quote": "Feel free to inquire about any aspect of pursuing an Eco honors degree at Delhi University!",
+      "url": "https://www.reddit.com/r/CUETards/comments/1ubw56d/"
+    }
+  ],
+  "food_technology": [
+    {
+      "source": "LinkedIn Post",
+      "quote": "Yet in 2025, the ‘standard’ salary offered to food technologists is still ₹2–4 LPA. Not as an exception. As a norm.",
+      "url": "https://www.linkedin.com/posts/thavasi7860_a-few-days-ago-we-all-saw-the-headline-activity-7413897766864756736-GrnZ"
+    },
+    {
+      "source": "Reddit r/FoodTech",
+      "quote": "After graduation you’ll land a 20‑25k job in an industry far from the city, underpaid and working six days a week.",
+      "url": "https://www.reddit.com/r/FoodTech/comments/1npgxw5/"
+    },
+    {
+      "source": "LinkedIn Post",
+      "quote": "We work 10–12 hours day & night, with minimal salary, with no weekends, no appreciation... there’s no recognition, no respect, and no career growth.",
+      "url": "https://www.linkedin.com/posts/gokul-mj-14135321b_foodtechnology"
+    },
+    {
+      "source": "LinkedIn Post",
+      "quote": "Why are Software Engineer... earning ₹6–30 LPA… while Food Technologists — M.Sc, B.Sc, M.Tech, B.Tech — are struggling to even cross ₹2 LPA?",
+      "url": "https://www.linkedin.com/posts/chhabi-jane-stanley-4b61b9276_the-reality-we-dont-talk-about-enough"
+    },
+    {
+      "source": "LinkedIn Post",
+      "quote": "Every year, the number of Food Tech graduates keeps increasing, but not even 5% get a respectable job or salary. Companies take advantage of this oversupply...",
+      "url": "https://www.linkedin.com/posts/gokul-mj-14135321b_foodtechnology"
+    }
+  ],
+  "agriculture": [
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "I would advise against pursuing a Bachelor of Science in Agriculture unless you are specifically interested in government jobs or selling pesticides, which involves going from farm to farm...",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1r7vgmu/"
+    },
+    {
+      "source": "Reddit r/IndiaCareers",
+      "quote": "The salary offered ₹28000, after T, my take-home amount is ₹25,000 💸.",
+      "url": "https://www.reddit.com/r/IndiaCareers/comments/1nbox0q/"
+    },
+    {
+      "source": "Reddit r/IndiaCareers",
+      "quote": "Bca or bsc agriculture … Depart as soon as you can, or you might find yourself trapped in a cycle that you’ll come to regret later.",
+      "url": "https://www.reddit.com/r/IndiaCareers/comments/1vi1em8/"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "Additionally, I’ve heard that after earning a degree in Agriculture, job prospects are primarily in government roles, with few private sector opportunities.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1utdjdd/"
+    },
+    {
+      "source": "Career Guide",
+      "quote": "Field Agricultural Officer (FAO) / District Manager (AgriTech): The boots-on-ground role. You work with farmers directly — demonstrating products, providing agronomic advice... Salary: ₹4–8 LPA at entry.",
+      "url": "https://www.dheya.com/insights/agriculture-agritech-career-india"
+    }
+  ],
+  "journalism": [
+    {
+      "source": "LinkedIn Post",
+      "quote": "If you dream of becoming a journalist or wants to know the reality read this before you jump in… Straight facts…. Your starting salary depends entirely on where you come from, not your talent or passion.",
+      "url": "https://www.linkedin.com/posts/megha-upadhyay-143816204_journalism-salarystructureinmedia"
+    },
+    {
+      "source": "LinkedIn Post",
+      "quote": "In 2021, our batch in ABP started with ₹29,134 (in hand) per month and guess what? In 2025, there has been no growth despite inflation... students joining today also in same salary or even less.",
+      "url": "https://www.linkedin.com/posts/megha-upadhyay-143816204_journalism-salarystructureinmedia"
+    },
+    {
+      "source": "LinkedIn Post",
+      "quote": "I know people who worked UNPAID for almost a year in top media houses, and finally got a job at ₹22,000.",
+      "url": "https://www.linkedin.com/posts/megha-upadhyay-143816204_journalism-salarystructureinmedia"
+    },
+    {
+      "source": "Reddit r/india",
+      "quote": "Do not become a journalist in India. Once you gain some proficiency, you’ll notice the consequences: job openings become scarce when you seek a change, and salaries are often disappointingly low...",
+      "url": "https://www.reddit.com/r/india/comments/1tt7ofn/"
+    },
+    {
+      "source": "Reddit r/Journalism",
+      "quote": "Compensation remains low and stagnant, and layoffs are all too common.",
+      "url": "https://www.reddit.com/r/Journalism/comments/1u9741a/"
+    }
+  ],
+  "ba_humanities": [
+    {
+      "source": "Reddit r/Advice",
+      "quote": "Let’s be honest here: it’s widely recognized that the placement cell at Delhi University, which is often regarded as the top institution in India for humanities, leaves much to be desired.",
+      "url": "https://www.reddit.com/r/Advice/comments/1sqpu8p/"
+    },
+    {
+      "source": "Reddit r/Indian_Academia",
+      "quote": "From a practical standpoint, pursuing a career in fine arts may not be advisable unless you have substantial financial support from your family or are comfortable living a frugal lifestyle.",
+      "url": "https://www.reddit.com/r/Indian_Academia/comments/1ohb1a7/"
+    },
+    {
+      "source": "Reddit r/TwoXIndia",
+      "quote": "I pursued English Literature, but I often wish I had chosen a path in STEM, computer science, or something more tangible.",
+      "url": "https://www.reddit.com/r/TwoXIndia/comments/1ti3m25/"
+    },
+    {
+      "source": "Career Guide",
+      "quote": "A realistic starting salary for arts graduates in India in 2026 typically ranges from ₹2.5 LPA to ₹5 LPA. Specializations like UI/UX design or digital marketing often command higher starting packages...",
+      "url": "https://articles.findmycollege.com/arts-career-options-with-salary/"
+    },
+    {
+      "source": "Reddit r/IndianAcademia",
+      "quote": "Why done a huge mistake by choosing arts subjects instead of science… There’s nothing wrong with opting for arts subjects; not everyone is meant for STEM.",
+      "url": "https://www.reddit.com/r/IndianAcademia/comments/1n6kq2e/"
     }
   ]
 }
