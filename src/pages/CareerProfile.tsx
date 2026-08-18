@@ -305,6 +305,18 @@ export default function CareerProfile() {
           { "@type": "ListItem", position: 3, name: career.name, item: `${origin}/careers/${career.id}` },
         ],
       },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: career.faq.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.answer,
+          },
+        })),
+      },
     ];
   }, [career]);
   useJsonLd(jsonLd);

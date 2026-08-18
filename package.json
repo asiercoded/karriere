@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "og": "node scripts/og.mjs",
-    "build": "tsc -b && vite build",
+    "sitemap": "node scripts/sitemap.mjs",
+    "build": "npm run sitemap && tsc -b && vite build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "preview": "vite preview"
