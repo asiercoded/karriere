@@ -153,8 +153,8 @@ export default function Landing() {
           className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-saffron/15 blur-[120px]"
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-6xl px-5 pt-16 pb-14 text-center sm:px-6 md:pt-24 md:pb-16">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
+        <div className="relative mx-auto max-w-6xl px-5 pt-16 pb-14 text-center sm:px-6 md:pt-24 md:pb-16 z-50">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="relative z-50">
             <Chip tone="saffron" className="mb-7">
               <span className="inline-flex size-1.5 rounded-full bg-saffron" aria-hidden="true" />
               The unfiltered career file
