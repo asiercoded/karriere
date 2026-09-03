@@ -1,13 +1,17 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
+  const path = process.argv[2] || '/careers/bds';
+  const url = `http://localhost:4173${path}`;
+  console.log(`Checking URL: ${url}`);
+  
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   
   page.on('console', msg => console.log('PAGE LOG:', msg.text()));
   page.on('pageerror', error => console.log('PAGE ERROR:', error.message));
 
-  await page.goto('http://localhost:5173/careers/bds', { waitUntil: 'networkidle0' });
+  await page.goto(url, { waitUntil: 'networkidle0' });
   
   // Look for the Vite error overlay
   const errorText = await page.evaluate(() => {

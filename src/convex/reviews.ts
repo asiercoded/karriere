@@ -47,3 +47,33 @@ export const getApprovedReviews = query({
     }
   },
 });
+
+/** Admin: list all pending reviews, newest first. Requires auth. */
+export const getPendingReviews = query({
+  args: {},
+  handler: async (ctx) => {
+    const userId = await getAuthUserId(ctx);
+    if (userId === null) return null;
+
+    const reviews = await ctx.db
+      .query("careerReviews")
+      .withIndex("by_status", (q) => q.eq("status", "pending"))
+      .collect();
+
+    return reviews.sort((a, b) => (b.createdAt ?? 0) - (a.createdAt ?? 0));
+  },
+});
+
+/** Admin: approve or reject a single review. Requires auth. */
+export const moderateReview = mutation({
+  args: {
+    reviewId: v.id("careerReviews"),
+    status: v.union(v.literal("approved"), v.literal("rejected")),
+  },
+  handler: async (ctx, args) => {
+    const userId = await getAuthUserId(ctx);
+    if (userId === null) throw new Error("Not authenticated");
+
+    await ctx.db.patch(args.reviewId, { status: args.status });
+  },
+});

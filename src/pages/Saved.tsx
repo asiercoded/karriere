@@ -9,6 +9,7 @@ import { useCareers } from "@/lib/career-loader";
 import { useChecklistProgress } from "@/lib/checklist";
 import { clearSaved, removeSaved, useShortlist } from "@/lib/shortlist";
 import { SiteHeader } from "@/components/SiteHeader";
+import { usePageMeta } from "@/lib/meta";
 
 export default function Saved() {
   const navigate = useNavigate();
@@ -20,6 +21,12 @@ export default function Saved() {
     [shortlist, careers],
   );
   const progress = useChecklistProgress();
+
+  usePageMeta(
+    "Saved careers — Karriere",
+    "Your bookmarked careers and checklist progress, all in one place.",
+    true,
+  );
 
   if (careers === null) {
     return (

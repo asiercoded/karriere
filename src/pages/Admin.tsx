@@ -1,15 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { useQuery } from "convex/react";
-import { Activity, BarChart3, BookOpenText, MessageCircle, Search, Sparkles } from "lucide-react";
+import { useQuery, useMutation } from "convex/react";
+import {
+  Activity,
+  BarChart3,
+  BookOpenText,
+  Check,
+  MessageCircle,
+  Quote,
+  Search,
+  Sparkles,
+  X,
+} from "lucide-react";
 import { api } from "@/convex/_generated/api";
 import { useAuth } from "@/hooks/use-auth";
+import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/Chip";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useCareers } from "@/lib/career-loader";
 import { usePageMeta } from "@/lib/meta";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 /* ─────────────────────────────────────────────────────────────
    Reading the room — the owner's analytics view. Anonymous
@@ -94,10 +106,101 @@ function RankList({
   );
 }
 
+function ReviewQueue({
+  pendingReviews,
+  careerName,
+}: {
+  pendingReviews: Array<{
+    _id: string;
+    careerId: string;
+    quote: string;
+    label: string;
+    createdAt: number;
+  }>;
+  careerName: (id: string) => string;
+}) {
+  const moderate = useMutation(api.reviews.moderateReview);
+  const [busy, setBusy] = useState<string | null>(null);
+
+  const handle = async (reviewId: string, status: "approved" | "rejected") => {
+    setBusy(reviewId);
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      await moderate({ reviewId: reviewId as any, status });
+      toast.success(status === "approved" ? "Review approved" : "Review rejected");
+    } catch {
+      toast.error("Something went wrong — try again.");
+    } finally {
+      setBusy(null);
+    }
+  };
+
+  return (
+    <div className="mt-10">
+      <div className="flex items-center gap-3">
+        <Quote className="h-4 w-4 text-saffron" aria-hidden="true" />
+        <h2 className="font-display text-base font-bold tracking-tight">Pending reviews</h2>
+        {pendingReviews.length > 0 && (
+          <span className="rounded-full bg-saffron px-2 py-0.5 text-[11px] font-bold text-background tabular-nums">
+            {pendingReviews.length}
+          </span>
+        )}
+      </div>
+
+      {pendingReviews.length === 0 ? (
+        <p className="mt-5 text-sm text-muted-foreground">
+          No pending reviews — the queue is clear.
+        </p>
+      ) : (
+        <ul className="mt-5 space-y-3">
+          {pendingReviews.map((review) => (
+            <li key={review._id} className="rounded-2xl border border-border bg-card p-5">
+              <div className="flex flex-wrap items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+                <span>{careerName(review.careerId)}</span>
+                <span aria-hidden="true">·</span>
+                <span>{review.label}</span>
+                <span aria-hidden="true">·</span>
+                <span>{new Date(review.createdAt).toLocaleDateString()}</span>
+              </div>
+              <blockquote className="mt-3 text-[15px] italic leading-relaxed text-foreground/90">
+                &ldquo;{review.quote}&rdquo;
+              </blockquote>
+              <div className="mt-4 flex gap-2">
+                <Button
+                  size="sm"
+                  disabled={busy === review._id}
+                  onClick={() => handle(review._id, "approved")}
+                  className="cursor-pointer rounded-full border-0 bg-good/15 text-good hover:bg-good/25"
+                  variant="outline"
+                >
+                  <Check className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
+                  Approve
+                </Button>
+                <Button
+                  size="sm"
+                  disabled={busy === review._id}
+                  onClick={() => handle(review._id, "rejected")}
+                  className="cursor-pointer rounded-full border-0 bg-bad/10 text-bad hover:bg-bad/20"
+                  variant="outline"
+                >
+                  <X className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" />
+                  Reject
+                </Button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 export default function Admin() {
   const navigate = useNavigate();
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, isLoading, user } = useAuth();
+  const isAdmin = user?.role === "admin";
   const overview = useQuery(api.analytics.overview);
+  const pendingReviews = useQuery(api.reviews.getPendingReviews);
   const careers = useCareers();
 
   usePageMeta("Site stats — Karriere", "Anonymous reading signals: which careers are read, what students search.", true);
@@ -105,8 +208,10 @@ export default function Admin() {
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
       navigate(`/auth?returnTo=${encodeURIComponent("/admin")}`);
+    } else if (!isLoading && isAuthenticated && !isAdmin) {
+      navigate("/");
     }
-  }, [isLoading, isAuthenticated, navigate]);
+  }, [isLoading, isAuthenticated, isAdmin, navigate]);
 
   if (isLoading) {
     return (
@@ -126,7 +231,7 @@ export default function Admin() {
     );
   }
 
-  if (!isAuthenticated) return null; // redirecting to /auth
+  if (!isAuthenticated || !isAdmin) return null; // redirecting
 
   const careerName = (id: string) => careers?.find((c) => c.id === id)?.name ?? id;
   const t = overview?.totals;
@@ -218,6 +323,11 @@ export default function Admin() {
                 surface; nothing here can identify a student.
               </p>
             </div>
+
+            {/* Review moderation */}
+            {pendingReviews !== undefined && pendingReviews !== null && (
+              <ReviewQueue pendingReviews={pendingReviews} careerName={careerName} />
+            )}
           </>
         )}
       </div>
