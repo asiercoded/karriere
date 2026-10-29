@@ -1,86 +1,176 @@
+# Karriere
+
+**Karriere** is a career guidance web app for students — helping them explore careers, take a personality-matched quiz, compare paths side by side, and save shortlists. It targets the Indian student audience with honest, practical career dossiers.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend framework | React 19 + Vite 7 |
+| Language | TypeScript |
+| Routing | React Router v7 (imports from `react-router`, not `react-router-dom`) |
+| Styling | Tailwind CSS v4 (oklch colour format) |
+| Component library | Shadcn UI (Radix primitives) |
+| Icons | Lucide React |
+| Animations | Framer Motion |
+| Backend & DB | Convex |
+| Auth | Convex Auth (email OTP + anonymous users) |
+| Package manager | Bun |
+| Deployment | Cloudflare Pages (frontend) + Convex Cloud (backend) |
+
+---
+
+## Pages & Routes
+
+| Route | Page | Description |
+|---|---|---|
+| `/` | Landing | Hero, search, featured careers, testimonials |
+| `/quiz` | Quiz | 5-min career match questionnaire |
+| `/results` | Results | Quiz outcome with matched careers |
+| `/careers` | CareerExplorer | Browse/search all career dossiers |
+| `/careers/:id` | CareerProfile | In-depth dossier for a single career |
+| `/careers/:id/report` | CareerReport | Printable/shareable report |
+| `/compare` | Compare | Side-by-side career comparison picker |
+| `/vs/:slug` | CareerVs | SEO-friendly comparison page |
+| `/field-guide` | FieldGuide | Glossary of career jargon |
+| `/for-parents` | ForParents | Parent-facing explainer |
+| `/saved` | Saved | User's saved/shortlisted careers (auth required) |
+| `/auth` | Auth | Login / sign-up (email OTP). Redirects to `/saved`. |
+| `/admin` | Admin | Admin dashboard |
+
+All routes are lazy-loaded for optimal code splitting.
+
+---
+
+## Project Structure
+
+```
+src/
+├── pages/          # One file per route
+├── components/     # Shared UI components
+│   └── ui/         # Shadcn primitives (do not edit directly)
+├── hooks/          # Custom React hooks (useAuth, etc.)
+├── lib/            # Data, utilities, integrations
+│   ├── career-data.ts          # Career profile types + helpers
+│   ├── career-loader.ts        # useCareers hook (loads careers.json)
+│   ├── careers.json            # Static career dossier data
+│   ├── reviews-overrides.json  # Community review data
+│   ├── vs-pairs.ts             # Pre-defined comparison pairs
+│   ├── meta.ts                 # JSON-LD / meta tag helpers
+│   ├── shortlist.ts            # Saved careers helpers
+│   ├── checklist.ts            # Career checklist data
+│   └── verdict.ts              # Verdict/rating helpers
+├── types/          # Global TypeScript type declarations
+├── index.css       # Global styles + Tailwind theme tokens
+├── main.tsx        # App entry point, router, lazy route setup
+└── instrumentation.tsx  # Analytics instrumentation provider
+```
+
+---
+
+## Setup
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) installed
+- A [Convex](https://convex.dev/) account
+
+### Install dependencies
+
+```bash
+bun install
+```
+
+### Environment variables
+
+Create a `.env.local` file:
+
+```env
+CONVEX_DEPLOYMENT=dev:<your-deployment-name>
+VITE_CONVEX_URL=https://<your-deployment>.convex.cloud
+```
+
+The Convex backend also needs these server-side environment variables (set via the Convex dashboard):
+
+| Variable | Description |
+|---|---|
+| `JWKS` | Auth JWKS JSON |
+| `JWT_PRIVATE_KEY` | Auth JWT private key |
+| `SITE_URL` | Canonical site URL |
+
+### Run locally
+
+```bash
+# Terminal 1 — Convex dev server
+bunx convex dev
+
+# Terminal 2 — Vite dev server
+bun run dev
+```
+
+### Other scripts
+
+```bash
+bun run build        # Type-check + generate sitemap + Vite build → dist/
+bun run og           # Regenerate Open Graph share-card PNGs
+bun run sitemap      # Regenerate sitemap.xml
+bun run lint         # ESLint
+bun run format       # Prettier
+bun run preview      # Preview production build locally
+```
+
+---
+
 ## Deployment (GitHub + Cloudflare Pages)
 
-This is a standard Vite SPA — the frontend is static files (built with `bun run build`, output in `dist/`), the backend is Convex (deployed separately to Convex Cloud).
+The frontend is a static Vite SPA (`dist/`). The backend is Convex, deployed separately to Convex Cloud.
 
 ### One-time setup
 
-1. **Push to GitHub.** Create a repo and push this folder (from your machine, since git is managed by the platform here):
+1. **Push to GitHub:**
    ```bash
    git remote add origin https://github.com/<you>/karriere.git
    git push -u origin main
    ```
+
 2. **Deploy the Convex backend** (production):
    ```bash
    bunx convex deploy
    ```
-   Copy the production URL from the Convex dashboard (Deployments → URL) and mirror the auth env vars (JWKS, JWT_PRIVATE_KEY, SITE_URL) onto the production deployment.
+   Copy the production URL from the Convex dashboard and mirror the auth env vars (`JWKS`, `JWT_PRIVATE_KEY`, `SITE_URL`) to the production deployment.
+
 3. **Add GitHub Actions secrets** (Settings → Secrets and variables → Actions):
-   - `CLOUDFLARE_API_TOKEN` — Cloudflare API token with **Cloudflare Pages: Edit** permission (dash.cloudflare.com → My Profile → API Tokens)
-   - `CLOUDFLARE_ACCOUNT_ID` — your Cloudflare account ID (right side of any dashboard page)
-   - `VITE_CONVEX_URL` — the production Convex URL from step 2
-   - Optional: repo variable `CLOUDFLARE_PAGES_PROJECT` (defaults to `karriere`)
-4. Push to `main` — the workflow (`.github/workflows/deploy.yml`) builds with Bun and deploys to Cloudflare Pages. You'll get a `*.pages.dev` URL, and can add a custom domain under **Pages → karriere → Custom domains**.
+   - `CLOUDFLARE_API_TOKEN` — token with **Cloudflare Pages: Edit** permission
+   - `CLOUDFLARE_ACCOUNT_ID` — your Cloudflare account ID
+   - `VITE_CONVEX_URL` — production Convex URL from step 2
+   - Optional repo variable: `CLOUDFLARE_PAGES_PROJECT` (defaults to `karriere`)
 
-### Before you go live
+4. Push to `main` — `.github/workflows/deploy.yml` builds with Bun and deploys to Cloudflare Pages.
 
-The repo currently hardcodes the placeholder domain `karrierehq.pages.dev` in:
-- `index.html` (canonical + og:image + twitter:image)
+### Before going live
+
+The following files hardcode the placeholder domain `karrierehq.pages.dev` — swap for your real domain:
+- `index.html` (canonical, og:image, twitter:image)
 - `public/sitemap.xml`, `public/robots.txt`
-- `scripts/og.mjs` (URL text baked into the share-card PNGs — regenerate with `bun run og`)
+- `scripts/og.mjs` (URL baked into share-card PNGs — regenerate with `bun run og`)
 
-Swap these to your real domain when it's live.
-
-## Overview
-
-This project uses the following tech stack:
-- Vite
-- Typescript
-- React Router v7 (all imports from `react-router` instead of `react-router-dom`)
-- React 19 (for frontend components)
-- Tailwind v4 (for styling)
-- Shadcn UI (for UI components library)
-- Lucide Icons (for icons)
-- Convex (for backend & database)
-- Convex Auth (for authentication)
-- Framer Motion (for animations)
-- Three js (for 3d models)
-
-All relevant files live in the 'src' directory.
-
-Use bun for the package manager.
-
-## Setup
-
-This project is set up already and running on a cloud environment, as well as a convex development in the sandbox.
-
-## Environment Variables
-
-The project is set up with project specific CONVEX_DEPLOYMENT and VITE_CONVEX_URL environment variables on the client side.
-
-The convex server has a separate set of environment variables that are accessible by the convex backend.
-
-Currently, these variables include auth-specific keys: JWKS, JWT_PRIVATE_KEY, and SITE_URL.
-
+---
 
 # Using Authentication (Important!)
 
-You must follow these conventions when using authentication.
+Auth is pre-configured using **Convex Auth** with email OTP and anonymous user support.
 
-## Auth is already set up.
-
-All convex authentication functions are already set up. The auth currently uses email OTP and anonymous users, but can support more.
-
-The email OTP configuration is defined in `src/convex/auth/emailOtp.ts`. DO NOT MODIFY THIS FILE.
-
-Also, DO NOT MODIFY THESE AUTH FILES: `src/convex/auth.config.ts` and `src/convex/auth.ts`.
+> **Do not modify** `src/convex/auth/emailOtp.ts`, `src/convex/auth.config.ts`, or `src/convex/auth.ts`.
 
 ## Using Convex Auth on the backend
 
-On the `src/convex/users.ts` file, you can use the `getCurrentUser` function to get the current user's data.
+Use `getCurrentUser` in `src/convex/users.ts` to get the current user's data.
 
 ## Using Convex Auth on the frontend
 
-The `/auth` page is already set up to use auth. Navigate to `/auth` for all log in / sign up sequences.
+The `/auth` page handles all login/sign-up flows.
 
 You MUST use this hook to get user data. Never do this yourself without the hook:
 ```typescript
@@ -91,169 +181,107 @@ const { isLoading, isAuthenticated, user, signIn, signOut } = useAuth();
 
 ## Protected Routes
 
-When protecting a page, use the auth hooks to check for authentication and redirect to /auth.
+Check `isAuthenticated` and redirect to `/auth` to protect a page.
 
 ## Auth Page
 
-The auth page is defined in `src/pages/Auth.tsx`. Redirect authenticated pages and sign in / sign up to /auth.
+Defined in `src/pages/Auth.tsx`. All login/sign-up flows go through `/auth`.
 
 ## Authorization
 
-You can perform authorization checks on the frontend and backend.
-
-On the frontend, you can use the `useAuth` hook to get the current user's data and authentication state.
-
-You should also be protecting queries, mutations, and actions at the base level, checking for authorization securely.
+Check auth on the frontend via `useAuth` and protect queries/mutations/actions at the backend level too.
 
 ## Adding a redirect after auth
 
-In `src/main.tsx`, you must add a redirect after auth URL to redirect to the correct dashboard/profile/page that should be created after authentication.
+Edit `redirectAfterAuth` in `src/main.tsx` (currently set to `/saved`).
+
+---
 
 # Frontend Conventions
 
-You will be using the Vite frontend with React 19, Tailwind v4, and Shadcn UI.
-
-Generally, pages should be in the `src/pages` folder, and components should be in the `src/components` folder.
-
-Shadcn primitives are located in the `src/components/ui` folder and should be used by default.
-
 ## Page routing
 
-Your page component should go under the `src/pages` folder.
+- Pages → `src/pages/`
+- Reusable components → `src/components/`
+- Shadcn primitives → `src/components/ui/` (use by default)
+- Register new routes in `src/main.tsx`
 
-When adding a page, update the react router configuration in `src/main.tsx` to include the new route you just added.
+## Shadcn UI conventions
 
-## Shad CN conventions
-
-Follow these conventions when using Shad CN components, which you should use by default.
-- Remember to use "cursor-pointer" to make the element clickable
-- For title text, use the "tracking-tight font-bold" class to make the text more readable
-- Always make apps MOBILE RESPONSIVE. This is important
-- AVOID NESTED CARDS. Try and not to nest cards, borders, components, etc. Nested cards add clutter and make the app look messy.
-- AVOID SHADOWS. Avoid adding any shadows to components. stick with a thin border without the shadow.
-- Avoid skeletons; instead, use the loader2 component to show a spinning loading state when loading data.
-
+- Use `cursor-pointer` on all clickable elements
+- Title text: `tracking-tight font-bold`
+- Always be **mobile responsive**
+- **Avoid nested cards** — they add clutter
+- **Avoid shadows** — use thin borders instead
+- Use `Loader2` spinner instead of skeletons for loading states
 
 ## Landing Pages
 
-You must always create good-looking designer-level styles to your application. 
-- Make it well animated and fit a certain "theme", ie neo brutalist, retro, neumorphism, glass morphism, etc
-
-Use known images and emojis from online.
-
-If the user is logged in already, show the get started button to say "Dashboard" or "Profile" instead to take them there.
+Create designer-level, well-animated pages with a clear theme (neo-brutalist, glassmorphism, etc.). If the user is already logged in, show "Dashboard" instead of "Get started".
 
 ## Responsiveness and formatting
 
-Make sure pages are wrapped in a container to prevent the width stretching out on wide screens. Always make sure they are centered aligned and not off-center.
-
-Always make sure that your designs are mobile responsive. Verify the formatting to ensure it has correct max and min widths as well as mobile responsiveness.
-
-- Always create sidebars for protected dashboard pages and navigate between pages
-- Always create navbars for landing pages
-- On these bars, the created logo should be clickable and redirect to the index page
+- Wrap content in a container with a max-width; center-align
+- Verify correct min/max widths across breakpoints
+- Protected/dashboard pages → **sidebar** navigation
+- Public pages → **navbar** navigation
+- Logo must be clickable and link to `/`
 
 ## Animating with Framer Motion
 
-You must add animations to components using Framer Motion. It is already installed and configured in the project.
+Framer Motion is pre-installed. Wrap elements with `motion.*` components.
 
-To use it, import the `motion` component from `framer-motion` and use it to wrap the component you want to animate.
+```typescript
+import { motion } from "framer-motion";
+```
 
-
-### Other Items to animate
-- Fade in and Fade Out
-- Slide in and Slide Out animations
-- Rendering animations
-- Button clicks and UI elements
-
-Animate for all components, including on landing page and app pages.
-
-## Three JS Graphics
-
-Your app comes with three js by default. You can use it to create 3D graphics for landing pages, games, etc.
-
+Animate: fade in/out, slide in/out, render transitions, button clicks, UI interactions — for all pages including landing.
 
 ## Colors
 
-You can override colors in: `src/index.css`
-
-This uses the oklch color format for tailwind v4.
-
-Always use these color variable names.
-
-Make sure all ui components are set up to be mobile responsive and compatible with both light and dark mode.
-
-Set theme using `dark` or `light` variables at the parent className.
+Override colours in `src/index.css` using the oklch format for Tailwind v4. Always use the defined CSS variable names. Support both light and dark mode. Set theme with `dark`/`light` class on the parent element.
 
 ## Styling and Theming
 
-When changing the theme, always change the underlying theme of the shad cn components app-wide under `src/components/ui` and the colors in the index.css file.
-
-Avoid hardcoding in colors unless necessary for a use case, and properly implement themes through the underlying shad cn ui components.
-
-When styling, ensure buttons and clickable items have pointer-click on them (don't by default).
-
-Always follow a set theme style and ensure it is tuned to the user's liking.
+- Change the app-wide theme via `src/components/ui` and `src/index.css`
+- Avoid hardcoding colours — use theme variables
+- Ensure buttons and clickable elements have `cursor-pointer`
 
 ## Toasts
 
-You should always use toasts to display results to the user, such as confirmations, results, errors, etc.
+Use Sonner (already configured):
 
-Use the shad cn Sonner component as the toaster. For example:
+```typescript
+import { toast } from "sonner";
 
+toast("Event has been created", {
+  description: "Sunday, December 03, 2023 at 9:00 AM",
+  action: { label: "Undo", onClick: () => console.log("Undo") },
+});
 ```
-import { toast } from "sonner"
-
-import { Button } from "@/components/ui/button"
-export function SonnerDemo() {
-  return (
-    <Button
-      variant="outline"
-      onClick={() =>
-        toast("Event has been created", {
-          description: "Sunday, December 03, 2023 at 9:00 AM",
-          action: {
-            label: "Undo",
-            onClick: () => console.log("Undo"),
-          },
-        })
-      }
-    >
-      Show Toast
-    </Button>
-  )
-}
-```
-
-Remember to import { toast } from "sonner". Usage: `toast("Event has been created.")`
 
 ## Dialogs
 
-Always ensure your larger dialogs have a scroll in its content to ensure that its content fits the screen size. Make sure that the content is not cut off from the screen.
+- Prefer Dialogs over new pages for focused actions
+- Always add scroll to dialog content so it doesn't overflow on small screens
 
-Ideally, instead of using a new page, use a Dialog instead. 
+---
 
 # Using the Convex backend
 
-You will be implementing the convex backend. Follow your knowledge of convex and the documentation to implement the backend.
-
 ## The Convex Schema
-
-You must correctly follow the convex schema implementation.
 
 The schema is defined in `src/convex/schema.ts`.
 
-Do not include the `_id` and `_creationTime` fields in your queries (it is included by default for each table).
-Do not index `_creationTime` as it is indexed for you. Never have duplicate indexes.
-
+- Do not include `_id` or `_creationTime` in queries (included by default)
+- Do not index `_creationTime` — it is already indexed. No duplicate indexes.
+- Keep `schemaValidation: false`
 
 ## Convex Actions: Using CRUD operations
 
-When running anything that involves external connections, you must use a convex action with "use node" at the top of the file.
+Anything involving external connections must be a Convex action with `"use node"` at the top. Queries and mutations cannot share a file with `"use node"` actions.
 
-You cannot have queries or mutations in the same file as a "use node" action file. Thus, you must use pre-built queries and mutations in other files.
-
-You can also use the pre-installed internal crud functions for the database:
+Use the pre-installed internal CRUD helpers:
 
 ```ts
 // in convex/users.ts
@@ -262,28 +290,23 @@ import schema from "./schema.ts";
 
 export const { create, read, update, destroy } = crud(schema, "users");
 
-// in some file, in an action:
+// in an action:
 const user = await ctx.runQuery(internal.users.read, { id: userId });
 
 await ctx.runMutation(internal.users.update, {
   id: userId,
-  patch: {
-    status: "inactive",
-  },
+  patch: { status: "inactive" },
 });
 ```
 
-
 ## Common Convex Mistakes To Avoid
 
-When using convex, make sure:
-- Document IDs are referenced as `_id` field, not `id`.
-- Document ID types are referenced as `Id<"TableName">`, not `string`.
-- Document object types are referenced as `Doc<"TableName">`.
-- Keep schemaValidation to false in the schema file.
-- You must correctly type your code so that it passes the type checker.
-- You must handle null / undefined cases of your convex queries for both frontend and backend, or else it will throw an error that your data could be null or undefined.
-- Always use the `@/folder` path, with `@/convex/folder/file.ts` syntax for importing convex files.
-- This includes importing generated files like `@/convex/_generated/server`, `@/convex/_generated/api`
-- Remember to import functions like useQuery, useMutation, useAction, etc. from `convex/react`
-- NEVER have return type validators.
+- Document IDs → `_id` field (type `Id<"TableName">`, not `string`)
+- Document objects → `Doc<"TableName">`
+- Keep `schemaValidation: false` in the schema file
+- Type all code correctly to pass the type checker
+- Handle `null`/`undefined` from queries on both frontend and backend
+- Always use `@/folder` paths: `@/convex/_generated/server`, `@/convex/_generated/api`
+- Import `useQuery`, `useMutation`, `useAction` from `convex/react`
+- **NEVER** add return type validators to Convex functions
+
