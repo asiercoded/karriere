@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import type { CareerProfile } from "./career-data";
 
 /* ─────────────────────────────────────────────────────────────
-   Lazy career-data loader (client-only — never imported from
-   Convex functions). career-profiles.ts is the only module that
-   statically imports careers.json; loading it here via a cached
-   dynamic import keeps the ~488 KB dataset out of the entry
-   bundle and every page chunk until it's actually needed.
+   Lazy career-data loader (client-only). career-profiles.ts is
+   the only module that statically imports careers.json; loading
+   it here via a cached dynamic import keeps the ~488 KB dataset
+   out of the entry bundle until it's actually needed.
 
    Repeat-visit cache: the dataset is static editorial content
    (checked quarterly), and the audience — students sharing links

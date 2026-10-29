@@ -42,9 +42,6 @@ import { SITE_DESC, SITE_TITLE, useJsonLd, usePageMeta } from "@/lib/meta";
 import { ShareDialog } from "@/components/ShareDialog";
 import { FeedbackWidget } from "@/components/FeedbackWidget";
 import { SubmitReviewDialog } from "@/components/SubmitReviewDialog";
-// Live reviews disabled until Convex production schema is confirmed deployed
-// import { useQuery } from "convex/react";
-// import { api } from "@/convex/_generated/api";
 import { cn } from "@/lib/utils";
 
 const CHAPTERS = [

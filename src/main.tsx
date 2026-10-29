@@ -1,7 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
 import { InstrumentationProvider } from "@/instrumentation.tsx";
-import { ConvexAuthProvider } from "@convex-dev/auth/react";
-import { ConvexReactClient } from "convex/react";
 import { StrictMode, useEffect, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { MotionConfig } from "framer-motion";
@@ -33,10 +31,6 @@ function RouteLoading() {
     </div>
   );
 }
-
-const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
-
-
 
 // Reset scroll on route change (pathname only, so in-page #anchors still work)
 function ScrollToTop() {
@@ -82,15 +76,13 @@ function RouteSyncer() {
   return null;
 }
 
-
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <InstrumentationProvider>
-      <ConvexAuthProvider client={convex}>
-        <BrowserRouter>
-          <ScrollToTop />
-          <RouteSyncer />
-          <MotionConfig reducedMotion="user">
+      <BrowserRouter>
+        <ScrollToTop />
+        <RouteSyncer />
+        <MotionConfig reducedMotion="user">
           <Suspense fallback={<RouteLoading />}>
             <Routes>
               <Route path="/" element={<Landing />} />
@@ -109,10 +101,9 @@ createRoot(document.getElementById("root")!).render(
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-          </MotionConfig>
-        </BrowserRouter>
-        <Toaster />
-      </ConvexAuthProvider>
+        </MotionConfig>
+      </BrowserRouter>
+      <Toaster />
     </InstrumentationProvider>
   </StrictMode>,
 );

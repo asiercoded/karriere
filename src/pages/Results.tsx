@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { useAction } from "convex/react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, Link2, MessageCircle, Sparkles } from "lucide-react";
 import { toast } from "sonner";
-import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/Chip";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -14,12 +12,9 @@ import { useAnalytics } from "@/lib/analytics";
 import { usePageMeta, whatsappShare } from "@/lib/meta";
 import { toggleSaved, useShortlist } from "@/lib/shortlist";
 import { SiteHeader } from "@/components/SiteHeader";
+import { generateLocalVerdict } from "@/lib/verdict";
 
 type AiState = "idle" | "loading" | "done" | "off";
-
-// In-flight guard: React StrictMode double-runs effects in dev; without this a
-// single quiz run would bill the AI call twice.
-const aiInFlight = new Set<string>();
 
 const Q_KEYS: (keyof QuizAnswers)[] = ["interests", "workStyle", "pace", "stability", "values"];
 
@@ -51,7 +46,6 @@ function resultsShareText(recs: CareerMatch[], url: string): string {
 
 export default function Results() {
   const navigate = useNavigate();
-  const generateVerdict = useAction(api.ai.verdict);
   const shortlist = useShortlist();
   const careers = useCareers();
   const track = useAnalytics();
@@ -90,37 +84,13 @@ export default function Results() {
       setRecommendations(recs);
       setLoaded(true);
 
-      // AI take — grounded in the same answers, cached per answer-set so
-      // retakes and back-navigation never re-bill the model.
-      const cacheKey = `aiVerdict:${JSON.stringify(parsed)}`;
-      const cached = sessionStorage.getItem(cacheKey);
-      if (cached) {
-        setAiVerdict(cached);
-        setAiState("done");
-        return;
-      }
-      if (aiInFlight.has(cacheKey)) return;
-      aiInFlight.add(cacheKey);
-      setAiState("loading");
-      generateVerdict({
-        answers: parsed as QuizAnswers,
-        topIds: recs.slice(0, 3).map((r) => r.career.id),
-      })
-        .then((res) => {
-          if (res?.text) {
-            sessionStorage.setItem(cacheKey, res.text);
-            setAiVerdict(res.text);
-            setAiState("done");
-          } else {
-            setAiState("off");
-          }
-        })
-        .catch(() => setAiState("off"))
-        .finally(() => aiInFlight.delete(cacheKey));
+      const verdictText = generateLocalVerdict(parsed as QuizAnswers, recs);
+      setAiVerdict(verdictText);
+      setAiState("done");
     } catch {
       navigate("/quiz");
     }
-  }, [navigate, generateVerdict, careers]);
+  }, [navigate, careers]);
 
   // A finished quiz is the strongest "this product works" signal we have.
   useEffect(() => {

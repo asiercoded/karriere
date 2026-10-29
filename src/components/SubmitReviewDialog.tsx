@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useMutation } from "convex/react";
-import { api } from "@/convex/_generated/api";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,8 +18,6 @@ export function SubmitReviewDialog({ careerId, careerName }: SubmitReviewDialogP
   const [quote, setQuote] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const submitReview = useMutation(api.reviews.submitReview);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!label.trim() || !quote.trim()) {
@@ -31,14 +27,17 @@ export function SubmitReviewDialog({ careerId, careerName }: SubmitReviewDialogP
 
     setIsSubmitting(true);
     try {
-      await submitReview({ careerId, label: label.trim(), quote: quote.trim() });
+      const stored = JSON.parse(localStorage.getItem(`karriere-user-reviews-${careerId}`) || "[]");
+      stored.push({ label: label.trim(), quote: quote.trim(), date: Date.now() });
+      localStorage.setItem(`karriere-user-reviews-${careerId}`, JSON.stringify(stored));
+
       toast.success("Story submitted!", {
-        description: "It has been sent for moderation and will appear soon.",
+        description: "Thank you for sharing your unfiltered experience.",
       });
       setOpen(false);
       setLabel("");
       setQuote("");
-    } catch (error) {
+    } catch {
       toast.error("Failed to submit story. Please try again.");
     } finally {
       setIsSubmitting(false);

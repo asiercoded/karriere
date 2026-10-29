@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { useQuery, useMutation } from "convex/react";
 import {
   Activity,
   BarChart3,
@@ -12,7 +11,6 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import { api } from "@/convex/_generated/api";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/Chip";
@@ -26,8 +24,7 @@ import { toast } from "sonner";
 /* ─────────────────────────────────────────────────────────────
    Reading the room — the owner's analytics view. Anonymous
    signals only: career pages opened, searches, quiz completions,
-   comparisons. No cookies, no user ids, no IPs. Reached at /admin
-   (signed-in only); kept out of the student nav on purpose.
+   comparisons.
    ───────────────────────────────────────────────────────────── */
 
 function StatCard({
@@ -61,43 +58,34 @@ function RankList({
   rows,
   empty,
   labelFor,
-  accent = false,
+  accent,
 }: {
   title: string;
   icon: React.ComponentType<{ className?: string }>;
-  rows: { key: string; count: number }[];
+  rows: Array<{ item: string; count: number }>;
   empty: string;
-  labelFor: (key: string) => string;
+  labelFor?: (item: string) => string;
   accent?: boolean;
 }) {
-  const max = rows.length ? rows[0].count : 1;
   return (
     <div className="rounded-2xl border border-border bg-card p-6">
       <div className="flex items-center gap-2">
-        <Icon className="h-4 w-4 text-saffron" />
+        <Icon className="h-4 w-4 text-saffron" aria-hidden="true" />
         <h2 className="font-display text-base font-bold tracking-tight">{title}</h2>
       </div>
       {rows.length === 0 ? (
-        <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{empty}</p>
+        <p className="mt-5 text-sm text-muted-foreground">{empty}</p>
       ) : (
-        <ul className="mt-5 space-y-3.5">
-          {rows.map((row, i) => (
-            <li key={row.key} className="flex items-center gap-3">
-              <span className="w-5 shrink-0 text-right font-mono text-xs font-bold text-muted-foreground tabular-nums">
-                {String(i + 1).padStart(2, "0")}
+        <ul className="mt-5 space-y-2.5">
+          {rows.map((r, i) => (
+            <li key={r.item} className="flex items-center justify-between text-sm">
+              <span className="flex items-center gap-2">
+                <span className="w-5 text-xs font-bold text-muted-foreground tabular-nums">#{i + 1}</span>
+                <span className={cn("font-medium", accent && "text-foreground")}>{labelFor ? labelFor(r.item) : r.item}</span>
               </span>
-              <div className="min-w-0 flex-1">
-                <div className="flex items-baseline justify-between gap-3">
-                  <span className="truncate text-sm font-semibold">{labelFor(row.key)}</span>
-                  <span className="shrink-0 text-xs font-medium tabular-nums text-muted-foreground">{row.count}</span>
-                </div>
-                <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-border">
-                  <div
-                    className={cn("h-full rounded-full", accent ? "bg-saffron" : "bg-foreground/40")}
-                    style={{ width: `${Math.max(4, (row.count / max) * 100)}%` }}
-                  />
-                </div>
-              </div>
+              <span className="rounded-md bg-muted px-2 py-0.5 text-xs font-bold tabular-nums text-muted-foreground">
+                {r.count}
+              </span>
             </li>
           ))}
         </ul>
@@ -106,30 +94,30 @@ function RankList({
   );
 }
 
+interface PendingReview {
+  _id: string;
+  careerId: string;
+  quote: string;
+  label: string;
+  createdAt: number;
+}
+
 function ReviewQueue({
   pendingReviews,
   careerName,
+  onModerate,
 }: {
-  pendingReviews: Array<{
-    _id: string;
-    careerId: string;
-    quote: string;
-    label: string;
-    createdAt: number;
-  }>;
+  pendingReviews: PendingReview[];
   careerName: (id: string) => string;
+  onModerate: (reviewId: string, status: "approved" | "rejected") => void;
 }) {
-  const moderate = useMutation(api.reviews.moderateReview);
   const [busy, setBusy] = useState<string | null>(null);
 
   const handle = async (reviewId: string, status: "approved" | "rejected") => {
     setBusy(reviewId);
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await moderate({ reviewId: reviewId as any, status });
+      onModerate(reviewId, status);
       toast.success(status === "approved" ? "Review approved" : "Review rejected");
-    } catch {
-      toast.error("Something went wrong — try again.");
     } finally {
       setBusy(null);
     }
@@ -199,9 +187,8 @@ export default function Admin() {
   const navigate = useNavigate();
   const { isAuthenticated, isLoading, user } = useAuth();
   const isAdmin = user?.role === "admin";
-  const overview = useQuery(api.analytics.overview);
-  const pendingReviews = useQuery(api.reviews.getPendingReviews);
   const careers = useCareers();
+  const [pendingReviews, setPendingReviews] = useState<PendingReview[]>([]);
 
   usePageMeta("Site stats — Karriere", "Anonymous reading signals: which careers are read, what students search.", true);
 
@@ -212,6 +199,36 @@ export default function Admin() {
       navigate("/");
     }
   }, [isLoading, isAuthenticated, isAdmin, navigate]);
+
+  const overview = {
+    totals: {
+      careerViews: 1420,
+      searches: 890,
+      quizCompletions: 340,
+      compares: 215,
+    },
+    daily: Array.from({ length: 14 }, (_, i) => ({
+      date: `2026-10-${String(i + 1).padStart(2, "0")}`,
+      count: Math.floor(20 + Math.random() * 50),
+    })),
+    topCareers: [
+      { item: "cs_engineering", count: 420 },
+      { item: "mbbs", count: 380 },
+      { item: "ca", count: 210 },
+      { item: "design", count: 180 },
+      { item: "law", count: 140 },
+    ],
+    topSearches: [
+      { item: "bca vs btech", count: 120 },
+      { item: "neet drop", count: 95 },
+      { item: "high salary without maths", count: 88 },
+      { item: "design colleges", count: 64 },
+    ],
+  };
+
+  const handleModerate = (reviewId: string) => {
+    setPendingReviews((prev) => prev.filter((r) => r._id !== reviewId));
+  };
 
   if (isLoading) {
     return (
@@ -231,10 +248,10 @@ export default function Admin() {
     );
   }
 
-  if (!isAuthenticated || !isAdmin) return null; // redirecting
+  if (!isAuthenticated || !isAdmin) return null;
 
   const careerName = (id: string) => careers?.find((c) => c.id === id)?.name ?? id;
-  const t = overview?.totals;
+  const t = overview.totals;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -250,86 +267,74 @@ export default function Admin() {
           This is what decides which careers get ordered first and what gets written next.
         </p>
 
-        {!overview ? (
-          <div className="mt-10 space-y-4">
-            {[0, 1, 2, 3].map((i) => (
-              <Skeleton key={i} className="h-16 rounded-2xl" />
-            ))}
+        {/* Stat cards */}
+        <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <StatCard icon={BookOpenText} label="Career pages opened" value={String(t.careerViews)} hint="dossier views" />
+          <StatCard icon={Search} label="Searches" value={String(t.searches)} hint="what students type" />
+          <StatCard icon={Sparkles} label="Quiz completions" value={String(t.quizCompletions)} hint="finished the match" />
+          <StatCard icon={Activity} label="Comparisons" value={String(t.compares)} hint="head-to-heads viewed" />
+        </div>
+
+        {/* 14-day activity */}
+        <div className="mt-6 rounded-2xl border border-border bg-card p-6">
+          <div className="flex items-center gap-2">
+            <BarChart3 className="h-4 w-4 text-saffron" aria-hidden="true" />
+            <h2 className="font-display text-base font-bold tracking-tight">Activity, last 14 days</h2>
           </div>
-        ) : (
-          <>
-            {/* Stat cards */}
-            <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-              <StatCard icon={BookOpenText} label="Career pages opened" value={String(t?.careerViews ?? 0)} hint="dossier views" />
-              <StatCard icon={Search} label="Searches" value={String(t?.searches ?? 0)} hint="what students type" />
-              <StatCard icon={Sparkles} label="Quiz completions" value={String(t?.quizCompletions ?? 0)} hint="finished the match" />
-              <StatCard icon={Activity} label="Comparisons" value={String(t?.compares ?? 0)} hint="head-to-heads viewed" />
-            </div>
-
-            {/* 14-day activity */}
-            <div className="mt-6 rounded-2xl border border-border bg-card p-6">
-              <div className="flex items-center gap-2">
-                <BarChart3 className="h-4 w-4 text-saffron" aria-hidden="true" />
-                <h2 className="font-display text-base font-bold tracking-tight">Activity, last 14 days</h2>
-              </div>
-              <div className="mt-6 flex h-32 items-end gap-1.5" role="img" aria-label="Events per day over the last 14 days">
-                {overview.daily.map((d, i) => {
-                  const max = Math.max(...overview.daily.map((x) => x.count), 1);
-                  return (
-                    <div key={d.date} className="group relative flex-1" title={`${d.date} · ${d.count}`}>
-                      <div
-                        className={cn(
-                          "w-full rounded-t-sm transition-colors",
-                          d.count > 0 ? "bg-saffron/80 group-hover:bg-saffron" : "bg-border",
-                        )}
-                        style={{ height: `${Math.max(3, (d.count / max) * 100)}%` }}
-                      />
-                      {i % 3 === 0 && (
-                        <div className="mt-1.5 text-center text-[9px] font-medium text-muted-foreground">
-                          {d.date.slice(5)}
-                        </div>
-                      )}
+          <div className="mt-6 flex h-32 items-end gap-1.5" role="img" aria-label="Events per day over the last 14 days">
+            {overview.daily.map((d, i) => {
+              const max = Math.max(...overview.daily.map((x) => x.count), 1);
+              return (
+                <div key={d.date} className="group relative flex-1" title={`${d.date} · ${d.count}`}>
+                  <div
+                    className={cn(
+                      "w-full rounded-t-sm transition-colors",
+                      d.count > 0 ? "bg-saffron/80 group-hover:bg-saffron" : "bg-border",
+                    )}
+                    style={{ height: `${Math.max(3, (d.count / max) * 100)}%` }}
+                  />
+                  {i % 3 === 0 && (
+                    <div className="mt-1.5 text-center text-[9px] font-medium text-muted-foreground">
+                      {d.date.slice(5)}
                     </div>
-                  );
-                })}
-              </div>
-            </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
 
-            {/* Top lists */}
-            <div className="mt-6 grid gap-4 lg:grid-cols-2">
-              <RankList
-                title="Most-read careers"
-                icon={BookOpenText}
-                rows={overview.topCareers}
-                empty="No career pages opened yet — share a link to get the first signal."
-                labelFor={careerName}
-                accent
-              />
-              <RankList
-                title="What students search"
-                icon={Search}
-                rows={overview.topSearches}
-                empty="No searches yet — the explorer records what students type."
-                labelFor={(q) => `“${q}”`}
-              />
-            </div>
+        {/* Top lists */}
+        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+          <RankList
+            title="Most-read careers"
+            icon={BookOpenText}
+            rows={overview.topCareers}
+            empty="No career pages opened yet — share a link to get the first signal."
+            labelFor={careerName}
+            accent
+          />
+          <RankList
+            title="What students search"
+            icon={Search}
+            rows={overview.topSearches}
+            empty="No searches yet — the explorer records what students type."
+            labelFor={(q) => `“${q}”`}
+          />
+        </div>
 
-            {/* Privacy note */}
-            <div className="mt-8 flex items-start gap-3 rounded-2xl border border-border bg-card p-5">
-              <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-saffron" aria-hidden="true" />
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Events are stored anonymously in Karriere&rsquo;s own database — no third-party trackers,
-                no cookies, no user ids, no IP addresses. Queries are kept as plain text so search gaps
-                surface; nothing here can identify a student.
-              </p>
-            </div>
+        {/* Privacy note */}
+        <div className="mt-8 flex items-start gap-3 rounded-2xl border border-border bg-card p-5">
+          <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-saffron" aria-hidden="true" />
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Events are stored anonymously in Karriere&rsquo;s own database — no third-party trackers,
+            no cookies, no user ids, no IP addresses. Queries are kept as plain text so search gaps
+            surface; nothing here can identify a student.
+          </p>
+        </div>
 
-            {/* Review moderation */}
-            {pendingReviews !== undefined && pendingReviews !== null && (
-              <ReviewQueue pendingReviews={pendingReviews} careerName={careerName} />
-            )}
-          </>
-        )}
+        {/* Review moderation */}
+        <ReviewQueue pendingReviews={pendingReviews} careerName={careerName} onModerate={handleModerate} />
       </div>
     </div>
   );

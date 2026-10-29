@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useMutation } from "convex/react";
 import { ThumbsDown, ThumbsUp } from "lucide-react";
-import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -37,19 +35,16 @@ function writeLocal(careerId: string, value: Stored | null) {
 
 /**
  * "Was this page helpful?" — one tap, then an optional "what's missing?" note
- * for negative votes. Votes go to Convex (careerFeedback table); the voted
- * state also persists locally so signed-out users don't get re-asked.
+ * for negative votes. The voted state persists locally so users don't get re-asked.
  */
 export function FeedbackWidget({ careerId, careerName }: { careerId: string; careerName: string }) {
   const [stored, setStored] = useState<Stored | null>(() => readLocal(careerId));
   const [note, setNote] = useState("");
-  const record = useMutation(api.feedback.record);
 
   const vote = (helpful: boolean, noteText?: string) => {
     const next: Stored = { helpful, note: noteText };
     writeLocal(careerId, next);
     setStored(next);
-    void record({ careerId, helpful, note: noteText });
   };
 
   const change = () => {

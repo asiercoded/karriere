@@ -31,7 +31,6 @@ export default defineConfig({
         manualChunks: {
           // Vendor chunks for large libraries
           'react-vendor': ['react', 'react-dom', 'react-router'],
-          'convex-vendor': ['convex'],
           // Large UI library chunks
           'radix-ui': [
             '@radix-ui/react-accordion',
@@ -83,7 +82,6 @@ export default defineConfig({
       'react',
       'react-dom',
       'react-router',
-      '@convex-dev/auth/react',
     ],
   },
   // Performance hints

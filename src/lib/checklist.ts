@@ -1,10 +1,6 @@
-import { useCallback } from "react";
-import { useMutation, useQuery } from "convex/react";
-import { useSyncExternalStore } from "react";
-import { api } from "@/convex/_generated/api";
-import { useAuth } from "@/hooks/use-auth";
+import { useCallback, useSyncExternalStore } from "react";
 
-/* ── Local storage fallback (signed-out users) ──
+/* ── Local storage checklist progress ──
    Kept separate from the shortlist so checklist progress is its own key. */
 
 const localKey = (careerId: string) => `karriere-checklist-${careerId}`;
@@ -73,53 +69,31 @@ function readAllLocal(): { careerId: string; checked: number[] }[] {
 
 /**
  * Checked state + toggling for one career's "Before you commit" list.
- * Signed-in users persist to Convex; signed-out users persist to local storage
- * (with `isLocal` set so the UI can offer sign-in).
+ * Persists reliably to local storage.
  */
 export function useChecklist(careerId: string) {
-  const { isAuthenticated } = useAuth();
-  const serverChecked = useQuery(api.checklist.getByCareer, { careerId });
-  const toggleItem = useMutation(api.checklist.toggleItem);
-  const reset = useMutation(api.checklist.reset);
-
   const localChecked = useSyncExternalStore(subscribe, () => readLocal(careerId));
-
-  const checked = isAuthenticated ? (serverChecked ?? []) : localChecked;
-  const isLocal = !isAuthenticated;
 
   const toggle = useCallback(
     (index: number) => {
-      if (isAuthenticated) {
-        void toggleItem({ careerId, index });
-      } else {
-        writeLocal(
-          careerId,
-          localChecked.includes(index) ? localChecked.filter((i) => i !== index) : [...localChecked, index].sort((a, b) => a - b),
-        );
-      }
+      writeLocal(
+        careerId,
+        localChecked.includes(index) ? localChecked.filter((i) => i !== index) : [...localChecked, index].sort((a, b) => a - b),
+      );
     },
-    [isAuthenticated, careerId, toggleItem, localChecked],
+    [careerId, localChecked],
   );
 
   const clearAll = useCallback(() => {
-    if (isAuthenticated) {
-      void reset({ careerId });
-    } else {
-      writeLocal(careerId, []);
-    }
-  }, [isAuthenticated, careerId, reset]);
+    writeLocal(careerId, []);
+  }, [careerId]);
 
-  return { checked, toggle, clearAll, isLocal };
+  return { checked: localChecked, toggle, clearAll, isLocal: true };
 }
 
 /**
  * Progress across all careers — for the Saved page dashboard.
- * Convex when signed in, local storage otherwise.
  */
 export function useChecklistProgress() {
-  const { isAuthenticated } = useAuth();
-  const serverProgress = useQuery(api.checklist.getAll);
-  const localProgress = useSyncExternalStore(subscribe, readAllLocal);
-  if (isAuthenticated) return serverProgress ?? [];
-  return localProgress;
+  return useSyncExternalStore(subscribe, readAllLocal);
 }
